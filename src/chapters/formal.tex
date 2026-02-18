@@ -2,7 +2,7 @@
 
 This section traces the historical development of moduli spaces, formalizes the mathematical structure of $\mathbb{C}$ that the construction exploits, and examines established precedents for geometric dimensional encoding from theoretical physics.
 
-\subsection{The Moduli-Function Duality}
+\subsection{The Moduli-Function Duality} \label{sec:moduli-function-duality}
 
 As established in the Introduction, the Hermitian operator hypothesized by Pólya has encountered fundamental constraints. Lawvere's fixed-point theorem \cite{Lawvere1969} (\S 1.3.1) imposes constraints on self-referential structures, while Frobenius's theorem and Hurwitz \cite{Hurwitz1923} (\S 1.3.3) establishes that finite-dimensional associative division algebras over $\mathbb{R}$ are limited to four cases: $\mathbb{R}$ (dimension 1), $\mathbb{C}$ (dimension 2), $\mathbb{H}$ (dimension 4), and $\mathbb{O}$ (dimension 8). No three-dimensional division algebra exists. Extension to $\mathbb{H}$ sacrifices commutativity while extension to $\mathbb{O}$ additionally sacrifices associativity—properties required for spectral theory to guarantee real eigenvalues. Section 1.4 identified that the intersection of these algebraic constraints with GUE's broken temporal symmetry suggests the Pólya operator as originally conceived may be impossible through algebraic mechanisms alone.
 
@@ -254,7 +254,7 @@ This quotient identifies lattices that differ only by scaling and rotation—the
 
 A single point $\tau \in \mathbb{C}$ doesn't merely represent a location—it represents an entire geometric structure (the torus $T_\tau$ with all its properties). This dual role will be essential for understanding how PCF implements moduli-function correspondence.
 
-\subsubsection{Lattice Structures}
+\subsubsection{Lattice Structures} \label{sec:complex-lattices}
 
 Lattices provide the discrete skeletal structure underlying complex analysis and number theory, representing the intersection of geometric periodicity with arithmetic structure.
 
@@ -286,7 +286,7 @@ is the complex torus associated to $\Lambda$. The identification $z \sim z'$ if 
 
 The parameter $\tau = \omega_2/\omega_1 \in \mathbb{H}$ is the modular parameter of the torus. Two tori $T_{\tau_1}$ and $T_{\tau_2}$ are conformally equivalent if and only if $\tau_1$ and $\tau_2$ are related by a $PSL(2,\mathbb{Z})$ transformation—precisely the equivalence relation defining $\mathcal{M}_{\text{lat}}$ in Definition~\ref{def:moduli-space-lattices}.
 
-\subsection{Dimensional Extension in Modern Physics}
+\subsection{Dimensional Extension in Modern Physics} \label{sec:dimensional-extension}
 
 The mathematical structures formalized in Section~2.2—the extension $\mathbb{R} \to \mathbb{C}$ via $i$, moduli spaces as quotients $\mathbb{H}/PSL(2,\mathbb{Z})$, and lattice-torus constructions $\mathbb{C}/\Lambda$—provides the mathematical foundation for understanding how string theory employs these structures to achieve dimensional extension and information encoding that algebraic methods cannot provide.
 
@@ -493,6 +493,6 @@ The geometric approach developed in subsequent sections explores this possibilit
 
 This synthesis—combining perspectival scaling, torus strange loop, dual rotation, and $\phi$-tower—implements moduli-function correspondence for the Riemann spectrum using the geometric structures String Theory and AdS/CFT employ, but configured to avoid the Hamiltonian circularity.
 
-\subsection{Transition to Axiomatic Framework}
+\subsection{Transition to Axiomatic Framework} \label{sec:transition-axioms}
 
 As we have seen through this investigation, the relationship between algebra and geometry runs deeper than methodological preference. Where algebra and geometry converge—in $\mathbb{C}$ as simultaneously field and metric space, in the correspondence between multiplication and rotation, in the interplay of discrete and continuous—we encounter structures of extraordinary richness. Where they separate—at the Frobenius obstruction, at the incompleteness theorems, at the dimensional barriers that no algebraic ingenuity can transcend—we discover not merely technical limitations but fundamental demarcations of what different mathematical frameworks can accomplish. The geometric tradition traced from Vitruvian proportion through medieval optics, Renaissance perspective, crystallographic symmetry, and contemporary holography demonstrates that dimensional encoding, information preservation, and structural correspondence can proceed through mechanisms that operate outside algebraic multiplication. The PCF framework inhabits this separation, working geometrically where Frobenius proved algebra cannot. The axiomatic treatment of Section 3 makes this construction mathematically precise.

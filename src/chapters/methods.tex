@@ -25,7 +25,7 @@ Among all algebraic generators of degree 2, only $i$ and $\varphi$ possess gener
 
 Other algebraic generators of degree 2 (e.g., $\sqrt{2}$ with $x^2 - 2$, $\sqrt{3}$ with $x^2 - 3$) extend fields but do not generate closed recursive structures. The equations $i^2 + 1 = 0$ and $\varphi^2 - \varphi - 1 = 0$ are unique in possessing \textbf{generative closure}: both generate infinite sequences (periodic rotations and Fibonacci) that preserve structural invariants under iteration.
 
-\textbf{Axiom 3 (Orthogonal extension).} The singularity between $\varphi$ and $i$ implies that there exists a coordinate $z \in \mathbb{R}$ orthogonal to $(x, y) \cong \mathbb{C}$ coupled by:
+\textbf{Axiom 3 (Orthogonal extension).} \label{axiom:coupling} The singularity between $\varphi$ and $i$ implies that there exists a coordinate $z \in \mathbb{R}$ orthogonal to $(x, y) \cong \mathbb{C}$ coupled by:
 $$
     z = \varphi y, \quad \varphi = \frac{1 + \sqrt{5}}{2}
 $$
@@ -500,7 +500,7 @@ where $\omega = e^{2\pi i/3}$ are the primitive cube roots of unity associated w
     \end{enumerate}
 \end{Proposition}
 
-\begin{Lemma}[Modulus verification] \label{lem:modulus-check}
+\begin{Lemma}[Modulus verification] \label{lem:modulus-check} \label{lem:tripartite-norm}
     $$|P| \cdot |C| \cdot |F| = \frac{1}{\sqrt{3}} \cdot 1 \cdot \frac{\sqrt{3}}{2} = \frac{1}{2}$$
 
     fulfilling Axiom 5 (constant modulus).
@@ -1025,7 +1025,7 @@ We have two simultaneous exponential towers:
 
 \subsubsection{Logarithmic Isomorphism}
 
-\begin{Theorem}[Logarithmic correspondence] \label{thm:log-correspondence}
+\begin{Theorem}[Logarithmic correspondence] \label{thm:log-correspondence} \label{thm:mersenne-correspondence}
     There exists a correspondence $\Phi: \sigma \mapsto p_\sigma$ between levels of the golden tower and prime exponents of Mersenne primes, determined by the logarithmic equation: $$\log_\varphi(2^{p_\sigma}) = \sigma \cdot \lambda + \log_\varphi(3)$$
 
     where $\lambda = \ln(2)/\ln(\varphi) \approx 1.440$ is the golden-binary conversion factor (Definition \ref{def:log-coupling}).
@@ -1053,7 +1053,7 @@ We have two simultaneous exponential towers:
     permitting translation between golden and binary scaling through the factor $\lambda$.
 \end{Corollary}
 
-\subsubsection{The Critical Mediator: $|\Omega| = 1/2$}
+\subsubsection{The Critical Mediator: $|\Omega| = 1/2$} \label{sec:critical-mediator}
 
 \begin{Proposition}[Critical resonance] \label{prop:critical-resonance}
     The constant modulus $|\Omega| = 1/2 = 2^{-1}$ is the necessary and sufficient condition for the golden-Mersenne correspondence to exist.
@@ -1438,7 +1438,7 @@ This tower structure is similar to Manin's $\{\psi^k\}$ with composition law $\p
 
 \textbf{Connection to Lawvere Framework.} This theorem implements the first level of circumvention---the structural level. Lawvere's fixed-point theorem \cite{Lawvere1969} requires two conditions: a diagonal $\Delta(s) = (s,s)$ placing the same element in both positions (binary auto-application), and representability ensuring every morphism $T \to Y$ factors through $Y^T$. The tripartite decomposition $\Omega = P \cdot C \cdot F$ with distinct component magnitudes prevents the diagonal; the $S_3$ geometry producing $\|\Omega\| = 1/2$ makes the norm contraction quantitative rather than abstract. As Lawvere demonstrated, ``the famed 'diagonal argument' is of course just the contrapositive'' of the fixed-point theorem. The construction circumvents this contrapositive by operating in ternary structure where binary auto-application cannot form.
 
-\textbf{The dual role of $\|\Omega\| = 1/2$.} The value $1/2$ that obstructs the diagonal is not incidental---it is the same value that connects the geometric tower to binary arithmetic through the Golden-Mersenne correspondence (\S \ref{sec:mersenne-tower}, Theorem \ref{thm:mersenne-correspondence}). As $\|\Omega\| < 1$, it prevents $\mathrm{eval} \circ \Delta = \mathrm{id}$ through norm contraction. As $2^{-1}$, it is the binary coupling through which the logarithmic isomorphism $\lambda = \ln 2/\ln \varphi$ translates between the $\varphi$-tower and the Mersenne tower $2^p - 1$, verified to $< 10^{-14}$ across 51 primes. This dual role is forced by the $S_3$ geometry---it is not designed to serve both functions, but the tripartite norm $|P| \cdot |C| \cdot |F| = (1/\sqrt{3}) \cdot 1 \cdot (\sqrt{3}/2)$ produces precisely the value at which the Lawvere obstruction and the Mersenne correspondence coincide. In the bidirectional language of \S \ref{sec:strange-loop}: $\|\Omega\| = 1/2$ is the invariant at which the expanding direction ($\varphi^\sigma$ growing, Mersenne exponents increasing, spectral content accumulating) and the contracting direction (representability degrading, self-referential capacity lost) meet. The multiplicative channel through which the expansion operates (exponential correspondence $\varphi^\sigma \leftrightarrow 2^p$) is precisely the channel that survives the contraction---while the additive channel (successor operation, G\"odel numbering) that self-reference requires is what the contraction destroys.
+\textbf{The dual role of $\|\Omega\| = 1/2$.} The value $1/2$ that obstructs the diagonal is not incidental---it is the same value that connects the geometric tower to binary arithmetic through the Golden-Mersenne correspondence (\S \ref{sec:mersenne}, Theorem \ref{thm:mersenne-correspondence}). As $\|\Omega\| < 1$, it prevents $\mathrm{eval} \circ \Delta = \mathrm{id}$ through norm contraction. As $2^{-1}$, it is the binary coupling through which the logarithmic isomorphism $\lambda = \ln 2/\ln \varphi$ translates between the $\varphi$-tower and the Mersenne tower $2^p - 1$, verified to $< 10^{-14}$ across 51 primes. This dual role is forced by the $S_3$ geometry---it is not designed to serve both functions, but the tripartite norm $|P| \cdot |C| \cdot |F| = (1/\sqrt{3}) \cdot 1 \cdot (\sqrt{3}/2)$ produces precisely the value at which the Lawvere obstruction and the Mersenne correspondence coincide. In the bidirectional language of \S \ref{sec:triple-iso}: $\|\Omega\| = 1/2$ is the invariant at which the expanding direction ($\varphi^\sigma$ growing, Mersenne exponents increasing, spectral content accumulating) and the contracting direction (representability degrading, self-referential capacity lost) meet. The multiplicative channel through which the expansion operates (exponential correspondence $\varphi^\sigma \leftrightarrow 2^p$) is precisely the channel that survives the contraction---while the additive channel (successor operation, G\"odel numbering) that self-reference requires is what the contraction destroys.
 
 \textbf{The second level: analogical circumvention.} Theorem \ref{thm:no-diagonal} establishes that the diagonal \emph{cannot} form on the PCF structure. But there is a prior reason it \emph{need not} form: the construction does not operate on the objects that generate the paradox. The fixed point $M_{\text{PCF}}$ is determined by $\varphi$ and $\pi$. The tower $\{\Lambda_\sigma\}$ scales by $\varphi^\sigma$. The spectral invariants $\mu = 1/2$ and $\sigma = 3/2$ emerge from $S_3$ geometry and Fourier analysis (Observation \ref{obs:basel}). At this stage of the construction, $\mathbb{Z}$ as an arithmetic object does not appear; primes appear only as pentagonal rotations (cyclotomic geometry); and $\zeta(s)$ is not referenced. What we are building is a geometric structure whose internal logic produces spectral predictions---an analogy in the precise sense that Weil's proof for function fields over $\mathbb{F}_q$ is an analogy to the Riemann Hypothesis over $\mathbb{Z}$, operating in a domain where the relevant objects have geometric rather than arithmetic character. The combination with pentagonal prime classification---where the analogy makes contact with arithmetic---occurs in \S \ref{sec:tstar} when the operator $T^*$ is assembled. The non-circularity of $T^*$ rests on both levels: the diagonal cannot form (Theorem \ref{thm:no-diagonal}), and the domain in which the construction operates does not contain the self-referential capacity that would require a diagonal to be prevented.
 
@@ -1453,7 +1453,7 @@ This tower structure is similar to Manin's $\{\psi^k\}$ with composition law $\p
 \end{Corollary}
 
 \begin{proof}
-    From Theorem \ref{thm:no-diagonal}, no diagonal exists. Auto-referential strange loop (\S \ref{sec:strange-loop}) operates through fixed point $M_{\text{PCF}}$: frequency $\varepsilon(\sigma)$ determines module $M_\sigma = \pi/\varepsilon(\sigma)$, which determines next frequency $\varepsilon(\sigma+1) = \varphi \cdot \varepsilon(\sigma)$. This circularity avoids paradox because $M_{\text{PCF}}$ provides external geometric anchor---the ``measurement scale'' from which iterations proceed.
+    From Theorem \ref{thm:no-diagonal}, no diagonal exists. Auto-referential strange loop (\S \ref{sec:triple-iso}) operates through fixed point $M_{\text{PCF}}$: frequency $\varepsilon(\sigma)$ determines module $M_\sigma = \pi/\varepsilon(\sigma)$, which determines next frequency $\varepsilon(\sigma+1) = \varphi \cdot \varepsilon(\sigma)$. This circularity avoids paradox because $M_{\text{PCF}}$ provides external geometric anchor---the ``measurement scale'' from which iterations proceed.
 
     Tower neither collapses nor diverges:
     \[
@@ -1517,7 +1517,7 @@ The expanding direction---growing lattice, increasing frequency, accumulating sp
 The parallel with string-theoretic compactification is structural rather than analogical. In both cases, a process that contracts in one direction ($R \to 0$ for compactified dimensions; Galois quotients for representability) while expanding in another (winding modes becoming lighter; geometric lattice growing) retains the discrete topological structure needed for physics/spectrum while shedding the continuous degrees of freedom that enable self-referential or divergent constructions. The Mersenne correspondence $\varphi^\sigma \leftrightarrow 2^p$ plays a role analogous to T-duality: exchanging representations across the contraction while preserving content---and, like T-duality, operating through the same coupling constant ($|\Omega| = 1/2 \leftrightarrow R \cdot R' = \alpha'$) that governs both directions. Each quotient level descends toward the $\mathbb{F}_1$ regime where only multiplicative data survives---where Lawvere's diagonal cannot form but where spectral construction remains viable.
 
 \begin{Remark}[Scope] \label{rem:categorical-scope}
-    The full categorical formalization of the bidirectional tower---representability quantified at each contracting level, spectral capacity tracked along the expanding direction, the Galois action expressed functorially, and the comparison with string-theoretic compactification and T-duality made rigorous through the topological cyclic homology framework of \S \ref{sec:tc}---is deferred to a dedicated subsequent paper. What has been established here is sufficient for what follows: the tower avoids Lawvere paradox both structurally (Theorem \ref{thm:no-diagonal}) and by operating in a geometric domain without arithmetic self-referential capacity; it grows stably through the expanding direction (Corollary \ref{cor:exponential-support}) while contracting representability through the quotient direction; the coupling $\varepsilon \cdot \tau = \pi$ ensures these directions remain balanced at the invariant scale $M_{\text{PCF}}$; and the Mersenne correspondence (\S \ref{sec:mersenne-tower}) provides the multiplicative channel through which the expanding geometric tower reconnects to arithmetic without restoring the additive operations self-reference requires. The spectral extraction of \S \ref{sec:tstar} builds on these properties, combining the $S_3$ invariants developed here with the pentagonal prime classification---the point where the geometric analogy makes contact with the Euler product.
+    The full categorical formalization of the bidirectional tower---representability quantified at each contracting level, spectral capacity tracked along the expanding direction, the Galois action expressed functorially, and the comparison with string-theoretic compactification and T-duality made rigorous through the topological cyclic homology framework of \S \ref{sec:tc}---is deferred to a dedicated subsequent paper. What has been established here is sufficient for what follows: the tower avoids Lawvere paradox both structurally (Theorem \ref{thm:no-diagonal}) and by operating in a geometric domain without arithmetic self-referential capacity; it grows stably through the expanding direction (Corollary \ref{cor:exponential-support}) while contracting representability through the quotient direction; the coupling $\varepsilon \cdot \tau = \pi$ ensures these directions remain balanced at the invariant scale $M_{\text{PCF}}$; and the Mersenne correspondence (\S \ref{sec:mersenne}) provides the multiplicative channel through which the expanding geometric tower reconnects to arithmetic without restoring the additive operations self-reference requires. The spectral extraction of \S \ref{sec:tstar} builds on these properties, combining the $S_3$ invariants developed here with the pentagonal prime classification---the point where the geometric analogy makes contact with the Euler product.
 \end{Remark}
 
 \subsection{Spacetime-Hilbert Unfolding and Operator Construction} \label{sec:spacetime-unfolding}
@@ -1572,7 +1572,7 @@ The tower of lattices from \S \ref{sec:tower} reinterprets as series of complex 
     The logarithmic form $d(\ln \sigma)^2$ ensures gauge invariance under rescaling transformation $\sigma \to \alpha\sigma$ for positive constant $\alpha$: $d(\ln(\alpha\sigma)) = d(\ln \sigma)$. The scale dimension $\sigma$ is discrete ($\sigma \in \mathbb{Z}$ takes integer values), distinguishing it structurally from continuous spatial coordinates $(x,y,z \in \mathbb{R})$ and temporal coordinate ($t \in \mathbb{R}$). This discreteness reflects that $\sigma$ counts number of $\varphi$-scaling operations applied to base lattice $\Lambda_{\text{PCF}}$, which is necessarily integer-valued geometric operation.
 \end{Definition}
 
-\textbf{Unfolding as strange loop manifestation.} The tower progression from low frequency ($\sigma = 0,1$) to high frequency ($\sigma = 5,6,\ldots$) represents physical realization of strange loop mechanism from \S \ref{sec:strange-loop}. Frequency increase $\varepsilon(\sigma) = \varepsilon_0\varphi^\sigma$ in Hilbert space $L^2(\mathbb{R})$ equals spatial expansion $M_\sigma = \varphi^\sigma M_{\text{PCF}}$ in geometric space---not two separate processes but single self-similar evolution mediated by parameter $\varepsilon(\sigma)$.
+\textbf{Unfolding as strange loop manifestation.} The tower progression from low frequency ($\sigma = 0,1$) to high frequency ($\sigma = 5,6,\ldots$) represents physical realization of strange loop mechanism from \S \ref{sec:triple-iso}. Frequency increase $\varepsilon(\sigma) = \varepsilon_0\varphi^\sigma$ in Hilbert space $L^2(\mathbb{R})$ equals spatial expansion $M_\sigma = \varphi^\sigma M_{\text{PCF}}$ in geometric space---not two separate processes but single self-similar evolution mediated by parameter $\varepsilon(\sigma)$.
 
 The bidirectional parameter $\varepsilon(\sigma)$ (operating as frequency measurement in $L^2(\mathbb{R})$, operating as angular velocity in $\mathbb{C}$ for projection $\pi: E^3 \to \mathbb{C}$) manifests physically as discrete tower levels. Each step $\sigma \to \sigma+1$ constitutes simultaneously:
 
@@ -1598,7 +1598,7 @@ All three aspects mediated by universal scaling factor $\varphi$. Not three inde
         \item $\mathbb{C}^3$ carries tripartite structure (components $P, C, F$ with $S_3$ symmetry)
     \end{itemize}
 
-    The tensor product structure reflects the strange loop: functional aspects ($L^2(\mathbb{R})$) and geometric aspects ($\mathbb{C}^3$) operate simultaneously through bidirectional correspondence established in \S \ref{sec:strange-loop}.
+    The tensor product structure reflects the strange loop: functional aspects ($L^2(\mathbb{R})$) and geometric aspects ($\mathbb{C}^3$) operate simultaneously through bidirectional correspondence established in \S \ref{sec:triple-iso}.
 \end{Definition}
 
 \begin{Proposition}[Hermitian structure] \label{prop:hermitian}
@@ -1617,7 +1617,7 @@ All three aspects mediated by universal scaling factor $\varphi$. Not three inde
 
 \subsection{The Pentadimensional 5-Cube: Geometric Synthesis} \label{sec:pentadimensional}
 
-The constructions of \S \S \ref{sec:strange-loop}--\ref{sec:lawvere-circumvention} establish that the PCF framework realizes a genuine 5-dimensional hypercube in spacetime, synthesizing Manin's algebraic vision, String Theory's extra dimensions, and the golden tower structure into a unified geometric object. Before proceeding to spectral extraction (\S \ref{sec:tstar}), we formalize this pentadimensional structure and visualize its hierarchical nested architecture.
+The constructions of \S \S \ref{sec:triple-iso}--\ref{sec:lawvere-circumvention} establish that the PCF framework realizes a genuine 5-dimensional hypercube in spacetime, synthesizing Manin's algebraic vision, String Theory's extra dimensions, and the golden tower structure into a unified geometric object. Before proceeding to spectral extraction (\S \ref{sec:tstar}), we formalize this pentadimensional structure and visualize its hierarchical nested architecture.
 
 \subsubsection{Hierarchical Dimensional Nesting} \label{sec:dimensional-nesting}
 
@@ -1671,7 +1671,7 @@ The constructions of \S \S \ref{sec:strange-loop}--\ref{sec:lawvere-circumventio
         \frac{M_{\sigma+1}}{M_\sigma} = \varphi \approx 1.618, \quad \frac{V_{\sigma+1}}{V_\sigma} = \varphi^3 \approx 4.236
     \]
 
-    This discrete tower of nested cubes realizes the strange loop mechanism (\S \ref{sec:strange-loop}): each level $\sigma$ corresponds simultaneously to:
+    This discrete tower of nested cubes realizes the strange loop mechanism (\S \ref{sec:triple-iso}): each level $\sigma$ corresponds simultaneously to:
     \begin{itemize}
         \item Frequency $\varepsilon(\sigma) = \varepsilon_0\varphi^\sigma$ in Hilbert space $L^2(\mathbb{R})$
         \item Module $M_\sigma = \pi/\varepsilon(\sigma)$ in moduli space $\mathbb{C}/\Lambda_{\text{PCF}}$
@@ -1718,7 +1718,7 @@ The 5-cube structure synthesizes three independent mathematical frameworks that 
     The PCF 5-cube realizes:
 
     \begin{enumerate}
-        \item \textbf{Manin's moduli-function duality:} The strange loop (\S \ref{sec:strange-loop}) implements bidirectional correspondence $\varepsilon(\sigma) \leftrightarrow M_\sigma$ without requiring algebraic operations in extended number systems. External geometric $\varphi$-scaling circumvents Frobenius obstruction.
+        \item \textbf{Manin's moduli-function duality:} The strange loop (\S \ref{sec:triple-iso}) implements bidirectional correspondence $\varepsilon(\sigma) \leftrightarrow M_\sigma$ without requiring algebraic operations in extended number systems. External geometric $\varphi$-scaling circumvents Frobenius obstruction.
         \item \textbf{String Theory's extra dimensions:} The geometric extension $\mathbb{C} \to E^3$ via external Euclidean coupling $z = \varphi y$ parallels String Theory's worldsheet embedding $X^\mu: T^2 \to M^D$ (\S \ref{sec:string}), but avoids Hamiltonian presupposition by generating tower through recurrence $\Lambda_{\sigma+1} = \varphi \Lambda_\sigma$.
         \item \textbf{AdS/CFT holographic unfolding:} The dimensional progression (Theorem \ref{thm:dimensional-unfolding}) from compact toroidal structure ($\sigma = 0,1$) to extended spacetime ($\sigma \geq 5$) mirrors AdS/CFT's bulk-boundary correspondence, with discrete parameter $\sigma$ playing role analogous to radial coordinate in AdS geometry.
     \end{enumerate}
@@ -1812,7 +1812,7 @@ The triangle, once established, yields specific geometric data. The component no
 
 \subsubsection{The Primes Become Geometry} \label{sec:golden-primes-emergence}
 
-The invariants of \S \ref{sec:invariants-emerge}---$\mu = 1/2$, $\sigma = 3/2$, $d = 3$---determine the global structure of the spectrum but not the individual zero heights. To reproduce the full spectrum of $\zeta$, the construction requires arithmetic content. It takes this content from the Golden Prime Symmetry Theorem (Grisales Herrera, 2025; introduced in \S \ref{sec:mersenne-tower}, formalized in \S \ref{sec:golden-primes}), which \emph{substitutes} the individual entry of primes into $\zeta$. Every prime $p > 5$ is replaced by its residue class modulo 20, and these 8 classes---the units of $(\mathbb{Z}/20\mathbb{Z})^*$---turn out to be rotations of the regular pentagon at angles determined by the cyclotomic polynomial $\Phi_{20}$. The classification function $G(p) = 2\sin(\mathrm{angle}_p)$ takes values exclusively in $\{\pm\varphi, \pm\varphi^{-1}\}$.
+The invariants of \S \ref{sec:invariants-emerge}---$\mu = 1/2$, $\sigma = 3/2$, $d = 3$---determine the global structure of the spectrum but not the individual zero heights. To reproduce the full spectrum of $\zeta$, the construction requires arithmetic content. It takes this content from the Golden Prime Symmetry Theorem (Grisales Herrera, 2025; introduced in \S \ref{sec:mersenne}, formalized in \S \ref{sec:golden-primes}), which \emph{substitutes} the individual entry of primes into $\zeta$. Every prime $p > 5$ is replaced by its residue class modulo 20, and these 8 classes---the units of $(\mathbb{Z}/20\mathbb{Z})^*$---turn out to be rotations of the regular pentagon at angles determined by the cyclotomic polynomial $\Phi_{20}$. The classification function $G(p) = 2\sin(\mathrm{angle}_p)$ takes values exclusively in $\{\pm\varphi, \pm\varphi^{-1}\}$.
 
 What this substitution destroys: individual prime identity (infinitely many primes collapse into 8 classes), additive structure (no successor operation on residue classes), and self-referential capacity (G\"odel numbering requires injectivity, lost by the $\infty \to 8$ collapse). These are precisely the structures that Lawvere's diagonal requires (\S \ref{sec:lawvere-circumvention}) and that make direct use of the Euler product circular.
 
@@ -1841,7 +1841,7 @@ That these two expressions---one analytic, ranging over all positive integers; t
 
 The PCF construction uses neither side of this identity. It operates on the geometric side---$S_3$ producing $\sigma = 3^2/6$---and the relation $(\pi^2/6)/(\pi^2/9) = 3/2$ serves as the translation that abstracts $\sigma$ out of $\zeta$ and into pure group theory. That the geometric invariant $\sigma = 3/2$ coincides with the ratio computable from the Euler product is not a premise of the construction but a revelation about it: the geometry of $S_3$ captures the same content that the arithmetic of the primes produces through $\zeta$, without needing to name either.
 
-This is our reinterpretation of the moduli-function duality that Manin proposed (\S \ref{sec:manin}, \S \ref{sec:strange-loop})---realized geometrically rather than algebraically, from what we call a Vitruvian approach. The Tarskian perspective clarifies why this realization works: the arithmetic side of the duality (Euler product, individual primes) lives where Lawvere's diagonal can form---where self-referential capacity exists and G\"odel's theorem applies. The geometric side ($S_3$, the triangle, the angular period $\pi/3$) lives in the decidable fragment of real geometry that Tarski identified---where $\mathbb{N}$ is not internally definable and self-reference cannot form. The GPS substitution (\S \ref{sec:golden-primes-emergence}) is the mechanism that crosses from one side to the other: it replaces primes by their cyclotomic shadows, destroying precisely the self-referential capacity while preserving the spectral content that $\sigma$, $\mu$, and the classification require.
+This is our reinterpretation of the moduli-function duality that Manin proposed (\S \ref{sec:manin}, \S \ref{sec:triple-iso})---realized geometrically rather than algebraically, from what we call a Vitruvian approach. The Tarskian perspective clarifies why this realization works: the arithmetic side of the duality (Euler product, individual primes) lives where Lawvere's diagonal can form---where self-referential capacity exists and G\"odel's theorem applies. The geometric side ($S_3$, the triangle, the angular period $\pi/3$) lives in the decidable fragment of real geometry that Tarski identified---where $\mathbb{N}$ is not internally definable and self-reference cannot form. The GPS substitution (\S \ref{sec:golden-primes-emergence}) is the mechanism that crosses from one side to the other: it replaces primes by their cyclotomic shadows, destroying precisely the self-referential capacity while preserving the spectral content that $\sigma$, $\mu$, and the classification require.
 
 \paragraph{Transition}
 
@@ -1972,7 +1972,7 @@ We verify the combinatorial structure through computational analysis of prime di
 
 \subsection{Arithmetic Foundation: Mersenne Boundaries} \label{sec:mersenne-boundaries}
 
-The correspondence between the continuous golden tower and the discrete Mersenne tower was established in \S \ref{sec:mersenne-tower} through the logarithmic isomorphism. Theorem \ref{thm:mersenne-correspondence} demonstrated that the golden tower $R_\sigma = 3\varphi^\sigma$ and the Mersenne tower $M_p = 2^p - 1$ are connected through the resonance equation:
+The correspondence between the continuous golden tower and the discrete Mersenne tower was established in \S \ref{sec:mersenne} through the logarithmic isomorphism. Theorem \ref{thm:mersenne-correspondence} demonstrated that the golden tower $R_\sigma = 3\varphi^\sigma$ and the Mersenne tower $M_p = 2^p - 1$ are connected through the resonance equation:
 
 \[
     \log_\varphi(2^{p_\sigma}) = \sigma \cdot \lambda + \log_\varphi(3)
@@ -2005,7 +2005,7 @@ Mersenne primes $M_p = 2^p - 1$ (for prime $p$) thus occupy doubly distinguished
 \end{table}
 
 \begin{Observation}[Mersenne concentration in Golden Prime classes] \label{obs:mersenne-concentration}
-    All tabulated Mersenne primes satisfy $M_p \mod 20 \in \{3, 7, 11\}$, a strict subset of the 8 Golden Prime classes. In the classification of Grisales Herrera (2025), these residues correspond to specific golden function values: class 7 maps to $G(p) \in \{\varphi, -\varphi\}$ (the golden ratio itself), class 11 maps to $G(p) = \varphi^{-1}$, and class 3 maps to $G(p) = -\varphi$. The concentration of Mersenne primes in classes associated with $\varphi$ and $\varphi^{-1}$ (rather than distributing uniformly across all 8 classes) reflects deep arithmetic structure linking Mersenne primes to golden ratio geometry---consistent with the golden-Mersenne correspondence of \S \ref{sec:mersenne-tower}.
+    All tabulated Mersenne primes satisfy $M_p \mod 20 \in \{3, 7, 11\}$, a strict subset of the 8 Golden Prime classes. In the classification of Grisales Herrera (2025), these residues correspond to specific golden function values: class 7 maps to $G(p) \in \{\varphi, -\varphi\}$ (the golden ratio itself), class 11 maps to $G(p) = \varphi^{-1}$, and class 3 maps to $G(p) = -\varphi$. The concentration of Mersenne primes in classes associated with $\varphi$ and $\varphi^{-1}$ (rather than distributing uniformly across all 8 classes) reflects deep arithmetic structure linking Mersenne primes to golden ratio geometry---consistent with the golden-Mersenne correspondence of \S \ref{sec:mersenne}.
 \end{Observation}
 
 \begin{Observation}[Fundamental constant $d = 3 = M_2$] \label{obs:mersenne-1}
@@ -2273,7 +2273,7 @@ From \S \ref{sec:critical-mediator}, the PCF operator $\Omega(z,\sigma)$ yields 
     \end{enumerate}
 \end{Proposition}
 
-The logarithmic kernel $\ln(\mu n + \sigma) = \ln(n/2 + 3/2)$ in $T^*$ is not a curve-fitting parameter but encodes both: the critical line $\text{Re}(s) = \mu = 1/2$, and the three-fold coupling $\sigma = 3\mu$ from $S_3$ symmetry. The dual role of $\mu = 1/2$---as spectral invariant and as golden-Mersenne mediator---provides independent confirmation that the geometric (\S \ref{sec:critical-mediator}) and arithmetic (\S \ref{sec:mersenne-tower}) components of $T^*$ share a common origin.
+The logarithmic kernel $\ln(\mu n + \sigma) = \ln(n/2 + 3/2)$ in $T^*$ is not a curve-fitting parameter but encodes both: the critical line $\text{Re}(s) = \mu = 1/2$, and the three-fold coupling $\sigma = 3\mu$ from $S_3$ symmetry. The dual role of $\mu = 1/2$---as spectral invariant and as golden-Mersenne mediator---provides independent confirmation that the geometric (\S \ref{sec:critical-mediator}) and arithmetic (\S \ref{sec:mersenne}) components of $T^*$ share a common origin.
 
 \textbf{Remark} (Connection to Golden Prime rotation matrix). The spectral structure of $T^*$ connects to the prime golden rotation matrix of Grisales Herrera (\S 7), whose eigenvalues encode the 8 prime classes in the complex plane. The PCF operator $\hat{\Omega}$ with $|\Omega| = 1/2$ and the Golden Prime rotation matrix both generate spectral decompositions reflecting pentagonal symmetry---the former through $S_3$ geometry (\S \ref{sec:torus}), the latter through prime period arithmetic. Both produce real spectral values ($\{\pm\varphi, \pm\varphi^{-1}\}$ for Golden Prime; eigenvalues of $\tilde{H}_{\text{PCF}}$ for the Riemann zeros) from pentagonal structure in $\mathbb{C}$.
 
@@ -2289,7 +2289,7 @@ Empirical analysis (\S \ref{ch:results}) reveals two spectral regimes. For $n \l
 
 \begin{enumerate}
     \item $n = 30 \in G_4 = \{16, \ldots, 31\}$, the last complete generation before the pentagonal threshold $2^5 = 32$
-    \item $M_5 = 31$ is adjacent: the fifth Mersenne prime sits at $G_4$'s boundary, marking a resonance point where golden and binary towers achieve closest alignment (\S \ref{sec:mersenne-tower}, Theorem \ref{thm:mersenne-correspondence})
+    \item $M_5 = 31$ is adjacent: the fifth Mersenne prime sits at $G_4$'s boundary, marking a resonance point where golden and binary towers achieve closest alignment (\S \ref{sec:mersenne}, Theorem \ref{thm:mersenne-correspondence})
     \item $2^5 = 32 = M_5 + 1$ simultaneously marks: entry into pentagonal generation $G_5$; onset of $C(5,2) = 10$ combinatorial planes; and $\varphi$-dominated structure replacing triangular ($d=3$) dominance
     \item This transition mirrors \S \ref{sec:pentadimensional}'s dimensional progression: the passage from compact toroidal structure ($\sigma = 0,1$) dominated by $S_3$ triangular geometry to extended spacetime ($\sigma \geq 5$) where the full pentadimensional synthesis operates. In $T^*$, the corresponding passage is from a regime where discrete arithmetic corrections ($C_M, M_G$) are essential to one where continuous $\varphi$-mediated asymptotics dominate
 \end{enumerate}
@@ -2308,7 +2308,7 @@ The generator $\hat{\Omega}$ is normal but not Hermitian (\S \ref{sec:non-hermit
         c(n)      & := 2 + \alpha(n)/(1 + \beta(n) \cdot \ln(n))
     \end{align*}
 
-    Let $E_M := \{2, 3, 5, 7, 13, 17, 19, 31\}$ denote the set of Mersenne exponents (\S \ref{sec:mersenne-tower}). Define:
+    Let $E_M := \{2, 3, 5, 7, 13, 17, 19, 31\}$ denote the set of Mersenne exponents (\S \ref{sec:mersenne}). Define:
     \begin{align*}
         \delta_M(n) & := \min_{p \in E_M} |n - p|, \quad C_M(n) := 1 + 0.005 \cdot \exp(-\delta_M/10) \\
         M_G(n)      & := \begin{cases}
@@ -2336,7 +2336,7 @@ The generator $\hat{\Omega}$ is normal but not Hermitian (\S \ref{sec:non-hermit
     \item \textbf{$\beta$:} In Regime I, $\beta(n) = 2^{-k}$ interpolates adaptively across hypercube generations (\S \ref{sec:hypercube}). In Regime II, $\beta = 1/8 = 2^{-3}$ is the base value from $S_3$ symmetry (\S \ref{sec:torus}) and the sextuple convergence of 8 (Proposition \ref{prop:sextuple-convergence})
     \item \textbf{$\alpha_0 = 59/40$:} Structural decomposition $\sigma - \mu/20$ (structural; combination law open) \S \ref{sec:hypercube}
     \item \textbf{$\lambda_\alpha = 20$:} Vigesimal modulus of Golden Prime classification (Proposition \ref{prop:vigesimal})
-    \item \textbf{$C_M$:} Mersenne correction from golden-Mersenne correspondence (\S \ref{sec:mersenne-tower}, \S \ref{sec:mersenne-boundaries})
+    \item \textbf{$C_M$:} Mersenne correction from golden-Mersenne correspondence (\S \ref{sec:mersenne}, \S \ref{sec:mersenne-boundaries})
     \item \textbf{$M_G$:} Golden modulation from 8-class prime classification (Grisales Herrera 2025, \S \ref{sec:golden-primes})
 \end{itemize}
 
@@ -2393,7 +2393,7 @@ We now present the complete dependency structure of the $T^*$ operator, demonstr
         1     & Hypercube $H_k$     & $2^k$ vertices                             & \S \ref{sec:hypercube}           & Discrete tower (\S \ref{sec:pentadimensional})                              & None (axiom)                          \\
         2     & Generations $G_k$   & $|G_k| = 2^k$                              & \S \ref{sec:hypercube}           & $k = \lfloor\log_2 n\rfloor$                                                & Level 1                               \\
         3     & Adaptive $\beta$    & $\beta(n) = 2^{-k}$                        & \S \ref{sec:hypercube}           & $\beta=1/8$ base (\S \ref{sec:torus}, \S \ref{sec:hausdorff})               & Levels 1--2                           \\
-        4     & Mersenne $M_p$      & $2^p - 1$                                  & \S \ref{sec:mersenne-boundaries} & \S \ref{sec:mersenne-tower} correspondence                                  & Level 2                               \\
+        4     & Mersenne $M_p$      & $2^p - 1$                                  & \S \ref{sec:mersenne-boundaries} & \S \ref{sec:mersenne} correspondence                                  & Level 2                               \\
         5     & 8 classes           & $\varphi(20) = 8 = 2^3$                    & \S \ref{sec:golden-primes}       & Grisales Herrera (2025)                                                     & Level 2 ($H_3$)                       \\
         6     & Pentagon $\varphi$  & diag/side $= \varphi$                      & \S \ref{sec:pentagon}            & \S \ref{sec:third-dimension} ($z=\varphi y$), \S \ref{sec:pentadimensional} & Level 5 ($20=4\times5$)               \\
         7     & PCF $\mu$, $\sigma$ & $\mu=1/2, \sigma=3/2$                      & \S \ref{sec:spectral-bridge}     & \S \ref{sec:critical-mediator}, Prop. \ref{prop:mersenne-mediator}          & None (\S \ref{sec:critical-mediator}) \\
@@ -2408,7 +2408,7 @@ The ``Depends On'' column confirms acyclicity: each level depends only on lower 
 
 \textbf{The complete causal chain:}
 
-At base: the PCF axioms (\S \ref{sec:axioms}) establish $z = \varphi y$, $i^2 = -1$, and distributed structure, motivated by the dual obstructions of Frobenius and Hamiltonian circularity (\S \S \ref{sec:manin}--\ref{sec:connes}). The $S_3$ geometry (\S \ref{sec:torus}) produces $|\Omega| = 1/2$ and $\sigma = 3/2$. The self-similar tower (\S \ref{sec:tower}) generates $\{\Lambda_\sigma = \varphi^\sigma \Lambda_{\text{PCF}}\}$, realizing Manin's moduli-function duality (\S \ref{sec:moduli-function-duality}). The golden-Mersenne correspondence (\S \ref{sec:mersenne-tower}) bridges continuous and discrete towers through $\lambda = \ln 2/\ln \varphi$.
+At base: the PCF axioms (\S \ref{sec:axioms}) establish $z = \varphi y$, $i^2 = -1$, and distributed structure, motivated by the dual obstructions of Frobenius and Hamiltonian circularity (\S \S \ref{sec:manin}--\ref{sec:connes}). The $S_3$ geometry (\S \ref{sec:torus}) produces $|\Omega| = 1/2$ and $\sigma = 3/2$. The self-similar tower (\S \ref{sec:tower}) generates $\{\Lambda_\sigma = \varphi^\sigma \Lambda_{\text{PCF}}\}$, realizing Manin's moduli-function duality (\S \ref{sec:moduli-function-duality}). The golden-Mersenne correspondence (\S \ref{sec:mersenne}) bridges continuous and discrete towers through $\lambda = \ln 2/\ln \varphi$.
 
 From this established structure, the hypercube stratification (\S \ref{sec:hypercube}) introduces the discrete arithmetic counterpart of the golden tower. Mersenne primes (\S \ref{sec:mersenne-boundaries}) mark boundary resonances. The number $8 = 2^3 = \varphi(20)$ encodes the binary-ternary duality---simultaneously the hypercube $H_3$, the Golden Prime classes (Grisales Herrera, 2025), the unit group $\mathbb{Z}_2^3 \cong \mathbb{Z}^*_{20}$, and the PCF parameter $\beta = 1/8$. The pentagonal threshold $2^5 = 32$, adjacent to $M_5 = 31$, marks the transition from triangular ($d=3$) to pentagonal ($d=5$) regime. The PCF spectral invariants $\mu$, $\sigma$ anchor the logarithmic kernel.
 
