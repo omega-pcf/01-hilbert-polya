@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: If you use this software, please cite it using these metadata.
-title: "The Ω_PCF Operator and the Primitive Structure of the Complex Plane:
-  From Mersenne to Riemann via Geometric Coupling φ-i-S₃"
+title: "The Hilbert Pólya Operator and the Primitive Structure of the Complex Plane:
+  A Reinterpretation of Yuri Manin's Ideas from the Perspective of the String Theory Framework"
 version: 1.4.0
-date-released: 2025-12-02
+date-released: 2026-02-18
 authors:
   - family-names: González García
     given-names: Jorge Armando
@@ -18,24 +18,41 @@ authors:
   - family-names: García Ordóñez
     given-names: Luz María
     affiliation: TTAMAYO PUNTO COM, S.A.P.I. de C.V.
-  - family-names: Moreno
-    given-names: Mario
-    affiliation: Independent Researcher
 repository-code: https://github.com/omega-pcf/01-primitive-complex-field
 license: CC-BY-4.0
 keywords:
-  - Riemann hypothesis
+  - Riemann Hypothesis
   - Hilbert-Pólya conjecture
-  - L-functions
-  - Self-adjoint operators
-  - Random matrix theory
-  - Zeta function zeros
-  - Mersenne primes
-  - Modular spaces
-abstract: Through multi-domain coherence bootstrap principles, we transcend
-  self-reference problems of the Lawvere-Yanofsky type that have limited several
-  previous attempts to construct the Hilbert-Pólya operator, as well as other
-  approaches to the Riemann Hypothesis. We develop an operator as an analytical
-  tool of the complex plane through three-dimensional modularization coupled to
-  the golden ratio—a reorganization that preserves all constituents of ℂ while
-  revealing underlying toroidal structure.
+  - Hermitian operators
+  - Non-circular construction
+  - S₃ symmetry
+  - Spectral invariants
+  - Golden ratio
+  - Fibonacci sequence
+abstract: 'The centenary Hilbert-Pólya conjecture proposes that the non-trivial zeros
+  of the Riemann zeta function correspond to eigenvalues of a Hermitian operator.
+  Despite the statistical correlations established by Dyson-Montgomery and computationally
+  verified by Odlyzko across more than 10^13 zeros, the explicit construction of the
+  required operator has resisted all attempts due to fundamental constructional circularity.
+
+  We approach the problem departing from the perspective of Manin''s Numbers as Functions
+  and F_1-geometric program, where Spec(Z) is treated as a geometric object over the
+  field with one element, and the program''s established connection to string theory via
+  Connes, Douglas and Schwarz (1998), who demonstrated that toroidal compactification in
+  M-theory produces the noncommutative tori central to this program. While this framework
+  constructs the geometric arena an arithmetic proof requires, it lacks a dynamical component.
+  We address this gap by constructing a Hermitian operator T* on a toroidal manifold whose
+  spectral invariants (d = 3, μ = 1/2, σ = 3/2) emerge from the generator matrix Ω̂ = ½·diag(1,ω,ω²)
+  and whose structural parameters derive from geometric-arithmetic architecture—hypercube
+  stratification, Mersenne boundaries, and Golden Prime classes (Grisales Herrera, 2025)—
+  without utilizing known values of the zeros.
+
+  Computational verification yields mean error 0.59% for n = 50–100 and 0.25% for n = 1,000–10,000,
+  with the ratio T*(n)/t_n converging toward unity, validated to n = 131,072.
+
+  This constitutes, to our knowledge, the first non-circular construction of a Hilbert-Pólya
+  operator with verified asymptotic convergence T*(n)/t_n → 1, suggesting that the Riemann
+  Hypothesis may admit reinterpretation as a geometric stability condition within the
+  F_1-arithmetic framework and that the emergent identity ζ(2)/(π/3)² = σ, connecting the
+  Euler product with the S_3 angular structure, suggests the mechanism has scope beyond the
+  Riemann spectrum.'
