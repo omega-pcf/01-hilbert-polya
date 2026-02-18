@@ -1055,7 +1055,7 @@ We have two simultaneous exponential towers:
 
 \subsubsection{The Critical Mediator: $|\Omega| = 1/2$} \label{sec:critical-mediator}
 
-\begin{Proposition}[Critical resonance] \label{prop:critical-resonance}
+\begin{Proposition}[Critical resonance] \label{prop:critical-resonance} \label{thm:mediator}
     The constant modulus $|\Omega| = 1/2 = 2^{-1}$ is the necessary and sufficient condition for the golden-Mersenne correspondence to exist.
 \end{Proposition}
 
@@ -2367,7 +2367,7 @@ Asymptotic correctness follows from $\lim c(n) = 2$, ensuring $T^*(n) \sim 2\pi 
     For $n > 30$, $T^*(n) = c(n)\pi n/\ln(\mu n + \sigma)$. By Lemma \ref{lem:coeff-conv}, $c(n) \to 2$. Riemann-von Mangoldt: $t_n \sim 2\pi n/\ln(n)$. Thus $T^*(n)/t_n \sim c(n) \cdot \ln(n)/(2 \cdot \ln(n/2 + 3/2)) \to 2 \cdot (1/2) = 1$ as $n \to \infty$, since $\ln(n/2 + 3/2)/\ln(n) \to 1$.
 \end{proof}
 
-\begin{Theorem}[Computational complexity] \label{thm:complexity}
+\begin{Theorem}[Computational complexity] \label{thm:complexity} \label{thm:complexity-proof}
     $T^*(n)$ is computable in $O(\log n)$ time.
 \end{Theorem}
 
