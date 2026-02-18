@@ -353,7 +353,7 @@ The fundamental parameter $\varepsilon_0$ emerges from the specific geometric pr
     The precision extends to all computable digits.
 \end{proof}
 
-\textbf{Observation \ref{obs:eps0-connection} (Connection with $\zeta(2)$).} The intrinsic triangular curvature $\pi/3$ connects with Euler's solution to the Basel problem $\zeta(2) = \pi^2/6$ through: $$\frac{\zeta(2)}{(\pi/3)^2} = \frac{3}{2}$$
+\begin{Observation}[Connection with \zeta(2)] \label{obs:eps0-connection}
 
 The factor 6 appears in three fundamental contexts:
 \begin{enumerate}
@@ -363,6 +363,8 @@ The factor 6 appears in three fundamental contexts:
 \end{enumerate}
 
 The ratio 3/2 coincides with the asymptotic limit $T(n)/t_n \to 3/2$, suggesting deep structural connections between the tripartite geometry and the spectral properties of $\zeta(s)$.
+
+\end{Observation}
 
 \subsection{Topological Coupling: PCF Structure to 2D Torus} \label{sec:torus}
 
@@ -386,7 +388,9 @@ We place three vertices on the cylinder surface, separated angularly by 120° ($
 
 \textbf{Vertex F (Flow):} $\theta_F = 240°$ $$F_{\text{vert}} = (-1.5, -2.598, -4.204)$$ where $x_F = 3\cos(240°) = -1.5$, $y_F = 3\sin(240°) \approx -2.598$, $z_F = \varphi \cdot y_F \approx -4.204$
 
-\textbf{Observation \ref{obs:golden-coupling-applied} (Golden coupling applied).} The heights satisfy $z = \varphi y$ (Axiom 3), connecting the tripartite structure to the extended space $E^3$.
+\begin{Observation}[Golden coupling applied] \label{obs:golden-coupling-applied}
+
+\end{Observation}
 
 \subsubsection{Topological Necessity of the Torus}
 
@@ -468,9 +472,9 @@ As established in \S\ref{sec:geometric-need}, the torus $\mathbb{T}_{\text{PCF}}
 
 This geometric arrangement encodes the tripartite $S_3$ symmetry of the system.
 
-\textbf{Observation \ref{obs:non-hermiticity} (Non-Hermiticity as structural characteristic).} The generator $\hat{\Omega}$ is normal but not Hermitian (\S\ref{prop:matrix-properties}): its eigenvalues $\{1/2, \omega/2, \omega^2/2\}$ are complex, encoding the $S_3$ angular structure through $\omega = e^{2\pi i/3}$. This non-Hermiticity is intrinsic to the dimensional structure formalized as the 3/2 hypothesis (\S\ref{sec:restrictions}, \S\ref{sec:conclusions}): in dimension $d = 3$, Frobenius prohibits a division algebra, so the generator cannot be self-adjoint — but its complex eigenvalues carry the triangular geometry that produces $\sigma = d/2 = 3/2$, the invariant where the Euler product and $S_3$ structure converge (\S\ref{sec:geometric-projection}). The real modulus $|\Omega| = 1/2$ survives the projection $E^3 \to \mathbb{C} \to \mathbb{R}$ (\S\ref{sec:moduli-function-duality}) and enters $T^*$ as the parameter $\mu$. Hermiticity is then recovered at two levels: through symmetrization of the integral kernel $K_{\text{PCF}}$ (\S\ref{sec:hausdorff}), and through the spectral construction $\tilde{H}_{\text{PCF}} = \Sigma T^*(n)|\psi_n\rangle\langle\psi_n|$ with $T^*(n) \in \mathbb{R}$ (\S\ref{sec:tstar}), restoring the self-adjointness required by Hilbert-Pólya. The following definition makes this concrete.
+\begin{Observation}[Non-Hermiticity as structural characteristic] \label{obs:non-hermiticity}
 
-\textbf{Observation \ref{obs:eigenvalues-unit-circle} (Eigenvalues and unit circle structure).} The geometric arrangement of eigenvalues mirrors fundamental structure of $\mathbb{C}$. In \S\ref{sec:complex-plane}, we established that the unit circle $|z| = 1$ parametrizes rotations $e^{i\theta}$ in $\mathbb{C}$, with the basis $\{1, i\}$ generating the plane. Here, the eigenvalues $\{\lambda_0, \lambda_1, \lambda_2\}$ of $\hat{\Omega}$ inscribed in the critical circle $|z| = 1/2$ form an equilateral triangle with vertices:
+\begin{Observation}[Eigenvalues and unit circle structure] \label{obs:eigenvalues-unit-circle}
 \begin{itemize}
     \item $\lambda_0 = 1/2$ (real axis, analogous to 1)
     \item $\lambda_1 = (1/2)\omega$ (120° rotation, analogous to $\omega$)
@@ -478,6 +482,8 @@ This geometric arrangement encodes the tripartite $S_3$ symmetry of the system.
 \end{itemize}
 
 where $\omega = e^{2\pi i/3}$ are the primitive cube roots of unity associated with the Eisenstein lattice $\mathbb{Z}[\omega]$ (\S\ref{sec:complex-lattices}). The constant modulus $|\lambda_k| = 1/2$ for all $k$ establishes a scaled version of the rotational structure that generates $\mathbb{C}$.
+
+\end{Observation}
 
 \subsubsection{Tripartite Component Magnitudes}
 
@@ -565,7 +571,9 @@ The periodicities of the operator $\Omega(z,\sigma)$, combined with the torus to
     forming an equilateral triangle in the circle $|z| = 3$.
 \end{Proposition}
 
-\textbf{Observation \ref{obs:angular-projection} (Angular projection).} The projection collapses the $z$-coordinate but preserves the 120° angular structure in the complex plane.
+\begin{Observation}[Angular projection] \label{obs:angular-projection}
+
+\end{Observation}
 
 \subsubsection{Periodicities and Lattice Generation}
 
@@ -581,7 +589,7 @@ The periodicities of the operator $\Omega(z,\sigma)$, combined with the torus to
     This module synthesizes the periodic structure emerging from the accumulated phase rotations of the operator. Geometrically, $M_{\text{PCF}}$ represents the fundamental period in the complex plane that structures the lattice; topologically, it classifies the torus $\mathbb{C}/\Lambda_{\text{PCF}} \cong T^2$.
 \end{Definition}
 
-\textbf{Observation \ref{obs:lattice-parallel} (Lattice structure parallel with \S\ref{sec:complex-lattices}).} The lattice $\Lambda_{\text{PCF}}$ directly parallels the discrete structures in $\mathbb{C}$ established in \S\ref{sec:complex-lattices}:
+\begin{Observation}[Lattice structure parallel with \S\ref{sec:complex-lattices}] \label{obs:lattice-parallel}
 
 \textbf{Gaussian lattice in $\mathbb{C}$ (\S\ref{sec:complex-lattices}):} $$\Lambda_\Box = \mathbb{Z}[i] = \mathbb{Z} \cdot 1 \oplus \mathbb{Z} \cdot i$$
 \begin{itemize}
@@ -602,6 +610,8 @@ The periodicities of the operator $\Omega(z,\sigma)$, combined with the torus to
 \end{itemize}
 
 Both are \textbf{Gauss-type rectangular lattices}. The PCF lattice scales the standard Gaussian structure $\mathbb{Z}[i]$ by the topological module $M_{\text{PCF}}$, which encodes the operator's periodicities. Just as $\mathbb{C}/\mathbb{Z}[i]$ produces a torus with modular parameter $\tau = i$ (\S\ref{sec:moduli-lattice}), the quotient $\mathbb{C}/\Lambda_{\text{PCF}}$ produces the PCF torus $\mathbb{T}_{\text{PCF}}$ with the same modular structure.
+
+\end{Observation}
 
 \begin{Theorem}[Lattice emergence from operator periodicities] \label{thm:lattice-emergence}
     The periodicities of the operator induce the identifications: $$z \sim z + M_{\text{PCF}}, \quad z \sim z + M_{\text{PCF}} \cdot i$$
@@ -627,7 +637,7 @@ Both are \textbf{Gauss-type rectangular lattices}. The PCF lattice scales the st
 
 \subsubsection{Lattice Structure}
 
-\textbf{Observation \ref{obs:lattice-type} (Type of lattice).} The lattice $\Lambda_{\text{PCF}}$ has:
+\begin{Observation}[Type of lattice] \label{obs:lattice-type}
 \begin{itemize}
     \item \textbf{Type:} Gauss (rectangular/square)
     \item \textbf{Generators:} $\{M_{\text{PCF}}, M_{\text{PCF}} \cdot i\}$
@@ -636,6 +646,8 @@ Both are \textbf{Gauss-type rectangular lattices}. The PCF lattice scales the st
 \end{itemize}
 
 This rectangular structure emerges from the operator periodicities, despite the input having triangular (Eisenstein-type) $S_3$ symmetry. The duality between these structures is explored in \S\ref{sec:duality-ge}.
+
+\end{Observation}
 
 \subsection{Gauss-Eisenstein Duality} \label{sec:duality-ge}
 
@@ -711,13 +723,15 @@ with basis $\{M_{\text{PCF}}, M_{\text{PCF}} \cdot i\}$ and angle 90°—\textbf
 
 The transformation occurs through dimensional projection mediated by the golden ratio.
 
-\textbf{Observation \ref{obs:isometric-analogy} (Isometric projection analogy).} This duality produces a structure halfway between $\mathbb{C}$ and the isometric projection of technical drawing:
+\begin{Observation}[Isometric projection analogy] \label{obs:isometric-analogy}
 \begin{itemize}
     \item \textbf{3D Input:} Eisenstein structure with triangular symmetry
     \item \textbf{2D Output:} Gauss structure with rectangular symmetry
     \item \textbf{Preservation:} All metric relations scale by $\varphi$
     \item \textbf{Tying:} Bound to $\mathbb{C}$ via $\varphi$ and $i$ (not free geometric projection)
 \end{itemize}
+
+\end{Observation}
 
 \subsubsection{Moduli Space}
 
@@ -735,7 +749,7 @@ The transformation occurs through dimensional projection mediated by the golden 
     indicating rectangular lattice (neither square nor hexagonal).
 \end{Theorem}
 
-\textbf{Observation \ref{obs:tau-i} ($\tau = i$: special value).} The value $\tau = i$ is special in lattice classification:
+\begin{Observation}[\tau = i: special value] \label{obs:tau-i}
 \begin{itemize}
     \item $\tau = i$: Gauss lattice (square symmetry $\mathbb{Z}_4$)
     \item $\tau = \omega$: Eisenstein lattice (hexagonal symmetry $\mathbb{Z}_6$)
@@ -743,6 +757,8 @@ The transformation occurs through dimensional projection mediated by the golden 
 \end{itemize}
 
 The choice $\tau_{\text{PCF}} = i$ privileges rectangular structure over hexagonal, although both coexist virtually in the invariant $|\Omega| = 1/2$.
+
+\end{Observation}
 
 \begin{Lemma}[Weil intersection form on $T^2_{\text{PCF}}$] \label{lem:weil-form}
     The torus $T^2_{\text{PCF}}$ admits a canonical homology basis with angular periods $\omega_1 = 2\pi/3$ (from $S_3$ symmetry, Proposition \ref{prop:phase-separation}) and $\omega_2 = 2\pi$ (full revolution). The intersection form $s$ on $H_1(T^2_{\text{PCF}}, \mathbb{Z})$ satisfies:
@@ -764,7 +780,7 @@ The self-similarity of the system manifests through logarithmic equations relati
 
 \subsubsection{Nature of the Scale Parameter $\sigma$}
 
-\textbf{Observation \ref{obs:sigma-nature} (Nature of parameter $\sigma$).} The parameter $\sigma \in \mathbb{R}$ does not represent an additional spatial dimension (there is no separate "$\sigma$-axis" distinct from $x, y, z$). Instead, $\sigma$ is a \textbf{scale coordinate} that parametrizes an infinite family of functions: $${\Omega(z, \sigma): \mathbb{C} \to \mathbb{C}}_{\sigma \in \mathbb{R}}$$
+\begin{Observation}[Nature of parameter \sigma] \label{obs:sigma-nature}
 
 Each fixed value of $\sigma$ specifies a different function over the same domain $\mathbb{C}$. This family admits two equivalent interpretations:
 \begin{enumerate}
@@ -778,7 +794,7 @@ The parameter $\sigma$ acts as an \textbf{observation lens} or \textbf{magnifica
 
 This distinction is crucial: the operator inhabits a family of functions $\mathbb{C} \to \mathbb{C}$ (complex plane $\times$ scale), not $\mathbb{C} \times \mathbb{R} \times \mathbb{R}$ (three spatial dimensions).
 
-\textbf{Observation \ref{obs:reparametrization} (Re-parametrization parallel with \S\ref{sec:adjoint-spaces}).} The scale parameter $\sigma$ provides a re-parametrization of the PCF structure analogous to the adjoint spaces of $\mathbb{C}$ described in \S\ref{sec:adjoint-spaces}. Just as $\mathbb{C}$ admits multiple coherent re-parametrizations—
+\begin{Observation}[Re-parametrization parallel with \S\ref{sec:adjoint-spaces}] \label{obs:reparametrization}
 \begin{itemize}
     \item \textbf{Minkowski spacetime $M^{1+1}$} (via Wick rotation $t \to it$)
     \item \textbf{Hilbert space $L^2(\mathbb{C})$} (via functionalization $z \mapsto \delta_z$)
@@ -788,6 +804,8 @@ This distinction is crucial: the operator inhabits a family of functions $\mathb
 —each preserving the underlying structure while modifying physical interpretation, the family ${\Omega(z,\sigma) : \mathbb{C} \to \mathbb{C}}_{\sigma \in \mathbb{R}}$ re-parametrizes the PCF operator across scales while maintaining the fundamental invariant $|\Omega(z,\sigma)| = 1/2$ for all $\sigma$.
 
 The categorical coherence established in \S\ref{sec:adjoint-spaces}—that morphisms between adjoint spaces commute—finds its parallel here: the projection $\pi : E^3 \to \mathbb{C}$ and the scaling $z \mapsto \varphi^\sigma \cdot z$ commute with the operator structure.
+
+\end{Observation}
 
 \subsubsection{Scale Parameter and Exponential Tower}
 
@@ -892,7 +910,7 @@ This conversion factor $\lambda$ will be crucial for establishing the Mersenne c
     In logarithmic space: $$\ln(\Lambda_{\text{vertical}}) = \ln(r_0) + \ln(\varphi)\mathbb{Z}$$
 \end{Proposition}
 
-\textbf{Observation \ref{obs:lattice-comparison} (Comparison with classical lattices).}
+\begin{Observation}[Comparison with classical lattices] \label{obs:lattice-comparison}
 
 \begin{table}[h]
     \centering
@@ -912,6 +930,8 @@ This conversion factor $\lambda$ will be crucial for establishing the Mersenne c
 \begin{Corollary}[Vertical lattice without additional dimension] \label{cor:vertical-no-dim}
     The vertical lattice $\Lambda_{\text{vertical}} = \{r_0\varphi^n : n \in \mathbb{Z}\}$ operates over scales in $\mathbb{R}_+$, not over spatial coordinates. Therefore, it does not add dimension to the space $\mathbb{R}^3$ or $\mathbb{C}$, but rather parametrizes a discrete family of scales through multiplication by powers of $\varphi$.
 \end{Corollary}
+
+\end{Observation}
 
 \subsubsection{Tower Structure}
 
@@ -1053,11 +1073,13 @@ We have two simultaneous exponential towers:
     Without $|\Omega| = 2^{-1}$, the isomorphism $\log_\varphi(2^p) = \sigma \cdot \lambda + \log_\varphi(3)$ would lack the geometric anchor connecting $\varphi$-scaling to 2-scaling.
 \end{proof}
 
-\textbf{Observation \ref{obs:dual-role} (Dual role of fundamental constants).}
+\begin{Observation}[Dual role of fundamental constants] \label{obs:dual-role}
 
 The factor $d = 3$ similarly connects $S_3$ dimensionality with binary arithmetic structure: $$3 = 2^2 - 1 = M_2$$
 
 where $M_2$ is the first Mersenne prime. This is not coincidence—it reflects the deep arithmetic-geometric correspondence encoded in the PCF structure.
+
+\end{Observation}
 
 \subsubsection{Computational Verification}
 
@@ -1126,7 +1148,7 @@ The fractal structure emerges from the iterated function system (IFS) defined by
 
 \subsubsection{First Algebraic Realization}
 
-\textbf{Observation \ref{obs:spectral-realization} (Spectral realization of geometric fractal).} While Sierpinski's construction (1916) is purely geometric—iterative triangle subdivisions—\textbf{PCF realizes this algebraically} through matrix $\hat{\Omega}$ eigenvalues.
+\begin{Observation}[Spectral realization of geometric fractal] \label{obs:spectral-realization}
 
 This establishes the \textbf{first spectral realization} of a classical geometric fractal:
 \begin{itemize}
@@ -1137,6 +1159,8 @@ This establishes the \textbf{first spectral realization} of a classical geometri
 The self-similarity is not geometric or combinatorial (as in previous realizations) but rather \textbf{spectral isomorphism:} the eigenvalue structure of $\hat{\Omega}$ directly generates the fractal geometry through: $${\lambda_0, \lambda_1, \lambda_2} = \left\{\frac{1}{2},\frac{1}{2}\omega, \frac{1}{2}\omega^2\right\} \xrightarrow{\text{IFS}} \mathcal{A}_{\text{Sierpinski}}$$
 
 This connection between linear algebra (matrix eigenvalues) and fractal geometry (Sierpinski triangle) is unprecedented.
+
+\end{Observation}
 
 \subsection{Hausdorff Dimension} \label{sec:hausdorff}
 
