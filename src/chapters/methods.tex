@@ -1023,7 +1023,7 @@ We have two simultaneous exponential towers:
 
 \textbf{Question:} How can structures with different bases ($\varphi$ vs 2) and different domains (continuous vs discrete primes) correspond?
 
-\subsubsection{Logarithmic Isomorphism}
+\subsubsection{Logarithmic Isomorphism} \label{sec:log-isomorphism}
 
 \begin{Theorem}[Logarithmic correspondence] \label{thm:log-correspondence} \label{thm:mersenne-correspondence}
     There exists a correspondence $\Phi: \sigma \mapsto p_\sigma$ between levels of the golden tower and prime exponents of Mersenne primes, determined by the logarithmic equation: $$\log_\varphi(2^{p_\sigma}) = \sigma \cdot \lambda + \log_\varphi(3)$$
@@ -1764,7 +1764,7 @@ The golden ratio $\varphi$ connects with the integers through the coupling $z = 
 
 is forced: Frobenius prohibits algebraic extension to dimension 3 (\S \ref{sec:manin}) so the extension must be geometric, and $S_3$ is the unique non-abelian symmetry group of lowest order in $E^3$. How $\varphi$ itself emerges from the primes---extending this chain leftward into arithmetic---is the subject of \S \ref{sec:golden-primes-emergence}.
 
-\subsubsection{The Invariants Emerge}
+\subsubsection{The Invariants Emerge} \label{sec:invariants-emerge}
 
 The triangle, once established, yields specific geometric data. The component norms satisfy $|P| \cdot |C| \cdot |F| = (1/\sqrt{3}) \cdot 1 \cdot (\sqrt{3}/2) = 1/2$ (Lemma \ref{lem:tripartite-norm}), the symmetry group has order $|S_3| = 6$ with rotational subgroup $|\mathrm{rot}(S_3)| = 3$, and the internal angle is $\pi/3$ (Proposition \ref{prop:internal-angle}). These quantities are purely geometric---no number theory, no primes, no $\zeta$ function. We now derive the spectral invariants formally.
 
@@ -2016,7 +2016,7 @@ Mersenne primes $M_p = 2^p - 1$ (for prime $p$) thus occupy doubly distinguished
     For $n \in \mathbb{N}$, define $\delta_M(n) := \min_{p \in S} |n - M_p|$ where $S = \{2,3,5,7,13,17,19,31\}$. The correction factor is $C_M(n) := 1 + \varepsilon_M \cdot \exp(-\delta_M(n)/\lambda_M)$ with $\varepsilon_M = 0.005$, $\lambda_M = 10$. Maximal enhancement 0.5\% occurs at $n = M_p$, decaying exponentially with distance. The exponential decay scale $\lambda_M = 10 = C(5,2) = 2 \times 5$ connects to the pentagonal combinatorial structure (Proposition \ref{prop:binomial-52}).
 \end{Definition}
 
-\subsection{Arithmetic Foundation: Golden Prime Classification} \label{sec:golden-primes}
+\subsection{Arithmetic Foundation: Golden Prime Classification} \label{sec:golden-primes} \label{sec:golden-prime}
 
 We now establish the 8-fold classification of primes modulo 20. This depends on the vigesimal structure $20 = 4 \times 5$ established in Proposition \ref{prop:vigesimal}, and acquires its full significance through the Golden Prime Symmetry Theory of Grisales Herrera (2025).
 
@@ -2294,7 +2294,7 @@ Empirical analysis (\S \ref{ch:results}) reveals two spectral regimes. For $n \l
     \item This transition mirrors \S \ref{sec:pentadimensional}'s dimensional progression: the passage from compact toroidal structure ($\sigma = 0,1$) dominated by $S_3$ triangular geometry to extended spacetime ($\sigma \geq 5$) where the full pentadimensional synthesis operates. In $T^*$, the corresponding passage is from a regime where discrete arithmetic corrections ($C_M, M_G$) are essential to one where continuous $\varphi$-mediated asymptotics dominate
 \end{enumerate}
 
-\subsubsection{The Complete Operator}
+\subsubsection{The Complete Operator} \label{sec:non-hermitian}
 
 The generator $\hat{\Omega}$ is normal but not Hermitian (\S \ref{sec:non-hermitian}): its eigenvalues $\{1/2, \omega/2, \omega^2/2\}$ are complex. This non-Hermiticity arises from the dimensional obstruction identified in \S \S \ref{sec:manin}--\ref{sec:connes} and formalized as the 3/2 hypothesis in \S \ref{sec:discussion}: Frobenius prohibits a division algebra in dimension 3, so the generator cannot be self-adjoint in $\mathbb{C}^3$. The real modulus $|\Omega| = 1/2$ survives the projection $E^3 \to \mathbb{C} \to \mathbb{R}$ (\S \ref{sec:primes-to-invariants}) and enters $T^*$ as the parameter $\mu$. Hermiticity is then recovered at two levels: through symmetrization of the integral kernel $K_{\text{PCF}}$ (\S \ref{sec:hausdorff}), and through the spectral construction $\tilde{H}_{\text{PCF}} = \sum T^*(n)|\psi_n\rangle\langle\psi_n|$ with $T^*(n) \in \mathbb{R}$ (\S \ref{ch:results}), restoring the self-adjointness required by Hilbert-Pólya. The following definition makes this concrete.
 
