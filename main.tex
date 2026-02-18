@@ -1,351 +1,69 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% LaPreprint: PREPRINT TEMPLATE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pdfoutput=1
+\RequirePackage{ifpdf}
+\ifpdf % We are running pdfTeX in pdf mode
+\documentclass[pdftex]{sigma}
+\else
+\documentclass{sigma}
+\fi
 
-% Here I could talk about what one should do in this document.
-% Instead I'll refer you to the explore on your own and check the Github Repo. :-)
-% Line spacing is 1.2 by default (can't be smaller).
+\usepackage{mathtools}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% PREAMBLE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\numberwithin{equation}{section}
 
-% Declare document class
-\documentclass[9pt,Preprint,secnum,spanish]{lapreprint}
-% Choose between "biorxiv", "medrxiv", "arxiv" and "chemrxiv". Otherwise defaults "Preprint".
-% Choose between "blue" and "red" colour scheme. Defaults to "blue".
-% Use the "onehalfspacing" option for 1.5 line spacing.
-% Use the "doublespacing" option for 2.0 line spacing.
-% Use the "lineno" option for line numbers.
-% Use the "endfloat" option to place floats after the bibliography.
-% Use the "secnum" option to have include numbers.
-% Note: secnumdepth is now set to 3 in lapreprint.cls when secnum option is used
-
-% Primitives para reproducibilidad determinística
-\pdfinfoomitdate=1        % Omite dates del PDF info dictionary
-\pdftrailerid{}           % Trailer ID vacío (omite por completo)
-\pdfsuppressptexinfo=15   % Suprime metadata PTEX.* (bitmask: 1+2+4+8)
-\pdfminorversion=5        % Versión PDF explícita (1.5)
-
-% Set tocdepth to include subsubsections in table of contents
-\setcounter{tocdepth}{3}
-
-% Import packages
-% \usepackage{lipsum}     % Required to insert dummy text
-
-% Spanish language configuration - use caption package to override babel defaults
-\usepackage[figurename=Figura,tablename=Tabla]{caption}
-
-% Configurar español como idioma principal ANTES de que la clase cargue babel
-% La clase lapreprint.cls carga \RequirePackage[english]{babel} internamente
-% \PassOptionsToPackage pasa las opciones ANTES de que se ejecute \RequirePackage
-% Esto es el método oficial recomendado según babel v25.4 manual, Sección 2.3
-\PassOptionsToPackage{main=spanish,english}{babel}
-
-\usepackage{lastpage}   % For LastPage reference
-\usepackage[version=4]{mhchem} % For chemical notation
-\usepackage{siunitx}    % For SI units
-\usepackage{pdflscape}  % For putting pages in landscape mode
-\usepackage{rotating}   % For rotating specific elements
-\usepackage{textgreek}  % Greek symbols
-\usepackage{gensymb}    % Symbols
-\usepackage[misc]{ifsym} % For the \Letter symbol
-\usepackage{orcidlink}  % For the \orcidlink
-\usepackage{listings}   % For inserting code chunks
-
-\usepackage{colortbl}   % For Knitr table colouring
-\usepackage{tabularx}   % For making Knitr tables compatible
-\usepackage{longtable}  % For multi-page tables
-\usepackage{booktabs}   % For professional tables
-\usepackage{subcaption}
-\usepackage{multirow}
-\usepackage{snotez}     % For sidenote environments. enotez for endnotes
-\usepackage{csquotes}   % For language-based quote rules (helps BiBLaTeX)
-\usepackage{annotate-equations}
-\usepackage[most]{tcolorbox} % For observation/note boxes
-
-% Theorem environments (AMS standard for rigorous mathematics)
-% Numeración jerárquica: n.x.y (sección.subsección.teorema)
-% Todos los entornos comparten el contador 'theorem' y se numeran por subsección
-\usepackage{amsthm}
-\theoremstyle{plain}
-\newtheorem{theorem}{Teorema}[subsection]
-\newtheorem{proposition}[theorem]{Proposición}
-\newtheorem{lemma}[theorem]{Lema}
-\newtheorem{corollary}[theorem]{Corolario}
-\newtheorem{conjecture}[theorem]{Conjetura}
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem*{Theorem*}{Theorem}
+\newtheorem{Corollary}[Theorem]{Corollary}
+\newtheorem{Lemma}[Theorem]{Lemma}
+\newtheorem{Proposition}[Theorem]{Proposition}
 
 \theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definición}
-\newtheorem{axiom}[theorem]{Axioma}
-\newtheorem{construction}[theorem]{Construcción}
-\newtheorem{observation}[theorem]{Observación}
-\newtheorem{example}[theorem]{Ejemplo}
-
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Nota}
-
-% Asegurar que el contador de teoremas se resetee correctamente al cambiar de subsección
-% Esto es necesario porque amsthm con [subsection] debería hacerlo automáticamente,
-% pero puede haber problemas si hay múltiples archivos o si el contador no se inicializa correctamente
-\makeatletter
-\@addtoreset{theorem}{subsection}
-\makeatother
-
-% Asegurar que el entorno proof muestre "Demostración" en español
-% (babel debería hacerlo automáticamente, pero lo redefinimos por si acaso)
-\renewcommand{\proofname}{Demostración}
-
-% Define custom environments for observations and conventions
-\newtcolorbox{observacion}[1][]{
-  colback=blue!5!white,
-  colframe=blue!75!black,
-  title=Observación,
-  #1
-}
-
-\newtcolorbox{convencion}[1][]{
-  colback=green!5!white,
-  colframe=green!75!black,
-  title=Convención de Notación,
-  #1
-}
-
-\newtcolorbox{nota}[1][]{
-  colback=orange!5!white,
-  colframe=orange!75!black,
-  title=Nota,
-  #1
-}
-
-% Make declarations
-\DeclareSIUnit\Molar{M}
-
-% Macros de notación específicos del documento
-% Solo para notación compleja o específica que se repite frecuentemente
-\newcommand{\omegapcf}{\Omega_{\text{PCF}}}    % Operador PCF (notación específica del documento)
-\newcommand{\omegahat}{\hat{\Omega}}           % Matriz generadora (útil si se usa frecuentemente)
-
-% Macros útiles para referencias cruzadas (sugerencia de Perplexity)
-% Facilitan referencias consistentes a construcciones matemáticas
-\newcommand{\tref}[1]{Teorema~\ref{#1}}        % Referencia a teorema
-\newcommand{\dref}[1]{Definición~\ref{#1}}     % Referencia a definición
-\newcommand{\pref}[1]{Proposición~\ref{#1}}    % Referencia a proposición
-\newcommand{\lref}[1]{Lema~\ref{#1}}           % Referencia a lema
-\newcommand{\cref}[1]{Construcción~\ref{#1}}   % Referencia a construcción
-\newcommand{\oref}[1]{Observación~\ref{#1}}    % Referencia a observación
-\newcommand{\conjref}[1]{Conjetura~\ref{#1}}   % Referencia a conjetura
-\newcommand{\corref}[1]{Corolario~\ref{#1}}    % Referencia a corolario
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% CONFIGURACIÓN GLOBAL DE ESPACIADO
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Line height global (ajuste fino sobre el default de lapreprint)
-\usepackage{setspace}
-\setstretch{1.15}
-
-% Espacio entre párrafos
-\setlength{\parskip}{0.5\baselineskip plus 2pt minus 1pt}% chktex 1
-
-% Espacio alrededor de ecuaciones display
-\setlength{\abovedisplayskip}{12pt plus 3pt minus 6pt}
-\setlength{\belowdisplayskip}{12pt plus 3pt minus 6pt}
-
-% Espacio entre líneas en align/gather
-\setlength{\jot}{8pt}
-
-% Espacio en títulos de sección
-% Note: titlesec is already loaded in lapreprint.cls, but loading it again here is safe
-% (LaTeX ignores duplicate package loads). This allows us to use \titlespacing here.
-\usepackage{titlesec}
-\titlespacing*{\section}{0pt}{2\baselineskip}{1\baselineskip}
-\titlespacing*{\subsection}{0pt}{1.5\baselineskip}{0.75\baselineskip}
-\titlespacing*{\subsubsection}{0pt}{1.25\baselineskip}{0.5\baselineskip}
-
-% Espacio en teoremas/proposiciones/lemas/definiciones
-\usepackage{etoolbox}
-\AtBeginEnvironment{theorem}{\vspace{10pt}}
-\AtEndEnvironment{theorem}{\vspace{10pt}}
-\AtBeginEnvironment{proposition}{\vspace{10pt}}
-\AtEndEnvironment{proposition}{\vspace{10pt}}
-\AtBeginEnvironment{lemma}{\vspace{10pt}}
-\AtEndEnvironment{lemma}{\vspace{10pt}}
-\AtBeginEnvironment{definition}{\vspace{10pt}}
-\AtEndEnvironment{definition}{\vspace{10pt}}
-\AtBeginEnvironment{corollary}{\vspace{10pt}}
-\AtEndEnvironment{corollary}{\vspace{10pt}}
-
-% Espacio en listas
-\usepackage{enumitem}
-\setlist{topsep=6pt, itemsep=4pt, parsep=0pt}
-
-% Espacio en tablas
-\renewcommand{\arraystretch}{1.3}
-
-% Prevención de líneas huérfanas y viudas (tipografía profesional)
-% Evita líneas aisladas al inicio/final de página
-\widowpenalty=10000
-\clubpenalty=10000
-% Penalización adicional para evitar líneas con una sola palabra al final de párrafo
-\displaywidowpenalty=10000
-
-% Configuración avanzada de microtype para mejor ajuste de tipos y prevención de huérfanas
-% microtype ya está cargado en lapreprint.cls, aquí solo ajustamos opciones
-\microtypesetup{
-  tracking=true,           % Ajuste fino de espaciado entre letras
-  spacing=true,            % Ajuste fino de espaciado entre palabras
-  factor=1100,             % Factor de estiramiento (1100 = 10% más flexible)
-  stretch=20,              % Estiramiento máximo permitido
-  shrink=20,               % Contracción máxima permitida
-  step=2                   % Granularidad del ajuste
-}
-
-% Please note that these options may affect formatting.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% BIBLIOGRAPHY
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[			% use biblatex for bibliography
-	backend=biber,      % use biber or bibtex backend
-    style=authoryear,   % choose style
-	natbib=true,		% allow natbib commands
-	hyperref=true,	    % activate hyperref support
-	alldates=year,      % only show year (not month)
-    uniquename=false,   % don't add firstnames when citing multiple sources by the same author
-    maxbibnames=99,     % maximum number of author names to list in bibliography before 'et al' is used instead
-]{biblatex}
-
-% Just avoiding some rogue fields that cause issues with certain styles
-\AtEveryBibitem{
-    \clearfield{urlyear}
-    \clearfield{urlmonth}
-    \clearlist{language}
-}
-
-% Update to your bibliography file
-\addbibresource{src/bibliography.bib}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% CONFIGURACIÓN DE IDIOMA PARA REFERENCIAS AUTOMÁTICAS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% La clase lapreprint.cls carga babel con english, por lo que necesitamos
-% redefinir manualmente los nombres de autoref en español.
-% Estos comandos se ejecutan después de que se cargue hyperref (en lapreprint.cls)
-\AtBeginDocument{%
-  % Asegurar que español esté seleccionado para hyphenation correcta
-  % Con \PassOptionsToPackage{main=spanish,english}{babel}, español ya es el idioma principal
-  % pero lo mantenemos explícitamente por seguridad
-  \selectlanguage{spanish}%
-  % Configurar formato numérico estándar internacional (punto decimal) para paper académico
-  % Esto sobrescribe el formato español (coma decimal) para usar formato estándar internacional
-  \spanishdecimal{.}%  % Usar punto como separador decimal en lugar de coma
-  \sisetup{output-decimal-marker={.}}%  % Configurar siunitx para usar punto decimal
-  % Redefinir nombres de autoref en español
-  \renewcommand{\sectionautorefname}{Sección}%
-  \renewcommand{\subsectionautorefname}{Subsección}%
-  \renewcommand{\subsubsectionautorefname}{Subsubsección}%
-  \renewcommand{\paragraphautorefname}{Párrafo}%
-  \renewcommand{\figureautorefname}{Figura}%
-  \renewcommand{\tableautorefname}{Tabla}%
-  \renewcommand{\equationautorefname}{Ecuación}%
-  \renewcommand{\appendixautorefname}{Apéndice}%
-  % Redefinir el título del apéndice en español
-  \renewcommand{\appendixname}{Apéndice}%
-}
-
-% Redefinir el entorno appendixbox para usar "Apéndice" en lugar de "Appendix"
-% Necesitamos \makeatletter para acceder a comandos internos como \if@reqslineno
-\makeatletter
-\renewenvironment{appendixbox}{%
-  \setcounter{figure}{0}
-  \setcounter{table}{0}
-  \refstepcounter{appendix}%
-  \clearpage%
-  \patchcmd{\ttlf@section}{MediumGrey}{darkColour}{}{}
-  \noindent{\bfseries\Large\color{MediumGrey}Apéndice \arabic{appendix}\par}
-  \nolinenumbers%
-  \begin{mdframed}[hidealllines=true,backgroundcolor=lightColour!10,leftline=true,linecolor=lightColour,linewidth=1em]
-  \if@reqslineno\addtolength{\linenumbersep}{2em}\internallinenumbers\fi
-}{%
-  \vspace{1em}%
-  \end{mdframed}
-}
-\makeatother
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% ARTICLE SETUP
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Paper title
-\title{El Operador $\omegapcf$ y La Estructura Primitiva del Plano Complejo: \\[0.618em]
-       \large De Mersenne a Riemann mediante acoplamiento geométrico $\varphi$-$i$-$S_3$}
-
-% Authors - you can use \orcidlink{} and \authfn{} - see contribution note
-\author[1 \textnormal{\Letter}]{Jorge Armando González García}
-\author[ \orcidlink{0009-0009-0935-2954} 1]{Víctor Manuel González García}% chktex 8
-\author[2]{Itzel Marion Dressler Pérez}
-\author[1]{Luz María García Ordóñez}
-\author[2]{Mario Moreno}
-
-% Affiliations
-\affil[1]{TTAMAYO PUNTO COM, S.A.P.I. de C.V., Mexico}
-\affil[2]{Independent Researcher}
-
-% Other metadata. Feel free to add your own
-\metadata[]{\textnormal{\Letter}\hspace{.5ex} For correspondence}{\url{https://github.com/omega-pcf/01-primitive-complex-field/issues} (JAGG)}
-\metadata[]{DOI}{\href{https://doi.org/10.5281/zenodo.17619486}{10.5281/zenodo.17619486}}
-\metadata[]{Data availability}{Computational verifications available in supplementary material. Source code at \href{https://github.com/omega-pcf/01-omega-phi-primitive-complex-plane}{GitHub repository}.}
-\metadata[]{Competing interests}{The author declares no competing interests.}
-
-
-% Surname of the lead author(s) for the running footer
-\leadauthor{González García}
-\shorttitle{El Operador Omega PCF y La Estructura Primitiva del Plano Complejo}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% ARTICLE START
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{Definition}[Theorem]{Definition}
+\newtheorem{Note}[Theorem]{Note}
+\newtheorem{Example}[Theorem]{Example}
+\newtheorem{Remark}[Theorem]{Remark}
 
 \begin{document}
-\maketitle
+
+\renewcommand{\PaperNumber}{***}
+
+\FirstPageHeading
+
+\ShortArticleName{The Hilbert Pólya Operator and the Primitive Structure of the Complex Plane}
+
+\ArticleName{The Hilbert Pólya Operator and the Primitive Structure of the Complex Plane: A Reinterpretation of Yuri Manin's Ideas from the Perspective of the String Theory Framework}
+
+\Author{Jorge Armando GONZÁLEZ GARCÍA~$^{\rm a}$, Víctor Manuel GONZÁLEZ GARCÍA~$^{\rm a}$, Itzel Marion DRESSLER PÉREZ~$^{\rm b}$ and Luz María GARCÍA ORDÓÑEZ~$^{\rm a}$}
+
+\AuthorNameForHeading{J.A.~González García, V.M.~González García, I.M.~Dressler Pérez and L.M.~García Ordóñez}
+
+\Address{$^{\rm a)}$~TTAMAYO PUNTO COM, S.A.P.I. de C.V., Mexico}
+\EmailD{\mail{jorge@ttamayo.com}} % Assuming email
+
+\Address{$^{\rm b)}$~Independent Researcher}
+
+\ArticleDates{Received ???, in final form ????; Published online ????}
+
 \input{src/chapters/abstract}
+
+\section{Introduction}
 \input{src/chapters/introduction}
-\input{src/chapters/methods}
-\input{src/chapters/results}
-\input{src/chapters/discussion}
+
+\section{Background}
 \input{src/chapters/formal}
-\printbibliography% chktex 1
 
-% DON'T EDIT. If "endfloat" option is enabled all floats appear before appendices
-\if@endfloat\clearpage\processdelayedfloats\clearpage\fi
+\section{Methods}
+\input{src/chapters/methods}
 
+\section{Results} \label{sec:results}
+\input{src/chapters/results}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% SUPPLEMENTARY MATERIAL / APPENDICES
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Sadly, we can't use floats in the appendix boxes. So they don't "float", but use \captionof{figure}{...} and \captionof{table}{...} to get them properly caption.
-\begin{appendix}
+\section{Discussion and Implications} \label{sec:discussion}
+\input{src/chapters/discussion}
 
-\begin{fullwidth}
-\begin{appendixbox}
-    \input{src/supplementary/appendices.tex}
-    \label{app:ttt}
-\end{appendixbox}
-\end{fullwidth}
+\pdfbookmark[1]{References}{ref}
+\bibliographystyle{sigma}
+\bibliography{src/bibliography}
 
-\begin{fullwidth}
-\begin{appendixbox}
-    \input{src/supplementary/resources.tex}
-    \label{app:parametros-fundamentales}
-\end{appendixbox}
-\end{fullwidth}
-
-\end{appendix}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% ARTICLE END
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\LastPageEnding
 
 \end{document}

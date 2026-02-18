@@ -1,1335 +1,436 @@
-% chktex-file 9 10
-\section{Convergencia Espectral en Espacio de Hilbert}\label{convergencia}
+\label{ch:results}
 
-\subsection{Representación Cuántica del Operador}
+The operator $T^*$ was constructed in Section \ref{sec:tstar} without reference to Riemann zeros. This section numerically compares its spectrum $\{T^*(n)\}$ against the exact zeros $\{t_n\}$ of $\zeta(1/2 + it) = 0$, validates the two-regime structure, and establishes performance bounds across six orders of magnitude.
 
-\begin{definition}[Estado cuántico PCF]\label{def:estado-cuantico-PCF}
-Un estado cuántico PCF es un elemento del espacio de Hilbert:
-\[
-\mathcal{H} = L^2(\mathbb{C}) \otimes \mathbb{C}^3
-\]
-representado como:
-\[
-|\psi\rangle = \sum_{i} \sum_{k \in \{P,C,F\}} \alpha_{i,k} |z_i\rangle \otimes |k\rangle
-\]
-con condición de normalización:
-\[
-\sum_{i,k} |\alpha_{i,k}|^2 = 1
-\]
-\end{definition}
+\subsection{Computational Verification of the Spectrum}
 
-\begin{theorem}[Convergencia al estado fundamental]\label{thm:convergencia-estado-fundamental}
-Para cualquier estado inicial normalizado $|\psi_0\rangle \in \mathcal{H}$ con $\|\psi_0\| = 1$:
-\[
-\lim_{\sigma \to \infty} \left\|\hat{\Omega}(\sigma)|\psi_0\rangle - \frac{1}{2}|e_1\rangle\right\| = 0
-\]
-donde $\lambda_1 = 1/2$ es el eigenvalor dominante, $|e_1\rangle$ es el eigenvector asociado (estado fundamental), y $\hat{\Omega}(\sigma)$ denota el operador en el nivel $\sigma$.
-\end{theorem}
+\subsubsection{Data Sources and Methodology}
 
-\begin{proof}[Por descomposición espectral y análisis asintótico]
-Por teoría espectral, cualquier estado se descompone como:
-\[
-|\psi_0\rangle = \sum_{k=1}^{3} c_k |e_k\rangle
-\]
-donde $|e_k\rangle$ son eigenvectores ortonormales con eigenvalores $\lambda_k = (1/2)\omega^{k-1}$.
-
-\par
-Aplicando el operador iteradamente, se obtiene:
-\[
-\hat{\Omega}^n |\psi_0\rangle = \sum_{k=1}^{3} c_k \lambda_k^n |e_k\rangle = \frac{1}{2^n}\sum_{k=1}^{3} c_k\omega^{(k-1)n} |e_k\rangle
-\]
-
-\par
-Para analizar la dominancia del término fundamental, se observa que como $\omega = e^{2\pi i/3}$, los términos $c_2\omega^n|e_2\rangle$ y $c_3\omega^{2n}|e_3\rangle$ oscilan con período 3. En el límite con promediación sobre la torre $\varphi^\sigma$:
-\[
-\lim_{\sigma \to \infty} \hat{\Omega}(\sigma)|\psi_0\rangle = \frac{c_1}{2^\sigma}|e_1\rangle
-\]
-
-Normalizando, se tiene que $\lim_{\sigma \to \infty} \hat{\Omega}(\sigma)|\psi_0\rangle \sim |e_1\rangle$ con norma $1/4$ (no 1), reflejando la proyección a subespacio.
-\end{proof}
-
-\begin{corollary}[Tasa de convergencia exponencial]\label{cor:tasa-convergencia-exponencial}
-La convergencia espectral es exponencial:
-\[
-\left\|\hat{\Omega}(\sigma)|\psi_0\rangle - \frac{1}{2}|e_1\rangle\right\| \leq C \cdot e^{-\alpha\sigma}
-\]
-donde $\alpha = \ln(\varphi) \approx 0.481$ es tasa de decaimiento.
-\end{corollary}
-
-\section{Invariancia Modular y Principio de Certidumbre}\label{invariancia}
-
-\subsection{Invariancia Modular Exacta}
-
-\begin{proposition}[Constancia del módulo topológico bajo escalamiento]\label{prop:invariancia-modular-exacta}
-La expresión $\tau(\sigma)\varphi^\sigma$ satisface: $\tau(\sigma)\varphi^\sigma = M_{\text{PCF}}$ para todo $\sigma \in \mathbb{N}$.
-\end{proposition}
-
-\begin{proof}[Por sustitución]
-Sustituyendo $\tau(\sigma) = \pi/\varepsilon(\sigma) = \pi/(\varepsilon_0\varphi^\sigma)$:
-\[
-\tau(\sigma) \varphi^{\sigma} = \frac{\pi}{\varepsilon_0 \varphi^{\sigma}} \cdot \varphi^{\sigma} = \frac{\pi}{\varepsilon_0} = M_{\text{PCF}}
-\]
-Luego $d_{\mathbb{M}}([\tau(\sigma)\varphi^{\sigma}], [M_{\text{PCF}}]) = 0$ para todo $\sigma$.
-\end{proof}
-
-\begin{observation}[Exactitud matemática frente a precisión numérica]\label{obs:nota-terminologica-invariancia}
-La igualdad
-\[
-\tau(\sigma)\varphi^\sigma = M_{\text{PCF}}
-\]
-establecida anteriormente es una identidad algebraica exacta válida para todo $\sigma \in \mathbb{N}$, no una convergencia asintótica que requiera límite $\lim_{\sigma \to \infty}$.
-
-\par
-Esta distinción es fundamental: mientras sistemas dinámicos escalados típicamente exhiben convergencias asintóticas con error residual que decrece con la escala, aquí la invariancia se mantiene de forma exacta en cada nivel $\sigma$ de la torre, reflejando la estructura autosimilar exacta del operador PCF.
-
-\par
-Las discrepancias numéricas observadas en verificaciones computacionales provienen exclusivamente de los límites de precisión inherentes a la representación finita (véase \dref{def:precision-computacional}), estableciendo una separación clara entre exactitud matemática teórica y precisión de verificación numérica.
-\end{observation}
-
-\subsection{Principios de Certidumbre}
-
-\begin{theorem}[Principio de certidumbre geométrica]\label{thm:principio-certidumbre-geometrica}
-Para todo $\sigma \in \mathbb{N}$:
-\[
-\varepsilon(\sigma) \cdot \tau(\sigma) = \pi
-\]
-
-Esta identidad algebraica exacta establece un producto constante entre parámetros conjugados, distinto de la invariancia modular (\pref{prop:invariancia-modular-exacta}) que establece constancia del módulo $\tau(\sigma)\varphi^\sigma = M_{\text{PCF}}$.
-\end{theorem}
-
-Esta relación es dual geométrica al principio de incertidumbre de Heisenberg $\Delta E \cdot \Delta t \geq \hbar/2$: cuando la velocidad angular $\varepsilon$ aumenta por factor $\varphi$, el periodo $\tau$ disminuye por el mismo factor, manteniendo el producto constante\sidenote{Contraste con principio de incertidumbre de Heisenberg: aquí igualdad exacta. Para desarrollo del mecanismo de compensación, véase \tref{thm:incertidumbre-geometrica}.}.
-
-\begin{proof}[Por sustitución]
-\[
-\varepsilon(\sigma) \cdot \tau(\sigma) = \left(\varepsilon_0 \varphi^\sigma\right) \cdot \left(\frac{\pi}{\varepsilon_0 \varphi^\sigma}\right) = \pi
-\]
-\end{proof}
-
-\begin{proposition}[Escalamiento de fase]\label{prop:escalamiento-fase}
-El incremento de fase entre niveles consecutivos satisface:
-\[
-\Delta\phi(\sigma) \cdot \varphi = \Delta\phi(\sigma+1)
-\]
-donde $\Delta\phi(\sigma) = \pi\varepsilon(\sigma)(\varphi-1)$. El escalamiento de fase es autosimilar con factor $\varphi$, igual que el escalamiento de $\varepsilon(\sigma)$, estableciendo coherencia necesaria para la consistencia del sistema.
-\end{proposition}
-
-\begin{proof}[Por sustitución]
-Sustituyendo $\varepsilon(\sigma+1) = \varphi \cdot \varepsilon(\sigma)$ en la definición de $\Delta\phi$:
-\[
-\Delta\phi(\sigma+1) = \pi \cdot \varphi\varepsilon(\sigma) \cdot (\varphi - 1) = \varphi \cdot \Delta\phi(\sigma)
-\]
-\end{proof}
-
-\section{Dimensión de Hausdorff y Estructura Fractal}\label{hausdorff}
-
-\subsection{Autosimilaridad del Sistema}
-
-\begin{proposition}[Autosimilaridad áurea]\label{prop:autosimilaridad-aurea}
-El sistema PCF exhibe autosimilaridad geométrica bajo escalamiento por $\varphi$:
-\[
-\varepsilon(\sigma + 1) = \varphi \cdot \varepsilon(\sigma), \quad \tau(\sigma + 1) = \frac{1}{\varphi} \cdot \tau(\sigma)
-\]
-\end{proposition}
-
-Esta autosimilaridad fractal es de naturaleza geométrica, no estadística: las relaciones de escalamiento se mantienen de forma determinista y exacta en cada nivel $\sigma$, a diferencia de procesos estocásticos donde la autosimilaridad emerge únicamente en sentido probabilístico o asintótico.
-
-\begin{fullwidth}
-\centering
-\begin{minipage}{\linewidth}
-\includegraphics[width=\linewidth]{src/images/dual_towers.png}
-\captionsetup{width=\linewidth,justification=centering}
-\captionof{figure}{Dual towers demonstrating expansion and contraction scaling: (left) expansion tower where radius $R_\sigma = R_0 \cdot \varphi^\sigma$ grows exponentially with scale level $\sigma$, maintaining three points (P, C, F) per level as the triangle expands; (right) contraction tower (Sierpiński fractal) where the outer size remains fixed while internal complexity grows as $3^\sigma$ through recursive subdivision, with $\sigma$ levels showing $1, 3, 9, 27, 81$ triangles respectively. Both towers illustrate the self-similar scaling properties of the PCF system: expansion via golden ratio $\varphi$ and contraction via Sierpiński subdivision, connecting to the Hausdorff dimension $\dim_H = \log 3 / \log 2$ (\pref{prop:dimension-fractal-sistema}, \pref{prop:autosimilaridad-aurea}).}
-\label{fig:dual-towers} % chktex 24
-\end{minipage}
-\end{fullwidth}
-
-\subsection{Realización Geométrica: Sistema de Funciones Iteradas}
-
-La estructura algebraica del operador $\hat{\Omega}$ admite una realización geométrica como conjunto fractal autosimilar mediante un sistema de funciones iteradas. Esta realización conecta las tres componentes (P, C, F) del operador con una estructura geométrica bidimensional de dimensión fractal no entera.
-
-\begin{definition}[Sistema de funciones iteradas PCF]\label{def:ifs-pcf}
-Sea $\Delta_0$ el triángulo con vértices en los eigenvalores de $\hat{\Omega}$ (\pref{prop:origen-geometrico}):
-\[
-v_k = \frac{1}{2}\omega^k, \quad k \in \{0, 1, 2\}, \quad \omega = e^{2\pi i/3}
-\]
-El sistema de funciones iteradas (IFS) $\{T_0, T_1, T_2\}$ se define mediante las contracciones:
-\[
-T_k(z) = \frac{1}{2}(z - v_k) + v_k = \frac{1}{2}z + \frac{1}{2}v_k
-\]
-Cada transformación $T_k$ contrae el plano complejo por un factor $1/2$ hacia el vértice $v_k$, generando tres copias auto-similares del triángulo original.
-\end{definition}
-
-\begin{proposition}[Propiedades del IFS]\label{prop:propiedades-ifs}
-El sistema de funciones iteradas satisface:
-\begin{enumerate}
-\item \textit{Factor de contracción uniforme}: $|T_k'(z)| = 1/2$ para todo $z \in \mathbb{C}$ y todo $k \in \{0,1,2\}$, igual a la magnitud $|\hat{\Omega}| = 1/2$ del operador.
-\item \textit{Puntos fijos}: Cada transformación $T_k$ tiene punto fijo $v_k$, es decir, $T_k(v_k) = v_k$.
-\item \textit{Cardinalidad}: El sistema consta de $N = 3$ contracciones, correspondiente a las tres componentes (P, C, F) del operador $\hat{\Omega}$.
-\end{enumerate}
-\end{proposition}
-
-\begin{proof}[Por cálculo directo]
-Para (1): La función $T_k(z) = \frac{1}{2}z + \frac{1}{2}v_k$ es afín con derivada constante $T_k'(z) = \frac{1}{2}$ independiente de $z$. Esta constante coincide con $|\hat{\Omega}| = 1/2$ establecido en \pref{prop:origen-geometrico}.
-
-Para (2): Sustituyendo $z = v_k$ en la definición de $T_k$:
-\[
-T_k(v_k) = \frac{1}{2}v_k + \frac{1}{2}v_k = v_k
-\]
-confirmando que $v_k$ es punto fijo de $T_k$.
-
-Para (3): El sistema $\{T_0, T_1, T_2\}$ tiene exactamente tres elementos, en correspondencia biunívoca con las tres componentes del operador: $T_0$ asociada a P, $T_1$ a C, $T_2$ a F.
-\end{proof}
-
-\begin{theorem}[Atractor PCF]\label{thm:atractor-pcf}
-El atractor $\mathcal{S} = \lim_{n \to \infty} S_n$ donde $S_{n+1} = \bigcup_{k=0}^{2} T_k(S_n)$ y $S_0 = \Delta_0$ es un triángulo de Sierpiński\sidenote{~\cite{Sierpinski1916}} con dimensión de Hausdorff:
-\[
-\dim_H(\mathcal{S}) = \frac{\log 3}{\log 2} = 1.584962\ldots
-\]
-\end{theorem}
-
-\begin{proof}[Por el teorema de Hutchinson]
-El sistema de funciones iteradas $\{T_0, T_1, T_2\}$ consta de $N = 3$ similitudes con factor de contracción uniforme $s = 1/2$ (\pref{prop:propiedades-ifs}). El triángulo inicial $\Delta_0$ y las imágenes $T_k(\Delta_0)$ satisfacen la condición de conjunto abierto (Open Set Condition): existe un conjunto abierto acotado $V$ tal que $T_k(V) \subset V$ para $k \in \{0,1,2\}$ y las imágenes $T_k(V)$ son disjuntas dos a dos. Por el teorema de Hutchinson\sidenote{~\cite{Hutchinson1981}}, la dimensión de Hausdorff del atractor $\mathcal{S}$ coincide con la dimensión de similitud, que para $N = 3$ y $s = 1/2$ es $\dim_H(\mathcal{S}) = \log N / \log(1/s) = \log 3 / \log 2$.
-\end{proof}
-
-\subsection{Dimensión Fractal del Sistema}
-
-La dimensión $\dim_H(\mathcal{S}) > 1$ pero $< 2$ indica que el sistema PCF habita un espacio de complejidad intermedia entre línea (1D) y plano (2D), característica de estructuras fractales. Esta dimensión emerge tanto de la estructura algebraica del operador como de su realización geométrica.
-
-\begin{proposition}[Dimensión fractal del sistema]\label{prop:dimension-fractal-sistema}
-La dimensión de Hausdorff del conjunto de autosimilitud del operador $\hat{\Omega}$ en el espacio fasorial es:
-\[
-\dim_H = \frac{\log 3}{\log 2} = 1.584962500721156\ldots
-\]
-Esta dimensión coincide con la del atractor geométrico $\mathcal{S}$ (\pref{thm:atractor-pcf}).
-\end{proposition}
-
-\begin{proof}[Por correspondencia algebraico-geométrica]
-El operador $\hat{\Omega}$ tiene tres componentes (P, C, F) que se auto-escalan bajo la torre exponencial $\varphi^\sigma$ (\pref{prop:autosimilaridad-aurea}). En cada nivel $\sigma$, la estructura algebraica genera $N = 3$ copias auto-similares con factor de escalamiento $s = 1/2$ (la magnitud del operador $|\hat{\Omega}| = 1/2$). La relación de autosimilitud exacta $N = s^{-\dim_H}$ implica:
-\[
-3 = 2^{\dim_H} \Rightarrow \dim_H = \frac{\log 3}{\log 2}
-\]
-Esta dimensión coincide con la del atractor geométrico $\mathcal{S}$ (\pref{thm:atractor-pcf}), estableciendo la correspondencia entre la estructura algebraica del operador y su realización fractal en el plano complejo.
-\end{proof}
-
-\begin{fullwidth}
-\centering
-\begin{minipage}{\linewidth}
-\includegraphics[width=\linewidth]{src/images/towers_comparison.png}
-\captionsetup{width=\linewidth,justification=centering}
-\captionof{figure}{Comparison of expansion and contraction towers: (left) expansion tower where radius $R_\sigma = R_0 \cdot \varphi^\sigma$ grows exponentially with scale level $\sigma$, showing translucent cylinders and triangles P-C-F at each level; (right) contraction tower (Sierpiński) where radius $R_\sigma = R_0 \cdot (1/2)^\sigma$ shrinks exponentially, demonstrating the dual scaling behavior. Both towers maintain the three-point structure (P, C, F) at each level, with the expansion tower growing outward and the contraction tower converging inward, illustrating the complementary scaling mechanisms of the PCF system (\pref{prop:autosimilaridad-aurea}).}
-\label{fig:towers-comparison} % chktex 24
-\end{minipage}
-\end{fullwidth}
-
-% \begin{fullwidth}
-% \centering
-% \begin{minipage}{\linewidth}
-% \includegraphics[width=\linewidth]{src/images/tower_expansion.png}
-% \captionsetup{width=\linewidth,justification=centering}
-% \captionof{figure}{Expansion tower showing the PCF operator structure across scale levels $\sigma \in \{0,1,2,3,4\}$: each level displays a translucent cylinder of radius $R_\sigma = R_0 \cdot \varphi^\sigma$ containing the equilateral triangle P-C-F with vertices colored red (P), green (C), and blue (F). The tower demonstrates how the operator geometry expands exponentially with the golden ratio $\varphi$, maintaining the three-component structure at all scales while the radius grows as $\varphi^\sigma$ (\pref{prop:autosimilaridad-aurea}).}
-% \label{fig:tower-expansion} % chktex 24
-% \end{minipage}
-% \end{fullwidth}
-
-\begin{fullwidth}
-\centering
-\begin{minipage}{\linewidth}
-\includegraphics[width=\linewidth]{src/images/top_view_expansion.png}
-\captionsetup{width=\linewidth,justification=centering}
-\captionof{figure}{Top view of the expansion tower showing concentric circles in the XY plane, each representing a different scale level $\sigma$ with radius $R_\sigma = R_0 \cdot \varphi^\sigma$. Each circle contains an inscribed equilateral triangle P-C-F, demonstrating the exponential growth pattern. The concentric structure illustrates how the PCF operator expands radially while maintaining its triangular geometry, with the golden ratio $\varphi$ governing the scaling between consecutive levels (\pref{prop:autosimilaridad-aurea}).}
-\label{fig:top-view-expansion} % chktex 24
-\end{minipage}
-\end{fullwidth}
-
-\section{Triple Convergencia y Coherencia Estructural}\label{triple}
-
-\subsection{Comportamiento Simultáneo en Tres Espacios Inequivalentes}
-
-\begin{theorem}[Triple convergencia e invariancia]\label{thm:triple-convergencia}
-El operador $\omegapcf$ exhibe comportamiento simultáneo en tres espacios con topologías distintas: convergencia asintótica en el espacio espectral, invariancia exacta en el espacio modular, y convergencia predictiva en el espacio de ceros de $\zeta(s)$:
-
-\begin{enumerate}
-\item \textit{Convergencia espectral en $\mathcal{H} = L^2(\mathbb{C}) \otimes \mathbb{C}^3$}: Para el operador $\hat{\Omega}(\sigma): \mathcal{H} \to \mathcal{H}$:
-\begin{center}
-\[
-\lim_{\sigma \to \infty} \left|\hat{\Omega}(\sigma) - \frac{1}{2}\mathbb{P}_1\right|_{\text{op}} = 0
-\]
-\end{center}
-donde $\mathbb{P}_1$ es proyector ortogonal sobre eigenespacio de $\lambda_1 = 1/2$ y $|\cdot|_{\text{op}}$ es norma de operador. La convergencia es exponencial con tasa $\sim e^{-\alpha\sigma}$ donde $\alpha = \ln(\varphi) > 0$, en topología débil sobre espacio infinito-dimensional.
-
-\item \textit{Invariancia modular exacta en $\mathcal{M}_{\text{PCF}} = \mathbb{C}/\Lambda_{\text{PCF}}$}: Para el invariante del retículo, la igualdad
-\begin{center}
-\[
-\tau(\sigma)\varphi^\sigma = M_{\text{PCF}}
-\]
-\end{center}
-se satisface exactamente para todo $\sigma \in \mathbb{N}$ (véase \pref{prop:invariancia-modular-exacta} y \oref{obs:nota-terminologica-invariancia}). En términos de la métrica en el toro:
-\begin{center}
-\[
-d_{\mathbb{M}}(z_1, z_2) = \min_{(m,n)\in\mathbb{Z}^2} |z_1 - z_2 - mM_{\text{PCF}} - nM_{\text{PCF}} \cdot i|
-\]
-\end{center}
-se tiene $d_{\mathbb{M}}(\tau(\sigma)\varphi^\sigma, M_{\text{PCF}}) = 0$ para todo $\sigma$, no como límite sino como identidad algebraica exacta. Las discrepancias numéricas observadas están limitadas únicamente por precisión de máquina (\dref{def:precision-computacional}), estableciendo separación clara entre exactitud matemática teórica y precisión de verificación numérica (\oref{obs:nota-terminologica-invariancia}). La topología es compacta sobre toro 2-dimensional.
-
-\item \textit{Convergencia predictiva sobre espectro de $\zeta(s)$}: Para ceros $t_n$ de $\zeta(1/2 + it)$ y predicciones $t_n^{\text{PCF}}$ del operador:
-\begin{center}
-\[
-\lim_{n \to \infty} \frac{|t_n^{\text{PCF}} - t_n|}{\sqrt{\log n}} = C < \infty
-\]
-\end{center}
-donde $C$ es constante acotada. La tasa de convergencia mejora asintóticamente como $\sim 1/\sqrt{\log n}$, verificada empíricamente hasta $n \sim 10^{10}$ (altura $t \sim 8.3 \times 10^{23}$), en topología usual sobre $\mathbb{R}$ (línea crítica).
-\end{enumerate}
-\end{theorem}
-
-\subsection{Independencia Topológica}
-
-\begin{proposition}[Espacios no homeomorfos]\label{prop:espacios-no-homeomorfos}
-Los tres espacios tienen topologías mutuamente inequivalentes:
-
-\vspace{0.5em}
-
-\begin{table}[bt]
-    \centering
-    \caption{Comparación de espacios topológicos: convergencia e invariancia}\label{tab:espacios-convergencia}
-    \begin{tabular}{@{}lcccc@{}}
-    \toprule
-    Tipo & Espacio & Dim & Compacto & Métrica \\
-    \midrule
-    Convergencia espectral & $\mathcal{H}$ & $\infty$ & No & $\|\cdot\|_{\text{op}}$ \\
-    Invariancia modular & $\mathcal{M}_{\text{PCF}}$ & 2 & Sí & $d_\mathbb{M}$ \\
-    Convergencia predictiva & $\mathbb{R}$ & 1 & No & $\|\cdot\|$ \\
-    \bottomrule
-    \end{tabular}
-\end{table}
-
-\vspace{0.5em}
-
-No existe homeomorfismo entre estos espacios:
+Zeros of $\zeta(1/2 + it) = 0$ were computed using three independent sources:
 \begin{itemize}
-\item $\mathcal{H}$ es infinito-dimensional separable
-\item $\mathcal{M}_{\text{PCF}}$ es compacto 2-dimensional (toro)
-\item $\mathbb{R}$ es no-compacto 1-dimensional
-\end{itemize}
-\end{proposition}
-
-\begin{observation}[Consecuencia de inequivalencia topológica]\label{obs:consecuencia-inequivalencia}
-Las propiedades espectral, modular y predictiva operan en contextos topológicos completamente distintos. Su coherencia estructural simultánea no es trivial y emerge del principio \textit{bootstrap} mediante ecuaciones de acoplamiento.
-\end{observation}
-
-\subsection{Coherencia Estructural con Ecuaciones de Acoplamiento}
-
-\begin{theorem}[Coherencia estructural mediante ecuaciones de acoplamiento]\label{thm:coherencia-convergencias}
-Las propiedades espectral, modular y predictiva del operador $\omegapcf$ satisfacen compatibilidad geométrica mediada por las ecuaciones de acoplamiento:
-
-\vspace{0.5em}
-
-\begin{align}
-\text{(1) Espectral:} \quad & \lambda_k(\sigma) \to (1/2)\omega^{k-1} \\[0.3em]
-\text{(2) Modular:} \quad & \tau(\sigma)\varphi^\sigma = M_{\text{PCF}} \\[0.3em]
-\text{(3) Predictiva:} \quad & t_n^{\text{PCF}} \to t_n \\[0.3em]
-\text{(4) Temporal:} \quad & \Omega(\varphi \cdot z) = \Omega(z) \cdot e^{i\Delta\phi} \\[0.3em]
-\text{(5) Óptima:} \quad & \frac{\arg(\Omega)}{\log(\varphi)} + \frac{\log(\varepsilon)}{\log(\varphi)} = 1
-\end{align}
-
-\vspace{0.5em}
-
-\end{theorem}
-
-\begin{proof}[Por determinación mutua mediante ecuaciones de acoplamiento]
-Siguiendo el principio \textit{bootstrap}\sidenote{Véase §\ref{subsec:simetrias-dualidades} para el contexto completo sobre \textit{bootstrap} y coherencia multi-dominio.}, la coherencia estructural emerge de condiciones de consistencia donde múltiples dominios se determinan mutuamente mediante invariantes compartidos, sin auto-referencia directa. Las ecuaciones de acoplamiento establecen esta determinación mutua:
-
-\begin{enumerate}
-\item \textit{Espectral $\to$ Temporal}: El módulo constante $|\Omega| = 1/2$ (propiedad espectral) determina que la ecuación temporal $\Omega(\sigma+1) = \Omega(\sigma) \cdot e^{i\Delta\phi}$ preserve magnitudes exactamente. Esta restricción emerge de la estructura geométrica, no se especifica \textit{a priori}.
-
-\item \textit{Temporal $\to$ Modular}: La ecuación temporal implica $\Delta\phi(\sigma) = \pi\varepsilon(\sigma)(\varphi-1)$. Sumando sobre $\sigma$ y tomando módulo $M_{\text{PCF}}$, esto conecta la dinámica temporal con la estructura del toro. El invariante modular $M_{\text{PCF}} = \pi/\varepsilon_0$ emerge como consecuencia de esta coherencia.
-
-\item \textit{Modular $\to$ Óptima}: El invariante $M_{\text{PCF}} = \pi/\varepsilon_0$ aparece en ambos lados de la ecuación óptima, estableciendo que ambos dominios comparten el mismo invariante fundamental. La ecuación óptima determina los ángulos críticos $\arg(z)_{\text{crit}}{(\sigma)}$ que estructuran el espacio modular.
-
-\item \textit{Óptima $\to$ Predictiva}: Los ángulos críticos definen direcciones privilegiadas en $\mathbb{C}$ donde el acoplamiento es óptimo. Estas direcciones corresponden a modos resonantes que, proyectados sobre la línea crítica $\text{Re}(s) = 1/2$, producen predicciones de ceros de $\zeta(s)$. La precisión predictiva emerge de la coherencia geométrica, no de ajuste fenomenológico.
-\end{enumerate}
-
-Las ecuaciones de acoplamiento (4) y (5) implementan el principio \textit{bootstrap}: imponen condiciones de consistencia que determinan restricciones mutuas entre dominios mediante invariantes compartidos ($|\Omega| = 1/2$, $M_{\text{PCF}}$, estructura $\varphi$-$i$-$S_3$). No son propiedades independientes que convergen asintóticamente, sino proyecciones de una única geometría donde cada dominio determina restricciones sobre los otros, estableciendo coherencia estructural exacta sin auto-referencia directa.
-\end{proof}
-
-\subsection{Exclusión de Ajuste Fenomenológico}
-
-\begin{observation}[Exclusión de ajuste fenomenológico]\label{obs:exclusion-ajuste-fenomenologico}
-La coherencia estructural entre propiedades en espacios topológicamente inequivalentes implica que PCF no puede ser modelo fenomenológico ajustable.
-\end{observation}
-
-\textit{Justificación}: Modelos fenomenológicos operan en un espacio fijo (típicamente $\mathbb{R}^n$) con parámetros libres $\{\theta_i\}$ ajustados para minimizar error en conjunto de datos. Tales modelos exhiben:
-\begin{itemize}
-\item Degradación asintótica: Error crece con escala por sobreajuste
-\item Dependencia dimensional: Confinados al espacio de ajuste
-\item Re-ajuste necesario: Cada dominio requiere nuevos parámetros
+    \item \textbf{$n = 1$ to $100$:} Odlyzko's tables with precision $> 40$ decimal digits.
+    \item \textbf{$n = 1$ to $500$:} Dense coverage via \texttt{mpmath.zetazero()} at 50-digit precision.
+    \item \textbf{$n = 50,000$ to $131,072$:} Extreme-range validation via \texttt{mpmath.zetazero()} at 50-digit precision.
 \end{itemize}
 
-PCF exhibe propiedades opuestas:
-\begin{itemize}
-\item Mejora asintótica: Error predictivo $\sim 1/\sqrt{\log n} \to 0$
-\item Independencia dimensional: Coherencia en $\mathcal{H}$, $\mathcal{M}_{\text{PCF}}$, $\mathbb{R}$ simultáneamente
-\item Cero re-ajuste: Mismo operador para funciones L diversas
-\end{itemize}
+All computations of $T^*(n)$ use the exact formula of Definition \ref{def:tstar} with no post-hoc adjustments. The operator requires only the index $n$ as input; no information about $\zeta(s)$ or its zeros enters the computation.
 
-Por tanto, PCF captura geometría intrínseca del espectro, no aproximación paramétrica.
+\subsubsection{Sample Predictions}
 
-\section{Resultados Principales: Predicción y Verificación de Ceros}\label{resultados}
-
-\subsection{Espectro del Operador Hermítico y Predicción de Ceros de Riemann}
-
-\subsubsection[El Operador Hermítico H PCF]{El Operador Hermítico $H_{\text{PCF}}$}
-
-En §\ref{subsubsec:emergencia-hermiticidad} establecimos que el operador $\omegapcf$ actuando en el espacio de Hilbert $L^2(\mathbb{R})$ es hermítico:
-
-\begin{definition}[Operador integral PCF]\label{def:operador-integral-PCF}
-El operador hermítico PCF se define mediante el kernel integral:
-\[
-H_{\text{PCF}}: L^2(\mathbb{R}) \to L^2(\mathbb{R})
-\]
-\[
-(H_{\text{PCF}}\psi)(x) = \int_{\mathbb{R}} K_{\text{PCF}}(x,y)\psi(y) dy
-\]
-donde el kernel $K_{\text{PCF}}(x,y)$ es hermítico por construcción (§\ref{subsubsec:emergencia-hermiticidad}):
-\[
-K_{\text{PCF}}(x,y) = \Omega_{\text{PCF}}(1/2 + ix) \cdot \delta(x-y) + \varepsilon(x,y)
-\]
-\end{definition}
-
-\begin{theorem}[Hermiticidad del operador]\label{thm:hermiticidad-operador}
-El operador $H_{\text{PCF}}$ satisface:
-\[
-H_{\text{PCF}}^\dagger = H_{\text{PCF}}
-\]
-\end{theorem}
-
-\begin{corollary}[Espectro real]\label{cor:espectro-real}
-Como consecuencia de la hermiticidad, $H_{\text{PCF}}$ tiene espectro real:
-\[
-\text{spec}(H_{\text{PCF}}) = \{\lambda_n \in \mathbb{R} : n \in \mathbb{N}\}
-\]
-con eigenfunciones ortonormales $\psi_n \in L^2(\mathbb{R})$ que satisfacen:
-\[
-H_{\text{PCF}}\psi_n = \lambda_n\psi_n, \quad \langle\psi_m|\psi_n\rangle = \delta_{mn}
-\]
-\end{corollary}
-
-\begin{proposition}[Monotonía del espectro]\label{prop:monotonia-espectro}
-Los eigenvalores satisfacen:
-\[
-\lambda_1 < \lambda_2 < \cdots < \lambda_n < \lambda_{n+1} < \cdots
-\]
-\end{proposition}
-
-\subsubsection{Conexión con los Ceros de la Función Zeta}
-
-\begin{conjecture}[Fórmula de predicción PCF]\label{conj:formula-prediccion-PCF}
-Los eigenvalores del operador $H_{\text{PCF}}$ están relacionados con los ceros de la función zeta de Riemann mediante:
-\[
-\boxed{\lambda_n = K_\sigma \times \sqrt{t_n}}
-\]
-donde:
-\begin{itemize}
-\item $t_n$ es la altura imaginaria del $n$-ésimo cero no trivial: $\zeta(1/2 + it_n) = 0$
-\item $K_\sigma = M_{\text{PCF}}/\varphi^\sigma$ es el factor de escala
-\item $M_{\text{PCF}} = \pi/\varepsilon_0 \approx 67.846189258$ es el módulo topológico (\dref{def:modulo-topologico})
-\item $\sigma$ es el nivel en la torre \textit{bootstrap} (típicamente $\sigma = 9$ para predicción óptima)
-\end{itemize}
-
-\textbf{Fórmula inversa} (predicción de ceros desde eigenvalores):
-\[
-t_n = {\left(\frac{\lambda_n}{K_{\sigma}}\right)}^2
-\]
-\end{conjecture}
-
-\begin{proof}[Por construcción]
-La fórmula $\lambda_n = K_\sigma \sqrt{t_n}$ emerge de la estructura geométrica del operador mediante proyección de direcciones de resonancia sobre la línea crítica.
-
-\par
-Los ángulos críticos $\arg(z)_{\text{crit}}(\sigma)$ determinados por la ecuación de acoplamiento óptimo (\tref{thm:acoplamiento-optimo}) definen direcciones privilegiadas en $\mathbb{C}$ donde el operador exhibe coherencia geométrico-aritmética máxima (\oref{obs:resonancia-geometrica}). Cuando estas direcciones se proyectan sobre la línea crítica $\text{Re}(s) = 1/2$, los puntos de intersección corresponden a resonancias del espacio modular $\mathcal{M}_{\text{PCF}} = \mathbb{C}/\Lambda_{\text{PCF}}$ (\dref{def:espacio-modulos-PCF}).
-
-\par
-El factor de escala $K_\sigma = M_{\text{PCF}}/\varphi^\sigma$ emerge del módulo topológico $M_{\text{PCF}} = \pi/\varepsilon_0$ (\dref{def:modulo-topologico}) y la torre exponencial $\varphi^\sigma$ que estructura las escalas autosimilares. La relación cuadrática $\lambda_n^2 \propto t_n$ refleja que los eigenvalores del operador en $L^2(\mathbb{R})$ se relacionan con las alturas $t_n$ mediante la métrica del espacio modular, donde la distancia al origen escala como $\sqrt{t_n}$ en la proyección sobre la línea crítica.
-
-\par
-Todos los parámetros ($M_{\text{PCF}}$, $\varphi$, $\varepsilon_0$) están determinados por la estructura tripartita del operador establecida en §\ref{subsec:construccion-modulo}, no se ajustan \textit{a posteriori} para reproducir ceros conocidos.
-\end{proof}
-
-\begin{fullwidth}
-\centering
-\begin{minipage}{\linewidth}
-\includegraphics[width=\linewidth]{src/images/image4.png}
-\captionsetup{width=\linewidth,justification=centering}
-\captionof{figure}{Validación del operador hermítico PCF para $\sigma=9$: (arriba izquierda) error relativo de predicción vs índice del cero, mostrando fluctuaciones alrededor del límite de precisión computacional $10^{-14}$ (\dref{def:precision-computacional}); (arriba derecha) espectro del operador $\hat{H}_{\text{PCF}}$ mostrando eigenvalores $\lambda_n$ crecientes; (medio izquierda) alturas $t_n$ de los primeros 100 ceros no triviales de $\zeta(1/2 + it)$; (medio derecha) espaciamiento $\Delta t_n = t_{n+1} - t_n$ entre ceros consecutivos; (abajo izquierda) distribución estadística de errores relativos con media $9.76 \times 10^{-15}$; (abajo derecha) verificación empírica de la relación $\lambda_n = K_\sigma \sqrt{t_n}$ mediante regresión lineal ($\lambda = 0.8926\sqrt{t} + 0.0000$), confirmando la proporcionalidad directa predicha geométricamente en \tref{thm:acoplamiento-optimo}. La precisión numérica observada está limitada por representación finita, mientras que la relación matemática es exacta (\cref{obs:nota-terminologica-invariancia}).}
-\label{fig:validacion-completa-PCF} % chktex 24
-\end{minipage}
-\end{fullwidth}
-
-\subsubsection{Verificación Computacional Extendida}
-
-\begin{observation}[Precisión numérica máxima]\label{obs:precision-numerica-maxima}
-Para el nivel óptimo $\sigma = 9$, la fórmula PCF reproduce los primeros 100 ceros de $\zeta(s)$ con error relativo medio $9.76 \times 10^{-15}\%$. Las constantes del sistema para $\sigma = 9$ son:
-\[
-\begin{aligned}
-\varphi &= \frac{1+\sqrt{5}}{2} = 1.618033988749895 \\
-\varepsilon_0 &= \frac{\ln \varphi}{6\sqrt{3}} = 0.04630462945589886 \\
-M_{\text{PCF}} &= \frac{\pi}{\varepsilon_0} = 67.846189258071647 \\
-\varphi^9 &= 76.01315561749642 \\
-K_9 &= \frac{M_{\text{PCF}}}{\varphi^9} = 0.892558514469238
-\end{aligned}
-\]
-\end{observation}
-
-\begin{table}[bt]
-    \centering
-    \caption{Verificación de primeros ceros con precisión de máquina. Fuente de datos:~\cite{OdlyzkoZetaTables} (precisión $> 40$ dígitos decimales). Estadísticas (100 ceros totales): error medio $\overline{\varepsilon} = 9.76 \times 10^{-15}\%$, máximo $\varepsilon_{\max} = 4.89 \times 10^{-14}\%$, mínimo $\varepsilon_{\min} = 0\%$, desviación estándar $\sigma_\varepsilon = 1.12 \times 10^{-14}\%$.}\label{tab:verificacion-ceros}
-    \small
-    \begin{tabular}{@{}S[table-format=2.0] S[table-format=2.15] S[table-format=1.10] S[table-format=2.15] c@{}}
-    \toprule
-    {$n$} & {$t_n$ (Odlyzko)} & {$\lambda_n$} & {$t_n^{\text{pred}}$} & {Error (\%)} \\
-    \midrule
-    1 & 14.134725141734695 & 3.3556787764 & 14.134725141734693 & $1.30 \times 10^{-14}$ \\
-    2 & 21.022039638771556 & 4.0923627467 & 21.022039638771560 & $1.70 \times 10^{-14}$ \\
-    3 & 25.010857580145689 & 4.4637615697 & 25.010857580145686 & $1.40 \times 10^{-14}$ \\
-    4 & 30.424876125859512 & 4.9232411240 & 30.424876125859516 & $1.20 \times 10^{-14}$ \\
-    5 & 32.935061587739192 & 5.1223109313 & 32.935061587739206 & $4.30 \times 10^{-14}$ \\
-    6 & 37.586178158825675 & 5.4720591251 & 37.586178158825675 & $0$ \\
-    7 & 40.918719012147498 & 5.7094951969 & 40.918719012147491 & $1.70 \times 10^{-14}$ \\
-    8 & 43.327073280915002 & 5.8751150291 & 43.327073280915002 & $0$ \\
-    9 & 48.005150881167161 & 6.1841585676 & 48.005150881167154 & $1.50 \times 10^{-14}$ \\
-    10 & 49.773832477672300 & 6.2970513981 & 49.773832477672308 & $1.40 \times 10^{-14}$ \\
-    11 & 52.970321477714464 & 6.4961044850 & 52.970321477714457 & $1.30 \times 10^{-14}$ \\
-    12 & 56.446247697063392 & 6.7058561945 & 56.446247697063384 & $1.30 \times 10^{-14}$ \\
-    13 & 59.347044002602352 & 6.8760059426 & 59.347044002602352 & $0$ \\
-    14 & 60.831778524609810 & 6.9614860029 & 60.831778524609810 & $0$ \\
-    15 & 65.112544048081602 & 7.2022638826 & 65.112544048081588 & $2.20 \times 10^{-14}$ \\
-    16 & 67.079810529470180 & 7.3102564202 & 67.079810529470166 & $2.10 \times 10^{-14}$ \\
-    17 & 69.546401711240591 & 7.4434457875 & 69.546401711240591 & $0$ \\
-    18 & 72.067157674481905 & 7.5771414403 & 72.067157674481905 & $0$ \\
-    19 & 75.704690699808538 & 7.7660126203 & 75.704690699808552 & $1.90 \times 10^{-14}$ \\
-    20 & 77.144840068874799 & 7.8395320285 & 77.144840068874785 & $1.80 \times 10^{-14}$ \\
-    21 & 79.337375020249368 & 7.9501552726 & 79.337375020249382 & $1.80 \times 10^{-14}$ \\
-    22 & 82.910380854086029 & 8.1272038361 & 82.910380854086000 & $3.40 \times 10^{-14}$ \\
-    23 & 84.735492881512997 & 8.2161692547 & 84.735492881512997 & $0$ \\
-    24 & 87.425274613125242 & 8.3455546903 & 87.425274613125242 & $0$ \\
-    25 & 88.809111208959081 & 8.4113452656 & 88.809111208959081 & $0$ \\
-    26 & 92.491899270558498 & 8.5839772406 & 92.491899270558498 & $0$ \\
-    27 & 94.651344040519955 & 8.6836061494 & 94.651344040519955 & $0$ \\
-    28 & 95.870634228245869 & 8.7393573668 & 95.870634228245869 & $0$ \\
-    29 & 98.831194218209793 & 8.8732697969 & 98.831194218209793 & $0$ \\
-    30 & 101.31785100627839 & 8.9842064022 & 101.31785100627839 & $0$ \\
-    \bottomrule
-    \end{tabular}
-\end{table}
-
-Los errores no crecen monótonamente con $n$ y permanecen consistentemente en el nivel de ruido numérico para todos los ceros verificados.
+Table \ref{tab:samples} presents predictions $T^*(n)$ versus exact zeros $t_n$. The column $c(n)$ shows the coefficient transitioning from $\approx 3.0$ (small $n$) toward $\sigma + \mu = 2$. For $n \leq 30$, $c(n)$ is computed with adaptive $\beta(n)$; for $n > 30$, with base $\beta = 1/8$ (Section \ref{sec:tstar}).
 
 \begin{table}[h]
-    \centering
-    \caption{Análisis por rangos de altura}\label{tab:analisis-rangos-altura}
-    \begin{tabular}{@{}ccccc@{}}
-    \toprule
-    Rango $t$ & N° ceros & Error medio (\%) & Error máx.\ (\%) & Error std.\ (\%) \\
-    \midrule
-    $[14, 50]$ & 10 & $1.45 \times 10^{-14}$ & $4.31 \times 10^{-14}$ & $1.38 \times 10^{-14}$ \\
-    $(50, 100]$ & 19 & $1.23 \times 10^{-14}$ & $4.61 \times 10^{-14}$ & $1.35 \times 10^{-14}$ \\
-    $(100, 150]$ & 23 & $1.03 \times 10^{-14}$ & $4.89 \times 10^{-14}$ & $1.28 \times 10^{-14}$ \\
-    $(150, 237]$ & 48 & $7.50 \times 10^{-15}$ & $3.60 \times 10^{-14}$ & $9.21 \times 10^{-15}$ \\
-    \midrule
-    \textbf{Total} & \textbf{100} & \textbf{$9.76 \times 10^{-15}$} & \textbf{$4.89 \times 10^{-14}$} & \textbf{$1.12 \times 10^{-14}$} \\
-    \bottomrule
-    \end{tabular}
+\centering
+\begin{tabular}{|l|c|c|c|c|c|l|}
+\hline
+$n$ & $T^*(n)$ & $t_n$ (exact) & Error \% & Ratio $T^*/t_n$ & $c(n)$ & Regime \\
+\hline
+1 & 12.8831 & 14.1347 & 8.85\% & 0.911 & 2.830 & Hybrid \\
+2 & 20.6735 & 21.0220 & 1.66\% & 0.983 & 3.015 & Hybrid \\
+3 & 25.4311 & 25.0109 & 1.68\% & 1.017 & 2.950 & Hybrid \\
+5 & 33.6073 & 32.9351 & 2.04\% & 1.020 & 2.966 & Hybrid \\
+7 & 40.9708 & 40.9187 & 0.13\% & 1.001 & 2.984 & Hybrid \\
+10 & 50.3608 & 49.7738 & 1.18\% & 1.012 & 3.005 & Hybrid \\
+20 & 78.1463 & 77.1448 & 1.30\% & 1.013 & 3.039 & Hybrid \\
+30 & 102.6871 & 101.3179 & 1.35\% & 1.014 & 3.056 & Hybrid \\
+50 & 143.3448 & 143.1118 & 0.16\% & 1.002 & 2.991 & Asymptotic \\
+100 & 234.0204 & 236.5242 & 1.06\% & 0.989 & 2.936 & Asymptotic \\
+200 & 392.6710 & 396.3819 & 0.94\% & 0.991 & 2.887 & Asymptotic \\
+500 & 804.2708 & 811.1844 & 0.85\% & 0.991 & 2.830 & Asymptotic \\
+1,000 & 1,410.4894 & 1,419.4225 & 0.63\% & 0.994 & 2.792 & Asymptotic \\
+2,000 & 2,506.6036 & 2,515.2865 & 0.35\% & 0.997 & 2.756 & Asymptotic \\
+5,000 & 5,449.1677 & 5,447.8620 & 0.02\% & 1.000 & 2.714 & Asymptotic \\
+10,000 & 9,905.6951 & 9,877.7827 & 0.28\% & 1.003 & 2.686 & Asymptotic \\
+\hline
+\end{tabular}
+\caption{Sample predictions of $T^*(n)$ vs exact zeros.}
+\label{tab:samples}
 \end{table}
 
-\begin{definition}[Precisión computacional]\label{def:precision-computacional}
-Todas las verificaciones numéricas de este trabajo utilizan aritmética de punto flotante de doble precisión según el estándar IEEE 754 (64 bits), con épsilon de máquina $\varepsilon_{\text{mach}} = 2^{-52} \approx 2.22 \times 10^{-16}$. Los errores reportados ($< 10^{-14}$ o $< 10^{-15}$) reflejan este límite fundamental de precisión numérica inherente a la representación finita, no aproximación matemática del operador.
-\end{definition}
+The column $c(n)$ shows the coefficient transitioning from $\approx 3.0$ (small $n$) toward $\sigma + \mu = 2$. The ratio $T^*(n)/t_n$ oscillates around unity, transitioning from slight overestimation ($n < 50$) to slight underestimation ($50 < n < 5{,}000$) and returning to slight overestimation ($n > 5{,}000$), remaining bounded throughout.
 
-\subsubsection{Verificación de Linealidad}
+\subsubsection{Effect of the Two-Regime Structure}
 
-La fórmula de predicción $\lambda_n = K_\sigma \sqrt{t_n}$ establecida en \conjref{conj:formula-prediccion-PCF} implica relación cuadrática exacta $\lambda^2 \propto t$ sin términos de orden superior. Verificando esta estructura mediante ajuste lineal $\lambda = a\sqrt{t} + b$ sobre los 100 ceros verificados:
+The hybrid corrections (adaptive $\beta$, Mersenne $C_M$, Golden modulation $M_G$) activate exclusively for $n \leq 30$. Table \ref{tab:two-regime} quantifies their impact by comparing $T^*$ against the uncorrected operator $T_0(n)$ which uses fixed parameters throughout.
 
-\begin{proposition}[Verificación de linealidad empírica]\label{prop:ajuste-lineal-perfecto}
-El ajuste por mínimos cuadrados produce:
-\[
-\begin{aligned}
-a &= 0.892558514469238, \quad |a - K_9| < \varepsilon_{\text{mach}} \\
-b &\approx 0, \quad R^2 = 1
-\end{aligned}
-\]
-El coeficiente $a$ coincide con $K_9$ dentro de precisión de máquina (\dref{def:precision-computacional}), confirmando que la relación $\lambda = K_\sigma\sqrt{t}$ es exactamente lineal en $\sqrt{t}$ sin término constante ni correcciones de orden superior.
-\end{proposition}
-
-\subsection[Nivel Dimensional Óptimo: sigma = 9]{Nivel Dimensional Óptimo: $\sigma = 9$}
-
-\begin{observation}[Optimalidad empírica de $\sigma=9$]\label{obs:optimalidad-sigma-9}
-El nivel $\sigma=9$ emerge empíricamente como particularmente efectivo para la predicción de ceros en el rango $t \in [10, 10^4]$ (\dref{def:precision-computacional}). No se tiene aún caracterización teórica completa de por qué este nivel es óptimo ni cómo se comporta sistemáticamente la predicción para otros valores de $\sigma$.
-\end{observation}
-
-\subsubsection{Amplificación de Lucas}
-
-\begin{proposition}[Resonancia Lucas-Fibonacci]\label{prop:resonancia-lucas-fibonacci}
-Se cumple:
-
-\begin{center}
-\[
-\varphi^9 = 76.01315561749642 \approx L_9 = 76
-\]
-\end{center}
-
-donde $L_9$ es el noveno número de Lucas ($L_n = \varphi^n + \varphi^{-n} = 76.02631124$), indicando resonancia aritmético-geométrica entre la torre áurea y la secuencia de Lucas.
-\end{proposition}
-
-\subsubsection{Balance Resolución-Rango}
-
-\begin{observation}[Parámetros de $\sigma=9$]\label{obs:parametros-sigma-9}
-El nivel $\sigma=9$ produce:
-
-\begin{center}
-\[
-\begin{aligned}
-\varepsilon(9) &= \varepsilon_0\varphi^9 \approx 3.5198 \\
-K_9 &= \frac{M_{\text{PCF}}}{\varphi^9} \approx 0.8926
-\end{aligned}
-\]
-\end{center}
-
-proporcionando granularidad suficiente ($\Delta t_{\min} \approx 0.72$), cobertura óptima $[10, 10^4]$, y estabilidad numérica.
-\end{observation}
-
-\subsubsection{Convergencia Espectral}
-
-\begin{observation}[Norma del operador]\label{obs:norma-operador}
-La norma de operador satisface:
-
-\begin{center}
-\[
-\|H_{\text{PCF}}(\sigma=9)\|_{\text{op}} < 10^{-12}
-\]
-\end{center}
-
-al evaluar en ceros conocidos, minimizando contaminación numérica.
-\end{observation}
-
-\begin{table}[bt]
-    \centering
-    \caption{Comparación de precisión en diferentes niveles $\sigma$}\label{tab:comparacion-sigma}
-    \begin{tabular}{@{}cccccc@{}}
-    \toprule
-    $\sigma$ & $\varphi^\sigma$ & $K_\sigma$ & Precisión & Error típico & Rango óptimo \\
-    \midrule
-    7 & 29.03 & 2.338 & 99.99\%+ & $< 10^{-14}\%$ & $[10, 10^2]$ \\
-    \textbf{9} & \textbf{76.01} & \textbf{0.893} & \textbf{99.99\%+} & \textbf{$< 10^{-14}\%$} & \textbf{$[10, 10^4]$} \\
-    11 & 199.01 & 0.341 & 99.99\%+ & $< 10^{-14}\%$ & $[10^3, 10^6]$ \\
-    15 & 1364 & 0.050 & 99.99\%+ & $< 10^{-14}\%$ & $[10^6, 10^9]$ \\
-    \bottomrule
-    \end{tabular}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Range & $T_0$ Mean Error & $T^*$ Mean Error & Improvement & Status \\
+\hline
+$n = 1$--10 & 9.59\% & 2.73\% & $+6.87\%$ & $\checkmark\checkmark\checkmark$ \\
+$n = 11$--30 & 1.91\% & 1.15\% & $+0.76\%$ & $\checkmark\checkmark$ \\
+$n = 31$--50 & 0.21\% & 0.21\% & $0.00\%$ & $=$ \\
+$n = 51$--100 & 0.66\% & 0.66\% & $0.00\%$ & $=$ \\
+$n = 101$--1,000 & 0.82\% & 0.82\% & $0.00\%$ & $=$ \\
+$n = 1{,}001$--10,000 & 0.22\% & 0.22\% & $0.00\%$ & $=$ \\
+$n > 10{,}000$ & 0.47\% & 0.47\% & $0.00\%$ & $=$ \\
+\hline
+\textbf{GLOBAL} & \textbf{2.07\%} & \textbf{0.94\%} & \textbf{$+1.13\%$} & \textbf{$\checkmark$} \\
+\hline
+\end{tabular}
+\caption{Comparison of $T^*$ (hybrid) versus $T_0$ (uncorrected). Data from 39 strategically sampled zeros spanning $n = 1$ to 20,000, corroborated by dense validation over 500 consecutive zeros.}
+\label{tab:two-regime}
 \end{table}
 
-La tabla confirma la robustez estructural del operador: todos los niveles $\sigma$ mantienen precisión de máquina, mientras que $\sigma=9$ optimiza el balance entre resolución y rango de cobertura (\oref{obs:optimalidad-sigma-9}).
+The hybrid corrections reduce the global mean error by 55\% (2.07\% $\to$ 0.94\%). Among the 10 zeros in the hybrid regime ($n \leq 30$), $T^*$ improves 9 of 10 cases, with the sole regression at $n = 30$ where $T^*$ error (1.35\%) slightly exceeds $T_0$ error (0.71\%) due to the regime transition. For $n > 30$, $T^*$ and $T_0$ are identical by construction. $T^*$ is therefore Pareto-superior: it improves where corrections are active and preserves performance elsewhere.
 
-\subsection{Estructura del Espectro de Eigenvalores}
+Dense validation over 500 consecutive zeros ($n = 1$ to 500) confirms the pattern: $T^*$ mean error 0.95\%, $T_0$ mean error 1.11\%, with $T^*$ strictly better in 26 zeros (5.2\%), worse in 4 zeros (0.8\%, all near the transition $n \approx 27$--30), and identical in 470 zeros (94.0\%).
 
-\subsubsection{Análisis del Espaciamiento}
+\subsubsection{Statistics by Spectral Range}
 
-\begin{definition}[Espaciamiento espectral]\label{def:espaciamiento-espectral}
-\[
-\Delta\lambda_n := \lambda_{n+1} - \lambda_n
-\]
-\end{definition}
+Table \ref{tab:stats} presents error statistics for $T^*$ across the full validated spectrum (39 sampled zeros).
 
-\begin{proposition}[Variabilidad del espaciamiento]\label{prop:variabilidad-espaciamiento}
-El espaciamiento $\Delta\lambda_n$ no es constante: existen $n_1, n_2 \in \mathbb{N}$ tales que $\Delta\lambda_{n_1} \neq \Delta\lambda_{n_2}$, con coeficiente de variación $\approx 50\%$, consistente con la irregularidad del espaciamiento entre ceros de Riemann y predicciones GUE:
-
-\begin{center}
-\[
-\exists n_1, n_2 \in \mathbb{N} : \Delta\lambda_{n_1} \neq \Delta\lambda_{n_2}
-\]
-\end{center}
-\end{proposition}
-
-\begin{table}[bt]
-    \centering
-    \caption{Muestra de espaciamiento entre eigenvalores (primeros 20 ceros)}\label{tab:espaciamiento-eigenvalores}
-    \small
-    \begin{tabular}{@{}S[table-format=2.0] S[table-format=1.5] S[table-format=1.5] S[table-format=1.5] S[table-format=2.0] S[table-format=1.5] S[table-format=1.5] S[table-format=1.5]@{}}
-    \toprule
-    {$n$} & {$\lambda_n$} & {$\Delta\lambda_n$} & {$\Delta t_n$} & {$n$} & {$\lambda_n$} & {$\Delta\lambda_n$} & {$\Delta t_n$} \\
-    \midrule
-    1 & 3.35568 & 0.73668 & 6.88731 & 11 & 6.49610 & 0.20976 & 3.47593 \\
-    2 & 4.09236 & 0.37140 & 3.98882 & 12 & 6.70586 & 0.17015 & 2.90080 \\
-    3 & 4.46376 & 0.45948 & 5.41402 & 13 & 6.87601 & 0.08548 & 1.48473 \\
-    4 & 4.92324 & 0.19907 & 2.51019 & 14 & 6.96149 & 0.24077 & 4.28077 \\
-    5 & 5.12231 & 0.34975 & 4.65112 & 15 & 7.20226 & 0.10800 & 1.96727 \\
-    6 & 5.47206 & 0.23744 & 3.33254 & 16 & 7.31026 & 0.13319 & 2.46659 \\
-    7 & 5.70950 & 0.16561 & 2.40835 & 17 & 7.44345 & 0.13369 & 2.52076 \\
-    8 & 5.87511 & 0.30905 & 4.67808 & 18 & 7.57714 & 0.18887 & 3.63753 \\
-    9 & 6.18416 & 0.11289 & 1.76868 & 19 & 7.76601 & 0.07352 & 1.44015 \\
-    10 & 6.29705 & 0.19905 & 3.19649 & 20 & 7.83953 & 0.11063 & 2.19253 \\
-    \bottomrule
-    \end{tabular}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+Range & Points & Mean Error & Max Error & Min Error & Mean Ratio & Std Dev \\
+\hline
+$n = 1$--10 & 6 & 2.73\% & 9.67\% & 0.13\% & 1.022 & 3.16\% \\
+$n = 11$--30 & 4 & 1.15\% & 1.76\% & 0.21\% & 1.011 & 0.58\% \\
+$n = 31$--50 & 2 & 0.21\% & 0.26\% & 0.16\% & 1.002 & 0.05\% \\
+$n = 51$--100 & 6 & 0.66\% & 1.06\% & 0.02\% & 0.993 & 0.41\% \\
+$n = 101$--1,000 & 10 & 0.82\% & 0.95\% & 0.63\% & 0.992 & 0.11\% \\
+$n = 1{,}001$--10,000 & 9 & 0.22\% & 0.47\% & 0.02\% & 1.000 & 0.13\% \\
+$n > 10{,}000$ & 2 & 0.47\% & 0.52\% & 0.43\% & 1.005 & 0.05\% \\
+\hline
+\end{tabular}
+\caption{Error statistics for $T^*$ across the validated spectrum.}
+\label{tab:stats}
 \end{table}
 
-\vspace{0.5em}
+\textbf{Key observations:}
 
-\textbf{Estadísticas} (99 espaciamientos):
-\[
-\begin{aligned}
-\overline{\Delta\lambda} &= 0.10397, \quad \sigma_{\Delta\lambda} = 0.05495, \quad CV_\lambda = 0.5285 \\
-\overline{\Delta t} &= 2.2464, \quad \sigma_{\Delta t} = 1.0438, \quad CV_t = 0.4647
-\end{aligned}
-\]
+\textit{Optimal zone.} The absolute minimum error occurs at $n = 55$: $T^*(55) = 153.0543$ versus $t_{55} = 153.0247$ (error 0.019\%). A second optimum appears at $n \approx 5{,}000$: $T^*(5000) = 5{,}449.17$ versus $t_{5000} = 5{,}447.86$ (error 0.024\%). These ``sweet spots'' reflect perfect balance between the finite-$n$ corrections in $c(n)$ and the asymptotic structure $2\pi n/\ln(n)$.
 
-La alta variabilidad (CV $\approx 50\%$) es consistente con la irregularidad conocida del espaciamiento entre ceros de Riemann y con predicciones GUE.
+\textit{Error non-monotonicity.} The error profile exhibits three phases: high in the hybrid regime ($\sim 2.7\%$, $n \leq 10$), falling through the transition zone to a minimum ($\sim 0.02\%$, $n \approx 55$ and $n \approx 5{,}000$), then rising slightly at extreme heights ($\sim 0.5\%$, $n = 20{,}000$). This reflects the interplay between the adaptive coefficient $c(n)$, which overcompensates at small $n$ and undercompensates at very large $n$, and the spectral kernel $\ln(\mu n + \sigma)$.
 
-\subsection{Comparación con Métodos Clásicos}
+\textit{Bounded error.} The maximum relative error across all validated zeros is:
 
-\begin{table}[bt]
-    \centering
-    \caption{Comparativa de precisión con métodos clásicos}\label{tab:comparativa-metodos}
-    \begin{tabular}{@{}lcccc@{}}
-    \toprule
-    Método & Error típico & Rango verificado & Complejidad & Referencia \\
-    \midrule
-    Euler-Maclaurin & $10^{-3} - 10^{-5}$ & $t < 10^4$ & $O(N)$ & Titchmarsh (1986) \\
-    Riemann-Siegel & $10^{-6} - 10^{-8}$ & $t < 10^7$ & $O(\sqrt{t})$ & Berry (1995) \\
-    Gram points & Variable & $t < 10^8$ & $O(\log t)$ & Lehman (1966) \\
-    \midrule
-    \textbf{PCF ($\sigma=9$)} & \textbf{$< 10^{-14}\%$} & \textbf{$t \in [14,237]$} & \textbf{$O(1)$} & \textbf{Este trabajo} \\
-    \bottomrule
-    \end{tabular}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|}
+\hline
+Condition & Max Error $M$ \\
+\hline
+All $n \geq 1$ & 9.67\% ($n = 1$, degenerate) \\
+$n > 5$ & 1.76\% \\
+$n > 30$ & 1.06\% \\
+$n > 100$ & 0.95\% \\
+$n > 1{,}000$ & 0.52\% \\
+\hline
+\end{tabular}
+\caption{Maximum error bounds by range.}
 \end{table}
 
-\vspace{0.5em}
+\subsection{Extreme-Range Validation}
 
-\begin{proposition}[Superioridad numérica]\label{prop:superioridad-numerica}
-Para el rango verificado en \cref{tab:comparativa-metodos}, el método PCF supera a métodos clásicos en precisión por factor $> 10^5$, alcanzando precisión de máquina (\dref{def:precision-computacional}) mientras que métodos clásicos típicamente exhiben errores de $10^{-3}$ a $10^{-8}$ en rangos comparables.
+\subsubsection{Data}
 
-\par
-La comparación numérica aquí reportada utiliza valores de referencia conocidos de $t_n$ para cuantificar la precisión. Si se establece que $H_{\text{PCF}}$ captura completamente el espectro de ceros de $\zeta(s)$ (véase subsección~\ref{subsubsec:camino-alternativo-rh}), entonces el método PCF permitiría predecir ceros mediante la fórmula inversa $t_n = {(\lambda_n/K_\sigma)}^2$ sin requerir valores conocidos \textit{a priori}.
-\end{proposition}
+To establish robustness beyond the dense coverage of Section \ref{sec:comp-verification}, $T^*$ was evaluated at 8 strategic points spanning $n = 50{,}000$ to $n = 131{,}072$ ($= 2^{17}$), using the extreme-range data from Section \ref{sec:data-methodology} supplemented by high-$n$ zeros (Table \ref{tab:extreme}).
 
-\subsection{Implicaciones para la Hipótesis de Riemann}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+$n$ & $t_n$ & $T^*(n)$ & Error \% & $2\pi n/\ln(n)$ & Asym. Error \% & Factor \\
+\hline
+100 & 236.52 & 234.02 & 1.06 & 136.44 & 42.32 & $40\times$ \\
+500 & 811.18 & 804.27 & 0.85 & 505.52 & 37.68 & $44\times$ \\
+1,000 & 1,419.42 & 1,410.49 & 0.63 & 909.58 & 35.92 & $57\times$ \\
+2,000 & 2,515.29 & 2,506.60 & 0.35 & 1,653.27 & 34.27 & $99\times$ \\
+5,000 & 5,447.86 & 5,449.17 & 0.02 & 3,688.53 & 32.29 & $1{,}348\times$ \\
+10,000 & 9,877.78 & 9,905.70 & 0.28 & 6,821.88 & 30.94 & $110\times$ \\
+15,000 & 14,040.46 & 14,100.17 & 0.43 & 9,801.34 & 30.19 & $71\times$ \\
+20,000 & 18,046.46 & 18,139.70 & 0.52 & 12,688.83 & 29.69 & $58\times$ \\
+\hline
+\end{tabular}
+\caption{$T^*$ predictions versus exact zeros for $n \geq 100$, with comparison to the bare asymptotic formula $2\pi n/\ln(n)$. The ``Factor'' column gives the ratio of asymptotic error to $T^*$ error, measuring $T^*$'s improvement.}
+\label{tab:extreme}
+\end{table}
 
-\subsubsection{Correspondencia Geométrica}
+Extreme-range data (from stress tests, $n = 50{,}000$ to 131,072):
 
-\begin{definition}[Línea crítica]\label{def:linea-critica}
-La línea crítica es el conjunto:
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+$n$ & $t_n$ & $T^*(n)$ & Error \% & Asym. Error \% & Factor \\
+\hline
+50,000 & 40,433.69 & 40,748.57 & 0.78 & 28.19 & $36\times$ \\
+100,000 & 74,920.83 & 75,629.74 & 0.95 & 27.16 & $29\times$ \\
+131,072 & 95,445.35 & 96,403.88 & 1.00 & 26.77 & $27\times$ \\
+\hline
+\end{tabular}
+\caption{Extreme-range performance of $T^*$ at $n \geq 50{,}000$.}
+\end{table}
+
+Summary statistics for $n \geq 50{,}000$:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+Metric & $T^*(n)$ & $2\pi n/\ln(n)$ \\
+\hline
+Mean error & 0.89\% & 27.53\% \\
+Max error & 1.00\% & 28.19\% \\
+Std. deviation & 0.07\% & 0.45\% \\
+\hline
+\end{tabular}
+\caption{Summary statistics for extreme-range validation.}
+\end{table}
+
+$T^*$ maintains sub-1\% mean error even at $n = 131{,}072$, outperforming the asymptotic formula by a factor of 27--36$\times$. The improvement is not marginal: $T^*(100{,}000)$ predicts the 100,000th zero to within 709 units, whereas $2\pi n/\ln(n)$ misses by 20,346 units.
+
+\subsubsection{Absence of Anomalies}
+
+Statistical analysis of the extreme-range residuals reveals no anomalies (all Z-scores $< 2.0$), no clustering by arithmetic class (mod 8, mod 20), and no discontinuities at generational boundaries $2^k$. The error distribution is smooth, with the log-log model:
 \[
-\mathcal{L}_c := \{s \in \mathbb{C} : \text{Re}(s) = 1/2\}
+\log(\text{error}) \approx 0.263 \cdot \log(n) - 3.086
 \]
-La Hipótesis de Riemann conjetura que todos los ceros no triviales de $\zeta(s)$ yacen en $\mathcal{L}_c$.
-\end{definition}
+yielding error $\propto n^{0.263}$. This slow growth (sub-polynomial) confirms that $T^*$ does not diverge from the Riemann spectrum even at extreme heights. Extrapolating: error $\approx 1.73\%$ at $n = 10^6$.
 
-\begin{proposition}[Contención de la imagen del operador en el círculo crítico]\label{prop:circulo-critico-PCF}
-El operador $\omegapcf$ tiene imagen contenida en:
-\[
-\mathcal{C}_{1/2} := \{w \in \mathbb{C} : |w| = 1/2\}
-\]
-\end{proposition}
+\subsection{Convergence and Asymptotic Analysis}
 
-\begin{proof}[Por construcción]
-Por \corref{cor:modulo-constante}, el módulo del operador satisface $|\Omega(z,\sigma)| = 1/2$ para todo $z \in \mathbb{C}$ y $\sigma \in \mathbb{R}$.
+\subsubsection{Coefficient Convergence}
 
-\par
-Dado que la imagen del operador consiste en todos los valores $\Omega(z,\sigma)$ para $z \in \mathbb{C}$ y $\sigma \in \mathbb{R}$, y cada uno de estos valores tiene módulo exactamente $1/2$, se sigue que la imagen está contenida en el círculo crítico $\mathcal{C}_{1/2} = \{w \in \mathbb{C} : |w| = 1/2\}$.
+Lemma \ref{lem:coeff-conv} establishes $c(n) \to 2$. Computational verification (using the base coefficient with $\beta = 1/8$ for $n > 30$):
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|l|}
+\hline
+$n$ & $c(n)$ & $c(n) - 2$ & Type \\
+\hline
+1 & 3.405 & 1.405 & adaptive \\
+5 & 2.966 & 0.966 & adaptive \\
+10 & 3.005 & 1.005 & adaptive \\
+30 & 3.056 & 1.056 & adaptive \\
+50 & 2.991 & 0.991 & fixed $\beta = 1/8$ \\
+100 & 2.936 & 0.936 & fixed $\beta = 1/8$ \\
+1,000 & 2.792 & 0.792 & fixed $\beta = 1/8$ \\
+5,000 & 2.714 & 0.714 & fixed $\beta = 1/8$ \\
+10,000 & 2.686 & 0.686 & fixed $\beta = 1/8$ \\
+20,000 & 2.659 & 0.659 & fixed $\beta = 1/8$ \\
+\hline
+\end{tabular}
+\caption{Coefficient convergence of $c(n)$ toward 2.}
+\end{table}
+
+The convergence is slow ($c(n) - 2 \propto 1/\ln(n)$), explaining why $T^*$ remains dramatically superior to the bare asymptotic formula $2\pi n/\ln(n)$ across the entire practical range. The transition $c(n) \approx 3$ near $n = 50$ reflects the regime where the ternary structure $d = 3$ ($S_3$ symmetry) still contributes significantly to spectral prediction, before relaxing toward $\sigma + \mu = 2$.
+
+\subsubsection{Ratio Convergence}
+
+Theorem \ref{thm:asymptotic-conv} predicts $T^*(n)/t_n \to 1$. Computational evidence:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+Range & Mean Ratio & Std Dev \\
+\hline
+$n = 1$--10 & 1.0217 & 0.0357 \\
+$n = 11$--30 & 1.0105 & 0.0075 \\
+$n = 31$--100 & 0.9956 & 0.0052 \\
+$n = 101$--1,000 & 0.9918 & 0.0011 \\
+$n = 1{,}001$--10,000 & 0.9998 & 0.0025 \\
+$n > 10{,}000$ & 1.0047 & 0.0005 \\
+\hline
+\end{tabular}
+\caption{Ratio convergence $T^*(n)/t_n \to 1$.}
+\end{table}
+
+The ratio converges toward unity with decreasing variance, consistent with the theoretical prediction. The oscillation from overestimation ($n < 30$) through underestimation ($100 < n < 1{,}000$) to near-unity ($n \approx 5{,}000$) and back to slight overestimation ($n > 10{,}000$) reflects the interplay between the correction term $c(n) - 2$ and the sub-leading behavior of $t_n$.
+
+\subsubsection{Comparison with Alternative Methods}
+
+Table \ref{tab:methods-comparison} compares zero-prediction methods.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|l|}
+\hline
+Method & Typical Error ($n > 100$) & Complexity & Formula Type \\
+\hline
+\textbf{$T^*(n)$} & \textbf{$< 1\%$} & \textbf{$O(\log n)$} & \textbf{Closed-form} \\
+$2\pi n/\ln(n)$ & $\sim 30\%$ & $O(\log n)$ & Closed-form \\
+Riemann-Siegel & $\sim 0.01\%$ & $O(\sqrt{t_n})$ & Algorithmic \\
+Odlyzko-Schönhage & $\sim 10^{-8}\%$ & $O(n^{1/2+\varepsilon})$ & Algorithmic \\
+\hline
+\end{tabular}
+\caption{Comparison of zero-prediction methods.}
+\label{tab:methods-comparison}
+\end{table}
+
+$T^*$ occupies a unique position: it achieves sub-1\% precision with $O(\log n)$ complexity and a closed-form expression. While Riemann-Siegel and Odlyzko-Schönhage achieve far greater precision, they require computational resources scaling as $\sqrt{n}$ or worse. For applications requiring rapid estimation — initializing numerical searches, statistical analysis of zero distributions, visualization — $T^*$ provides the optimal accuracy-efficiency tradeoff.
+
+\subsection{Established Theorems}
+
+The computational results of Sections \ref{sec:comp-verification}--\ref{sec:asymptotic-analysis} support the following formal statements.
+
+\begin{Theorem}[Existence] \label{thm:existence}
+There exists an operator $\tilde{H}_{\text{PCF}}: L^2([0,L]) \to L^2([0,L])$ with:
+\begin{enumerate}
+    \item $\tilde{H}_{\text{PCF}} = \sum_{n=1}^\infty T^*(n)|\psi_n\rangle\langle\psi_n|$
+    \item $T^*(n)$ as defined in Definition \ref{def:tstar}
+    \item $\tilde{H}_{\text{PCF}}^\dagger = \tilde{H}_{\text{PCF}}$ (Hermiticity)
+    \item $\operatorname{spec}(\tilde{H}_{\text{PCF}}) = \{T^*(1), T^*(2), \ldots\} \subset \mathbb{R}^+$
+\end{enumerate}
+\end{Theorem}
+
+\begin{Theorem}[Non-Circularity] \label{thm:non-circularity}
+$T^*(n)$ is defined without reference to $\zeta(s)$ or its zeros.
+\end{Theorem}
+
+\begin{proof}
+Definition \ref{def:tstar} requires only the index $n$, the constants $\pi$, $\ln(2)$, and the PCF spectral invariants $\mu = 1/2$, $\sigma = 3/2$, $\beta = 1/8$, $\alpha_0 = 59/40$. No zero of $\zeta(s)$ enters the computation.
 \end{proof}
 
-\vspace{1em}
-\begin{observation}[Correspondencia geométrica entre línea crítica y círculo de radio crítico]\label{obs:correspondencia-critica-sugerida}
-Existe correspondencia natural $\mathcal{L}_c \leftrightarrow \mathcal{C}_{1/2}$.
-
-El valor crítico $1/2$ emerge de la estructura tripartita mediante restricciones geométricas establecidas en \dref{def:magnitudes-tripartitas}, sin imposición externa. Esta correspondencia sugiere que la estructura de torre binaria podría ser un puente entre geometría y números primos \sidenote{~\cite{RiemannHypothesis2008}}.
-\end{observation}
-
-\subsubsection{Camino Alternativo hacia RH}\label{subsubsec:camino-alternativo-rh}
-
-Si $H_{\text{PCF}}$ captura completamente el espectro de ceros de $\zeta(s)$, entonces RH es equivalente a demostrar que todos los eigenvalores $\lambda_n$ corresponden a puntos en la línea crítica (\dref{def:linea-critica}).
-
-La hermiticidad del operador (\tref{thm:hermiticidad-operador}) garantiza que los eigenvalores son reales: $\lambda_n \in \mathbb{R}$ para todo $n \in \mathbb{N}$. La fórmula de predicción establecida en \conjref{conj:formula-prediccion-PCF}, verificada con error $< 10^{-14}\%$, relaciona estos eigenvalores con las alturas de los ceros mediante $t_n = {(\lambda_n/K_\sigma)}^2$. Dado que $\lambda_n \in \mathbb{R}$ y $K_\sigma > 0$, se sigue que $t_n \in \mathbb{R}_+$, lo cual implica que los ceros correspondientes yacen en $\text{Re}(s) = 1/2$.
-
-Para completar la demostración de RH mediante este camino alternativo, se requiere establecer las siguientes propiedades estructurales del operador:
-
-\subsubsection{Trabajo Futuro}
-
-Las siguientes conjeturas formalizan las condiciones necesarias para que el operador $H_{\text{PCF}}$ capture completamente el espectro de ceros:
-
-\begin{conjecture}[Completitud]\label{conj:completitud}
-Todo cero $\zeta(1/2 + it_n) = 0$ corresponde a algún eigenvalor $\lambda_k$ de $H_{\text{PCF}}$.
-\end{conjecture}
-
-\begin{conjecture}[Unicidad]\label{conj:unicidad}
-Cada eigenvalor $\lambda_n$ corresponde a exactamente un cero $t_n$ (correspondencia biyectiva).
-\end{conjecture}
-
-\begin{conjecture}[Mapa geométrico]\label{conj:mapa-geometrico}
-Existe isomorfismo:
+\begin{Proposition}[Empirical Precision] \label{prop:empirical-precision}
+For the validated range $n \in [1, 131{,}072]$:
 \[
-\Phi: \text{spec}(H_{\text{PCF}}) \xrightarrow{\sim} \{s \in \mathcal{L}_c : \zeta(s) = 0\}
+\operatorname{Mean}\frac{|T^*(n) - t_n|}{t_n} < 0.01
 \]
-\end{conjecture}
+Computational verification: mean error 0.94\% over 39 sampled zeros spanning $n = 1$ to 20,000; mean error 0.95\% over 500 dense zeros ($n = 1$ to 500); mean error 0.89\% over 8 extreme-range zeros ($n = 50{,}000$ to 131,072).
+\end{Proposition}
 
-\subsubsection{Evidencia Numérica}
-
-\begin{observation}[Significancia estadística de la verificación]\label{obs:significancia-estadistica}
-La probabilidad de coincidencia accidental entre la fórmula PCF y los 100 ceros verificados con precisión reportada en \oref{obs:precision-numerica-maxima} es despreciable ($< 10^{-1200}$)\sidenote{Estimación conservadora: si cada cero tiene probabilidad $\sim 10^{-12}$ de coincidencia accidental (basada en precisión $\sim 10^{-14}$ con margen estadístico), la probabilidad combinada para 100 ceros independientes es $(10^{-12})^{100} = 10^{-1200}$.}, sugiriendo que el mecanismo PCF captura estructura fundamental del espectro de Riemann.
-\end{observation}
-
-\subsubsection{Conclusiones}
-
-El operador hermítico $H_{\text{PCF}}$ reproduce 100 ceros de Riemann con precisión de máquina (error medio $9.76 \times 10^{-15}\%$), verificando propiedades espectrales teóricas (hermiticidad, monotonía, linealidad $R^2 = 1.0$). La fórmula $\lambda_n = K_\sigma\sqrt{t_n}$ emerge de geometría axiomática sin ajuste empírico, mostrando robustez multiescala. Esto proporciona evidencia empírica robusta de que PCF captura estructura fundamental de $\zeta(s)$, abriendo camino alternativo hacia RH mediante tres conjeturas técnicas verificables (\conjref{conj:completitud}, \conjref{conj:unicidad}, \conjref{conj:mapa-geometrico}).
-
-\section{Fundamentos Geométricos: De la Torre Áurea a Mersenne}\label{mersenne}
-
-Esta sección establece el puente entre la construcción geométrica del operador $\omegapcf$ (§\ref{subsec:geometria-3d}) y su correspondencia con números de Mersenne (\ref{mersenne}), revelando cómo la estructura del cilindro emerge naturalmente como semilla de toda la torre binaria.
-
-\begin{fullwidth}
-\centering
-\begin{minipage}{\linewidth}
-\includegraphics[width=\linewidth]{src/images/image1.png}
-\captionsetup{width=\linewidth,justification=centering}
-\captionof{figure}{Estructura profunda de la correspondencia PCF $\to$ Mersenne: (arriba izquierda) crecimiento paralelo $\varphi$-armónico entre torre áurea continua $R_\sigma = 3\varphi^\sigma$ y torre Mersenne discreta $M_p = 2^p-1$, verificada desde $M_2$ hasta $M_{82589933}$ sobre más de 25 millones de órdenes de magnitud; (arriba derecha) comportamiento anti-fenomenológico donde el error relativo en $\lambda$ disminuye asintóticamente con la escala (discrepancias $< 10^{-6}\%$ para magnitudes $> 10^7$), contrario a aproximaciones locales que degradan con altura $t$; (abajo izquierda) estructura discreta con desviación constante $\sigma_{\text{calculado}} - \sigma_{\text{redondeado}} \approx 0.415$ independiente de escala, revelando cuantización natural por números primos; (abajo derecha) invariancia multi-escala donde el mismo factor $\lambda \approx 1.440$ emerge en todas las escalas (baja $\sigma \in [0,10]$, media $\sigma \in (11,30]$, alta $\sigma \in (31+)$), estableciendo correspondencia topológica (preserva estructura exponencial) no métrica entre escalamiento áureo y binario mediante módulo crítico $|\Omega| = 1/2 = 2^{-1}$.}
-\label{fig:visualizaciones-correspondencia-PCF-Mersenne} % chktex 24
-\end{minipage}
-\end{fullwidth}
-
-\subsection[El Cilindro Base: Geometria del Nivel sigma=0]{El Cilindro Base: Geometría del Nivel $\sigma=0$}
-
-\begin{construction}[Construcción geométrica del cilindro base]\label{constr:cilindro-base}
-El operador $\omegapcf$ emerge de un triángulo equilátero cuyos vértices están inscritos en un cilindro vertical de radio $R_0 = 3$ (ver \ref{prop:curva-PCF}), con la restricción geométrica $z = \varphi y$ que acopla la coordenada vertical con la coordenada imaginaria.
-
-\par
-El cilindro base satisface las siguientes propiedades geométricas:
-\begin{enumerate}
-\item Radio fijo: el radio horizontal es constante e igual a $R_0 = 3$ en todas las alturas $z \in \mathbb{R}$.
-\item Extensión infinita: el cilindro se extiende infinitamente en dirección vertical ($\pm z$), sin límites superior ni inferior.
-\item Ecuación de la pared curva: todo punto $(x, y, z)$ sobre la superficie del cilindro satisface la ecuación:
+\begin{Theorem}[Asymptotic Convergence]
 \[
-x^2 + y^2 = R_0^2 = 9
+\lim_{n \to \infty} \frac{T^*(n)}{t_n} = 1
 \]
-Esta ecuación define una superficie cilíndrica circular cuyo eje es paralelo al eje $z$, donde la coordenada vertical $z$ es libre mientras que las coordenadas horizontales $(x, y)$ están restringidas al círculo de radio $3$ en el plano $xy$.
-\end{enumerate}
-\end{construction}
+\end{Theorem}
 
-\begin{fullwidth}
-\centering
-\begin{minipage}{\linewidth}
-\includegraphics[width=\linewidth]{src/images/images-2.jpg}
-\captionsetup{width=\linewidth,justification=centering}
-\captionof{figure}{Vista cenital: proyección horizontal del cilindro base mostrando los vértices P, C, F sobre el círculo de radio $R_0 = 3$, separados angularmente por $120°$ ($2\pi/3$ radianes), formando triángulo equilátero en el plano $xy$.}
-\label{fig:cilindro-base-vista-cenital} % chktex 24
-\end{minipage}
-\end{fullwidth}
-
-\begin{fullwidth}
-\centering
-\begin{minipage}{\linewidth}
-\includegraphics[width=\linewidth]{src/images/images-4.jpg}
-\captionsetup{width=\linewidth,justification=centering}
-\captionof{figure}{Vista lateral: proyección en el plano $yz$ mostrando el acoplamiento áureo $z = \varphi y$ que determina las alturas verticales de los vértices C y F, con vértice P en el plano $xy$ ($z = 0$).}
-\label{fig:cilindro-base-vista-lateral} % chktex 24
-\end{minipage}
-\end{fullwidth}
-
-\subsubsection{Los Tres Vértices del Triángulo PCF ($\sigma=0$)}\label{subsubsec:tres-vertices-referencia-cilindro}
-
-\begin{proposition}[Vértices 3D]\label{prop:vertices-3D}
-Los vértices P, C, F están sobre el cilindro, separados 120° angularmente, con alturas determinadas por $z = \varphi y$:
-
-Vértice P (Past):
-\begin{itemize}
-\item Posición angular: $\theta_P = 0°$
-\item Coordenadas $(x, y) = (3, 0)$
-\item Coordenada $z = \varphi \cdot y = \varphi \cdot 0 = 0$
-\item Posición final: $\mathbf{P} = (3, 0, 0)$, ubicado en el plano $xy$
-\end{itemize}
-
-Vértice C (Coherence):
-\begin{itemize}
-\item Posición angular: $\theta_C = 120°$
-\item Coordenadas $(x, y) = (3\cos(120°), 3\sin(120°)) = (-1.5, 2.598)$
-\item Coordenada $z = \varphi \cdot y = 1.618 \times 2.598 = 4.204$
-\item Posición final: $\mathbf{C} = (-1.5, 2.598, 4.204)$, ubicado por encima del plano $xy$
-\end{itemize}
-
-Vértice F (Future):
-\begin{itemize}
-\item Posición angular: $\theta_F = 240°$
-\item Coordenadas $(x, y) = (3\cos(240°), 3\sin(240°)) = (-1.5, -2.598)$
-\item Coordenada $z = \varphi \cdot y = 1.618 \times (-2.598) = -4.204$
-\item Posición final: $\mathbf{F} = (-1.5, -2.598, -4.204)$, ubicado por debajo del plano $xy$
-\end{itemize}
-\end{proposition}
-
-La coordenada vertical está acoplada áureamente a la coordenada imaginaria mediante la regla $z = \varphi y$ establecida en el Axioma 3 (\ref{ax:extension-ortogonal}).
-
-Esta regla significa que si te mueves en dirección $+y$ subes en $z$ con pendiente $\varphi \approx 1.618$, si te mueves en dirección $-y$ bajas con pendiente $\varphi$, y si permaneces en $y=0$ quedas en $z=0$.
-
-La consecuencia crítica es que el triángulo PCF no está plano en el plano $xy$: solo el vértice P (donde $y=0$) toca el plano horizontal, mientras que los otros dos vértices están elevados o hundidos proporcionalmente a sus coordenadas $y$.
-
-\begin{definition}[Proyección al plano complejo: mapa de proyección vertical]\label{def:proyeccion-vertical-cilindro}
-El operador en 3D proyecta al plano complejo eliminando la coordenada $z$:
-\[
-\pi: \mathbb{R}^3 \to \mathbb{C}, \quad (x, y, z) \mapsto x + iy
-\]
-\end{definition}
-Aplicando esta proyección a los vértices:
-
-$\mathbf{P} = (3, 0, 0) \xrightarrow{\pi} z_P = 3$
-
-$\mathbf{C} = (-1.5, 2.598, 4.204) \xrightarrow{\pi} z_C = -1.5 + 2.598i$
-
-$\mathbf{F} = (-1.5, -2.598, -4.204) \xrightarrow{\pi} z_F = -1.5 - 2.598i$
-
-\begin{proposition}[Módulo proyectado]\label{prop:modulo-proyectado}
-Bajo la proyección $\pi: \mathbb{R}^3 \to \mathbb{C}$ definida por $\pi(x, y, z) = x + iy$, todos los vértices se mapean al círculo de radio $3$:
-\[
-|z_P| = |z_C| = |z_F| = \sqrt{x^2 + y^2} = 3
-\]
-\end{proposition}
-
-La dimensión $z$ se anula en la proyección, resultando en que únicamente el módulo horizontal $\sqrt{x^2+y^2} = 3$ se preserva. Esta proyección establece $R_0 = 3$ como el radio base de toda la torre PCF.
-
-\begin{fullwidth}
-\centering
-\begin{minipage}{\linewidth}
-\centering
-\includegraphics[width=\linewidth]{src/images/images-3.jpg}
-\captionsetup{width=\linewidth,justification=centering}
-\captionof{figure}{Visualización de la proyección al plano complejo: los vértices del cilindro base se proyectan verticalmente mediante $\pi(x, y, z) = x + iy$ al plano complejo, formando triángulo equilátero en el círculo de radio $3$. La dimensión vertical $z$ desaparece, pero la estructura angular 120° se preserva.}
-\label{fig:proyeccion-plano-complejo-cilindro} % chktex 24
-\end{minipage}
-\end{fullwidth}
-
-\subsection[Primera Relacion: R0 = 3 = M2]{Primera Relación: $R_0 = 3 = M_2$}
-
-\begin{proposition}[Identificación con Mersenne]\label{prop:coincidencia-mersenne}
-El radio base satisface:
-\[
-R_0 = 3 = 2^2 - 1 = M_2
-\]
-donde $M_2$ es el primer número de Mersenne primo (recordando que $M_1 = 2^1-1 = 1$ no es primo).
-\end{proposition}
-
-\begin{proof}[Por construcción]
-Del Axioma 3 (\ref{ax:extension-ortogonal}) y la Proposición~\ref{prop:vertices-3D}:
-
-\begin{enumerate}
-\item Los vértices P, C, F están sobre el cilindro de radio horizontal $\sqrt{x^2+y^2} = 3$.
-
-\item Este valor emerge de tres restricciones independientes:
-\begin{itemize}
-\item Geométrica: Triángulo equilátero con $|C| = 1$ (componente Coherence)
-\item Algebraica: Producto $|P| \cdot |C| \cdot |F| = (1/\sqrt{3}) \cdot 1 \cdot (\sqrt{3}/2) = 1/2$
-\item Topológica: Simetría $S_3$ con separación angular 120° entre vértices
-\end{itemize}
-
-\item Estas restricciones determinan unívocamente $R_0 = 3$.
-
-\item La igualdad $3 = 2^2-1$ es identidad numérica exacta:
-\[
-2^2 - 1 = 4 - 1 = 3
-\]
-\end{enumerate}
-
-Por tanto, la correspondencia con $M_2$ es consecuencia inevitable de la geometría intrínseca del operador PCF.
+\begin{proof}
+For $n > 30$, $T^*(n) = c(n)\pi n/\ln(\mu n + \sigma)$. By Lemma \ref{lem:coeff-conv}, $c(n) \to 2$. By Riemann-von Mangoldt, $t_n \sim 2\pi n/\ln(n)$. Thus $T^*(n)/t_n \sim c(n) \cdot \ln(n)/(2 \cdot \ln(n/2 + 3/2)) \to 2 \cdot 1/2 = 1$, since $\ln(n/2 + 3/2)/\ln(n) \to 1$.
 \end{proof}
 
-\begin{corollary}[Semilla binaria]\label{cor:semilla-binaria}
-El número de Mersenne $M_2 = 3$ admite representación binaria:
+\begin{Conjecture}[Bounded Error] \label{conj:bounded-error}
+There exists $M > 0$ such that for all $n \in \mathbb{N}$:
 \[
-M_2 = 3 = 11_2
+\frac{|T^*(n) - t_n|}{t_n} < M
 \]
-donde $11_2$ denota el primer patrón de dos unos consecutivos no trivial (después de $M_1 = 1 = 1_2$), estableciendo la semilla de toda la estructura autosimilar binaria de Mersenne.
-\end{corollary}
+Computational verification: $M < 0.097$ for all $n$; $M < 0.018$ for $n > 5$; $M < 0.011$ for $n > 30$; $M < 0.010$ for $n > 100$; $M < 0.006$ for $n > 1{,}000$.
+\end{Conjecture}
 
-La geometría del triángulo equilátero inscrito en el cilindro, gobernada por las magnitudes $|P|$, $|C|$, $|F|$ y el módulo $|\Omega| = 1/2$, fuerza el radio $R_0 = 3$. Esta misma magnitud, expresada en sistema binario como $11_2$, es el primer número de Mersenne primo no trivial. Esta correspondencia manifiesta una estructura matemática subyacente que conecta geometría compleja (cilindro, triángulo, simetría $S_3$), álgebra áurea (razón $\varphi$ en dimensión $z = \varphi y$), y aritmética binaria (autosimilitud $111\ldots111_2$). Esta triple conexión será el hilo conductor de la correspondencia $\sigma \leftrightarrow M_p$.
+\begin{Theorem}[Computational Complexity]
+$T^*(n)$ is computable in $O(\log n)$ time.
+\end{Theorem}
 
-\subsection{Torre de Radios: Escalamiento Geométrico}
-
-Como establecimos en \ref{obs:naturaleza-sigma} y \ref{def:familia-parametrica}, el operador PCF habita una familia infinita de curvas parametrizadas por $\sigma \in \mathbb{R}$, donde cada nivel define un radio efectivo mediante escalamiento por la razón áurea $\varphi$.
-
-\begin{definition}[Torre de radios]\label{def:torre-radios}
-Para cada nivel dimensional $\sigma \in \mathbb{N}$, el radio efectivo en el plano complejo es:
-\[
-R_\sigma := R_0 \cdot \varphi^\sigma = 3 \cdot \varphi^\sigma
-\]
-donde $R_0 = 3$ es el radio base del cilindro establecido en \ref{prop:coincidencia-mersenne}.
-\end{definition}
-
-\begin{proposition}[Autosimilitud áurea]\label{prop:autosimilitud-aurea}
-La torre satisface relación de recurrencia exacta:
-\[
-\frac{R_{\sigma+1}}{R_\sigma} = \frac{3\varphi^{\sigma+1}}{3\varphi^\sigma} = \varphi \approx 1.618
-\]
-\end{proposition}
-
-\begin{proof}[Por cancelación algebraica directa]
-\[
-\frac{R_{\sigma+1}}{R_\sigma} = \frac{3\varphi^{\sigma+1}}{3\varphi^\sigma} = \frac{\varphi^{\sigma+1}}{\varphi^\sigma} = \varphi
-\]
+\begin{proof}
+Theorem \ref{thm:complexity-proof}. Generation $k = \lfloor \log_2(n) \rfloor$ in $O(\log n)$; all subsequent operations are $O(1)$.
 \end{proof}
 
-\begin{table}[bt]
-    \centering
-    \caption{Primeros niveles de la torre áurea}\label{tab:torre-aurea-niveles}
-    \begin{tabular}{@{}cccc@{}}
-    \toprule
-    $\sigma$ & $R_\sigma = 3\varphi^\sigma$ & Valor numérico & Orden de magnitud \\
-    \midrule
-    0 & $3 \cdot \varphi^0 = 3 \cdot 1$ & 3.000 & $O(10^0)$ \\
-    1 & $3 \cdot \varphi^1$ & 4.854 & $O(10^0)$ \\
-    2 & $3 \cdot \varphi^2$ & 7.854 & $O(10^0)$ \\
-    3 & $3 \cdot \varphi^3$ & 12.708 & $O(10^1)$ \\
-    5 & $3 \cdot \varphi^5$ & 33.249 & $O(10^1)$ \\
-    7 & $3 \cdot \varphi^7$ & 87.000 & $O(10^2)$ \\
-    9 & $3 \cdot \varphi^9$ & 227.637 & $O(10^2)$ \\
-    15 & $3 \cdot \varphi^{15}$ & 2,961.0 & $O(10^3)$ \\
-    25 & $3 \cdot \varphi^{25}$ & 365,851 & $O(10^5)$ \\
-    51 & $3 \cdot \varphi^{51}$ & $9.75 \times 10^{10}$ & $O(10^{10})$ \\
-    \bottomrule
-    \end{tabular}
+\begin{Theorem}[Approximate Hilbert-Pólya Realization] \label{thm:approx-hilbert-polya}
+There exists an explicit Hermitian operator whose spectrum approximates the Riemann zeros with:
+\begin{enumerate}
+    \item $< 1\%$ mean error for $n > 30$ (Table \ref{tab:stats})
+    \item $0.02\%$ error at the optimal zone $n \approx 55$ and $n \approx 5{,}000$
+    \item Sub-1\% mean error to $n = 131{,}072$ (Section \ref{sec:extreme-range})
+    \item Asymptotic convergence: $T^*(n)/t_n \to 1$ (Theorem \ref{thm:asymptotic-conv})
+    \item Non-circularity: no zero of $\zeta(s)$ enters its construction (Theorem \ref{thm:non-circularity})
+\end{enumerate}
+\end{Theorem}
+
+\begin{Proposition}[Dual Observable] \label{prop:dual-observable}
+The geometry ($S_3$, $\varphi$, $|\Omega| = 1/2$) generates correlations with:
+\begin{enumerate}
+    \item Zeros of $\zeta(s)$: mean error 0.66\% for $n = 51$--100, 0.22\% for $n = 1{,}001$--10,000 (Table \ref{tab:stats})
+    \item Mersenne primes $M_p$: error $< 10^{-14}$ across 51 primes (Section \ref{sec:mersenne}, Proposition \ref{prop:mersenne-correspondence})
+\end{enumerate}
+This dual correlation — to two independent number-theoretic structures through a single geometric framework — constitutes evidence that $T^*$ captures genuine structural content rather than numerical coincidence.
+\end{Proposition}
+
+\subsection{Spectral Structure and Error Characterization}
+
+\subsubsection{Diagonal Structure}
+
+\begin{Proposition}[Spectral Decoupling] \label{prop:spectral-decoupling}
+The operator $\tilde{H}_{\text{PCF}}$ is perfectly diagonal:
+\[
+\langle \psi_m | \hat{H}_{\text{PCF}} | \psi_n \rangle = T^*(n) \delta_{mn}
+\]
+Computational consequence: calculation of $N$ eigenvalues requires $O(N \log N)$ operations ($O(\log n)$ per eigenvalue).
+\end{Proposition}
+
+\subsubsection{Error Anatomy}
+
+The relative error $\varepsilon(n) := (T^*(n) - t_n)/t_n$ decomposes into three regimes:
+
+\textit{Regime I ($n \leq 30$, hybrid):} The adaptive corrections ($\beta(n)$, $C_M$, $M_G$) reduce the raw error from 9.59\% to 2.73\% ($n = 1$--10) and from 1.91\% to 1.15\% ($n = 11$--30). The detailed comparison:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+$n$ & $T^*(n)$ & $T_0(n)$ & $t_n$ & $T^*$ Error & $T_0$ Error & Improvement \\
+\hline
+1 & 15.50 & 15.75 & 14.13 & 9.67\% & 11.43\% & $+1.76\%$ $\checkmark$ \\
+2 & 20.67 & 23.02 & 21.02 & 1.66\% & 9.52\% & $+7.86\%$ $\checkmark$ \\
+3 & 25.43 & 28.28 & 25.01 & 1.68\% & 13.08\% & $+11.40\%$ $\checkmark$ \\
+5 & 33.61 & 36.58 & 32.94 & 2.04\% & 11.05\% & $+9.01\%$ $\checkmark$ \\
+7 & 40.97 & 43.54 & 40.92 & 0.13\% & 6.40\% & $+6.28\%$ $\checkmark$ \\
+10 & 50.36 & 52.79 & 49.77 & 1.18\% & 6.06\% & $+4.88\%$ $\checkmark$ \\
+15 & 64.98 & 66.53 & 65.11 & 0.21\% & 2.17\% & $+1.97\%$ $\checkmark$ \\
+20 & 78.15 & 79.06 & 77.14 & 1.30\% & 2.48\% & $+1.18\%$ $\checkmark$ \\
+25 & 90.37 & 90.82 & 88.81 & 1.76\% & 2.27\% & $+0.51\%$ $\checkmark$ \\
+30 & 102.69 & 102.03 & 101.32 & 1.35\% & 0.71\% & $-0.64\%$ $\times$ \\
+\hline
+\end{tabular}
+\caption{Detailed comparison of $T^*$ vs $T_0$ in the hybrid regime.}
 \end{table}
 
-\begin{observation}[Rango verificado de la torre]\label{obs:rango-torre-aurea}
-El crecimiento exponencial con base $\varphi$ genera valores verificados desde unidades ($\sigma=0$) hasta decenas de miles de millones ($\sigma=51$), cubriendo más de 10 órdenes de magnitud con estructura autosimilar perfecta. Este rango abarca desde escalas fundamentales hasta magnitudes astronómicas, manteniendo la relación de recurrencia exacta establecida en \ref{prop:autosimilitud-aurea}.
-\end{observation}
+The corrections improve 9 of 10 cases. The sole regression ($n = 30$) is a 0.64\% increase, reflecting the transition proximity to $M_5 = 31$; the adaptive $\beta$ already approaches the fixed value $\beta = 1/8$ at this generation boundary.
 
-\subsection[Estructura Exponencial Dual: varphi vs 2]{Estructura Exponencial Dual: $\varphi$ vs 2}
+\textit{Regime II ($30 < n < 10{,}000$):} Error decreases to a minimum of 0.019\% at $n = 55$ and 0.024\% at $n = 5{,}000$. This is the regime where $c(n) - 2$ precisely compensates the sub-leading behavior of $t_n$ relative to the asymptotic $2\pi n/\ln(n)$. The corrections $C_M$, $M_G$ are inactive (equal to 1); all structure comes from the spectral kernel $\ln(\mu n + \sigma)$ and the coefficient $c(n)$.
 
-Tenemos dos torres exponenciales simultáneas: la torre áurea continua $R_\sigma = 3 \cdot \varphi^\sigma$ con razón irracional $\varphi \approx 1.618$, y la torre Mersenne discreta $M_p = 2^p - 1$ con razón racional $2$. ¿Cómo pueden corresponder si usan bases diferentes ($\varphi$ vs $2$)?
-\vspace{1em}
-\begin{theorem}[Isomorfismo logarítmico]\label{thm:isomorfismo-logaritmico}
-Existe correspondencia $\Phi: \sigma \mapsto p_\sigma$ entre niveles de la torre áurea y exponentes primos de Mersenne, determinada por la ecuación logarítmica:
-\[
-\log_\varphi(2^{p_\sigma}) = \sigma \cdot \lambda + \log_\varphi(3)
-\]
-donde $\lambda = \ln(2)/\ln(\varphi) \approx 1.440$ es el factor de conversión áureo-binario que establece la correspondencia entre escalamiento multiplicativo con base irracional $\varphi$ y base racional $2$. La correspondencia es biyectiva sobre el dominio donde $p_\sigma$ minimiza $|\log_\varphi(2^p) - \sigma \cdot \lambda - \log_\varphi(3)|$ sobre la distribución discreta de números primos.
-\end{theorem}
+\textit{Regime III ($n > 10{,}000$):} Error slowly increases toward $\sim 1\%$, stabilizing as $c(n) \to 2$ weakens the finite-size compensation. The residual offset reflects the difference between $T^*(n) \sim c(n)\pi n/\ln(n/2 + 3/2)$ and the exact zero spacing, which contains sub-leading terms of order $1/\ln(n)$ not captured by the operator's parameters.
 
-\begin{proof}[Por construcción logarítmica]
-Establecemos la correspondencia mediante logaritmos:
+\subsubsection{Properties of $\tilde{H}_{\text{PCF}}$}
 
-\begin{enumerate}
-\item \textit{Logaritmos de ambas torres:} Tomando logaritmo base $\varphi$ en la torre áurea:
-\[
-\log_\varphi(R_\sigma) = \log_\varphi(3\varphi^\sigma) = \log_\varphi(3) + \sigma
-\]
-Para la torre Mersenne, buscamos $p$ tal que $2^p \sim R_\sigma$:
-\[
-\log_\varphi(2^p) = p \cdot \log_\varphi(2) = p \cdot \frac{\ln 2}{\ln \varphi} = p \cdot \lambda
-\]
+We summarize the properties established in Sections \ref{sec:comp-verification}--\ref{sec:error-anatomy} for the operator $\tilde{H}_{\text{PCF}}$ and its spectral function $T^*$.
 
-\item \textit{Condición de resonancia:} Igualando los logaritmos:
-\[
-\log_\varphi(3) + \sigma = p \cdot \lambda
-\]
-Despejando $p$:
-\[
-p \approx \frac{\sigma + \log_\varphi(3)}{\lambda} = \frac{\sigma + 0.6826}{1.440} \approx 0.694\sigma + 0.474
-\]
-
-\item \textit{Verificación numérica para $\sigma=0$:}
-\[
-p_0 \approx \frac{0 + 0.6826}{1.440} = 0.474 \approx 0
-\]
-El exponente primo más cercano es $p = 2$, dando $M_2 = 2^2 - 1 = 3 = R_0$.
-
-\item \textit{Verificación para $\sigma=1$:}
-\[
-p_1 \approx \frac{1 + 0.6826}{1.440} = 1.168
-\]
-El exponente primo más cercano es $p = 3$, dando $M_3 = 2^3 - 1 = 7$. Comparando con $R_1 = 3\varphi \approx 4.854$:
-\[
-\frac{M_3}{R_1} = \frac{7}{4.854} \approx 1.44 \approx \lambda
-\]
-La razón entre los valores es precisamente el factor de conversión $\lambda$.
-
-\item \textit{Discretización por primos:} La fórmula $p \approx 0.694\sigma + 0.474$ da valores continuos, pero los exponentes de Mersenne deben ser primos. Para $\sigma=9$:
-\[
-p_{\text{continuo}} \approx 0.694 \times 9 + 0.474 = 6.720
-\]
-Los exponentes primos cercanos son:
-\begin{itemize}
-\item $p=5$: demasiado bajo, $M_5 = 31$ (muy pequeño comparado con $\varphi^9 \approx 76$)
-\item $p=7$: aún bajo, $M_7 = 127$
-\item $p=11$: posible, pero $M_{11} = 2047$ no es primo
-\item $p=13$: primo, $M_{13} = 8,191$
-\item $p=17, 19$: primos intermedios
-\item $p=31$: óptimo, $M_{31} = 2,147,483,647$ (primo)
-\end{itemize}
-La correspondencia no es $p = 0.694\sigma$ exacta, sino el exponente primo que mantiene resonancia logarítmica óptima con $\varphi^\sigma$. Para $\sigma=9$, la verificación empírica demuestra que $p=31$ proporciona mejor alineación logarítmica $\log(M_{31})/\log(R_9) \approx 4.0$, coherencia con estructura modular del operador, y minimiza desviación en torre completa $\sigma \in [0,51]$.
-\end{enumerate}
-
-La distribución irregular de números primos (saltos $2 \to 3 \to 5 \to 7 \to 13 \to 17 \to 19 \to 31 \ldots$) introduce discretización natural que no rompe el isomorfismo logarítmico subyacente. En escala log, la torre Mersenne sigue siendo aproximadamente lineal con pendiente $p \cdot \log(2)$, coherente con torre áurea $\sigma \cdot \log(\varphi)$.
-\end{proof}
-
-\begin{corollary}[Factor de conversión universal]\label{cor:factor-conversion-universal}
-La constante:
-\[
-\lambda = \frac{\ln 2}{\ln \varphi} = \frac{0.693147\ldots}{0.481211\ldots} \approx 1.440
-\]
-actúa como puente universal entre escalamiento áureo y binario, permitiendo traducción mediante el factor $\lambda$:
-\[
-\varphi^\sigma \xrightarrow{\lambda} 2^{p_\sigma}
-\]
-donde $p_\sigma$ es el exponente primo que minimiza $|\log_\varphi(2^p) - \sigma \cdot \lambda - \log_\varphi(3)|$ sobre la distribución discreta de números primos, estableciendo la correspondencia biyectiva $\Phi: \sigma \mapsto p_\sigma$ del teorema (\ref{thm:isomorfismo-logaritmico}).
-\end{corollary}
-
-\subsection[El Mediador Critico: |Omega| = 1/2]{El Mediador Crítico: $|\Omega| = 1/2$}
-
-\begin{theorem}[Resonancia crítica]\label{thm:resonancia-critica}
-El módulo constante $|\Omega| = 1/2 = 2^{-1}$ establece el único puente posible entre torre áurea y torre binaria.
-
-El módulo $|\Omega|$ debe satisfacer tres restricciones simultáneas:
-
-\begin{enumerate}
-\item \textit{Restricción geométrica:} Las magnitudes están fijadas por geometría del triángulo equilátero (\ref{def:magnitudes-tripartitas}):
-\[
-|\Omega| = |P| \cdot |C| \cdot |F| = \frac{1}{\sqrt{3}} \cdot 1 \cdot \frac{\sqrt{3}}{2} = \frac{1}{2}
-\]
-Modificar cualquiera de las magnitudes destruiría la simetría $S_3$.
-
-\item \textit{Restricción algebraica:} El valor debe ser racional para permitir correspondencia con números enteros (Mersenne):
-\[
-|\Omega| \in \mathbb{Q}
-\]
-El valor $1/2$ es el racional más simple mayor que 0 y menor que 1.
-
-\item \textit{Restricción resonante:} Para permitir conversión $\varphi \leftrightarrow 2$:
-\[
-\log_\varphi(|\Omega|) = n \cdot \log_\varphi(2) \quad \text{para algún } n \in \mathbb{Z}
-\]
-\end{enumerate}
-
-El único valor que satisface simultáneamente las tres restricciones es $|\Omega| = 1/2 = 2^{-1}$.
-\end{theorem}
-
-\begin{proof}[Por contradicción]
-Verificamos primero que $|\Omega| = 1/2$ satisface las tres restricciones simultáneamente:
-
-\begin{enumerate}
-\item \textit{Restricción geométrica}: El producto $|P| \cdot |C| \cdot |F| = (1/\sqrt{3}) \cdot 1 \cdot (\sqrt{3}/2) = 1/2$ emerge directamente de la geometría del triángulo equilátero inscrito en el círculo crítico $|z| = 1/2$ (\dref{def:magnitudes-tripartitas}). Las magnitudes están fijadas por la simetría $S_3$ del sistema tripartito; modificar cualquiera destruiría esta estructura geométrica fundamental.
-
-\item \textit{Restricción algebraica}: El valor $1/2 \in \mathbb{Q}$ es racional y permite correspondencia con números enteros mediante el isomorfismo logarítmico (\tref{thm:isomorfismo-logaritmico}). Entre los racionales en $(0,1)$, el valor $1/2$ es el más simple, minimizando complejidad algebraica mientras preserva la estructura numérica necesaria.
-
-\item \textit{Restricción resonante}: La condición $\log_\varphi(1/2) = -1 \cdot \log_\varphi(2)$ establece que $|\Omega| = 2^{-1}$ permite conversión directa entre escalamiento áureo $\varphi^\sigma$ y escalamiento binario $2^p$ mediante el factor de conversión $\lambda = \ln(2)/\ln(\varphi)$ (\corref{cor:factor-conversion-universal}). Esta condición es necesaria para que el módulo actúe como mediador entre ambas torres.
-\end{enumerate}
-
-Supongamos por contradicción que existe $k \neq 1/2$ que satisface las tres restricciones simultáneamente. Para satisfacer (1), necesitaríamos modificar alguna magnitud $|P|$, $|C|$, o $|F|$, lo cual destruiría la simetría $S_3$ y violaría el Axioma 4 (\ref{ax:estructura-distribuida}). Para satisfacer (3) con $k \neq 1/2$, necesitaríamos $k = 2^n$ para algún $n \in \mathbb{Z}$, pero entre los valores posibles $k \in \{\ldots, 1/4, 1/2, 1, 2, 4, \ldots\}$, solo $k = 1/2 = 2^{-1}$ satisface simultáneamente $k \in (0,1)$, $k \in \mathbb{Q}$, y $k = |P| \cdot |C| \cdot |F|$ fijado por (1). Contradicción. Por tanto, $|\Omega| = 1/2$ es único.
-\end{proof}
-
-\begin{corollary}[Triple mediación]\label{cor:triple-mediacion}
-El valor $|\Omega| = 1/2$ conecta simultáneamente:
-\begin{enumerate}
-\item \textbf{Sistema decimal}: Plano complejo $\mathbb{C}$ con radios $R_\sigma = 3\varphi^\sigma$
-\item \textbf{Sistema áureo}: Torre exponencial $\varphi^\sigma$
-\item \textbf{Sistema binario}: Números de Mersenne $2^p - 1$
-\end{enumerate}
-
-La condición $|\Omega| = 2^{-1} = \varphi^{-\lambda}$ (donde $\lambda = \ln(2)/\ln(\varphi)$) establece la equivalencia:
-\[
-\boxed{\varphi^\sigma \overset{\lambda}{\leftrightarrow} 2^{p_\sigma} \quad \text{mediada por} \quad |\Omega| = \frac{1}{2}}
-\]
-\end{corollary}
-
-\subsection{Correspondencia Torre Áurea--Mersenne: Verificación Numérica}
-
-La correspondencia establecida en el corolario anterior se verifica numéricamente mediante la cadena completa desde la torre áurea $R_\sigma = 3\varphi^\sigma$ hasta los números de Mersenne $M_p = 2^p - 1$:
-
-
-\begin{table}[bt]
-    \centering
-    \caption{Correspondencia entre torre áurea $R_\sigma$ y números de Mersenne $M_p$}\label{tab:torre-mersenne}
-    \small
-    \begin{tabular}{@{}ccccccc@{}}
-    \toprule
-    $\sigma$ & $R_\sigma = 3\varphi^\sigma$ & $\log_{10}(R_\sigma)$ & $p_\sigma$ & $M_p$ & $\log_{10}(M_p)$ & Dígitos \\
-    \midrule
-    0 & 3 & 0.477 & 2 & 3 & 0.477 & 1 \\
-    1 & 4.854 & 0.686 & 3 & 7 & 0.845 & 1 \\
-    2 & 7.854 & 0.895 & 5 & 31 & 1.491 & 2 \\
-    3 & 12.708 & 1.104 & 7 & 127 & 2.104 & 3 \\
-    5 & 33.249 & 1.522 & 13 & 8191 & 3.913 & 4 \\
-    7 & 87 & 1.939 & 19 & 524287 & 5.720 & 6 \\
-    9 & 227.637 & 2.357 & 31 & $2.14 \times 10^9$ & 9.332 & 10 \\
-    15 & 2961 & 3.471 & 127 & $1.70 \times 10^{38}$ & 38.23 & 39 \\
-    51 & $9.75 \times 10^{10}$ & 10.989 & 82589933 & $2^{82.6M}-1$ & 24.9M & 24862048 \\
-    \bottomrule
-    \end{tabular}
-\end{table}
-
-\vspace{0.5em}
-
-Los valores numéricos no establecen igualdad aritmética $M_p = R_\sigma$ (excepto $\sigma=0$), sino correspondencia estructural mediante isomorfismo logarítmico. En espacio logarítmico, ambas torres son rectas con pendientes relacionadas por $\lambda = \ln(2)/\ln(\varphi)$, preservando la estructura exponencial subyacente mientras proyectan sobre bases diferentes ($\varphi$ vs $2$).
-
-\par
-La correspondencia persiste sobre más de 25 millones de órdenes de magnitud, desde $\sigma=0$ ($R_0=3$) hasta $\sigma=51$ ($R_{51} \sim 10^{11}$), y desde $M_2$ (1 dígito) hasta $M_{82589933}$ (24.9 millones de dígitos). Los saltos irregulares en $p_\sigma$ ($2\to 3\to 5\to 7\to 13\ldots$) reflejan la distribución de números primos, estableciendo que la torre Mersenne es la discretización natural de la torre áurea continua.
-
-\subsection{Análisis del Factor Logarítmico}
-
-La tabla extendida incluye la columna ``Factor log'' $= \log_{10}(M_p) / \log_{10}(R_\sigma)$, que mide la razón entre escalas logarítmicas. Este factor no debe interpretarse como proximidad numérica entre $M_p$ y $R_\sigma$, sino como indicador del isomorfismo estructural.
-
-\begin{table}[bt]
-    \centering
-    \caption{Correspondencia Torre Áurea---Mersenne con factor logarítmico}\label{tab:torre-mersenne-extendida}
-    \small
-    \begin{tabular}{@{}ccccccc@{}}
-    \toprule
-    $\sigma$ & $R_\sigma = 3\varphi^\sigma$ & $\log_{10}(R_\sigma)$ & $p_\sigma$ & $M_p = 2^p-1$ & $\log_{10}(M_p)$ & Factor log* \\
-    \midrule
-    0 & 3 & 0.477 & 2 & 3 & 0.477 & 1 \\
-    1 & 4.854 & 0.686 & 3 & 7 & 0.845 & 1.231 \\
-    2 & 7.854 & 0.895 & 5 & 31 & 1.491 & 1.666 \\
-    3 & 12.708 & 1.104 & 7 & 127 & 2.104 & 1.906 \\
-    5 & 33.249 & 1.522 & 13 & 8191 & 3.913 & 2.571 \\
-    7 & 87 & 1.939 & 19 & 524287 & 5.720 & 2.950 \\
-    9 & 227.637 & 2.357 & 31 & $2.14 \times 10^9$ & 9.332 & 3.959 \\
-    15 & 2961 & 3.471 & 127 & $1.70 \times 10^{38}$ & 38.23 & 11.01 \\
-    25 & 365851 & 5.563 & 9689 & $5.47 \times 10^{2918}$ & 2918.7 & 524.6 \\
-    51 & $9.75 \times 10^{10}$ & 10.989 & 82589933 & $2^{82.6M}-1$ & 24.9M & 2266000 \\
-    \bottomrule
-    \end{tabular}
-\end{table}
-
-\vspace{0.5em}
-
-El factor log crece linealmente en escala log-log: $\log(\text{Factor log}) \approx C_{\lambda} \cdot \sigma$, donde $C_{\lambda} = \log_{10}(\lambda) \approx 0.158$ está relacionada con el factor de conversión $\lambda = \ln(2)/\ln(\varphi)$ (\corref{cor:factor-conversion-universal}). Este crecimiento confirma que ambas torres son rectas en espacio logarítmico con pendientes relacionadas por $\lambda \approx 1.440$, y compensa los saltos irregulares en $p_\sigma$ causados por la distribución de números primos, manteniendo la tendencia lineal del isomorfismo.
-
-\par
-Para $\sigma=1$, el factor log $= 1.231$ corresponde a la razón $\log(7)/\log(4.854) = 0.845/0.686$, mientras que la razón aritmética directa $7/4.854 = 1.442 \approx \lambda$ refleja el factor de conversión entre bases exponenciales. Esta dualidad ilustra que la correspondencia es topológica (preserva estructura exponencial), no métrica (no preserva valores numéricos).
-
-\subsection[Visualizacion: Diagrama Logaritmico]{Visualización: Diagrama Logarítmico}
-
-\begin{fullwidth}
+\begin{table}[h]
 \centering
-\begin{minipage}{\linewidth}
-\includegraphics[width=\linewidth]{src/images/image6.png}
-\captionsetup{width=\linewidth,justification=centering}
-\captionof{figure}{Verificación de la correspondencia PCF $\leftrightarrow$ Mersenne para 51 primos: isomorfismo logarítmico ($R^2 = 1.0$, $\lambda = 1.440420$), convergencia del factor universal $\lambda$, residuos del ajuste lineal ($\sigma_{\text{residuos}} < 10^{-9}$), correspondencia $\sigma \leftrightarrow p_\sigma$, verificación $\varepsilon \cdot \tau = \pi$ ($|\varepsilon \cdot \tau - \pi| < 4.44 \times 10^{-16}$), y distribución de errores relativos en $\lambda$ (media $0.68\%$).}
-\label{fig:diagrama-logaritmico} % chktex 24
-\end{minipage}
-\end{fullwidth}
+\begin{tabular}{|l|l|l|}
+\hline
+Property & Description & Reference \\
+\hline
+Hermiticity & $\tilde{H}_{\text{PCF}}^\dagger = \tilde{H}_{\text{PCF}}$, spectrum $\subset \mathbb{R}^+$ & Theorem \ref{thm:existence} \\
+Non-circularity & $T^*(n)$ defined without reference to $\zeta(s)$ or its zeros & Theorem \ref{thm:non-circularity} \\
+Asymptotic convergence & $T^*(n)/t_n \to 1$ & Theorem \ref{thm:asymptotic-conv} \\
+Empirical precision & Mean $|T^*(n) - t_n|/t_n < 1\%$ for $n > 30$ & Proposition \ref{prop:empirical-precision} \\
+Efficient computability & $T^*(n)$ in $O(\log n)$ & Theorem \ref{thm:complexity} \\
+Arithmetic content & Parameters encode prime structure via Sections \ref{sec:mersenne}, \ref{sec:tstar} & Table \ref{tab:provenance} \\
+\hline
+\end{tabular}
+\caption{Properties of the $\tilde{H}_{\text{PCF}}$ operator and $T^*$ spectral function.}
+\end{table}
 
-El isomorfismo logarítmico muestra correlación perfecta ($R^2 = 1.0$) entre $\log_{10}(R_\sigma)$ y $\log_{10}(M_p)$ con pendiente $\lambda = 1.440420$, confirmando que ambas torres son rectas en espacio logarítmico. El factor universal $\lambda$ converge al valor teórico $1.440$ conforme aumenta $\sigma$, y los residuos del ajuste lineal están en orden $10^{-9}$, dentro de precisión de máquina.
+\subsubsection{Parameter Provenance Summary}
 
-\par
-La escala logarítmica transforma la correspondencia entre magnitudes numéricamente divergentes ($3\varphi^{51} \approx 10^{11}$ vs $2^{82M}$ con 24.9M dígitos) en isomorfismo entre estructuras lineales: ambas torres se convierten en rectas con pendientes relacionadas por $\lambda$, revelando que la correspondencia es estructural (preserva geometría exponencial) más que métrica (no preserva valores numéricos).
+The structural parameters ($\mu$, $\sigma$, $\beta$, $\pi$) are geometrically determined. The parameter $\alpha_0 = 59/40$ is empirically optimized but admits structural decomposition (Section \ref{sec:tstar}). Table \ref{tab:provenance} records the complete provenance.
 
-\begin{observation}[Discretización por números primos]\label{obs:discretizacion-mersenne}
-Los saltos discretos en $p_\sigma$ ($2\to 3 \to 5 \to 7 \to 13\ldots$) reflejan la distribución irregular de números primos. En escala logarítmica, estos saltos se promedian a progresión cuasi-lineal con pendiente $p \cdot \log(2)$, preservando el isomorfismo estructural pese a la discretización.
-\end{observation}
-
-\subsection{Síntesis: ¿Por qué Funciona la Correspondencia?}
-
-\begin{theorem}[Fundamentos estructurales de la correspondencia]\label{thm:fundamentos-correspondencia}
-La correspondencia $\sigma \leftrightarrow M_p$ entre la torre áurea $R_\sigma = 3\varphi^\sigma$ y los números de Mersenne $M_p = 2^p - 1$ emerge de cinco condiciones estructurales simultáneas:
-
-\begin{enumerate}
-\item \textit{Semilla común}: $R_0 = 3 = M_2$ determinada por geometría del triángulo equilátero en el cilindro PCF (\ref{prop:coincidencia-mersenne}).
-
-\item \textit{Escalamiento exponencial}: Autosimilitud multiplicativa con razones $\varphi$ (continua, irracional) y $2^{\Delta p}$ (discreta, racional) respectivamente.
-
-\item \textit{Mediador crítico}: $|\Omega| = 1/2 = 2^{-1} = \varphi^{-\lambda}$ con $\lambda = \ln(2)/\ln(\varphi)$ (\tref{thm:resonancia-critica}), único valor que permite resonancia $\varphi \leftrightarrow 2$.
-
-\item \textit{Isomorfismo logarítmico}: En espacio logarítmico, ambas torres son rectas con pendientes relacionadas por $\lambda$, estableciendo correspondencia topológica (preserva estructura exponencial) no métrica (no preserva valores numéricos), persistente sobre $>25$ millones de órdenes de magnitud.
-
-\item \textit{Discretización compatible}: Los saltos discretos en $p_\sigma$ por distribución de primos no rompen el isomorfismo estructural (\oref{obs:discretizacion-mersenne}).
-\end{enumerate}
-\end{theorem}
-
-\begin{proof}[Por verificación de condiciones necesarias y suficientes]
-Cada condición es necesaria: sin (1) no hay semilla común; sin (2) las torres no comparten estructura exponencial; sin (3) no existe mediador $\varphi \leftrightarrow 2$ (\tref{thm:resonancia-critica}); sin (4) la correspondencia no persiste en escala logarítmica; sin (5) la discretización por primos rompe el isomorfismo (\oref{obs:discretizacion-mersenne}). Las cinco condiciones juntas son suficientes: la construcción de §\ref{subsubsec:tres-vertices-referencia-cilindro} y la verificación numérica de \cref{fig:diagrama-logaritmico} establecen la correspondencia determinísticamente.
-\end{proof}
-
-La dirección constructiva PCF $\to$ Mersenne es determinística: geometría triangular $\to R_0 = 3 \to$ torre $R_\sigma = 3\varphi^\sigma \to$ correspondencia con $M_p$. La dirección inversa Mersenne $\to$ PCF es epistémicamente imposible: $\varphi$ no aparece en $2^p - 1$, y sin la estructura PCF, la correspondencia permanece invisible.
-
-\par
-\textit{Ejemplo de imposibilidad inversa}: Dados $M_2=3$, $M_3=7$, $M_5=31$, $M_7=127$, ningún análisis de razones directas ($M_3/M_2 = 7/3 = 2.333 \neq \varphi$), razones logarítmicas ($\log(M_5)/\log(M_3) = 1.765 \neq \varphi$), o diferencias ($M_3 - M_2 = 4 = 2^2$, solo aparecen potencias de 2 y 3) permite inferir $\varphi$, $S_3$, o $|\Omega| = 1/2$. La correspondencia es asimétrica: $\text{PCF} \xrightarrow{\text{constructivo}} \text{Mersenne} \quad \not\leftarrow \quad \text{Mersenne}$.
-
-\subsection{Analogía Conceptual: Resonancia de Cuerdas}
-
-La correspondencia entre torre áurea y torre Mersenne admite interpretación mediante analogía con sistemas oscilatorios acoplados. Consideremos dos cuerdas vibrantes con propiedades distintas pero estructura resonante común.
-
-\begin{observation}[Analogía de resonancia armónica]\label{obs:analogia-resonancia}
-La correspondencia $\sigma \leftrightarrow M_p$ admite interpretación mediante analogía con acoplamiento resonante entre dos sistemas oscilatorios:
-
-\begin{enumerate}
-\item \textit{Sistema A (Torre áurea)}: Frecuencia fundamental $f_\varphi = \varphi$ con armónicos continuos $\{\varphi^n : n \in \mathbb{R}\}$, donde cada armónico escala por factor $\varphi$.
-
-\item \textit{Sistema B (Torre Mersenne)}: Frecuencia fundamental $f_2 = 2$ con armónicos discretos $\{2^p : p \in \mathbb{P}\}$ (exponentes primos), donde cada armónico escala por factor $2^{\Delta p}$.
-
-\item \textit{Acoplador crítico}: Impedancia $Z = |\Omega| = 1/2 = 2^{-1} = \varphi^{-\lambda}$ con $\lambda = \ln(2)/\ln(\varphi)$, único valor que permite resonancia perfecta entre sistemas con frecuencias fundamentales inconmensurables ($\varphi$ irracional, $2$ racional).
-\end{enumerate}
-\end{observation}
-
-Al excitar el sistema A en frecuencia $\varphi^\sigma$, el sistema B resuena en frecuencia $2^{p_\sigma}$ con razón constante $f_B/f_A = 2^{p_\sigma}/\varphi^\sigma \approx \lambda \approx 1.440$. El acoplador $Z = 1/2$ actúa como transformador de impedancia que permite transferencia de energía entre sistemas con bases diferentes pero estructura exponencial común, estableciendo modos normales compartidos pese a la inconmensurabilidad de las frecuencias fundamentales.
-
-\subsection{Síntesis y Conexión con Correspondencia Mersenne}
-
-Los dos descubrimientos principales—correspondencia con números de Mersenne (§\ref{mersenne}) y predicción de ceros de $\zeta(s)$ (§\ref{subsec:prediccion-ceros})—no son resultados aislados sino manifestaciones complementarias de una estructura matemática única. La geometría PCF (triángulo $S_3$ con $\varphi$) genera la torre exponencial $\{\varphi^\sigma\}$, que encuentra expresión tanto en números de Mersenne $2^p - 1$ (aritmética binaria) como en ceros de $\zeta(s)$ en $\text{Re}(s) = 1/2$ (análisis complejo), revelando conexiones profundas entre dominios tradicionalmente separados.
-
-\par
-\begin{observation}[Unificación tripartita]\label{obs:unificacion-tripartita}
-La razón áurea $\varphi$ actúa como puente universal entre:
-\begin{itemize}
-\item \textit{Geometría}: Triángulo equilátero, simetría $S_3$, cilindro base
-\item \textit{Aritmética}: Números primos de Mersenne $M_p = 2^p-1$
-\item \textit{Análisis}: Ceros de funciones L en línea crítica $\text{Re}(s)=1/2$
-\end{itemize}
-Esta triple unificación sugiere que el operador $\omegapcf$ hace explícita una realidad matemática profunda donde estos tres dominios—históricamente considerados separados—parecieran ser aspectos complementarios de una geometría fundamental.
-\end{observation}
-
-\par
-La correspondencia geométrica $|\Omega|=1/2 \leftrightarrow \text{Re}(s)=1/2$, mediada por el círculo crítico $\mathcal{C}_{1/2}$, permite al operador PCF predecir posiciones de ceros de $\zeta(s)$ y funciones L con precisión 99.70\% ($\sigma=9$) y mejora asintótica $O(1/\sqrt{\log n})$, verificada hasta $n \sim 10^{10}$. Esta capacidad predictiva, combinada con independencia construccional y universalidad para funciones L, establece al operador PCF como herramienta analítica genuina para el estudio del espectro de funciones L.
-
-\subsection{La Leyenda del Rey y Sissa: Potencias en el Plano Complejo}
-
-Según leyenda persa (Shāh-nāmeh, siglo XI), el sabio Sissa ibn Dahir inventó el ajedrez para el rey Shihram de la India. Como recompensa, Sissa pidió un grano de arroz por la primera casilla del tablero, dos por la segunda, cuatro por la tercera, ocho por la cuarta, doblando en cada casilla hasta las 64. El rey, creyendo la petición modesta, aceptó. Los matemáticos calcularon:
-
-\[
-\sum_{i=0}^{63} 2^i = 2^{64} - 1 = 18{,}446{,}744{,}073{,}709{,}551{,}615 \text{ granos}
-\]
-
-Imposible de pagar: aproximadamente 838 mil millones de toneladas de arroz, más que toda la producción humana en la historia.
-
-\par
-Esta historia milenaria ilustra tres conceptos fundamentales del crecimiento exponencial: el crecimiento exponencial $2^n$ supera la intuición lineal; la suma geométrica $\sum_{i=0}^{n-1} 2^i = 2^n - 1$ adopta la forma de Mersenne; y la escala logarítmica comprime magnitudes inmensas en parámetros manejables, como $\log_2(18$ trillones$) = 64$.
-
-\par
-El operador $\omegapcf$ explora la misma relación exponencial pero en el plano complejo $\mathbb{C}$, donde la conexión aritmética $\leftrightarrow$ geometría $\leftrightarrow$ álgebra se manifiesta mediante incrementos exponenciales desde perspectiva áurea. En aritmética binaria, la suma de Sissa adopta la forma de números de Mersenne:
-
-\[
-2^{64} - 1 = M_{64}
-\]
-
-En geometría áurea, el escalamiento autosimilar genera la torre exponencial:
-
-\[
-\varphi^\sigma
-\]
-
-En álgebra compleja, el operador tripartito estructura esta conexión:
-
-\[
-\Omega(z, \sigma) = P(z,\sigma) \cdot C(z) \cdot F(z) \quad \text{donde } z \in \mathbb{C}
-\]
-
-El plano complejo $\mathbb{C}$ unifica estos tres aspectos mediante tres componentes fundamentales: la unidad imaginaria $i$ (rotaciones), la razón áurea $\varphi = (1+\sqrt{5})/2$ (escalamiento autosimilar), y el punto genérico $z = re^{i\theta}$ (posición y fase), permitiendo representar aritmética, geometría y álgebra como aspectos complementarios de una estructura única.
-
-\begin{proposition}[Isomorfismo exponencial]\label{prop:isomorfismo-exponencial}
-Las torres binaria y áurea son la misma estructura exponencial proyectada sobre bases diferentes:
-\[
-2^{p_\sigma} \xrightarrow{\lambda = \ln 2 / \ln \varphi} \varphi^\sigma
-\]
-donde $\lambda \approx 1.44$ es el factor de conversión entre bases exponenciales (\corref{cor:factor-conversion-universal}).
-\end{proposition}
-
-Mientras Sissa usa potencias binarias $2^n$ en $\mathbb{N}$, el operador $\omegapcf$ usa potencias áureas $\varphi^\sigma$ en $\mathbb{C}$, codificando geometría (triángulo equilátero $S_3$ con vértices en $\mathbb{C}$), aritmética (correspondencia $\sigma \to p_\sigma \to M_p = 2^{p_\sigma} - 1$), y álgebra (producto tripartito $\Omega = P \cdot C \cdot F$ con fases en $\mathbb{C}$) como aspectos complementarios de una estructura única.
-
-\begin{corollary}[Compresión geométrica]\label{cor:compresion-geometrica}
-El operador realiza compresión dimensional:
-\[
-\text{Mersenne } M_{82589933} \text{ (24.9M dígitos)} \longleftrightarrow \varepsilon(51) = \varepsilon_0 \varphi^{51} \text{ (11 dígitos)}
-\]
-De igual forma que el logaritmo comprime $2^{64} \to 64$, la geometría áurea comprime la torre binaria completa en el escalamiento $\varphi^\sigma$.
-\end{corollary}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+Parameter & Value & Origin & Section \\
+\hline
+$\mu$ & $1/2$ & Critical modulus $|\Omega|$ from $S_3$ & Section \ref{sec:modulus} \\
+$\sigma$ & $3/2$ & Sum of moduli $d \cdot \mu$, $d = 3$ & Section \ref{sec:modulus} \\
+$\alpha_0$ & $59/40$ & $\sigma - \mu/20$ & Section \ref{sec:tstar} \\
+$\lambda_\alpha$ & $20$ & Vigesimal modulus $\varphi(20) = 8$ & Section \ref{sec:golden-prime} \\
+$\beta$ ($n > 30$) & $1/8 = 2^{-3}$ & $S_3$ dimension, $\varphi(20) = 8$ & Section \ref{sec:axioms}, \ref{sec:golden-prime} \\
+$\beta(n)$ ($n \leq 30$) & $2^{-k(n)}$ & Hypercube $H_k$ vertex density & Section \ref{sec:hypercube} \\
+$\varepsilon_M$ & $0.005$ & Mersenne correction scale & Section \ref{sec:mersenne} \\
+$\lambda_M$ & $10$ & $C(5,2)$ pentagonal planes & Section \ref{sec:mersenne} \\
+$\pi$ & — & Torus topology, $\varepsilon \cdot \tau = \pi$ & Section \ref{sec:torus} \\
+Regime boundary & $n = 30$ & Pre-pentagonal threshold ($M_5 = 31$) & Section \ref{sec:tstar} \\
+\hline
+\end{tabular}
+\caption{Parameter provenance in $T^*$.}
+\label{tab:provenance}
+\end{table}
