@@ -1,6 +1,6 @@
 \label{sec:methods}
 
-\subsection{Axiomatic Framework} \label{sec:axioms} \label{sec:axioms}
+\subsection{Axiomatic Framework} \label{sec:axioms}
 
 We establish five axioms that define the PCF operator construction. These axioms emerge from the restrictions identified in \S\ref{sec:restrictions} (Frobenius, Lawvere, Yanofsky) and provide the foundational constraints that all subsequent development must satisfy.
 
@@ -353,7 +353,7 @@ The fundamental parameter $\varepsilon_0$ emerges from the specific geometric pr
     The precision extends to all computable digits.
 \end{proof}
 
-\begin{Observation}[Connection with \zeta(2)] \label{obs:eps0-connection} \label{obs:basel}
+\begin{Observation}[Connection with zeta(2)] \label{obs:eps0-connection} \label{obs:basel}
 
 The factor 6 appears in three fundamental contexts:
 \begin{enumerate}
@@ -749,7 +749,7 @@ The transformation occurs through dimensional projection mediated by the golden 
     indicating rectangular lattice (neither square nor hexagonal).
 \end{Theorem}
 
-\begin{Observation}[\tau = i: special value] \label{obs:tau-i}
+\begin{Observation}[Modular parameter tau equals i] \label{obs:tau-i}
 \begin{itemize}
     \item $\tau = i$: Gauss lattice (square symmetry $\mathbb{Z}_4$)
     \item $\tau = \omega$: Eisenstein lattice (hexagonal symmetry $\mathbb{Z}_6$)
@@ -780,7 +780,7 @@ The self-similarity of the system manifests through logarithmic equations relati
 
 \subsubsection{Nature of the Scale Parameter $\sigma$}
 
-\begin{Observation}[Nature of parameter \sigma] \label{obs:sigma-nature}
+\begin{Observation}[Nature of scale parameter sigma] \label{obs:sigma-nature}
 
 Each fixed value of $\sigma$ specifies a different function over the same domain $\mathbb{C}$. This family admits two equivalent interpretations:
 \begin{enumerate}
@@ -793,6 +793,8 @@ The parameter $\sigma$ acts as an \textbf{observation lens} or \textbf{magnifica
 \textbf{Contrast with previous dimensional extensions:} In \S\ref{sec:third-dimension} (Axiom 3), we introduced $z = \varphi y$ as an additional spatial coordinate in $\mathbb{R}^3$; here, $\sigma$ does not add spatial dimension but rather scalar structure over the same space.
 
 This distinction is crucial: the operator inhabits a family of functions $\mathbb{C} \to \mathbb{C}$ (complex plane $\times$ scale), not $\mathbb{C} \times \mathbb{R} \times \mathbb{R}$ (three spatial dimensions).
+
+\end{Observation}
 
 \begin{Observation}[Re-parametrization parallel with \S\ref{sec:adjoint-spaces}] \label{obs:reparametrization}
 \begin{itemize}
@@ -1162,7 +1164,7 @@ This connection between linear algebra (matrix eigenvalues) and fractal geometry
 
 \end{Observation}
 
-\subsection{Hausdorff Dimension} \label{sec:hausdorff} \label{sec:hausdorff}
+\subsection{Hausdorff Dimension} \label{sec:hausdorff}
 
 All elements converge here: the Hausdorff dimension emerges automatically from the structure already established, without adjustment or fitting. As detailed in \S\ref{sec:golden-mersenne}, this dimension is the necessary consequence of the tripartite structure.
 
@@ -1266,7 +1268,7 @@ This dimension encodes:
 
 The value $\dim_H \approx 1.585$ quantifies exactly how the PCF structure fills space: more than a curve (dim = 1) but less than a surface (dim = 2), with the precise value determined by the ratio of ternary symmetry to binary scaling.
 
-\subsection{Moduli-Function Duality and Pentadimensional Synthesis} \label{sec:moduli-function-duality}
+\subsection{Moduli-Function Duality and Pentadimensional Synthesis} \label{sec:moduli-function-duality-penta}
 
 We have established that the golden coupling $z = \varphi y$ extends $\mathbb{C}$ to three-dimensional space $E^3$ while preserving the function space structure $L^2(\mathbb{R})$. In this final Methods section, we develop how the self-similarity relation $\varepsilon(\sigma+1) = \varphi \cdot \varepsilon(\sigma)$ establishes inverse direct correspondence between function space and moduli space, after Manin, exactly at the intersection of binary and ternary structures.
 
@@ -2408,7 +2410,7 @@ The ``Depends On'' column confirms acyclicity: each level depends only on lower 
 
 \textbf{The complete causal chain:}
 
-At base: the PCF axioms (\S \ref{sec:axioms}) establish $z = \varphi y$, $i^2 = -1$, and distributed structure, motivated by the dual obstructions of Frobenius and Hamiltonian circularity (\S \S \ref{sec:manin}--\ref{sec:connes}). The $S_3$ geometry (\S \ref{sec:torus}) produces $|\Omega| = 1/2$ and $\sigma = 3/2$. The self-similar tower (\S \ref{sec:tower}) generates $\{\Lambda_\sigma = \varphi^\sigma \Lambda_{\text{PCF}}\}$, realizing Manin's moduli-function duality (\S \ref{sec:moduli-function-duality}). The golden-Mersenne correspondence (\S \ref{sec:mersenne}) bridges continuous and discrete towers through $\lambda = \ln 2/\ln \varphi$.
+At base: the PCF axioms (\S \ref{sec:axioms}) establish $z = \varphi y$, $i^2 = -1$, and distributed structure, motivated by the dual obstructions of Frobenius and Hamiltonian circularity (\S \S \ref{sec:manin}--\ref{sec:connes}). The $S_3$ geometry (\S \ref{sec:torus}) produces $|\Omega| = 1/2$ and $\sigma = 3/2$. The self-similar tower (\S \ref{sec:tower}) generates $\{\Lambda_\sigma = \varphi^\sigma \Lambda_{\text{PCF}}\}$, realizing Manin's moduli-function duality (\S \ref{sec:moduli-function-duality-penta}). The golden-Mersenne correspondence (\S \ref{sec:mersenne}) bridges continuous and discrete towers through $\lambda = \ln 2/\ln \varphi$.
 
 From this established structure, the hypercube stratification (\S \ref{sec:hypercube}) introduces the discrete arithmetic counterpart of the golden tower. Mersenne primes (\S \ref{sec:mersenne-boundaries}) mark boundary resonances. The number $8 = 2^3 = \varphi(20)$ encodes the binary-ternary duality---simultaneously the hypercube $H_3$, the Golden Prime classes (Grisales Herrera, 2025), the unit group $\mathbb{Z}_2^3 \cong \mathbb{Z}^*_{20}$, and the PCF parameter $\beta = 1/8$. The pentagonal threshold $2^5 = 32$, adjacent to $M_5 = 31$, marks the transition from triangular ($d=3$) to pentagonal ($d=5$) regime. The PCF spectral invariants $\mu$, $\sigma$ anchor the logarithmic kernel.
 
