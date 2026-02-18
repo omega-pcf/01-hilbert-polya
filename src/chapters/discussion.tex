@@ -12,7 +12,7 @@ The PCF framework is situated at the intersection of three programs, each of whi
     \item \textbf{Connes' Weil strategy:} Uses Weil's intersection form template. Transporting this to $\text{Spec}(\mathbb{Z})$ requires a missing cohomology theory for mixed characteristic.
 \end{itemize}
 
-\subsection{PCF as $\mathbb{F}_1$-Descent Data}
+\subsection{PCF as $\mathbb{F}_1$-Descent Data} \label{sec:f1-geometric}
 
 The derivation chain established in Section \ref{sec:tstar} is acyclic and forced:
 \[ \text{Pentagon} \to \varphi \to \mathbb{Q}(\sqrt{5}) \to \Delta=5 \to \chi_5 \to G(a) \to R_{\text{PCF}} \to T^* \]
@@ -30,28 +30,28 @@ The geometric layer provides location; the arithmetic layer provides heights. Th
 \subsection{Orbit Classification}
 
 \begin{Definition}
-Define the transformations on $\mathbb{C}$:
-\[ T: s \mapsto 1-s \quad \text{(functional equation symmetry)} \]
-\[ C: s \mapsto \bar{s} \quad \text{(complex conjugation)} \]
+    Define the transformations on $\mathbb{C}$:
+    \[ T: s \mapsto 1-s \quad \text{(functional equation symmetry)} \]
+    \[ C: s \mapsto \bar{s} \quad \text{(complex conjugation)} \]
 \end{Definition}
 
 \begin{Proposition}
-The group $G = \langle T, C \rangle$ satisfies $T^2 = \text{Id}$, $C^2 = \text{Id}$, $T \circ C = C \circ T$. Therefore $G \cong \mathbb{Z}_2 \times \mathbb{Z}_2$ (Klein four-group) with $|G| = 4$.
+    The group $G = \langle T, C \rangle$ satisfies $T^2 = \text{Id}$, $C^2 = \text{Id}$, $T \circ C = C \circ T$. Therefore $G \cong \mathbb{Z}_2 \times \mathbb{Z}_2$ (Klein four-group) with $|G| = 4$.
 \end{Proposition}
 
 \begin{Corollary}
-In centered coordinates $w = s - 1/2$:
-\[ \tilde{T}(w) = -w = i^2 \cdot w \]
-The functional equation is multiplication by $i^2 = -1$, with $\text{ord}(\tilde{T}) = \text{ord}(i^2) = 2$. The value $1/2 = 1/\text{ord}(i^2)$ emerges from the algebraic structure of $\mathbb{C}$ itself.
+    In centered coordinates $w = s - 1/2$:
+    \[ \tilde{T}(w) = -w = i^2 \cdot w \]
+    The functional equation is multiplication by $i^2 = -1$, with $\text{ord}(\tilde{T}) = \text{ord}(i^2) = 2$. The value $1/2 = 1/\text{ord}(i^2)$ emerges from the algebraic structure of $\mathbb{C}$ itself.
 \end{Corollary}
 
 \begin{Theorem}[Orbit Classification]
-Let $\rho = \sigma + it$ be a zero of $\xi$ with $t \neq 0$. Then:
-\[ |O_G(\rho)| = 2 \iff 1 - \rho = \bar{\rho} \iff \sigma = \frac{1}{2} \]
+    Let $\rho = \sigma + it$ be a zero of $\xi$ with $t \neq 0$. Then:
+    \[ |O_G(\rho)| = 2 \iff 1 - \rho = \bar{\rho} \iff \sigma = \frac{1}{2} \]
 \end{Theorem}
 
 \begin{proof}
-The four potential orbit elements are $\rho = \sigma + it$, $1-\rho = (1-\sigma) - it$, $\bar{\rho} = \sigma - it$, $1-\bar{\rho} = (1-\sigma) + it$. For $|O_G(\rho)| = 2$ with $t \neq 0$, the only non-trivial collapse is $1-\rho = \bar{\rho}$, which gives $1-\sigma = \sigma$, hence $\sigma = 1/2$.
+    The four potential orbit elements are $\rho = \sigma + it$, $1-\rho = (1-\sigma) - it$, $\bar{\rho} = \sigma - it$, $1-\bar{\rho} = (1-\sigma) + it$. For $|O_G(\rho)| = 2$ with $t \neq 0$, the only non-trivial collapse is $1-\rho = \bar{\rho}$, which gives $1-\sigma = \sigma$, hence $\sigma = 1/2$.
 \end{proof}
 
 \textbf{Structural content.} The critical line $\text{Re}(s) = 1/2$ is the unique locus in the critical strip where the functional equation symmetry $T$ and complex conjugation $C$ produce the same result. This is a geometric fact about the action of $G$ on $\mathbb{C}$ — it does not depend on any property of $\zeta$ beyond the functional equation.
@@ -72,7 +72,7 @@ The claims of Section \ref{sec:tstar} and Section \ref{ch:results} are verified 
 
 \textbf{Reference:} Proposition \ref{prop:arithmetic-confinement}(i)--(ii). \textbf{Verification:} 64/64 pairs, zero leakage. Values: $\{-\varphi^{-1}~(75\%), -\varphi^3~(25\%)\}$. \textbf{$\mathbb{F}_1$-significance:} $\text{Spec}(R_{\text{PCF}})$ as $\Lambda$-scheme is closed under the operations induced by prime classification. The pentagon geometry selects precisely the ring needed, nothing more—evidence for canonicity.
 
-\subsection{Criterion 4: Weil Intersection Form}
+\subsection{Criterion 4: Weil Intersection Form} \label{sec:weil-intersection-form}
 
 \textbf{Statement:} $T^2_{\text{PCF}}$ with periods $\omega_1 = 2\pi/3$ ($S_3$) and $\omega_2 = 2\pi$ (binary) satisfies $s(\omega_1,\omega_1) = s(\omega_2,\omega_2) = 0$, $s(\omega_1,\omega_2) = 1$. \textbf{Verification:} Conditions (i)--(iii) exact; period ratio $\omega_2/\omega_1 = 3 = \sigma/\mu = M_2$ confirmed to 50 digits. \textbf{$\mathbb{F}_1$-significance:} Reproduces the exact structure Weil used for curves over $\mathbb{F}_q$. The Weil inequality, when transported via a suitable cohomology theory, would force $\text{Re}(\rho) = 1/2$. What remains is that cohomology theory (Section \ref{sec:cohomological-gap}).
 
@@ -81,18 +81,18 @@ The claims of Section \ref{sec:tstar} and Section \ref{ch:results} are verified 
 \textbf{Reference:} Section \ref{ch:results}, Definition \ref{def:tstar}. \textbf{Verification:}
 
 \begin{table}[h]
-\centering
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-$n$ & $T^*(n)$ & $t$ & error \% & $T^*/t$ \\
-\hline
-10 & 50.36 & 49.77 & 1.18 & 1.012 \\
-50 & 143.34 & 143.11 & 0.16 & 1.002 \\
-500 & 804.27 & 811.18 & 0.85 & 0.991 \\
-5,000 & 5,449 & 5,448 & 0.02 & 1.000 \\
-10,000 & 9,906 & 9,878 & 0.28 & 1.003 \\
-\hline
-\end{tabular}
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        $n$    & $T^*(n)$ & $t$    & error \% & $T^*/t$ \\
+        \hline
+        10     & 50.36    & 49.77  & 1.18     & 1.012   \\
+        50     & 143.34   & 143.11 & 0.16     & 1.002   \\
+        500    & 804.27   & 811.18 & 0.85     & 0.991   \\
+        5,000  & 5,449    & 5,448  & 0.02     & 1.000   \\
+        10,000 & 9,906    & 9,878  & 0.28     & 1.003   \\
+        \hline
+    \end{tabular}
 \end{table}
 
 Coefficient $c(n) \to \sigma + \mu = 2$, recovering Riemann--von Mangoldt. \textbf{$\mathbb{F}_1$-significance:} $T^*$ is the spectral realization that all three programs lack. Every parameter traces to the framework: $\mu = |\Omega|$ from $S_3$, $\sigma = \zeta(2)/(\pi/3)^2$ from Basel--triangular identity, $\beta = 2^{-3}$ from hypercube $H_3$. The operator provides dynamical completion in characteristic zero—Manin's missing component.
@@ -101,11 +101,11 @@ Coefficient $c(n) \to \sigma + \mu = 2$, recovering Riemann--von Mangoldt. \text
 
 \textbf{Reference:} Table \ref{tab:provenance}. \textbf{Verification:} $\zeta(s)$ and its zeros appear nowhere in levels 0--9 of the causal chain. \textbf{$\mathbb{F}_1$-significance:} The $\Lambda$-ring $R_{\text{PCF}}$ is constructed ``from below'' (from the geometric primitive $\varphi$), not ``from above'' (from $\zeta(s)$). This is what Manin's program requires: numbers emerging as functions of a geometric space.
 
-\subsection{Criterion 7: $\Lambda$-Ring Compatibility}
+\subsection{Criterion 7: $\Lambda$-Ring Compatibility} \label{sec:lambda-ring}
 
 \textbf{Reference:} Section \ref{sec:lambda-ring}, Remark on $\Lambda$-ring structure. \textbf{Verification:} Tested on primes $\{2,3,5,7,11,13\}$: compositions exact, multiplicativity exact, congruences satisfied. Galois conjugation $\sigma(\varphi) = 1 - \varphi = -\varphi^{-1}$ confirmed to 50 digits. \textbf{$\mathbb{F}_1$-significance:} $R_{\text{PCF}}$ as $\Lambda$-ring constitutes descent data from $\text{Spec}(R_{\text{PCF}})$ to $\mathbb{F}_1$. The Frobenius lifts encode how each prime acts on the geometric space. Together with $\chi_5$, this is the PCF framework in $\mathbb{F}_1$-algebraic language.
 
-\subsection{Criterion 8: Canonical Selection}
+\subsection{Criterion 8: Canonical Selection} \label{sec:canonical-chain}
 
 \textbf{Reference:} Section \ref{sec:canonical-chain}, Remark on canonical selection. \textbf{Verification:} Pentagon forces $\varphi$ (Section \ref{sec:pentagon}), minimal polynomial forces $\Delta = 5$, Galois theory forces $\chi_5$, $S_3$ forces $|\Omega| = 1/2$, confinement (Criterion 3) confirms no further extension needed. \textbf{$\mathbb{F}_1$-significance:} The chain closes the arc $\mathbb{F}_1 \to \text{PCF} \to \mathbb{F}_1$. We start seeking geometry over $\mathbb{F}_1$, construct from the pentagon, and discover that the framework canonically selects a specific $\Lambda$-ring constituting $\mathbb{F}_1$-descent data. The geometry determines everything.
 
@@ -128,7 +128,7 @@ Weil's proof for curves over $\mathbb{F}_q$ proceeds through three components: (
 Topological cyclic homology (TC), developed by Hesselholt and Madsen, provides a cohomology theory naturally adapted to $\Lambda$-rings. We formulate the following as a research program:
 
 \begin{Conjecture}[Cohomological completion]
-$\text{TC}(R_{\text{PCF}})$ provides a divisor theory, a Riemann--Roch theorem, and Verdier duality for the $\Lambda$-scheme $\text{Spec}(R_{\text{PCF}})$, completing the transport of Weil's proof to the arithmetic setting.
+    $\text{TC}(R_{\text{PCF}})$ provides a divisor theory, a Riemann--Roch theorem, and Verdier duality for the $\Lambda$-scheme $\text{Spec}(R_{\text{PCF}})$, completing the transport of Weil's proof to the arithmetic setting.
 \end{Conjecture}
 
 The evidence: $R_{\text{PCF}}$ is a $\Lambda$-ring (Criterion 7), placing it in the domain of TC; the Weil form exists (Criterion 4); and the spectral precision (Criterion 5) confirms the algebraic structure encodes the correct information. Computing $\text{TC}(R_{\text{PCF}})$ explicitly is a concrete mathematical task.
@@ -137,8 +137,8 @@ The evidence: $R_{\text{PCF}}$ is a $\Lambda$-ring (Criterion 7), placing it in 
 
 The central open problem is whether the PCF channel is exhaustive: whether all spectral content of the Euler product passes through $R_{\text{PCF}}$ and $|\Omega| = 1/2$.
 
-\begin{Conjecture}[Maximality of $R_{\text{PCF}}$]
-$R_{\text{PCF}} = \mathbb{Z}[\varphi, \varphi^{-1}, 1/2]$ with $(\psi_p, \chi_5, \varphi^\nu)$ is the maximal $\Lambda$-ring compatible with $S_3$ geometry and Euler product structure. Equivalently: all spectral information of $\zeta(s)$ factors through the arithmetic of $\mathbb{Q}(\sqrt{5})$.
+\begin{Conjecture}[Maximality of $R_{\text{PCF}}$] \label{conj:maximal-ring}
+    $R_{\text{PCF}} = \mathbb{Z}[\varphi, \varphi^{-1}, 1/2]$ with $(\psi_p, \chi_5, \varphi^\nu)$ is the maximal $\Lambda$-ring compatible with $S_3$ geometry and Euler product structure. Equivalently: all spectral information of $\zeta(s)$ factors through the arithmetic of $\mathbb{Q}(\sqrt{5})$.
 \end{Conjecture}
 
 \textbf{Evidence:} 100\% confinement (Criterion 3)—if alternative pathways existed, one would expect leakage to larger rings. Sub-1\% precision (Criterion 5)—the operator captures dominant structure without supplementary channels. Canonical selection (Criterion 8)—the geometry determines $R_{\text{PCF}}$ uniquely. The Davenport--Heilbronn diagnostic (Section \ref{sec:exhaustiveness})—removing the Euler product produces off-line zeros, confirming the mechanism is necessary.
@@ -146,23 +146,23 @@ $R_{\text{PCF}} = \mathbb{Z}[\varphi, \varphi^{-1}, 1/2]$ with $(\psi_p, \chi_5,
 The two-layer analysis of Sections \ref{sec:orbit-classification}--\ref{sec:separation-mechanisms} yields a conditional result:
 
 \begin{Proposition}
-If the PCF mechanism of Section \ref{sec:tstar} exhaustively captures the relationship between the Euler product of $\zeta(s)$ and the spectral location of its non-trivial zeros, then all non-trivial zeros satisfy $\text{Re}(\rho) = 1/2$.
+    If the PCF mechanism of Section \ref{sec:tstar} exhaustively captures the relationship between the Euler product of $\zeta(s)$ and the spectral location of its non-trivial zeros, then all non-trivial zeros satisfy $\text{Re}(\rho) = 1/2$.
 \end{Proposition}
 
 \begin{proof}
-Assume for contradiction that $\rho_0 = \sigma_0 + it_0$ is a zero of $\zeta$ with $\sigma_0 \neq 1/2$, $t_0 > 0$.
+    Assume for contradiction that $\rho_0 = \sigma_0 + it_0$ is a zero of $\zeta$ with $\sigma_0 \neq 1/2$, $t_0 > 0$.
 
-\textit{Step 1 (Geometric layer).} By Theorem \ref{thm:orbit-classification}, $|O_G(\rho_0)| = 4$. The companion zero $1 - \bar{\rho}_0 = (1 - \sigma_0) + it_0$ also has $\text{Re} \neq 1/2$.
+    \textit{Step 1 (Geometric layer).} By Theorem \ref{thm:orbit-classification}, $|O_G(\rho_0)| = 4$. The companion zero $1 - \bar{\rho}_0 = (1 - \sigma_0) + it_0$ also has $\text{Re} \neq 1/2$.
 
-\textit{Step 2 (Arithmetic layer).} The chain of Section \ref{sec:canonical-chain} establishes that the Euler product produces exactly the value $|\Omega| = 1/2$ as the critical mediator, through the sequence: prime classification $\to$ golden ratio $\to$ Mersenne correspondence $\to$ $|\Omega| = 2^{-1}$. This value simultaneously determines the geometric modulus ($S_3$), enables the $\varphi \leftrightarrow 2$ coupling, enters the spectral formula $T^*$ through $\mu = 1/2$, and coincides with the orbit-collapse locus.
+    \textit{Step 2 (Arithmetic layer).} The chain of Section \ref{sec:canonical-chain} establishes that the Euler product produces exactly the value $|\Omega| = 1/2$ as the critical mediator, through the sequence: prime classification $\to$ golden ratio $\to$ Mersenne correspondence $\to$ $|\Omega| = 2^{-1}$. This value simultaneously determines the geometric modulus ($S_3$), enables the $\varphi \leftrightarrow 2$ coupling, enters the spectral formula $T^*$ through $\mu = 1/2$, and coincides with the orbit-collapse locus.
 
-\textit{Step 3 (Incompatibility).} A zero at $\sigma_0 \neq 1/2$ would require the arithmetic content of the Euler product to generate spectral information at a location disconnected from the PCF mechanism. The golden-Mersenne correspondence, verified to $10^{-14}$ across 51 primes, operates only through the mediator $2^{-1} = 1/2$. No analogous mechanism producing $\sigma_0 \neq 1/2$ exists within the framework.
+    \textit{Step 3 (Incompatibility).} A zero at $\sigma_0 \neq 1/2$ would require the arithmetic content of the Euler product to generate spectral information at a location disconnected from the PCF mechanism. The golden-Mersenne correspondence, verified to $10^{-14}$ across 51 primes, operates only through the mediator $2^{-1} = 1/2$. No analogous mechanism producing $\sigma_0 \neq 1/2$ exists within the framework.
 
-\textit{Step 4 ($T^*$ as witness).} The operator $T^*(n)$, constructed from the arithmetic invariants of Sections \ref{sec:axioms}--\ref{sec:tstar}, predicts zeros with mean error $< 1\%$ for $n > 50$. These predictions land exclusively on $\text{Re}(s) = 1/2$. The value $1/2$ is structurally locked by $|\Omega| = 1/2$ — no free parameter can redirect predictions to any other vertical line.
+    \textit{Step 4 ($T^*$ as witness).} The operator $T^*(n)$, constructed from the arithmetic invariants of Sections \ref{sec:axioms}--\ref{sec:tstar}, predicts zeros with mean error $< 1\%$ for $n > 50$. These predictions land exclusively on $\text{Re}(s) = 1/2$. The value $1/2$ is structurally locked by $|\Omega| = 1/2$ — no free parameter can redirect predictions to any other vertical line.
 
-\textit{Step 5 (Davenport--Heilbronn contrapositive).} The function $f(s)$ of Davenport--Heilbronn satisfies the geometric layer but lacks the arithmetic layer. Its off-line zeros confirm that the arithmetic layer is both necessary and operative: removing the Euler product permits the scenario ($\sigma_0 \neq 1/2$) that the PCF mechanism prevents.
+    \textit{Step 5 (Davenport--Heilbronn contrapositive).} The function $f(s)$ of Davenport--Heilbronn satisfies the geometric layer but lacks the arithmetic layer. Its off-line zeros confirm that the arithmetic layer is both necessary and operative: removing the Euler product permits the scenario ($\sigma_0 \neq 1/2$) that the PCF mechanism prevents.
 
-Therefore $\sigma_0 = 1/2$ for all non-trivial zeros.
+    Therefore $\sigma_0 = 1/2$ for all non-trivial zeros.
 \end{proof}
 
 \textbf{Logical status.} We assess Proposition \ref{prop:conditional-rh} with precision.
@@ -191,7 +191,7 @@ Three concrete directions:
 
 The question is now precisely formulated (Conjecture \ref{conj:maximal-ring}), computationally supported (eight criteria, all verified), and situated within established mathematical programs whose tools are available for its investigation.
 
-\subsection{The 3/2 Hypothesis}
+\subsection{The 3/2 Hypothesis} \label{sec:3-2-hypothesis}
 
 The construction achieves partial realization of the Hilbert-Pólya conjecture while revealing fundamental structural constraints. The operator $T^*$ is Hermitian and its spectrum approximates the Riemann zeros with mean error below 1\% for $n > 50$, reaching 0.02\% precision near $n \approx 5{,}000$. Exact correspondence appears obstructed by the dimensional constraints analyzed in Section \ref{sec:no-diagonal-theorem}.
 
@@ -227,13 +227,13 @@ The study of natural ratios, emphasized by the Renaissance as the ancestor of al
 The synthesis of the framework is not a single equation but a chain — a geometric rewriting of the zeta function — whose links were established across Sections \ref{sec:axioms}--\ref{sec:tstar}:
 
 \[
-\mathbb{C} \xrightarrow{\text{Euler product}} \text{Primes mod } 20 \xrightarrow{20 = 4 \times 5} \text{Pentagon} \xrightarrow{\text{diag/side}} \varphi \xrightarrow{z=\varphi y} E^3
+    \mathbb{C} \xrightarrow{\text{Euler product}} \text{Primes mod } 20 \xrightarrow{20 = 4 \times 5} \text{Pentagon} \xrightarrow{\text{diag/side}} \varphi \xrightarrow{z=\varphi y} E^3
 \]
 \[
-\xrightarrow{d=3} S_3 \xrightarrow{\hat{\Omega}} |P| \cdot |C| \cdot |F| = \tfrac{1}{2} \xrightarrow{\text{tower}} \varphi^\sigma \xrightarrow{\lambda = \ln 2 / \ln \varphi} \text{Mersenne } 2^p - 1
+    \xrightarrow{d=3} S_3 \xrightarrow{\hat{\Omega}} |P| \cdot |C| \cdot |F| = \tfrac{1}{2} \xrightarrow{\text{tower}} \varphi^\sigma \xrightarrow{\lambda = \ln 2 / \ln \varphi} \text{Mersenne } 2^p - 1
 \]
 \[
-\Longrightarrow \quad \text{Re}(\rho) = |\Omega| = \tfrac{1}{2}, \qquad t_n \approx T^*(n)
+    \Longrightarrow \quad \text{Re}(\rho) = |\Omega| = \tfrac{1}{2}, \qquad t_n \approx T^*(n)
 \]
 
 The order matters. The starting point is $\mathbb{C}$ and the Euler product $\zeta(s) = \prod_p (1 - p^{-s})^{-1}$, which encodes the Fundamental Theorem of Arithmetic. Each prime contributes exactly one factor to this product.
