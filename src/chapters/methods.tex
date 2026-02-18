@@ -1750,7 +1750,7 @@ The strange loop (Definition \ref{def:strange-loop}) ensures these three descrip
 
 The pentadimensional architecture is established (\S \ref{sec:pentadimensional}). Before constructing the operator (\S \ref{sec:tstar}), we trace how the spectral invariants it requires emerge from within the structures of \S \S \ref{sec:third-dimension}--\ref{sec:hausdorff}---and why these specific invariants, and no others.
 
-\subsubsection{The Arithmetic Problem and the Geometric Arena}
+\subsubsection{The Arithmetic Problem and the Geometric Arena} \label{sec:arithmetic-arena}
 
 In analytic number theory, the primes determine the Riemann spectrum through the Euler product $\zeta(s) = \prod_p (1 - p^{-s})^{-1}$, where each prime contributes exactly one factor. This is the arithmetic face of the identity $\sum 1/n^s = \prod_p (1 - p^{-s})^{-1}$---the equality between a sum over all integers (analytic) and a product over all primes (arithmetic) that constitutes the foundational duality of the theory. Using this product directly to construct an operator that predicts the spectrum of $\zeta$ would be circular (\S \ref{sec:circularity}): the primes enter $\zeta$ individually, and $\zeta$ produces the spectrum, so the construction would presuppose what it aims to derive.
 
@@ -1768,7 +1768,7 @@ is forced: Frobenius prohibits algebraic extension to dimension 3 (\S \ref{sec:m
 
 The triangle, once established, yields specific geometric data. The component norms satisfy $|P| \cdot |C| \cdot |F| = (1/\sqrt{3}) \cdot 1 \cdot (\sqrt{3}/2) = 1/2$ (Lemma \ref{lem:tripartite-norm}), the symmetry group has order $|S_3| = 6$ with rotational subgroup $|\mathrm{rot}(S_3)| = 3$, and the internal angle is $\pi/3$ (Proposition \ref{prop:internal-angle}). These quantities are purely geometric---no number theory, no primes, no $\zeta$ function. We now derive the spectral invariants formally.
 
-\begin{Proposition}[Basel-triangular identity] \label{prop:basel-triangular}
+\begin{Proposition}[Basel-triangular identity] \label{prop:basel-triangular} \label{sec:basel-triangular}
     Let $S_3$ be the symmetric group on 3 elements, with $|S_3| = 6$ and $|\mathrm{rot}(S_3)| = 3$. Let $\theta = \pi/3$ be the internal angle of the equilateral triangle (equivalently, the angular period of the $S_3$ action on the unit circle, Proposition \ref{prop:internal-angle}). Then:
     \[
         \frac{\pi^2/|S_3|}{\theta^2} = \frac{|\mathrm{rot}(S_3)|^2}{|S_3|} = \frac{3}{2}
