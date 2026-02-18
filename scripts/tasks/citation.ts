@@ -7,18 +7,19 @@ const CITATION_PATH = 'CITATION.cff';
 const ZENODO_PATH = '.zenodo.json';
 const CFFCONVERT_IMAGE = 'citationcff/cffconvert:latest';
 
-export function updateCitationDate(): void {
+export function updateCitationDate(version: string): void {
   if (!existsSync(CITATION_PATH)) {
     throw new Error(`CITATION.cff not found at ${CITATION_PATH}`);
   }
-  
+
   const content = readFileSync(CITATION_PATH, 'utf8');
   const citation = parse(content) as CitationFile;
-  
+
   citation['date-released'] = new Date().toISOString().split('T')[0];
-  
+  citation.version = version;
+
   writeFileSync(CITATION_PATH, stringify(citation));
-  console.log(`✓ Updated date-released to ${citation['date-released']}`);
+  console.log(`✓ Updated date-released to ${citation['date-released']} and version to ${version}`);
 }
 
 /**
@@ -91,7 +92,7 @@ export function generateZenodoJson(): void {
     // Preserve upload_type and publication_type if they exist
     upload_type: existingZenodo.upload_type || 'publication',
     publication_type: existingZenodo.publication_type || 'preprint',
-    
+
     // Preserve related_identifiers (not in CFF standard)
     related_identifiers: existingZenodo.related_identifiers || [
       {
@@ -110,7 +111,7 @@ export function generateZenodoJson(): void {
 
     // Preserve repository_url if it exists
     repository_url: existingZenodo.repository_url || generatedRaw.repository_url,
-    
+
     // Preserve language (not in CFF standard, but needed for Zenodo)
     language: existingZenodo.language || 'spa',
   };

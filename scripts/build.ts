@@ -18,29 +18,29 @@ function createReleaseConfig(version: string): ReleaseConfig {
 async function main(): Promise<void> {
   // Get version from command line argument (provided by release-it) or package.json
   let version = process.argv[2];
-  
+
   if (!version) {
     const packageJsonPath = new URL('../package.json', import.meta.url);
     const packageJson = JSON.parse(await import('fs').then(m => m.promises.readFile(packageJsonPath, 'utf8')));
     version = packageJson.version;
   }
-  
+
   if (!version) {
     console.error('Error: Version not provided and not found in package.json');
     process.exit(1);
   }
-  
+
   const config = createReleaseConfig(version);
-  
+
   try {
     console.log(`\n🔨 Building release artifacts for v${version}...\n`);
-    
+
     cleanupOldVersions(config.buildDir);
-    updateCitationDate();
+    updateCitationDate(config.version);
     generateZenodoJson();
     compilePDF(config);
     generateChecksums(config);
-    
+
     console.log(`\n✅ Build completed successfully for v${version}\n`);
     console.log(`Generated files:`);
     console.log(`  - ${config.outputPdf}`);
