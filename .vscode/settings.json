@@ -3,6 +3,7 @@
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latexindent.enabled": false,
     "latex-workshop.formatting.latex": "none",
+    "editor.formatOnSave": false,
     "[latex]": {
         "editor.defaultFormatter": "James-Yu.latex-workshop"
     }

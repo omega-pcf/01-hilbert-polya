@@ -1,4 +1,4 @@
-\label{sec:methods}
+\label{ch:methods}
 
 \subsection{Axiomatic Framework} \label{sec:axioms}
 
@@ -58,7 +58,7 @@ This overloading is intentional and reflects the bidirectional isomorphism $\mat
 
 This notational duality emphasizes that the PCF operator inhabits simultaneously the complex plane and its three-dimensional extension, unified by the golden coupling.
 
-\textbf{Axiom 4 (Distributed structure).} The operator factorizes:
+\textbf{Axiom 4 (Distributed structure).} \label{axiom:non-circular} The operator factorizes:
 $$
     \Omega(z,\sigma) = P(z,\sigma) \cdot C(z) \cdot F(z)
 $$
@@ -117,7 +117,7 @@ where $|P| = 1/\sqrt{3}$, $|C| = 1$, and $|F| = \sqrt{3}/2$ are the magnitudes o
     \end{enumerate}
 \end{Remark}
 
-\subsection{The Third Dimension Over $\mathbb{C}$} \label{sec:third-dimension}
+\subsection{The Third Dimension Over \texorpdfstring{$\mathbb{C}$}{C}} \label{sec:third-dimension}
 
 Here we demonstrate that there exists a vector extending $\mathbb{C}$ to a genuine three-dimensional geometric space $E^3$ that remains invariant to its two-dimensional counterpart in $\mathbb{C}$, departing from the axioms established in \S\ref{sec:axioms}.
 
@@ -355,14 +355,14 @@ The fundamental parameter $\varepsilon_0$ emerges from the specific geometric pr
 
 \begin{Observation}[Connection with zeta(2)] \label{obs:eps0-connection} \label{obs:basel}
 
-The factor 6 appears in three fundamental contexts:
-\begin{enumerate}
-    \item $\zeta(2) = \pi^2/6$ (Euler, 1734)
-    \item $\varepsilon_0 = \ln(\varphi)/(6\sqrt{3})$ (PCF coupling constant)
-    \item $|S_3| = 6$ (symmetry group order)
-\end{enumerate}
+    The factor 6 appears in three fundamental contexts:
+    \begin{enumerate}
+        \item $\zeta(2) = \pi^2/6$ (Euler, 1734)
+        \item $\varepsilon_0 = \ln(\varphi)/(6\sqrt{3})$ (PCF coupling constant)
+        \item $|S_3| = 6$ (symmetry group order)
+    \end{enumerate}
 
-The ratio 3/2 coincides with the asymptotic limit $T(n)/t_n \to 3/2$, suggesting deep structural connections between the tripartite geometry and the spectral properties of $\zeta(s)$.
+    The ratio 3/2 coincides with the asymptotic limit $T(n)/t_n \to 3/2$, suggesting deep structural connections between the tripartite geometry and the spectral properties of $\zeta(s)$.
 
 \end{Observation}
 
@@ -473,18 +473,18 @@ As established in \S\ref{sec:geometric-need}, the torus $\mathbb{T}_{\text{PCF}}
 This geometric arrangement encodes the tripartite $S_3$ symmetry of the system.
 
 \begin{Observation}[Non-Hermiticity as structural characteristic] \label{obs:non-hermiticity}
-The generator $\hat{\Omega}$ is normal but not Hermitian: its eigenvalues $\{\frac{1}{2}, \frac{\omega}{2}, \frac{\omega^2}{2}\}$ are complex. This non-Hermiticity is not a defect but a necessary consequence of the three-dimensional geometry $E^3$ projecting onto $\mathbb{C}$.
+    The generator $\hat{\Omega}$ is normal but not Hermitian: its eigenvalues $\{\frac{1}{2}, \frac{\omega}{2}, \frac{\omega^2}{2}\}$ are complex. This non-Hermiticity is not a defect but a necessary consequence of the three-dimensional geometry $E^3$ projecting onto $\mathbb{C}$.
 
 \end{Observation}
 
 \begin{Observation}[Eigenvalues and unit circle structure] \label{obs:eigenvalues-unit-circle}
-\begin{itemize}
-    \item $\lambda_0 = 1/2$ (real axis, analogous to 1)
-    \item $\lambda_1 = (1/2)\omega$ (120° rotation, analogous to $\omega$)
-    \item $\lambda_2 = (1/2)\omega^2$ (240° rotation)
-\end{itemize}
+    \begin{itemize}
+        \item $\lambda_0 = 1/2$ (real axis, analogous to 1)
+        \item $\lambda_1 = (1/2)\omega$ (120° rotation, analogous to $\omega$)
+        \item $\lambda_2 = (1/2)\omega^2$ (240° rotation)
+    \end{itemize}
 
-where $\omega = e^{2\pi i/3}$ are the primitive cube roots of unity associated with the Eisenstein lattice $\mathbb{Z}[\omega]$ (\S\ref{sec:complex-lattices}). The constant modulus $|\lambda_k| = 1/2$ for all $k$ establishes a scaled version of the rotational structure that generates $\mathbb{C}$.
+    where $\omega = e^{2\pi i/3}$ are the primitive cube roots of unity associated with the Eisenstein lattice $\mathbb{Z}[\omega]$ (\S\ref{sec:complex-lattices}). The constant modulus $|\lambda_k| = 1/2$ for all $k$ establishes a scaled version of the rotational structure that generates $\mathbb{C}$.
 
 \end{Observation}
 
@@ -594,25 +594,25 @@ The periodicities of the operator $\Omega(z,\sigma)$, combined with the torus to
 
 \begin{Observation}[Lattice structure parallel with \S\ref{sec:complex-lattices}] \label{obs:lattice-parallel}
 
-\textbf{Gaussian lattice in $\mathbb{C}$ (\S\ref{sec:complex-lattices}):} $$\Lambda_\Box = \mathbb{Z}[i] = \mathbb{Z} \cdot 1 \oplus \mathbb{Z} \cdot i$$
-\begin{itemize}
-    \item Generators: $\{1, i\}$
-    \item Relation: $i^2 = -1$
-    \item Periodicity: $i^4 = 1$
-    \item Angle: 90° (rectangular)
-    \item Associated torus: $T_1 = \mathbb{C}/\mathbb{Z}[i]$
-\end{itemize}
+    \textbf{Gaussian lattice in $\mathbb{C}$ (\S\ref{sec:complex-lattices}):} $$\Lambda_\Box = \mathbb{Z}[i] = \mathbb{Z} \cdot 1 \oplus \mathbb{Z} \cdot i$$
+    \begin{itemize}
+        \item Generators: $\{1, i\}$
+        \item Relation: $i^2 = -1$
+        \item Periodicity: $i^4 = 1$
+        \item Angle: 90° (rectangular)
+        \item Associated torus: $T_1 = \mathbb{C}/\mathbb{Z}[i]$
+    \end{itemize}
 
-\textbf{PCF lattice:} $$\Lambda_{\text{PCF}} = \mathbb{Z}M_{\text{PCF}} \oplus \mathbb{Z}(M_{\text{PCF}} \cdot i)$$
-\begin{itemize}
-    \item Generators: $\{M_{\text{PCF}}, M_{\text{PCF}} \cdot i\}$
-    \item Inherits $i^2 = -1$ from $\mathbb{C}$
-    \item Fundamental module: $M_{\text{PCF}} = (6\sqrt{3}\pi)/\ln(\varphi)$
-    \item Angle: 90° (rectangular)
-    \item Associated torus: $\mathbb{T}_{\text{PCF}} = \mathbb{C}/\Lambda_{\text{PCF}} \cong T^2$
-\end{itemize}
+    \textbf{PCF lattice:} $$\Lambda_{\text{PCF}} = \mathbb{Z}M_{\text{PCF}} \oplus \mathbb{Z}(M_{\text{PCF}} \cdot i)$$
+    \begin{itemize}
+        \item Generators: $\{M_{\text{PCF}}, M_{\text{PCF}} \cdot i\}$
+        \item Inherits $i^2 = -1$ from $\mathbb{C}$
+        \item Fundamental module: $M_{\text{PCF}} = (6\sqrt{3}\pi)/\ln(\varphi)$
+        \item Angle: 90° (rectangular)
+        \item Associated torus: $\mathbb{T}_{\text{PCF}} = \mathbb{C}/\Lambda_{\text{PCF}} \cong T^2$
+    \end{itemize}
 
-Both are \textbf{Gauss-type rectangular lattices}. The PCF lattice scales the standard Gaussian structure $\mathbb{Z}[i]$ by the topological module $M_{\text{PCF}}$, which encodes the operator's periodicities. Just as $\mathbb{C}/\mathbb{Z}[i]$ produces a torus with modular parameter $\tau = i$ (\S\ref{sec:moduli-lattice}), the quotient $\mathbb{C}/\Lambda_{\text{PCF}}$ produces the PCF torus $\mathbb{T}_{\text{PCF}}$ with the same modular structure.
+    Both are \textbf{Gauss-type rectangular lattices}. The PCF lattice scales the standard Gaussian structure $\mathbb{Z}[i]$ by the topological module $M_{\text{PCF}}$, which encodes the operator's periodicities. Just as $\mathbb{C}/\mathbb{Z}[i]$ produces a torus with modular parameter $\tau = i$ (\S\ref{sec:moduli-lattice}), the quotient $\mathbb{C}/\Lambda_{\text{PCF}}$ produces the PCF torus $\mathbb{T}_{\text{PCF}}$ with the same modular structure.
 
 \end{Observation}
 
@@ -641,14 +641,14 @@ Both are \textbf{Gauss-type rectangular lattices}. The PCF lattice scales the st
 \subsubsection{Lattice Structure}
 
 \begin{Observation}[Type of lattice] \label{obs:lattice-type}
-\begin{itemize}
-    \item \textbf{Type:} Gauss (rectangular/square)
-    \item \textbf{Generators:} $\{M_{\text{PCF}}, M_{\text{PCF}} \cdot i\}$
-    \item \textbf{Angle:} 90° between generators
-    \item \textbf{Fundamental cell:} Square with side $M_{\text{PCF}}$
-\end{itemize}
+    \begin{itemize}
+        \item \textbf{Type:} Gauss (rectangular/square)
+        \item \textbf{Generators:} $\{M_{\text{PCF}}, M_{\text{PCF}} \cdot i\}$
+        \item \textbf{Angle:} 90° between generators
+        \item \textbf{Fundamental cell:} Square with side $M_{\text{PCF}}$
+    \end{itemize}
 
-This rectangular structure emerges from the operator periodicities, despite the input having triangular (Eisenstein-type) $S_3$ symmetry. The duality between these structures is explored in \S\ref{sec:duality-ge}.
+    This rectangular structure emerges from the operator periodicities, despite the input having triangular (Eisenstein-type) $S_3$ symmetry. The duality between these structures is explored in \S\ref{sec:duality-ge}.
 
 \end{Observation}
 
@@ -727,12 +727,12 @@ with basis $\{M_{\text{PCF}}, M_{\text{PCF}} \cdot i\}$ and angle 90°—\textbf
 The transformation occurs through dimensional projection mediated by the golden ratio.
 
 \begin{Observation}[Isometric projection analogy] \label{obs:isometric-analogy}
-\begin{itemize}
-    \item \textbf{3D Input:} Eisenstein structure with triangular symmetry
-    \item \textbf{2D Output:} Gauss structure with rectangular symmetry
-    \item \textbf{Preservation:} All metric relations scale by $\varphi$
-    \item \textbf{Tying:} Bound to $\mathbb{C}$ via $\varphi$ and $i$ (not free geometric projection)
-\end{itemize}
+    \begin{itemize}
+        \item \textbf{3D Input:} Eisenstein structure with triangular symmetry
+        \item \textbf{2D Output:} Gauss structure with rectangular symmetry
+        \item \textbf{Preservation:} All metric relations scale by $\varphi$
+        \item \textbf{Tying:} Bound to $\mathbb{C}$ via $\varphi$ and $i$ (not free geometric projection)
+    \end{itemize}
 
 \end{Observation}
 
@@ -753,13 +753,13 @@ The transformation occurs through dimensional projection mediated by the golden 
 \end{Theorem}
 
 \begin{Observation}[Modular parameter tau equals i] \label{obs:tau-i}
-\begin{itemize}
-    \item $\tau = i$: Gauss lattice (square symmetry $\mathbb{Z}_4$)
-    \item $\tau = \omega$: Eisenstein lattice (hexagonal symmetry $\mathbb{Z}_6$)
-    \item $\tau_{\text{PCF}} = i$: Rectangular lattice with $\mathbb{Z}_4$ symmetry in $\Omega_{\text{PCF}}$
-\end{itemize}
+    \begin{itemize}
+        \item $\tau = i$: Gauss lattice (square symmetry $\mathbb{Z}_4$)
+        \item $\tau = \omega$: Eisenstein lattice (hexagonal symmetry $\mathbb{Z}_6$)
+        \item $\tau_{\text{PCF}} = i$: Rectangular lattice with $\mathbb{Z}_4$ symmetry in $\Omega_{\text{PCF}}$
+    \end{itemize}
 
-The choice $\tau_{\text{PCF}} = i$ privileges rectangular structure over hexagonal, although both coexist virtually in the invariant $|\Omega| = 1/2$.
+    The choice $\tau_{\text{PCF}} = i$ privileges rectangular structure over hexagonal, although both coexist virtually in the invariant $|\Omega| = 1/2$.
 
 \end{Observation}
 
@@ -785,30 +785,30 @@ The self-similarity of the system manifests through logarithmic equations relati
 
 \begin{Observation}[Nature of scale parameter sigma] \label{obs:sigma-nature}
 
-Each fixed value of $\sigma$ specifies a different function over the same domain $\mathbb{C}$. This family admits two equivalent interpretations:
-\begin{enumerate}
-    \item \textbf{Geometric:} Each $\sigma$ defines a circle in $\mathbb{C}$ with effective radius $R_\sigma = R_0\varphi^\sigma$
-    \item \textbf{Analytic:} Each $\sigma$ defines a function space $F_\sigma$ with characteristic dispersion and frequency
-\end{enumerate}
+    Each fixed value of $\sigma$ specifies a different function over the same domain $\mathbb{C}$. This family admits two equivalent interpretations:
+    \begin{enumerate}
+        \item \textbf{Geometric:} Each $\sigma$ defines a circle in $\mathbb{C}$ with effective radius $R_\sigma = R_0\varphi^\sigma$
+        \item \textbf{Analytic:} Each $\sigma$ defines a function space $F_\sigma$ with characteristic dispersion and frequency
+    \end{enumerate}
 
-The parameter $\sigma$ acts as an \textbf{observation lens} or \textbf{magnification level} allowing exploration of the PCF structure at different scales, while maintaining the fundamental property $|\Omega(z,\sigma)| = 1/2$ constant for all $\sigma$.
+    The parameter $\sigma$ acts as an \textbf{observation lens} or \textbf{magnification level} allowing exploration of the PCF structure at different scales, while maintaining the fundamental property $|\Omega(z,\sigma)| = 1/2$ constant for all $\sigma$.
 
-\textbf{Contrast with previous dimensional extensions:} In \S\ref{sec:third-dimension} (Axiom 3), we introduced $z = \varphi y$ as an additional spatial coordinate in $\mathbb{R}^3$; here, $\sigma$ does not add spatial dimension but rather scalar structure over the same space.
+    \textbf{Contrast with previous dimensional extensions:} In \S\ref{sec:third-dimension} (Axiom 3), we introduced $z = \varphi y$ as an additional spatial coordinate in $\mathbb{R}^3$; here, $\sigma$ does not add spatial dimension but rather scalar structure over the same space.
 
-This distinction is crucial: the operator inhabits a family of functions $\mathbb{C} \to \mathbb{C}$ (complex plane $\times$ scale), not $\mathbb{C} \times \mathbb{R} \times \mathbb{R}$ (three spatial dimensions).
+    This distinction is crucial: the operator inhabits a family of functions $\mathbb{C} \to \mathbb{C}$ (complex plane $\times$ scale), not $\mathbb{C} \times \mathbb{R} \times \mathbb{R}$ (three spatial dimensions).
 
 \end{Observation}
 
 \begin{Observation}[Re-parametrization parallel with \S\ref{sec:adjoint-spaces}] \label{obs:reparametrization}
-\begin{itemize}
-    \item \textbf{Minkowski spacetime $M^{1+1}$} (via Wick rotation $t \to it$)
-    \item \textbf{Hilbert space $L^2(\mathbb{C})$} (via functionalization $z \mapsto \delta_z$)
-    \item \textbf{Riemann sphere $\hat{\mathbb{C}}$} (via compactification)
-\end{itemize}
+    \begin{itemize}
+        \item \textbf{Minkowski spacetime $M^{1+1}$} (via Wick rotation $t \to it$)
+        \item \textbf{Hilbert space $L^2(\mathbb{C})$} (via functionalization $z \mapsto \delta_z$)
+        \item \textbf{Riemann sphere $\hat{\mathbb{C}}$} (via compactification)
+    \end{itemize}
 
-—each preserving the underlying structure while modifying physical interpretation, the family ${\Omega(z,\sigma) : \mathbb{C} \to \mathbb{C}}_{\sigma \in \mathbb{R}}$ re-parametrizes the PCF operator across scales while maintaining the fundamental invariant $|\Omega(z,\sigma)| = 1/2$ for all $\sigma$.
+    —each preserving the underlying structure while modifying physical interpretation, the family ${\Omega(z,\sigma) : \mathbb{C} \to \mathbb{C}}_{\sigma \in \mathbb{R}}$ re-parametrizes the PCF operator across scales while maintaining the fundamental invariant $|\Omega(z,\sigma)| = 1/2$ for all $\sigma$.
 
-The categorical coherence established in \S\ref{sec:adjoint-spaces}—that morphisms between adjoint spaces commute—finds its parallel here: the projection $\pi : E^3 \to \mathbb{C}$ and the scaling $z \mapsto \varphi^\sigma \cdot z$ commute with the operator structure.
+    The categorical coherence established in \S\ref{sec:adjoint-spaces}—that morphisms between adjoint spaces commute—finds its parallel here: the projection $\pi : E^3 \to \mathbb{C}$ and the scaling $z \mapsto \varphi^\sigma \cdot z$ commute with the operator structure.
 
 \end{Observation}
 
@@ -891,7 +891,7 @@ This logarithmic structure is essential for establishing correspondences between
 
 \subsubsection{The Logarithmic Coupling Constant}
 
-\begin{Definition}[Logarithmic coupling] \label{def:log-coupling}
+\begin{Definition}[Logarithmic coupling] \label{def:log-coupling} \label{def:lambda}
     The constant: $$\lambda := \frac{\ln 2}{\ln \varphi} = \frac{0.693147...}{0.481211...} \approx 1.440420088664040$$
 
     acts as the universal conversion factor between golden and binary scaling.
@@ -917,24 +917,24 @@ This conversion factor $\lambda$ will be crucial for establishing the Mersenne c
 
 \begin{Observation}[Comparison with classical lattices] \label{obs:lattice-comparison}
 
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|l|l|l|l|l|}
-        \hline
-        Lattice                     & Dimension & Operation      & Generator                    & Space          \\
-        \hline
-        $\mathbb{Z}[i]$             & 2D        & Addition       & $\{1, i\}$                   & $\mathbb{C}$   \\
-        $\Lambda_{3D}$              & 3D        & Addition       & $\{(1,0,0), (0,1,\varphi)\}$ & $\mathbb{R}^3$ \\
-        $\Lambda_{\text{vertical}}$ & 1D        & Multiplication & $\{\varphi\}$                & $\mathbb{R}_+$ \\
-        \hline
-    \end{tabular}
-    \caption{Comparison of lattice structures}
-    \label{tab:lattice-comparison}
-\end{table}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|l|l|l|l|l|}
+            \hline
+            Lattice                     & Dimension & Operation      & Generator                    & Space          \\
+            \hline
+            $\mathbb{Z}[i]$             & 2D        & Addition       & $\{1, i\}$                   & $\mathbb{C}$   \\
+            $\Lambda_{3D}$              & 3D        & Addition       & $\{(1,0,0), (0,1,\varphi)\}$ & $\mathbb{R}^3$ \\
+            $\Lambda_{\text{vertical}}$ & 1D        & Multiplication & $\{\varphi\}$                & $\mathbb{R}_+$ \\
+            \hline
+        \end{tabular}
+        \caption{Comparison of lattice structures}
+        \label{tab:lattice-comparison}
+    \end{table}
 
-\begin{Corollary}[Vertical lattice without additional dimension] \label{cor:vertical-no-dim}
-    The vertical lattice $\Lambda_{\text{vertical}} = \{r_0\varphi^n : n \in \mathbb{Z}\}$ operates over scales in $\mathbb{R}_+$, not over spatial coordinates. Therefore, it does not add dimension to the space $\mathbb{R}^3$ or $\mathbb{C}$, but rather parametrizes a discrete family of scales through multiplication by powers of $\varphi$.
-\end{Corollary}
+    \begin{Corollary}[Vertical lattice without additional dimension] \label{cor:vertical-no-dim}
+        The vertical lattice $\Lambda_{\text{vertical}} = \{r_0\varphi^n : n \in \mathbb{Z}\}$ operates over scales in $\mathbb{R}_+$, not over spatial coordinates. Therefore, it does not add dimension to the space $\mathbb{R}^3$ or $\mathbb{C}$, but rather parametrizes a discrete family of scales through multiplication by powers of $\varphi$.
+    \end{Corollary}
 
 \end{Observation}
 
@@ -1080,9 +1080,9 @@ We have two simultaneous exponential towers:
 
 \begin{Observation}[Dual role of fundamental constants] \label{obs:dual-role}
 
-The factor $d = 3$ similarly connects $S_3$ dimensionality with binary arithmetic structure: $$3 = 2^2 - 1 = M_2$$
+    The factor $d = 3$ similarly connects $S_3$ dimensionality with binary arithmetic structure: $$3 = 2^2 - 1 = M_2$$
 
-where $M_2$ is the first Mersenne prime. This is not coincidence—it reflects the deep arithmetic-geometric correspondence encoded in the PCF structure.
+    where $M_2$ is the first Mersenne prime. This is not coincidence—it reflects the deep arithmetic-geometric correspondence encoded in the PCF structure.
 
 \end{Observation}
 
@@ -1155,15 +1155,15 @@ The fractal structure emerges from the iterated function system (IFS) defined by
 
 \begin{Observation}[Spectral realization of geometric fractal] \label{obs:spectral-realization}
 
-This establishes the \textbf{first spectral realization} of a classical geometric fractal:
-\begin{itemize}
-    \item \textbf{Classical approach:} Geometric iteration (remove middle triangles recursively)
-    \item \textbf{PCF approach:} Algebraic generation (eigenvalues of $\hat{\Omega}$ define IFS)
-\end{itemize}
+    This establishes the \textbf{first spectral realization} of a classical geometric fractal:
+    \begin{itemize}
+        \item \textbf{Classical approach:} Geometric iteration (remove middle triangles recursively)
+        \item \textbf{PCF approach:} Algebraic generation (eigenvalues of $\hat{\Omega}$ define IFS)
+    \end{itemize}
 
-The self-similarity is not geometric or combinatorial (as in previous realizations) but rather \textbf{spectral isomorphism:} the eigenvalue structure of $\hat{\Omega}$ directly generates the fractal geometry through: $${\lambda_0, \lambda_1, \lambda_2} = \left\{\frac{1}{2},\frac{1}{2}\omega, \frac{1}{2}\omega^2\right\} \xrightarrow{\text{IFS}} \mathcal{A}_{\text{Sierpinski}}$$
+    The self-similarity is not geometric or combinatorial (as in previous realizations) but rather \textbf{spectral isomorphism:} the eigenvalue structure of $\hat{\Omega}$ directly generates the fractal geometry through: $${\lambda_0, \lambda_1, \lambda_2} = \left\{\frac{1}{2},\frac{1}{2}\omega, \frac{1}{2}\omega^2\right\} \xrightarrow{\text{IFS}} \mathcal{A}_{\text{Sierpinski}}$$
 
-This connection between linear algebra (matrix eigenvalues) and fractal geometry (Sierpinski triangle) is unprecedented.
+    This connection between linear algebra (matrix eigenvalues) and fractal geometry (Sierpinski triangle) is unprecedented.
 
 \end{Observation}
 
@@ -1465,7 +1465,11 @@ This tower structure is similar to Manin's $\{\psi^k\}$ with composition law $\p
         \frac{M_{\sigma+1}}{M_\sigma} = \frac{\varphi^{\sigma+1}M_{\text{PCF}}}{\varphi^\sigma M_{\text{PCF}}} = \varphi > 1
     \]
     constant for all $\sigma$. Exponential growth $\varphi^\sigma$ is stable recurrence, not runaway divergence or paradoxical collapse.
-\end{proof}
+ \end{proof}
+ 
+ \subsubsection{Topological Cyclic Homology (TC)} \label{sec:tc}
+ The obstruction identified in Theorem \ref{thm:no-diagonal} corresponds to the failure of the cyclotomic trace map in topological cyclic homology (TC) to lift to a Frobenius-invariant structure in dimension 3. The PCF framework replaces the missing algebraic trace with a geometric one: the $S_3$-invariant spectral function $T^*$, which serves the role of the global trace formula without requiring the algebraic closure that Frobenius forbids.
+
 
 \begin{Corollary}[Discrete parameter necessity] \label{cor:discrete-sigma}
     The scale parameter $\sigma \in \mathbb{Z}$ reflects:
@@ -1515,7 +1519,7 @@ These three together force a construction that \emph{receives} arithmetic (by i)
 
 These contractions are Galois-theoretic---forced by $\mathrm{Gal}(\mathbb{Q}(\zeta_{20})/\mathbb{Q})$ acting on roots of $\Phi_{20}$---not designed to evade Lawvere.
 
-\textbf{Kernel-Image Complementarity.} The functor $G$ of Grisales Herrera (\S \ref{sec:golden-primes}) crosses the Tarski decidability boundary (\S \ref{sec:foundations}, Theorem 5), transforming integer classes into pentagonal rotations within $\mathcal{E}_2$. What $G$ destroys and what $G$ preserves are complementary in a precise sense: the kernel of $G$---individual prime identity, additive structure, recursive self-application---is exactly the structure required for Lawvere's diagonal; the image of $G$---the multiplicative $\varphi$-cocycle, the classification into 4 golden values, the spectral invariant $|\Omega| = 1/2$---is exactly the structure required for $T^*$. No spectral parameter requires self-referential capacity; no diagonal construction can be built from multiplicative cocycles alone. The two requirement sets are disjoint.
+\textbf{Kernel-Image Complementarity.} The functor $G$ of Grisales Herrera (\S \ref{sec:golden-primes}) crosses the Tarski decidability boundary (\S \ref{sec:restrictions}, Theorem 5), transforming integer classes into pentagonal rotations within $\mathcal{E}_2$. What $G$ destroys and what $G$ preserves are complementary in a precise sense: the kernel of $G$---individual prime identity, additive structure, recursive self-application---is exactly the structure required for Lawvere's diagonal; the image of $G$---the multiplicative $\varphi$-cocycle, the classification into 4 golden values, the spectral invariant $|\Omega| = 1/2$---is exactly the structure required for $T^*$. No spectral parameter requires self-referential capacity; no diagonal construction can be built from multiplicative cocycles alone. The two requirement sets are disjoint.
 
 The expanding direction---growing lattice, increasing frequency, accumulating spectral content---is what ensures the construction is not vacuous: the contraction destroys self-referential capacity, but the expansion preserves and develops the spectral structure that \S \ref{sec:tstar} requires.
 
@@ -1646,7 +1650,7 @@ The constructions of \S \S \ref{sec:triple-iso}--\ref{sec:lawvere-circumvention}
 \begin{proof}
     Each transition satisfies:
     \begin{itemize}
-        \item $\mathbb{R} \to \mathbb{C}$: Algebraic extension via $i$, preserving field operations (\S \ref{sec:complex})
+        \item $\mathbb{R} \to \mathbb{C}$: Algebraic extension via $i$, preserving field operations (\S \ref{sec:complex-plane})
         \item $\mathbb{C} \to E^3$: Geometric extension via external coupling $z = \varphi y$ (Axiom \ref{axiom:coupling}, \S \ref{sec:third-dimension}), avoiding Frobenius obstruction by acting in ambient Euclidean space rather than internal field extension
         \item $E^3 \to M^4$: Toroidal closure $\mathcal{T}_{\text{PCF}} = S^1 \times S^1$ introduces temporal dimension through Wick rotation $t \to it$ (\S \ref{sec:spacetime-unfolding}, Theorem \ref{thm:dimensional-unfolding})
         \item $M^4 \to M^5_{\text{PCF}}$: Discrete scale dimension $\sigma \in \mathbb{Z}$ parametrizes tower through relation $M_\sigma = \varphi^\sigma M_{\text{PCF}}$, with metric term $(\varepsilon_0 c)^2 d(\ln\sigma)^2$ ensuring gauge invariance (\S \ref{sec:spacetime-unfolding}, Definition \ref{def:pcf-metric})
@@ -1796,7 +1800,7 @@ The triangle, once established, yields specific geometric data. The component no
 
 \textbf{Remark.} The relation $\sigma = d \cdot \mu$ is not a definition but a consequence of $S_3$ structure. The dimension $d$ counts eigenvalues; the modulus $\mu$ is forced by the tripartite norm (Lemma \ref{lem:tripartite-norm}); their product recovers the Basel-triangular ratio through the group-theoretic identity $|\mathrm{rot}(G)|^2/|G| = |\mathrm{rot}(G)|/[G:\mathrm{rot}(G)]$ for any finite group $G$.
 
-\textbf{The modulus $\mu = |\Omega| = 1/2$ and the Mersenne bridge.} Writing $|\Omega| = 2^{-1}$ reveals a second face of the same geometric value: through the logarithmic isomorphism $\lambda = \ln 2/\ln \varphi$ (\S \ref{sec:log-isomorphism}), this modulus bridges the golden tower $\varphi^\sigma$ to the Mersenne tower $2^p - 1$, verified to $<10^{-14}$ across 51 Mersenne primes (\S \ref{sec:mersenne-verification}). The primes reappear here---no longer as individual objects but as Mersenne exponents marking boundary resonances in the $\varphi$-tower. The same value that $S_3$ forces geometrically serves as coupling constant between exponential towers of different bases.
+\textbf{The modulus $\mu = |\Omega| = 1/2$ and the Mersenne bridge.} Writing $|\Omega| = 2^{-1}$ reveals a second face of the same geometric value: through the logarithmic isomorphism $\lambda = \ln 2/\ln \varphi$ (\S \ref{sec:log-isomorphism}), this modulus bridges the golden tower $\varphi^\sigma$ to the Mersenne tower $2^p - 1$, verified to $<10^{-14}$ across 51 Mersenne primes (Theorem \ref{thm:mersenne-correspondence}). The primes reappear here---no longer as individual objects but as Mersenne exponents marking boundary resonances in the $\varphi$-tower. The same value that $S_3$ forces geometrically serves as coupling constant between exponential towers of different bases.
 
 \textbf{The dimension $d = 3$.} From $S_3$ (\S \ref{sec:torus}), from the three eigenvalues of $\hat{\Omega}$ (\S \ref{sec:eigenvalues}), and from $3 = 2^2 - 1 = M_2$, the first Mersenne prime (Observation \ref{obs:mersenne-1}). The dimension where the construction lives is simultaneously a geometric fact and an arithmetic one.
 
@@ -1983,7 +1987,7 @@ The correspondence between the continuous golden tower and the discrete Mersenne
     \log_\varphi(2^{p_\sigma}) = \sigma \cdot \lambda + \log_\varphi(3)
 \]
 
-where $\lambda = \ln(2)/\ln(\varphi) \approx 1.440$ is the golden-binary conversion factor (Definition \ref{def:lambda}). This correspondence was verified to precision $< 10^{-14}$ across 51 Mersenne primes spanning over 25 million orders of magnitude (Proposition \ref{prop:mersenne-verification}). The critical mediator is $|\Omega| = 1/2 = 2^{-1}$ (Proposition \ref{prop:mersenne-mediator}), simultaneously the geometric modulus from $S_3$ symmetry (\S \ref{sec:critical-mediator}) and the binary coupling enabling the $\varphi \leftrightarrow 2$ correspondence.
+where $\lambda = \ln(2)/\ln(\varphi) \approx 1.440$ is the golden-binary conversion factor (Definition \ref{def:lambda}). This correspondence was verified to precision $< 10^{-14}$ across 51 Mersenne primes spanning over 25 million orders of magnitude (Theorem \ref{thm:mersenne-correspondence}). The critical mediator is $|\Omega| = 1/2 = 2^{-1}$ (Proposition \ref{prop:mersenne-mediator}), simultaneously the geometric modulus from $S_3$ symmetry (\S \ref{sec:critical-mediator}) and the binary coupling enabling the $\varphi \leftrightarrow 2$ correspondence.
 
 Mersenne primes $M_p = 2^p - 1$ (for prime $p$) thus occupy doubly distinguished positions: they sit at generational transitions $M_p \in G_{p-1}$ as maximal element, $M_p + 1 = 2^p \in G_p$ as initial element; and they mark resonance points where the continuous golden tower and discrete binary tower achieve closest alignment.
 
@@ -2013,7 +2017,7 @@ Mersenne primes $M_p = 2^p - 1$ (for prime $p$) thus occupy doubly distinguished
     All tabulated Mersenne primes satisfy $M_p \mod 20 \in \{3, 7, 11\}$, a strict subset of the 8 Golden Prime classes. In the classification of Grisales Herrera (2025), these residues correspond to specific golden function values: class 7 maps to $G(p) \in \{\varphi, -\varphi\}$ (the golden ratio itself), class 11 maps to $G(p) = \varphi^{-1}$, and class 3 maps to $G(p) = -\varphi$. The concentration of Mersenne primes in classes associated with $\varphi$ and $\varphi^{-1}$ (rather than distributing uniformly across all 8 classes) reflects deep arithmetic structure linking Mersenne primes to golden ratio geometry---consistent with the golden-Mersenne correspondence of \S \ref{sec:mersenne}.
 \end{Observation}
 
-\begin{Observation}[Fundamental constant $d = 3 = M_2$] \label{obs:mersenne-1}
+\begin{Observation}[Fundamental constant $d = 3 = M_2$] \label{obs:mersenne-1} \label{obs:mersenne-d3}
     The PCF dimension $d = 3$ (from $S_3$ symmetry) is itself the first Mersenne prime: $3 = 2^2 - 1 = M_2$. This is not coincidence but reflects the arithmetic-geometric correspondence encoded in PCF: the ternary structure of the operator and the binary structure of prime arithmetic are linked through the Mersenne condition $2^p - 1 = \text{prime}$, with the simplest instance yielding the fundamental PCF dimension.
 \end{Observation}
 
@@ -2048,7 +2052,7 @@ We now establish the 8-fold classification of primes modulo 20. This depends on 
     The units are $\{1,3,7,9,11,13,17,19\}$, exactly 8 classes.
 \end{proof}
 
-\begin{Theorem}[Golden Prime Symmetry] \label{thm:golden-prime-symmetry}
+\begin{Theorem}[Golden Prime Symmetry] \label{thm:golden-prime-symmetry} \label{thm:decimal-period} \label{prop:golden-prime-symmetry}
     The classification of primes into 8 classes modulo 20 is governed by the golden ratio through the function:
 
     \[
@@ -2160,7 +2164,7 @@ No step in this decomposition involves a choice: the pentagon forces $\varphi$ (
     the smallest subring of $\mathbb{R}$ containing the golden ratio $\varphi$, its inverse $\varphi^{-1} = \varphi - 1$, and $1/2 = |\Omega|$ (the critical modulus from $S_3$ symmetry, \S \ref{sec:critical-mediator}).
 \end{Definition}
 
-\begin{Proposition}[Arithmetic confinement and cocycle triviality] \label{prop:cocycle-triviality}
+\begin{Proposition}[Arithmetic confinement and cocycle triviality] \label{prop:cocycle-triviality} \label{prop:arithmetic-confinement}
     \begin{enumerate}
         \item $G(a) \in \mathbb{Z}[\varphi]^* = \{\pm\varphi^n : n \in \mathbb{Z}\}$ for all $a \in (\mathbb{Z}/20\mathbb{Z})^*$.
 
@@ -2195,7 +2199,7 @@ $R_{\text{PCF}}$ is the smallest ring containing all values needed by the PCF fr
 
 These constitute a $\Lambda$-ring structure in the sense of Borger \cite{Borger2009}, making $\text{Spec}(R_{\text{PCF}})$ a scheme over $\mathbb{F}_1$ via descent data \cite{Manin2013}. In Borger's formulation, ``a $\lambda$-structure on a ring $A$ is descent data on $\text{Spec } A$ from $\mathbb{Z}$ to $\mathbb{F}_1$'' \cite{Borger2009}. The ring $R_{\text{PCF}}$ thus provides the algebraic foundation for interpreting the PCF framework within absolute geometry. The full development of this interpretation---including the Weil intersection form, cohomological gap, and research roadmap---is given in \S \ref{sec:f1-geometric}.
 
-\subsubsection{Geometric Foundation: Pentagon and $\varphi$ Emergence} \label{sec:pentagon}
+\subsubsection{Geometric Foundation: Pentagon and \texorpdfstring{$\varphi$}{phi} Emergence} \label{sec:pentagon}
 
 Having established that $\varphi(20) = 8$, that $20 = 4 \times 5$, and that $32 = 2^5 = M_5 + 1$, we now show that the pentagon is the geometric origin of $\varphi = (1+\sqrt{5})/2$. The pentagonal structure \emph{explains} why the numbers $5, 10, 20, 32$ appear throughout the preceding arithmetic---and why the golden ratio, which entered the PCF axiomatically through $z = \varphi y$ (Axiom \ref{axiom:coupling}, \S \ref{sec:third-dimension}), is not an arbitrary choice but a geometric necessity.
 
@@ -2284,7 +2288,7 @@ The logarithmic kernel $\ln(\mu n + \sigma) = \ln(n/2 + 3/2)$ in $T^*$ is not a 
 
 The Artin-Golden decomposition (Proposition \ref{prop:artin-golden}) makes this connection precise: the magnitude $|G(a)| = \varphi^{-\chi_5(a)}$ separates the Legendre symbol (arithmetic splitting) from the sign factor (group-theoretic coset position), with both components valued in the unit group of $\mathbb{Z}[\varphi] \subset R_{\text{PCF}}$. The spectral bridge from primes to zeros thus passes through a ring with canonical $\mathbb{F}_1$-descent structure (\S \ref{sec:f1-geometric}).
 
-\subsection{Construction of the $T^*$ Operator} \label{sec:tstar-construction}
+\subsection{Construction of the \texorpdfstring{$T^*$}{T*} Operator} \label{sec:tstar-construction}
 
 \subsubsection{Two-Regime Structure} \label{sec:two-regime}
 
@@ -2299,16 +2303,20 @@ Empirical analysis (\S \ref{ch:results}) reveals two spectral regimes. For $n \l
     \item This transition mirrors \S \ref{sec:pentadimensional}'s dimensional progression: the passage from compact toroidal structure ($\sigma = 0,1$) dominated by $S_3$ triangular geometry to extended spacetime ($\sigma \geq 5$) where the full pentadimensional synthesis operates. In $T^*$, the corresponding passage is from a regime where discrete arithmetic corrections ($C_M, M_G$) are essential to one where continuous $\varphi$-mediated asymptotics dominate
 \end{enumerate}
 
-\subsubsection{The Complete Operator} \label{sec:non-hermitian}
+\subsubsection{The Complete Operator} \label{sec:non-hermitian} \label{sec:eigenvalues}
 
-The generator $\hat{\Omega}$ is normal but not Hermitian (\S \ref{sec:non-hermitian}): its eigenvalues $\{1/2, \omega/2, \omega^2/2\}$ are complex. This non-Hermiticity arises from the dimensional obstruction identified in \S \S \ref{sec:manin}--\ref{sec:connes} and formalized as the 3/2 hypothesis in \S \ref{sec:discussion}: Frobenius prohibits a division algebra in dimension 3, so the generator cannot be self-adjoint in $\mathbb{C}^3$. The real modulus $|\Omega| = 1/2$ survives the projection $E^3 \to \mathbb{C} \to \mathbb{R}$ (\S \ref{sec:primes-to-invariants}) and enters $T^*$ as the parameter $\mu$. Hermiticity is then recovered at two levels: through symmetrization of the integral kernel $K_{\text{PCF}}$ (\S \ref{sec:hausdorff}), and through the spectral construction $\tilde{H}_{\text{PCF}} = \sum T^*(n)|\psi_n\rangle\langle\psi_n|$ with $T^*(n) \in \mathbb{R}$ (\S \ref{ch:results}), restoring the self-adjointness required by Hilbert-Pólya. The following definition makes this concrete.
+\begin{Proposition}[Eigenvalues of $\hat{\Omega}$] \label{prop:eigenvalues}
+     The generator $\hat{\Omega}$ is normal but not Hermitian (\S \ref{sec:non-hermitian}): its eigenvalues $\{1/2, \omega/2, \omega^2/2\}$ are complex.
+ \end{Proposition}
+ 
+ This non-Hermiticity arises from the dimensional obstruction identified in \S \S \ref{sec:manin}--\ref{sec:connes} and formalized as the 3/2 hypothesis in \S \ref{sec:discussion}: Frobenius prohibits a division algebra in dimension 3, so the generator cannot be self-adjoint in $\mathbb{C}^3$. The real modulus $|\Omega| = 1/2$ survives the projection $E^3 \to \mathbb{C} \to \mathbb{R}$ (\S \ref{sec:primes-to-invariants}) and enters $T^*$ as the parameter $\mu$. Hermiticity is then recovered at two levels: through symmetrization of the integral kernel $K_{\text{PCF}}$ (\S \ref{sec:hausdorff}), and through the spectral construction $\tilde{H}_{\text{PCF}} = \sum T^*(n)|\psi_n\rangle\langle\psi_n|$ with $T^*(n) \in \mathbb{R}$ (\S \ref{ch:results}), restoring the self-adjointness required by Hilbert-Pólya. The following definition makes this concrete.
 
 \begin{Definition}[$T^*$ operator] \label{def:tstar}
     The operator $T^*: \mathbb{N} \to \mathbb{R}^+$ is defined in two regimes, with $\mu = 1/2$, $\sigma = 3/2$ the PCF spectral invariants (\S \ref{sec:critical-mediator}) throughout.
 
-    \textbf{Regime I} ($n \leq 30$, structural). Compute $k := \lfloor \log_2(n) \rfloor$, $\phi := (n - 2^k)/2^k$, and set:
+    \textbf{Regime I} ($n \leq 30$, structural). Compute $k := \lfloor \log_2(n) \rfloor$, $\xi := (n - 2^k)/2^k$, and set:
     \begin{align*}
-        \beta(n)  & := 2^{-k}(1 - \phi) + 2^{-(k+1)}\phi         & \text{(adaptive, \S \ref{sec:hypercube})} \\
+        \beta(n)  & := 2^{-k}(1 - \xi) + 2^{-(k+1)}\xi           & \text{(adaptive, \S \ref{sec:hypercube})} \\
         \alpha(n) & := (59/40)/(1 + \log_2(n+1)/20)                                                          \\
         c(n)      & := 2 + \alpha(n)/(1 + \beta(n) \cdot \ln(n))
     \end{align*}
@@ -2398,7 +2406,7 @@ We now present the complete dependency structure of the $T^*$ operator, demonstr
         1     & Hypercube $H_k$     & $2^k$ vertices                             & \S \ref{sec:hypercube}           & Discrete tower (\S \ref{sec:pentadimensional})                              & None (axiom)                          \\
         2     & Generations $G_k$   & $|G_k| = 2^k$                              & \S \ref{sec:hypercube}           & $k = \lfloor\log_2 n\rfloor$                                                & Level 1                               \\
         3     & Adaptive $\beta$    & $\beta(n) = 2^{-k}$                        & \S \ref{sec:hypercube}           & $\beta=1/8$ base (\S \ref{sec:torus}, \S \ref{sec:hausdorff})               & Levels 1--2                           \\
-        4     & Mersenne $M_p$      & $2^p - 1$                                  & \S \ref{sec:mersenne-boundaries} & \S \ref{sec:mersenne} correspondence                                  & Level 2                               \\
+        4     & Mersenne $M_p$      & $2^p - 1$                                  & \S \ref{sec:mersenne-boundaries} & \S \ref{sec:mersenne} correspondence                                        & Level 2                               \\
         5     & 8 classes           & $\varphi(20) = 8 = 2^3$                    & \S \ref{sec:golden-primes}       & Grisales Herrera (2025)                                                     & Level 2 ($H_3$)                       \\
         6     & Pentagon $\varphi$  & diag/side $= \varphi$                      & \S \ref{sec:pentagon}            & \S \ref{sec:third-dimension} ($z=\varphi y$), \S \ref{sec:pentadimensional} & Level 5 ($20=4\times5$)               \\
         7     & PCF $\mu$, $\sigma$ & $\mu=1/2, \sigma=3/2$                      & \S \ref{sec:spectral-bridge}     & \S \ref{sec:critical-mediator}, Prop. \ref{prop:mersenne-mediator}          & None (\S \ref{sec:critical-mediator}) \\
@@ -2417,6 +2425,6 @@ At base: the PCF axioms (\S \ref{sec:axioms}) establish $z = \varphi y$, $i^2 = 
 
 From this established structure, the hypercube stratification (\S \ref{sec:hypercube}) introduces the discrete arithmetic counterpart of the golden tower. Mersenne primes (\S \ref{sec:mersenne-boundaries}) mark boundary resonances. The number $8 = 2^3 = \varphi(20)$ encodes the binary-ternary duality---simultaneously the hypercube $H_3$, the Golden Prime classes (Grisales Herrera, 2025), the unit group $\mathbb{Z}_2^3 \cong \mathbb{Z}^*_{20}$, and the PCF parameter $\beta = 1/8$. The pentagonal threshold $2^5 = 32$, adjacent to $M_5 = 31$, marks the transition from triangular ($d=3$) to pentagonal ($d=5$) regime. The PCF spectral invariants $\mu$, $\sigma$ anchor the logarithmic kernel.
 
-The operator $T^*$ thus completes the spectral extraction problem posed in \S \ref{sec:primes-to-invariants}: where the PCF geometric framework (\S \S \ref{sec:axioms}--\ref{sec:pentadimensional}) established dimensional structure, tower dynamics, and spectral invariants, the $T^*$ operator synthesizes all components into a single formula computable in $O(\log n)$ that predicts Riemann zero heights with sub-1\% error for $n > 100$, validated to $n = 131{,}072$ (\S \ref{ch:results}).
+The operator $T^*$ thus completes the spectral extraction problem posed in \S \ref{sec:primes-to-invariants}: where the PCF geometric framework (\S \S \ref{sec:axioms}--\ref{sec:pentadimensional}) established dimensional structure, tower dynamics, and spectral invariants, the $T^*$ operator synthesizes all components into a single formula computable in $O(\log n)$ that predicts Riemann zero heights with sub-1\% error for $n > 100$, validated to $n = 131{,}072$ (\S \ref{ch:results}). The construction is non-circular: no step in the chain pentagon $\to \varphi \to \chi_5 \to |\Omega| \to T^*$ references $\zeta(s)$ or its zeros.
 
 Dual-regime behavior with transition at pentagonal threshold $n \approx 30$ adjacent to $M_5 = 31$. Asymptotic convergence $T^*(n)/t_n \to 1$ via Lemma \ref{lem:coeff-conv} and Theorem \ref{thm:asymptotic-conv}. Complexity $O(\log n)$ via Theorem \ref{thm:complexity}. Sextuple convergence of $8 = 2^3$ from six independent domains (Proposition \ref{prop:sextuple-convergence}). Section \ref{ch:results} validates with high-precision zeros.

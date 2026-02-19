@@ -14,8 +14,8 @@
 %     None
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{sigma}[2025/10/25
-v1.8 Document class for ``Symmetry, Integrability and Geometry: Methods and Applications'']
+\ProvidesClass{sigma}[2026/02/18
+  v1.9 Document class for ``Symmetry, Integrability and Geometry: Methods and Applications'']
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions
 \LoadClass[fleqn,11pt,twoside]{article}
@@ -42,9 +42,10 @@ v1.8 Document class for ``Symmetry, Integrability and Geometry: Methods and Appl
     bookmarksnumbered%
   ]{hyperref}
   %%?? \def\pdfBorderAttrs{/Border [0 0 0] } % No border arround Links
-%  \usepackage{thumbpdf}
+  %  \usepackage{thumbpdf}
 \else
   \usepackage[hypertex]{hyperref}
+
 \fi
 
 %\let\WriteBookmarks\relax
@@ -66,10 +67,10 @@ v1.8 Document class for ``Symmetry, Integrability and Geometry: Methods and Appl
 % Titlepage
 
 \newcommand{\FirstPageHeading}[1]{\thispagestyle{empty}%
-\noindent\raisebox{24pt}[0pt][0pt]{\makebox[\textwidth]{\protect\footnotesize \sf
-Symmetry, Integrability and Geometry: Methods and Applications
-\hfill  SIGMA \Volume \ (\PublicationYear), \PaperNumber,
-\pageref*{\ArticleLabel-lp} pages}}\par}
+  \noindent\raisebox{24pt}[0pt][0pt]{\makebox[\textwidth]{\protect\footnotesize \sf
+      Symmetry, Integrability and Geometry: Methods and Applications
+      \hfill  SIGMA \Volume \ (\PublicationYear), \PaperNumber,
+      \pageref*{\ArticleLabel-lp} pages}}\par}
 
 \newcommand{\LastPageEnding}{\label{\ArticleLabel-lp}\newpage}
 
@@ -88,16 +89,16 @@ Symmetry, Integrability and Geometry: Methods and Applications
 \newcommand{\URLaddressD}[1]{\ifthenelse{\equal{#1}{}}{}{\par\noindent {$\phantom{^{{\rm a)}}}$~{\rm URL:} }{\tt  #1} \par}}
 %\newcommand{\URLaddressDD}[1]{\ifthenelse{\equal{#1}{}}{}{\par\noindent {$\phantom{\dag^1}$~\rm URL: }{\tt  #1} \par}}
 \newcommand{\ArticleDates}[1]{\vspace{2mm}\par\noindent {\small {\rm #1} \par
-\noindent %{\rm Original article is available at}
-{\href{https://doi.org/10.3842/SIGMA.\PublicationYear.\PaperNumber}{https://doi.org/10.3842/SIGMA.\PublicationYear.\PaperNumber}
-}} \par}
+    \noindent %{\rm Original article is available at}
+    {\href{https://doi.org/10.3842/SIGMA.\PublicationYear.\PaperNumber}{https://doi.org/10.3842/SIGMA.\PublicationYear.\PaperNumber}
+    }} \par}
 \newcommand{\Abstract}[1]{\vspace{6mm}\par\noindent\hspace*{10mm}
-\parbox{140mm}{\small {\bf Abstract.} #1}\par}
+  \parbox{140mm}{\small {\bf Abstract.} #1}\par}
 
 \newcommand{\Keywords}[1]{\vspace{3mm}\par\noindent\hspace*{10mm}
-\parbox{140mm}{\small {\it Key words:} \rm #1}\par}
+  \parbox{140mm}{\small {\it Key words:} \rm #1}\par}
 \newcommand{\Classification}[1]{\vspace{3mm}\par\noindent\hspace*{10mm}
-\parbox{140mm}{\small {\it 2020 Mathematics Subject Classification:} \rm #1}\vspace{3mm}\par}
+  \parbox{140mm}{\small {\it 2020 Mathematics Subject Classification:} \rm #1}\vspace{3mm}\par}
 
 \newcommand{\ShortArticleName}[1]{\renewcommand{\oddhead}{#1}}
 \newcommand{\AuthorNameForHeading}[1]{\renewcommand{\evenhead}{#1}}
@@ -105,11 +106,11 @@ Symmetry, Integrability and Geometry: Methods and Applications
 % Set head and foot
 
 \renewcommand{\@evenhead}{
-\hspace*{-3pt}\raisebox{-15pt}[\headheight][0pt]{\vbox{\hbox to \textwidth
-{\thepage \hfil \evenhead}\vskip4pt \hrule}}}
+  \hspace*{-3pt}\raisebox{-15pt}[\headheight][0pt]{\vbox{\hbox to \textwidth
+      {\thepage \hfil \evenhead}\vskip4pt \hrule}}}
 \renewcommand{\@oddhead}{
-\hspace*{-3pt}\raisebox{-15pt}[\headheight][0pt]{\vbox{\hbox to \textwidth
-{\oddhead \hfil \thepage}\vskip4pt\hrule}}}
+  \hspace*{-3pt}\raisebox{-15pt}[\headheight][0pt]{\vbox{\hbox to \textwidth
+      {\oddhead \hfil \thepage}\vskip4pt\hrule}}}
 \renewcommand{\@evenfoot}{}
 \renewcommand{\@oddfoot}{}
 %\renewcommand{\@evenfoot}{\footnotesize \sf \supplementTitle \hfil}
@@ -143,12 +144,12 @@ Symmetry, Integrability and Geometry: Methods and Applications
 % Defines the \numberwithin command from AMS-LaTeX
 %
 \def\numberwithin#1#2{\@ifundefined{c@#1}{\@nocounterr{#1}}{%
-  \@ifundefined{c@#2}{\@nocnterr{#2}}{%
-  \@addtoreset{#1}{#2}%
-  \toks@\@xp\@xp\@xp{\csname the#1\endcsname}%
-  \@xp\xdef\csname the#1\endcsname
-    {\@xp\@nx\csname the#2\endcsname
-     .\the\toks@}}}}
+    \@ifundefined{c@#2}{\@nocnterr{#2}}{%
+      \@addtoreset{#1}{#2}%
+      \toks@\@xp\@xp\@xp{\csname the#1\endcsname}%
+      \@xp\xdef\csname the#1\endcsname
+      {\@xp\@nx\csname the#2\endcsname
+        .\the\toks@}}}}
 
 % Proof should be boldface
 %
@@ -156,7 +157,7 @@ Symmetry, Integrability and Geometry: Methods and Applications
   \normalfont
   \topsep6\p@\@plus6\p@ \trivlist
   \item[\hskip\labelsep\textbf{%
-    #1}\@addpunct{\bf .}]\ignorespaces
+                #1}\@addpunct{\bf .}]\ignorespaces
 }{%
   \qed\endtrivlist
 }
@@ -176,25 +177,25 @@ Symmetry, Integrability and Geometry: Methods and Applications
 \newtheorem{conjecture}{Conjecture}
 \newtheorem*{conjecture*}{Conjecture}
 {\theoremstyle{definition} \newtheorem{definition}{Definition}
-\newtheorem*{definition*}{Definition}
-\newtheorem{example}{Example}
-\newtheorem*{example*}{Example}
-\newtheorem{remark}{Remark}
-\newtheorem*{remark*}{Remark}
-\newtheorem{note}{Note}
-\newtheorem*{note*}{Note}
+  \newtheorem*{definition*}{Definition}
+  \newtheorem{example}{Example}
+  \newtheorem*{example*}{Example}
+  \newtheorem{remark}{Remark}
+  \newtheorem*{remark*}{Remark}
+  \newtheorem{note}{Note}
+  \newtheorem*{note*}{Note}
 }
 
 % Vertical space in tables
 \def\tsep#1{%
   {\@tempdima=\ht\strutbox\advance\@tempdima #1
-   \vrule height \@tempdima depth 0pt width 0pt\nobreak\hspace{0pt}%
-  }%
+      \vrule height \@tempdima depth 0pt width 0pt\nobreak\hspace{0pt}%
+    }%
 }
 \def\bsep#1{%
   {\@tempdima=\dp\strutbox \advance\@tempdima #1
-   \nobreak\hspace{0pt}\vrule height 0pt depth \@tempdima width 0pt
-  }%
+      \nobreak\hspace{0pt}\vrule height 0pt depth \@tempdima width 0pt
+    }%
 }
 
 

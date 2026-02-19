@@ -76,7 +76,7 @@ Vitruvius's modulus has millennial precedents that fade into antiquity. The \tex
 
 The paintings of the Theban necropolis (tomb of Menna, c. 1400 BC) show the \textit{harpedonaptae} at work, and the foundation ceremony of temples included the pharaoh stretching ropes with the goddess Seshat.
 
-What we do know is that the Egyptian proto-trigonometric system was combined with a system that used proportions of the human body (digit, palm, hand, fist, foot, cubit) as units of measure. These proportions approximate the golden ratio $\phi \approx 1.618$: the foot/fist ratio is approximately $\phi^2$, the cubit/palm ratio approximates $\phi$. The human body naturally exhibits these proportions and therefore they were the most obvious units of measure both for them and for many other ancient cultures.
+What we do know is that the Egyptian proto-trigonometric system was combined with a system that used proportions of the human body (digit, palm, hand, fist, foot, cubit) as units of measure. These proportions approximate the golden ratio $\varphi \approx 1.618$: the foot/fist ratio is approximately $\varphi^2$, the cubit/palm ratio approximates $\varphi$. The human body naturally exhibits these proportions and therefore they were the most obvious units of measure both for them and for many other ancient cultures.
 
 This same kind of measurement system was used by Vitruvius and passed on from him to future generations that further developed his methods.
 
@@ -136,148 +136,148 @@ Mathematical logic itself adopted binary frameworks. First-order logic quantifie
 
 This limitation connects deeply with the self-referential paradoxes analyzed by Lawvere (1969) and Yanofsky (2003) \cite{Lawvere1969, Yanofsky2003} (\S 1.3.2). As established in \S 1.3.2, paradoxes arise from binary diagonal structures $f: T \times T \to Y$, where the construction $g(s) = \text{NOT}(f(s,s))$ creates self-reference through binary auto-application. The fundamental pairing in $\mathbb{C}$—$\text{Real}(z)$ and $\text{Im}(z)$, or equivalently the two coordinates $(x,y)$ in $x + iy$—manifests precisely this binary structure. Computational complexity theory mirrors this constraint: the P vs NP distinction, the relationship between classical and quantum computing (P vs BQP) reflect limitations inherent in binary self-referential structures. Cryptographic protocols based on elliptic curves, which underpin modern secure communication, depend fundamentally on computational hardness assumptions tied to structure in $\mathbb{C}$—specifically, the discrete logarithm problem in elliptic curve groups $\mathbb{C}/\Lambda$.
 
-Where three-dimensional structure appears in twentieth-century physics—as in $SU(3)$ color symmetry in quantum chromodynamics, three-dimensional spatial coordinates in relativity, or three-generation structure in particle physics—it manifests geometrically rather than algebraically. These structures operate through external transformations (rotation groups $SO(3)$, Lie algebras $su(3)$, Lorentz boosts) acting on complex vector spaces, not through internal multiplication within an extended number system. The geometric three-dimensional systems catalogued in \S 2.1.12 (projective geometry, isometric projection, crystallographic lattices) remain viable precisely because they avoid the algebraic operations that Frobenius renders impossible.
+    Where three-dimensional structure appears in twentieth-century physics—as in $SU(3)$ color symmetry in quantum chromodynamics, three-dimensional spatial coordinates in relativity, or three-generation structure in particle physics—it manifests geometrically rather than algebraically. These structures operate through external transformations (rotation groups $SO(3)$, Lie algebras $su(3)$, Lorentz boosts) acting on complex vector spaces, not through internal multiplication within an extended number system. The geometric three-dimensional systems catalogued in \S 2.1.12 (projective geometry, isometric projection, crystallographic lattices) remain viable precisely because they avoid the algebraic operations that Frobenius renders impossible.
 
-The constraint is systematic: across quantum mechanics, moduli theory, computational complexity, and cryptography, twentieth-century developments remained anchored to $\mathbb{C}$'s binary structure precisely because Frobenius blocks algebraic extension to three dimensions. Yet where algebraic routes encountered these insurmountable barriers, geometric approaches—as demonstrated by contemporary dimensional encoding methods in theoretical physics—have successfully realized translations between 2D and 3D structures operating within $\mathbb{C}$ rather than extending beyond it.
+    The constraint is systematic: across quantum mechanics, moduli theory, computational complexity, and cryptography, twentieth-century developments remained anchored to $\mathbb{C}$'s binary structure precisely because Frobenius blocks algebraic extension to three dimensions. Yet where algebraic routes encountered these insurmountable barriers, geometric approaches—as demonstrated by contemporary dimensional encoding methods in theoretical physics—have successfully realized translations between 2D and 3D structures operating within $\mathbb{C}$ rather than extending beyond it.
 
-This geometric methods do not circumvent Frobenius by creating three-dimensional division algebras, but rather exploit $\mathbb{C}$'s existing structure—its metric topology, conformal geometry, and complex manifold properties—to encode three-dimensional information through projection, symmetry, and holographic correspondence. The binary algebraic constraint and the geometric representational capacity are not contradictory but complementary: $\mathbb{C}$ remains two-dimensional as a field, yet serves as the substrate for geometric constructions that capture three-dimensional structure.
+    This geometric methods do not circumvent Frobenius by creating three-dimensional division algebras, but rather exploit $\mathbb{C}$'s existing structure—its metric topology, conformal geometry, and complex manifold properties—to encode three-dimensional information through projection, symmetry, and holographic correspondence. The binary algebraic constraint and the geometric representational capacity are not contradictory but complementary: $\mathbb{C}$ remains two-dimensional as a field, yet serves as the substrate for geometric constructions that capture three-dimensional structure.
 
-\subsection{Formalism of the Complex Plane} \label{sec:complex-plane}
+    \subsection{Formalism of the Complex Plane} \label{sec:complex-plane}
 
-The preceding historical investigation (\S 2.1--2.5) has established that geometric approaches can circumvent algebraic limitations, operating within $\mathbb{C}$'s structure rather than extending beyond it. To understand how contemporary physics implements these geometric methods—and how PCF applies similar principles to the Riemann spectrum—we must first formalize the mathematical structure of $\mathbb{C}$ that these constructions exploit. Section \S 2.2 provides this formalization, establishing the definitions and framework that subsequent sections assume.
+    The preceding historical investigation (\S 2.1--2.5) has established that geometric approaches can circumvent algebraic limitations, operating within $\mathbb{C}$'s structure rather than extending beyond it. To understand how contemporary physics implements these geometric methods—and how PCF applies similar principles to the Riemann spectrum—we must first formalize the mathematical structure of $\mathbb{C}$ that these constructions exploit. Section \S 2.2 provides this formalization, establishing the definitions and framework that subsequent sections assume.
 
-\begin{figure}[htbp]
-    \centering
-    %\includegraphics{image2}
-    \fbox{PLACEHOLDER: image2 - Fundamental structure of the complex plane}
-    \caption{Fundamental structure of the complex plane: algebraic extension, rotational symmetry, and modular parameterization.}
-\end{figure}
+    \begin{figure}[htbp]
+        \centering
+        %\includegraphics{image2}
+        \fbox{PLACEHOLDER: image2 - Fundamental structure of the complex plane}
+        \caption{Fundamental structure of the complex plane: algebraic extension, rotational symmetry, and modular parameterization.}
+    \end{figure}
 
-\subsubsection{Mathematical Structure of $\mathbb{C}$}
+    \subsubsection{Mathematical Structure of $\mathbb{C}$}
 
-The complex plane emerges from a fundamental algebraic construction that simultaneously generates both geometric and arithmetic structure.
+    The complex plane emerges from a fundamental algebraic construction that simultaneously generates both geometric and arithmetic structure.
 
-\begin{Proposition} \label{prop:extension-by-root}
+    \begin{Proposition} \label{prop:extension-by-root}
     The complex plane arises as the quotient ring:
     \[
-        \mathbb{C} = \mathbb{R}[x]/(x^2+1)
+    \mathbb{C} = \mathbb{R}[x]/(x^2+1)
     \]
-\end{Proposition}
+    \end{Proposition}
 
-This construction establishes that $\mathbb{R}$ is 1-dimensional over itself while $\mathbb{C}$ is 2-dimensional over $\mathbb{R}$ with basis $\{1, i\}$, where $i$ satisfies the defining relation $i^2 = -1$. The polynomial equation $x^2+1=0$, which has no solution in $\mathbb{R}$, generates the extension.
+    This construction establishes that $\mathbb{R}$ is 1-dimensional over itself while $\mathbb{C}$ is 2-dimensional over $\mathbb{R}$ with basis $\{1, i\}$, where $i$ satisfies the defining relation $i^2 = -1$. The polynomial equation $x^2+1=0$, which has no solution in $\mathbb{R}$, generates the extension.
 
-The imaginary unit $i$ functions geometrically as a rotation operator. Multiplication by $i$ corresponds to 90° counterclockwise rotation in the plane:
-\[
-    \mathbb{R} \xrightarrow{\times i} i\mathbb{R}
-\]
-
-\textbf{Periodicity}. The powers of $i$ exhibit fundamental periodicity:
-\[
-    i^1 = i, \quad i^2 = -1, \quad i^3 = -i, \quad i^4 = 1
-\]
-
-This sequence generates the cyclic group $\mathbb{Z}_4 = \{1, i, -1, -i\}$ under multiplication. The action of this group on $\mathbb{R}^2$ produces the additive structure:
-\[
-    \mathbb{C} = \mathbb{R} \oplus i\mathbb{R} = \{x + iy : x, y \in \mathbb{R}\}
-\]
-
-The periodicity $i^4 = 1$ establishes that four successive 90° rotations return to the identity—a closure property that resonates with the square lattice structure $\mathbb{Z}[i]$ examined in \S 2.2.3.
-
-\textbf{Modulus Formula}. The modulus $|z|$ represents a quantity that exists prior to and independent of the algebraic field structure—it is the Euclidean distance from the origin, a purely geometric object.
-
-\begin{Proposition} \label{prop:geometric-algebraic-duality}
-    For $z = x + iy$, the modulus satisfies:
+    The imaginary unit $i$ functions geometrically as a rotation operator. Multiplication by $i$ corresponds to 90° counterclockwise rotation in the plane:
     \[
-        |z|^2 = z \cdot \bar{z} = x^2 + y^2
+        \mathbb{R} \xrightarrow{\times i} i\mathbb{R}
     \]
-    where $\bar{z} = x - iy$ denotes complex conjugation.
-\end{Proposition}
 
-This formula unifies geometric distance with algebraic operations. The modulus is multiplicative: $|z_1z_2| = |z_1||z_2|$, a property inherited from the Pythagorean theorem in $\mathbb{R}^2$.
-
-\textbf{Polar Representation}. Every complex number admits polar decomposition:
-\[
-    z = r \cdot e^{i\theta} = r(\cos\theta + i\sin\theta)
-\]
-where $r = |z| \geq 0$ is the modulus and $\theta = \arg(z) \in [0, 2\pi)$ is the argument.
-
-The exponential form $e^{i\theta} = \cos \theta + i \sin \theta$ (Euler's formula, 1748) encodes rotation by angle $\theta$. Multiplication by $e^{i\theta}$ corresponds geometrically to rotation in the plane, establishing the fundamental template: algebraic operations in $\mathbb{C}$ correspond precisely to geometric transformations.
-
-\textbf{Multiple Equivalent Representations}. The complex plane admits three equivalent representations, each emphasizing different structural aspects:
-\begin{enumerate}
-    \item \textbf{Euclidean}: $\mathbb{C} \cong (\mathbb{R}^2, d_{\text{eucl}})$ with metric $d(z_1, z_2) = |z_1 - z_2|$
-    \item \textbf{Algebraic}: $\mathbb{C} = \{z = x + iy : x, y \in \mathbb{R}\}$ with field operations $(+, \cdot)$
-    \item \textbf{Polar}: $\mathbb{C} \cong \mathbb{R}_+ \times S^1$ with $z = r\cdot e^{i\theta}$ separating magnitude and phase
-\end{enumerate}
-
-These representations are mathematically equivalent but privilege different properties: distance, algebra, or phase-magnitude decomposition.
-
-\subsubsection{Moduli Spaces: Rigorous Definition}
-
-The concept of a moduli space represents a profound abstraction: rather than classifying individual geometric objects, we classify entire families of objects up to equivalence.
-
-\begin{Definition} \label{def:moduli-space-lattices}
-    The moduli space of lattices in $\mathbb{C}$ is:
+    \textbf{Periodicity}. The powers of $i$ exhibit fundamental periodicity:
     \[
-        \mathcal{M}_{\text{lat}} = \mathbb{H}/PSL(2,\mathbb{Z})
+        i^1 = i, \quad i^2 = -1, \quad i^3 = -i, \quad i^4 = 1
     \]
-    where $\mathbb{H} = \{\tau \in \mathbb{C} : \text{Im}(\tau) > 0\}$ is the upper half-plane and $PSL(2,\mathbb{Z}) = SL(2,\mathbb{Z})/\{\pm I\}$ acts by:
+
+    This sequence generates the cyclic group $\mathbb{Z}_4 = \{1, i, -1, -i\}$ under multiplication. The action of this group on $\mathbb{R}^2$ produces the additive structure:
     \[
-        \tau \mapsto \frac{a\tau+b}{c\tau+d} \quad \text{for} \quad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in SL(2,\mathbb{Z})
+        \mathbb{C} = \mathbb{R} \oplus i\mathbb{R} = \{x + iy : x, y \in \mathbb{R}\}
     \]
-\end{Definition}
 
-This quotient identifies lattices that differ only by scaling and rotation—the geometric equivalences that preserve essential structure.
+    The periodicity $i^4 = 1$ establishes that four successive 90° rotations return to the identity—a closure property that resonates with the square lattice structure $\mathbb{Z}[i]$ examined in \S 2.2.3.
 
-\textbf{Structural Inheritance} \label{sec:moduli-lattice}. The moduli space $\mathcal{M}_{\text{lat}}$ inherits a rich constellation of structures from $\mathbb{C}$ itself, demonstrating how arithmetic, geometry, analysis, and topology converge:
+    \textbf{Modulus Formula}. The modulus $|z|$ represents a quantity that exists prior to and independent of the algebraic field structure—it is the Euclidean distance from the origin, a purely geometric object.
 
-\begin{table}[h]
-    \centering
-    \begin{tabular}{lll}
-        \hline
-        \textbf{Domain}      & \textbf{Structure}                                           & \textbf{Key Operation}  \\ \hline
-        \textbf{Arithmetic}  & Lattice $\Lambda$ is $\mathbb{Z}$-free module rank 2         & Point addition          \\
-        \textbf{Geometric}   & Polar coordinates $\mathbb{C} \cong \mathbb{R}_+ \times S^1$ & Rotation + scaling      \\
-        \textbf{Analytic}    & Holomorphic functions $f: \mathbb{C} \to \mathbb{C}$         & Complex differentiation \\
-        \textbf{Topological} & Toro $T_\tau = \mathbb{C}/\Lambda \cong S^1 \times S^1$      & Modular identification  \\ \hline
-    \end{tabular}
-    \caption{Structural inheritance of the moduli space $\mathcal{M}_{\text{lat}}$ from $\mathbb{C}$.}
-\end{table}
+    \begin{Proposition} \label{prop:geometric-algebraic-duality}
+        For $z = x + iy$, the modulus satisfies:
+        \[
+            |z|^2 = z \cdot \bar{z} = x^2 + y^2
+        \]
+        where $\bar{z} = x - iy$ denotes complex conjugation.
+    \end{Proposition}
 
-\begin{Note} \label{obs:dual-conceptual-role}
-    This construction reveals that $\mathbb{C}$ operates at two conceptual levels:
+    This formula unifies geometric distance with algebraic operations. The modulus is multiplicative: $|z_1z_2| = |z_1||z_2|$, a property inherited from the Pythagorean theorem in $\mathbb{R}^2$.
+
+    \textbf{Polar Representation}. Every complex number admits polar decomposition:
+    \[
+        z = r \cdot e^{i\theta} = r(\cos\theta + i\sin\theta)
+    \]
+    where $r = |z| \geq 0$ is the modulus and $\theta = \arg(z) \in [0, 2\pi)$ is the argument.
+
+    The exponential form $e^{i\theta} = \cos \theta + i \sin \theta$ (Euler's formula, 1748) encodes rotation by angle $\theta$. Multiplication by $e^{i\theta}$ corresponds geometrically to rotation in the plane, establishing the fundamental template: algebraic operations in $\mathbb{C}$ correspond precisely to geometric transformations.
+
+    \textbf{Multiple Equivalent Representations}. The complex plane admits three equivalent representations, each emphasizing different structural aspects:
+    \begin{enumerate}
+        \item \textbf{Euclidean}: $\mathbb{C} \cong (\mathbb{R}^2, d_{\text{eucl}})$ with metric $d(z_1, z_2) = |z_1 - z_2|$
+        \item \textbf{Algebraic}: $\mathbb{C} = \{z = x + iy : x, y \in \mathbb{R}\}$ with field operations $(+, \cdot)$
+        \item \textbf{Polar}: $\mathbb{C} \cong \mathbb{R}_+ \times S^1$ with $z = r\cdot e^{i\theta}$ separating magnitude and phase
+    \end{enumerate}
+
+    These representations are mathematically equivalent but privilege different properties: distance, algebra, or phase-magnitude decomposition.
+
+    \subsubsection{Moduli Spaces: Rigorous Definition}
+
+    The concept of a moduli space represents a profound abstraction: rather than classifying individual geometric objects, we classify entire families of objects up to equivalence.
+
+    \begin{Definition} \label{def:moduli-space-lattices}
+        The moduli space of lattices in $\mathbb{C}$ is:
+        \[
+            \mathcal{M}_{\text{lat}} = \mathbb{H}/PSL(2,\mathbb{Z})
+        \]
+        where $\mathbb{H} = \{\tau \in \mathbb{C} : \text{Im}(\tau) > 0\}$ is the upper half-plane and $PSL(2,\mathbb{Z}) = SL(2,\mathbb{Z})/\{\pm I\}$ acts by:
+        \[
+            \tau \mapsto \frac{a\tau+b}{c\tau+d} \quad \text{for} \quad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in SL(2,\mathbb{Z})
+        \]
+    \end{Definition}
+
+    This quotient identifies lattices that differ only by scaling and rotation—the geometric equivalences that preserve essential structure.
+
+    \textbf{Structural Inheritance} \label{sec:moduli-lattice}. The moduli space $\mathcal{M}_{\text{lat}}$ inherits a rich constellation of structures from $\mathbb{C}$ itself, demonstrating how arithmetic, geometry, analysis, and topology converge:
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{lll}
+            \hline
+            \textbf{Domain}      & \textbf{Structure}                                           & \textbf{Key Operation}  \\ \hline
+            \textbf{Arithmetic}  & Lattice $\Lambda$ is $\mathbb{Z}$-free module rank 2         & Point addition          \\
+            \textbf{Geometric}   & Polar coordinates $\mathbb{C} \cong \mathbb{R}_+ \times S^1$ & Rotation + scaling      \\
+            \textbf{Analytic}    & Holomorphic functions $f: \mathbb{C} \to \mathbb{C}$         & Complex differentiation \\
+            \textbf{Topological} & Toro $T_\tau = \mathbb{C}/\Lambda \cong S^1 \times S^1$      & Modular identification  \\ \hline
+        \end{tabular}
+        \caption{Structural inheritance of the moduli space $\mathcal{M}_{\text{lat}}$ from $\mathbb{C}$.}
+    \end{table}
+
+    \begin{Note} \label{obs:dual-conceptual-role}
+        This construction reveals that $\mathbb{C}$ operates at two conceptual levels:
+        \begin{itemize}
+            \item \textbf{Object level}: Geometric structures (lattices, tori) are constructed \textit{within} $\mathbb{C}$
+            \item \textbf{Parameter level}: Points \textit{of} $\mathbb{C}$ classify entire families of these structures
+        \end{itemize}
+    \end{Note}
+
+    A single point $\tau \in \mathbb{C}$ doesn't merely represent a location—it represents an entire geometric structure (the torus $T_\tau$ with all its properties). This dual role will be essential for understanding how PCF implements moduli-function correspondence.
+
+    \subsubsection{Lattice Structures} \label{sec:complex-lattices}
+
+    Lattices provide the discrete skeletal structure underlying complex analysis and number theory, representing the intersection of geometric periodicity with arithmetic structure.
+
+    \begin{Definition} \label{def:lattice-in-C}
+        A lattice $\Lambda \subset \mathbb{C}$ is a discrete additive subgroup:
+        \[
+            \Lambda = \mathbb{Z}\omega_1 \oplus \mathbb{Z}\omega_2 = \{n_1\omega_1 + n_2\omega_2 : n_1, n_2 \in \mathbb{Z}\}
+        \]
+        where $\omega_1, \omega_2 \in \mathbb{C}$ are linearly independent over $\mathbb{R}$ (meaning $\omega_2/\omega_1 \notin \mathbb{R}$).
+    \end{Definition}
+
+    The generators $\omega_1, \omega_2$ form a basis of the lattice. The lattice inherits additive structure from $\mathbb{C}$ while maintaining discrete structure from $\mathbb{Z}$.
+
+    \textbf{Example}:
     \begin{itemize}
-        \item \textbf{Object level}: Geometric structures (lattices, tori) are constructed \textit{within} $\mathbb{C}$
-        \item \textbf{Parameter level}: Points \textit{of} $\mathbb{C}$ classify entire families of these structures
+        \item \textbf{Square lattice}: $\omega_1 = 1, \omega_2 = i$ generates $\Lambda_\square = \mathbb{Z}[i] = \{m + ni : m, n \in \mathbb{Z}\}$, the Gaussian integers. This lattice exhibits 90° rotational symmetry (invariant under multiplication by $i$) and is associated with the periodicity $i^4 = 1$.
     \end{itemize}
-\end{Note}
 
-A single point $\tau \in \mathbb{C}$ doesn't merely represent a location—it represents an entire geometric structure (the torus $T_\tau$ with all its properties). This dual role will be essential for understanding how PCF implements moduli-function correspondence.
-
-\subsubsection{Lattice Structures} \label{sec:complex-lattices}
-
-Lattices provide the discrete skeletal structure underlying complex analysis and number theory, representing the intersection of geometric periodicity with arithmetic structure.
-
-\begin{Definition} \label{def:lattice-in-C}
-    A lattice $\Lambda \subset \mathbb{C}$ is a discrete additive subgroup:
+    \textbf{Complex Torus}. Given a lattice $\Lambda \subset \mathbb{C}$, the quotient space:
     \[
-        \Lambda = \mathbb{Z}\omega_1 \oplus \mathbb{Z}\omega_2 = \{n_1\omega_1 + n_2\omega_2 : n_1, n_2 \in \mathbb{Z}\}
+        T_\Lambda = \mathbb{C}/\Lambda
     \]
-    where $\omega_1, \omega_2 \in \mathbb{C}$ are linearly independent over $\mathbb{R}$ (meaning $\omega_2/\omega_1 \notin \mathbb{R}$).
-\end{Definition}
-
-The generators $\omega_1, \omega_2$ form a basis of the lattice. The lattice inherits additive structure from $\mathbb{C}$ while maintaining discrete structure from $\mathbb{Z}$.
-
-\textbf{Example}:
-\begin{itemize}
-    \item \textbf{Square lattice}: $\omega_1 = 1, \omega_2 = i$ generates $\Lambda_\square = \mathbb{Z}[i] = \{m + ni : m, n \in \mathbb{Z}\}$, the Gaussian integers. This lattice exhibits 90° rotational symmetry (invariant under multiplication by $i$) and is associated with the periodicity $i^4 = 1$.
-\end{itemize}
-
-\textbf{Complex Torus}. Given a lattice $\Lambda \subset \mathbb{C}$, the quotient space:
-\[
-    T_\Lambda = \mathbb{C}/\Lambda
-\]
-is the complex torus associated to $\Lambda$. The identification $z \sim z'$ if $z - z' \in \Lambda$ creates a compact surface. Topologically, $T_\Lambda \cong S^1 \times S^1$ (product of two circles), but the complex structure depends on the lattice shape.
+    is the complex torus associated to $\Lambda$. The identification $z \sim z'$ if $z - z' \in \Lambda$ creates a compact surface. Topologically, $T_\Lambda \cong S^1 \times S^1$ (product of two circles), but the complex structure depends on the lattice shape.
 
 \textbf{Modular Parameter}. Every complex torus can be represented (after normalization) by a parameter $\tau \in \mathbb{H}$:
 \[
@@ -488,10 +488,10 @@ The geometric approach developed in subsequent sections explores this possibilit
     \item \textbf{Third dimension as scaling modulus without algebraic extension} (\S 2.1.11): The constraint $z = \varphi y$ establishes geometric dimension $E^3 = \{(x,y,z) \in \mathbb{R}^3 : z = \varphi y\}$.
     \item \textbf{Torus implementing strange loop between lattice structures} (\S 2.1.4--2.1.12): The complex torus $T^2 = \mathbb{C}/(\mathbb{Z} + \mathbb{Z}\tau)$ used by String Theory connect rotation vector bidirectionally between isometric lattice and Gaussian lattice $\mathbb{Z}[i]$.
     \item \textbf{Rotation by $i$ operating spatially and temporally} (\S 2.1.6--2.2.1): The fundamental operator $i$ extends $\mathbb{R} \to \mathbb{C}$ through 90° rotation.
-    \item \textbf{Tower from $\phi$-scaling rather than Hamiltonian generation} (\S 2.1--2.3): The construction derives tower $\{\epsilon(\sigma) = \epsilon_0\phi^\sigma : \sigma \in \mathbb{R}\}$ from golden ratio scaling.
+    \item \textbf{Tower from $\varphi$-scaling rather than Hamiltonian generation} (\S 2.1--2.3): The construction derives tower $\{\epsilon(\sigma) = \epsilon_0\varphi^\sigma : \sigma \in \mathbb{R}\}$ from golden ratio scaling.
 \end{enumerate}
 
-This synthesis—combining perspectival scaling, torus strange loop, dual rotation, and $\phi$-tower—implements moduli-function correspondence for the Riemann spectrum using the geometric structures String Theory and AdS/CFT employ, but configured to avoid the Hamiltonian circularity.
+This synthesis—combining perspectival scaling, torus strange loop, dual rotation, and $\varphi$-tower—implements moduli-function correspondence for the Riemann spectrum using the geometric structures String Theory and AdS/CFT employ, but configured to avoid the Hamiltonian circularity.
 
 \subsection{Transition to Axiomatic Framework} \label{sec:transition-axioms}
 
