@@ -59,10 +59,10 @@
 \newcommand{\evenhead}{Author \ name}
 \newcommand{\oddhead}{Article \ name}
 \newcommand{\theArticleName}{Article name}
-\newcommand{\Volume}{{\bf 21}}
+\newcommand{\Volume}{{\bf 22}}
 \newcommand{\Paper}{Paper}
 \newcommand{\PaperNumber}{1}
-\newcommand{\PublicationYear}{2025}
+\newcommand{\PublicationYear}{2026}
 
 % Titlepage
 
