@@ -2112,7 +2112,7 @@ Asymptotic correctness follows from $\lim c(n) = 2$, ensuring $T^*(n) \sim 2\pi 
     Generation $k = \lfloor \log_2(n) \rfloor$ requires $O(\log n)$. All subsequent operations (arithmetic, exponential, logarithm, modular reduction) are $O(1)$.
 \end{proof}
 
-This compares favorably: Riemann-Siegel $O(\sqrt{t_n}) \approx O(\sqrt{n \log n})$, Odlyzko-Schönhage $O(n^{1/2+\varepsilon})$.
+This compares favorably: Riemann--Siegel $O(\sqrt{t_n}) \approx O(\sqrt{n \log n})$, \allowbreak Odlyzko--Schönhage $O(n^{1/2+\varepsilon})$.
 
 \subsection{Summary: The Geometric Tower} \label{sec:dependency-architecture} \label{sec:geometric-tower-summary}
 
@@ -2122,7 +2122,7 @@ We now present the complete dependency structure of the $T^*$ operator, demonstr
 
 \begin{table}[h]
     \centering
-    \begin{tabularx}{\textwidth}{clXlXX}
+    \begin{tabularx}{\textwidth}{cl>{\raggedright\arraybackslash}Xl>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
         \toprule
         Level & Component           & Value / Formula                            & Section                          & Paper Origin                                                                & Depends On                            \\
         \midrule
