@@ -1,74 +1,64 @@
-# Documentación del Proyecto
+# Project Documentation
 
-Este directorio contiene toda la documentación técnica del proyecto, incluyendo guías de uso, arquitectura, especificaciones y consultas de investigación.
+This directory contains all the technical documentation for the project, including usage guides, architecture, specifications, and research queries.
 
-## Estructura
+## Structure
 
 ```
 docs/
-├── README.md              # Este archivo
-├── usage.md               # Guía de uso del pipeline de releases
-├── architecture.md        # Arquitectura del sistema de releases
-├── specs/                 # Especificaciones técnicas formales
-└── perplexity/            # Consultas y respuestas de investigación técnica
+├── README.md              # This file
+├── usage.md               # Release pipeline usage guide
+├── architecture.md        # Release system architecture
+├── style/                 # Style guides and editorial principles
+└── archive/               # Archived research and specifications
 ```
 
-## Documentación Principal
+## Main Documentation
 
-### Guías de Uso
+### Usage Guides
 
-- **usage.md**: Guía completa de uso del pipeline de releases
-  - Workflow de desarrollo con LaTeX Workshop
-  - Conventional Commits y generación automática de changelog
-  - Comandos de build y release
-  - Instalación y requisitos
+- **usage.md**: Full guide for using the release pipeline.
+  - Development workflow with LaTeX Workshop.
+  - Conventional Commits and automatic changelog generation.
+  - Build and release commands.
+  - Installation and requirements.
 
-### Arquitectura
+### Architecture
 
-- **architecture.md**: Arquitectura del sistema de releases
-  - Stack tecnológico (release-it, plugins, Docker)
-  - Flujo de ejecución completo
-  - Medidas de reproducibilidad
-  - Estructura de scripts y metadata
+- **architecture.md**: Architecture of the release system.
+  - Tech stack (release-it, plugins, Docker).
+  - Full execution flow.
+  - Reproducibility measures.
+  - Scripts structure and metadata.
 
-### Especificaciones
+### Style Guide
 
-- **specs/**: Especificaciones técnicas formales
-  - Configuración de release-it y plugins
-  - Schemas de metadata (CITATION.cff, .zenodo.json)
-  - Integración con Zenodo webhook
+- **style/STYLE_GUIDE.md**: Internal formal coherence guidelines.
+  - Voice and tone.
+  - Unified notation.
+  - Definition and theorem structures.
+  - Content verification protocols.
 
-## Investigación Técnica
+## Archived Documentation
 
-El directorio `perplexity/` contiene consultas detalladas y respuestas de investigación sobre problemas técnicos específicos. Los archivos están numerados cronológicamente y distinguen entre prompts (consultas) y responses (respuestas).
+The `archive/` directory contains documentation that is no longer part of the main active set but is preserved for historical reference or context.
 
-**Temas investigados:**
-- Integración Zenodo CI
-- Dependencias LaTeX en Docker
-- Template de Release Notes en TypeScript
-- GitHub Action y Release Notes
-- Changelog solo de versión actual
+- **archive/perplexity/**: Detailed queries and research responses on specific technical problems.
+- **archive/specs/**: Formal technical specifications for legacy configurations.
 
-## Convenciones
+## Conventions
 
 ### Conventional Commits
 
-Todos los commits deben seguir el formato [Conventional Commits](https://www.conventionalcommits.org/):
+All commits must follow the [Conventional Commits](https://www.conventionalcommits.org/) format:
 
 ```
 <type>(<scope>): <description>
 ```
 
-**Tipos comunes:**
-- `feat`: Nueva funcionalidad
-- `fix`: Corrección de bugs
-- `docs`: Cambios en documentación
-- `refactor`: Refactorización de código
-- `chore`: Tareas de mantenimiento
-
-### Nomenclatura de Archivos
-
-- **perplexity/**: Formato `NNN_type-tema-descriptivo.md`
-  - `NNN`: Número secuencial (001, 002, ...)
-  - `type`: `prompt` o `response`
-  - `tema-descriptivo`: Descripción semántica del tema
+**Common Types:**
+- `feat`: New functionality.
+- `fix`: Bug fix.
+- `docs`: Documentation changes.
+- `refactor`: Code refactoring.
+- `chore`: Maintenance tasks.

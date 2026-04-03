@@ -1,22 +1,22 @@
-# Uso del Pipeline de Releases
+# Release Pipeline Usage
 
-## Desarrollo
+## Development
 
 **Template:** LaPreprint (`lapreprint.cls`)
 
-**Workflow diario:** LaTeX Workshop (James Yu) en VS Code
-- Compila automáticamente a `build/main.pdf`
-- Preview en tiempo real
+**Daily Workflow:** LaTeX Workshop (James Yu) in VS Code
+- Automatically compiles to `build/main.pdf`.
+- Real-time preview.
 
-**Verificación pre-release:**
+**Pre-release Verification:**
 ```bash
 pnpm run build
-sha256sum build/document-v*.pdf build/main.pdf  # Deben coincidir
+sha256sum build/document-v*.pdf build/main.pdf  # They must match
 ```
 
-## Commits y Changelog
+## Commits and Changelog
 
-**Conventional Commits:** Todos los commits deben seguir el formato [Conventional Commits](https://www.conventionalcommits.org/):
+**Conventional Commits:** All commits must follow the [Conventional Commits](https://www.conventionalcommits.org/) format:
 
 ```
 <type>(<scope>): <description>
@@ -26,43 +26,43 @@ sha256sum build/document-v*.pdf build/main.pdf  # Deben coincidir
 [optional footer]
 ```
 
-**Tipos comunes:**
-- `feat`: Nueva funcionalidad
-- `fix`: Corrección de bugs
-- `docs`: Cambios en documentación
-- `refactor`: Refactorización de código
-- `chore`: Tareas de mantenimiento (build, config, etc.)
+**Common Types:**
+- `feat`: New functionality.
+- `fix`: Bug fix.
+- `docs`: Documentation changes.
+- `refactor`: Code refactoring.
+- `chore`: Maintenance tasks (build, config, etc.).
 
-**Ejemplos:**
+**Examples:**
 ```bash
 git commit -m "feat(release): add dotenv-cli to load GITHUB_TOKEN from .env"
 git commit -m "fix(release): use automatic changelog from plugin"
 git commit -m "refactor(scripts): remove legacy code and clean up unused utilities"
 ```
 
-**Changelog automático:** El plugin `@release-it/conventional-changelog` genera automáticamente `CHANGELOG.md` basándose en los commits convencionales. El changelog se actualiza durante cada release con solo los cambios de la versión actual.
+**Automatic Changelog:** The `@release-it/conventional-changelog` plugin automatically generates `CHANGELOG.md` based on conventional commits. The changelog is updated during each release with only the changes from the current version.
 
 ## Releases
 
-**Build independiente:**
+**Independent Build:**
 ```bash
 pnpm run build
 ```
 
-**Release completo:**
+**Full Release:**
 ```bash
 pnpm run release
 ```
 
-**Dry-run (sin cambios):**
+**Dry-run (no changes):**
 ```bash
 pnpm run release:dry-run
 ```
 
-## Instalación
+## Installation
 
 ```bash
 pnpm install
 ```
 
-**Requisitos:** Node.js 20+, pnpm 9+, Docker
+**Requirements:** Node.js 20+, pnpm 9+, Docker.

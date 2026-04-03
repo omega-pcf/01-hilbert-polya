@@ -1,64 +1,64 @@
-# Arquitectura
+# Architecture
 
 ## Stack
 
-- **release-it**: Versionado semántico + GitHub releases
-- **@release-it/bumper**: Sincroniza versión `package.json` → `CITATION.cff`, `.zenodo.json`
-- **TypeScript + tsx**: Scripts de orquestación
-- **Docker** (`kjarosh/latex:2024.4-full`): Compilación LaTeX reproducible
-- **Zenodo webhook**: Integración automática desde GitHub
+- **release-it**: Semantic versioning + GitHub releases.
+- **@release-it/bumper**: Synchronizes version `package.json` → `CITATION.cff`, `.zenodo.json`.
+- **TypeScript + tsx**: Orchestration scripts.
+- **Docker** (`kjarosh/latex:2024.4-full`): Reproducible LaTeX compilation.
+- **Zenodo webhook**: Automatic integration from GitHub.
 
-## Flujo
+## Flow
 
 ```
 pnpm run release
-  → @release-it/bumper: actualiza versiones en package.json, CITATION.cff, .zenodo.json
+  → @release-it/bumper: updates versions in package.json, CITATION.cff, .zenodo.json
   
   → after:bump: pnpm run build
-    → cleanup: elimina document-v*.pdf anteriores
-    → citation: actualiza date-released
-    → compile: Docker con SOURCE_DATE_EPOCH (git commit timestamp)
-    → checksums: SHA256 del PDF
+    → cleanup: removes previous document-v*.pdf
+    → citation: updates date-released
+    → compile: Docker with SOURCE_DATE_EPOCH (git commit timestamp)
+    → checksums: SHA256 of the PDF
   
-  → Git: commit + tag v${version} + push (release-it stagea automáticamente con addUntrackedFiles)
+  → Git: commit + tag v${version} + push (release-it stages automatically with addUntrackedFiles)
   
-  → GitHub: Release con assets (PDF, checksums)
+  → GitHub: Release with assets (PDF, checksums)
   
-  → Zenodo: webhook automático → nueva versión + DOI
+  → Zenodo: automatic webhook → new version + DOI
 ```
 
-## Reproducibilidad
+## Reproducibility
 
-**SOURCE_DATE_EPOCH:** Extraído de `git log -1 --pretty=%ct`
+**SOURCE_DATE_EPOCH:** Extracted from `git log -1 --pretty=%ct`.
 
-**LaTeX primitives:** `\pdfinfoomitdate=1`, `\pdftrailerid{}`, etc. (ver `main.tex`)
+**LaTeX primitives:** `\pdfinfoomitdate=1`, `\pdftrailerid{}`, etc. (see `main.tex`).
 
-**Docker pinned:** `kjarosh/latex:2024.4-full` (versión explícita)
+**Docker pinned:** `kjarosh/latex:2024.4-full` (explicit version).
 
-Mismo commit = mismo PDF hash (garantizado)
+Same commit = same PDF hash (guaranteed).
 
-## Estructura
+## Structure
 
 ```
 scripts/
-├── build.ts              # Build independiente (hook after:bump)
-├── tasks/                # Tareas atómicas
+├── build.ts              # Independent build (hook after:bump)
+├── tasks/                # Atomic tasks
 │   ├── checksums.ts
 │   ├── citation.ts
 │   ├── cleanup.ts
 │   └── compile.ts
-├── types.ts              # Tipos TypeScript
+├── types.ts              # TypeScript types
 └── utils/
-    └── git.ts            # Utilidades Git (getCommitEpoch)
+    └── git.ts            # Git utilities (getCommitEpoch)
 ```
 
 ## Metadata
 
-**Source of truth:** `package.json` version
+**Source of truth:** `package.json` version.
 
-**Sincronización automática:**
-- `CITATION.cff` version (vía @release-it/bumper)
-- `.zenodo.json` version (vía @release-it/bumper)
-- `CITATION.cff` date-released (vía hook after:bump → build.ts)
+**Automatic Synchronization:**
+- `CITATION.cff` version (via @release-it/bumper).
+- `.zenodo.json` version (via @release-it/bumper).
+- `CITATION.cff` date-released (via hook after:bump → build.ts).
 
-**Zenodo:** Lee `.zenodo.json` del tag, crea versión bajo mismo Concept DOI
+**Zenodo:** Reads `.zenodo.json` from the tag, creates a version under the same Concept DOI.
