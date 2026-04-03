@@ -1,0 +1,50 @@
+
+%%% ====================================================================
+%%% ====================================================================
+%%%
+%%%  SECTION 7: CONCLUSIONS
+%%%
+%%% ====================================================================
+%%% ====================================================================
+
+\section{Conclusions}\label{sec:conclusions}
+
+The PCF framework, formalized and formally verified in Lean~4 with Mathlib
+(axioms limited to geometric constants of~\S\ref{ssec:axioms} and \lean{hecke\_1920}),
+establishes a closed deductive chain from the decidable
+arithmetic of~$\Ztwenty$ to $\mathrm{Re}(\rho)=1/2$.
+The chain operates through three
+levels---decidable (Verified), structural (spectral parameters from
+categorical uniqueness), and analytic (functional equation
+from Hecke 1920)---converging at the value~$1/2$ from
+independent directions.
+
+The main results:
+\begin{itemize}
+  \item \lean{rh\_squeeze} (\S\ref{ssec:squeeze}):
+    $\mathrm{Re}(\rho)=1/2$ within the PCF categorical setting, via two
+    independent bounds neither of which alone suffices.
+  \item $T^*$ operator (\S\ref{ch:results}): ${<}1.7\%$ error across twelve
+    orders of magnitude (125~zeros, $n = 1$ to $10^{12}$), with $T^*(n)/t_n\to 1$.
+    Convergence properties and bias factors formalized.
+  \item \lean{zeta\_forced\_to\_ternary} (\S\ref{ssec:zeta-cat}):
+    the identification of non-trivial zeros with the ternary fragment is
+    derived, not assumed---closing the deductive chain.
+  \item The only classical input is Hecke's 1920 theorem (unconditional):
+    for self-dual characters, $L(\rho,\chi)=0 \implies L(1-\rho,\chi)=0$.
+\end{itemize}
+
+Every spectral invariant ($d=3$, $\mu=1/2$, $\sigma=3/2$) emerges from
+PCF's own $S_3$ geometry, with no component of~$\zeta(s)$ entering the
+derivation.  The ring $\Rpcf = \mathbb{Z}[\golden,\golden^{-1},\tfrac{1}{2}]$
+provides $\mathbb{F}_1$-descent data in the sense of Borger, placing the
+construction within Manin's program for absolute geometry.
+
+The proof proceeds by squeeze via two convergent bounds: the universal
+ternary bound $\mathrm{Re}(\rho)\le\mu_3=1/2$ (from
+\lean{zeta\_forced\_to\_ternary} $+$ \lean{spectral\_uniqueness}) and the
+companion bound $\mathrm{Re}(1-\rho)\le\mu_3$ (from
+\lean{golden\_group\_exponent\_two} $+$ Hecke's functional equation).  The structural correspondence between $S_3$ invariants and the
+Euler product---mediated by the embedding of primes $p>5$ into
+$\Ztwenty$ (Theorem~\ref{thm:zeta-forced})---suggests the
+framework has scope beyond the Riemann spectrum.

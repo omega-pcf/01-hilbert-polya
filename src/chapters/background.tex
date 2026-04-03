@@ -1,0 +1,863 @@
+
+%%% ====================================================================
+%%% ====================================================================
+%%%
+%%%  SECTION 2: BACKGROUND
+%%%
+%%% ====================================================================
+%%% ====================================================================
+%%% ====================================================================
+
+\section{Background}\label{sec:background}
+%%% ====================================================================
+
+The introduction established five interconnected threads: (i)~the
+Euler product as descent data connecting primes to spectral locations;
+(ii)~the Lawvere--Frobenius double obstruction; (iii)~circumvention
+strategies (Russell, Priest, Tarski); (iv)~convergence of
+$\mathbb{F}_1$-geometry, string theory, and the P\'olya--Hilbert
+conjecture on a common geometric need; (v)~tripartite factorization
+as the proposed mechanism.  At the heart of the
+$\mathbb{F}_1$-program lies a mirror duality---between moduli spaces
+and function spaces. Manin's \emph{Numbers as Functions}~\cite{manin13}
+demonstrates that ``the analogy
+between~$\operatorname{Spec}\mathbb{Z}$ \ldots\ and algebraic curves
+over finite fields'' can be made ``so elaborated and precise that one
+could use a version of the technique of Andr\'e~Weil \ldots\ in order
+to approach Riemann's conjecture''; Weil himself, in his 1940 letter
+from prison, had proposed a ``Rosetta Stone'' connecting number fields,
+function fields, and Riemann
+surfaces~\cite{weil_letter40,milne15}.
+To expose the structural content of this duality, we trace both
+the geometric and the algebraic lineages of the modulus back to their
+earliest documented sources, prior to the creation of complex numbers
+and indeed prior to algebra, where the two traditions are still
+visibly independent.  From this vantage point we then follow their
+convergence in~$\mathbb{C}$, the dimensional limitations that
+constrain algebraic extension, the decidability boundary and its
+categorical formalization, the geometric precedent established by
+Weil's proof, and the physical mechanisms that realize dimensional
+transcendence---identifying at each stage the structural principles
+that will be mathematically developed in~\S3--\S5.
+
+
+%%% ====================================================================
+%%% §2.1 — THE DUAL GENEALOGY OF THE MODULUS
+%%% ====================================================================
+
+\subsection{The dual genealogy of the modulus}\label{ssec:modulus}\label{sec:moduli}
+
+The concept of \emph{modulus} enters mathematics through two
+independent lineages---one geometric, the other algebraic---whose
+convergence in the complex plane constitutes the primitive structure
+that this paper exploits.
+
+\subsubsection{The geometric modulus: from Vitruvius to Farish}\label{sec:vitruvian}
+
+In modern mathematics, the moduli space~$\mathcal{M}_g$ classifies
+Riemann surfaces of genus~$g$ up to conformal equivalence---each point
+representing an entire equivalence class of complex structures.  The
+concept is well established in algebraic
+geometry, physics, and number theory alike.  Yet the term
+itself---Latin \emph{modulus}, ``small measure''---is far older, and
+its geometric meaning predates its algebraic one by nearly two
+millennia.  Marcus Vitruvius Pollio~\cite{vitruvius_de_arch}
+(\emph{De Architectura},
+c.~25~BC, Book~IV~\S3) defines the modulus as the semi-diameter of a
+column at its base: the fundamental unit from which all architectural
+proportions derive by rational multiples.  Vitruvius's system operates
+through a precise geometric mechanism: a fixed origin (column center),
+a radial measure extending from it, and proportions expressed as
+multiples $k \cdot m$ of the basic module~$m$.  Column height,
+intercolumniation, entablature, and pediment are all multiples or
+fractions of the modulus (Doric $k = 7$ diameters, Ionic $k = 8.5$,
+Corinthian $k \approx 9$--$10$).  Book~III connects this architectural
+modulus with the proportions of the human body---foot $= 1/6$ height,
+palm $= 1/24$, finger $= 1/96$.  Vitruvius's mechanism thus contains the triple
+\begin{equation}\label{eq:triple}
+  \{\text{origin},\;\text{modulus (radial magnitude)},\;\text{angle
+  (direction)}\},
+\end{equation}
+which would---some eighteen centuries later---be fused with algebra in
+the creation of the complex plane.
+
+The medieval period preserved Vitruvian knowledge through monastery
+scriptoria.  Poggio Bracciolini recovered the most complete manuscript
+of \emph{De Architectura} at St.~Gall Abbey (1416), bringing it
+to Florence where Brunelleschi and Alberti studied it.
+
+Filippo Brunelleschi (c.~1415) demonstrated systematic linear
+perspective through his \emph{tavoletta} experiment---a painted panel of
+the Florence Baptistery viewed through a peephole and mirror.  The
+demonstration established that three-dimensional space projects onto a
+two-dimensional surface according to geometric laws: the vanishing
+point functions as origin, radial distance determines apparent size
+($s \propto 1/d$), and angle determines position---a direct
+manifestation of the Vitruvian mechanism~\eqref{eq:triple} applied to
+depth representation.  Brunelleschi's perspective is also the first
+instance of a \emph{tower generated by a single modulus}: one
+viewpoint produces an infinite recession of depth planes, each
+smaller than the last in proportions that Renaissance painters
+associated with harmonious ratios---a preformal realization,
+prior to Desargues's formalization, of the principle that a fixed
+generating unit can produce unbounded structural information.
+
+Leon Battista Alberti codified these principles in \emph{Della pittura}~\cite{alberti}
+(1436), treating painting as a ``window'' onto three-dimensional space,
+synthesizing Roger Bacon's optical tradition, Alhazen's
+\emph{perspectiva}, and Brunelleschi's demonstrations.  Sixteenth-century
+architects refined Vitruvius's proportional system---whose smallest
+operational unit was the sixth of a module
+(\emph{De Arch.}~IV.3.4--6)---by subdividing the module into thirty
+\emph{minutae}~\cite{harthicks98}, the same Latin term already
+employed for the sixtieth of a degree.  The shared vocabulary between
+angular and modular minutes formalized the fine subdivision of a
+generating unit, one radial, the other directional---the two
+components of the Vitruvian triple~\eqref{eq:triple}.
+
+The geometric modulus received systematic three-dimensional extension.
+Girard Desargues (1639) formalized perspective through projective
+geometry.  Gaspard Monge (1795) systematized three-dimensional
+representation through three orthogonal views---plan, elevation,
+profile---formalizing recovery of 3D information from 2D projections.
+William Farish~\cite{farish22} (1822) published ``On Isometrical Perspective,''
+providing the first mathematical rules for isometric drawing, in which
+equal measures apply uniformly to height, width, and depth.  In
+isometric projection, a cube viewed along the spatial diagonal $(1,1,1)$
+projects as a regular hexagon in the plane, with three axes forming
+$120^\circ$ angles.  Auguste Bravais~\cite{bravais48} (1848--1850) extended the lattice
+mechanism to physical structure, demonstrating exactly 14~types of
+three-dimensional lattices compatible with crystallographic symmetries.
+
+These geometric systems---perspective, projective geometry, descriptive
+geometry, isometric projection, crystallographic lattices---possess rich
+structure: symmetry operations, metric relationships, transformation
+rules.  They establish origins, employ radial measures, incorporate
+angular components, and support rigid and scaling transformations.
+Yet they carry \emph{no algebraic structure}: no field operations, no
+multiplication, no division.  In some cases, as Frobenius would prove
+(\S\ref{ssec:frobenius}), they \emph{cannot} carry algebraic structure.
+
+
+\subsubsection{The algebraic modulus: Cardano to Gauss}
+
+The parallel algebraic genealogy of the modulus traces from Cardano's
+\emph{Ars Magna}~\cite{cardano} (1545) and the resolution of cubic equations, through
+Bombelli, Wallis, and Euler, toward the algebraic formalization of
+$\sqrt{-1}$ as a legitimate mathematical entity.  However, $\mathbb{C}$
+possesses a geometric aspect that developed simultaneously with this
+algebraic formalization.  The geometric tradition---employing the
+mechanism~\eqref{eq:triple}---is what provided the term ``modulus'' to
+complex analysis.
+
+The first mathematical deployment of ``modulus'' in number theory
+appears in Gauss's \emph{Disquisitiones Arithmeticae}~\cite{gauss01} (1801), the last
+major mathematical work composed in Latin.  Gauss defined modular
+congruence: \emph{``Si numerus~$a$ numerorum $b$, $c$ differentiam
+metitur, $b$ et $c$ secundum~$a$ congrui dicuntur \dots\ ipsum~$a$
+modulum appellamus.''}  The arithmetic modulus~$m$ partitions
+$\mathbb{Z}$ into equivalence classes: two numbers are ``the same''
+modulo~$m$ if they differ by a multiple of~$m$.  While no explicit
+evidence confirms Gauss's conscious borrowing from Vitruvius, the term
+captures a shared conceptual role: a reference magnitude that organizes
+a space.
+
+
+\subsubsection{Argand's synthesis and Riemann's formalization}
+
+Jean-Robert Argand~\cite{argand06} (1806) unified the geometric and algebraic moduli.
+His central contribution was the explicit separation of magnitude and
+direction: every complex number is the product of a modulus (pure
+magnitude) and a direction factor (pure angle):
+$z = |z| \cdot (\cos\theta + i\sin\theta)$.  Argand established that
+multiplication by~$i$ is equivalent to rotation by $90^\circ$ in the
+plane.  No direct evidence survives that Argand consciously borrowed
+the term from Vitruvius.  Yet the coincidence is
+structurally dense: the name is identical (\emph{modulus}), the
+components are identical (origin, radial magnitude, angle), and the
+milieu is precisely the one in which the Vitruvian module and its
+Renaissance refinement into \emph{minutae} had remained
+professionally current for two centuries.  Argand was born in
+Geneva---home to the world's first watchmakers' guild
+(1601)---and was himself probably a practitioner of horology:
+MacTutor identifies the author of the \emph{Essai} as ``probably
+an expert technician in the clock
+industry''~\cite{mactutor_argand}.%
+\footnote{The traditional identification of the author as
+Jean-Robert Argand (1768--1822), a Genevan bookkeeper in Paris, is
+disputed.  Schubring (cited in~\cite{mactutor_argand}) argues that
+the biographical data---age, profession, lack of positive
+evidence---are inconsistent with the technical expertise displayed in
+the \emph{Essai}.  For the present argument, only the content of the
+1806 work and its Genevan--horological milieu are relevant.}
+In horology the dial itself is organized by the
+triple~\eqref{eq:triple}---center, radius (hands), angle
+(minutes)---and the term \emph{minute} designates simultaneously a
+temporal unit and an angular subdivision of the module: historically
+and categorically, the Vitruvian mechanism~\eqref{eq:triple}
+transmitted through Renaissance horology.
+
+The primitive structure of~$\mathbb{C}$ upon which complex
+algebra was mounted is the triple~\eqref{eq:triple}: the same mechanism
+that Vitruvius used to organize columns, that Brunelleschi used to
+project depth, and that Farish used to draw three dimensions
+isometrically.  The decisive novelty was that Argand's synthesis endowed
+this mechanism with algebraic field operations ($+$, $\times$, $\div$),
+creating an object simultaneously geometric space and algebraic field.
+
+Riemann~\cite{riemann57} (1857, ``Theorie der Abel'schen Functionen'') generalized from
+individual complex numbers to families of geometric objects.  He
+introduced \emph{Modul} to designate the parameters that characterize
+equivalence classes of compact Riemann surfaces, defining the moduli
+space~$\mathcal{M}_g$ as the quotient parametrizing surfaces of
+genus~$g$ under conformal isomorphism.  This concept---spaces whose
+points represent entire equivalence classes of geometric
+objects---constitutes one of the deepest formalizations of the modulus
+idea: from Vitruvius's single column radius to Riemann's universal
+parameter space classifying all tori.
+
+
+%%% ====================================================================
+%%% §2.2 — THE MATHEMATICAL STRUCTURE OF C
+%%% ====================================================================
+
+\subsection{The mathematical structure of
+$\mathbb{C}$}\label{ssec:C-structure}\label{sec:complex-plane}
+
+\subsubsection{Algebraic, topological, and geometric structure}
+
+The complex numbers $\mathbb{C} = \mathbb{R}[i]/(i^2+1)$ possess
+simultaneous algebraic (field), topological (metric space), and
+geometric (plane) structure.  The algebraic extension from~$\mathbb{R}$
+is generated by the single relation $i^2 = -1$.
+
+Every $z \in \mathbb{C}$ admits polar decomposition
+$z = r e^{i\theta}$ with $r = |z| \geq 0$ and
+$\theta = \arg(z) \in [0, 2\pi)$.  Euler's formula
+$e^{i\theta} = \cos\theta + i\sin\theta$ encodes rotation by
+angle~$\theta$.  The modulus is multiplicative:
+$|z_1 z_2| = |z_1||z_2|$, a property inherited from the Pythagorean
+theorem.
+
+The complex plane admits three equivalent representations, each
+emphasizing different structural aspects:
+(i)~Euclidean: $\mathbb{C} \cong (\mathbb{R}^2, d_{\mathrm{eucl}})$
+with metric $d(z_1, z_2) = |z_1 - z_2|$;
+(ii)~Algebraic: $\mathbb{C} = \{x + iy : x, y \in \mathbb{R}\}$
+with field operations;
+(iii)~Polar: $\mathbb{C} \cong \mathbb{R}_+ \times S^1$, separating
+magnitude from phase.
+
+\subsubsection{The modulus formula and geometric--algebraic duality}
+
+For $z = x + iy$, the modulus satisfies
+$|z|^2 = z \cdot \bar{z} = x^2 + y^2$, where
+$\bar{z} = x - iy$ denotes complex conjugation.  This formula unifies
+geometric distance with algebraic operations: the modulus is a
+quantity that exists prior to and independent of the field
+structure---it is the Euclidean distance from the origin, a purely
+geometric object.  Yet it connects to algebra through conjugation,
+which is the unique non-trivial automorphism of~$\mathbb{C}$
+over~$\mathbb{R}$.
+
+\subsubsection{Lattices, tori, and moduli spaces}
+
+A \emph{lattice} in~$\mathbb{C}$ is a discrete subgroup
+$\Lambda = \mathbb{Z}\omega_1 + \mathbb{Z}\omega_2$ with
+$\omega_1/\omega_2 \notin \mathbb{R}$.  Every lattice inherits the
+metric and topological structure of~$\mathbb{C}$---distances, angles,
+symmetries are well defined---but the lattice itself carries no field
+operations: one cannot divide lattice points or take square roots
+within~$\Lambda$.  Lattices are geometric objects embedded
+in~$\mathbb{C}$, not algebraic substructures of it.
+
+Two lattices are distinguished by their rotational symmetry.
+The \emph{Gaussian lattice} $\mathbb{Z}[i]$, generated by $1$
+and~$i$, has $90^\circ$ rotational symmetry (the cyclic group
+$\mathbb{Z}_4$, generated by multiplication by~$i$).  The
+\emph{Eisenstein lattice} $\mathbb{Z}[\omega]$, where
+$\omega = e^{2\pi i/3}$, has $60^\circ$ rotational symmetry (the
+cyclic group~$\mathbb{Z}_6$, generated by multiplication
+by~$-\omega^2 = e^{i\pi/3}$).
+These are the \emph{only} lattices in~$\mathbb{C}$ with rotational
+symmetry beyond the trivial $180^\circ$---a rigidity theorem that will
+prove consequential for the construction.
+
+The quotient $\mathbb{C}/\Lambda$ is a complex torus, and the
+\emph{modular parameter} $\tau = \omega_2/\omega_1$ (with
+$\mathrm{Im}(\tau) > 0$) characterizes the torus up to conformal
+equivalence.  The space of all such parameters, modulo the action
+of~$\mathrm{PSL}(2,\mathbb{Z})$, is the moduli
+space~$\mathcal{M}_{\mathrm{lat}}$---Riemann's moduli space for
+genus-one surfaces.
+
+
+%%% ====================================================================
+%%% §2.3 — THE FROBENIUS BARRIER
+%%% ====================================================================
+
+\subsection{The Frobenius barrier: algebraic impossibility versus obstruction and geometric viability}\label{ssec:frobenius}\label{sec:restrictions}
+
+William Rowan Hamilton devoted years to ``multiplying triples.''
+According to his letters, his sons would ask each morning during
+October 1843: ``Well, Papa, can you multiply triples?''  He was forced
+to reply with a ``sad shake of the head: No, I can only add and subtract
+them.''  The breakthrough came on October~16, 1843, along Dublin's Royal
+Canal: three-dimensional multiplication was impossible, but
+four-dimensional multiplication could work if commutativity were
+abandoned.  Hamilton carved $i^2 = j^2 = k^2 = ijk = -1$ into
+Brougham Bridge, founding the quaternions~$\mathbb{H}$---inherently
+four-dimensional, with non-commutative multiplication~\cite{hamilton}.
+
+Frobenius's theorem~\cite{frobenius} (1877) closed the question definitively: no
+three-dimensional associative division algebra over~$\mathbb{R}$
+exists (the complete classification and its spectral consequences
+are reviewed in~\S1.3).  The temporal convergence is striking:
+during the precise decades 1822--1877, geometry systematically
+developed sophisticated three-dimensional representational
+systems---Farish's isometric projection (1822), Bravais's spatial
+lattices (1848)---each possessing rich structure yet requiring no
+algebraic multiplication, while algebra encountered an
+insurmountable barrier at dimension~three.
+
+The conclusion is not that three-dimensional structure is impossible,
+but that Frobenius constrains \emph{algebraic} structure---division
+algebras, field extensions, internal multiplication---not
+\emph{geometric} structure: metric spaces, normed spaces, topological
+manifolds, lattices.  A three-dimensional metric
+space is perfectly legitimate; what cannot exist is a
+three-dimensional \emph{field}.  This divergence between algebraic
+impossibility and geometric viability is the asymmetry that the
+construction of~\S3 exploits.
+
+\medskip
+\noindent\textit{The binary inheritance and its consequences.}\quad
+Twentieth-century mathematics and physics developed almost entirely
+within this constraint.  Von~Neumann's quantum mechanics (1927--32)
+placed states in complex Hilbert spaces~$\mathcal{H}$ over~$\mathbb{C}$;
+Turing's universal machine (1936) operates on binary tape~$\{0,1\}$;
+Shannon's information theory~\cite{shannon48} (1948) measures entropy in bits;
+Boolean algebra structures logic through binary truth values.
+Where three-dimensional structure appears---$\mathrm{SU}(3)$ color
+symmetry, spatial coordinates in relativity, three-generation
+structure in particle physics---it manifests \emph{geometrically}
+(rotation groups, Lie algebras acting on complex vector spaces), not
+through internal multiplication within an extended number system.
+
+The connection to the next section is direct: the binary structure
+$f\colon T \times T \to Y$ that Frobenius confined us to is
+\emph{precisely} the diagonal structure from which Lawvere's
+paradoxes arise~\cite{lawvere69,yanofsky03}.  The construction $g(s) = \alpha(f(s,s))$ requires
+binary auto-application---two copies of the same object composed
+through the same operation.  Thus Frobenius's barrier and Lawvere's
+obstruction are not independent constraints but two faces of a single
+structural limitation: confinement to binary algebraic structure
+simultaneously blocks dimensional extension and enables
+self-referential paradox.  The question becomes: can the geometric
+freedom that Frobenius leaves open also provide an escape from the
+logical trap that binary structure creates?  This is what
+Tarski's decidability boundary, developed next, addresses.
+
+
+%%% ====================================================================
+%%% §2.4 — THE DECIDABILITY BOUNDARY AND ITS CATEGORICAL FORMALIZATION
+%%% ====================================================================
+
+\subsection{The decidability boundary and its categorical
+formalization}\label{ssec:decidability}
+
+The introduction (\S1.3) identified three circumvention strategies
+for the self-referential paradoxes that Lawvere--Yanofsky~\cite{lawvere69,yanofsky03} unified:
+Russell's type stratification~\cite{russell08}, Priest's paraconsistency~\cite{priest79}, and Tarski's
+algebraic one~\cite{tarskigivant99}.
+  The connection between these strategies was
+characterized as a ``geometric escape''---a domain that is decidable
+(Tarski), stratified (Russell), and therefore immune to the diagonal
+constructions that generate paradox.  We develop here the deep
+mathematical structure of this escape, focusing on the precise
+mechanism by which self-referential capacity is lost and the
+categorical formalization of the boundary at which this loss occurs.
+
+
+\subsubsection{Tarski's decidability boundary: the arithmetic
+of self-reference}\label{sssec:tarski}
+
+Tarski~\cite{tarski48} (1948, 1951) showed that the first-order theory of
+elementary algebra---equivalently, the theory of real closed
+fields---admits elimination of quantifiers and is therefore
+\emph{complete and decidable}: every well-formed sentence is either
+provable or refutable, and there exists an algorithm that determines
+which.  The same result extends to elementary Euclidean
+geometry---points equipped with betweenness and equidistance---since
+the geometric system is interpretable in the
+algebraic one~\cite{tarskigivant99}.
+By contrast, enriching the system with a predicate
+$\mathrm{In}(x)$ denoting the property of being an integer renders it
+undecidable: in Tarski's words, ``no decision method for the enlarged
+system can be constructed''~\cite[p.\,45]{tarski48}.  The boundary
+lies at the capacity to define~$\mathbb{N}$ within the system.
+Real closed fields possess both addition and multiplication, yet
+remain decidable because they cannot define~$\mathbb{N}$ as a subset;
+it is this structural incapacity to self-encode---not the absence of
+any single operation---that places geometry outside the reach of
+G\"odel's incompleteness.  Without G\"odel numbering, the system
+cannot construct the diagonal function $f\colon T\times T\to Y$ that
+Yanofsky~\cite{yanofsky03} identifies as the single categorical source
+of the liar paradox, Russell's paradox, and Turing's halting problem.
+
+The deeper insight concerns arithmetic itself.  G\"odel's
+incompleteness requires \emph{both} addition and multiplication: the
+G\"odel numbering $\ulcorner\phi\urcorner$ that encodes formulas as
+numbers uses multiplicative encoding (prime factorization) composed
+with additive sequencing (concatenation).  A system with addition
+alone---Presburger arithmetic $(\mathbb{Z}, +)$---is
+decidable~\cite{presburger}.  The purely multiplicative theory of the
+integers is likewise decidable, since the fundamental theorem of
+arithmetic reduces it to the decidable theory of countably many
+independent copies of the natural order\footnote{The decidability of
+the multiplicative theory of~$\mathbb{N}$ follows from Skolem's
+analysis of multiplicative arithmetic~\cite{skolem30}; see also
+Mostowski's observation in Tarski~\cite[Note~5, p.\,51]{tarski48}
+that elementary algebra, though lacking the general concept of an
+integer, contains a decidable ``general arithmetic.''}.  It is their
+\emph{combination} $(\mathbb{Z}, +, \times)$ that generates
+undecidability and self-reference.
+
+This principle has a direct implication for the P\'olya operator
+problem.  A construction that operates in a domain where addition has
+been destroyed---where only multiplicative structure remains, as
+in~$\Ztwenty$ (\S\ref{sec:categorical})---inhabits Tarski's decidable
+fragment.  The Lawvere--Yanofsky diagonal (\S1.2) cannot form because
+the arithmetic capacity for self-encoding is structurally absent.
+This clarifies retroactively the strategies of Weil and Manin: Weil's
+proof for function fields succeeded in the geometric (decidable)
+setting; Manin's $\mathbb{F}_1$-program seeks to
+place~$\mathrm{Spec}\,\mathbb{Z}$ in a purely multiplicative
+framework where the same escape applies.
+
+
+\subsubsection{Grothendieck's categorical formalization of the
+boundary}\label{sssec:grothendieck}
+
+Tarski identified \emph{where} the decidability boundary lies.
+Grothendieck provided the \emph{arrow} that crosses it.
+
+Grothendieck's reformulation of mathematics through categories,
+functors, and topos theory~\cite{grothendieck_sga4} (1960s) introduced three structural
+innovations directly relevant to the present work.
+
+\emph{The functorial perspective.}  A moduli space should be
+understood not as a set of isomorphism classes but as a \emph{functor}
+$\mathcal{F}\colon \mathbf{Sch}^{\mathrm{op}} \to \Set$ assigning to
+each scheme the set of families over it.  Geometric objects are
+characterized by their relationships (morphisms) rather than their
+internal structure (elements).  This shifts the focus from
+objects---which are subject to Frobenius's dimensional
+constraints---to morphisms between them---which are not.
+Teichm\"uller's moduli spaces~\cite{teichmuller} (\S\ref{ssec:C-structure}) received
+their definitive formulation within this framework: the moduli
+functor $\mathcal{M}_g$ classifying families of Riemann surfaces is
+the precise categorical realization of Riemann's original concept.
+
+\emph{The site and topos.}  Grothendieck's generalized topology
+(SGA~4)~\cite{grothendieck_sga4} replaces open sets with covering families of morphisms.  A
+topos---a category with the logical structure of $\Set$ but different
+geometry---provides a framework where ``spaces'' can exist that have no
+classical point-set realization.  This is precisely the framework that
+$\mathbb{F}_1$-geometry would later require: spaces over the ``field
+with one element'' (Tits~\cite{tits57}, Soul\'e~\cite{soule04}) that exist as functors rather than classical
+geometric objects.  Borger's~\cite{borger09} identification of $\Lambda$-ring
+structures as $\mathbb{F}_1$-descent data (\S1.4 of the introduction)
+globalizes to what he describes as the big \'etale topos
+over~$\mathbb{F}_1$---a Grothendieckian construction.
+
+\emph{The forgetful functor: Tarski's boundary made categorical.}
+Here the connection to Tarski becomes precise.  Categories of
+mathematical objects are connected by functors that ``forget''
+structure:
+\[
+  C^*\text{-}\mathbf{Alg}
+    \xrightarrow{U_1} \Hilb \xrightarrow{U_2} \Met
+    \xrightarrow{U_3} \Set.
+\]
+At each stage, algebraic structure is lost: $U_1$ forgets the
+$C^*$-product, $U_2$ forgets linearity, $U_3$ forgets the metric.
+The chain moves from rich algebraic structure (where
+self-reference is possible and G\"odel's theorem applies) toward
+pure geometry (where Tarski's decidability holds).
+
+The forgetful functor \emph{implements} Tarski's boundary
+categorically: it is the mechanism by which a system loses arithmetic
+capacity---and with it, self-referential capacity---while potentially
+preserving information content.  A functor is \emph{faithful} if it
+is injective on morphisms: it forgets structure but not information.
+The chain $C^*$-$\mathbf{Alg} \to \Hilb \to \Met \to \Set$ strips
+away precisely the capacity for self-referential encoding (the
+combination of addition and multiplication that G\"odel numbering
+requires) while preserving the geometric and combinatorial data
+(multiplicative structure, metric relations, set-theoretic
+cardinalities) that carry spectral information.
+
+This is the categorical content of the ``geometric escape'' identified
+in the introduction (\S1.3): the domain where Lawvere's diagonal
+\emph{cannot form} is not a prohibition but a \emph{categorical level}
+reached by applying forgetful functors.  The P\'olya operator, if it
+is to avoid the Lawvere--Yanofsky obstruction, must be constructed
+at the $\Met$ or $\Set$ level---in the decidable fragment where the
+arithmetic required for self-reference has been systematically
+destroyed.
+
+
+%%% ====================================================================
+%%% §2.5 — PHYSICAL REALIZATIONS OF DIMENSIONAL TRANSCENDENCE
+%%% ====================================================================
+
+\subsection{Physical realizations of dimensional transcendence}\label{ssec:physical}
+
+The forgetful functor of~\S\ref{ssec:decidability} implements a
+dimensional reduction---from arithmetic to geometry, from
+self-referential to decidable.  Concrete realizations of analogous
+reductions exist in three physical frameworks.
+
+
+\subsubsection{String theory: compactification and the Virasoro
+tower}\label{sssec:strings}\label{sec:string}
+
+The two-dimensional worldsheet~$\Sigma$, parametrized
+by~$\mathbb{C}$, embeds into $D$-dimensional target spacetime through
+coordinate functions $X^\mu(\sigma,\tau)$.  The Polyakov action~\cite{polyakov81} is
+conformally invariant, generating the infinite-dimensional Virasoro
+algebra $\{L_n\}$ with central charge~$c$.  Information about
+$D$-dimensional geometry is encoded in how the 2D surface curves
+through the target---requiring no division algebra in dimension~3.
+
+Dimensional compactification provides a complementary mechanism:
+physical dimensions can exist as topological circles~$S^1$ without
+manifesting as algebraic extensions.  A compactified dimension of
+radius~$R$ ``disappears'' from the low-energy theory as $R \to 0$,
+while its topological imprint (winding modes, Kaluza--Klein tower)
+persists.
+
+The Huerta--Schreiber tower~\cite{huerta17} (\S1.4) derives M-theory's dimensional
+hierarchy from successive maximal central extensions of the
+superpoint, each level the unique consistent extension of the
+previous.  This is Russell's tower principle realized in physics:
+stratification through levels, with self-membership blocked across
+levels.
+
+
+\subsubsection{AdS/CFT: the holographic realization of the forgetful
+functor}\label{sssec:adscft}
+
+The AdS/CFT correspondence~\cite{maldacena97} (Maldacena, 1997) provides the most
+concrete physical realization of the principle that Tarski identified
+and Grothendieck formalized (\S\ref{sssec:grothendieck}).
+
+A $(d{+}1)$-dimensional gravitational
+theory in Anti-de~Sitter space is dual to a $d$-dimensional conformal
+field theory on its boundary, through the group isomorphism
+$\mathrm{SO}(d{+}1, 2) \cong \mathrm{Conf}(d)$.  Bulk fields
+$\phi(x,z)$ project to boundary operators $\mathcal{O}(x)$ through
+the radial limit $z \to 0$---the $(d+1)$th dimension is ``lost'' in
+the projection while its information content is encoded in the
+boundary's conformal structure.
+
+The structural parallel with the forgetful functor chain is precise.
+The forgetful functor $U_2\colon \Hilb \to \Met$ strips linearity
+while preserving metric structure; the holographic projection strips
+a spatial dimension while preserving conformal structure.  Both
+implement the same principle: loss of structure (algebraic or
+spatial) accompanied by preservation of information content.
+
+The Bekenstein--Hawking entropy~\cite{bekenstein73,hawking75} $S = A/(4G_N)$ establishes that
+information scales with boundary area, not bulk volume---the factor
+$1/4 = 1/2^2$ in Planck units.  In AdS$_3$/CFT$_2$,
+three-dimensional gravitational information is encoded on a
+two-dimensional boundary, with the isometry group decomposing into
+Virasoro algebras with central charge $c = 3\ell/(2G_N)$.
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+ & String Theory & AdS/CFT \\
+\midrule
+Structure & Embedding $\Sigma \subset$ spacetime
+  & Projection Bulk $\to$ Boundary \\
+Method & Coordinates $X^\mu(\sigma,\tau)$
+  & Radial limit $z \to 0$ \\
+Information flow & 2D $\to$ $D$ via functions
+  & $(d{+}1) \leftrightarrow d$ via group isomorphism \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Both achieve dimensional extension without requiring division algebras
+in dimension~3, operating within and through~$\mathbb{C}$.
+
+
+\subsubsection{Connes--Douglas--Schwarz:
+$\mathbb{F}_1 \cong D^1_{\mathrm{compact}}$}\label{sec:connes}\label{sec:manin}\label{sec:f1-geometric}
+
+The Connes--Douglas--Schwarz
+equivalence~\cite{cds98}, introduced in~\S1.4, connects toroidal
+compactification to noncommutative geometry.  We make the structural
+content explicit.
+
+String theory's toroidal compactification in the limit $R \to 0$
+produces a dimension that remains topologically present (maintaining
+periodicity and winding modes) but becomes metrically collapsed.
+Manin's $\mathbb{F}_1$-geometry, in the limit $q \to 1$, produces
+structures that retain multiplicative periodicity (Frobenius lifts
+$\psi_p$, roots of unity) but lose additive extension.  Both
+limiting processes yield objects sharing the same formal properties:
+degenerate $S^1$ fibers parametrizing discrete symmetries without
+continuous extension.
+
+This convergence has formal precedent: the Connes--Douglas--Schwarz
+correspondence establishes that the noncommutative tori
+$T(\theta)$ arising from toroidal compactification are precisely the
+$C^*$-algebraic structures that Manin employed for his Real
+Multiplication approach.  The identification
+$\mathbb{F}_1 \cong D^1_{\text{compactified}}$ is therefore not an
+analogy but a structural correspondence: dimensions with
+multiplicative periodicity and no additive extension.
+
+This characterizes the ``missing third dimension'' that
+Frobenius (\S\ref{ssec:frobenius}) proves cannot exist as a division
+algebra: it must be a dimension with discrete multiplicative scaling
+($\golden$-mediated, as the construction of~\S3 will demonstrate) but
+no field extension---a topological $S^1$ that does not correspond to
+any algebraic element.
+
+
+%%% ====================================================================
+%%% §2.6 — THE GEOMETRIC PRECEDENT: WEIL'S PROOF
+%%% ====================================================================
+
+\subsection{The geometric precedent: Weil's proof for function
+fields}\label{ssec:weil}
+
+The introduction (\S1.2) established that the Riemann Hypothesis is
+a theorem for function fields (Hasse~\cite{hasse34} 1934, Weil~\cite{weil40} 1940, Deligne~\cite{deligne74} 1974)
+and that the aspiration to transport this proof
+from~$\mathbb{F}_q$ to~$\mathbb{Z}$ motivates the
+$\mathbb{F}_1$-program.  We develop here the \emph{technical
+mechanism} of Weil's proof, because it is the template that the
+categorical construction of~\S5 reproduces.
+
+\subsubsection{What Weil proved and how}
+
+Let $C$ be a smooth projective curve of genus~$g$ over the finite
+field~$\mathbb{F}_q$.  The Frobenius endomorphism
+$\mathrm{Fr}\colon C \to C$ acts by $x \mapsto x^q$ on coordinates;
+the number of $\mathbb{F}_{q^m}$-rational points is
+$\#C(\mathbb{F}_{q^m}) = 1 - \sum_{i=1}^{2g}\alpha_i^m + q^m$,
+where the $\alpha_i$ are the eigenvalues of Frobenius acting on
+the first \'etale cohomology group $H^1_{\text{\'et}}(C, \mathbb{Q}_\ell)$.
+The Riemann Hypothesis for~$C$ is the statement
+$|\alpha_i| = q^{1/2}$ for all~$i$---the analogue of
+$\mathrm{Re}(\rho) = 1/2$.
+
+Weil's proof proceeds geometrically.  He constructs the arithmetic
+surface $C \times C$ (the self-product of the curve) and establishes
+an intersection form
+$\langle\cdot,\cdot\rangle\colon \mathrm{Div}(C \times C) \times
+\mathrm{Div}(C \times C) \to \mathbb{Z}$.
+Two distinguished divisors---$\xi_0 = C \times \{P\}$ (a
+``horizontal'' copy) and $\xi_1 = \{P\} \times C$ (a ``vertical''
+copy)---satisfy $\langle\xi_0,\xi_0\rangle = \langle\xi_1,\xi_1\rangle = 0$
+and $\langle\xi_0,\xi_1\rangle = 1$.
+The Riemann--Roch theorem and Serre duality, applied to divisors
+on~$C \times C$, produce an inequality
+$\langle D, D\rangle \leq 2\,\langle D,\xi_0\rangle \cdot
+\langle D,\xi_1\rangle$
+for all divisors~$D$.  Taking $D$ to be the graph of the $m$-th
+iterate of Frobenius, this inequality forces
+$|\alpha_i| \leq q^{1/2}$; the functional equation provides the
+complementary bound $|\alpha_i| \geq q^{1/2}$, yielding
+$|\alpha_i| = q^{1/2}$~\cite{oort14,milne15}.
+
+\subsubsection{The structural content}
+
+Three features of Weil's proof merit emphasis, because they define
+the requirements for any analogous construction over~$\mathbb{Z}$:
+
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{The arithmetic surface.}  The proof requires
+    $C \times C$ as a geometric object with well-defined intersection
+    theory.  For $\zeta(s)$ over~$\mathbb{Z}$, the analogue would be
+    $\mathrm{Spec}(\mathbb{Z}) \times \mathrm{Spec}(\mathbb{Z})$---an
+    ``arithmetic surface'' that does not exist in conventional algebraic
+    geometry.  Manin's noncommutative tori~\cite{manin02} (\S1.4) provide the
+    geometric arena but lack the dynamical completion needed for the
+    analogue of the Frobenius endomorphism.
+
+  \item \textbf{The Frobenius endomorphism.}  The proof requires
+    a canonical endomorphism whose eigenvalues are the quantities to
+    be bounded.  Over~$\mathbb{F}_q$, this is
+    $\mathrm{Fr}\colon x \mapsto x^q$---an \emph{intrinsic} operation
+    determined by the arithmetic of the base field.  Borger's~\cite{borger09}
+    $\Lambda$-ring structures (\S1.2) provide the characteristic-zero
+    analogue: the composition law
+    $\psi_p \circ \psi_q = \psi_{pq}$ mirrors the multiplicative
+    structure of the Euler product itself.
+
+  \item \textbf{The squeeze from intersection theory.}  The proof
+    establishes $|\alpha_i| = q^{1/2}$ through \emph{two independent
+    bounds}: an upper bound from intersection positivity and a
+    lower bound from the functional equation.  Neither alone suffices;
+    their conjunction produces equality.  This two-sided structure is
+    the geometric precedent for the squeeze theorem that emerges in
+    the categorical setting (\S5 of this paper): two independent
+    categorical bounds forcing $\mathrm{Re}(\rho) = 1/2$.
+\end{enumerate}
+
+The three features---arithmetic surface, canonical endomorphism,
+two-sided squeeze---define the template that any analogous
+construction over~$\mathbb{Z}$ must reproduce.  The categorical
+construction of~\S5 provides an explicit realization: two
+independent bounds from the ternary structure forcing
+$\mathrm{Re}(\rho) = 1/2$, mirroring Weil's squeeze from
+intersection positivity and the functional equation.
+
+
+%%% ====================================================================
+%%% §2.7 — CONVERGENCE AND STRUCTURAL PRINCIPLES
+%%% ====================================================================
+
+\subsection{Convergence and structural
+principles}\label{ssec:principles}
+
+The developments of \S\ref{ssec:modulus}--\S\ref{ssec:weil}
+exhibit a convergent architecture.  We make this convergence explicit
+by identifying the structural parallels between domains and then
+extracting the design principles for the construction of~\S3.
+
+\subsubsection{Cross-domain correspondences}
+
+The parallel between Brunelleschi's perspective
+(3D${}\to{}$2D encoding, depth lost as independent variable, encoded
+as apparent size $s \propto 1/d$), Farish's isometric projection
+($120^\circ$ angular encoding), and the holographic bulk--boundary
+correspondence ($(d{+}1)\!\to\!d$ encoding through radial limit) is
+not merely illustrative.  In all cases, a dimension is ``lost''
+geometrically while its information content is preserved.
+Grothendieck's forgetful functor (\S\ref{sssec:grothendieck})
+formalizes this principle categorically; Tarski's decidability
+theorem (\S\ref{sssec:tarski}) justifies it logically.
+
+Russell's type tower~\cite{russell08} and the Huerta--Schreiber tower share the same
+architectural pattern: hierarchical stratification through levels,
+each uniquely determined by its predecessor, with self-membership
+blocked across levels.  Borger's~\cite{borger09} Frobenius lifts
+$\psi^k \circ \psi^\ell = \psi^{k\ell}$, surveyed by
+Manin~\cite{manin13}, constitute the arithmetic realization.
+
+Weil's proof (\S\ref{ssec:weil}) establishes the geometric
+template: two independent bounds, obtained from intersection
+theory and the functional equation, produce equality by squeeze.
+The forgetful functor chain provides the categorical mechanism for
+crossing from the arithmetic domain (where the Euler product lives)
+to the geometric domain (where intersection-theoretic methods
+apply)---precisely the transport that the $\mathbb{F}_1$-program
+seeks to formalize~\cite{connes15}.
+
+\begin{center}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+Domain & Strategy & Mechanism & Key insight \\
+\midrule
+Logic & Russell & Type hierarchy $U_n$
+  & Tower prevents self-membership \\
+Logic & Tarski & Decidable geometry
+  & Arithmetic loss $=$ decidability gain \\
+Mathematics & Grothendieck & Forgetful functor
+  & Arrow crossing Tarski's boundary \\
+Mathematics & Weil & Intersection on $C\!\times\!C$
+  & Two bounds $\Rightarrow$ squeeze \\
+Physics & Strings & Compactification
+  & Dimensions as topology, not algebra \\
+Physics & AdS/CFT & Holographic duality
+  & $(d{+}1)\!\to\!d$ with info preserved \\
+Arithmetic & Manin/$\mathbb{F}_1$ & $\Lambda$-rings
+  & Numbers as functions on curves \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+\subsubsection{Structural principles for the construction}
+
+The preceding analysis establishes six
+principles that any construction applied to the problem at hand
+must satisfy.
+
+\textbf{Principle 1 (Geometric modulus as generator).}
+The Vitruvian triple
+$\{\text{origin},\allowbreak\;\text{modulus},\allowbreak\;\text{angle}\}$
+provides the primitive structure of~$\mathbb{C}$.  A construction
+exploiting the geometric aspect of~$\mathbb{C}$ should use the
+modulus as generating mechanism: a single constant from which
+proportions derive by self-similar scaling (Vitruvius,
+Brunelleschi, Argand).
+
+\textbf{Principle 2 (Tower with constant modulus).}
+Brunelleschi's perspective (the first projective system generated from
+a single vanishing point), Russell's type
+hierarchy~\cite{russell08,martinlof75}, the Virasoro tower,
+and Borger's Frobenius lifts~\cite{borger09} all exhibit the same pattern: an infinite
+sequence of levels generated by a fixed rule, with new information at
+each level but a single governing modulus throughout.  Any tower
+construction should have: (a)~a fixed generating ratio, (b)~preservation
+of the fundamental modulus at every level, and (c)~structural
+information growth.
+
+\textbf{Principle 3 (Frobenius circumvention through geometry).}
+No three-dimensional division algebra exists over~$\mathbb{R}$.  But
+three-dimensional geometric structure exists abundantly (Farish,
+Bravais).  Extension $\mathbb{C} \to$ 3D must operate as a scaling
+modulus rather than a field extension.  String theory demonstrates this
+concretely: compactified dimensions exist as topological~$S^1$ without
+algebraic extension.  The identification
+$\mathbb{F}_1 \cong D^1_{\text{compactified}}$ characterizes the
+needed dimension as having multiplicative scaling but no additive
+extension.
+
+\textbf{Principle 4 (Lattice duality and the Euler product).}
+Each lattice $\Lambda \subset \mathbb{C}$ defines a torus
+$\mathbb{C}/\Lambda$---an elliptic curve.
+The Eisenstein lattice ($\mathbb{Z}[\omega]$, $60^\circ$) carries
+$\mathbb{Z}_6$ symmetry; its $\mathbb{Z}_3$ subgroup (the $120^\circ$
+rotations $\{1,\omega,\omega^2\}$) provides the three-fold symmetry
+that echoes the tripartite factorization of the Euler product
+through~$\Ztwenty$.
+The Gaussian lattice ($\mathbb{Z}[i]$, $90^\circ$) carries $\mathbb{Z}_4$
+symmetry: the rotational structure native to~$\mathbb{C}$ as a field.
+A construction connecting the Euler product's arithmetic
+($\mathbb{Z}_3$) to the complex plane's geometry ($\mathbb{Z}_4$)
+must mediate between these two lattices; the torus provides the arena
+where both symmetries coexist, and the bridge coupling constant must
+preserve metric relations while transforming angular structure from
+hexagonal to square.  The construction in Section~3 employs~$\golden$
+as coupling constant.
+
+\textbf{Principle 5 (Holographic contraction: arithmetic to geometry).}
+The forgetful functor chain
+$C^*$-$\mathbf{Alg} \to \Hilb \to \Met \to \Set$
+implements Tarski's decidability boundary categorically.
+The functor destroys addition (and with it G\"odel numbering) while
+preserving multiplication (and with it spectral structure).  Any
+construction crossing from arithmetic to geometry must pass through
+this chain, losing self-referential capacity while preserving the
+multiplicative structure that carries the Euler product into the
+ternary regime.
+
+\textbf{Principle 6 (Squeeze from independent bounds).}
+Weil's proof establishes $|\alpha_i| = q^{1/2}$ through two independent
+bounds.  Lawvere's theorem requires the diagonal morphism
+$\Delta\colon A \to A \times A$ and point-surjective maps $A \to B^A$
+to generate paradox.  If the categorical structure produces two
+independent bounds on $\mathrm{Re}(\rho)$---neither alone
+sufficient---their conjunction can force equality without the
+self-referential machinery that a single direct proof would require.

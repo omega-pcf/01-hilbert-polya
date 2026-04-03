@@ -32,24 +32,61 @@ This repository contains the LaTeX source files for the manuscript and the compu
 ### Manuscript (`src/`)
 - **`main.tex`**: Master document file.
 - **`src/chapters/`**:
+  - `abstract.tex`: Abstract and Keywords.
   - `introduction.tex`: Historical context, Manin's program, and the String Theory framework.
-  - `formal.tex`: Mathematical formalization of the $\mathbb{F}_1$ geometry.
+  - `background.tex`: Foundations of the $\mathbb{F}_1$ geometry and the circularity problem.
   - `methods.tex`: Construction of the $T^*$ operator and the geometric tower.
   - `results.tex`: Computational findings and spectral analysis.
+  - `categorical.tex`: Categorical foundations and axiomatic framework.
+  - `squeeze.tex`: The Hecke-1920 spectral squeeze and Riemann identity.
   - `discussion.tex`: Implications for the Riemann Hypothesis and broader theory.
-- **`src/bibliography.bib`**: References.
+  - `conclusions.tex`: Final synthesis and future directions.
+  - `acknowledgments.tex`: Institutional and individual acknowledgments.
+  - `appendix.tex`: Lean 4 formalization source and full bibliography.
+- **`src/bibliography.bib`**: References (original bib file).
 
-### Verification (`test/`)
+### Verification (`tests/`)
 Code used to verify the spectral predictions and structural isomorphisms.
-- **Spectral prediction**: Validation of $T^*(n)$ against Riemann zeros.
-- **Mersenne correspondence**: Checks for the logarithmic isomorphism between the Golden and Mersenne towers.
 
-## Compilation
+- **`tests/verify_t_star.py`**: Numerical validation of the $T^*(n)$ operator against exact Riemann zeros (mpmath).
+- **`lean/Pcf.lean`**: Formal Lean 4 proof of the categorical foundation and the Hecke-1920 spectral squeeze.
 
-The document uses the `sigma` class. To build the PDF:
+## Formal Verification
+
+This project uses a dual verification approach: formal logic (Lean 4) and numerical analysis (Python/mpmath).
+
+To run the complete verification suite:
+
+```bash
+pnpm run verify
+```
+
+### Components
+
+- **Lean 4 Proof**: Built with `lake`. Verifies the logical consistency of the categorical tower and the master deductive chain.
+
+  ```bash
+  pnpm run verify:lean
+  ```
+
+- **Spectral Verification**: Uses `mpmath` to verify that the $T^*$ operator spectrum converges to the Riemann zeros $t_n$ across several magnitudes (up to $n=10^{12}$).
+
+  ```bash
+  pnpm run verify:py
+  ```
+
+The project uses a Docker-based LaTeX environment (`kjarosh/latex:2024.4-full`) to ensure consistent results across different systems. To build the production PDF:
 
 ```bash
 pnpm run build
+```
+
+The build pipeline automatically manages versioning in `CITATION.cff` and `.zenodo.json`, runs LaTeX passes, and verifies formal proof status.
+
+If you are missing the figure assets, generate placeholders before building:
+
+```bash
+pnpm run generate:figures
 ```
 
 Or using standard LaTeX tools:

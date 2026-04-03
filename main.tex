@@ -8,6 +8,13 @@
 
 \usepackage{mathtools}
 \usepackage{amssymb}
+\usepackage{tikz-cd}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{hyperref}
 
 \numberwithin{equation}{section}
 
@@ -25,6 +32,27 @@
 \newtheorem{Example}[Theorem]{Example}
 \newtheorem{Remark}[Theorem]{Remark}
 
+%%% ====================================================================
+%%% CUSTOM COMMANDS FROM V11
+%%% ====================================================================
+\newcommand{\cat}[1]{\mathcal{#1}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Hilb}{\mathbf{Hilb}}
+\newcommand{\Met}{\mathbf{Met}}
+\newcommand{\ob}[1]{\mathrm{ob}(#1)}
+\newcommand{\norm}[1]{\|#1\|}
+\newcommand{\abs}[1]{|#1|}
+\newcommand{\Zmod}[1]{\mathbb{Z}/{#1}\mathbb{Z}}
+\newcommand{\Ztwenty}{(\mathbb{Z}/20\mathbb{Z})^\times}
+\newcommand{\Rpcf}{R_{\mathrm{PCF}}}
+\newcommand{\Ecube}{E^3}
+\newcommand{\golden}{\varphi}
+\newcommand{\OmH}{\widehat{\Omega}}
+\newcommand{\lean}[1]{\texttt{#1}}
+\newcommand{\pcfrepo}{https://github.com/omega-pcf/01-primitive-complex-field}
+\title{}
+\author{}
+
 \begin{document}
 
 \renewcommand{\PaperNumber}{***}
@@ -35,33 +63,39 @@
 
 \ArticleName{The Hilbert Pólya Operator and the Primitive Structure of the Complex Plane: A Reinterpretation of Yuri Manin's Ideas from the Perspective of the String Theory Framework}
 
-\Author{Jorge Armando GONZÁLEZ GARCÍA~$^{\rm a}$, Víctor Manuel GONZÁLEZ GARCÍA~$^{\rm a}$, Itzel Marion DRESSLER PÉREZ~$^{\rm b}$ and Luz María GARCÍA ORDÓÑEZ~$^{\rm a}$}
+\Author{Jorge Armando GONZÁLEZ GARCÍA~$^{\rm a}$, Víctor Manuel GONZÁLEZ GARCÍA~$^{\rm a}$, Itzel Marion DRESSLER PÉREZ~$^{\rm b}$, Luz María GARCÍA ORDÓÑEZ~$^{\rm a}$ and M.~MORENO~$^{\rm b}$}
 
-\AuthorNameForHeading{J.A.~González García, V.M.~González García, I.M.~Dressler Pérez and L.M.~García Ordóñez}
+\AuthorNameForHeading{Gonz\'alez Garc\'ia et al.}
 
 \Address{$^{\rm a)}$~TTAMAYO PUNTO COM, S.A.P.I. de C.V., Mexico}
-\EmailD{\mail{jorge@ttamayo.com}} % Assuming email
+\EmailD{\mail{jorge@ttamayo.com}}
 
 \Address{$^{\rm b)}$~Independent Researcher}
 
 \ArticleDates{Received ???, in final form ????; Published online ????}
 
 \input{src/chapters/abstract}
+\maketitle
+\tableofcontents
 
-\section{Introduction}
 \input{src/chapters/introduction}
 
-\section{Background}
-\input{src/chapters/formal}
+\input{src/chapters/background}
 
-\section{Methods}
 \input{src/chapters/methods}
 
-\section{Results} \label{sec:results}
 \input{src/chapters/results}
 
-\section{Discussion and Implications} \label{sec:discussion}
+\input{src/chapters/categorical}
+
+\input{src/chapters/squeeze}
+
 \input{src/chapters/discussion}
+
+\input{src/chapters/conclusions}
+\input{src/chapters/disclosure}
+\input{src/chapters/acknowledgments}
+\input{src/chapters/appendix}
 
 \pdfbookmark[1]{References}{ref}
 \bibliographystyle{sigma}

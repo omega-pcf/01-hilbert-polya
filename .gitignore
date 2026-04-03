@@ -1,5 +1,6 @@
 .env
 .DS_Store
+/*.code-workspace
 
 # LaTeX auxiliary files (but keep PDF for Zenodo)
 build/*.aux
