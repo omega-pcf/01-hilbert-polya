@@ -19,10 +19,11 @@ plt.style.use("seaborn-v0_8-paper")  # Professional base style
 matplotlib.rcParams.update({
     # Typography
     "font.family": "serif",
-    "font.serif": ["Computer Modern Roman", "Times", "Palatino"],
+    "font.serif": ["DejaVu Serif", "Liberation Serif", "Computer Modern Roman", "serif"],
     "font.size": 10,
     "axes.labelsize": 10,
     "axes.titlesize": 12,
+
     "xtick.labelsize": 9,
     "ytick.labelsize": 9,
     "legend.fontsize": 9,

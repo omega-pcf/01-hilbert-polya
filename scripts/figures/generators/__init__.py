@@ -93,42 +93,36 @@ _parent_dir = Path(__file__).parent.parent
 if str(_parent_dir) not in sys.path:
     sys.path.insert(0, str(_parent_dir))
 
-try:
-    # Import existing generators (they register automatically via @register)
-    # These imports must happen after sys.path is set up
-    import generators.example  # noqa: F401
-    import generators.eigenvalues_triangle  # noqa: F401
-    import generators.orthogonal_views  # noqa: F401
-    import generators.equilateral_perspective  # noqa: F401
-    import generators.cylinder_lattice_connection  # noqa: F401
-    import generators.lattice_hypercube_analysis  # noqa: F401
-    import generators.tower_expansion  # noqa: F401
-    import generators.tower_contraction  # noqa: F401
-    import generators.sierpinski_2d  # noqa: F401
-    import generators.scale_factors  # noqa: F401
-    import generators.hypercube_projection  # noqa: F401
-    import generators.square_rhombus_projection  # noqa: F401
-    import generators.cylinder_pcf  # noqa: F401
-    import generators.hausdorff_dimension  # noqa: F401
-    import generators.top_view_expansion  # noqa: F401
-    import generators.torus_pcf  # noqa: F401
-    import generators.towers_comparison  # noqa: F401
-    import generators.dual_towers  # noqa: F401
-    import generators.hypercube_complete  # noqa: F401
-    import generators.hypercube_views  # noqa: F401
-    import generators.hypercube_tower  # noqa: F401
-    import generators.lattice_pcf_views  # noqa: F401
-    import generators.lattice_square_combined  # noqa: F401
-    import generators.comparative_dimensional_mechanisms  # noqa: F401
-    import generators.dual_spectrum  # noqa: F401
-    import generators.gauss_eisenstein_transition  # noqa: F401
-    import generators.cylinder_lattice_3d  # noqa: F401
-    import generators.cylinder_lattice_top  # noqa: F401
-    import generators.cylinder_lattice_lateral  # noqa: F401
-    # Add more imports as new generators are created:
-    # import generators.figure_1  # noqa: F401
-    # import generators.figure_2  # noqa: F401
-except ImportError:
-    # If there are no generators yet, that's fine
-    pass
+# Import existing generators (they register automatically via @register)
+# These imports must happen after sys.path is set up
+import generators.eigenvalues_triangle  # noqa: F401
+
+import generators.orthogonal_views  # noqa: F401
+import generators.equilateral_perspective  # noqa: F401
+import generators.cylinder_lattice_connection  # noqa: F401
+import generators.lattice_hypercube_analysis  # noqa: F401
+import generators.tower_expansion  # noqa: F401
+import generators.tower_contraction  # noqa: F401
+import generators.sierpinski_2d  # noqa: F401
+import generators.scale_factors  # noqa: F401
+import generators.hypercube_projection  # noqa: F401
+import generators.square_rhombus_projection  # noqa: F401
+import generators.cylinder_pcf  # noqa: F401
+import generators.hausdorff_dimension  # noqa: F401
+import generators.top_view_expansion  # noqa: F401
+import generators.torus_pcf  # noqa: F401
+import generators.towers_comparison  # noqa: F401
+import generators.dual_towers  # noqa: F401
+import generators.hypercube_complete  # noqa: F401
+import generators.hypercube_views  # noqa: F401
+import generators.hypercube_tower  # noqa: F401
+import generators.lattice_pcf_views  # noqa: F401
+import generators.lattice_square_combined  # noqa: F401
+import generators.comparative_dimensional_mechanisms  # noqa: F401
+import generators.dual_spectrum  # noqa: F401
+import generators.gauss_eisenstein_transition  # noqa: F401
+import generators.cylinder_lattice_3d  # noqa: F401
+import generators.cylinder_lattice_top  # noqa: F401
+import generators.cylinder_lattice_lateral  # noqa: F401
+
 

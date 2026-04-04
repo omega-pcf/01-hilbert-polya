@@ -54,11 +54,12 @@ def generate_comparative(output_dir: Path, verbose: bool = False) -> None:
     r_bnd     = 3.5 / z_bnd
     ax2.plot(r_bnd * np.cos(theta_bnd), r_bnd * np.sin(theta_bnd), z_bnd * np.ones_like(theta_bnd), '-', color='red', lw=2.5, zorder=10)
     
-    ax2.text(8.0,  6.0, z_bnd + 0.8, 'Boundary', color='red', fontsize=12, zorder=12, fontweight='bold')
-    ax2.text(6.5, -8.0, z_bnd + 0.5, r'$\mathrm{CFT}_d$', color='red', fontsize=16, fontweight='bold', zorder=12)
-    ax2.text(-6.5, -8.0, 6.5, r'$\mathrm{AdS}_{d+1}$', color='blue', fontsize=18, fontweight='bold', zorder=12)
+    ax2.text(10.0, -12.0, 3.5, r'$\mathrm{CFT}_d$', color='red', fontsize=24, fontweight='bold', zorder=12)
+    ax2.text(1.5, -1.5, 8.8, r'$\mathrm{AdS}_{d+1}$', color='blue', fontsize=26, fontweight='bold', zorder=12)
+
 
     ax2.set_xlabel('x', fontsize=10, labelpad=1)
+
     ax2.set_ylabel('y', fontsize=10, labelpad=1)
     ax2.set_zlabel('z', fontsize=10, labelpad=1)
     ax2.set_xlim(-10, 10); ax2.set_ylim(-10, 10); ax2.set_zlim(0, 9)
