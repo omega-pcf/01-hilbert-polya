@@ -11,7 +11,7 @@
     "build": "pnpm exec tsx scripts/build.ts",
     "build:full": "pnpm run generate:figures && pnpm run build",
     "release": "dotenv -e .env -- release-it",
-    "release:dry-run": "pnpm run build:full && dotenv -e .env -- release-it --dry-run"
+    "release:dry-run": "pnpm run build:full && dotenv -e .env -- release-it --dry-run --no-git.requireCleanWorkingDir"
   },
   "packageManager": "pnpm@9.0.0",
   "private": true,
