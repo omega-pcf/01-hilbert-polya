@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.1](///compare/v1.5.0...v1.5.1) (2026-04-04)
+
+### Bug Fixes
+
+* resolve Figure 2 caption blank line and hyperref header warnings 491af3c
+
 ## [1.5.0](///compare/v1.4.0...v1.5.0) (2026-04-04)
 
 ### Features
