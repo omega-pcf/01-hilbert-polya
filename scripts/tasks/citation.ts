@@ -113,7 +113,7 @@ export function generateZenodoJson(): void {
     repository_url: existingZenodo.repository_url || generatedRaw.repository_url,
 
     // Preserve language (not in CFF standard, but needed for Zenodo)
-    language: existingZenodo.language || 'spa',
+    language: existingZenodo.language || 'eng',
   };
 
   // Build final Zenodo metadata with proper types
@@ -126,7 +126,7 @@ export function generateZenodoJson(): void {
     creators: generatedRaw.creators || [],
     access_right: generatedRaw.access_right || 'open',
     license: normalizedLicense,
-    language: preserved.language || 'spa',
+    language: preserved.language || 'eng',
     keywords: generatedRaw.keywords || [],
     related_identifiers: preserved.related_identifiers,
     repository_url: preserved.repository_url,
