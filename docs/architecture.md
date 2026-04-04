@@ -3,24 +3,28 @@
 ## Stack
 
 - **release-it**: Semantic versioning + GitHub releases.
-- **@release-it/bumper**: Synchronizes version `package.json` → `CITATION.cff`, `.zenodo.json`.
-- **TypeScript + tsx**: Orchestration scripts.
+- **@release-it/bumper**: Synchronizes version `package.json` → `CITATION.cff`.
+- **TypeScript + tsx**: Orchestration scripts (build, metadata generation).
 - **Docker** (`kjarosh/latex:2024.4-full`): Reproducible LaTeX compilation.
+- **cffconvert** (via Docker): Generates `.zenodo.json` from `CITATION.cff`.
 - **Zenodo webhook**: Automatic integration from GitHub.
 
 ## Flow
 
 ```
 pnpm run release
-  → @release-it/bumper: updates versions in package.json, CITATION.cff, .zenodo.json
+  → @release-it/bumper: updates version in package.json, CITATION.cff
   
-  → after:bump: pnpm run build
-    → cleanup: removes previous document-v*.pdf
-    → citation: updates date-released
-    → compile: Docker with SOURCE_DATE_EPOCH (git commit timestamp)
-    → checksums: SHA256 of the PDF
+  → after:bump:
+    → pnpm run generate:figures
+    → pnpm run generate:zenodo: cffconvert from CITATION.cff to .zenodo.json
+    → pnpm run build: orchestration script
+      → cleanup: removes previous document-v*.pdf
+      → citation: updates date-released in CITATION.cff
+      → compile: Docker with SOURCE_DATE_EPOCH (git commit timestamp)
+      → checksums: SHA256 of the PDF
   
-  → Git: commit + tag v${version} + push (release-it stages automatically with addUntrackedFiles)
+  → Git: commit + tag v${version} + push
   
   → GitHub: Release with assets (PDF, checksums)
   
@@ -44,7 +48,7 @@ scripts/
 ├── build.ts              # Independent build (hook after:bump)
 ├── tasks/                # Atomic tasks
 │   ├── checksums.ts
-│   ├── citation.ts
+│   ├── citation.ts       # CITATION.cff and .zenodo.json logic
 │   ├── cleanup.ts
 │   └── compile.ts
 ├── types.ts              # TypeScript types
@@ -54,11 +58,12 @@ scripts/
 
 ## Metadata
 
-**Source of truth:** `package.json` version.
+**Source of truth:** `package.json` version for the build, `CITATION.cff` for project metadata.
 
 **Automatic Synchronization:**
 - `CITATION.cff` version (via @release-it/bumper).
-- `.zenodo.json` version (via @release-it/bumper).
-- `CITATION.cff` date-released (via hook after:bump → build.ts).
+- `CITATION.cff` date-released (via build.ts).
+- `CITATION.cff` languages (source of truth for Zenodo).
+- `.zenodo.json` version and content (generated from `CITATION.cff` via `pnpm run generate:zenodo`).
 
 **Zenodo:** Reads `.zenodo.json` from the tag, creates a version under the same Concept DOI.
