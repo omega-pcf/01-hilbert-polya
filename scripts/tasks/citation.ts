@@ -112,8 +112,8 @@ export function generateZenodoJson(): void {
     // Preserve repository_url if it exists
     repository_url: existingZenodo.repository_url || generatedRaw.repository_url,
 
-    // Preserve language (not in CFF standard, but needed for Zenodo)
-    language: existingZenodo.language || 'eng',
+    // Language: prioritize what cffconvert generated from CITATION.cff, then existing, then 'eng'
+    language: generatedRaw.language || existingZenodo.language || 'eng',
   };
 
   // Build final Zenodo metadata with proper types
