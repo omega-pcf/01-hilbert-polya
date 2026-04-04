@@ -7,8 +7,10 @@ This is the central section.
 
 The spectral proof (Theorem~\ref{thm:rh-spectral}) establishes
 $\mathrm{Re}(\rho)=1/2$ directly from the spectral embedding.  The
-squeeze proof below provides a second, independent derivation that has
-The conclusion follows by \texttt{linarith}.
+squeeze proof below provides a second, independent derivation that has the advantage of being fully formalizable in Lean~4: the arithmetic bound
+enters as a structure field of \lean{TernaryLZero}; the companion bound
+is derived from \lean{hecke\_1920}.  The conclusion
+follows by \texttt{linarith}.
 
 The upper bound $\rho_{\mathrm{re}}\le\mu_3$ derives from the spectral
 embedding (Proposition~\ref{prop:spectral-embedding}): the Euler product
