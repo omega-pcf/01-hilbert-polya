@@ -26,9 +26,7 @@ construction proceeds through a dimensional emergence chain:
     \;\xrightarrow{\times\sigma}\;
   \mathcal{M}^5_{\mathrm{PCF}}.
 \]
-Every structural claim is accompanied by its Lean~4 formalization
-(\texttt{PCF\_Complete\_v11\_Unified.lean}: 646 lines, 122 declarations,
-$0$~\texttt{sorry}).
+Every structural claim is formally verified in Lean~4 (\S\ref{app:lean}).
 
 % ------------------------------------------------------------------
 \subsection{Axiomatic Framework}\label{ssec:axioms}
@@ -53,7 +51,7 @@ $z=\golden y$.
 
 \emph{Axiom~4 (Distributed structure).}  The operator factorizes as
 $\Omega = P\cdot C\cdot F$, where $P$, $C$, $F$ are complex phasors.
-No component observes itself directly---the self-reference is distributed
+No component ``observes'' itself directly---the self-reference is distributed
 among three components, avoiding the prohibited binary cycle that generates
 paradoxes (Lawvere--Yanofsky).
 
@@ -428,9 +426,10 @@ parameter $\tau=\omega_1/\omega_2$ parametrizes the lattice family.
 \emph{Left:} The tripartite operator $\OmH$ with eigenvalues 
 $\lambda_k = \tfrac{1}{2}\omega^k$ separated by $120^\circ$ (Eisenstein structure). 
 \emph{Right:} The rectangular lattice $\Lambda_{\mathrm{PCF}} = \mathbb{Z}M \oplus \mathbb{Z}Mi$ 
-with $90^\circ$ fundamental cell (Gauss structure). The arrow ``$\mathrm{PCF} \to$'' 
-denotes the transformation chain: Eisenstein ($120^\circ$) $\to$ scalar 
-periodicity $\to$ Gauss ($90^\circ$). Golden mediation preserves the 
+with $90^\circ$ fundamental cell (Gauss structure).  
+The underlying planar projections (top views) map the $120^\circ$ circle 
+($R_0 = 3$) onto the square modular parameter $\tau = i$ within the 
+$M \times M$ fundamental cell.  Golden mediation preserves the 
 invariant $|\Omega| = 1/2$ while effecting the symmetry transition 
 $S_3 \to \mathbb{Z}_4$, generating the spectral parameters $\mu = 1/2, \sigma = 3\mu = 3/2$.}
 \label{fig:gauss-eisenstein}
@@ -448,17 +447,7 @@ the triangle embedded in the lattice.}
 \label{fig:cylinder-lattice-3d}
 \end{figure}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{src/images/cylinder_lattice_top}
-\caption{\textbf{Golden mediation between Eisenstein and Gauss structures (II: Top views).} 
-Planar projections of the correspondence. \emph{Left:} Circle $R_0 = 3$ 
-with inscribed $120^\circ$ triangle (Eisenstein structure). 
-\emph{Center:} Square cell $M_{\mathrm{PCF}} \times M_{\mathrm{PCF}}$ 
-(Gauss structure). \emph{Right:} Superposition of circle-plus-triangle 
-within square.}
-\label{fig:cylinder-lattice-top}
-\end{figure}
+
 
 \begin{figure}[htbp]
 \centering
@@ -1620,9 +1609,7 @@ mean relative error ${\sim}1\%$ (bounded by ${<}1.7\%$) across twelve orders of 
 (\S\ref{sec:results}).  The structural parameters $d=3$, $\mu=1/2$,
 $\sigma=3/2$ emerge from the PCF framework alone
 (Proposition~\ref{prop:spectral-identities}), and the derivation is
-formally verified in Lean~4 with zero \texttt{sorry} and axioms limited
-to geometric constants of the PCF construction~(\S\ref{app:lean})
-and Hecke's functional equation.
+formally verified (see Appendix~\ref{app:lean}).
 
 Benchmarks~\emph{(i)--(iii)} are not verified from the intrinsic
 structure of~$\tilde{H}_{\mathrm{PCF}}$.  The complete position

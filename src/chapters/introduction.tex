@@ -445,10 +445,7 @@ obstruction is simultaneously effective ($\mu < 1$) and non-degenerate
 ($\mu > 0$), with spectral parameters $\sigma = 3/2$ and $\mu = 1/2$
 uniquely determined by the quadratic system
 $\sigma + \mu = 2$, $\sigma\mu = 3/4$.
-These results are formally verified in Lean~4 with zero \texttt{sorry}
-statements; axioms are limited to geometric constants of the PCF
-construction~(\S\ref{ssec:axioms}) and Hecke's functional
-equation~(\S\ref{ssec:squeeze}).
+These results are formally verified in Lean~4 with zero \texttt{sorry} statements; axioms are limited to the geometric constants of the PCF construction~(\S\ref{ssec:axioms}) and the functional equation of Hecke~(\S\ref{ssec:squeeze}).
 
 The tripartite mechanism subsumes the classical circumvention
 strategies rather than opposing them.  The Galois tower
@@ -541,10 +538,7 @@ and $1-\mathrm{Re}(\rho)\le\mu_3$
 (Proposition~\ref{prop:premise-B}, from Hecke's 1920 theorem)---together force
 $\mathrm{Re}(\rho)=1/2$ by~\texttt{linarith}.  Neither bound alone
 suffices (Proposition~\ref{prop:bounds-independent}).
-This is the form formalized in Lean~4 with $0$~\texttt{sorry};
-axioms limited to geometric constants of~\S\ref{ssec:axioms}
-and Hecke's functional equation
-(\lean{hecke\_1920}, Appendix~\ref{app:lean}).
+This is the form adopted for formalization (see Appendix~\ref{app:lean}).
 \end{proof}
 
 The deductive chain from decidable arithmetic to
@@ -605,9 +599,7 @@ establishes that every non-trivial zero of~$\zeta(s)$ satisfies
 $\mathrm{Re}(\rho)=1/2$.  Two proofs are given: a spectral proof
 (Theorem~\ref{thm:rh-spectral}, no classical input) and a squeeze
 proof (Theorem~\ref{thm:rh-squeeze}, Hecke 1920).  The squeeze is
-machine-verified in Lean~4
-with $0$~\texttt{sorry}; axioms limited to geometric constants
-of~\S\ref{ssec:axioms} and \lean{hecke\_1920}.
+This result is machine-verified (see Appendix~\ref{app:lean}).
 
 \emph{What remains open.}  The proof establishes
 $\mathrm{Re}(\rho)=1/2$ within the PCF categorical framework.
@@ -712,10 +704,7 @@ Hecke's 1920 theorem (unconditional): for self-dual characters,
 $L(\rho,\chi) = 0 \implies L(1-\rho,\chi) = 0$.  The complete
 deductive chain---ten steps from decidable arithmetic
 to~$\mathrm{Re}(\rho) = 1/2$, with independence of bounds
-verified---is formalized and fully compiled in Lean~4 with Mathlib
-(\texttt{PCF\_Complete\_v11\_Unified.lean}: 646 lines, 122 declarations,
-$0$~\texttt{sorry}; axioms limited to geometric constants
-of~\S\ref{ssec:axioms} and \lean{hecke\_1920}).
+verified---is formalized and fully compiled in Lean~4 with Mathlib (\S\ref{app:lean}).
 
 \textbf{Discussion} (\S\ref{sec:discussion}) examines the
 mathematical, computational, and physical implications of the

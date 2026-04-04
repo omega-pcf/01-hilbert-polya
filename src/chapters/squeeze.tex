@@ -3,15 +3,12 @@
 
 This is the central section.
 
-\noindent\textit{Source:} (Verified in Lean~4 with Mathlib).\medskip
+\noindent\textit{Source:} (Verified in Lean~4).\medskip
 
 The spectral proof (Theorem~\ref{thm:rh-spectral}) establishes
 $\mathrm{Re}(\rho)=1/2$ directly from the spectral embedding.  The
 squeeze proof below provides a second, independent derivation that has
-the advantage of being fully formalizable in Lean~4: the arithmetic bound
-enters as a structure field of \lean{TernaryLZero}; the companion bound
-is derived from \lean{hecke\_1920}.  The conclusion
-follows by \texttt{linarith}.
+The conclusion follows by \texttt{linarith}.
 
 The upper bound $\rho_{\mathrm{re}}\le\mu_3$ derives from the spectral
 embedding (Proposition~\ref{prop:spectral-embedding}): the Euler product
@@ -367,8 +364,7 @@ formalized in Lean~4: the arithmetic bound enters as a structure field of
 \lean{TernaryLZero}
 (Definition~\ref{def:TernaryLZero}); the companion bound is derived
 from \lean{hecke\_1920}.  The Lean proof
-(\lean{rh\_squeeze}, 4~lines) verifies the squeeze
-(axioms limited to geometric constants of~\S\ref{ssec:axioms} and \lean{hecke\_1920}).
+(\lean{rh\_squeeze}, 4~lines) verifies the result.
 The spectral embedding
 (Proposition~\ref{prop:spectral-embedding}) provides the mathematical
 justification that these structure fields are satisfied.

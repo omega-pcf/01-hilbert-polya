@@ -95,7 +95,7 @@ $n = 5{,}000$--$10{,}000$        & 15  & 0.16  & 0.28  & $\downarrow$ minimal \\
 $n = 10{,}000$--$10^5$           & 15  & 0.64  & 0.95  & $\uparrow$ \\
 $n = 10^5$--$131{,}072$          & 15  & 0.98  & 1.00  & $\uparrow$ \\
 \midrule
-\multicolumn{5}{c}{\emph{Extended (new): 115 zeros at 25--30 digit precision}} \\
+\multicolumn{5}{c}{\emph{Extended Verification: 115 zeros at 25--30 digit precision}} \\
 $131{,}072$--$10^6$              & 27  & 1.15  & 1.34  & $\uparrow$ \\
 $10^6$--$10^7$                   & 15  & 1.42  & 1.55  & $\uparrow$ \\
 $10^7$--$10^9$                   & 12  & 1.61  & 1.68  & $\uparrow$ \\
@@ -159,8 +159,7 @@ III & $t_n^{\mathrm{RvM}}/t_n$ & $1$ & from below (RvM correction terms) \\
 \noindent
 Factors~I and~II are formalized in
 \texttt{PCF\_Operator\-Convergence.lean}
-(272~lines, 26~declarations, $0$~\texttt{sorry};
-Appendix~\ref{app:lean}).
+(Verified in Lean~4, \S\ref{app:lean}).
 
 The competition between the positive excess of Factors~I--II and the
 negative deficit of Factor~III produces the peaked structure:

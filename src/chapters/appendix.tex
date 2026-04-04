@@ -22,54 +22,12 @@ File & Lines & Decl. & Status \\
 \end{tabular}
 \end{center}
 
-\subsection{File Structure (\texttt{PCF\_Complete\_v11\_Unified})}
+The file \texttt{PCF\_Complete\_v11\_Unified.lean} contains the core 
+categorical logic and the squeeze proof. 
+Similarly, \texttt{PCF\_OperatorConvergence.lean} provides the formal 
+convergence certificates for the operators $T^*(n)$ and $t_n$.
 
-The file \texttt{PCF\_Complete\_v11\_Unified.lean} contains
-122 declarations organized in 12 sections:
-
-\begin{center}
-\begin{tabular}{cll}
-\toprule
-\S & Content & Key tactic \\
-\midrule
-1  & Tripartite construction, $\norm{\Omega}=1/2$ & \texttt{field\_simp, ring} \\
-2  & Object norms, $\mu_n$, $\sigma_n$ & \texttt{ring} \\
-3  & Arity uniqueness ($n=3$), spectral uniqueness & \texttt{nlinarith, omega} \\
-4  & Lawvere blocks/permits & \texttt{linarith} \\
-5  & $\zeta$ as binary category & definition \\
-6  & $\Ztwenty$, Galois functor, exponent~2 & \texttt{decide, fin\_cases} \\
-7  & Functional equation $\to$ $\mathrm{Re}(\rho)=1/2$ & \texttt{linarith} \\
-8  & $\OmH$ spectrum, $\omega$ properties & \texttt{push\_cast, norm\_num} \\
-9  & Parameters eliminated ($\alpha_0$, $\beta_0$, $\lambda$) & \texttt{norm\_num} \\
-10 & Tower, No-Diagonal universal, limit & \texttt{positivity, nlinarith} \\
-11 & Master theorem (unification) & conjunction \\
-12 & Bridge: \texttt{ZeroPCF}, \texttt{master\_bridge} & \texttt{linarith} \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\subsection{File Structure (\texttt{PCF\_OperatorConvergence})}
-
-The file \texttt{PCF\_Operator\-Convergence.lean}
-(272~lines, 26~declarations, Verified;
-Appendix~\ref{app:lean}).
-
-\begin{center}
-\begin{tabular}{cll}
-\toprule
-\S & Content & Key result \\
-\midrule
-1  & Structural parameters & \texttt{norm\_num} \\
-2  & $c(n)$: bounds, monotonicity & \lean{c\_gt\_two} \\
-3  & Convergence $c(n) \to 2$ & \lean{c\_tendsto\_two} \\
-4  & Rate: $c(n)-2 = O(1/\ln n)$ & \lean{c\_minus\_two\_rate} \\
-5  & Master inventory & \lean{c\_spectral\_master} \\
-6  & Bias factors I, II & \lean{bias\_factor\_I\_gt\_one} \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\subsection{Deductive Dependency Chain}
+\subsection{Deductive Dependency Chain}\label{ssec:dependency}
 
 The complete chain with zero free hypotheses on $\mathrm{Re}(\rho)$:
 \begin{enumerate}
@@ -149,4 +107,3 @@ Source files and numerical verification suite are available at:
 \begin{center}
   \url{\pcfrepo}
 \end{center}
-
