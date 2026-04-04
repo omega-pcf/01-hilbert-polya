@@ -55,7 +55,7 @@
 
 % Beginning initialization
 
-\newcommand{\ArticleLabel}{Article label}
+\newcommand{\ArticleLabel}{ArticleLabel}
 \newcommand{\evenhead}{Author \ name}
 \newcommand{\oddhead}{Article \ name}
 \newcommand{\theArticleName}{Article name}

@@ -2,7 +2,7 @@
 
 ## Development
 
-**Template:** LaPreprint (`lapreprint.cls`)
+**Template:** SIGMA Journal (`sigma.cls`). The paper is currently being profiled for the *Symmetry, Integrability and Geometry: Methods and Applications (SIGMA)* journal. Pending acceptance, the SIGMA template is used for all versions.
 
 **Daily Workflow:** LaTeX Workshop (James Yu) in VS Code
 - Automatically compiles to `build/main.pdf`.

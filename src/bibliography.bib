@@ -94,14 +94,15 @@
 
 % References on Self-Reference and Paradox
 
-@book{lawvere69,
-  title     = {Adjointness in Foundations},
+@incollection{lawvere69,
+  title     = {Diagonal arguments and cartesian closed categories},
   author    = {Lawvere, F. William},
   year      = {1969},
-  publisher = {Dialectica},
-  volume    = {23},
-  pages     = {281--296},
-  note      = {Establishes that direct self-reference $f(f)$ implies paradox}
+  booktitle = {Category Theory, Homology Theory and their Applications II},
+  series    = {Lecture Notes in Mathematics},
+  volume    = {92},
+  publisher = {Springer},
+  pages     = {134--145}
 }
 
 @article{yanofsky03,
@@ -188,15 +189,6 @@
   note    = {Massive numerical verification of RH zeros up to $10^{20}$}
 }
 
-@misc{odlyzko24,
-  title       = {Tables of Zeros of the Riemann Zeta Function},
-  author      = {Odlyzko, Andrew M.},
-  year        = {2024},
-  institution = {AT\&T Labs},
-  url         = {http://www.dtc.umn.edu/~odlyzko/zeta_tables/},
-  note        = {Precision $> 40$ decimal digits}
-}
-
 @book{titchmarsh86,
   author    = {Titchmarsh, Edward C.},
   title     = {The Theory of the {R}iemann Zeta-Function},
@@ -205,16 +197,6 @@
   year      = {1986},
   edition   = {2nd},
   note      = {Classical reference; Euler-Maclaurin method for zeta computation}
-}
-
-@article{berry95,
-  title   = {The Riemann-Siegel Expansion for the Zeta Function: High Orders and Negative Values of the Argument},
-  author  = {Berry, Michael V.},
-  journal = {Proceedings of the Royal Society A},
-  year    = {1995},
-  volume  = {450},
-  pages   = {439--462},
-  note    = {Riemann-Siegel formula and asymptotic expansions}
 }
 
 @article{lehman66,
@@ -562,12 +544,10 @@
   note    = {Original Riemann Hypothesis paper}
 }
 
-@article{vinogradov58,
+@book{vinogradov58,
   author  = {Vinogradov, Ivan M.},
-  title   = {A new estimate for the {$\zeta$} function on the critical line},
-  journal = {Izvestiya Rossiiskoi Akademii Nauk},
-  volume  = {22},
-  pages   = {161--164},
+  title   = {The Method of Trigonometrical Sums in the Theory of Numbers},
+  publisher = {Interscience},
   year    = {1958}
 }
 
@@ -663,11 +643,14 @@
   year    = {2011}
 }
 
-@misc{borger10,
-  author       = {Borger, James},
-  title        = {The basic geometry of {W}itt vectors, {II}: {S}paces},
-  howpublished = {arXiv:1006.0092},
-  year         = {2010}
+@article{borger11b,
+  author  = {Borger, James},
+  title   = {The basic geometry of {W}itt vectors, {II}: {S}paces},
+  journal = {Mathematische Annalen},
+  volume  = {351},
+  number  = {4},
+  pages   = {877--933},
+  year    = {2011}
 }
 
 
@@ -760,16 +743,6 @@
   note    = {Originally arXiv:1702.01774 (2017)}
 }
 
-@article{connes16a,
-  author    = {Connes, Alain},
-  title     = {An approach to the {R}iemann hypothesis via noncommutative geometry},
-  journal   = {Japanese Journal of Mathematics},
-  volume    = {11},
-  number    = {1},
-  pages     = {1--26},
-  year      = {2016}
-}
-
 @article{manin02,
   author    = {Manin, Yuri I.},
   title     = {Real multiplication and noncommutative geometry},
@@ -834,12 +807,23 @@
   year    = {1979}
 }
 
-@book{tarski48,
+@book{tarski51,
   author    = {Tarski, Alfred},
-  title     = {A {D}ecision {M}ethod for {E}lementary {A}lgebra and {E}lementary {G}eometry},
-  publisher = {RAND Corporation},
-  year      = {1948},
-  note      = {Project RAND, R-109}
+  title     = {A Decision Method for Elementary Algebra and Geometry},
+  publisher = {University of California Press},
+  year      = {1951},
+  edition   = {2nd}
+}
+
+@techreport{tarski48,
+  author      = {Tarski, Alfred},
+  title       = {A Decision Method for Elementary Algebra and Geometry},
+  institution = {U.S. Air Force Project RAND},
+  number      = {R-109},
+  publisher   = {The Rand Corporation},
+  address     = {Santa Monica, CA},
+  year        = {1948},
+  note        = {Prepared for publication by J. C. C. McKinsey}
 }
 
 @article{tarskigivant99,
@@ -900,10 +884,10 @@
 @article{soule04,
   author  = {Soul{\'e}, Christophe},
   title   = {Les vari{\'e}t{\'e}s sur le corps {\`a} un {\'e}l{\'e}ment},
-  journal = {Reports on Mathematical Physics},
-  volume  = {54},
-  number  = {2},
-  pages   = {201--203},
+  journal = {Moscow Mathematical Journal},
+  volume  = {4},
+  number  = {1},
+  pages   = {217--244},
   year    = {2004}
 }
 @book{katz99,
@@ -1073,115 +1057,22 @@
   pages     = {1--197}
 }
 
-@book{reed-simon,
-  author    = {Reed, Michael and Simon, Barry},
-  title     = {Methods of {M}odern {M}athematical {P}hysics {I}: {F}unctional {A}nalysis},
-  publisher = {Academic Press},
-  year      = {1972}
+@book{reed1975ii,
+  title={II: Fourier analysis, self-adjointness},
+  author={Reed, Michael and Simon, Barry},
+  volume={2},
+  year={1975},
+  publisher={Elsevier}
 }
 
-@article{selberg56,
-  author  = {Selberg, Atle},
-  title   = {Harmonic analysis and discontinuous groups in weakly symmetric {R}iemannian spaces with applications to {D}irichlet series},
-  journal = {Journal of the Indian Mathematical Society},
-  volume  = {20},
-  pages   = {47--87},
-  year    = {1956}
+@article{grothendieck1960elements,
+  title={{\'E}l{\'e}ments de g{\'e}om{\'e}trie alg{\'e}brique: I. Le langage des sch{\'e}mas},
+  author={Grothendieck, Alexander},
+  journal={Publications Math{\'e}matiques de l'IH{\'E}S},
+  volume={4},
+  pages={5--228},
+  year={1960}
 }
-
-@book{dunford58,
-  author    = {Dunford, Nelson and Schwartz, Jacob T.},
-  title     = {Linear {O}perators: {G}eneral {T}heory},
-  publisher = {Interscience Publishers},
-  year      = {1958}
-}
-
-@book{gelfand41,
-  author    = {Gelfand, Israel M. and Raikov, Mark A. and Shilov, Georgiy E.},
-  title     = {Commutative {N}ormed {R}ings},
-  year      = {1941},
-  publisher = {Chelsea Publishing Company}
-}
-
-@article{godel31,
-  author  = {G{\"o}del, Kurt},
-  title   = {\"Uber formal unentscheidbare {S}{\"a}tze der {P}rincipia {M}athematica und verwandter {S}ysteme {I}},
-  journal = {Monatshefte f{\"u}r Mathematik und Physik},
-  volume  = {38},
-  pages   = {173--198},
-  year    = {1931}
-}
-
-@article{hesselholt97,
-  author  = {Hesselholt, Lars and Madsen, Ib},
-  title   = {On the {K}-theory of finite algebras over {W}itt vectors of perfect fields},
-  journal = {Topology},
-  volume  = {36},
-  number  = {1},
-  pages   = {29--101},
-  year    = {1997}
-}
-
-@article{hopf31,
-  author  = {Hopf, Heinz},
-  title   = {\"Uber die {A}bbildungen der dreidimensionalen {S}ph{\"a}re auf die {K}ugelfl{\"a}che},
-  journal = {Mathematische Annalen},
-  volume  = {104},
-  pages   = {637--665},
-  year    = {1931}
-}
-
-@article{adams62,
-  author  = {Adams, J. Frank},
-  title   = {Vector fields on spheres},
-  journal = {Annals of Mathematics},
-  volume  = {75},
-  number  = {3},
-  pages   = {603--632},
-  year    = {1962}
-}
-
-@inproceedings{urbantke03,
-  author    = {Urbantke, Helmuth K.},
-  title     = {The {H}opf fibration--seven times},
-  booktitle = {Proceedings of the {W}orkshop on {Q}uaternionic {S}tructures in {M}athematics and {P}hysics},
-  pages     = {427--445},
-  year      = {2003}
-}
-
-@article{mosseri01,
-  author  = {Mosseri, Remy and Dandoloff, Rossen},
-  title   = {Geometry of entanglement, partial footprints of the {H}opf fibration},
-  journal = {Journal of Physics A: Mathematical and General},
-  volume  = {34},
-  number  = {47},
-  pages   = {10243--10252},
-  year    = {2001}
-}
-
-
-
-
-@article{connes99,
-  author  = {Connes, Alain},
-  title   = {Trace formula in noncommutative geometry and the zeros of the {R}iemann zeta function},
-  journal = {Selecta Mathematica},
-  volume  = {5},
-  number  = {1},
-  pages   = {29--106},
-  year    = {1999}
-}
- 
- @article{connes15,
-  author  = {Connes, Alain},
-  title   = {The arithmetic site},
-  journal = {Theoretical Computer Science},
-  volume  = {584},
-  pages   = {40--54},
-  year    = {2015}
-}
-
-
 
 @article{frobenius77,
   author  = {Frobenius, Ferdinand Georg},
@@ -1283,3 +1174,103 @@
     pages = {1--197}
 }
 
+@article{connes15,
+  author  = {Connes, Alain and Consani, Caterina},
+  title   = {The arithmetic site},
+  journal = {Comptes Rendus Math{\'e}matique},
+  volume  = {352},
+  number  = {12},
+  pages   = {971--975},
+  year    = {2014},
+  note    = {Originally arXiv:1405.4527 (2014)}
+}
+
+
+@article{connes99,
+  author  = {Connes, Alain},
+  title   = {Trace formula in noncommutative geometry and the zeros of the {R}iemann zeta function},
+  journal = {Selecta Mathematica (New Series)},
+  volume  = {5},
+  number  = {1},
+  pages   = {29--106},
+  year    = {1999}
+}
+
+@book{hejhal1976selberg,
+  title     = {The {S}elberg Trace Formula for {${\rm PSL}(2,\mathbb{R})$}. {V}ol. {I}},
+  author    = {Hejhal, Dennis A.},
+  series    = {Lecture Notes in Mathematics},
+  volume    = {548},
+  publisher = {Springer-Verlag},
+  address   = {Berlin-New York},
+  year      = {1976}
+}
+
+@book{dunford58,
+  author    = {Dunford, Nelson and Schwartz, Jacob T.},
+  title     = {Linear {O}perators: {G}eneral {T}heory},
+  publisher = {Interscience Publishers},
+  year      = {1958}
+}
+
+@book{gelfand41,
+  author    = {Gelfand, Israel M. and Raikov, Mark A. and Shilov, Georgiy E.},
+  title     = {Commutative {N}ormed {R}ings},
+  year      = {1941},
+  publisher = {Chelsea Publishing Company}
+}
+
+@article{godel31,
+  author  = {G{\"o}del, Kurt},
+  title   = {\"Uber formal unentscheidbare {S}{\"a}tze der {P}rincipia {M}athematica und verwandter {S}ysteme {I}},
+  journal = {Monatshefte f{\"u}r Mathematik und Physik},
+  volume  = {38},
+  pages   = {173--198},
+  year    = {1931}
+}
+
+@article{hesselholt97,
+  author  = {Hesselholt, Lars and Madsen, Ib},
+  title   = {On the {K}-theory of finite algebras over {W}itt vectors of perfect fields},
+  journal = {Topology},
+  volume  = {36},
+  number  = {1},
+  pages   = {29--101},
+  year    = {1997}
+}
+
+@article{hopf31,
+  author  = {Hopf, Heinz},
+  title   = {\"Uber die {A}bbildungen der dreidimensionalen {S}ph{\"a}re auf die {K}ugelfl{\"a}che},
+  journal = {Mathematische Annalen},
+  volume  = {104},
+  pages   = {637--665},
+  year    = {1931}
+}
+
+@article{adams60,
+  author  = {Adams, J. Frank},
+  title   = {On the non-existence of elements of {H}opf invariant one},
+  journal = {Annals of Mathematics},
+  volume  = {72},
+  pages   = {20--104},
+  year    = {1960}
+}
+
+@inproceedings{urbantke03,
+  author    = {Urbantke, Helmuth K.},
+  title     = {The {H}opf fibration--seven times},
+  booktitle = {Proceedings of the {W}orkshop on {Q}uaternionic {S}structures in {M}athematics and {P}hysics},
+  pages     = {427--445},
+  year      = {2003}
+}
+
+@article{mosseri01,
+  author  = {Mosseri, Remy and Dandoloff, Rossen},
+  title   = {Geometry of entanglement, partial footprints of the {H}opf fibration},
+  journal = {Journal of Physics A: Mathematical and General},
+  volume  = {34},
+  number  = {47},
+  pages   = {10243--10252},
+  year    = {2001}
+}

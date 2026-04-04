@@ -1,7 +1,7 @@
 \section{Introduction}\label{sec:intro}
 
 % -----------------------------------------------------------------
-\subsection{The P\'olya operator: historical background and the circularity--\allowbreak periodicity problem}\label{ssec:polya-hist}\label{sec:circularity}
+\subsection{The P\'olya operator: historical background and the circularity--\allowbreak periodicity problem}\label{ssec:polya-hist}
 % -----------------------------------------------------------------
 
 The conjectures attributed to David Hilbert and George P\'olya in the
@@ -30,7 +30,7 @@ distributed global structure necessary for \emph{all} non-trivial
 zeros~\cite{titchmarsh86}.  Random matrix theory
 (Keating--Snaith~\cite{keating00}, Katz--Sarnak~\cite{katz99}) provides
 statistical correspondences without explicit operator construction.
-Connes's non-commutative geometry program~\cite{connes99,connes94}
+Connes's noncommutative geometry program~\cite{connes99,connes94}
 recovered the first thirty-one zeros from the spectral side, but reduces
 the hypothesis to proving the validity of the trace formula.
 Berry--Keating~\cite{berry99} and
@@ -75,7 +75,7 @@ as a trace formula on the adele class space
 $\mathbb{Q}^\times\!\backslash\mathbb{A}_\mathbb{Q}$, where the
 Euler product enters through local contributions at each prime~$p$
 and the zeros of~$\zeta$ appear as an \emph{absorption spectrum}---the
-spectral side of a Lefschetz-type trace formula~\cite{connes15}.
+spectral side of a Lefschetz-type trace formula~\cite{connes16}.
 Lorscheid~\cite{lopezpena09} reformulated the product as
 $\zeta^*_\mathbb{Q}(s) = \prod_{v} \zeta_v(s)$ over all places
 of~$\mathbb{Q}$, exhibiting each local factor
@@ -288,7 +288,7 @@ approaches are established in the literature:
     accept contradictions as non-explosive, allowing systems to contain
     contradictions without triviality.
 
-  \item \textbf{Tarski's decidable geometry}~\cite{tarski48,tarskigivant99}:
+  \item \textbf{Tarski's decidable geometry}~\cite{tarski48,tarski51,tarskigivant99}:
     work within complete, decidable theories.  The theory of real
     closed fields---which includes Euclidean geometry~$\mathbb{R}^n$---is
     complete and decidable because it cannot internally
@@ -321,7 +321,7 @@ Buium's $p$-adic derivation $\delta_p = (a - a^p)/p$~\cite{buium05} provides
 differential equations in the arithmetic direction, with Borger's
 identification of $\Lambda$-ring structures as descent data
 $\mathrm{Spec}\,A \to \mathbb{F}_1$ furnishing the precise
-$\mathbb{F}_1$~bridge~\cite{borger09,borger11,borger10}.  The
+$\mathbb{F}_1$~bridge~\cite{borger09,borger11}.  The
 underlying architectural pattern---building successive categorical
 extensions to circumvent foundational obstructions---exhibits
 remarkable structural convergence with independent developments in
@@ -361,13 +361,13 @@ structures as descent data
 $\mathrm{Spec}\,A \to \mathbb{F}_1$~\cite{borger09}, implementing tower
 structure~$\psi^k$ with composition law
 $\psi^k \circ \psi^\ell = \psi^{k\ell}$ and Witt vector
-geometry~\cite{borger11,borger10}.
+geometry~\cite{borger11}.
 
 And second, his geometric framework
 (\emph{Real Multiplication and Noncommutative Geometry}, 2002) proposes
 noncommutative tori~$T(\theta)$ circumventing Frobenius through
 $C^*$-algebras and Morita equivalence, constructing the geometric arena
-that Connes's Weil strategy~\cite{connes15} identifies as necessary:
+that Connes's Weil strategy~\cite{connes16} identifies as necessary:
 an ``arithmetic surface''
 $\mathrm{Spec}(\mathbb{Z}) \times \mathrm{Spec}(\mathbb{Z})$ supporting
 a Weil-type intersection form.  Marcolli (2024--2025) and Tschinkel's
@@ -548,23 +548,23 @@ The deductive chain from decidable arithmetic to
 $\mathrm{Re}(\rho)=1/2$ follows eleven steps (squeeze proof):
 \begin{center}
 \small
-\begin{tabularx}{\textwidth}{r >{\hsize=0.6\hsize}X >{\hsize=1.2\hsize}X >{\hsize=1.2\hsize}X l}
+\begin{tabular}{rllll}
 \toprule
 \# & Step & Method & Lean tactic & Source \\
 \midrule
-1 & Primes $\to$ $\Ztwenty$ & Euler product & \texttt{fin\_cases} & \S\ref{ssec:zeta-cat} \\
-2 & Mul.\ closed in $\Ztwenty$ & Group axiom & \texttt{decide} (64 pairs) & \S\ref{ssec:zeta-cat} \\
-3 & Addition destroyed & Parity & \texttt{decide} (64 pairs) & \S\ref{ssec:zeta-cat} \\
-4 & Exponent 2 of $G$ & Galois structure & \texttt{decide} (4 elements) & \S\ref{ssec:zeta-cat} \\
-5 & Fragment modulus $=1/2$ & Arity & \texttt{simp} & \S\ref{ssec:CM-cat} \\
-6 & Spectral uniqueness & Quadratic system & \texttt{nlinarith} & \S\ref{ssec:CM-cat} \\
-7 & No-Diagonal blocks & Norm obstruction & \texttt{linarith} & \S\ref{ssec:CM-cat} \\
-8 & Spectral embedding & Steps 1--7 $\to$ $\OmH$ & Prop.~\ref{prop:spectral-embedding} & \S\ref{ssec:omega-spectrum} \\
-9 & Upper bound: $\rho_{\mathrm{re}}\le 1/2$ & Step 8 & conjunction & \S\ref{ssec:squeeze} \\
-10 & Companion bound: $1-\rho_{\mathrm{re}}\le 1/2$ & Steps 4+8+Hecke & Hecke 1920 & \S\ref{ssec:squeeze} \\
-11 & Squeeze: $\rho_{\mathrm{re}}=1/2$ & Steps 9+10 & \texttt{linarith} & \S\ref{ssec:squeeze} \\
+1 & Primes $\to$ $\Ztwenty$ & Euler product & \texttt{fin\_cases} & \S \ref{ssec:zeta-cat} \\
+2 & Mul.\ closed in $\Ztwenty$ & Group axiom & \texttt{decide} (64 pairs) & \S \ref{ssec:zeta-cat} \\
+3 & Addition destroyed & Parity & \texttt{decide} (64 pairs) & \S \ref{ssec:zeta-cat} \\
+4 & Exponent 2 of $G$ & Galois structure & \texttt{decide} (4 elements) & \S \ref{ssec:zeta-cat} \\
+5 & Fragment modulus $=1/2$ & Arity & \texttt{simp} & \S \ref{ssec:CM-cat} \\
+6 & Spectral uniqueness & Quadratic system & \texttt{nlinarith} & \S \ref{ssec:CM-cat} \\
+7 & No-Diagonal blocks & Norm obstruction & \texttt{linarith} & \S \ref{ssec:CM-cat} \\
+8 & Spectral embedding & Steps 1--7 $\to$ $\OmH$ & Prop.~\ref{prop:spectral-embedding} & \S \ref{ssec:omega-spectrum} \\
+9 & Upper bound: $\rho_{\mathrm{re}}\le 1/2$ & Step 8 & conjunction & \S \ref{ssec:squeeze} \\
+10 & Companion bound: $1-\rho_{\mathrm{re}}\le 1/2$ & Steps 4+8+Hecke & Hecke 1920 & \S \ref{ssec:squeeze} \\
+11 & Squeeze: $\rho_{\mathrm{re}}=1/2$ & Steps 9+10 & \texttt{linarith} & \S \ref{ssec:squeeze} \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
 \end{center}
 
 The spectral proof (Theorem~\ref{thm:rh-spectral}) reaches
@@ -594,7 +594,7 @@ squeeze.  In this sense, $1/2$ is simultaneously a geometric invariant
 We state explicitly what the present work proves and what remains
 open.
 
-\emph{What is proved.}  Within the PCF categorical framework---where
+\emph{What has been proven.}  Within the PCF categorical framework---where
 the Euler product maps primes into $\Ztwenty$, the Galois functor~$G$
 classifies residues, and the spectral parameters $(\sigma,\mu)$ are
 determined by arity uniqueness---Theorem~\ref{thm:main-intro}
@@ -648,7 +648,7 @@ three categorical levels: $\Hilb$ (Hilbert spaces, operator spectra),
 $\Met$ (metric spaces, $\mathbb{C}$ with its Euclidean structure), and
 $\Set$ (combinatorial, finite arithmetic).
 
-In \textbf{Methods} (\S\ref{sec:methods}) we construct the Precedent-Current-Forthcoming Framework (PCF).  The generating mechanism is the golden
+In \textbf{Methods} (\S\ref{sec:methods}) we construct the Pattern-Coherence-Flow Framework (PCF) (alternatively Precedent-Current-Forthcoming).  The generating mechanism is the golden
 ratio~$\golden$ through its defining relation
 $\golden^2 = \golden + 1$, which extends the role of $i^2 = -1$ from
 algebraic ($\mathbb{R} \to \mathbb{C}$) to geometric
