@@ -96,7 +96,7 @@ export function generateZenodoJson(): void {
     // Preserve related_identifiers (not in CFF standard)
     related_identifiers: existingZenodo.related_identifiers || [
       {
-        identifier: 'https://github.com/omega-pcf/01-primitive-complex-field',
+        identifier: 'https://github.com/omega-pcf/01-hilbert-polya',
         relation: 'isSupplementTo',
         scheme: 'url',
         resource_type: 'software',

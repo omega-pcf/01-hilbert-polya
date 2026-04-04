@@ -42,7 +42,7 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/omega-pcf/01-primitive-complex-field",
+      "identifier": "https://github.com/omega-pcf/01-hilbert-polya",
       "relation": "isSupplementTo",
       "scheme": "url",
       "resource_type": "software"
@@ -54,5 +54,5 @@
       "resource_type": "other"
     }
   ],
-  "repository_url": "https://github.com/omega-pcf/01-primitive-complex-field"
+  "repository_url": "https://github.com/omega-pcf/01-hilbert-polya"
 }
