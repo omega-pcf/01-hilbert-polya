@@ -41,14 +41,7 @@ This repository contains the LaTeX source files for the manuscript and the compu
   - `appendix.tex`: Lean 4 formalization source and full bibliography.
 - **`src/bibliography.bib`**: References (original bib file).
 
-### Verification (`tests/`)
-Code used to verify the spectral predictions and structural isomorphisms.
-
-- **`tests/verify_t_star.py`**: Numerical validation of the $T^*(n)$ operator against exact Riemann zeros (mpmath).
-- **`lean/PCF_Complete_v11_Unified.lean`**: Formal Lean 4 proof of the categorical foundation and the Hecke-1920 spectral squeeze.
-- **`lean/PCF_OperatorConvergence.lean`**:
-
-## Formal Verification
+### Verification and Formal Proof
 
 This project uses a dual verification approach: formal logic (Lean 4) and numerical analysis (Python/mpmath).
 
@@ -61,16 +54,16 @@ pnpm run verify
 ### Components
 
 - **Lean 4 Proof**: Built with `lake`. Verifies the logical consistency of the categorical tower and the master deductive chain.
-
   ```bash
   pnpm run verify:lean
   ```
 
 - **Spectral Verification**: Uses `mpmath` to verify that the $T^*$ operator spectrum converges to the Riemann zeros $t_n$ across several magnitudes (up to $n=10^{12}$).
-
   ```bash
   pnpm run verify:py
   ```
+
+## Build and Compilation
 
 The project uses a Docker-based LaTeX environment (`kjarosh/latex:2024.4-full`) to ensure consistent results across different systems. To build the production PDF:
 
@@ -86,12 +79,13 @@ If you are missing the figure assets, generate placeholders before building:
 pnpm run generate:figures
 ```
 
-Or using standard LaTeX tools:
+### Traditional Manual Build
+
+For local environments with a full TeX Live distribution, you may use the standard compilation sequence:
 
 ```bash
 pdflatex main
 biber main
-pdflatex main
 pdflatex main
 ```
 
