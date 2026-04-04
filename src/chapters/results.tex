@@ -26,13 +26,20 @@ from the formula alone.  The complete verification script
 supplementary material and at the project
 repository.\footnote{\url{\pcfrepo}}
 
-\begin{figure}[htbp]
+\begin{figure}[p]
 \centering
 \includegraphics[width=\textwidth]{src/images/fig_dual_spectrum}
-\caption{\textbf{Dual spectral structure and error analytics of $T^*$.}
-\textbf{(a)}~Spectral comparison: Riemann zero heights $t_n$ (black circles) vs. PCF operator eigenvalues $T^*(n)$ (red squares) for the first 100 zeros. Shaded bands denote hypercube generations $G_k = [2^k, 2^{k+1})$.
-\textbf{(b)}~Ratio $T^*(n)/t_n$: showing the adaptive Regime~I (gray) and fixed Regime~II (red) within the $1 \pm O(1/\ln n)$ analytical envelope (shaded gray).
-\textbf{(c)}~Structural modulation $c(n)$: the dual tower structure connecting binary boundaries $2^k$ and Mersenne primes $M_p$ to the golden expansion $\golden$, converging to the spectral sum limit $\sigma + \mu = 2$ (dashed line).}
+\caption{Dual spectral structure of~$T^*$.
+  \textbf{(a)}~Zero heights~$t_n$ (filled) vs.\ $T^*(n)$ (open squares),
+  $n=1,\ldots,100$. Bands: hypercube generations $G_k=[2^k,2^{k+1})$;
+  dotted lines: Mersenne primes $M_2{=}3$, $M_3{=}7$, $M_5{=}31$;
+  dashed line at $n{=}30$: Regime~I/II boundary.
+  \textbf{(b)}~Ratio $T^*(n)/t_n$: Regime~I (gray) oscillates;
+  Regime~II (red) follows the peaked structure of
+  Theorem~\ref{thm:peaked-bias}.
+  \textbf{(c)}~Modulation $c(n,\alpha,\beta)$: adaptive (Regime~I)
+  with discontinuities at $2^k$; fixed (Regime~II) decaying toward
+  $\sigma+\mu=2$.}
 \label{fig:dual-spectrum}
 \end{figure}
 
