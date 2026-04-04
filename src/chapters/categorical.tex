@@ -76,7 +76,6 @@ diagonal is blocked.
 By enumeration: $\{1,3,7,9,11,13,17,19\}$ are exactly the integers
 in $\{1,\ldots,19\}$ coprime to~$20$.  $|\cdot|=8=\varphi(20)$.
 Verified by \lean{decide} in Lean.
-\qed
 \end{proof}
 
 \begin{proposition}[Multiplicative closure and additive destruction]%
@@ -102,7 +101,6 @@ Addition: every element of $\Ztwenty$ is odd.  The sum of two odd
 numbers is even, hence divisible by~$2$, hence not coprime to
 $20=4\times 5$, hence not in~$\Ztwenty$.  Concretely, $1+3=4\notin\Ztwenty$.
 Verified for all 64 pairs by \lean{decide}.
-\qed
 \end{proof}
 
 \begin{proposition}[Exponent two]\label{prop:exponent-two}
@@ -116,7 +114,6 @@ The Galois group $G\cong\mathbb{Z}_2\times\mathbb{Z}_2$ satisfies:
 $\mathbb{Z}_2\times\mathbb{Z}_2 = \{(0,0),(1,0),(0,1),(1,1)\}$.
 Each element $g$ satisfies $2g = 0$ since $2\equiv 0$ in $\mathbb{Z}_2$.
 Verified by \lean{decide} (4 elements).
-\qed
 \end{proof}
 
 \begin{proposition}[Fiber partition]\label{prop:fiber-partition}
@@ -129,7 +126,6 @@ $G$ is surjective onto $|\mathbb{Z}_2\times\mathbb{Z}_2|=4$ elements,
 and $|\Ztwenty|=8$, so each fiber has exactly $8/4=2$ elements.  The
 fibers are as listed in Theorem~\ref{thm:golden-prime-classes}:
 $\{1,9\}$, $\{11,19\}$, $\{13,17\}$, $\{3,7\}$.
-\qed
 \end{proof}
 
 \begin{theorem}[Primes force ternary]\label{thm:zeta-forced}
@@ -145,7 +141,6 @@ $p\nmid 2$, $p\nmid 5$), so $p\bmod 20\in\Ztwenty$ by definition of the
 unit group.  In Lean: verified by \lean{fin\_cases} over
 $\mathbb{Z}/20\mathbb{Z}$, eliminating all non-unit residues by
 divisibility.
-\qed
 \end{proof}
 
 \begin{definition}[Arithmetic fragment]\label{def:arith-fragment}
@@ -168,7 +163,6 @@ The fragment of $\Ztwenty$ is ternary:
 \begin{proof}
 By definition, the ternary fragment has modulus $\mu_3 = 1/2$
 (Eq.~\eqref{eq:mu-ternary}).
-\qed
 \end{proof}
 
 \begin{remark}
@@ -212,8 +206,7 @@ The conditions $\mu_n < 1$ (obstruction effective) and $\mu_n > 0$
 
 \begin{proof}
 $\mu_n < 1 \iff n > 2$; $\mu_n > 0 \iff n < 4$.
-Together: $n=3$. \qed
-\end{proof}
+Together: $n=3$. \end{proof}
 
 \begin{corollary}[Canonical spectral values]\label{cor:spectral-values}
 At $n=3$:
@@ -233,7 +226,6 @@ $\sigma_3 = 3/2$.  Each follows from
 Definition~\ref{def:spectral-params} at the stated arity.
 Verified by \lean{mu\_binary}, \lean{mu\_ternary},
 \lean{sigma\_ternary} in Lean.
-\qed
 \end{proof}
 
 
@@ -246,7 +238,6 @@ If $0<t<1$, then $t^2 < t$. In particular, $t\le t^2$ is impossible.
 \begin{proof}
 $t - t^2 = t(1-t)$.  Since $0<t<1$, both $t>0$ and $1-t>0$, so
 $t-t^2>0$, i.e., $t^2 < t$.
-\qed
 \end{proof}
 
 \begin{theorem}[No-Diagonal Theorem]\label{thm:no-diagonal}
@@ -292,7 +283,6 @@ $\norm{\Omega}=\norm{\mathrm{eval}\circ\Delta(\Omega)}\le
 \norm{\Omega\otimes\Omega}=\norm{\Omega}^2$,
 i.e., $\norm{\Omega}\le\norm{\Omega}^2$.  But $0<\norm{\Omega}<1$
 contradicts Lemma~\ref{lem:diagonal-contraction}.
-\qed
 \end{proof}
 
 \begin{proposition}[Equivalence of obstructions]\label{prop:equiv-obstructions}
@@ -316,7 +306,6 @@ would compose with currying to give a predominance morphism.
 $\mathrm{eval}$, the diagonal $\Delta$ would give a retraction.  All three
 conditions require $\norm{\Omega}\le\norm{\Omega}^2$, which fails by
 Lemma~\ref{lem:diagonal-contraction}.
-\qed
 \end{proof}
 
 \begin{remark}[Exponential objects and cartesian closure]%
@@ -344,7 +333,6 @@ By Lawvere~\cite{lawvere69} and Yanofsky~\cite{yanofsky03}, each paradox
 requires a diagonal morphism $\Delta$ with evaluation section.
 Proposition~\ref{prop:equiv-obstructions}(c) blocks all such sections when
 $\norm{\Omega}<1$.
-\qed
 \end{proof}
 
 %%% --- Arity Transition ---
@@ -359,7 +347,6 @@ $n=2$: $\mu_2=1$.  For $|X|\ge 2$: $|X|^{|X|}>|X|$ since
 $|X|=|X|^1<|X|^{|X|}$.  The diagonal $\Delta(x)=(x,x)$ is permitted, and
 $\norm{\Omega}=1$ does not trigger the contraction bound
 ($1\le 1^2 = 1$ holds).
-\qed
 \end{proof}
 
 \begin{proposition}[$\Hilb$: the bridge]\label{prop:hilb-level}
@@ -375,7 +362,6 @@ $\norm{\Omega}=1/2$ (metric).  The diagonal map
 $\Delta(v)=v\otimes v$ satisfies
 $\Delta(\lambda v) = \lambda^2(v\otimes v)\ne\lambda\Delta(v)$ when
 $\lambda\ne 0,1$: it is quadratic, not linear.
-\qed
 \end{proof}
 
 \begin{proposition}[$\Met$: ternary level]\label{prop:met-level}
@@ -389,7 +375,6 @@ canonical norms $\norm{X_1}=1/\sqrt{3}$, $\norm{X_2}=1$,
 $\norm{X_3}=\sqrt{3}/2$ give
 $\norm{\Omega}=1/2<1$.  Lemma~\ref{lem:diagonal-contraction}:
 $1/2\le(1/2)^2=1/4$ fails.  Lawvere is blocked.
-\qed
 \end{proof}
 
 \begin{theorem}[Arity Transition]\label{thm:arity-transition}
@@ -431,7 +416,6 @@ At $\Hilb$: both norms coexist, diagonal is quadratic
 (Proposition~\ref{prop:hilb-level}).
 At $\Met$: $\mu=1/2<1$, diagonal blocked
 (Proposition~\ref{prop:met-level}).
-\qed
 \end{proof}
 
 %%% --- Spectral uniqueness ---
@@ -451,7 +435,6 @@ The quadratic formula gives $\sigma=(2\pm\sqrt{4-3})/2=(2\pm 1)/2$.
 Thus $\sigma\in\{3/2,\,1/2\}$.  Only $\sigma=3/2$ gives
 $\mu=1/2<1$ (obstruction effective); $\sigma=1/2$ gives $\mu=3/2>1$,
 violating the obstruction condition.
-\qed
 \end{proof}
 
 %%% --- Two-level norms ---
@@ -539,7 +522,6 @@ $\mathbb{Z}_2\times\mathbb{Z}_2$.  Since the group has exponent~$2$
 (Proposition~\ref{prop:exponent-two}), all four characters are real and
 self-dual, yielding four $L$-functions $L(s,\tilde{\chi})$ with
 $\tilde{\chi} = \chi \circ G$.
-\qed
 \end{proof}
 
 
@@ -589,7 +571,6 @@ a positive number.
 $0 < 1/2 < 1$.
 Verified by \lean{Omega\_norm\_pos}, \lean{Omega\_norm\_lt\_one},
 \lean{Omega\_norm\_decreasing}, \lean{Omega\_norm\_tendsto\_zero} in Lean.
-\qed
 \end{proof}
 
 
@@ -603,7 +584,6 @@ No retraction is possible at any level.
 By Lemma~\ref{lem:tower-properties}, $0 < \norm{\Omega}_k < 1$ for
 all~$k$.  By Theorem~\ref{thm:no-diagonal}, $\norm{\Omega}_k < 1$
 implies no evaluation-compatible diagonal exists at level~$k$.
-\qed
 \end{proof}
 
 
@@ -618,7 +598,6 @@ implies no evaluation-compatible diagonal exists at level~$k$.
 $\norm{\Omega}_0 = (1/2)^{2^0} = (1/2)^1 = 1/2 = \mu_3$
 (Eq.~\eqref{eq:mu-ternary}).
 Verified by \lean{tower\_base\_is\_mu3} in Lean.
-\qed
 \end{proof}
 
 
@@ -632,7 +611,6 @@ Verified by \lean{tower\_base\_is\_mu3} in Lean.
 
 \begin{proof}
 $\mu_2/\mu_3 = 1/(1/2) = 2$.  $\mu_3 = 1/2 < 1 = \mu_2$.
-\qed
 \end{proof}
 
 
@@ -658,7 +636,6 @@ Verified by \lean{categorical\allowbreak \_limit\allowbreak \_theorem} in Lean.%
 \footnote{The Lean declaration retains the name
 \texttt{categorical\allowbreak \_limit\allowbreak \_theorem} for backward compatibility with the
 formalization files.}
-\qed
 \end{proof}
 
 
@@ -688,7 +665,6 @@ The primitive cube root $\omega = e^{2\pi i/3}$
 $\omega = e^{2\pi i/3} = \cos(2\pi/3) + i\sin(2\pi/3)$.
 $\cos(2\pi/3) = -1/2$ and $\sin(2\pi/3) = \sqrt{3}/2$.
 Verified by \lean{w\_properties} in Lean.
-\qed
 \end{proof}
 
 
@@ -712,7 +688,6 @@ For $k=2$: $\mathrm{Re}(\widehat{\Omega}(2)) = -1/4 < 0$ by conjugation.
 Hence $k=0$ is the unique index with positive real part, and
 $\mathrm{Re}(\widehat{\Omega}(0)) = 1/2$.
 Verified by \lean{Omega\_hat\_unique\_positive\_re} in Lean.
-\qed
 \end{proof}
 
 
@@ -778,7 +753,6 @@ dependence explicit via two named axioms (\texttt{bridge\_axiom},
 \texttt{hecke\_companion}) whose classical justifications are
 Gelfand~(1941)~\cite{gelfand41}, Dunford--Schwartz~(1958)~\cite{dunford58},
 and Hecke~(1920)~\cite{hecke20}.
-\qed
 \end{proof}
 
 
@@ -793,7 +767,6 @@ By Proposition~\ref{prop:spectral-embedding},
 $\mathrm{Re}(\rho)\in\{1/2,\,-1/4\}$.  Since
 $\mathrm{Re}(\rho)>0$, the value $-1/4$ is excluded.  Hence
 $\mathrm{Re}(\rho)=1/2$.
-\qed
 \end{proof}
 
 
@@ -818,7 +791,6 @@ Properties (1)--(4) follow from the definitions
 Property~(5): the three eigenvalues $\tfrac{1}{2}\omega^k$ for $k=0,1,2$
 are related by multiplication by $\omega = e^{2\pi i/3}$, i.e.,
 $120^\circ$ rotations.
-\qed
 \end{proof}
 
 

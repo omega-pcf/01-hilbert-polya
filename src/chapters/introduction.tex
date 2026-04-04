@@ -475,23 +475,27 @@ encoding capacity required for G\"odel numbering.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{src/assets/placeholders/fig2_comparative.png}
-\caption{\textbf{Comparative dimensional mechanisms.}
+\includegraphics[width=\textwidth]{src/images/fig2_comparative}
+\caption{\textbf{Comparative dimensional mechanisms and structural correspondences.}
 \textbf{(A)}~String theory worldsheet: the closed string $S^1$ sweeps
-a cylinder $\Sigma = S^1 \times \mathbb{R}$, compactifying to
-the torus~$T^2$.
-\textbf{(B)}~AdS/CFT holography: bulk fields in $\mathrm{AdS}_{d+1}$
-project to the conformal boundary $\mathrm{CFT}_d$ via $z \to 0$.
-\textbf{(C)}~PCF extended space: the golden coupling $z = \golden y$
-extends $\mathbb{C}$ to
-$\Ecube = \{(x,y,z) \in \mathbb{R}^3 : z = \golden y\}$
-with tripartite vertices $P$, $C$, $F$ satisfying $S_3$~symmetry.
-\textbf{(D)}~PCF base cylinder $\mathcal{C}_0$:
-vertices on $x^2 + y^2 = 9$ at $120^\circ$ separation,
-with vertical heights $z = \golden y$ determined by golden coupling.
-Unlike~(A) and~(B), the PCF mechanism~(C--D) requires no
-presupposed Hamiltonian or holographic boundary; the third
-coordinate emerges purely from $\golden^2 = \golden + 1$.}
+a cylinder $\Sigma = S^1 \times \mathbb{R}$ representing temporal evolution, 
+which compactifies to the torus~$T^2 = \mathbb{C}/(\mathbb{Z}+\mathbb{Z}\tau)$ 
+mapping $\mathbb{R} \to S^1$.
+\textbf{(B)}~AdS/CFT holographic projection: bulk fields in $\mathrm{AdS}_{d+1}$ 
+(Poincaré half-space) project to the conformal boundary $\mathrm{CFT}_d$ 
+via the $z \to 0$ limit, implementing a structural information preservation 
+across a lost dimension.
+\textbf{(C)}~PCF extended space $E^3$: the golden coupling $z = \golden y$ 
+(Axiom~3) extends $\mathbb{C}$ to 
+$E^3 = \{(x,y,z) \in \mathbb{R}^3 : z = \golden y\}$ 
+with tripartite vertices $P$, $C$, $F$ satisfying $S_3$~symmetry and 
+defining the projection $\pi: E^3 \to \mathbb{C}$.
+\textbf{(D)}~PCF base cylinder $\mathcal{C}_0$: 
+vertices on $x^2 + y^2 = 9$ at $120^\circ$ separation, 
+with vertical heights $z = \golden y$ determined by the golden relation 
+$\golden^2 = \golden + 1$. Unlike conventional holographic boundaries, 
+the third coordinate emerges purely from the algebraic coupling, 
+avoiding the Frobenius division algebra obstruction.}
 \label{fig:comparative}
 \end{figure}
 
@@ -541,7 +545,6 @@ This is the form formalized in Lean~4 with $0$~\texttt{sorry};
 axioms limited to geometric constants of~\S\ref{ssec:axioms}
 and Hecke's functional equation
 (\lean{hecke\_1920}, Appendix~\ref{app:lean}).
-\qed
 \end{proof}
 
 The deductive chain from decidable arithmetic to

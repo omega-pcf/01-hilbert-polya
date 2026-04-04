@@ -11,6 +11,7 @@ build/*.fdb_latexmk
 build/*.fls
 build/*.log
 build/*.out
+build/*.toc
 build/*.run.xml
 build/*.suppinfo
 build/*.synctex*

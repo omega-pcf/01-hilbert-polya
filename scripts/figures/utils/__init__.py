@@ -82,19 +82,31 @@ def save_figure(
     Args:
         fig: Matplotlib figure
         output_path: Base path (without extension)
-        formats: List of formats (default: ["png"])
+        formats: List of formats (default: ["png", "svg", "pdf"])
         verbose: If True, show information
     """
     if formats is None:
-        formats = ["png"]
+        formats = ["png", "svg", "pdf"]
     
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
     for fmt in formats:
-        full_path = output_path.with_suffix(f".{fmt}")
-        fig.savefig(full_path, format=fmt, bbox_inches="tight", dpi=300)
-        if verbose:
-            print(f"    Saved: {full_path}")
+        # If output_path already has an extension that matches fmt, use it directly
+        # Otherwise, add/replace extension
+        if output_path.suffix == f".{fmt}":
+            full_path = output_path
+        else:
+            full_path = output_path.with_suffix(f".{fmt}")
+            
+        # Use high DPI for raster, vector formats handle themselves
+        dpi = 300 if fmt == "png" else None
+        
+        try:
+            fig.savefig(full_path, format=fmt, bbox_inches="tight", dpi=dpi, pad_inches=0.02)
+            if verbose:
+                print(f"    Saved: {full_path}")
+        except Exception as e:
+            print(f"    ⚠ Error saving {fmt}: {e}")
 
 
 def close_all() -> None:

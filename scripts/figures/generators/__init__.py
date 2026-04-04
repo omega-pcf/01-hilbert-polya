@@ -119,6 +119,12 @@ try:
     import generators.hypercube_tower  # noqa: F401
     import generators.lattice_pcf_views  # noqa: F401
     import generators.lattice_square_combined  # noqa: F401
+    import generators.comparative_dimensional_mechanisms  # noqa: F401
+    import generators.dual_spectrum  # noqa: F401
+    import generators.gauss_eisenstein_transition  # noqa: F401
+    import generators.cylinder_lattice_3d  # noqa: F401
+    import generators.cylinder_lattice_top  # noqa: F401
+    import generators.cylinder_lattice_lateral  # noqa: F401
     # Add more imports as new generators are created:
     # import generators.figure_1  # noqa: F401
     # import generators.figure_2  # noqa: F401

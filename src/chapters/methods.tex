@@ -151,7 +151,6 @@ $i$-component and the coupling constant~$\golden$.  The triple
 $(1,i,\golden)$ spans~$\Ecube$ over~$\mathbb{R}$ with the constraint that
 the third component is $\golden$ times the second; linear independence
 follows from the irrationality of~$\golden$.
-\qed
 \end{proof}
 
 
@@ -182,7 +181,6 @@ self-referential characterizations that converge to~$\golden$.
 \begin{proof}
 From $\golden^2 = \golden + 1$ (Eq.~\eqref{eq:phi-sq}), divide both
 sides by $\golden > 0$: $\golden = 1 + 1/\golden$.
-\qed
 \end{proof}
 
 \begin{Lemma}[Nested-radical fixed point]\label{lem:phi-nr}
@@ -194,7 +192,6 @@ sides by $\golden > 0$: $\golden = 1 + 1/\golden$.
 \begin{proof}
 Since $\golden^2 = \golden + 1 = 1 + \golden$ and $\golden > 0$, taking
 positive square roots gives $\golden = \sqrt{1+\golden}$.
-\qed
 \end{proof}
 
 \begin{Proposition}[Golden fixed-point uniqueness]\label{prop:golden-unique}
@@ -206,7 +203,6 @@ Multiplying by $x>0$: $x^2 = x + 1$, i.e., $x^2 - x - 1 = 0$.
 Factor: $(x - \golden)(x + \golden - 1) = 0$.  The root
 $x = 1 - \golden = 1 - (1+\sqrt{5})/2 = (1-\sqrt{5})/2 < 0$ violates $x>0$.
 Hence $x = \golden$ uniquely.
-\qed
 \end{proof}
 
 \begin{Definition}[Continued-fraction sequence]\label{def:cf-seq}
@@ -237,7 +233,6 @@ the fixed point $\golden$ is $1/\golden^2 = 1/(\golden+1) < 1$.  By the
 mean value theorem applied iteratively,
 $|\mathrm{cf}(n+1)-\golden|\le\golden^{-2}|\mathrm{cf}(n)-\golden|$,
 giving geometric decay.
-\qed
 \end{proof}
 
 \begin{Theorem}[Continued fraction converges to $\golden$]%
@@ -254,7 +249,6 @@ $1/\golden < 1$), the sequence is Cauchy.  By completeness
 of~$\mathbb{R}$, $\mathrm{cf}(n)\to L$ for some $L\in[1,2]$.  Taking
 limits in $\mathrm{cf}(n+1)=1+1/\mathrm{cf}(n)$ gives $L=1+1/L$, and
 by Proposition~\ref{prop:golden-unique}, $L=\golden$.
-\qed
 \end{proof}
 
 \begin{Definition}[Nested-radical sequence]\label{def:nr-seq}
@@ -284,7 +278,6 @@ $\mathrm{nr}(n+1)=\sqrt{1+\mathrm{nr}(n)}\ge\sqrt{1+1}=\sqrt{2}>1$,
 and the map $g(x)=\sqrt{1+x}$ is increasing on~$[1,\golden]$ with
 $g(x)\ge x$ for $x\le\golden$ (since $g(x)\ge x$ iff $1+x\ge x^2$ iff
 $x^2-x-1\le 0$ iff $x\le\golden$).
-\qed
 \end{proof}
 
 \begin{Theorem}[Nested radical converges to $\golden$]%
@@ -297,7 +290,6 @@ By Lemma~\ref{lem:nr-bounds}, $\{\mathrm{nr}(n)\}$ is bounded and
 non-decreasing, hence converges to some $L\in[1,\golden]$.  Taking limits
 in $\mathrm{nr}(n+1)=\sqrt{1+\mathrm{nr}(n)}$: $L=\sqrt{1+L}$, so
 $L^2=1+L$, i.e., $L^2-L-1=0$.  The positive root is~$\golden$.
-\qed
 \end{proof}
 
 \begin{Remark}
@@ -368,7 +360,7 @@ The diagonal matrix and its eigenvalue map:
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{src/assets/placeholders/fig1_eigenvalues.png}
+\includegraphics[width=\textwidth]{src/images/eigenvalues_triangle}
 \caption{\textbf{Spectral structure of the PCF operator.}
 \emph{Left:} The three eigenvalues $\lambda_k = \tfrac{1}{2}\omega^k$
 for $k \in \{0,1,2\}$ inscribed in the
@@ -431,51 +423,53 @@ parameter $\tau=\omega_1/\omega_2$ parametrizes the lattice family.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{src/assets/placeholders/fig4_gauss_eisenstein.png}
-\caption{\textbf{Gauss--Eisenstein duality mediated by $\golden$.}
-\emph{Left:} The tripartite operator $\OmH$ with eigenvalues
-$\lambda_k = \tfrac{1}{2}\omega^k$ separated by $120^\circ$
-(Eisenstein structure).
-\emph{Right:} The rectangular lattice
-$\Lambda_\mathrm{PCF} = \mathbb{Z}M \oplus \mathbb{Z}Mi$ with
-$90^\circ$ fundamental cell (Gauss structure).
-The arrow ``$\mathrm{PCF} \to$'' denotes the transformation
-chain: Eisenstein~($120^\circ$) $\to$ scalar periodicity $\to$
-Gauss~($90^\circ$). Golden mediation preserves the invariant
-$\abs{\Omega} = 1/2$ while effecting the symmetry transition
-$S_3 \to \mathbb{Z}_4$, generating the spectral parameters
-$\mu = 1/2$, $\sigma = 3\mu = 3/2$.}
+\includegraphics[width=\textwidth]{src/images/gauss_eisenstein_transition}
+\caption{\textbf{Gauss--Eisenstein duality mediated by $\golden$.} 
+\emph{Left:} The tripartite operator $\OmH$ with eigenvalues 
+$\lambda_k = \tfrac{1}{2}\omega^k$ separated by $120^\circ$ (Eisenstein structure). 
+\emph{Right:} The rectangular lattice $\Lambda_{\mathrm{PCF}} = \mathbb{Z}M \oplus \mathbb{Z}Mi$ 
+with $90^\circ$ fundamental cell (Gauss structure). The arrow ``$\mathrm{PCF} \to$'' 
+denotes the transformation chain: Eisenstein ($120^\circ$) $\to$ scalar 
+periodicity $\to$ Gauss ($90^\circ$). Golden mediation preserves the 
+invariant $|\Omega| = 1/2$ while effecting the symmetry transition 
+$S_3 \to \mathbb{Z}_4$, generating the spectral parameters $\mu = 1/2, \sigma = 3\mu = 3/2$.}
 \label{fig:gauss-eisenstein}
 \end{figure}
 
-\begin{Remark}\label{rmk:gauss-eisenstein-not-new}
-Equations~\eqref{eq:eisenstein-omega}
-and~\eqref{eq:Omega-eigenvalues-restate} are not new definitions; they
-re-identify~\eqref{eq:omega-root} and~\eqref{eq:Omega-hat-eigenvalues} in
-the Gauss--Eisenstein context. No separate numbering is needed for the
-proof chain; we keep them here only for the reader's convenience.
-\end{Remark}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{src/images/cylinder_lattice_3d}
+\caption{\textbf{Golden mediation between Eisenstein and Gauss structures (I: 3D views).} 
+Three-dimensional views of the cylinder--lattice correspondence through the 
+coupling $z = \golden y$. \emph{Left:} Cylinder $\mathcal{C}_0$ with 
+equilateral triangle $P$-$C$-$F$. \emph{Center:} Lattice $\Lambda_{\mathrm{PCF}}$ 
+with parallelogram fundamental cell. \emph{Right:} Superposition showing 
+the triangle embedded in the lattice.}
+\label{fig:cylinder-lattice-3d}
+\end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{src/assets/placeholders/fig3_nine_panels.png}
-\caption{\textbf{Golden mediation between Eisenstein and Gauss structures.}
-Nine complementary views of the cylinder--lattice correspondence
-through the coupling $z = \golden y$.
-\emph{Row~1} (3D): cylinder $\mathcal{C}_0$ with equilateral
-triangle $P$-$C$-$F$ (left); lattice $\Lambda_\mathrm{PCF}$ with
-parallelogram fundamental cell (center); superposition showing the
-triangle embedded in the lattice (right).
-\emph{Row~2} (top views): circle $R_0 = 3$ with inscribed
-$120^\circ$~triangle, Eisenstein structure (left); square cell
-$M_\mathrm{PCF} \times M_\mathrm{PCF}$, Gauss structure (center);
-superposition of circle-plus-triangle within square (right).
-\emph{Row~3} (lateral and isometric): vertices aligned on $z = \golden y$
-(left); lattice cell degenerating on $w = \golden v$ (center);
-isometric view showing the fundamental cell as a rhombus (right).
-The golden ratio~$\golden$ unifies both structures, preserving
-$\abs{\Omega} = 1/2$ throughout.}
-\label{fig:nine-panels}
+\includegraphics[width=\textwidth]{src/images/cylinder_lattice_top}
+\caption{\textbf{Golden mediation between Eisenstein and Gauss structures (II: Top views).} 
+Planar projections of the correspondence. \emph{Left:} Circle $R_0 = 3$ 
+with inscribed $120^\circ$ triangle (Eisenstein structure). 
+\emph{Center:} Square cell $M_{\mathrm{PCF}} \times M_{\mathrm{PCF}}$ 
+(Gauss structure). \emph{Right:} Superposition of circle-plus-triangle 
+within square.}
+\label{fig:cylinder-lattice-top}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{src/images/cylinder_lattice_lateral}
+\caption{\textbf{Golden mediation between Eisenstein and Gauss structures (III: Lateral and isometric views).} 
+Projective views revealing structural constraints. \emph{Left:} Vertices 
+aligned on $z = \golden y$. \emph{Center:} Lattice cell degenerating on 
+$w = \golden v$. \emph{Right:} Isometric view showing the fundamental 
+cell as a rhombus. The golden ratio $\golden$ unifies both structures, 
+preserving $|\Omega| = 1/2$ throughout.}
+\label{fig:cylinder-lattice-lateral}
 \end{figure}
 
 
@@ -512,8 +506,30 @@ From Definition~\ref{def:tower-params}:
 $\varepsilon(\sigma+1) = \varepsilon_0\cdot\golden^{\sigma+1}
 = \golden\cdot(\varepsilon_0\cdot\golden^\sigma)
 = \golden\cdot\varepsilon(\sigma)$.
-\qed
 \end{proof}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{src/images/lattice_square_combined}
+\caption{\textbf{PCF lattice growth and structural projection.}
+\emph{Left:} Lattice $\Lambda_{\mathrm{PCF}}$ with fundamental cells $M_\sigma = M_{\mathrm{PCF}} \cdot \golden^\sigma$ at levels $\sigma = 0, 1, 2, 3$, showing self-similar growth by factor $\golden$ between consecutive levels.
+\emph{Right:} Golden coupling projection: a square in $(u, w)$ coordinates maps to a rectangle in $(u, z + \golden w)$ coordinates, with vertical expansion by factor $\golden$ (Axiom~3).}
+\label{fig:lattice-combined}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{src/images/hypercube_views}
+\caption{\textbf{PCF pentadimensional lattice tower with $\golden^\sigma$ scaling.}
+\emph{Top row:} PCF hypercube in eight complementary views --- four isometric
+perspectives --- revealing nested cubic structures scaling as $\golden^\sigma$. 
+\emph{Bottom row:} Four orthogonal projections revealing the rigid cubic 
+scaffolding. Full isometric view of the 3D tower with the innermost cell 
+($\sigma = 0$) at the origin and successive shells growing by $\golden$. 
+The discrete scale dimension $\sigma \in \mathbb{Z}$ parametrizes the 
+pentadimensional structure $\mathcal{M}^5_{\mathrm{PCF}} = M^4 \times S^1_\sigma$.}
+\label{fig:pentadimensional}
+\end{figure}
 
 
 % ------------------------------------------------------------------
@@ -552,7 +568,6 @@ By definition, $\golden^{\lambda_{\log}}
 = \golden^{\ln 2/\ln\golden}
 = e^{(\ln 2/\ln\golden)\cdot\ln\golden}
 = e^{\ln 2} = 2$.
-\qed
 \end{proof}
 
 \begin{Theorem}[Logarithmic correspondence]\label{thm:log-correspondence}
@@ -583,7 +598,6 @@ relation $p_\sigma = \sigma + \log_\golden(3)/\lambda_{\log}$.
 The numerical precision ${}<10^{-14}$ is an arithmetic identity
 (exact in exact arithmetic), verified computationally against all 51
 known Mersenne primes.
-\qed
 \end{proof}
 
 \begin{Proposition}[Critical mediator]\label{prop:critical-mediator}
@@ -605,7 +619,6 @@ links the $\golden$-tower (through $\golden^{-\lambda_{\log}}$) and the
 binary tower (through $2^{-1}$) to the $S_3$ geometry (through the
 tripartite norm).  If $\norm{\Omega}\ne 1/2$, the three expressions would
 not coincide, breaking the correspondence.
-\qed
 \end{proof}
 
 \begin{Remark}[$d = 3 = M_2$]\label{rmk:d-equals-M2}
@@ -658,7 +671,6 @@ for self-similar IFS with open set condition,
 $\sum_{k=1}^N r_k^d = 1$, i.e., $3\cdot(1/2)^d = 1$, giving
 $d = \ln 3/\ln 2$.  Equivalently, $2^d = 3$, encoding the
 binary-to-ternary transition.
-\qed
 \end{proof}
 
 
@@ -699,7 +711,6 @@ Direct computation:
     \cdot\frac{6\sqrt{3}\,\pi}{\ln\golden}
   = \pi.
 \]
-\qed
 \end{proof}
 
 \begin{Remark}[Geometric content and role within PCF]\label{rem:certainty-content}
@@ -841,32 +852,7 @@ at $d=5$, $\binom{5}{3}\cdot 2^2 = 40$ by
 Proposition~\ref{prop:pentagonal-planes};
 parameters by \texttt{beta\_0\_from\_card},
 \texttt{lambda\_alpha}, \texttt{alpha\_0\_structural}.
-\qed
 \end{proof}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{src/assets/placeholders/fig5_pentadimensional_tower.png}
-\caption{\textbf{PCF pentadimensional lattice tower with
-$\golden^\sigma$~scaling.}
-\emph{Top left:} Lattice $\Lambda_\mathrm{PCF}$ with fundamental
-cells $M_\sigma = M_\mathrm{PCF} \cdot \golden^\sigma$ at levels
-$\sigma = 0,1,2,3$, showing self-similar growth by factor~$\golden$
-between consecutive levels.
-\emph{Top right:} Golden coupling projection: a square in
-$(u,w)$~coordinates maps to a rectangle in
-$(u, z + \golden w)$~coordinates, with vertical expansion by
-factor~$\golden$ (Axiom~3).
-\emph{Bottom left:} PCF hypercube in eight complementary views ---
-four isometric perspectives (top row) and four orthogonal projections
-(bottom row) --- revealing nested cubic structures scaling as $\golden^\sigma$.
-\emph{Bottom right:} Full isometric view of the 3D tower
-with the innermost cell ($\sigma = 0$) at the origin
-and successive shells growing by~$\golden$. The discrete scale
-dimension $\sigma \in \mathbb{Z}$ parametrizes the pentadimensional
-structure $\mathcal{M}^5_\mathrm{PCF} = M^4 \times S^1_\sigma$.}
-\label{fig:pentadimensional}
-\end{figure}
 
 \textbf{Comparative synthesis.}
 The following table situates PCF among four programs that share the tower
@@ -929,7 +915,6 @@ particular $|H_3| = 2^3 = 8$ and $|H_5| = 2^5 = 32$.
 \begin{proof}
 $|H_k| = |\{0,1\}^k| = |\{0,1\}|^k = 2^k$ by the product counting
 principle.
-\qed
 \end{proof}
 
 \begin{Proposition}[Pentagonal planes]\label{prop:pentagonal-planes}
@@ -945,7 +930,6 @@ specific values in $\{0,1\}$.  The number of distinct \emph{orientations}
 $2^{5-2}=8$ faces are obtained by fixing the three remaining coordinates.
 The total is $10\times 8=80$ square faces.  The orientation count
 $\binom{5}{2} = 10 = 2\times 5$ links binary and pentagonal structure.
-\qed
 \end{proof}
 
 \begin{Proposition}[Vigesimal structure]\label{prop:vigesimal}
@@ -965,7 +949,6 @@ $(\mathbb{Z}/20\mathbb{Z})^\times\cong
 Then $\varphi(20)=\varphi(4)\cdot\varphi(5)=2\cdot 4=8$.  The group is
 non-cyclic since $\mathbb{Z}_2\times\mathbb{Z}_4$ has no element of
 order~$8$.
-\qed
 \end{proof}
 
 \begin{Proposition}[Sextuple convergence of $8 = 2^3$]%
@@ -991,7 +974,6 @@ Each identity follows from its stated source:
 (iv)~Proposition~\ref{prop:Z20star-card};
 (v)~Definition~\ref{def:structural-params}, $\beta_0=1/8$;
 (vi)~CRT.  No derivation references another.
-\qed
 \end{proof}
 
 \begin{table}[ht]
@@ -1037,8 +1019,7 @@ $\cos(4\pi/5) = -(\sqrt{5}+1)/4$:
     = \frac{5+\sqrt{5}}{5-\sqrt{5}}
     = \frac{3+\sqrt{5}}{2} = \golden^2.
 \]
-Taking square roots: $d/s = \golden$. \qed
-\end{proof}
+Taking square roots: $d/s = \golden$. \end{proof}
 
 \subsubsection{Golden Prime Classification (Grisales Herrera)}
 
@@ -1077,7 +1058,6 @@ See Grisales Herrera~\cite{grisales25}.  The Galois homomorphism
 $G\colon\Ztwenty\to\mathbb{Z}_2\times\mathbb{Z}_2$ is defined by the
 quadratic residue characters modulo~$4$ and modulo~$5$; the fiber
 table follows by direct computation of $G(a)$ for each $a\in\Ztwenty$.
-\qed
 \end{proof}
 
 \begin{Proposition}[Cyclotomic structure]\label{prop:cyclotomic}
@@ -1100,7 +1080,6 @@ identity $\Phi_{20}(x) = \Phi_{10}(x^2)$ and $\Phi_{10}(x) = x^4 - x^3
 polynomial.  The eight roots $e^{2\pi ik/20}$ for
 $k\in\{1,3,7,9,11,13,17,19\}$ are in bijection with the elements
 of~$\Ztwenty$, giving the correspondence with Golden Prime classes.
-\qed
 \end{proof}
 
 \begin{Definition}[Legendre symbol modulo~5]\label{def:legendre-5}
@@ -1133,7 +1112,6 @@ $|G(a)|=\golden$.
 In both cases, $|G(a)|=\golden^{-\chi_5(a)}$.  Since
 $\golden\cdot\golden^{-1}=1$, both values lie in the unit group of
 $\mathbb{Z}[\golden]$.
-\qed
 \end{proof}
 
 \subsubsection{Mersenne Concentration}
@@ -1205,7 +1183,6 @@ threefold coupling $\sigma = 3\mu$ from $S_3$ symmetry.
 Direct arithmetic: $3/2+1/2=2$; $3/2-1/2=1$; $(3/2)/(1/2)=3=M_2$;
 $\norm{P}\cdot\norm{C}\cdot\norm{F}=1/2=\mu$ by
 Eq.~\eqref{eq:norm-Omega-half}.
-\qed
 \end{proof}
 
 \subsubsection{Two-Regime Construction of $T^*$}
@@ -1320,7 +1297,6 @@ $\alpha_0/(1+\beta_0\ln n)\to 0$ with rate
 $\alpha_0/(\beta_0\ln n) = O(1/\ln n)$.
 The limit $c\to 2 = \sigma+\mu$ is exact by
 Eq.~\eqref{eq:sigma-plus-mu}.
-\qed
 \end{proof}
 
 \begin{Theorem}[Asymptotic convergence]\label{thm:Tstar-asymptotic}
@@ -1341,7 +1317,6 @@ Since $\ln(\mu n + \sigma) = \ln(n/2+3/2) = \ln n -\ln 2 + o(1)
   \sim t_n.
 \]
 Hence $T^*(n)/t_n\to 1$.
-\qed
 \end{proof}
 
 

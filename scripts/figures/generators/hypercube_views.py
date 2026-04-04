@@ -134,8 +134,11 @@ def generate_hypercube_views(output_dir: Path, verbose: bool = False) -> None:
     
     plt.tight_layout()
     
-    output_path = output_dir / "hypercube_views"
-    save_figure(fig, output_path, verbose=verbose)
+    # Save figure with descriptive name matching generator
+    output_path_pdf = output_dir / "hypercube_views.pdf"
+    output_path_png = output_dir / "hypercube_views.png"
+    fig.savefig(output_path_pdf, bbox_inches='tight', pad_inches=0.01)
+    fig.savefig(output_path_png, dpi=200, bbox_inches='tight', pad_inches=0.01)
     plt.close(fig)
     
     if verbose:

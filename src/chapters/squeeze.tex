@@ -43,7 +43,6 @@ then $\forall t,\; P(t)\implies t = \tfrac{1}{2}$.
 \begin{proof}
 From $P(t)$ we get $t\le\mu_3 = 1/2$.  By Hecke pairing, $P(1-t)$
 holds, so $1-t\le\mu_3 = 1/2$, i.e.\ $t\ge 1/2$.  Together: $t=1/2$.
-\qed
 \end{proof}
 
 \subsubsection{Part B: Concrete Structure}
@@ -100,8 +99,7 @@ The two independent categorical paths converge:
 \noindent
 By~\eqref{eq:TLZ-upper}: $\rho_{\mathrm{re}}\le 1/2$.
 By~\eqref{eq:TLZ-lower}: $1-\rho_{\mathrm{re}}\le 1/2$, i.e.\
-$\rho_{\mathrm{re}}\ge 1/2$. Together: $\rho_{\mathrm{re}}=1/2$. \qed
-\end{proof}
+$\rho_{\mathrm{re}}\ge 1/2$. Together: $\rho_{\mathrm{re}}=1/2$. \end{proof}
 
 \begin{proposition}[Independence of bounds]\label{prop:bounds-independent}
 Neither bound alone suffices:
@@ -126,7 +124,6 @@ bound fails.  Hence $\rho_{\mathrm{re}} \ne 1/2$.
 
 Both verified by \lean{bound\_alone\_insufficient} and
 \lean{companion\_alone\_insufficient} in Lean.
-\qed
 \end{proof}
 
 
@@ -166,7 +163,6 @@ Theorem~\ref{thm:no-diagonal}.
 Step~6: Proposition~\ref{prop:spectral-embedding} gives
 $\mathrm{Re}(\rho)\in\{1/2,-1/4\}$.
 Both values satisfy $\mathrm{Re}(\rho)\le 1/2 = \mu_3$.
-\qed
 \end{proof}
 
 
@@ -192,7 +188,6 @@ from Definition~\ref{def:spectral-params}.
 Together with Hecke's 1920 theorem (unconditional): if $L(\rho,\chi)=0$
 and $\chi$ is self-dual (forced by exponent~2), then
 $L(1-\rho,\chi)=0$, giving $1-\rho_{\mathrm{re}} \le \mu_3$.
-\qed
 \end{proof}
 
 
@@ -215,7 +210,6 @@ At $n=3$, the ternary involution:
 From Eq.~\eqref{eq:spectral-completeness}, $\sigma_n + \mu_n = 2$,
 so $\sigma_n = 2 - \mu_n$.  At $n=3$: $\sigma_3 = 2 - 1/2 = 3/2$,
 $\mu_3 = 2 - 3/2 = 1/2$, and $\mu_3 = 1 - \mu_3$ since $1/2 = 1 - 1/2$.
-\qed
 \end{proof}
 
 
@@ -232,7 +226,6 @@ this~$x$ is~$\mu_3$.
 $x = 1 - x \implies 2x = 1 \implies x = 1/2$.  Uniqueness: the map
 $f(x)=1-x$ is an involution with unique fixed point.  That
 $x = \mu_3$: by Eq.~\eqref{eq:mu-ternary}, $\mu_3 = 1/2$.
-\qed
 \end{proof}
 
 
@@ -256,7 +249,6 @@ $\rho_{\mathrm{re}}^{\mathrm{can}} = 1/2$ satisfies: $0<1/2<1$ (strip),
 $1/2 \le \mu_3 = 1/2$ (upper bound), $1-1/2 \le \mu_3 = 1/2$
 (companion bound).
 By Theorem~\ref{thm:rh-squeeze}, $\rho_{\mathrm{re}} = 1/2$. \checkmark
-\qed
 \end{proof}
 
 
@@ -271,7 +263,6 @@ $\rho_{\mathrm{re}}^{\mathrm{can}} = 1/2$ satisfies both premises:
 $1/2 \le \mu_3 = 1/2$ and $1 - 1/2 \le \mu_3 = 1/2$.  Hence the
 abstract hypotheses are satisfiable.
 Verified by \lean{canonical\_zero} in Lean.
-\qed
 \end{proof}
 
 
@@ -301,7 +292,6 @@ single structure:
 Each component is proved in its stated section; the conjunction is
 assembled in \lean{master\_bridge\allowbreak \_v11} (Verified in Lean~4), which combines
 all twelve results into a single structure (\texttt{full\_deductive\_chain}).
-\qed
 \end{proof}
 
 
@@ -318,7 +308,6 @@ By Theorem~\ref{thm:master-bridge}, the twelve components assemble into
 a single verified structure; in particular, the squeeze
 (Theorem~\ref{thm:rh-squeeze}) yields $\rho_{\mathrm{re}}=1/2$ with no
 additional hypotheses beyond the categorical framework.
-\qed
 \end{proof}
 
 
@@ -331,8 +320,7 @@ additional hypotheses beyond the categorical framework.
 \begin{proof}
 Assume $\rho_{\mathrm{re}}\ne 1/2$.  But any ternary $L$-zero satisfies
 $\rho_{\mathrm{re}}=1/2$ (Theorem~\ref{thm:rh-squeeze}).
-Contradiction. \qed
-\end{proof}
+Contradiction. \end{proof}
 
 \begin{theorem}[Full deductive chain --- 10 steps + independence]%
   \label{thm:full-chain}
@@ -350,7 +338,6 @@ Proposition~\ref{prop:premise-B}; step~10 is
 Theorem~\ref{thm:rh-squeeze}; independence is
 Proposition~\ref{prop:bounds-independent}.  Each step is verified in
 Lean~4.
-\qed
 \end{proof}
 
 
