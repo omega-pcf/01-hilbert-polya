@@ -31,6 +31,8 @@ export interface ZenodoMetadata {
   license: string;
   language: string;
   keywords: string[];
+  publication_date?: string;
+  communities?: Array<{ identifier: string }>;
   related_identifiers?: RelatedIdentifier[];
   repository_url?: string;
 }
