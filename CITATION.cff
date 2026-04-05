@@ -1,39 +1,40 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it using these metadata."
-title: "The Hilbert Pólya Operator and the Primitive Structure of the Complex Plane: Between F1, String Theory, and Ancient Geometry"
-type: "article"
-version: "1.5.4"
-date-released: "2026-04-04"
+message: If you use this software, please cite it using these metadata.
+title: "The Hilbert Pólya Operator and the Primitive Structure of the Complex
+  Plane: Between F1, String Theory, and Ancient Geometry"
+type: article
+version: 1.5.4
+date-released: 2026-04-05
 languages:
-  - "eng"
+  - eng
 authors:
-  - family-names: "González García"
-    given-names: "Jorge Armando"
-    affiliation: "TTAMAYO PUNTO COM, S.A.P.I. de C.V."
-  - family-names: "González García"
-    given-names: "Víctor Manuel"
-    orcid: "https://orcid.org/0009-0009-0935-2954"
-    affiliation: "TTAMAYO PUNTO COM, S.A.P.I. de C.V."
-  - family-names: "Dressler Pérez"
-    given-names: "Itzel Marion"
-    affiliation: "Independent Researcher"
-  - family-names: "García Ordóñez"
-    given-names: "Luz María"
-    affiliation: "TTAMAYO PUNTO COM, S.A.P.I. de C.V."
-  - family-names: "Moreno"
-    given-names: "M."
-    affiliation: "Independent Researcher"
-repository-code: "https://github.com/omega-pcf/01-hilbert-polya"
-license: "CC-BY-4.0"
+  - family-names: González García
+    given-names: Jorge Armando
+    affiliation: TTAMAYO PUNTO COM, S.A.P.I. de C.V.
+  - family-names: González García
+    given-names: Víctor Manuel
+    orcid: https://orcid.org/0009-0009-0935-2954
+    affiliation: TTAMAYO PUNTO COM, S.A.P.I. de C.V.
+  - family-names: Dressler Pérez
+    given-names: Itzel Marion
+    affiliation: Independent Researcher
+  - family-names: García Ordóñez
+    given-names: Luz María
+    affiliation: TTAMAYO PUNTO COM, S.A.P.I. de C.V.
+  - family-names: Moreno
+    given-names: M.
+    affiliation: Independent Researcher
+repository-code: https://github.com/omega-pcf/01-hilbert-polya
+license: CC-BY-4.0
 keywords:
-  - "Riemann Hypothesis"
-  - "Hilbert-Pólya conjecture"
-  - "Hermitian operators"
-  - "Non-circular construction"
-  - "S₃ symmetry"
-  - "Spectral invariants"
-  - "Golden ratio"
-  - "Fibonacci sequence"
+  - Riemann Hypothesis
+  - Hilbert-Pólya conjecture
+  - Hermitian operators
+  - Non-circular construction
+  - S₃ symmetry
+  - Spectral invariants
+  - Golden ratio
+  - Fibonacci sequence
 abstract: >-
   We construct a Hermitian operator T* whose spectrum approximates the
   non-trivial zeros of the Riemann zeta function with mean error <1.7% across
