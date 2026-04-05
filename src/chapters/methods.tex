@@ -274,8 +274,8 @@ by Lemma~\ref{lem:phi-nr}.
 Monotonicity: $\mathrm{nr}(n)\ge 1$ implies
 $\mathrm{nr}(n+1)=\sqrt{1+\mathrm{nr}(n)}\ge\sqrt{1+1}=\sqrt{2}>1$,
 and the map $g(x)=\sqrt{1+x}$ is increasing on~$[1,\golden]$ with
-$g(x)\ge x$ for $x\le\golden$ (since $g(x)\ge x$ iff $1+x\ge x^2$ iff
-$x^2-x-1\le 0$ iff $x\le\golden$).
+$g(x)\ge x$ for $x\le\golden$ (since $g(x)\ge x \iff 1+x\ge x^2 \iff
+x^2-x-1\le 0 \iff x\le\golden$).
 \end{proof}
 
 \begin{Theorem}[Nested radical converges to $\golden$]%
@@ -374,15 +374,18 @@ spectral parameters $\mu = 1/2$ and $\sigma = 3\mu = 3/2$ are derived.}
 
 
 % ------------------------------------------------------------------
-\subsection{Lattice PCF}\label{ssec:lattice}
+\subsection{Lattice Structure and Gauss--Eisenstein Duality}\label{ssec:lattice}
 % ------------------------------------------------------------------
 
 The torus $T^2 = \mathbb{C}/(\mathbb{Z}\omega_1+\mathbb{Z}\omega_2)$ with
 periods $\omega_1=2\pi/3$ (from $S_3$ symmetry) and $\omega_2=2\pi$ (full
-rotation) generates the PCF lattice~$\Lambda_{\mathrm{PCF}}$.  The lattice
-inherits dual structure: Eisenstein ($\mathbb{Z}[\omega]$, from the $120^\circ$
-angular separation) as input, and Gaussian ($\mathbb{Z}[i]$, from toroidal
-closure) as output.
+rotation) generates the PCF lattice~$\Lambda_{\mathrm{PCF}}$.  The PCF torus
+mediates between the Eisenstein lattice (input, $\mathbb{Z}[\omega]$ from
+$120^\circ$ angular separation and $\omega=e^{2\pi i/3}$) and the Gauss
+lattice (output, $\mathbb{Z}[i]$ from toroidal closure).  In this dual
+structure, the golden ratio provides the bridge: the moduli space
+$M_{\mathrm{PCF}}$ is the fundamental domain in which the torus modular
+parameter $\tau=\omega_1/\omega_2$ parametrizes the lattice family.
 
 \begin{Definition}[PCF modulus and lattice]\label{def:lattice-pcf}
 \begin{align}
@@ -393,17 +396,6 @@ closure) as output.
     \label{eq:Lambda-pcf}
 \end{align}
 \end{Definition}
-
-
-% ------------------------------------------------------------------
-\subsection{Gauss--Eisenstein Duality}\label{ssec:gauss-eisenstein}
-% ------------------------------------------------------------------
-
-The PCF torus mediates between the Eisenstein lattice (input, from $S_3$
-and $\omega=e^{2\pi i/3}$) and the Gauss lattice (output, from toroidal
-closure).  The golden ratio provides the bridge: the moduli space
-$M_{\mathrm{PCF}}$ is the fundamental domain in which the torus modular
-parameter $\tau=\omega_1/\omega_2$ parametrizes the lattice family.
 
 \begin{Definition}[Modular parameter and eigenvalues]\label{def:tau-pcf}
 \begin{align}
@@ -588,9 +580,10 @@ which rearranges to
 $\log_\golden(2^{p_\sigma}) = \sigma\cdot\lambda_{\log} + \log_\golden(3)$
 when the correspondence maps $\sigma\mapsto p_\sigma$ by the linear
 relation $p_\sigma = \sigma + \log_\golden(3)/\lambda_{\log}$.
-The numerical precision ${}<10^{-14}$ is an arithmetic identity
-(exact in exact arithmetic), verified computationally against all 51
-known Mersenne primes.
+The reported numerical precision of ${}<10^{-14}$ reflects the computational
+verification of this formal identity---which holds exactly in the symbolic
+limit---across the 51 known Mersenne primes, spanning over 25 million
+orders of magnitude.
 \end{proof}
 
 \begin{Proposition}[Critical mediator]\label{prop:critical-mediator}
