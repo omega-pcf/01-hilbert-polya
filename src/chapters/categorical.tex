@@ -137,8 +137,8 @@ $\{1,9\}$, $\{11,19\}$, $\{13,17\}$, $\{3,7\}$.
 
 \begin{proof}
 A prime $p>5$ satisfies $\gcd(p,20)=1$ (since $20=2^2\cdot 5$ and
-$p\nmid 2$, $p\nmid 5$), so $p\bmod 20\in\Ztwenty$ by definition of the
-unit group.  In Lean: verified by \lean{fin\_cases} over
+$p\nmid 2$, $p\nmid 5$), so $p\bmod 20\in\Ztwenty$, identifying the residue as a
+unit in the group $\Ztwenty$.  In Lean: verified by \lean{fin\_cases} over
 $\mathbb{Z}/20\mathbb{Z}$, eliminating all non-unit residues by
 divisibility.
 \end{proof}
@@ -161,7 +161,7 @@ The fragment of $\Ztwenty$ is ternary:
 \end{proposition}
 
 \begin{proof}
-By definition, the ternary fragment has modulus $\mu_3 = 1/2$
+The ternary fragment is characterized by the spectral parameter $\mu_3 = 1/2$
 (Eq.~\eqref{eq:mu-ternary}).
 \end{proof}
 
@@ -383,28 +383,17 @@ transition connected by the forgetful functor.
 \end{theorem}
 
 \begin{proof}
-The forgetful functor $U\colon C^*\text{-}\mathbf{Alg}\to\Hilb\to\Met$
-contracts the norm from $\norm{\cdot}_{\mathrm{alg}}=1$ ($\Set$ level)
-to $\norm{\Omega}_{\mathrm{pcf}}=1/2$ ($\Met$ level):
+The forgetful functor $U\colon C^*\text{--}\mathbf{Alg} \to \Hilb \to \Met$ contracts the norm from $\norm{\cdot}_{\text{\textsc{alg}}} = 1$ ($\Set$ level) to $\norm{\Omega}_{\text{\textsc{pcf}}} = 1/2$ ($\Met$ level):
 %
 \begin{center}
-\begin{tikzcd}[column sep=2.8em, row sep=2em]
-  C^*\text{-}\mathbf{Alg}
+\begin{tikzcd}[column sep=3.5em, row sep=1.5em]
+  \underset{\substack{\scriptstyle \text{binary, } \mu_2=1 \\ \scriptstyle \text{diagonal permitted}}}{C^*\text{--}\mathbf{Alg}}
     \arrow[r, "U_1"]
-  & \mathbf{Hilb}
+  & \underset{\scriptstyle \text{both norms}}{\mathbf{Hilb}}
     \arrow[r, "U_2"]
-  & \mathbf{Met}
+  & \underset{\substack{\scriptstyle \text{ternary, } \mu_3=1/2 \\ \scriptstyle \text{diagonal blocked}}}{\mathbf{Met}}
     \arrow[r, "U_3"]
-  & \mathbf{Set}
-  \\[-0.5em]
-  {\scriptstyle \mu_2=1}
-  & {\scriptstyle \text{both norms}}
-  & {\scriptstyle \mu_3=\frac{1}{2}}
-  & {\scriptstyle \text{no norm}}
-  \\[-0.5em]
-  {\scriptstyle \text{diagonal OK}}
-  &
-  & {\scriptstyle \text{diagonal blocked}}
+  & \underset{\substack{\scriptstyle \text{no norm} \\ \scriptstyle \text{diagonal permitted}}}{\mathbf{Set}}
 \end{tikzcd}
 \end{center}
 %
@@ -440,17 +429,12 @@ violating the obstruction condition.
 %%% --- Two-level norms ---
 
 \begin{definition}[Two-level norms]\label{def:two-level-norms}
-The forgetful functor $U\colon C^*$-$\mathbf{Alg}\to\Hilb$ carries two
-coexisting norm levels:
-\begin{align*}
-  \text{Algebra unit norm:} &\quad \norm{\cdot}_{\mathrm{alg}} = 1
-    && (\Set\text{ level, } \mu_2 = 1), \\
-  \text{Element PCF norm:} &\quad \norm{\Omega}_{\mathrm{pcf}} = 1/2
-    && (\Met\text{ level, } \mu_3 = 1/2).
-\end{align*}
-The strict inequality $\norm{\Omega}_{\mathrm{pcf}} < \norm{\cdot}_{\mathrm{alg}}$
-is the contraction that blocks the diagonal; the contraction factor is
-$1/2 = |\ker G|^{-1}$.
+The forgetful functor $U\colon C^*\text{--}\mathbf{Alg}\to\Hilb$ carries two coexisting norm levels:
+\begin{enumerate}[label=\alph*), leftmargin=2em]
+  \item \textbf{Algebra unit norm:} $\norm{\cdot}_{\text{\textsc{alg}}} = 1$ ($\Set$ level, $\mu_2 = 1$).
+  \item \textbf{Element PCF norm:} $\norm{\Omega}_{\text{\textsc{pcf}}} = 1/2$ ($\Met$ level, $\mu_3 = 1/2$).
+\end{enumerate}
+The strict inequality $\norm{\Omega}_{\text{\textsc{pcf}}} < \norm{\cdot}_{\text{\textsc{alg}}}$ is the contraction that blocks the diagonal; the contraction factor is $1/2 = |\ker G|^{-1}$.
 \end{definition}
 
 %%% --- Galois functor ---
@@ -549,16 +533,14 @@ tower'' to avoid conflation with the categorical notion.}
 \end{definition}
 
 \begin{lemma}[Tower properties]\label{lem:tower-properties}
-For all $k\ge 0$:
-\begin{align}
-  0 < \norm{\Omega}_k &< 1,
-    \label{eq:Omega-norm-bounds}  \\
-  \norm{\Omega}_{k+1} &< \norm{\Omega}_k
-    \qquad\text{(strictly decreasing)},
-    \label{eq:Omega-norm-decreasing}  \\
-  \norm{\Omega}_k &\to 0 \quad\text{as } k\to\infty.
-    \label{eq:Omega-norm-limit}
-\end{align}
+The tower norm $\norm{\Omega}_k = (1/2)^{2^k}$ consists of eight properties (\textsc{l}1)--(\textsc{l}8) that assemble into the convergence structure. The first four define the sequence behavior for all $k \ge 0$:
+\begin{enumerate}[label=(\textsc{l}\arabic*), leftmargin=3em]
+  \item $0 < \norm{\Omega}_k < 1$ (Convergence bounds).
+  \item $\norm{\Omega}_k < 1 \implies \Delta_k$ is blocked (Lawvere level check).
+  \item $\norm{\Omega}_k \to 0$ as $k \to \infty$ (Topological limit).
+  \item $\norm{\Omega}_{k+1} < \norm{\Omega}_k$ (Strictly decreasing sequence).
+\end{enumerate}
+Properties (\textsc{l}5)--(\textsc{l}8) integrate the structural and spectral witnesses: (\textsc{l}5) $\norm{\Omega}_0 = 1/2$; (\textsc{l}6) spectral uniqueness; (\textsc{l}7) additive destruction; and (\textsc{l}8) prime-forced ternary fragmentation.
 \end{lemma}
 
 \begin{proof}
@@ -772,16 +754,13 @@ $\mathrm{Re}(\rho)=1/2$.
 
 \begin{theorem}[Operator $\omega$ master theorem]\label{thm:omega-master}
 The operator $\OmH$ encodes five properties simultaneously:
-\\
-(1) $\OmH(k) = \tfrac{1}{2}\omega^k$ (eigenvalue formula, Eq.~\eqref{eq:Omega-hat-eigenvalues}),
-\\
-(2) $|\OmH(k)| = 1/2$ for all $k$ (constant modulus, Eq.~\eqref{eq:modulus-Omega}),
-\\
-(3) $\mathrm{Re}(\OmH(0)) = 1/2$ (critical line, Eq.~\eqref{eq:Omega-hat-0-re}),
-\\
-(4) Unique positive-Re eigenvalue (Eq.~\eqref{eq:Omega-hat-unique-positive-re}),
-\\
-(5) $S_3$ symmetry: the three eigenvalues are related by $120^\circ$ rotations.
+\begin{enumerate}[label=(\arabic*), leftmargin=2.5em]
+  \item $\OmH(k) = \tfrac{1}{2}\omega^k$ (eigenvalue formula, Eq.~\eqref{eq:Omega-hat-eigenvalues}).
+  \item $|\OmH(k)| = 1/2$ for all $k$ (constant modulus, Eq.~\eqref{eq:modulus-Omega}).
+  \item $\mathrm{Re}(\OmH(0)) = 1/2$ (critical line, Eq.~\eqref{eq:Omega-hat-0-re}).
+  \item Unique positive-Re eigenvalue (Eq.~\eqref{eq:Omega-hat-unique-positive-re}).
+  \item $S_3$ symmetry: the three eigenvalues are related by $120^\circ$ rotations.
+\end{enumerate}
 \end{theorem}
 
 \begin{proof}

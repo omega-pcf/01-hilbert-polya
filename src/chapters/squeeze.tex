@@ -1,9 +1,7 @@
 \subsection{The Formal Proof: The Squeeze}\label{ssec:squeeze}
 % ------------------------------------------------------------------
 
-This is the central section.
-
-\noindent\textit{Source:} (Verified in Lean~4).\medskip
+This section provides the formal derivation of the critical line $\mathrm{Re}(s)=1/2$ within the PCF framework. The ``squeeze'' strategy is prioritized here for its direct correspondence with the computer-assisted formalization in Lean~4; every deductive step, from the arithmetic bound to the final identification, maps to a verified witness in the repository (see Appendix~\ref{app:lean} for the full deductive trace).
 
 The spectral proof (Theorem~\ref{thm:rh-spectral}) establishes
 $\mathrm{Re}(\rho)=1/2$ directly from the spectral embedding.  The
@@ -29,14 +27,7 @@ as the sole external input (Theorem~\ref{thm:hecke}, Appendix~\ref{app:lean}).
 \subsubsection{Part A: Abstract Squeeze (parametric)}
 
 \begin{theorem}[Abstract squeeze]\label{thm:abstract-squeeze}
-Let $P$ be a predicate on~$\mathbb{R}$.  Given:
-\begin{itemize}
-  \item a universal bound
-    $h_{\mathrm{ub}}\colon \forall t,\; P(t)\implies t\le\mu_3$,
-  \item Hecke pairing
-    $h_{\mathrm{hp}}\colon \forall t,\; P(t)\implies P(1-t)$,
-\end{itemize}
-then $\forall t,\; P(t)\implies t = \tfrac{1}{2}$.
+Let $P$ be a predicate on~$\mathbb{R}$. Given a universal bound $h_{\mathrm{ub}}\colon \forall t, P(t)\implies t\le\mu_3$ and a Hecke pairing $h_{\mathrm{hp}}\colon \forall t, P(t)\implies P(1-t)$, then $\forall t, P(t)\implies t = \tfrac{1}{2}$.
 \end{theorem}
 
 \begin{proof}
@@ -121,8 +112,7 @@ Companion-bound witness: $\rho_{\mathrm{re}}=2/3$ satisfies
 $0<2/3<1$ and $1-2/3=1/3 \le 1/2$, but $2/3 > 1/2$, so the upper
 bound fails.  Hence $\rho_{\mathrm{re}} \ne 1/2$.
 
-Both verified by \lean{bound\_alone\_insufficient} and
-\lean{companion\_alone\_insufficient} in Lean.
+Both results are established by the formal witnesses \lean{bound\allowbreak \_alone\allowbreak \_insufficient} and \lean{companion\allowbreak \_alone\allowbreak \_insufficient\allowbreak}.
 \end{proof}
 
 
@@ -259,9 +249,7 @@ satisfiable.
 
 \begin{proof}
 $\rho_{\mathrm{re}}^{\mathrm{can}} = 1/2$ satisfies both premises:
-$1/2 \le \mu_3 = 1/2$ and $1 - 1/2 \le \mu_3 = 1/2$.  Hence the
-abstract hypotheses are satisfiable.
-Verified by \lean{canonical\_zero} in Lean.
+$1/2 \le \mu_3 = 1/2$ and $1 - 1/2 \le \mu_3 = 1/2$, as established by witness \lean{canonical\_zero}.
 \end{proof}
 
 
@@ -289,7 +277,7 @@ single structure:
 
 \begin{proof}
 Each component is proved in its stated section; the conjunction is
-assembled in \lean{master\_bridge\allowbreak \_v11} (Verified in Lean~4), 
+assembled in \lean{master\_bridge\allowbreak \_v11}, 
 which combines all twelve results into a single structure 
 (\texttt{full\_deductive\_chain}).
 
@@ -337,8 +325,8 @@ categorically derived.  The two bounds are provably independent
 Steps 1--5 are Proposition~\ref{prop:premise-A}; steps 6--9 are
 Proposition~\ref{prop:premise-B}; step~10 is
 Theorem~\ref{thm:rh-squeeze}; independence is
-Proposition~\ref{prop:bounds-independent}.  Each step is verified in
-Lean~4.
+Proposition~\ref{prop:bounds-independent}.  Each deductive step
+corresponds to a computer-checked bridge in the formal repository.
 \end{proof}
 
 

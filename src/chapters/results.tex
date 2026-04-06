@@ -137,10 +137,16 @@ where $t_n^{\mathrm{RvM}} := 2\pi n/\ln n$.
 \end{Theorem}
 
 \begin{proof}
-From Definition~\ref{def:Tstar}:
-$T^*(n) = c(n) \cdot \pi n / \ln(n/2+3/2)$.
-Writing $t_n = (2\pi n/\ln n)\cdot(t_n \ln n / 2\pi n)$ and
-dividing yields~\eqref{eq:bias-decomp}. \end{proof}
+The ratio $T^*(n)/t_n$ is expanded by introducing the Riemann--von Mangoldt asymptotic height $t_n^{\mathrm{RvM}} = 2\pi n/\ln n$ as a pivot:
+\begin{equation*}
+  \frac{T^*(n)}{t_n} = \frac{T^*(n)}{t_n^{\mathrm{RvM}}} \cdot \frac{t_n^{\mathrm{RvM}}}{t_n}.
+\end{equation*}
+Substituting the explicit form of $T^*(n)$ from Definition~\ref{def:Tstar} for Regime~II yields:
+\begin{equation*}
+  \frac{T^*(n)}{t_n} = \left( \frac{c(n) \cdot \pi n}{\ln(n/2+3/2)} \cdot \frac{\ln n}{2\pi n} \right) \cdot \frac{t_n^{\mathrm{RvM}}}{t_n}.
+\end{equation*}
+Simplifying the terms and grouping them by their functional origin (spectral modulation, kernel normalization, and Riemannic deficit) establishes the decomposition~\eqref{eq:bias-decomp}.
+\end{proof}
 
 Each factor has a definite asymptotic character:
 
