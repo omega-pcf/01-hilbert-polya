@@ -30,7 +30,7 @@ distributed global structure necessary for \emph{all} non-trivial
 zeros~\cite{titchmarsh86}.  Random matrix theory
 (Keating--Snaith~\cite{keating00}, Katz--Sarnak~\cite{katz99}) provides
 statistical correspondences without explicit operator construction.
-Connes's noncommutative geometry program~\cite{connes99,connes94}
+Connes's noncommutative geometry program~\cite{connes99,connes95}
 recovered the first thirty-one zeros from the spectral side, but reduces
 the hypothesis to proving the validity of the trace formula.
 Berry--Keating~\cite{berry99} and
@@ -76,7 +76,7 @@ $\mathbb{Q}^\times\!\backslash\mathbb{A}_\mathbb{Q}$, where the
 Euler product enters through local contributions at each prime~$p$
 and the zeros of~$\zeta$ appear as an \emph{absorption spectrum}---the
 spectral side of a Lefschetz-type trace formula~\cite{connes16}.
-Lorscheid~\cite{lopezpena09} reformulated the product as
+L\'opez Pe\~na and Lorscheid~\cite{lopezpena09torified} reformulated the product as
 $\zeta^*_\mathbb{Q}(s) = \prod_{v} \zeta_v(s)$ over all places
 of~$\mathbb{Q}$, exhibiting each local factor
 $\zeta_{v_p}(s) = (1-p^{-s})^{-1}$ as the zeta function of the
@@ -90,13 +90,13 @@ endomorphism, the Riemann hypothesis is a \emph{theorem}: proved by
 Hasse~(1934) for elliptic curves and by Weil~(1940) for all curves
 over finite fields, then extended to arbitrary varieties by
 Deligne~(1974) using the intersection form and Lefschetz trace
-formula~\cite{milne15,oort14}.  Weil's proof exploits the geometric
+formula~\cite{milne15,oort91}.  Weil's proof exploits the geometric
 structure of $\bar{C}\times\bar{C}$---an intersection form, the
 Riemann--Roch theorem, and Serre duality---to force
 $|\alpha_i| = q^{1/2}$ for every Frobenius eigenvalue.
 The aspiration to transport this geometric proof from
 $\mathbb{F}_q$ to~$\mathbb{Z}$ motivates the entire
-$\mathbb{F}_1$-program~\cite{soule04,connes_consani08,lopezpena09}.
+$\mathbb{F}_1$-program~\cite{soule04,connes08,lopezpena09mapping}.
 Borger~\cite{borger09} identified the precise algebraic structure
 underlying this transport: a $\Lambda$-ring structure---a system of
 commuting Frobenius lifts $\psi_p$ with $\psi_p(a) \equiv a^p
@@ -224,13 +224,13 @@ guarantee that Hermitian operators have real eigenvalues through
 diagonalization.
 
 The consequences for the P\'olya operator are concrete.
-Adler~\cite{adler95} developed quaternionic quantum mechanics
+Adler~\cite{adler1996quaternionic} developed quaternionic quantum mechanics
 systematically, formulating a Schr\"odinger equation over~$\mathbb{H}$
 with anti-self-adjoint Hamiltonian $\tilde{H} = -\tilde{H}^\dagger$.
 His central finding is that noncommutative dynamics ultimately reduces
 to effective complex quantum mechanical structures---quaternionic
 quantum field theory yields standard complex QFT as an emergent
-statistical property~\cite{adler95}.  No quaternionic or octonionic
+statistical property~\cite{adler1996quaternionic}.  No quaternionic or octonionic
 Hermitian operator has been shown to produce the Riemann zero
 spectrum; the loss of commutativity (for~$\mathbb{H}$) or
 associativity (for~$\mathbb{O}$) prevents the standard
@@ -252,7 +252,7 @@ dimension~$2$.  The algebraic escape routes
 through~$\mathbb{H}$ or~$\mathbb{O}$ fail: dimensions~$4$ and~$8$
 overshoot the required structure, and their loss of commutativity or
 associativity prevents standard diagonalization, reducing them to
-effective complex structures~\cite{adler95,baez02} that GUE forces
+effective complex structures~\cite{adler1996quaternionic,baez02} that GUE forces
 back to dimension~$2$.  The bind tightens further: the Wigner--Dyson
 classification assigns symmetry classes by a $\mathbb{Z}_2$ involution
 (time-reversal present or absent), and this is precisely the
@@ -312,10 +312,10 @@ and the P\'olya--Hilbert conjecture}\label{ssec:convergence}
 % -----------------------------------------------------------------
 
 This geometric--stratified escape connects directly to two distinct
-programs within Manin's framework~\cite{manin13,manin02}: his
+programs within Manin's framework~\cite{manin13,manin04}: his
 $\mathbb{F}_1$-geometric program---realized through noncommutative tori
 and $C^*$-algebras in \emph{Real Multiplication and Noncommutative
-Geometry} (2002)~\cite{manin02}---and the arithmetic-differential program
+Geometry} (2002)~\cite{manin04}---and the arithmetic-differential program
 surveyed in \emph{Numbers as Functions} (2013)~\cite{manin13}, where
 Buium's $p$-adic derivation $\delta_p = (a - a^p)/p$~\cite{buium05} provides
 differential equations in the arithmetic direction, with Borger's
@@ -336,14 +336,14 @@ in the limit $q \to 1$, where the resulting objects are Weyl groups and
 buildings.  This observation remained largely dormant until
 Soul\'e~\cite{soule04} (2004) proposed the first formal framework for
 algebraic geometry over~$\mathbb{F}_1$, followed by
-Connes--Consani~\cite{connes_consani08} (2008--2015), who connected it
+Connes--Consani~\cite{connes08} (2008--2015), who connected it
 to noncommutative geometry and the Riemann Hypothesis.
 Borger~\cite{borger09} (2009) identified $\Lambda$-ring structures----%
 commuting Frobenius lifts $\psi_p$ with $\psi_p(a) \equiv a^p \pmod{p}$
 and composition law $\psi_p \circ \psi_q = \psi_{pq}$---as the
 definitive formulation of $\mathbb{F}_1$-descent, globalizing to a big
 topos over~$\mathbb{F}_1$.  L\'opez Pe\~na and
-Lorscheid~\cite{lopezpena09} provided comprehensive surveys of the
+Lorscheid~\cite{lopezpena09mapping} provided comprehensive surveys of the
 various geometries proposed over~$\mathbb{F}_1$.  The central thesis of
 this program is that the Riemann Hypothesis is an \emph{intrinsic
 property} of absolute geometry over~$\mathbb{F}_1$, and that
@@ -351,7 +351,7 @@ $\mathrm{Spec}(\mathbb{Z})$ should be understood as a geometric object
 in this absolute context, just as Weil's proof for function fields
 treats $\mathrm{Spec}(\mathbb{F}_q[t])$ as a geometric curve.
 
-Within this program, Manin's contributions~\cite{manin13,manin02} are
+Within this program, Manin's contributions~\cite{manin13,manin04} are
 twofold.  His algebraic framework
 (\emph{Numbers as Functions}, 2013~\cite{manin13}) surveys Buium's theory
 of differential equations in the $p$-adic direction~\cite{buium05},
@@ -380,7 +380,7 @@ importing the very circularity that Lawvere prohibits.
 
 The noncommutative tori central to Manin's geometric program find their
 physical realization in the string theory framework.  Connes, Douglas,
-and Schwarz~\cite{cds98} demonstrated that toroidal compactification in
+and Schwarz~\cite{connes98} demonstrated that toroidal compactification in
 M-theory produces precisely the noncommutative tori of Connes's
 geometric program---establishing the structural correspondence
 $\mathbb{F}_1 \cong D^1_{\text{compactified}}$: the field with one
@@ -393,7 +393,7 @@ may admit topological realization.
 
 The connection between Manin's \emph{Numbers as Functions} and the
 string-theoretic dimensional tower is further illuminated by Huerta and
-Schreiber~\cite{huerta17}, who demonstrated that M-theory's dimensional
+Schreiber~\cite{huerta2018m}, who demonstrated that M-theory's dimensional
 structure---the sequence
 $\mathbb{R}^{0|1} \to \mathbb{R}^{1,1|1} \to \cdots
 \to \mathbb{R}^{10,1|32}$---can be derived from pure super-algebraic
