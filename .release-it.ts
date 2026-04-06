@@ -55,13 +55,14 @@ export default {
           { type: 'fix', section: 'Bug Fixes' },
           { type: 'style', section: 'Styles' },
           { type: 'docs', section: 'Documentation' },
-          { type: 'refactor', section: 'Code Refactoring' },
+          { type: 'refactor', section: 'Refinements' },
           { type: 'perf', section: 'Performance Improvements' },
           { type: 'chore', section: 'Chores' },
           { type: 'build', section: 'Build System' },
           { type: 'release', section: 'Releases' },
         ],
       },
+      tagPrefix: 'v',
       // Explicitly set host to fix broken ///compare links
       writerOpts: {
         host: 'https://github.com',
