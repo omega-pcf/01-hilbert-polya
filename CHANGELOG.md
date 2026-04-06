@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.12](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.11...v1.5.12) (2026-04-06)
+
+### Styles
+
+* **bib:** normalize casing for Reed--Simon chapter entries ([aba9e98](https://github.com/omega-pcf/01-hilbert-polya/commit/aba9e98bcab97f762915d458a7584ef6c60bbabb))
+* refine Lean 4 formalization terminology ([3a608e6](https://github.com/omega-pcf/01-hilbert-polya/commit/3a608e6d03a799508c1e5fc449be095ce619d624))
+* streamline Lean 4 and Mathlib terminology in Discussion chapter ([b3f9392](https://github.com/omega-pcf/01-hilbert-polya/commit/b3f939241d83032823127478c9e50cd2ec3caa16))
+
+### Chores
+
+* **bib:** refine Tarski and Reed--Simon citation granularity ([e88ac4f](https://github.com/omega-pcf/01-hilbert-polya/commit/e88ac4f6d07f2fef4c0dd067b9ceb566533493cc))
+
 ## [1.5.11](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.10...v1.5.11) (2026-04-06)
 
 ### Bug Fixes
