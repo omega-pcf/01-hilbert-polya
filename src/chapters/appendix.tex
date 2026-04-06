@@ -10,7 +10,7 @@
 
 \section{Lean Formalization: Complete Source}\label{app:lean}
 
-The formalization comprises two verified files that establish a closed deductive chain with zero \texttt{sorry} and axioms limited to the geometric constants of \S\ref{ssec:axioms} and Hecke's 1920 theorem:
+The formalization comprises two verified files that establish a closed deductive chain with zero \texttt{sorry} and axioms limited to the geometric constants of \cref{ssec:axioms} and Hecke's 1920 theorem:
 
 \begin{center}
 \begin{tabular}{lrrrl}
@@ -50,7 +50,7 @@ Implementation of categorical logic and the squeeze proof organized in 12 sectio
 
 \subsection{Convergence Verification (\texttt{PCF\_OperatorConvergence})}
 
-Formalization of the convergence properties of $T^*$ (\S\ref{ch:results}) and the bias factors:
+Formalization of the convergence properties of $T^*$ (\cref{ch:results}) and the bias factors:
 
 \begin{center}
 \begin{tabular}{cll}
@@ -86,7 +86,7 @@ The complete chain with zero free hypotheses on $\mathrm{Re}(\rho)$:
   \item[\textsc{bound}] \lean{bounded\_by\_mu}: $\mathrm{Re}(\rho)\le\mu_3$
     $\leftarrow$ steps 1--6
   \item[\textsc{bound}] \lean{companion\_bounded}: $1{-}\mathrm{Re}(\rho)\le\mu_3$
-    $\leftarrow$ step~4 + \lean{hecke\_1920} (Theorem~\ref{thm:hecke})
+    $\leftarrow$ step~4 + \lean{hecke\_1920} (\cref{thm:hecke})
   \item[\textsc{squeeze}] \lean{rh\_squeeze}: $\mathrm{Re}(\rho)=1/2$
     $\leftarrow$ steps 7+8, \texttt{linarith}
   \item[\textsc{indep}] \lean{bound\_alone\_insufficient}
