@@ -49,6 +49,17 @@ export default {
     '@release-it/conventional-changelog': {
       preset: {
         name: 'conventionalcommits',
+        types: [
+          { type: 'feat', section: 'Features' },
+          { type: 'fix', section: 'Bug Fixes' },
+          { type: 'style', section: 'Styles' },
+          { type: 'docs', section: 'Documentation' },
+          { type: 'refactor', section: 'Code Refactoring' },
+          { type: 'perf', section: 'Performance Improvements' },
+          { type: 'chore', section: 'Chores' },
+          { type: 'build', section: 'Build System' },
+          { type: 'release', section: 'Releases' },
+        ],
       },
       infile: 'CHANGELOG.md',
     },
