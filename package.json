@@ -1,7 +1,7 @@
 {
   "name": "@omega-pcf/01-hilbert-polya",
   "version": "1.5.8",
-  "description": "The Ω_PCF Operator and the Primitive Structure of the Complex Plane",
+  "description": "The Hilbert Pólya Operator and the Primitive Structure of the Complex Plane: Between F1, String Theory, and Ancient Geometry",
   "type": "module",
   "scripts": {
     "type-check": "tsc --noEmit",
@@ -17,10 +17,11 @@
   "private": true,
   "devDependencies": {
     "@release-it/bumper": "^7.0.0",
-    "@release-it/conventional-changelog": "^10.0.2",
+    "@release-it/conventional-changelog": "^10.0.6",
     "@types/node": "^20.0.0",
+    "conventional-changelog-conventionalcommits": "^9.3.1",
     "dotenv-cli": "^11.0.0",
-    "release-it": "^19.0.0",
+    "release-it": "^19.2.4",
     "tsx": "^4.0.0",
     "typescript": "^5.0.0",
     "yaml": "^2.0.0"
