@@ -1,6 +1,6 @@
 {
   "name": "@omega-pcf/01-hilbert-polya",
-  "version": "1.5.9",
+  "version": "1.5.8",
   "description": "The Ω_PCF Operator and the Primitive Structure of the Complex Plane",
   "type": "module",
   "scripts": {

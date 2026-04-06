@@ -61,14 +61,11 @@ export default {
           { type: 'build', section: 'Build System' },
           { type: 'release', section: 'Releases' },
         ],
+        compareUrlFormat: 'https://github.com/omega-pcf/01-hilbert-polya/compare/{{previousTag}}...{{currentTag}}',
+        commitUrlFormat: 'https://github.com/omega-pcf/01-hilbert-polya/commit/{{hash}}',
+        issueUrlFormat: 'https://github.com/omega-pcf/01-hilbert-polya/issues/{{id}}',
       },
       tagPrefix: 'v',
-      // Explicitly set context to fix broken ///compare links
-      context: {
-        host: 'https://github.com',
-        owner: 'omega-pcf',
-        repository: '01-hilbert-polya',
-      },
     },
   },
 } satisfies Config;
