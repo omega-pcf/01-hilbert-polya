@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.5.13](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.12...v1.5.13) (2026-04-06)
+
 ## [1.5.12](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.11...v1.5.12) (2026-04-06)
 
 ### Styles
