@@ -1241,12 +1241,12 @@ Hence $T^*(n)/t_n\to 1$.
 \begin{Remark}[Scope of formalization]\label{rmk:scope-sa}
 The theorems of this subsection are standard results for diagonal
 operators on~$\ell^2(\mathbb{N})$
-(Reed--Simon~\cite{reed1975ii}, Chapter~VIII).
-They are not formalized in Lean---Mathlib lacks essential
-self-adjointness and the spectral theorem for unbounded
-operators---but depend only on two Lean-verified inputs:
-$T^*(n)\in\mathbb{R}$ (Definition~\ref{def:Tstar}) and
-$T^*(n)\to\infty$ (Theorem~\ref{thm:Tstar-asymptotic}).
+(Reed--Simon~\cite{REED1972249}).
+While they have not been formally verified against Mathlib---which
+at the time of writing lacks essential self-adjointness and the
+spectral theorem for unbounded operators---they depend only on two
+Lean-verified inputs: $T^*(n)\in\mathbb{R}$ (Definition~\ref{def:Tstar})
+and $T^*(n)\to\infty$ (Theorem~\ref{thm:Tstar-asymptotic}).
 \end{Remark}
 
 \subsubsection{Setting and definitions}
@@ -1372,7 +1372,7 @@ vanish.
 
 \begin{Corollary}[Real spectrum and spectral theorem]\label{cor:spectral-thm}
 All spectral values of~$\tilde{H}_{\mathrm{PCF}}$ are real.  By the
-spectral theorem for unbounded self-adjoint operators~\cite{reed1975ii},
+spectral theorem for unbounded self-adjoint operators~\cite{REED1972249},
 there exists a unique projection-valued measure~$E$ on~$\mathbb{R}$
 such that
 \[
@@ -1414,7 +1414,7 @@ $(\tilde{H}_{\mathrm{PCF}}-zI)^{-1}e_n = (T^*(n)-z)^{-1}e_n$,
 so it is the norm-limit of finite-rank operators (truncating
 to the first~$N$ basis vectors), hence compact.  Compactness
 of the resolvent implies the spectrum is purely
-discrete~\cite{reed1975ii}.
+discrete~\cite{REED1972249}.
 \end{proof}
 
 \begin{Proposition}[Spectral gap]\label{prop:spectral-gap}
