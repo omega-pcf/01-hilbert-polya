@@ -1,6 +1,11 @@
 # Changelog
 
-## [1.5.8](///compare/v1.5.7...v1.5.8) (2026-04-06)
+## [1.5.8](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.7...v1.5.8) (2026-04-06)
+
+### Chores
+
+* fix changelog generation and include more commit types in history 128747e
+
 
 ## [1.5.7](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.6...v1.5.7) (2026-04-06)
 

@@ -47,6 +47,7 @@ export default {
       ],
     },
     '@release-it/conventional-changelog': {
+      infile: 'CHANGELOG.md',
       preset: {
         name: 'conventionalcommits',
         types: [
@@ -61,7 +62,12 @@ export default {
           { type: 'release', section: 'Releases' },
         ],
       },
-      infile: 'CHANGELOG.md',
+      // Explicitly set host to fix broken ///compare links
+      writerOpts: {
+        host: 'https://github.com',
+        owner: 'omega-pcf',
+        repository: '01-hilbert-polya',
+      },
     },
   },
 } satisfies Config;
