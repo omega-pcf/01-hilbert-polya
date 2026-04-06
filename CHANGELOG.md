@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.5.10](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.9...v1.5.10) (2026-04-06)
+
+### Documentation
+
+* cite monge1811geometrie in background chapter ([94fc662](https://github.com/omega-pcf/01-hilbert-polya/commit/94fc662cbcc2108ae1dbde267b76dcdeae481753))
+
+### Refinements
+
+* audit and synchronize bibliography with corrected keys and metadata ([88c1e82](https://github.com/omega-pcf/01-hilbert-polya/commit/88c1e828f2ecd507564c46b940f7a31db1260f40))
+* update lopezpena09 to final published version in Mathematische Zeitschrift ([917041b](https://github.com/omega-pcf/01-hilbert-polya/commit/917041b48468e27cb35175bea439cf1201f7cadd))
+* update maldacena97 with full 1999 IJTP publication metadata ([f66e471](https://github.com/omega-pcf/01-hilbert-polya/commit/f66e4719b7600768bfea48bff72b86276d61e74a))
+* update oort14 to oort91 with correct Arithmetic Algebraic Geometry metadata ([8e83b23](https://github.com/omega-pcf/01-hilbert-polya/commit/8e83b234e831bb5b62de78956538ec4de867b515))
+* update serre73 with complete 1973 Graduate Texts in Mathematics metadata ([a43de39](https://github.com/omega-pcf/01-hilbert-polya/commit/a43de392885de3aa683853dc5d2c63423a7616c2))
+* update shankar94 with full 2nd edition Springer metadata ([44d9ecc](https://github.com/omega-pcf/01-hilbert-polya/commit/44d9ecc3d2fc78edd6e8cc9cfd70270d37a70618))
+* update vinogradov58 to original 1947 Steklov Institute publication ([da1bbd6](https://github.com/omega-pcf/01-hilbert-polya/commit/da1bbd6f72b3664221f0e4615c5dfd298d0b2d3a))
+* update vonneumann32 with full Springer metadata and add citations ([daa42c8](https://github.com/omega-pcf/01-hilbert-polya/commit/daa42c8477d62158aeb739ecce6c4b7959c08a0d))
+
+### Chores
+
+* **bib:** final precision fixes and structural cleanup ([50dba88](https://github.com/omega-pcf/01-hilbert-polya/commit/50dba8842bc5ef18a4fdc643687f0736c125d46d))
+
 ## [1.5.9](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.8...v1.5.9) (2026-04-06)
 
 ### Chores
