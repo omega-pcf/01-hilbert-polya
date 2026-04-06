@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.5.18](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.14...v1.5.18) (2026-04-06)
+
+### Documentation
+
+* add CC-BY-4.0 LICENSE and update package.json ([993a389](https://github.com/omega-pcf/01-hilbert-polya/commit/993a3899b0f309e192d83225b69084bad7540194))
+
+### Refinements
+
+* standardized dynamic cross-referencing and academic bibliography ([f50f915](https://github.com/omega-pcf/01-hilbert-polya/commit/f50f9156706405ea8799c5a6b870812b707e58f6))
+
+### Chores
+
+* fix conventional changelog template overrides ([0547740](https://github.com/omega-pcf/01-hilbert-polya/commit/05477405296a1e01af3b595ec897e388da9eeba0))
+
 ## [](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.12...vnull) (2026-04-06)
 
 ### Refinements
