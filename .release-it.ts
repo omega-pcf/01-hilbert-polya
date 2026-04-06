@@ -63,8 +63,8 @@ export default {
         ],
       },
       tagPrefix: 'v',
-      // Explicitly set host to fix broken ///compare links
-      writerOpts: {
+      // Explicitly set context to fix broken ///compare links
+      context: {
         host: 'https://github.com',
         owner: 'omega-pcf',
         repository: '01-hilbert-polya',
