@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.11](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.10...v1.5.11) (2026-04-06)
+
+### Bug Fixes
+
+* **bib:** correct reference errors and improve metadata ([95cffd7](https://github.com/omega-pcf/01-hilbert-polya/commit/95cffd742c8c6eb288786aefac60aa68fde68885))
+
 ## [1.5.10](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.9...v1.5.10) (2026-04-06)
 
 ### Documentation
