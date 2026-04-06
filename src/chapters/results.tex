@@ -1,6 +1,6 @@
 \section{Results}\label{sec:results}\label{ch:results}
 
-The operator~$T^*$ was constructed in~\S\ref{ssec:Tstar} without reference
+The operator~$T^*$ was constructed in~\cref{ssec:Tstar} without reference
 to Riemann zeros.  This section compares its spectrum $\{T^*(n)\}$ against
 the exact zero heights $\{t_n\}$ of $\zeta(\tfrac12+it)=0$, validates the
 two-regime structure, and characterizes the error across twelve orders of
@@ -13,7 +13,7 @@ magnitude.
 Zero heights~$t_n$ are computed via \texttt{mpmath.}\allowbreak\texttt{zetazero(n)} at 25--30
 decimal digit precision (\texttt{mpmath.}\allowbreak\texttt{mp.}\allowbreak\texttt{dps} $\ge$ 25).
 Values of~$T^*(n)$ use the closed-form
-Definition~\ref{def:Tstar} with structural parameters
+\cref{def:Tstar} with structural parameters
 $\alpha_0{=}59/40$, $\beta_0{=}1/8$, $\mu{=}1/2$, $\sigma{=}3/2$.
 No parameter is adjusted to minimize error.
 
@@ -36,7 +36,7 @@ repository.\footnote{\url{\pcfrepo}}
   dashed line at $n{=}30$: Regime~I/II boundary.
   \textbf{(b)}~Ratio $T^*(n)/t_n$: Regime~I (gray) oscillates;
   Regime~II (red) follows the peaked structure of
-  Theorem~\ref{thm:peaked-bias}.
+  \cref{thm:peaked-bias}.
   \textbf{(c)}~Modulation $c(n,\alpha,\beta)$: adaptive (Regime~I)
   with discontinuities at $2^k$; fixed (Regime~II) decaying toward
   $\sigma+\mu=2$.}
@@ -109,11 +109,11 @@ $10^{11}$--$10^{12}$             & 5   & 1.60  & 1.63  & $\downarrow$ \\
 
 Three features distinguish this error profile from a generic numerical fit:
 \\
-\emph{(a)} \textbf{Non-monotonicity.}  The error decreases from $n=31$ to a minimum near $n \approx 5{,}000$ (error $\approx 0.02\%$), then \emph{increases} to a peak at $n \approx 1.5 \times 10^9$ (error $= 1.681\%$), then decreases again.  This structure is predicted by the analytical decomposition of~\S\ref{ssec:bias}.
+\emph{(a)} \textbf{Non-monotonicity.}  The error decreases from $n=31$ to a minimum near $n \approx 5{,}000$ (error $\approx 0.02\%$), then \emph{increases} to a peak at $n \approx 1.5 \times 10^9$ (error $= 1.681\%$), then decreases again.  This structure is predicted by the analytical decomposition of~\cref{ssec:bias}.
 \\
 \emph{(b)} \textbf{Bounded error.}  The absolute relative error $|T^*(n) - t_n|/t_n$ is bounded above by $0.017$ across all 125~verified zeros spanning twelve orders of magnitude.
 \\
-\emph{(c)} \textbf{No tuning.}  Every parameter is derived structurally (\S\ref{ssec:non-circularity}).  The error profile emerges from the interaction of fixed structural parameters with the Riemann--von~Mangoldt asymptotics.
+\emph{(c)} \textbf{No tuning.}  Every parameter is derived structurally (\cref{ssec:non-circularity}).  The error profile emerges from the interaction of fixed structural parameters with the Riemann--von~Mangoldt asymptotics.
 
 
 %%% ------------------------------------------------------------------
@@ -141,11 +141,11 @@ The ratio $T^*(n)/t_n$ is expanded by introducing the Riemann--von Mangoldt asym
 \begin{equation*}
   \frac{T^*(n)}{t_n} = \frac{T^*(n)}{t_n^{\mathrm{RvM}}} \cdot \frac{t_n^{\mathrm{RvM}}}{t_n}.
 \end{equation*}
-Substituting the explicit form of $T^*(n)$ from Definition~\ref{def:Tstar} for Regime~II yields:
+Substituting the explicit form of $T^*(n)$ from \cref{def:Tstar} for Regime~II yields:
 \begin{equation*}
   \frac{T^*(n)}{t_n} = \left( \frac{c(n) \cdot \pi n}{\ln(n/2+3/2)} \cdot \frac{\ln n}{2\pi n} \right) \cdot \frac{t_n^{\mathrm{RvM}}}{t_n}.
 \end{equation*}
-Simplifying the terms and grouping them by their functional origin (spectral modulation, kernel normalization, and Riemannic deficit) establishes the decomposition~\eqref{eq:bias-decomp}.
+Simplifying the terms and grouping them by their functional origin (spectral modulation, kernel normalization, and Riemannic deficit) establishes the decomposition~\cref{eq:bias-decomp}.
 \end{proof}
 
 Each factor has a definite asymptotic character:
@@ -165,7 +165,7 @@ III & $t_n^{\mathrm{RvM}}/t_n$ & $1$ & from below (RvM correction terms) \\
 \noindent
 Factors~I and~II are formalized in
 \texttt{PCF\_Operator\-Convergence.lean}
-(Verified in Lean~4, \S\ref{app:lean}).
+(Verified in Lean~4, \cref{app:lean}).
 
 The competition between the positive excess of Factors~I--II and the
 negative deficit of Factor~III produces the peaked structure:
@@ -181,14 +181,14 @@ The ratio $R(n) = T^*(n)/t_n$ satisfies:
 
 \emph{(4)} $R(n)$ monotonically decreasing for $n > 1.5 \times 10^9$ \textup{(verified to $n = 10^{12}$)}.
 
-\emph{(5)} $R(n) \to 1$ as $n \to \infty$ \textup{(Theorem~\ref{thm:Tstar-asymptotic})}.
+\emph{(5)} $R(n) \to 1$ as $n \to \infty$ \textup{(\cref{thm:Tstar-asymptotic})}.
 \end{Theorem}
 
 \begin{proof}
 Phases~(1)--(4) are verified computationally across 125~zeros at
 25--30~digit precision.
 Phase~(5) follows from $c(n) \to 2$
-(Lemma~\ref{lem:c-convergence}) and $t_n^{\mathrm{RvM}}/t_n \to 1$
+(\cref{lem:c-convergence}) and $t_n^{\mathrm{RvM}}/t_n \to 1$
 (Riemann--von~Mangoldt). The peak occurs where the convergence rates
 of Factors~I--II (rate $O(1/\ln n)$) and Factor~III (rate
 $O(\ln\ln n/\ln n)$) are balanced.  Analytical extrapolation predicts
@@ -210,7 +210,7 @@ $c(n)$ & 2.936 & 2.792 & 2.686 & 2.605 & 2.541 & 2.411 & 2.331 \\
 
 \noindent
 The convergence $c(n) \to 2 = \sigma + \mu$
-(Lemma~\ref{lem:c-convergence}) has rate
+(\cref{lem:c-convergence}) has rate
 $O(1/\ln n)$, with exact expression
 $c(n) - 2 = \alpha_0/(1 + \beta_0 \ln n)$
 (Lean: \texttt{c\_minus\_two\_exact}).
@@ -218,7 +218,7 @@ The asymptotic ratio satisfies:
 \[
   \frac{T^*(n)}{t_n} = 1 + O\!\left(\frac{1}{\ln n}\right),
 \]
-consistent with Theorem~\ref{thm:Tstar-asymptotic}.
+consistent with \cref{thm:Tstar-asymptotic}.
 The implicit constant is approximately
 $(\alpha_0/2\beta_0 + \ln 2) \approx 6.6$,
 which explains why convergence is slow:
@@ -234,7 +234,7 @@ $|T^*(n) - t_n|/t_n < M$ for all $n \in \mathbb{N}$.
 \emph{Computational evidence.}\;
 $M_{\rm obs} = 0.01681 \approx 2/(2d\lambda-1)$ at $n \approx 1.5 \times 10^9$, verified
 across 125~zeros spanning $n = 1$ to $n = 10^{12}$.
-The peaked structure of Theorem~\ref{thm:peaked-bias} ensures this is
+The peaked structure of \cref{thm:peaked-bias} ensures this is
 a global maximum, not a local one: $R(n)$ is monotonically decreasing
 for all $n > 1.5 \times 10^9$.  We conjecture $M < 0.017$.
 
@@ -250,13 +250,13 @@ parameter---none taken from the zeros $\{t_n\}$:
 \toprule
 Component & Value & Origin \\
 \midrule
-$\mu$   & $1/2$   & $S_3$ tripartite norm (Eq.~\eqref{eq:mu-ternary}) \\
-$\sigma$ & $3/2$  & $d\cdot\mu = 3\cdot(1/2)$ (Eq.~\eqref{eq:sigma-ternary}) \\
-$\beta_0$ & $1/8$ & $1/|\Ztwenty|$ (Eq.~\eqref{eq:beta0}) \\
-$\alpha_0$ & $59/40$ & $\sigma_3-\mu_3/\lambda$ (Eq.~\eqref{eq:alpha0}) \\
-$\lambda_\alpha$ & $20$ & Period of $\Ztwenty$ (Eq.~\eqref{eq:lambda-alpha}) \\
-$\golden$-modulation & $G(p)$ & Grisales Herrera (Thm.~\ref{thm:golden-prime-classes}) \\
-Mersenne correction & $C_M(n)$ & Boundary resonances (Def.~\ref{def:mersenne-correction}) \\
+$\mu$   & $1/2$   & $S_3$ tripartite norm (\cref{eq:mu-ternary}) \\
+$\sigma$ & $3/2$  & $d\cdot\mu = 3\cdot(1/2)$ (\cref{eq:sigma-ternary}) \\
+$\beta_0$ & $1/8$ & $1/|\Ztwenty|$ (\cref{eq:beta0}) \\
+$\alpha_0$ & $59/40$ & $\sigma_3-\mu_3/\lambda$ (\cref{eq:alpha0}) \\
+$\lambda_\alpha$ & $20$ & Period of $\Ztwenty$ (\cref{eq:lambda-alpha}) \\
+$\golden$-modulation & $G(p)$ & Grisales Herrera (\cref{thm:golden-prime-classes}) \\
+Mersenne correction & $C_M(n)$ & Boundary resonances (\cref{def:mersenne-correction}) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -266,7 +266,7 @@ The error profile is not evidence for a conjecture but
 confirmation that the same structural parameters
 ($\mu = 1/2$, $\sigma = 3/2$, $\alpha_0 = 59/40$,
 $\beta_0 = 1/8$) that define the categorical framework
-of~\S\ref{sec:categorical} also generate correct spectral
+of~\cref{sec:categorical} also generate correct spectral
 positions---with a precisely characterized, bounded
 ($<1.7\%$ across twelve orders of magnitude), and
 analytically understood deviation.

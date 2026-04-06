@@ -9,8 +9,8 @@
 
 \section{Categorical Implications and Formal Proof}\label{sec:categorical}
 
-With the operator constructed (\S\ref{sec:methods}) and its predictions
-verified against known zeros (\S\ref{sec:results}), we now interpret the
+With the operator constructed (\cref{sec:methods}) and its predictions
+verified against known zeros (\cref{sec:results}), we now interpret the
 results within the categorical framework established by the Lean
 formalization.  The central insight is that $\zeta(s)$ admits two
 canonical decompositions---the Dirichlet series $\sum n^{-s}$
@@ -33,7 +33,7 @@ The PCF categorical framework is \emph{not} a single category but a
   \xrightarrow{\ U_3\ }
   \Set.
 \]
-The \emph{arity transition} (Theorem~\ref{thm:arity-transition}) is a
+The \emph{arity transition} (\cref{thm:arity-transition}) is a
 property of this diagram: the forgetful functors contract the norm from
 $\mu_2=1$ (binary, $\Set$ level) to $\mu_3=1/2$ (ternary, $\Met$ level).
 Each category in the diagram is a standard mathematical category
@@ -56,7 +56,7 @@ where the diagonal is permitted and Lawvere's theorem applies in full force.
 The Euler product $\zeta(s)=\prod_p(1-p^{-s})^{-1}$ is multiplicative---a
 product over primes.  Every prime $p>5$ satisfies
 $p\bmod 20\in\Ztwenty$, where multiplication is closed and addition is
-destroyed (Proposition~\ref{prop:add-destroyed}).  The Euler product
+destroyed (\cref{prop:add-destroyed}).  The Euler product
 therefore factors through the ternary level ($n=3$, $\mu_3=1/2$), where the
 diagonal is blocked.
 
@@ -124,7 +124,7 @@ has four fibers that partition $\Ztwenty$ into four pairs.
 \begin{proof}
 $G$ is surjective onto $|\mathbb{Z}_2\times\mathbb{Z}_2|=4$ elements,
 and $|\Ztwenty|=8$, so each fiber has exactly $8/4=2$ elements.  The
-fibers are as listed in Theorem~\ref{thm:golden-prime-classes}:
+fibers are as listed in \cref{thm:golden-prime-classes}:
 $\{1,9\}$, $\{11,19\}$, $\{13,17\}$, $\{3,7\}$.
 \end{proof}
 
@@ -162,13 +162,13 @@ The fragment of $\Ztwenty$ is ternary:
 
 \begin{proof}
 The ternary fragment is characterized by the spectral parameter $\mu_3 = 1/2$
-(Eq.~\eqref{eq:mu-ternary}).
+(\cref{eq:mu-ternary}).
 \end{proof}
 
 \begin{remark}
 The Dirichlet series factors through the binary level ($\mu_2=1$);
 the Euler product factors through the ternary level ($\mu_3=1/2$)
-by Theorem~\ref{thm:zeta-forced}.
+by \cref{thm:zeta-forced}.
 \end{remark}
 
 
@@ -223,7 +223,7 @@ At $n=3$:
 \begin{proof}
 $\mu_2 = 2 - 2/2 = 1$; $\mu_3 = 2 - 3/2 = 1/2$;
 $\sigma_3 = 3/2$.  Each follows from
-Definition~\ref{def:spectral-params} at the stated arity.
+\cref{def:spectral-params} at the stated arity.
 Verified by \lean{mu\_binary}, \lean{mu\_ternary},
 \lean{sigma\_ternary} in Lean.
 \end{proof}
@@ -242,7 +242,7 @@ $t-t^2>0$, i.e., $t^2 < t$.
 
 \begin{theorem}[No-Diagonal Theorem]\label{thm:no-diagonal}
 Let $\Omega$ be a tripartite object
-(Definition~\ref{def:object-norm}) with
+(\cref{def:object-norm}) with
 $\norm{\Omega}<1$. Then there is no evaluation
 $\mathrm{eval}\colon\Omega\otimes\Omega\to\Omega$ with
 $\mathrm{eval}\circ\Delta=\mathrm{id}_\Omega$ compatible with the norm
@@ -282,7 +282,7 @@ hence
 $\norm{\Omega}=\norm{\mathrm{eval}\circ\Delta(\Omega)}\le
 \norm{\Omega\otimes\Omega}=\norm{\Omega}^2$,
 i.e., $\norm{\Omega}\le\norm{\Omega}^2$.  But $0<\norm{\Omega}<1$
-contradicts Lemma~\ref{lem:diagonal-contraction}.
+contradicts \cref{lem:diagonal-contraction}.
 \end{proof}
 
 \begin{proposition}[Equivalence of obstructions]\label{prop:equiv-obstructions}
@@ -305,12 +305,12 @@ would compose with currying to give a predominance morphism.
 (c)$\Rightarrow$(a): If $\Omega^\Omega$ were representable with evaluation
 $\mathrm{eval}$, the diagonal $\Delta$ would give a retraction.  All three
 conditions require $\norm{\Omega}\le\norm{\Omega}^2$, which fails by
-Lemma~\ref{lem:diagonal-contraction}.
+\cref{lem:diagonal-contraction}.
 \end{proof}
 
 \begin{remark}[Exponential objects and cartesian closure]%
 \label{rmk:exponential-objects}
-The argument in Proposition~\ref{prop:equiv-obstructions} is
+The argument in \cref{prop:equiv-obstructions} is
 \emph{conditional}: it does not assume that the ambient category is
 cartesian closed, nor does it construct the exponential object
 $\Omega^\Omega$.  Rather, it proves that $\Omega^\Omega$ \emph{cannot}
@@ -331,7 +331,7 @@ G\"odel, and halting-problem paradoxes.
 \begin{proof}
 By Lawvere~\cite{lawvere69} and Yanofsky~\cite{yanofsky03}, each paradox
 requires a diagonal morphism $\Delta$ with evaluation section.
-Proposition~\ref{prop:equiv-obstructions}(c) blocks all such sections when
+\cref{prop:equiv-obstructions}(c) blocks all such sections when
 $\norm{\Omega}<1$.
 \end{proof}
 
@@ -351,7 +351,7 @@ $\norm{\Omega}=1$ does not trigger the contraction bound
 
 \begin{proposition}[$\Hilb$: the bridge]\label{prop:hilb-level}
 Both algebraic norm ($\norm{I}=1$) and element norm
-($\norm{\Omega}=\tfrac{1}{2}$, from~\eqref{eq:norm-Omega-half}) coexist.
+($\norm{\Omega}=\tfrac{1}{2}$, from~\cref{eq:norm-Omega-half}) coexist.
 The diagonal is quadratic, not linear.
 \end{proposition}
 
@@ -366,14 +366,14 @@ $\lambda\ne 0,1$: it is quadratic, not linear.
 
 \begin{proposition}[$\Met$: ternary level]\label{prop:met-level}
 $\mu=1/2<1$
-(Eq.~\eqref{eq:mu-ternary}), Lawvere is blocked.
+(\cref{eq:mu-ternary}), Lawvere is blocked.
 \end{proposition}
 
 \begin{proof}
 In $\Met$ with $\norm{X}=\mathrm{diam}(X)$ and product metric, the
 canonical norms $\norm{X_1}=1/\sqrt{3}$, $\norm{X_2}=1$,
 $\norm{X_3}=\sqrt{3}/2$ give
-$\norm{\Omega}=1/2<1$.  Lemma~\ref{lem:diagonal-contraction}:
+$\norm{\Omega}=1/2<1$.  \cref{lem:diagonal-contraction}:
 $1/2\le(1/2)^2=1/4$ fails.  Lawvere is blocked.
 \end{proof}
 
@@ -400,11 +400,11 @@ The forgetful functor $U\colon C^*\text{--}\mathbf{Alg} \to \Hilb \to \Met$ cont
 \noindent
 The contraction factor is $\mu_2/\mu_3 = 1/(1/2) = 2 = |\ker G|$.
 At $\Set$: $\mu=1$, diagonal permitted
-(Proposition~\ref{prop:set-level}).
+(\cref{prop:set-level}).
 At $\Hilb$: both norms coexist, diagonal is quadratic
-(Proposition~\ref{prop:hilb-level}).
+(\cref{prop:hilb-level}).
 At $\Met$: $\mu=1/2<1$, diagonal blocked
-(Proposition~\ref{prop:met-level}).
+(\cref{prop:met-level}).
 \end{proof}
 
 %%% --- Spectral uniqueness ---
@@ -484,7 +484,7 @@ elements of~$\Ztwenty$); the target $\mathbf{B}(\mathbb{Z}_2\times
 \mathbb{Z}_2)$ has $4$.  Surjectivity of~$G$ means the functor is
 \emph{essentially surjective on morphisms}.  The kernel $\ker G =
 \{1,9\}$ with $|\ker G|=2$ gives the contraction factor
-$\mu_2/\mu_3=2$ (Proposition~\ref{prop:contraction-factor}).
+$\mu_2/\mu_3=2$ (\cref{prop:contraction-factor}).
 In the Lean formalization, $G$ is verified as a group homomorphism via
 \texttt{decide}; the functorial interpretation follows by the standard
 equivalence between groups and one-object categories.
@@ -493,17 +493,17 @@ equivalence between groups and one-object categories.
 \begin{theorem}[Zeta factorization]\label{thm:zeta-factorization}
 The Euler product of $\zeta(s)$ maps into the categorical framework
 through four real-character $L$-functions, via
-Theorem~\ref{thm:zeta-forced} and $G$.
+\cref{thm:zeta-forced} and $G$.
 \end{theorem}
 
 \begin{proof}
-By Theorem~\ref{thm:zeta-forced}, every prime $p>5$ maps to $\Ztwenty$
+By \cref{thm:zeta-forced}, every prime $p>5$ maps to $\Ztwenty$
 under reduction modulo~$20$.  The Galois functor
 $G\colon\Ztwenty\to\mathbb{Z}_2\times\mathbb{Z}_2$
-(Theorem~\ref{thm:golden-prime-classes}) assigns to each factor
+(\cref{thm:golden-prime-classes}) assigns to each factor
 $(1-p^{-s})^{-1}$ of the Euler product a character value in
 $\mathbb{Z}_2\times\mathbb{Z}_2$.  Since the group has exponent~$2$
-(Proposition~\ref{prop:exponent-two}), all four characters are real and
+(\cref{prop:exponent-two}), all four characters are real and
 self-dual, yielding four $L$-functions $L(s,\tilde{\chi})$ with
 $\tilde{\chi} = \chi \circ G$.
 \end{proof}
@@ -558,13 +558,13 @@ Verified by \lean{Omega\_norm\_pos}, \lean{Omega\_norm\_lt\_one},
 
 \begin{corollary}[No-Diagonal at every level]\label{cor:no-diagonal-tower}
 For all $k$, no diagonal morphism exists at level~$k$ (by
-Theorem~\ref{thm:no-diagonal} applied to $\norm{\Omega}_k < 1$).
+\cref{thm:no-diagonal} applied to $\norm{\Omega}_k < 1$).
 No retraction is possible at any level.
 \end{corollary}
 
 \begin{proof}
-By Lemma~\ref{lem:tower-properties}, $0 < \norm{\Omega}_k < 1$ for
-all~$k$.  By Theorem~\ref{thm:no-diagonal}, $\norm{\Omega}_k < 1$
+By \cref{lem:tower-properties}, $0 < \norm{\Omega}_k < 1$ for
+all~$k$.  By \cref{thm:no-diagonal}, $\norm{\Omega}_k < 1$
 implies no evaluation-compatible diagonal exists at level~$k$.
 \end{proof}
 
@@ -572,13 +572,13 @@ implies no evaluation-compatible diagonal exists at level~$k$.
 \begin{proposition}[Tower base]\label{prop:tower-base}
 \begin{equation}\label{eq:tower-base}
   \norm{\Omega}_0 = \mu_3 = \tfrac{1}{2}
-  \qquad\text{(Eq.~\eqref{eq:mu-ternary})}.
+  \qquad\text{(\cref{eq:mu-ternary})}.
 \end{equation}
 \end{proposition}
 
 \begin{proof}
 $\norm{\Omega}_0 = (1/2)^{2^0} = (1/2)^1 = 1/2 = \mu_3$
-(Eq.~\eqref{eq:mu-ternary}).
+(\cref{eq:mu-ternary}).
 Verified by \lean{tower\_base\_is\_mu3} in Lean.
 \end{proof}
 
@@ -606,14 +606,14 @@ structure. The triple equality holds:
 \end{theorem}
 
 \begin{proof}
-Properties (L1)--(L3) and (L5) are Lemma~\ref{lem:tower-properties}
-and Proposition~\ref{prop:tower-base}.  (L4) is the strict decrease from
-Lemma~\ref{lem:tower-properties}.  (L6) is
-Proposition~\ref{prop:spectral-uniqueness}.  (L7) is
-Proposition~\ref{prop:add-destroyed}.  (L8) is
-Theorem~\ref{thm:zeta-forced}.  The triple equality
+Properties (L1)--(L3) and (L5) are \cref{lem:tower-properties}
+and \cref{prop:tower-base}.  (L4) is the strict decrease from
+\cref{lem:tower-properties}.  (L6) is
+\cref{prop:spectral-uniqueness}.  (L7) is
+\cref{prop:add-destroyed}.  (L8) is
+\cref{thm:zeta-forced}.  The triple equality
 $\mu_3 = \norm{\Omega}_0 = 1/2$ follows from (L5) and
-Eq.~\eqref{eq:mu-ternary}.
+\cref{eq:mu-ternary}.
 Verified by \lean{categorical\allowbreak \_limit\allowbreak \_theorem} in Lean.%
 \footnote{The Lean declaration retains the name
 \texttt{categorical\allowbreak \_limit\allowbreak \_theorem} for backward compatibility with the
@@ -626,7 +626,7 @@ formalization files.}
 \subsection{Omega Spectrum}\label{ssec:omega-spectrum}
 % ------------------------------------------------------------------
 
-The eigenvalues of $\OmH$ were defined in~\eqref{eq:Omega-hat-eigenvalues}.
+The eigenvalues of $\OmH$ were defined in~\cref{eq:Omega-hat-eigenvalues}.
 We now extract their spectral properties and reformulate the Riemann
 Hypothesis in the language of the $\OmH$ operator.  The key observation is
 that the three eigenvalues $\tfrac{1}{2},\,-\tfrac{1}{4}\pm\tfrac{\sqrt{3}}{4}i$
@@ -636,7 +636,7 @@ lie on the critical line.
 
 \begin{proposition}[Properties of $\omega$]\label{prop:omega-properties}
 The primitive cube root $\omega = e^{2\pi i/3}$
-(Eq.~\eqref{eq:omega-root}) satisfies:
+(\cref{eq:omega-root}) satisfies:
 \begin{equation}\label{eq:omega-re-im}
   \mathrm{Re}(\omega) = -\tfrac{1}{2}, \qquad
   \mathrm{Im}(\omega) = \tfrac{\sqrt{3}}{2}.
@@ -689,26 +689,26 @@ The chain proceeds in four steps.
 \emph{Step~1: Euler product enters~$\Ztwenty$.}
 The Euler product $\zeta(s)=\prod_p(1-p^{-s})^{-1}$ is a product over
 primes.  Every prime $p>5$ satisfies $p\bmod 20\in\Ztwenty$
-(Theorem~\ref{thm:zeta-forced}).  Therefore each factor of the Euler
+(\cref{thm:zeta-forced}).  Therefore each factor of the Euler
 product is indexed by an element of~$\Ztwenty$.
 
 \emph{Step~2: $\Ztwenty$ forces the ternary fragment.}
 The group $\Ztwenty$ is closed under multiplication but not under
-addition (Proposition~\ref{prop:add-destroyed}).  This purely
+addition (\cref{prop:add-destroyed}).  This purely
 multiplicative arithmetic selects the ternary fragment with
-$\mu_3=1/2$ (Proposition~\ref{prop:fragment-mu}), uniquely determined
+$\mu_3=1/2$ (\cref{prop:fragment-mu}), uniquely determined
 by the quadratic system $\sigma+\mu=2$, $\sigma\mu=3/4$
-(Proposition~\ref{prop:spectral-uniqueness}).
+(\cref{prop:spectral-uniqueness}).
 
 \emph{Step~3: The ternary fragment has operator~$\OmH$.}
 The ternary fragment is generated by the tripartite object
 $\Omega = P\cdot C\cdot F$ with $\norm{\Omega}=1/2$
-(Eq.~\eqref{eq:norm-Omega-half}), whose spectral decomposition is
+(\cref{eq:norm-Omega-half}), whose spectral decomposition is
 $\OmH = \tfrac{1}{2}\,\mathrm{diag}(1,\omega,\omega^2)$
-(Definition~\ref{def:Omega-hat}).  The No-Diagonal
-Theorem~\ref{thm:no-diagonal} blocks self-reference at
+(\cref{def:Omega-hat}).  The No-Diagonal
+\cref{thm:no-diagonal} blocks self-reference at
 $\norm{\Omega}<1$; the Arity Transition
-(Theorem~\ref{thm:arity-transition}) identifies this contraction as
+(\cref{thm:arity-transition}) identifies this contraction as
 the forgetful functor $U\colon C^*$-$\mathbf{Alg}\to\Hilb\to\Met$
 carrying the norm from~$1$ to~$1/2$.
 
@@ -716,13 +716,13 @@ carrying the norm from~$1$ to~$1/2$.
 The multiplicative structure of~$\Ztwenty$ groups Euler factors into
 exactly four classes via the Galois functor
 $G\colon\Ztwenty\to\mathbb{Z}_2\times\mathbb{Z}_2$
-(Definition~\ref{def:galois-functor}), producing four real Dirichlet
+(\cref{def:galois-functor}), producing four real Dirichlet
 characters $\tilde\chi_j$ (since $\mathbb{Z}_2\times\mathbb{Z}_2$ has
-exponent~$2$, Proposition~\ref{prop:exponent-two}).  The tripartite $S_3$
+exponent~$2$, \cref{prop:exponent-two}).  The tripartite $S_3$
 symmetry of the generating object $\Omega = P\cdot C\cdot F$ constrains
 any norm-compatible operator to have spectrum
 $\mathrm{spec}(\OmH) = \tfrac{1}{2}\{1,\omega,\omega^2\}$, whose real
-parts are $\{1/2, -1/4\}$ (Proposition~\ref{prop:Omega-hat-re}).
+parts are $\{1/2, -1/4\}$ (\cref{prop:Omega-hat-re}).
 Since each $L(s,\tilde\chi_j)$ factorizes through primes in~$\Ztwenty$
 (step~1) and the fragment's spectral parameter is $\mu_3 = 1/2$ (step~2),
 a zero~$\rho$ in the critical strip satisfies
@@ -745,7 +745,7 @@ $\mathrm{Re}(\rho) = 1/2$.
 \end{theorem}
 
 \begin{proof}[First proof (spectral)]
-By Proposition~\ref{prop:spectral-embedding},
+By \cref{prop:spectral-embedding},
 $\mathrm{Re}(\rho)\in\{1/2,\,-1/4\}$.  Since
 $\mathrm{Re}(\rho)>0$, the value $-1/4$ is excluded.  Hence
 $\mathrm{Re}(\rho)=1/2$.
@@ -755,18 +755,18 @@ $\mathrm{Re}(\rho)=1/2$.
 \begin{theorem}[Operator $\omega$ master theorem]\label{thm:omega-master}
 The operator $\OmH$ encodes five properties simultaneously:
 \begin{enumerate}[label=(\arabic*), leftmargin=2.5em]
-  \item $\OmH(k) = \tfrac{1}{2}\omega^k$ (eigenvalue formula, Eq.~\eqref{eq:Omega-hat-eigenvalues}).
-  \item $|\OmH(k)| = 1/2$ for all $k$ (constant modulus, Eq.~\eqref{eq:modulus-Omega}).
-  \item $\mathrm{Re}(\OmH(0)) = 1/2$ (critical line, Eq.~\eqref{eq:Omega-hat-0-re}).
-  \item Unique positive-Re eigenvalue (Eq.~\eqref{eq:Omega-hat-unique-positive-re}).
+  \item $\OmH(k) = \tfrac{1}{2}\omega^k$ (eigenvalue formula, \cref{eq:Omega-hat-eigenvalues}).
+  \item $|\OmH(k)| = 1/2$ for all $k$ (constant modulus, \cref{eq:modulus-Omega}).
+  \item $\mathrm{Re}(\OmH(0)) = 1/2$ (critical line, \cref{eq:Omega-hat-0-re}).
+  \item Unique positive-Re eigenvalue (\cref{eq:Omega-hat-unique-positive-re}).
   \item $S_3$ symmetry: the three eigenvalues are related by $120^\circ$ rotations.
 \end{enumerate}
 \end{theorem}
 
 \begin{proof}
 Properties (1)--(4) follow from the definitions
-(Eqs.~\eqref{eq:Omega-hat-eigenvalues}, \eqref{eq:modulus-Omega},
-\eqref{eq:Omega-hat-0-re}, \eqref{eq:Omega-hat-unique-positive-re}).
+(Eqs.~\cref{eq:Omega-hat-eigenvalues}, \cref{eq:modulus-Omega},
+\cref{eq:Omega-hat-0-re}, \cref{eq:Omega-hat-unique-positive-re}).
 Property~(5): the three eigenvalues $\tfrac{1}{2}\omega^k$ for $k=0,1,2$
 are related by multiplication by $\omega = e^{2\pi i/3}$, i.e.,
 $120^\circ$ rotations.

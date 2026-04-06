@@ -9,13 +9,13 @@
 
 \section{Discussion: An Incomplete Garden}\label{sec:discussion}
 
-All references point to definitions and theorems in~\S\S\ref{sec:intro}--\ref{ssec:squeeze}.
+All references point to definitions and theorems in~\cref{sec:intro,ssec:squeeze}.
 
 The PCF framework constructs an operator~$T^*$ from the decidable
 arithmetic of~$\Ztwenty$, achieving ${}<1.7\%$ error across twelve orders of
-magnitude (\S\ref{ch:results}), and establishes a closed
+magnitude (\cref{ch:results}), and establishes a closed
 deductive chain to $\mathrm{Re}(\rho)=1/2$ via the squeeze theorem
-(\lean{rh\_squeeze}, Theorem~\ref{thm:rh-squeeze}).  The chain is formalized in Lean~4 and verified against Mathlib, with axioms limited to the geometric constants of~\S\ref{ssec:axioms} and \lean{hecke\_1920}. Hecke's 1920
+(\lean{rh\_squeeze}, \cref{thm:rh-squeeze}).  The chain is formalized in Lean~4 and verified against Mathlib, with axioms limited to the geometric constants of~\cref{ssec:axioms} and \lean{hecke\_1920}. Hecke's 1920
 theorem~\cite{hecke20} (unconditional)---for self-dual
 characters, $L(\rho,\chi)=0\implies L(1-\rho,\chi)=0$---is
 the sole classical axiom; every other axiom is intrinsic to PCF.
@@ -24,30 +24,30 @@ The squeeze operates through two independent bounds: \lean{bounded\_by\_mu}
 (a consequence of $\Ztwenty$ arithmetic, verified by \texttt{decide}) and
 \lean{companion\_bounded} (from Hecke's functional equation).  Neither
 bound alone forces $1/2$---verified by explicit witnesses
-(Proposition~\ref{prop:bounds-independent}): a hypothetical zero with
+(\cref{prop:bounds-independent}): a hypothetical zero with
 $\mathrm{Re}(\rho)=1/3$ satisfies the upper bound but violates the
 companion bound, while $\mathrm{Re}(\rho)=2/3$ satisfies the companion
 but violates the upper bound.  The squeeze to $1/2$ requires both.
 
 This section analyzes how the proof is composed and what elements
-participate in it.  \S\ref{ssec:math-landscape} explains the
-mechanisms behind Premises~A and~B (\S\ref{ssec:squeeze}): the
+participate in it.  \cref{ssec:math-landscape} explains the
+mechanisms behind Premises~A and~B (\cref{ssec:squeeze}): the
 $\mathbb{F}_1$ genealogy of the squeeze, the kernel--image
 complementarity of the Galois functor~$G$
-(Definition~\ref{def:galois-functor}), and the categorical
+(\cref{def:galois-functor}), and the categorical
 generalization to $L$-functions.
-\S\ref{ssec:comp-landscape} quantifies in bits what the forgetful
+\cref{ssec:comp-landscape} quantifies in bits what the forgetful
 functor chain $C^*$-$\mathbf{Alg}\to\Hilb\to\Met\to\Set$
-(\S\ref{sssec:grothendieck}) destroys and preserves as it crosses the
+(\cref{sssec:grothendieck}) destroys and preserves as it crosses the
 Tarski boundary, producing the norm contraction
-$\norm{\Omega}=1/2<1$ on which the No-Diagonal Theorem~\ref{thm:no-diagonal}
+$\norm{\Omega}=1/2<1$ on which the No-Diagonal \cref{thm:no-diagonal}
 depends.
-\S\ref{ssec:hopf-pcf} places the arity transition in topological
+\cref{ssec:hopf-pcf} places the arity transition in topological
 context through the Hopf fibrations and identifies structural
 correspondences with the spin representation of~$\mathrm{SU}(2)$.
-\S\ref{ssec:phys-landscape} examines the physical precedents
-(\S\ref{ssec:physical}) and identifies structural parallels.
-\S\ref{ssec:remains-open} collects the directions that the proof
+\cref{ssec:phys-landscape} examines the physical precedents
+(\cref{ssec:physical}) and identifies structural parallels.
+\cref{ssec:remains-open} collects the directions that the proof
 opens but does not exhaust.
 
 
@@ -63,14 +63,14 @@ admits Frobenius lifts $\psi_p(\golden)=\golden^p$, making it a
 $\Lambda$-ring and constituting $\mathbb{F}_1$-descent data in
 Borger's sense~\cite{borger09}---the characteristic-zero analogue
 of Weil's Frobenius endomorphism (feature~(ii) of the Weil
-template,~\S\ref{ssec:weil}).  The Mersenne bridge
+template,~\cref{ssec:weil}).  The Mersenne bridge
 $\golden^{\lambda_{\log}}=2$
-(Theorem~\ref{thm:mersenne-bridge}) couples the
+(\cref{thm:mersenne-bridge}) couples the
 $\golden$-arithmetic of~$\Rpcf$ to the binary arithmetic
 of~$\Ztwenty$, enabling the Euler product to enter the
 categorical framework.
 
-The squeeze (Theorem~\ref{thm:rh-squeeze}) shares Weil's logical
+The squeeze (\cref{thm:rh-squeeze}) shares Weil's logical
 architecture: two independent bounds forcing equality.  Weil obtains
 his bounds from intersection positivity and the functional equation
 on~$C\times C$; the PCF squeeze obtains them from $\Ztwenty$
@@ -81,8 +81,8 @@ categorical mechanism provides both bounds directly, without
 intersection theory or cohomology.
 
 \paragraph{Categorical generalization to $L$-functions.}
-The arithmetic fragment (Definition~\ref{def:arith-fragment},
-Proposition~\ref{prop:fragment-mu}) is parametric over group~$G$.  The
+The arithmetic fragment (\cref{def:arith-fragment},
+\cref{prop:fragment-mu}) is parametric over group~$G$.  The
 four $L$-functions $L(s,\tilde{\chi})$ with $\tilde{\chi}=\chi\circ G$
 inherit real characters (exponent~$2$ of
 $\mathbb{Z}_2\times\mathbb{Z}_2$), functional equations, and
@@ -92,8 +92,8 @@ larger quotients of $(\mathbb{Z}/N\mathbb{Z})^\times$ for
 $N > 20$.
 
 \paragraph{Elliptic curves and tori.}
-The lattice $\Lambda_{\mathrm{PCF}}$ (Eq.~\eqref{eq:Lambda-pcf}) with
-$\tau_{\mathrm{PCF}}=i$ (Eq.~\eqref{eq:tau-pcf}) places the PCF
+The lattice $\Lambda_{\mathrm{PCF}}$ (\cref{eq:Lambda-pcf}) with
+$\tau_{\mathrm{PCF}}=i$ (\cref{eq:tau-pcf}) places the PCF
 construction at the Gaussian special point
 $T^2 = \mathbb{C}/(\mathbb{Z}+\mathbb{Z}i)$, where the elliptic curve
 acquires complex multiplication by~$\mathbb{Z}[i]$ and the automorphism
@@ -105,12 +105,12 @@ The functor~$G$ that maps $\Ztwenty$ to the four golden values
 $\{\pm\golden,\pm\golden^{-1}\}$ destroys and preserves
 complementary structures.  What $G$ destroys---individual prime
 identity, additive structure
-(Proposition~\ref{prop:add-destroyed}: $a+b\notin\Ztwenty$ for all
+(\cref{prop:add-destroyed}: $a+b\notin\Ztwenty$ for all
 $a,b\in\Ztwenty$), and the injective encoding capacity required for
 G\"odel numbering---is precisely the structure required for Lawvere's~\cite{lawvere69}
 diagonal construction.  What $G$ preserves---multiplicative closure
-(Eq.~\eqref{eq:mul-preserved}), classification into four fibers
-(Proposition~\ref{prop:fiber-partition}), and the spectral invariant
+(\cref{eq:mul-preserved}), classification into four fibers
+(\cref{prop:fiber-partition}), and the spectral invariant
 $\norm{\Omega}=1/2$---is precisely the structure that~$T^*$ requires.
 
 This complementarity is formalized in Lean: \lean{addition\_destroyed}
@@ -118,7 +118,7 @@ verifies $a+b\notin\Ztwenty$ and \lean{mul\_preserved\_Z20} verifies
 $a\cdot b\in\Ztwenty$ for all $a,b\in\Ztwenty$.  The two requirement
 sets---Lawvere's diagonal capacity and the operator's spectral
 input---are not merely distinct but \emph{disjoint}.
-The decidability boundary~(\S\ref{ssec:decidability}) identifies the
+The decidability boundary~(\cref{ssec:decidability}) identifies the
 categorical mechanism: $G$ implements the Tarski
 boundary~\cite{tarski52} as a forgetful functor, crossing from
 the arithmetic domain where G\"odel's
@@ -144,7 +144,7 @@ bits}\label{ssec:comp-landscape}
 % =====================================================================
 
 \paragraph{Representability degradation.}
-Premise~A (\S\ref{ssec:squeeze}) derives the upper bound
+Premise~A (\cref{ssec:squeeze}) derives the upper bound
 $\mathrm{Re}(\rho)\le\mu_3$ through five steps that cross from $\Set$
 to $\Met$ via the forgetful functor.  This subsection quantifies what
 that crossing destroys---the self-referential capacity measured by the
@@ -176,19 +176,19 @@ their arithmetic origin.
 
 \paragraph{The arity transition as Tarski boundary.}
 The preceding numbers measure in bits what the Arity Transition
-Theorem~(Theorem~\ref{thm:arity-transition}) describes structurally.
-$\Set$ ($\mu_2=1$, Eq.~\eqref{eq:mu-binary}): the world of
+Theorem~(\cref{thm:arity-transition}) describes structurally.
+$\Set$ ($\mu_2=1$, \cref{eq:mu-binary}): the world of
 $(\mathbb{Z},+,\times)$, where the diagonal is permitted, Lawvere
 applies, and $H_L = 21$~bits of self-referential capacity are
-available.  $\Met$ ($\mu_3=1/2$, Eq.~\eqref{eq:mu-ternary}):
+available.  $\Met$ ($\mu_3=1/2$, \cref{eq:mu-ternary}):
 geometry without addition, diagonal blocked, $H_L = 0$.  The
 forgetful functor chain
 $C^*$-$\mathbf{Alg}\to\Hilb\to\Met\to\Set$
-(\S\ref{ssec:decidability}) implements the Tarski boundary
+(\cref{ssec:decidability}) implements the Tarski boundary
 categorically: each step of the functor consumes bits of~$H_L$ until
 the diagonal cannot form.  The total cost of crossing from $\Set$ to
 $\Met$ is exactly one Shannon bit: $\log_2(\mu_2/\mu_3)=\log_2 2 = 1$
-(Eq.~\eqref{eq:contraction-factor})---the single binary digit
+(\cref{eq:contraction-factor})---the single binary digit
 separating ``diagonal permitted'' from ``diagonal blocked.''
 
 $\Hilb$ is the level where the conflict becomes visible.  Both norms
@@ -211,7 +211,7 @@ $\mu_3 = 1/2 = \golden^{-\lambda_{\log}} = 2^{-1}$ is simultaneously
 a golden-ratio quantity and a binary quantity, coupled by
 $\lambda_{\log}=\ln 2/\ln\golden$; the value $2=\mu_2/\mu_3$ is the
 Mersenne bridge $\golden^{\lambda_{\log}}=2$
-(Theorem~\ref{thm:mersenne-bridge}) viewed from the categorical side.
+(\cref{thm:mersenne-bridge}) viewed from the categorical side.
 Three polygons underlie the construction, each aligned with a
 categorical level: the pentagon generates~$\golden$ and, through the
 cyclotomic tower $\Phi_5\to\Phi_{20}\to\Ztwenty$, captures all
@@ -221,7 +221,7 @@ Gaussian lattice---the complex structure of~$\Hilb$ (2D); and the
 triangle, whose $S_3$ symmetry determines $d=3$ and forces
 $\mu_3=1/2<1$---the metric condition of~$\Met$, coupled through the
 torus to the Gaussian lattice via $z=\golden\cdot y$
-(Eq.~\eqref{eq:golden-coupling}), transforming hexagonal ($120^\circ$,
+(\cref{eq:golden-coupling}), transforming hexagonal ($120^\circ$,
 Eisenstein) into square ($90^\circ$, $\Hilb$) angular structure.  The
 non-circularity chain pentagon $\to$ $\golden$ $\to$ $\chi_5$ $\to$
 $G$ $\to$ $\Rpcf$ passes through all three levels, and
@@ -230,7 +230,7 @@ where the arity transition operates.
 
 \paragraph{Quantitative Lawvere obstruction.}
 The representability gaps quantify what
-Proposition~\ref{prop:equiv-obstructions} establishes qualitatively.
+\cref{prop:equiv-obstructions} establishes qualitatively.
 For a finite object~$T$ with $|T|=n$, define the \emph{Lawvere gap}
 $L(T) = n^n / r(T)$, where $r(T)$ counts the evaluation-compatible
 pairings $T\times T\to T$; the \emph{representability entropy}
@@ -239,7 +239,7 @@ available in~$T$.  Along the Galois tower:
 $H_L(\Ztwenty) = \log_2(8^7) = 21$~bits,
 $H_L(\text{4-class}) = \log_2(4^3) = 6$~bits,
 $H_L(\text{1-class}) = 0$~bits.  The monotone decrease tracks the
-destruction of encoding capacity~(\S\ref{ssec:decidability}): each
+destruction of encoding capacity~(\cref{ssec:decidability}): each
 quotient strips bits of definability until the diagonal cannot form.
 The mechanism is semantic, not syntactic---addition fails not by axiom
 removal but by algebraic closure
@@ -248,8 +248,8 @@ numbering ill-defined within the structure rather than merely absent
 from the language.
 
 \paragraph{Hypercube from arity transition.}
-$|\Ztwenty|=8=2^3$ (Eq.~\eqref{eq:Z20star-card}).  The sextuple
-convergence (Proposition~\ref{prop:sextuple-8}) demonstrates that
+$|\Ztwenty|=8=2^3$ (\cref{eq:Z20star-card}).  The sextuple
+convergence (\cref{prop:sextuple-8}) demonstrates that
 this value emerges independently from six
 structures: $|H_3|=2^3$ (hypercube vertices), $2^3$ octants of
 $\mathbb{R}^3$ (sign choices $(\pm,\pm,\pm)$), $\varphi(20)=8$
@@ -261,17 +261,17 @@ $|\mathbb{Z}_2\times\mathbb{Z}_4|=8$ (group-theoretic).
 At its core, the proof reduces to one observation.  The
 Euler product operates multiplicatively in~$\Ztwenty$, whose purely
 multiplicative arithmetic (addition destroyed,
-Proposition~\ref{prop:add-destroyed}) forces the ternary categorical
+\cref{prop:add-destroyed}) forces the ternary categorical
 fragment.  The tripartite structure of that fragment---the triangle
 $P$-$C$-$F$ with its $S_3$ symmetry---places three eigenvalues
 of~$\OmH$ at equal angular separation on the circle
 $|z|=\norm{\Omega}=1/2$
-(Eq.~\eqref{eq:Omega-hat-eigenvalues}).  Three equispaced points on a
+(\cref{eq:Omega-hat-eigenvalues}).  Three equispaced points on a
 circle of radius~$r$ have real parts $\{r,\,-r/2\}$---this is
 $\cos(0)=1$, $\cos(120^\circ)=\cos(240^\circ)=-1/2$, scaled by~$r$.  For
 $r=1/2$: $\mathrm{Re}\in\{1/2,\,-1/4\}$.  The critical strip
 requires $\mathrm{Re}(\rho)>0$, eliminating $-1/4$, so
-$\mathrm{Re}(\rho)=1/2$.  Everything else in~\S\ref{sec:categorical}---the
+$\mathrm{Re}(\rho)=1/2$.  Everything else in~\cref{sec:categorical}---the
 forgetful functor contraction, the Hecke
 functional equation, the squeeze---is the apparatus that makes this
 trigonometric fact into a deductive chain.
@@ -281,11 +281,11 @@ trigonometric fact into a deductive chain.
 \subsection{Hopf fibrations, \texorpdfstring{$S_3$}{S3} symmetry, and the arity transition}\label{ssec:hopf-pcf}
 % =====================================================================
 
-The arity transition of~\S\ref{ssec:comp-landscape} contracts the
+The arity transition of~\cref{ssec:comp-landscape} contracts the
 norm from $\norm{\cdot}=1$ ($\Set$) to $\norm{\Omega}=1/2$ ($\Met$),
 with the triangle's $S_3$ symmetry determining $d=3$ and forcing
 $\mu_3=1/2$ (cf.\ the three-polygon structure at the end
-of~\S\ref{ssec:comp-landscape}).  This subsection places that
+of~\cref{ssec:comp-landscape}).  This subsection places that
 contraction in topological context through the Hopf fibrations and
 identifies a structural correspondence between the $S_3$ symmetry of
 the PCF framework and the spin representation of~$\mathrm{SU}(2)$.
@@ -305,7 +305,7 @@ $n=1,2,4,8$ of the normed division algebras
 $\mathbb{R},\mathbb{C},\mathbb{H},\mathbb{O}$.  Adams's
 theorem~\cite{adams60} proves that no further Hopf fibrations exist:
 in particular, there is no fibration $S^5\to S^3$ with fiber~$S^1$.
-The Frobenius--Hurwitz theorem (\S\ref{ssec:double-obstruction})
+The Frobenius--Hurwitz theorem (\cref{ssec:double-obstruction})
 prohibits division algebras in dimension~$3$.  These are two faces of
 the same constraint: algebraically, no $3$-dimensional normed division
 algebra exists; topologically, no Hopf fibration exists in
@@ -313,9 +313,9 @@ dimension~$3$.
 
 The PCF framework defines the extended space
 $E^3 = \{(x,y,\golden y): x,y\in\mathbb{R}\}$
-(Eq.~\eqref{eq:E3}), which is not a division algebra but a metric space
+(\cref{eq:E3}), which is not a division algebra but a metric space
 with golden coupling $z=\golden\cdot y$
-(Eq.~\eqref{eq:golden-coupling}).  This geometric---rather than
+(\cref{eq:golden-coupling}).  This geometric---rather than
 algebraic---extension is what allows the framework to operate in
 dimension~$3$ without contradicting Frobenius--Hurwitz or Adams.
 
@@ -336,11 +336,11 @@ what allows the diagonal map to complete its cycle---the evaluation
 $\mathrm{eval}\circ\Delta$ returns to the domain.  The contractibility
 of~$\mathbb{R}$ prevents this closure.
 
-In the language of Theorem~\ref{thm:no-diagonal}, the Hopf fiber has
+In the language of \cref{thm:no-diagonal}, the Hopf fiber has
 modulus~$1$: the contraction condition $\norm{\Omega}\le\norm{\Omega}^2$
 becomes $1\le 1$, which holds, and the diagonal is permitted.  The PCF
 framework has $\norm{\Omega}=\mu_3=1/2$
-(Eq.~\eqref{eq:norm-Omega-half}): the condition becomes $1/2\le 1/4$,
+(\cref{eq:norm-Omega-half}): the condition becomes $1/2\le 1/4$,
 which fails, and the diagonal is blocked.
 
 \begin{center}
@@ -362,9 +362,9 @@ Arithmetic content & none & $\Phi_{20}$, $\Ztwenty$,
 \end{tabular}
 \end{center}
 The transition from modulus~$1$ to modulus~$1/2$ is the arity
-transition (Theorem~\ref{thm:arity-transition}) at a cost of one
+transition (\cref{thm:arity-transition}) at a cost of one
 Shannon bit: $\log_2(\mu_2/\mu_3)=1$
-(Eq.~\eqref{eq:contraction-factor}).  Topologically, this is the
+(\cref{eq:contraction-factor}).  Topologically, this is the
 crossing from the regime where Hopf fibrations exist (compact fiber,
 division algebra available, diagonal permitted) to the regime where
 Frobenius--Hurwitz prohibits them (contractible fiber, no division
@@ -376,7 +376,7 @@ The permutation group $S_3$ embeds in $\mathrm{SU}(2)$ as a finite
 subgroup (the binary dihedral group of order~$6$ projects onto~$S_3$
 through $\mathrm{SU}(2)\twoheadrightarrow\mathrm{SO}(3)$).  In the
 PCF framework, $S_3$ acts as the symmetry group of the tripartite
-structure $P$-$C$-$F$ (\S\ref{ssec:torus}).  In
+structure $P$-$C$-$F$ (\cref{ssec:torus}).  In
 $\mathrm{SU}(2)$, the fundamental representation has spin~$1/2$.
 
 The coincidence of these two appearances of $1/2$ is noted as
@@ -388,7 +388,7 @@ $S_3\subset\mathrm{SU}(2)$ as a potential origin for the value
 $\mu_3=1/2$ that warrants further investigation.
 
 \paragraph{Open directions from the Hopf perspective.}
-The structural correspondences of~\S\ref{ssec:hopf-pcf} open several
+The structural correspondences of~\cref{ssec:hopf-pcf} open several
 lines of formal development.
 %
 If the contraction from modulus~$1$ to modulus~$1/2$ were formalized
@@ -396,7 +396,7 @@ as corresponding to the topological crossing from compact fiber
 (Hopf, diagonal permitted) to contractible fiber (PCF, diagonal
 blocked), this would provide a second, independent reason why the
 diagonal is blocked---topological, not only arithmetic---and the
-No-Diagonal Theorem~\ref{thm:no-diagonal} would acquire an
+No-Diagonal \cref{thm:no-diagonal} would acquire an
 interpretation rooted in the classical theory of fibrations.
 %
 If the embedding $S_3\subset\mathrm{SU}(2)$ were shown to connect the
@@ -405,7 +405,7 @@ self-duality structure that produces the companion bound (Premise~B,
 via exponent~$2$ of~$\mathbb{Z}_2\times\mathbb{Z}_2$ and Hecke's
 functional equation), this would provide a geometric origin---within
 $S^3\cong\mathrm{SU}(2)$---for why two provably independent bounds
-(Proposition~\ref{prop:bounds-independent}) converge to the same value.
+(\cref{prop:bounds-independent}) converge to the same value.
 %
 If the Galois functor
 $G\colon\Ztwenty\to\mathbb{Z}_2\times\mathbb{Z}_2$ were identified
@@ -413,11 +413,11 @@ as the monodromy of a flat connection on a line bundle
 over~$\mathbb{T}^2_{\mathrm{PCF}}$, the first Chern class
 $c_1\in H^2(\mathbb{T}^2,\mathbb{Z})$ would connect the PCF
 construction to Weil's arithmetic surface---feature~(i) of the
-template (\S\ref{ssec:weil})---opening access to zero spacing and
+template (\cref{ssec:weil})---opening access to zero spacing and
 density estimates that the squeeze does not provide.
 %
 More broadly, the two derivations of the value~$1/2$ identified
-in~\S\ref{ssec:hopf-pcf}---categorical (arity uniqueness) and
+in~\cref{ssec:hopf-pcf}---categorical (arity uniqueness) and
 representation-theoretic (spin of $\mathrm{SU}(2)$)---and the
 representability degradation $H_L\colon 21\to 6\to 0$~bits along
 the Galois tower raise a question that extends beyond the Riemann
@@ -432,16 +432,16 @@ directions}\label{ssec:phys-landscape}
 % =====================================================================
 
 The physical realizations of dimensional transcendence developed
-in~\S\ref{ssec:physical}---Virasoro tower, holographic projection, and
+in~\cref{ssec:physical}---Virasoro tower, holographic projection, and
 the CDS identification~\cite{connes98}
 $\mathbb{F}_1\cong D^1_{\text{compactified}}$---acquire quantitative
 content through the categorical structure
-of~\S\ref{ssec:comp-landscape}: the arity transition from $\Set$
+of~\cref{ssec:comp-landscape}: the arity transition from $\Set$
 to~$\Met$, the representability entropy~$H_L$, and the Mersenne bridge
 $\golden^{\lambda_{\log}}=2$ coupling the golden and binary towers.
 
 \paragraph{Bidirectional tower and $T$-duality.}
-The $\norm{\Omega}_k$ tower (Eq.~\eqref{eq:Omega-norm}) generates
+The $\norm{\Omega}_k$ tower (\cref{eq:Omega-norm}) generates
 dimensional structure by categorical contraction, not Hamiltonian
 dynamics.  The bidirectionality distinguishes it from unidirectional
 towers in the literature: as the tower parameter~$\sigma$ increases,
@@ -489,23 +489,23 @@ another (winding modes becoming lighter), preserving $R\cdot R'=\alpha'$.
 In the PCF tower, Galois quotients contract~$H_L$ while the geometric
 lattice expands, preserving $\varepsilon\cdot\tau=\pi$; the Mersenne
 bridge $\golden^{\lambda_{\log}}=2$
-(Theorem~\ref{thm:mersenne-bridge}) is the analogue of~$\alpha'$,
+(\cref{thm:mersenne-bridge}) is the analogue of~$\alpha'$,
 coupling the golden tower to the binary tower across which the arity
 transition operates.  The Connes--Douglas--Schwarz identification~\cite{connes98}
 $\mathbb{F}_1\cong D^1_{\text{compactified}}$
-(\S\ref{ssec:physical}) confirms the endpoint: both limiting
+(\cref{ssec:physical}) confirms the endpoint: both limiting
 processes yield objects with multiplicative periodicity and no additive
 extension---the $H_L=0$ condition of~$\Met$.
 
 \paragraph{``Certainty Principle.''}
 The certainty principle $\varepsilon_0\cdot M_{\mathrm{PCF}}=\pi$
-(Proposition~\ref{prop:certainty}) is the invariant of the bidirectional
+(\cref{prop:certainty}) is the invariant of the bidirectional
 coupling.  As $\sigma$ increases,
 $\varepsilon(\sigma)=\varepsilon_0\golden^\sigma$ grows while
 $M_{\mathrm{PCF}}/\golden^\sigma$ contracts, their product remaining
 $\pi$.  The endpoints of this coupling---$\Set$ ($\mu_2=1$, $H_L=21$)
 and $\Met$ ($\mu_3=1/2$, $H_L=0$), with $\Hilb$ as
-bridge---are developed in~\S\ref{ssec:comp-landscape}.
+bridge---are developed in~\cref{ssec:comp-landscape}.
 
 \paragraph{Holographic structure.}
 The AdS/CFT correspondence~\cite{maldacena98,hubeny15} provides a
@@ -515,7 +515,7 @@ The $3\to 2$ dimensional reduction in AdS$_3$/CFT$_2$ parallels the
 triangle-to-square passage of the arity transition: $S_3$ symmetry
 ($\Met$, 3D) projects onto $\mathbb{Z}_4$ rotational structure
 ($\Hilb$, 2D), mediated by the torus coupling $z=\golden\cdot y$
-(Eq.~\eqref{eq:golden-coupling}).  The Bekenstein--Hawking
+(\cref{eq:golden-coupling}).  The Bekenstein--Hawking
 factor~\cite{bekenstein73,hawking75} $1/4 = (1/2)^2 = \mu_3^2$ in Planck units is
 the square of the spectral parameter that the arity transition derives
 from $S_3$ symmetry; the categorical machinery provides~$\mu_3$ without
@@ -529,13 +529,13 @@ component of the bulk~\cite{urbantke03,mosseri01}: the isometry group
 $\mathrm{SU}(2)\cong S^3$ acts on the total space, and the projection
 to the Bloch sphere $S^2\cong\mathbb{CP}^1$ is the Hopf map itself.
 The PCF projection $\pi\colon E^3\to\mathbb{C}$
-(\S\ref{ssec:torus}) performs an analogous $3\to 2$ reduction, but
+(\cref{ssec:torus}) performs an analogous $3\to 2$ reduction, but
 with contractible fiber~$\mathbb{R}$ rather than compact~$S^1$, and
 with $S_3$ (a finite subgroup of $\mathrm{SU}(2)$) as symmetry group
 rather than the full continuous group.  The factor~$1/4$ appears in the
 Bekenstein--Hawking entropy; the same value appears as
 $\mu_3^2=(1/2)^2$ in the norm contraction that blocks the diagonal
-(Theorem~\ref{thm:no-diagonal}).  Whether these
+(\cref{thm:no-diagonal}).  Whether these
 coincidences---group, dimensional reduction, numerical
 factor---share a common origin, the present work does not establish.
 
@@ -547,7 +547,7 @@ $S^1\to S^5\to\mathbb{CP}^2$, whose base has Euler
 characteristic~$\chi(\mathbb{CP}^2)=3$ and CW decomposition with
 exactly three cells (dimensions~$0,2,4$).  The pentadimensional
 synthesis $\mathcal{M}^5_{\mathrm{PCF}}=\mathcal{M}^4\times S^1_\sigma$
-(Fig.~\ref{fig:pentadimensional}) occupies the structural
+(\cref{fig:pentadimensional}) occupies the structural
 position of~$S^5$: the three complex dimensions of~$\mathbb{C}^3$
 correspond to the three categorical components $P$-$C$-$F$; the
 compact fiber~$S^1$ of the Hopf map corresponds to the spectral
@@ -568,7 +568,7 @@ residue classes).  Whether this structural parallel---$S^5$ as
 continuous internal space, $\mathcal{M}^5_{\mathrm{PCF}}$ as its
 arithmetic discretization---admits a formal functor between the two
 settings is an open question for the program
-of~\S\ref{ssec:remains-open}.
+of~\cref{ssec:remains-open}.
 
 \paragraph{GUE reinterpretation.}
 The standard interpretation of GUE statistics in the Riemann
@@ -579,7 +579,7 @@ $\tilde{H}_{\mathrm{PCF}}$ does not fulfill this role: it is
 deterministic, not stochastic; structurally rigid, not chaotic; and
 approximate ($T^*(n)\neq t_n$), not exact.  It captures the smooth
 spectral density of the Riemann zeros
-(Proposition~\ref{prop:density}) but not the fine fluctuations
+(\cref{prop:density}) but not the fine fluctuations
 that carry the GUE pair correlations.  This distinction is intrinsic
 to the construction: a deterministic operator built without reference
 to~$\zeta(s)$ determines the smooth envelope---the global
@@ -591,7 +591,7 @@ generates the correct level repulsion.
 What the PCF results do suggest is a geometric origin for the
 constraint that makes GUE statistics possible.  The tripartite
 factorization $\Omega\cong X_1\otimes X_2\otimes X_3$ with
-incompatible norms (Theorem~\ref{thm:no-diagonal}) places the
+incompatible norms (\cref{thm:no-diagonal}) places the
 spectral parameter in the $\Met$ regime
 ($H_L=0$, $\norm{\Omega}<1$), where eigenvalue correlations
 emerge from geometric constraint---the No-Diagonal condition---rather
@@ -632,7 +632,7 @@ natural cohomology theory for the $\Lambda$-ring $\Rpcf$.
 \emph{Formal generalization to $L$-functions.}  Extending the Galois
 functor~$G$ beyond $\mathbb{Z}_2\times\mathbb{Z}_2$ to treat
 $L$-functions of arbitrary conductor.  The parametric structure of the
-arithmetic fragment (Definition~\ref{def:arith-fragment}) makes this
+arithmetic fragment (\cref{def:arith-fragment}) makes this
 extension natural in principle; the question is what replaces
 $\Ztwenty$ for conductor $N>20$.
 
@@ -649,7 +649,7 @@ measuring distance from the diagonal---with $H_L(T)=0$ iff Lawvere's
 theorem applies.  Connecting~$H_L$ to the logical complexity of the
 restricted G\"odel encoding formula would establish a coding theorem for
 definability, linking the representability degradation
-of~\S\ref{ssec:comp-landscape} to descriptive complexity.
+of~\cref{ssec:comp-landscape} to descriptive complexity.
 
 \emph{Operator precision and the Hilbert--P\'olya gap.}
 The operator~$T^*$ approximates $\mathrm{Im}(\rho)$ with
@@ -659,7 +659,7 @@ require this error to vanish identically.  Whether the PCF
 construction can be refined to achieve this is open.
 
 Two observations constrain future approaches.  First, the
-peaked structure (Theorem~\ref{thm:peaked-bias}) suggests
+peaked structure (\cref{thm:peaked-bias}) suggests
 that the global maximum of~$R(n) = T^*(n)/t_n$ occurs near
 $n \approx 1.5 \times 10^9$, with monotonic decrease
 thereafter (verified to $n = 10^{12}$).  Second, the
@@ -674,4 +674,4 @@ Directions arising from the Hopf perspective---fiber compactness as
 a second origin of the No-Diagonal obstruction, the embedding
 $S_3\subset\mathrm{SU}(2)$ connecting both squeeze bounds, and the
 Galois functor as monodromy with Chern class linking to Weil's
-arithmetic surface---are developed in~\S\ref{ssec:hopf-pcf}.
+arithmetic surface---are developed in~\cref{ssec:hopf-pcf}.

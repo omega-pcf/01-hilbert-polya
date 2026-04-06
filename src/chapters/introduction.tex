@@ -138,9 +138,9 @@ and GUE}\label{ssec:double-obstruction}
 
 The research shows that the preceding requirements have encountered
 three related but independent structural obstructions: a circularity
-prohibition~(\S\ref{sssec:lawvere}), which excludes any operator
+prohibition~(\cref{sssec:lawvere}), which excludes any operator
 defined from its own spectral data; a dimensional
-prohibition~(\S\ref{sssec:frobenius}), which excludes the
+prohibition~(\cref{sssec:frobenius}), which excludes the
 three-dimensional algebraic structure that the zeros' symmetry demands;
 and a symmetry constraint, imposed by the GUE statistics of the zeros,
 that binds the first two into an inescapable dilemma.
@@ -218,7 +218,7 @@ $\mathbb{R} \to \mathbb{C} \to \mathbb{H} \to \mathbb{O}$
 doubles the dimension at each step while forfeiting one algebraic
 property: $\mathbb{H}$ loses commutativity ($ij = k$ but $ji = -k$),
 $\mathbb{O}$ additionally loses
-associativity~\cite[\S2.2]{baez02}.  Both properties---commutativity
+associativity~\cite[\S~2.2]{baez02}.  Both properties---commutativity
 and associativity---are required for standard spectral theory to
 guarantee that Hermitian operators have real eigenvalues through
 diagonalization.
@@ -423,16 +423,16 @@ compactification, and the P\'olya--Hilbert conjecture---converge with
 respect to the Riemann Hypothesis on a single obstruction: the
 Hermitian operator that would provide the dynamical completion needed
 to generate spectral evolution without circularity.
-The circumvention strategies of~\S\ref{ssec:circumvention} (Russell,
+The circumvention strategies of~\cref{ssec:circumvention} (Russell,
 Tarski) define the escape route; the convergence
-of~\S\ref{ssec:convergence} (Manin, Connes--Douglas--Schwarz,
+of~\cref{ssec:convergence} (Manin, Connes--Douglas--Schwarz,
 Huerta--Schreiber) identifies the arena.  What is missing is the
 \emph{constructive mechanism} that simultaneously (i)~provides the
 dynamical flow, (ii)~respects the Lawvere--Frobenius double
 obstruction, and (iii)~connects to the arithmetic of~$\zeta(s)$ without
 referencing its spectrum.
 
-We propose---and demonstrate in~\S\ref{sec:categorical}
+We propose---and demonstrate in~\cref{sec:categorical}
 below---that this mechanism is
 \emph{tripartite factorization with incompatible norms}.  In any
 monoidal category with a multiplicative object norm, objects
@@ -445,7 +445,7 @@ obstruction is simultaneously effective ($\mu < 1$) and non-degenerate
 ($\mu > 0$), with spectral parameters $\sigma = 3/2$ and $\mu = 1/2$
 uniquely determined by the quadratic system
 $\sigma + \mu = 2$, $\sigma\mu = 3/4$.
-These results are formally verified in Lean~4 with zero \texttt{sorry} statements; axioms are limited to the geometric constants of the PCF construction~(\S\ref{ssec:axioms}) and the functional equation of Hecke~(\S\ref{ssec:squeeze}).
+These results are formally verified in Lean~4 with zero \texttt{sorry} statements; axioms are limited to the geometric constants of the PCF construction~(\cref{ssec:axioms}) and the functional equation of Hecke~(\cref{ssec:squeeze}).
 
 The tripartite mechanism subsumes the classical circumvention
 strategies rather than opposing them.  The Galois tower
@@ -518,27 +518,27 @@ $\mathrm{Re}(\rho)=1/2$.
 \end{Theorem}
 
 \begin{proof}
-Two proofs are given in~\S\ref{ssec:omega-spectrum}
-and~\S\ref{ssec:squeeze}.
+Two proofs are given in~\cref{ssec:omega-spectrum}
+and~\cref{ssec:squeeze}.
 
-\emph{First proof} (spectral, \S\ref{ssec:omega-spectrum}).
+\emph{First proof} (spectral, \cref{ssec:omega-spectrum}).
 The Euler product places every prime in the ternary fragment
-(Proposition~\ref{prop:spectral-embedding}); the spectral embedding
+(\cref{prop:spectral-embedding}); the spectral embedding
 identifies $\mathrm{Re}(\rho)$ with an eigenvalue
 of~$\OmH$; since $\mathrm{Re}(\rho)>0$ and the unique eigenvalue
 with positive real part is~$1/2$
-(Proposition~\ref{prop:Omega-hat-re}),
+(\cref{prop:Omega-hat-re}),
 $\mathrm{Re}(\rho)=1/2$.  This proof does not require Hecke's
 theorem.
 
-\emph{Second proof} (squeeze, \S\ref{ssec:squeeze}).
+\emph{Second proof} (squeeze, \cref{ssec:squeeze}).
 Two independent bounds---$\mathrm{Re}(\rho)\le\mu_3$
-(Proposition~\ref{prop:premise-A}, from the spectral embedding)
+(\cref{prop:premise-A}, from the spectral embedding)
 and $1-\mathrm{Re}(\rho)\le\mu_3$
-(Proposition~\ref{prop:premise-B}, from Hecke's 1920 theorem)---together force
+(\cref{prop:premise-B}, from Hecke's 1920 theorem)---together force
 $\mathrm{Re}(\rho)=1/2$ by~\texttt{linarith}.  Neither bound alone
-suffices (Proposition~\ref{prop:bounds-independent}).
-This is the form adopted for formalization (see Appendix~\ref{app:lean}).
+suffices (\cref{prop:bounds-independent}).
+This is the form adopted for formalization (see \cref{app:lean}).
 \end{proof}
 
 The deductive chain from decidable arithmetic to
@@ -549,22 +549,22 @@ $\mathrm{Re}(\rho)=1/2$ follows eleven steps (squeeze proof):
 \toprule
 \# & Step & Method & Lean tactic & Source \\
 \midrule
-1 & Primes $\to$ $\Ztwenty$ & Euler product & \texttt{fin\_cases} & \S \ref{ssec:zeta-cat} \\
-2 & Mul.\ closed in $\Ztwenty$ & Group axiom & \texttt{decide} (64 pairs) & \S \ref{ssec:zeta-cat} \\
-3 & Addition destroyed & Parity & \texttt{decide} (64 pairs) & \S \ref{ssec:zeta-cat} \\
-4 & Exponent 2 of $G$ & Galois structure & \texttt{decide} (4 elements) & \S \ref{ssec:zeta-cat} \\
-5 & Fragment modulus $=1/2$ & Arity & \texttt{simp} & \S \ref{ssec:CM-cat} \\
-6 & Spectral uniqueness & Quadratic system & \texttt{nlinarith} & \S \ref{ssec:CM-cat} \\
-7 & No-Diagonal blocks & Norm obstruction & \texttt{linarith} & \S \ref{ssec:CM-cat} \\
-8 & Spectral embedding & Steps 1--7 $\to$ $\OmH$ & Prop.~\ref{prop:spectral-embedding} & \S \ref{ssec:omega-spectrum} \\
-9 & Upper bound: $\rho_{\mathrm{re}}\le 1/2$ & Step 8 & conjunction & \S \ref{ssec:squeeze} \\
-10 & Companion bound: $1-\rho_{\mathrm{re}}\le 1/2$ & Steps 4+8+Hecke & Hecke 1920 & \S \ref{ssec:squeeze} \\
-11 & Squeeze: $\rho_{\mathrm{re}}=1/2$ & Steps 9+10 & \texttt{linarith} & \S \ref{ssec:squeeze} \\
+1 & Primes $\to$ $\Ztwenty$ & Euler product & \texttt{fin\_cases} & \cref{ssec:zeta-cat} \\
+2 & Mul.\ closed in $\Ztwenty$ & Group axiom & \texttt{decide} (64 pairs) & \cref{ssec:zeta-cat} \\
+3 & Addition destroyed & Parity & \texttt{decide} (64 pairs) & \cref{ssec:zeta-cat} \\
+4 & Exponent 2 of $G$ & Galois structure & \texttt{decide} (4 elements) & \cref{ssec:zeta-cat} \\
+5 & Fragment modulus $=1/2$ & Arity & \texttt{simp} & \cref{ssec:CM-cat} \\
+6 & Spectral uniqueness & Quadratic system & \texttt{nlinarith} & \cref{ssec:CM-cat} \\
+7 & No-Diagonal blocks & Norm obstruction & \texttt{linarith} & \cref{ssec:CM-cat} \\
+8 & Spectral embedding & Steps 1--7 $\to$ $\OmH$ & Prop.~\ref{prop:spectral-embedding} & \cref{ssec:omega-spectrum} \\
+9 & Upper bound: $\rho_{\mathrm{re}}\le 1/2$ & Step 8 & conjunction & \cref{ssec:squeeze} \\
+10 & Companion bound: $1-\rho_{\mathrm{re}}\le 1/2$ & Steps 4+8+Hecke & Hecke 1920 & \cref{ssec:squeeze} \\
+11 & Squeeze: $\rho_{\mathrm{re}}=1/2$ & Steps 9+10 & \texttt{linarith} & \cref{ssec:squeeze} \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-The spectral proof (Theorem~\ref{thm:rh-spectral}) reaches
+The spectral proof (\cref{thm:rh-spectral}) reaches
 $\mathrm{Re}(\rho)=1/2$ at step~8 alone, without Hecke: since
 $\mathrm{Re}(\rho)\in\{1/2,-1/4\}$ and $\mathrm{Re}(\rho)>0$, the
 result follows.  The squeeze (steps~9--11) provides the Lean-formalized
@@ -594,11 +594,11 @@ open.
 \emph{What has been proven.}  Within the PCF categorical framework---where
 the Euler product maps primes into $\Ztwenty$, the Galois functor~$G$
 classifies residues, and the spectral parameters $(\sigma,\mu)$ are
-determined by arity uniqueness---Theorem~\ref{thm:main-intro}
+determined by arity uniqueness---\cref{thm:main-intro}
 establishes that every non-trivial zero of~$\zeta(s)$ satisfies
 $\mathrm{Re}(\rho)=1/2$.  Two proofs are given: a spectral proof
-(Theorem~\ref{thm:rh-spectral}, no classical input) and a squeeze
-proof (Theorem~\ref{thm:rh-squeeze}, Hecke 1920). The latter is machine-verified (see Appendix~\ref{app:lean}).
+(\cref{thm:rh-spectral}, no classical input) and a squeeze
+proof (\cref{thm:rh-squeeze}, Hecke 1920). The latter is machine-verified (see \cref{app:lean}).
 
 \emph{What remains open.}  The proof establishes
 $\mathrm{Re}(\rho)=1/2$ within the PCF categorical framework.
@@ -611,9 +611,9 @@ $\mathrm{Spec}(\Rpcf)$ can extract information that the squeeze does
 not provide, such as zero spacing and density estimates.
 
 The computational evidence (${<}1.7\%$ error across 125 zeros to
-$n = 10^{12}$, Conjecture~\ref{conj:bounded-error}) is consistent
+$n = 10^{12}$, \cref{conj:bounded-error}) is consistent
 with the framework's scope.  The directions for
-cohomological completion are discussed in~\S\ref{sec:discussion}.
+cohomological completion are discussed in~\cref{sec:discussion}.
 
 % -----------------------------------------------------------------
 \subsection{Structure of this paper}\label{ssec:overview}
@@ -626,7 +626,7 @@ reference to~$\zeta(s)$ or its zeros, and establishes
 $\mathrm{Re}(\rho) = 1/2$ within the PCF categorical setting via a
 formally verified deductive chain.
 
-In \textbf{Background} (\S\ref{sec:background}) we develop a detailed
+In \textbf{Background} (\cref{sec:background}) we develop a detailed
 categorical analysis of the convergent principles recovered from
 Manin's $\mathbb{F}_1$-geometry, the string-theoretic torus
 construction, and the circumvention mechanisms described above.  These
@@ -642,7 +642,7 @@ three categorical levels: $\Hilb$ (Hilbert spaces, operator spectra),
 $\Met$ (metric spaces, $\mathbb{C}$ with its Euclidean structure), and
 $\Set$ (combinatorial, finite arithmetic).
 
-In \textbf{Methods} (\S\ref{sec:methods}) we construct the Precedent-Current-Forthcoming Framework (PCF).  The generating mechanism is the golden
+In \textbf{Methods} (\cref{sec:methods}) we construct the Precedent-Current-Forthcoming Framework (PCF).  The generating mechanism is the golden
 ratio~$\golden$ through its defining relation
 $\golden^2 = \golden + 1$, which extends the role of $i^2 = -1$ from
 algebraic ($\mathbb{R} \to \mathbb{C}$) to geometric
@@ -665,13 +665,13 @@ boundaries, and cyclotomic modulation---yielding a Hermitian operator
 $\tilde{H}_{\mathrm{PCF}} = \sum_n T^*(n)\,|\psi_n\rangle\langle\psi_n|$
 with $T^*(n) \in \mathbb{R}$ guaranteeing Hermiticity and real spectrum.
 
-In \textbf{Results} (\S\ref{sec:results}) we provide computational
+In \textbf{Results} (\cref{sec:results}) we provide computational
 verification across 125~zeros ($n = 1$ to $10^{12}$) at 25--30~digit
 precision, characterize the non-monotonic bias lifecycle of $T^*(n)/t_n$
-(Theorem~\ref{thm:peaked-bias}), and establish a global error bound
-${<}1.7\%$ (Conjecture~\ref{conj:bounded-error}).
+(\cref{thm:peaked-bias}), and establish a global error bound
+${<}1.7\%$ (\cref{conj:bounded-error}).
 
-In \textbf{Categorical Implications} (\S\ref{sec:categorical}) we
+In \textbf{Categorical Implications} (\cref{sec:categorical}) we
 demonstrate the categorical setting of~$\zeta$ within the PCF
 framework and present the formal proof of
 $\mathrm{Re}(\rho) = 1/2$.  The Euler product forces each prime
@@ -703,16 +703,16 @@ Hecke's 1920 theorem (unconditional): for self-dual characters,
 $L(\rho,\chi) = 0 \implies L(1-\rho,\chi) = 0$.  The complete
 deductive chain---ten steps from decidable arithmetic
 to~$\mathrm{Re}(\rho) = 1/2$, with independence of bounds
-verified---is formalized in Lean~4 with Mathlib (\S\ref{app:lean}).
+verified---is formalized in Lean~4 with Mathlib (\cref{app:lean}).
 
-\textbf{Discussion} (\S\ref{sec:discussion}) examines the
+\textbf{Discussion} (\cref{sec:discussion}) examines the
 mathematical, computational, and physical implications of the
 results, including the $\mathbb{F}_1$ genealogy of the proof,
 categorical generalization to $L$-functions, representability
 degradation along the Galois tower, topological context through Hopf
 fibrations and $S_3\subset\mathrm{SU}(2)$
-(\S\ref{ssec:hopf-pcf}), and connections to holographic and
+(\cref{ssec:hopf-pcf}), and connections to holographic and
 string-theoretic structures.  Open problems are identified.
 
-\textbf{Conclusions} (\S\ref{sec:conclusions}) summarizes contributions
+\textbf{Conclusions} (\cref{sec:conclusions}) summarizes contributions
 and identifies directions for future work.

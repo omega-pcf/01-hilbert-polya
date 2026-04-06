@@ -1,6 +1,6 @@
 \section{Methods}\label{sec:methods}
 
-Sections~\ref{sec:intro} and~\ref{sec:background} established that three
+\cref{sec:intro} and~\ref{sec:background} established that three
 independent programs---Manin's $\mathbb{F}_1$-geometry, string theory's
 dimensional compactification, and the P\'olya--Hilbert conjecture---converge
 on a common geometric need: a dimension that exists topologically but not
@@ -26,14 +26,14 @@ construction proceeds through a dimensional emergence chain:
     \;\xrightarrow{\times\sigma}\;
   \mathcal{M}^5_{\mathrm{PCF}}.
 \]
-Every structural claim is formally verified in Lean~4 (\S\ref{app:lean}).
+Every structural claim is formally verified in Lean~4 (\cref{app:lean}).
 
 % ------------------------------------------------------------------
 \subsection{Axiomatic Framework}\label{ssec:axioms}
 % ------------------------------------------------------------------
 
 We establish five axioms that define the PCF operator construction.
-These axioms emerge from the restrictions identified in~\S\ref{sec:intro}
+These axioms emerge from the restrictions identified in~\cref{sec:intro}
 (Frobenius, Lawvere, Yanofsky) and provide the foundational constraints that
 all subsequent development must satisfy.
 
@@ -137,12 +137,12 @@ $\mathbb{R}^1\xrightarrow{\times i}\mathbb{C}^2\xrightarrow{\times\golden}\Ecube
 each transition preserves the underlying algebraic structure.
 
 \begin{Proposition}[$\Ecube$ basis]\label{prop:E3-basis}
-The space $\Ecube$ (Definition~\ref{def:axioms},
-Eq.~\eqref{eq:E3}) admits the basis $\{1,\, i,\, \golden\}$.
+The space $\Ecube$ (\cref{def:axioms},
+\cref{eq:E3}) admits the basis $\{1,\, i,\, \golden\}$.
 \end{Proposition}
 
 \begin{proof}
-By~\eqref{eq:E3}, a general point of $\Ecube$ is $(x,y,\golden y)$ with
+By~\cref{eq:E3}, a general point of $\Ecube$ is $(x,y,\golden y)$ with
 $x,y\in\mathbb{R}$.  Writing $z = x + iy\in\mathbb{C}$, the third
 coordinate $\golden y = \golden\cdot\mathrm{Im}(z)$ is determined by the
 $i$-component and the coupling constant~$\golden$.  The triple
@@ -167,7 +167,7 @@ $S_3$-symmetric generator.
 We establish $\golden$ as a fixed point through three independent
 characterizations, all verified in Lean~4.
 
-The golden ratio~$\golden$ satisfying~\eqref{eq:phi-sq} admits two
+The golden ratio~$\golden$ satisfying~\cref{eq:phi-sq} admits two
 self-referential characterizations that converge to~$\golden$.
 
 \begin{Lemma}[Continued-fraction fixed point]\label{lem:phi-cf}
@@ -177,7 +177,7 @@ self-referential characterizations that converge to~$\golden$.
 \end{Lemma}
 
 \begin{proof}
-From $\golden^2 = \golden + 1$ (Eq.~\eqref{eq:phi-sq}), divide both
+From $\golden^2 = \golden + 1$ (\cref{eq:phi-sq}), divide both
 sides by $\golden > 0$: $\golden = 1 + 1/\golden$.
 \end{proof}
 
@@ -235,7 +235,7 @@ The sequence $\mathrm{cf}(n)$ is Cauchy and $\mathrm{cf}(n)\to\golden$ as $n\to\
 \end{Theorem}
 
 \begin{proof}
-Successive differences satisfy $|\mathrm{cf}(n+1)-\mathrm{cf}(n)|\le\golden^{-n}$ by Lemma~\ref{lem:cf-bounds}. Since $\sum\golden^{-n}$ converges, the sequence is Cauchy. The limit $L$ must satisfy the fixed-point relation $L = 1 + 1/L$, hence $L = \golden$.
+Successive differences satisfy $|\mathrm{cf}(n+1)-\mathrm{cf}(n)|\le\golden^{-n}$ by \cref{lem:cf-bounds}. Since $\sum\golden^{-n}$ converges, the sequence is Cauchy. The limit $L$ must satisfy the fixed-point relation $L = 1 + 1/L$, hence $L = \golden$.
 \end{proof}
 
 In parallel to the rational approach, the nested radical sequence provides the conjugate geometric characterization.
@@ -384,11 +384,11 @@ parameter $\tau=\omega_1/\omega_2$ parametrizes the lattice family.
   \tau_{\mathrm{PCF}} &= i,
     \label{eq:tau-pcf}  \\
   \omega_E &= e^{2\pi i/3}
-    \qquad\text{(Eisenstein, coincides with~\eqref{eq:omega-root})},
+    \qquad\text{(Eisenstein, coincides with~\cref{eq:omega-root})},
     \label{eq:eisenstein-omega}  \\
   \text{eigenvalues of }\Omega\colon\;&
     k\mapsto \tfrac{1}{2}\,\omega^k
-    \qquad\text{(restates~\eqref{eq:Omega-hat-eigenvalues})}.
+    \qquad\text{(restates~\cref{eq:Omega-hat-eigenvalues})}.
     \label{eq:Omega-eigenvalues-restate}
 \end{align}
 \end{Definition}
@@ -465,7 +465,7 @@ increasing together through $\golden$-mediation.
 \end{Lemma}
 
 \begin{proof}
-From Definition~\ref{def:tower-params}:
+From \cref{def:tower-params}:
 $\varepsilon(\sigma+1) = \varepsilon_0\cdot\golden^{\sigma+1}
 = \golden\cdot(\varepsilon_0\cdot\golden^\sigma)
 = \golden\cdot\varepsilon(\sigma)$.
@@ -526,7 +526,7 @@ at arity~$3$.
   \golden^{\lambda_{\log}} = 2,
   \qquad\text{where } \lambda_{\log} = \frac{\ln 2}{\ln\golden}
   \approx 1.440
-  \;\text{(Eq.~\eqref{eq:lambda-log})}.
+  \;\text{(\cref{eq:lambda-log})}.
 \end{equation}
 \end{Theorem}
 
@@ -549,14 +549,14 @@ of Mersenne primes $M_p = 2^p - 1$, determined by:
     = \sigma\cdot\lambda_{\log} + \log_\golden(3),
 \end{equation}
 where $\lambda_{\log} = \ln 2/\ln\golden$
-(Eq.~\eqref{eq:lambda-log}). Numerical validation yields residuals bounded only by the resolution floor of
+(\cref{eq:lambda-log}). Numerical validation yields residuals bounded only by the resolution floor of
 double-precision arithmetic ($< 10^{-14}$); this correspondence has been
 established across the 51 known Mersenne primes spanning over $25$ million
 orders of magnitude.
 \end{Theorem}
 
 \begin{proof}
-Identifying the tower level $R_\sigma = 3\golden^\sigma$ with the binary prime exponent $2^{p_\sigma}$ yields $\log_\golden(3\golden^\sigma) = \log_\golden(2^{p_\sigma})$. Applying the identity from Theorem~\ref{thm:mersenne-bridge}, we expand the right-hand side:
+Identifying the tower level $R_\sigma = 3\golden^\sigma$ with the binary prime exponent $2^{p_\sigma}$ yields $\log_\golden(3\golden^\sigma) = \log_\golden(2^{p_\sigma})$. Applying the identity from \cref{thm:mersenne-bridge}, we expand the right-hand side:
 \[
   \sigma + \log_\golden(3) = p_\sigma \log_\golden(2) = p_\sigma \lambda_{\log}.
 \]
@@ -565,8 +565,8 @@ This linear relation defines the correspondence $\sigma\mapsto p_\sigma$. As not
 
 \begin{Proposition}[Critical mediator]\label{prop:critical-mediator}
 The modulus $\norm{\Omega} = 1/2 = 2^{-1}$
-(Eq.~\eqref{eq:norm-Omega-half}) is necessary and sufficient for the
-golden-Mersenne correspondence~\eqref{eq:log-correspondence}: it
+(\cref{eq:norm-Omega-half}) is necessary and sufficient for the
+golden-Mersenne correspondence~\cref{eq:log-correspondence}: it
 simultaneously encodes $S_3$ geometry
 ($\norm{P}\cdot\norm{C}\cdot\norm{F}=1/2$) and binary coupling
 ($1/2 = 2^{-1}$), anchoring both bases ($\golden$ and~$2$) to a common
@@ -574,9 +574,9 @@ geometric constant.
 \end{Proposition}
 
 \begin{proof}
-From Theorem~\ref{thm:mersenne-bridge}, $\golden^{\lambda_{\log}}=2$,
+From \cref{thm:mersenne-bridge}, $\golden^{\lambda_{\log}}=2$,
 so $2^{-1} = \golden^{-\lambda_{\log}}$.  The tripartite product gives
-$\norm{\Omega}=1/2$ (Eq.~\eqref{eq:norm-Omega-half}).  Thus
+$\norm{\Omega}=1/2$ (\cref{eq:norm-Omega-half}).  Thus
 $\norm{\Omega} = 2^{-1} = \golden^{-\lambda_{\log}}$: the same value
 links the $\golden$-tower (through $\golden^{-\lambda_{\log}}$) and the
 binary tower (through $2^{-1}$) to the $S_3$ geometry (through the
@@ -602,7 +602,7 @@ The IFS with $N=3$ contractions of ratio $r=1/2$ (the three eigenvalue
 mappings of~$\OmH$) produces the Sierpi\'nski triangle as attractor.
 
 \begin{Definition}[IFS from $\OmH$ eigenvalues]\label{def:ifs}
-Let $v_k = \OmH(k)$ be the eigenvalues~\eqref{eq:Omega-hat-eigenvalues}.
+Let $v_k = \OmH(k)$ be the eigenvalues~\cref{eq:Omega-hat-eigenvalues}.
 The iterated function system is:
 \begin{equation}\label{eq:ifs}
   T_k(z) = \tfrac{1}{2}(z - v_k) + v_k, \qquad k\in\{0,1,2\}.
@@ -628,7 +628,7 @@ Hausdorff dimension is the ratio of the logarithms of the two arities
 \end{Proposition}
 
 \begin{proof}
-The IFS (Definition~\ref{def:ifs}) has $N=3$ contractions, each with
+The IFS (\cref{def:ifs}) has $N=3$ contractions, each with
 ratio $r=1/2$ (since $|\OmH(k)|=1/2$ for all $k$).  By Moran's equation
 for self-similar IFS with open set condition,
 $\sum_{k=1}^N r_k^d = 1$, i.e., $3\cdot(1/2)^d = 1$, giving
@@ -644,7 +644,7 @@ binary-to-ternary transition.
 
 \begin{Definition}[$\Ecube$ point structure]\label{def:E3-point}
 An $\Ecube$-point is a triple $(x,y,\golden y)\in\Ecube$
-(cf.~\eqref{eq:E3}), with projection:
+(cf.~\cref{eq:E3}), with projection:
 \begin{equation}\label{eq:proj-E3-to-C}
   \pi\colon \Ecube\to\mathbb{C}, \qquad
   (x,y,\golden y)\mapsto x + iy.
@@ -653,9 +653,9 @@ An $\Ecube$-point is a triple $(x,y,\golden y)\in\Ecube$
 
 \begin{Proposition}[Certainty principle]\label{prop:certainty}
 Let $\varepsilon_0 = \ln\golden/(6\sqrt{3})$ be the base angular rotation
-rate of the golden tower (Definition~\ref{def:epsilon0}), and
+rate of the golden tower (\cref{def:epsilon0}), and
 $M_{\mathrm{PCF}} = 6\sqrt{3}\,\pi/\ln\golden$ the spatial period of the
-PCF torus (Definition~\ref{def:lattice-pcf}).  Then
+PCF torus (\cref{def:lattice-pcf}).  Then
 \begin{equation}\label{eq:certainty-principle}
   \varepsilon_0 \cdot M_{\mathrm{PCF}} = \pi:
 \end{equation}
@@ -693,20 +693,20 @@ inputs, with $\pi$ as their sole common output.
 
 The product equals $\pi$---a half-turn---rather than $2\pi$ because
 the tripartite norm $|\Omega|=1/2$
-(Eq.~\eqref{eq:norm-Omega-half}) contracts a full $S_3$ rotation
+(\cref{eq:norm-Omega-half}) contracts a full $S_3$ rotation
 ($3\times 2\pi/3=2\pi$) by the factor~$1/2$: one traversal of the
 fundamental domain reaches the antipodal point, not the starting
 point.  Categorically, this is the geometric expression of the
 anti-self-reference mechanism: a full turn ($2\pi$) would implement
 $f(f)$---the diagonal self-application that Lawvere's theorem
-prohibits (\S\ref{sssec:lawvere})---while a half-turn implements
+prohibits (\cref{sssec:lawvere})---while a half-turn implements
 distributed passage $f\circ g\circ h$ that does not close.
 
 The identity is a \emph{self-consistency relation with zero free
 parameters}: $\golden$, $|S_3|$, $\sqrt{3}$, and $\pi$ are all
 geometrically determined, and no Hamiltonian, Virasoro algebra, or
 external dynamical input enters.  This addresses exactly the
-constructional circularity identified in~\S\ref{ssec:polya-hist}:
+constructional circularity identified in~\cref{ssec:polya-hist}:
 the P\'olya operator cannot be defined from its own spectrum, yet
 every prior program requires a presupposed dynamical operator to
 generate spectral evolution.  PCF derives the spectral constraint
@@ -714,22 +714,22 @@ instead from the mutual determination of Eisenstein geometry
 ($\varepsilon_0$: pentagon over triangle) on the input side and
 Gaussian geometry ($M_{\mathrm{PCF}}$: the square torus
 $\Lambda_{\mathrm{PCF}} = \mathbb{Z}M\oplus\mathbb{Z}Mi$ with
-$\tau_{\mathrm{PCF}}=i$, Definition~\ref{def:tau-pcf}) on the
+$\tau_{\mathrm{PCF}}=i$, \cref{def:tau-pcf}) on the
 output side.
 
 The pentagonal ingredient $\ln\golden$ in $\varepsilon_0$ connects
 forward to the construction of the operator: the golden ratio governs
 the cyclotomic tower
 $\Phi_5\to\Phi_{10}\to\Phi_{20}$
-(Proposition~\ref{prop:cyclotomic}) and the Golden Prime
+(\cref{prop:cyclotomic}) and the Golden Prime
 classification $G(p)\in\{\pm\golden,\pm\golden^{-1}\}$
-(Theorem~\ref{thm:golden-prime-classes}), through which~$\golden$
+(\cref{thm:golden-prime-classes}), through which~$\golden$
 organizes the prime residues that the operator must encode.
 
-Finally, the Mersenne connection (\S\ref{ssec:mersenne}) is a
+Finally, the Mersenne connection (\cref{ssec:mersenne}) is a
 direct consequence: combining $\varepsilon_0\cdot M_{\mathrm{PCF}}=\pi$
 with the bridge $\golden^{\lambda_{\log}}=2$
-(Theorem~\ref{thm:mersenne-bridge}) yields
+(\cref{thm:mersenne-bridge}) yields
 $|\Omega|=1/2=2^{-1}=\golden^{-\lambda_{\log}}$---the unique value
 anchoring the golden and binary towers to the same geometric point.
 \end{Remark}
@@ -757,9 +757,9 @@ The dimensions introducing new algebraic generators follow the Fibonacci subsequ
 \begin{proof}
 The dimensional architecture of $\mathcal{M}^5_{\mathrm{PCF}}$ is established as a rigid deductive chain in Lean 4, integrating algebraic extensions, topological obstructions, and combinatorial scaffolding:
 \begin{enumerate}
-    \item \textbf{Algebraic Extensions ($d=1,2,3$):} The subsequence $\{1,2,3,5\}$ marks the Fibonacci-graded introduction of new generators ($i$, $\golden$, and the $\sigma$-tower). Starting from $\mathbb{R}$ ($d=1$) and the Gaussian closure via $i^2=-1$ (\texttt{i\_const}, $d=2$), the third dimension introduces $z = \golden y$ (Axiom~3). This circumvents the Frobenius--Hurwitz obstruction (\S\ref{sssec:frobenius}) geometrically, not algebraically via $\mathbb{H}$, which is formalized in Lean via the \texttt{arity\_unique} theorem (proven unique via \texttt{linarith} by bounding $\mu_n$ between 0 and 1).
-    \item \textbf{Topological Closure ($d=4,5$):} Dimension $d=4$ is the Wick-rotated temporal coordinate whose content is the angular velocity of Proposition~\ref{prop:certainty}. The construction reaches completion at $d=5$ through the compactification of the tower parameter into $S^1_\sigma$. The half-turn $\varepsilon_0 \cdot M_{\mathrm{PCF}} = \pi$ implies that $S^1_\sigma$ does not close ($\pi \neq 2\pi$), encoding the anti-self-reference obstruction topologically. This stability is secured by the \texttt{no\_diagonal\_tower} theorem, which employs Lawvere's "no-diagonal" argument to prevent categorical retraction.
-    \item \textbf{Combinatorial Scaffolding ($H_3$ and $H_5$):} The hypercube $H_k = \{0,1\}^k$ is fixed by the tower's binary contraction factor $\mu_2/\mu_3 = 2$ (\texttt{contraction\_factor}) and the arity uniqueness $n=3$ (Theorem~\ref{thm:arity-unique}). Their conjunction yields $2^3=8$ vertices. The sextuple convergence (Proposition~\ref{prop:sextuple-8}) confirms that no other value is compatible: $|H_3|$, $\varphi(20)$, $|\Ztwenty|$, the octants of $\mathbb{R}^3$, $\beta_0^{-1}$, and $|\mathbb{Z}_2\times\mathbb{Z}_4|$ all equal $8$ independently (verified via \texttt{decide} on \texttt{Z20star\_card}). At $d=5$, binary branching in pentagonal axes produces $H_5 = \{0,1\}^5$ (Theorem~\ref{thm:hypercube}). Since $\binom{5}{3}=10$, $H_5$ contains 10 orientations of $H_3$, each with $2^2=4$ translates, yielding $40$ oriented copies of the $8$-vertex cube (Proposition~\ref{prop:pentagonal-planes}).
+    \item \textbf{Algebraic Extensions ($d=1,2,3$):} The subsequence $\{1,2,3,5\}$ marks the Fibonacci-graded introduction of new generators ($i$, $\golden$, and the $\sigma$-tower). Starting from $\mathbb{R}$ ($d=1$) and the Gaussian closure via $i^2=-1$ (\texttt{i\_const}, $d=2$), the third dimension introduces $z = \golden y$ (Axiom~3). This circumvents the Frobenius--Hurwitz obstruction (\cref{sssec:frobenius}) geometrically, not algebraically via $\mathbb{H}$, which is formalized in Lean via the \texttt{arity\_unique} theorem (proven unique via \texttt{linarith} by bounding $\mu_n$ between 0 and 1).
+    \item \textbf{Topological Closure ($d=4,5$):} Dimension $d=4$ is the Wick-rotated temporal coordinate whose content is the angular velocity of \cref{prop:certainty}. The construction reaches completion at $d=5$ through the compactification of the tower parameter into $S^1_\sigma$. The half-turn $\varepsilon_0 \cdot M_{\mathrm{PCF}} = \pi$ implies that $S^1_\sigma$ does not close ($\pi \neq 2\pi$), encoding the anti-self-reference obstruction topologically. This stability is secured by the \texttt{no\_diagonal\_tower} theorem, which employs Lawvere's "no-diagonal" argument to prevent categorical retraction.
+    \item \textbf{Combinatorial Scaffolding ($H_3$ and $H_5$):} The hypercube $H_k = \{0,1\}^k$ is fixed by the tower's binary contraction factor $\mu_2/\mu_3 = 2$ (\texttt{contraction\_factor}) and the arity uniqueness $n=3$ (\cref{thm:arity-unique}). Their conjunction yields $2^3=8$ vertices. The sextuple convergence (\cref{prop:sextuple-8}) confirms that no other value is compatible: $|H_3|$, $\varphi(20)$, $|\Ztwenty|$, the octants of $\mathbb{R}^3$, $\beta_0^{-1}$, and $|\mathbb{Z}_2\times\mathbb{Z}_4|$ all equal $8$ independently (verified via \texttt{decide} on \texttt{Z20star\_card}). At $d=5$, binary branching in pentagonal axes produces $H_5 = \{0,1\}^5$ (\cref{thm:hypercube}). Since $\binom{5}{3}=10$, $H_5$ contains 10 orientations of $H_3$, each with $2^2=4$ translates, yielding $40$ oriented copies of the $8$-vertex cube (\cref{prop:pentagonal-planes}).
 \end{enumerate}
 These embedded cubes constitute the discrete spectral scaffolding from which the operator parameters $\beta_0 = 1/|H_3|$, $\lambda = |H_2|\times 5 = 20$, and $\alpha_0 = \sigma_3 - \mu_3/\lambda$ are derived. The manifold $\mathcal{M}^5_{\mathrm{PCF}}$ provides the continuous envelope for this dual spectrum.
 \end{proof}
@@ -797,11 +797,11 @@ Huerta--Schreiber's derivation of the dimensional tower from the superpoint
 $\mathbb{R}^{0|1}$ by successive maximal invariant central extensions.
 Russell's prohibition $X\in X$ and Tarski's decidable geometry both find
 their resolution in the metric condition $\norm{\Omega}=1/2<1$ (No-Diagonal
-Theorem, \S\ref{ssec:CM-cat}).  The arithmetic engine $\Ztwenty$ operates
+Theorem, \cref{ssec:CM-cat}).  The arithmetic engine $\Ztwenty$ operates
 entirely within the decidable multiplicative fragment; the hypercube count
 $|H_3| = 2^3 = 8 = |\Ztwenty|$ links combinatorial and group-theoretic
 structure.
-Implications are developed in~\S\ref{sec:discussion}.
+Implications are developed in~\cref{sec:discussion}.
 
 
 % ------------------------------------------------------------------
@@ -868,8 +868,8 @@ using the other as input:
 \begin{enumerate}[label=(\roman*)]
   \item $|H_3| = 2^3 = 8$ (vertices of 3-dimensional hypercube),
   \item $2^3 = 8$ octants of $\mathbb{R}^3$ (sign choices $(\pm,\pm,\pm)$),
-  \item $\varphi(20) = 8$ (Euler totient, Eq.~\eqref{eq:vigesimal-totient}),
-  \item $|\Ztwenty| = 8$ (Golden Prime classes, Eq.~\eqref{eq:Z20star-card}),
+  \item $\varphi(20) = 8$ (Euler totient, \cref{eq:vigesimal-totient}),
+  \item $|\Ztwenty| = 8$ (Golden Prime classes, \cref{eq:Z20star-card}),
   \item $\beta_0^{-1} = 8$ (PCF parameter from $S_3$ symmetry),
   \item $|\mathbb{Z}^*_{20}| = |\mathbb{Z}_2\times\mathbb{Z}_4| = 8$
     (group-theoretic).
@@ -878,11 +878,11 @@ using the other as input:
 
 \begin{proof}
 Each identity follows from its stated source:
-(i)~Theorem~\ref{thm:hypercube};
+(i)~\cref{thm:hypercube};
 (ii)~each coordinate of $\mathbb{R}^3$ has two sign choices;
-(iii)~Proposition~\ref{prop:vigesimal};
-(iv)~Proposition~\ref{prop:Z20star-card};
-(v)~Definition~\ref{def:structural-params}, $\beta_0=1/8$;
+(iii)~\cref{prop:vigesimal};
+(iv)~\cref{prop:Z20star-card};
+(v)~\cref{def:structural-params}, $\beta_0=1/8$;
 (vi)~CRT.  No derivation references another.
 \end{proof}
 
@@ -984,7 +984,7 @@ captures the full vigesimal classification.
 \begin{proof}
 The $20$th cyclotomic polynomial $\Phi_{20}(x) = \prod_{k\in\Ztwenty}
 (x - e^{2\pi ik/20})$ has degree $\varphi(20)=8$
-(Proposition~\ref{prop:vigesimal}).  Its explicit form follows from the
+(\cref{prop:vigesimal}).  Its explicit form follows from the
 identity $\Phi_{20}(x) = \Phi_{10}(x^2)$ and $\Phi_{10}(x) = x^4 - x^3
 + x^2 - x + 1$: substituting $x\mapsto x^2$ yields the stated
 polynomial.  The eight roots $e^{2\pi ik/20}$ for
@@ -1008,13 +1008,13 @@ The magnitude of $G(a)$ separates from its sign:
 \begin{equation}\label{eq:artin-golden}
   |G(a)| = \golden^{-\chi_5(a)},
 \end{equation}
-where $\chi_5$ is the Legendre symbol (Definition~\ref{def:legendre-5}).
+where $\chi_5$ is the Legendre symbol (\cref{def:legendre-5}).
 Both components are valued in the unit group of
 $\mathbb{Z}[\golden]\subset\Rpcf$.
 \end{Proposition}
 
 \begin{proof}
-From the fiber table of Theorem~\ref{thm:golden-prime-classes}:
+From the fiber table of \cref{thm:golden-prime-classes}:
 when $a\bmod 5\in\{1,4\}$ (quadratic residues), $\chi_5(a)=+1$ and
 $|G(a)|\in\{\golden^{-1}\}$;
 when $a\bmod 5\in\{2,3\}$ (non-residues), $\chi_5(a)=-1$ and
@@ -1057,7 +1057,7 @@ All tabulated Mersenne primes satisfy $M_p\bmod 20\in\{3,7,11\}$, a
 in classes associated to $\golden$ and $\golden^{-1}$ (rather than
 uniform distribution) reflects deep arithmetic structure linking Mersenne
 primes to golden ratio geometry, consistent with the golden-Mersenne
-correspondence (Theorem~\ref{thm:log-correspondence}).
+correspondence (\cref{thm:log-correspondence}).
 \end{Remark}
 
 \subsubsection{Spectral Bridge}
@@ -1070,7 +1070,7 @@ operator needs to track the Riemann spectrum without referencing it.
 
 \begin{Proposition}[Spectral identities]\label{prop:spectral-identities}
 The PCF invariants $\mu = 1/2$, $\sigma = 3/2$
-(Eqs.~\eqref{eq:mu-ternary}, \eqref{eq:sigma-ternary}) satisfy:
+(Eqs.~\cref{eq:mu-ternary}, \cref{eq:sigma-ternary}) satisfy:
 \begin{align}
   \sigma + \mu &= 2 = \dim_{\mathbb{R}}(\mathbb{C}),
     \label{eq:sigma-plus-mu}  \\
@@ -1081,7 +1081,7 @@ The PCF invariants $\mu = 1/2$, $\sigma = 3/2$
     \label{eq:sigma-over-mu}  \\
   \norm{P}\cdot\norm{C}\cdot\norm{F}
     &= \tfrac{1}{2} = \mu
-    \quad\text{(Eq.~\eqref{eq:norm-Omega-half})}.
+    \quad\text{(\cref{eq:norm-Omega-half})}.
     \label{eq:pcf-product-mu}
 \end{align}
 The logarithmic kernel $\ln(\mu n + \sigma) = \ln(n/2 + 3/2)$ in $T^*$
@@ -1094,7 +1094,7 @@ The algebraic relations follow from the spectral sum and product constraints for
 \begin{itemize}
     \item The identity $\sigma + \mu = 2$ arises from the normalization of the continuous envelope parameter in the $S^1_\sigma$-tower.
     \item The ratio $\sigma / \mu = 3$ is a direct mapping of the arity uniqueness ($n=3$), establishing the threefold coupling symmetry from the $S_3$ group of the cubic scaffold $H_3$.
-    \item The alignment of the product $\norm{P}\cdot\norm{C}\cdot\norm{F} = 1/2 = \mu$ is established by Eq.~\eqref{eq:norm-Omega-half}, confirming that the operator's total modulus is anchored to the critical line value.
+    \item The alignment of the product $\norm{P}\cdot\norm{C}\cdot\norm{F} = 1/2 = \mu$ is established by \cref{eq:norm-Omega-half}, confirming that the operator's total modulus is anchored to the critical line value.
 \end{itemize}
 These identities ensure that the logarithmic kernel $\ln(\mu n + \sigma)$ is structurally rigid and consistent across the prime regimes.
 \end{proof}
@@ -1127,7 +1127,7 @@ $S = \{2,3,5,7,13,17,19,31\}$. The correction:
 \end{equation}
 Maximal enhancement $0.5\%$ at $n = M_p$, with exponential decay scale
 $\lambda_M = 10$ connecting to pentagonal combinatorics
-(Proposition~\ref{prop:pentagonal-planes}).
+(\cref{prop:pentagonal-planes}).
 \end{Definition}
 
 \begin{Definition}[Golden modulation]\label{def:golden-modulation}
@@ -1200,17 +1200,17 @@ $t_{31}\approx 103.73$, giving error $\approx 0.48\%$.
 
 \begin{Lemma}[Coefficient convergence]\label{lem:c-convergence}
 $c(n,\alpha_0,\beta_0) \to 2 = \sigma + \mu$
-(Eq.~\eqref{eq:sigma-plus-mu}) as $n\to\infty$, with rate $O(1/\ln n)$.
+(\cref{eq:sigma-plus-mu}) as $n\to\infty$, with rate $O(1/\ln n)$.
 \end{Lemma}
 
 \begin{proof}
-From Definition~\ref{def:c-function},
+From \cref{def:c-function},
 $c(n,\alpha_0,\beta_0) = 2 + \alpha_0/(1+\beta_0\ln n)$.
 As $n\to\infty$, $\ln n\to\infty$, so
 $\alpha_0/(1+\beta_0\ln n)\to 0$ with rate
 $\alpha_0/(\beta_0\ln n) = O(1/\ln n)$.
 The limit $c\to 2 = \sigma+\mu$ is exact by
-Eq.~\eqref{eq:sigma-plus-mu}.
+\cref{eq:sigma-plus-mu}.
 \end{proof}
 
 \begin{Theorem}[Asymptotic convergence]\label{thm:Tstar-asymptotic}
@@ -1222,10 +1222,10 @@ $t_n\sim 2\pi n/\ln n$, and $c(n)\to 2$ ensures $T^*(n)\sim 2\pi n/\ln n$.
 \begin{proof}
 By the Riemann--von Mangoldt formula, the $n$th zero height satisfies
 $t_n \sim 2\pi n/\ln n$ as $n\to\infty$.
-From Definition~\ref{def:Tstar} (Regime~II):
+From \cref{def:Tstar} (Regime~II):
 $T^*(n) = c(n)\cdot\pi n/\ln(\mu n + \sigma)$.
 Since $\ln(\mu n + \sigma) = \ln(n/2+3/2) = \ln n -\ln 2 + o(1)
-\sim \ln n$, and $c(n)\to 2$ by Lemma~\ref{lem:c-convergence}:
+\sim \ln n$, and $c(n)\to 2$ by \cref{lem:c-convergence}:
 \[
   T^*(n) \sim 2\cdot\frac{\pi n}{\ln n} = \frac{2\pi n}{\ln n}
   \sim t_n.
@@ -1245,8 +1245,8 @@ operators on~$\ell^2(\mathbb{N})$
 While they have not been formally verified against Mathlib---which
 at the time of writing lacks essential self-adjointness and the
 spectral theorem for unbounded operators---they depend only on two
-Lean-verified inputs: $T^*(n)\in\mathbb{R}$ (Definition~\ref{def:Tstar})
-and $T^*(n)\to\infty$ (Theorem~\ref{thm:Tstar-asymptotic}).
+Lean-verified inputs: $T^*(n)\in\mathbb{R}$ (\cref{def:Tstar})
+and $T^*(n)\to\infty$ (\cref{thm:Tstar-asymptotic}).
 \end{Remark}
 
 \subsubsection{Setting and definitions}
@@ -1260,8 +1260,8 @@ $\{e_n\}_{n\ge 1}$.  It is defined via its spectral decomposition
     = \sum_{n=1}^{\infty} T^*(n)\,|e_n\rangle\langle e_n|,
 \end{equation}
 where the eigenvalues $T^*(n)\in\mathbb{R}$ are given by
-Definition~\ref{def:Tstar}.  The sequence $T^*(n)\to\infty$
-(Theorem~\ref{thm:Tstar-asymptotic}), so the operator is
+\cref{def:Tstar}.  The sequence $T^*(n)\to\infty$
+(\cref{thm:Tstar-asymptotic}), so the operator is
 \emph{unbounded}.  Its natural domain is
 \begin{equation}\label{eq:domain-HPCF}
   \mathcal{D} := \Bigl\{\,
@@ -1393,7 +1393,7 @@ For $n > 30$ (Regime~II), $T^*(n) = c(n,\alpha_0,\beta_0)\cdot
 \pi n/\ln(\mu n + \sigma)$.  The function
 $n\mapsto c(n)\cdot n/\ln(\mu n+\sigma)$ is strictly increasing for
 $n>30$, since $c(n)\to 2$ monotonically from above
-(Lemma~\ref{lem:c-convergence}) and $n/\ln n$ is strictly increasing
+(\cref{lem:c-convergence}) and $n/\ln n$ is strictly increasing
 for $n\ge 3$.  For $n\le 30$ (Regime~I), simplicity is verified by
 direct computation of the~$30$ values.  Cross-regime coincidence
 $T^*(n) = T^*(m)$ with $n\le 30 < m$ is excluded by the same
@@ -1408,7 +1408,7 @@ exists.
 \end{Proposition}
 
 \begin{proof}
-Since $T^*(n)\to\infty$ (Theorem~\ref{thm:Tstar-asymptotic}),
+Since $T^*(n)\to\infty$ (\cref{thm:Tstar-asymptotic}),
 the sequence $(T^*(n)-z)^{-1}\to 0$.  The resolvent acts as
 $(\tilde{H}_{\mathrm{PCF}}-zI)^{-1}e_n = (T^*(n)-z)^{-1}e_n$,
 so it is the norm-limit of finite-rank operators (truncating
@@ -1428,7 +1428,7 @@ coinciding with the mean spacing of the non-trivial zeros of~$\zeta$.
 
 \begin{proof}
 From $T^*(n)\sim 2\pi n/\ln n$
-(Theorem~\ref{thm:Tstar-asymptotic}),
+(\cref{thm:Tstar-asymptotic}),
 \[
   T^*(n{+}1) - T^*(n)
   \sim \frac{d}{dn}\!\left(\frac{2\pi n}{\ln n}\right)
@@ -1448,7 +1448,7 @@ above close this gap for~$\tilde{H}_{\mathrm{PCF}}$ by exploiting the
 structural fact that $T^*(n)\in\mathbb{R}$ forces both deficiency spaces
 to trivialize.  This is not a coincidence: the reals of~$T^*(n)$ are
 structurally derived from $\mu = 1/2$, $\sigma = 3/2$ via
-Proposition~\ref{prop:spectral-identities}, not imposed.
+\cref{prop:spectral-identities}, not imposed.
 \end{Remark}
 
 \begin{Remark}[Role in the Hilbert--P\'olya program]
@@ -1470,7 +1470,7 @@ Hilbert--P\'olya operator candidate, ranging from functional-analytic
 prerequisites to fine spectral statistics
 (Yakaboylu~\cite{yakaboylu24}, Berry--Keating~\cite{berry99},
 Connes~\cite{connes99}).  The full landscape is developed
-in~\S\ref{ssec:phys-landscape}; here we address the mathematical
+in~\cref{ssec:phys-landscape}; here we address the mathematical
 content.  Three benchmarks are representative:
 \begin{enumerate}
 \item[\emph{(i)}]
@@ -1492,9 +1492,9 @@ content.  Three benchmarks are representative:
 \end{enumerate}
 
 The operator $\tilde{H}_{\mathrm{PCF}}$ is self-adjoint
-(\S\ref{ssec:self-adjoint}), with real spectrum
+(\cref{ssec:self-adjoint}), with real spectrum
 $\{T^*(n)\}_{n\ge 1}$ and spectral theorem in force
-(Corollary~\ref{cor:spectral-thm}).  Its position relative to
+(\cref{cor:spectral-thm}).  Its position relative to
 these benchmarks is determined by the following result together
 with the structural character of the construction.
 
@@ -1509,7 +1509,7 @@ the same leading asymptotic as the Riemann zero-counting function.
 
 \begin{proof}
 Inverting $T^*(n)\sim 2\pi n/\ln n$
-(Theorem~\ref{thm:Tstar-asymptotic}) gives
+(\cref{thm:Tstar-asymptotic}) gives
 $n\sim (T\ln T)/(2\pi)$, so
 $N_{\mathrm{PCF}}(T)\sim (T/2\pi)\ln T$.  The Riemann--von~Mangoldt
 formula gives
@@ -1522,21 +1522,21 @@ here.
 The construction is deterministic and structurally rigid: its
 parameters derive from~$\golden$, $\Ztwenty$, and the pentagonal
 geometry, with no reference to $\zeta(s)$ or its zeros.  It is
-non-circular (\S\ref{ssec:non-circularity}): the spectral agreement
+non-circular (\cref{ssec:non-circularity}): the spectral agreement
 is a consequence of the construction, not an input.  The arithmetic
 of~$\Ztwenty$ and the geometry of~$\golden$ suffice to determine the
 smooth spectral envelope of the non-trivial zeros of~$\zeta$, with
 mean relative error ${\sim}1\%$ (bounded by ${<}1.7\%$) across twelve
-orders of magnitude (\S\ref{sec:results}).  The structural parameters 
+orders of magnitude (\cref{sec:results}).  The structural parameters 
 $d=3$, $\mu=1/2$,
 
 $\sigma=3/2$ emerge from the PCF framework alone
-(Proposition~\ref{prop:spectral-identities}), and the derivation is
-formally verified (see Appendix~\ref{app:lean}).
+(\cref{prop:spectral-identities}), and the derivation is
+formally verified (see \cref{app:lean}).
 
 Benchmarks~\emph{(i)--(iii)} are not verified from the intrinsic
 structure of~$\tilde{H}_{\mathrm{PCF}}$.  The complete position
 of~$\tilde{H}_{\mathrm{PCF}}$ relative to all benchmarks in the
 literature---including exact spectral identification, GUE statistics,
 quantum chaos, and the Connes trace formula---is developed
-in~\S\ref{ssec:phys-landscape}.
+in~\cref{ssec:phys-landscape}.

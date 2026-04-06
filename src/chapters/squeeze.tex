@@ -1,9 +1,9 @@
 \subsection{The Formal Proof: The Squeeze}\label{ssec:squeeze}
 % ------------------------------------------------------------------
 
-This section provides the formal derivation of the critical line $\mathrm{Re}(s)=1/2$ within the PCF framework. The ``squeeze'' strategy is prioritized here for its direct correspondence with the computer-assisted formalization in Lean~4; every deductive step, from the arithmetic bound to the final identification, maps to a verified witness in the repository (see Appendix~\ref{app:lean} for the full deductive trace).
+This section provides the formal derivation of the critical line $\mathrm{Re}(s)=1/2$ within the PCF framework. The ``squeeze'' strategy is prioritized here for its direct correspondence with the computer-assisted formalization in Lean~4; every deductive step, from the arithmetic bound to the final identification, maps to a verified witness in the repository (see \cref{app:lean} for the full deductive trace).
 
-The spectral proof (Theorem~\ref{thm:rh-spectral}) establishes
+The spectral proof (\cref{thm:rh-spectral}) establishes
 $\mathrm{Re}(\rho)=1/2$ directly from the spectral embedding.  The
 squeeze proof below provides a second, independent derivation that has the advantage of being fully formalizable in Lean~4: the arithmetic bound
 enters as a structure field of \lean{TernaryLZero}; the companion bound
@@ -11,7 +11,7 @@ is derived from \lean{hecke\_1920}.  The conclusion
 follows by \texttt{linarith}.
 
 The upper bound $\rho_{\mathrm{re}}\le\mu_3$ derives from the spectral
-embedding (Proposition~\ref{prop:spectral-embedding}): the Euler product
+embedding (\cref{prop:spectral-embedding}): the Euler product
 places $\zeta$ in the ternary fragment, whose operator~$\OmH$ has
 $\mathrm{Re}(\mathrm{spec}(\OmH))=\{1/2,-1/4\}$; both values are
 ${\le}\,\mu_3=1/2$.
@@ -22,7 +22,7 @@ self-duality chain: $\mathbb{Z}_2\times\mathbb{Z}_2$ has exponent~$2$
 (unconditional) gives $L(1-\rho,\chi)=0$; the same spectral embedding
 applied to $1-\rho$ yields $1-\rho_{\mathrm{re}}\le\mu_3$.
 Hecke's theorem is not formalized in Lean; it enters the deductive chain
-as the sole external input (Theorem~\ref{thm:hecke}, Appendix~\ref{app:lean}).
+as the sole external input (\cref{thm:hecke}, \cref{app:lean}).
 
 \subsubsection{Part A: Abstract Squeeze (parametric)}
 
@@ -46,7 +46,7 @@ satisfying:
   \rho_{\mathrm{re}} &< 1,
     \label{eq:TLZ-strip}  \\
   \rho_{\mathrm{re}} &\le \mu_3
-    \qquad\text{(upper bound; recall $\mu_3=1/2$ from~\eqref{eq:mu-ternary})},
+    \qquad\text{(upper bound; recall $\mu_3=1/2$ from~\cref{eq:mu-ternary})},
     \label{eq:TLZ-upper}  \\
   1 - \rho_{\mathrm{re}} &\le \mu_3
     \qquad\text{(companion/lower bound)}.
@@ -87,8 +87,8 @@ The two independent categorical paths converge:
 \end{center}
 %
 \noindent
-By~\eqref{eq:TLZ-upper}: $\rho_{\mathrm{re}}\le 1/2$.
-By~\eqref{eq:TLZ-lower}: $1-\rho_{\mathrm{re}}\le 1/2$, i.e.\
+By~\cref{eq:TLZ-upper}: $\rho_{\mathrm{re}}\le 1/2$.
+By~\cref{eq:TLZ-lower}: $1-\rho_{\mathrm{re}}\le 1/2$, i.e.\
 $\rho_{\mathrm{re}}\ge 1/2$. Together: $\rho_{\mathrm{re}}=1/2$. \end{proof}
 
 \begin{proposition}[Independence of bounds]\label{prop:bounds-independent}
@@ -126,30 +126,30 @@ The upper bound $\rho_{\mathrm{re}}\le\mu_3$ is derived through six
 steps:
 \begin{enumerate}
   \item \emph{Primes force $\Ztwenty$}
-    (Theorem~\ref{thm:zeta-forced}, Eq.~\eqref{eq:primes-in-Z20star}).
+    (\cref{thm:zeta-forced}, \cref{eq:primes-in-Z20star}).
   \item \emph{$\Ztwenty$ is purely multiplicative}: addition destroyed
-    (Proposition~\ref{prop:add-destroyed}, Eq.~\eqref{eq:addition-destroyed}).
+    (\cref{prop:add-destroyed}, \cref{eq:addition-destroyed}).
   \item \emph{Fragment modulus}: $\mathrm{fragment\_mu}=1/2$
-    (Proposition~\ref{prop:fragment-mu}, Eq.~\eqref{eq:fragment-mu-ternary}).
+    (\cref{prop:fragment-mu}, \cref{eq:fragment-mu-ternary}).
   \item \emph{Spectral uniqueness}: $(\sigma,\mu)=(3/2,1/2)$
-    (Proposition~\ref{prop:spectral-uniqueness},
-    Eq.~\eqref{eq:spectral-system}).
+    (\cref{prop:spectral-uniqueness},
+    \cref{eq:spectral-system}).
   \item \emph{No-Diagonal blocks}: $\norm{\Omega}=1/2<1$
-    (Theorem~\ref{thm:no-diagonal}; recall
-    $\norm{\Omega}=1/2$ from~\eqref{eq:norm-Omega-half}).
+    (\cref{thm:no-diagonal}; recall
+    $\norm{\Omega}=1/2$ from~\cref{eq:norm-Omega-half}).
   \item \emph{Spectral embedding}:
     $\mathrm{Re}(\rho)\in\{1/2,\,-1/4\}$
-    (Proposition~\ref{prop:spectral-embedding}).
+    (\cref{prop:spectral-embedding}).
 \end{enumerate}
 \end{proposition}
 
 \begin{proof}
-Steps~1--5: Theorem~\ref{thm:zeta-forced},
-Proposition~\ref{prop:add-destroyed},
-Proposition~\ref{prop:fragment-mu},
-Proposition~\ref{prop:spectral-uniqueness},
-Theorem~\ref{thm:no-diagonal}.
-Step~6: Proposition~\ref{prop:spectral-embedding} gives
+Steps~1--5: \cref{thm:zeta-forced},
+\cref{prop:add-destroyed},
+\cref{prop:fragment-mu},
+\cref{prop:spectral-uniqueness},
+\cref{thm:no-diagonal}.
+Step~6: \cref{prop:spectral-embedding} gives
 $\mathrm{Re}(\rho)\in\{1/2,-1/4\}$.
 Both values satisfy $\mathrm{Re}(\rho)\le 1/2 = \mu_3$.
 \end{proof}
@@ -160,20 +160,20 @@ The companion bound $1-\rho_{\mathrm{re}}\le\mu_3$ is derived through
 six steps:
 \begin{enumerate}
   \item \emph{Exponent two}: $\forall g\in G,\; g+g=0$
-    (Proposition~\ref{prop:exponent-two}, Eq.~\eqref{eq:exponent-two}).
+    (\cref{prop:exponent-two}, \cref{eq:exponent-two}).
   \item--5. \emph{Four fiber partitions}
-    (Proposition~\ref{prop:fiber-partition}).
+    (\cref{prop:fiber-partition}).
   \item[6.] \emph{Spectral completeness}: $\sigma+\mu=2$
-    (Eq.~\eqref{eq:spectral-completeness}).
+    (\cref{eq:spectral-completeness}).
 \end{enumerate}
 \end{proposition}
 
 \begin{proof}
-Step~1: Proposition~\ref{prop:exponent-two}, verified by \lean{decide}.
-Steps~2--5: Proposition~\ref{prop:fiber-partition}, from CRT and
-Theorem~\ref{thm:golden-prime-classes}.
-Step~6: Eq.~\eqref{eq:spectral-completeness}, $\sigma+\mu=2$,
-from Definition~\ref{def:spectral-params}.
+Step~1: \cref{prop:exponent-two}, verified by \lean{decide}.
+Steps~2--5: \cref{prop:fiber-partition}, from CRT and
+\cref{thm:golden-prime-classes}.
+Step~6: \cref{eq:spectral-completeness}, $\sigma+\mu=2$,
+from \cref{def:spectral-params}.
 Together with Hecke's 1920 theorem (unconditional): if $L(\rho,\chi)=0$
 and $\chi$ is self-dual (forced by exponent~2), then
 $L(1-\rho,\chi)=0$, giving $1-\rho_{\mathrm{re}} \le \mu_3$.
@@ -185,7 +185,7 @@ $L(1-\rho,\chi)=0$, giving $1-\rho_{\mathrm{re}} \le \mu_3$.
 \begin{proposition}[Spectral involution]\label{prop:spectral-involution}
 \begin{equation}\label{eq:spectral-involution}
   \sigma_n = 2 - \mu_n
-  \qquad\text{(restates~\eqref{eq:spectral-completeness})}.
+  \qquad\text{(restates~\cref{eq:spectral-completeness})}.
 \end{equation}
 At $n=3$, the ternary involution:
 \begin{equation}\label{eq:ternary-involution}
@@ -196,7 +196,7 @@ At $n=3$, the ternary involution:
 \end{proposition}
 
 \begin{proof}
-From Eq.~\eqref{eq:spectral-completeness}, $\sigma_n + \mu_n = 2$,
+From \cref{eq:spectral-completeness}, $\sigma_n + \mu_n = 2$,
 so $\sigma_n = 2 - \mu_n$.  At $n=3$: $\sigma_3 = 2 - 1/2 = 3/2$,
 $\mu_3 = 2 - 3/2 = 1/2$, and $\mu_3 = 1 - \mu_3$ since $1/2 = 1 - 1/2$.
 \end{proof}
@@ -214,7 +214,7 @@ this~$x$ is~$\mu_3$.
 \begin{proof}
 $x = 1 - x \implies 2x = 1 \implies x = 1/2$.  Uniqueness: the map
 $f(x)=1-x$ is an involution with unique fixed point.  That
-$x = \mu_3$: by Eq.~\eqref{eq:mu-ternary}, $\mu_3 = 1/2$.
+$x = \mu_3$: by \cref{eq:mu-ternary}, $\mu_3 = 1/2$.
 \end{proof}
 
 
@@ -229,21 +229,21 @@ $x = \mu_3$: by Eq.~\eqref{eq:mu-ternary}, $\mu_3 = 1/2$.
 \begin{proposition}[Canonical zero satisfies all axioms]%
   \label{prop:canonical-zero-works}
 $\rho_{\mathrm{re}}^{\mathrm{can}} = 1/2$ is a valid ternary $L$-zero
-(Definition~\ref{def:TernaryLZero}), and satisfies
-$\mathrm{rh\_squeeze}$ (Theorem~\ref{thm:rh-squeeze}).
+(\cref{def:TernaryLZero}), and satisfies
+$\mathrm{rh\_squeeze}$ (\cref{thm:rh-squeeze}).
 \end{proposition}
 
 \begin{proof}
 $\rho_{\mathrm{re}}^{\mathrm{can}} = 1/2$ satisfies: $0<1/2<1$ (strip),
 $1/2 \le \mu_3 = 1/2$ (upper bound), $1-1/2 \le \mu_3 = 1/2$
 (companion bound).
-By Theorem~\ref{thm:rh-squeeze}, $\rho_{\mathrm{re}} = 1/2$. \checkmark
+By \cref{thm:rh-squeeze}, $\rho_{\mathrm{re}} = 1/2$. \checkmark
 \end{proof}
 
 
 \begin{proposition}[Abstract premises satisfiable]%
   \label{prop:premises-satisfiable}
-The abstract hypotheses of Theorem~\ref{thm:abstract-squeeze} are
+The abstract hypotheses of \cref{thm:abstract-squeeze} are
 satisfiable.
 \end{proposition}
 
@@ -260,18 +260,18 @@ $1/2 \le \mu_3 = 1/2$ and $1 - 1/2 \le \mu_3 = 1/2$, as established by witness \
 The complete PCF bridge assembles twelve verified components into a
 single structure:
 \begin{enumerate}
-  \item Axiomatic framework (\S\ref{ssec:axioms}),
-  \item Component norms (Eqs.~\eqref{eq:norm-P}--\eqref{eq:norm-Omega-half}),
-  \item Spectral parameters (Eqs.~\eqref{eq:sigma-n}--\eqref{eq:mu-n}),
-  \item Arity uniqueness (Theorem~\ref{thm:arity-unique}),
-  \item Spectral uniqueness (Proposition~\ref{prop:spectral-uniqueness}),
-  \item Tower convergence (\S\ref{ssec:cat-limit}),
-  \item $\Ztwenty$ arithmetic (\S\ref{ssec:zeta-cat}),
-  \item Galois functor (Definition~\ref{def:galois-functor}),
-  \item Premise~A chain (Proposition~\ref{prop:premise-A}),
-  \item Premise~B chain (Proposition~\ref{prop:premise-B}),
-  \item Squeeze (Theorem~\ref{thm:rh-squeeze}),
-  \item Omega spectrum (\S\ref{ssec:omega-spectrum}).
+  \item Axiomatic framework (\cref{ssec:axioms}),
+  \item Component norms (Eqs.~\cref{eq:norm-P}--\cref{eq:norm-Omega-half}),
+  \item Spectral parameters (Eqs.~\cref{eq:sigma-n}--\cref{eq:mu-n}),
+  \item Arity uniqueness (\cref{thm:arity-unique}),
+  \item Spectral uniqueness (\cref{prop:spectral-uniqueness}),
+  \item Tower convergence (\cref{ssec:cat-limit}),
+  \item $\Ztwenty$ arithmetic (\cref{ssec:zeta-cat}),
+  \item Galois functor (\cref{def:galois-functor}),
+  \item Premise~A chain (\cref{prop:premise-A}),
+  \item Premise~B chain (\cref{prop:premise-B}),
+  \item Squeeze (\cref{thm:rh-squeeze}),
+  \item Omega spectrum (\cref{ssec:omega-spectrum}).
 \end{enumerate}
 \end{theorem}
 
@@ -289,13 +289,13 @@ which combines all twelve results into a single structure
 \begin{corollary}[Identification is corollary]%
   \label{cor:identification}
 The identification $\mathrm{Re}(\rho)=1/2$ follows from the master
-bridge (Theorem~\ref{thm:master-bridge}) without additional hypotheses.
+bridge (\cref{thm:master-bridge}) without additional hypotheses.
 \end{corollary}
 
 \begin{proof}
-By Theorem~\ref{thm:master-bridge}, the twelve components assemble into
+By \cref{thm:master-bridge}, the twelve components assemble into
 a single verified structure; in particular, the squeeze
-(Theorem~\ref{thm:rh-squeeze}) yields $\rho_{\mathrm{re}}=1/2$ with no
+(\cref{thm:rh-squeeze}) yields $\rho_{\mathrm{re}}=1/2$ with no
 additional hypotheses beyond the categorical framework.
 \end{proof}
 
@@ -308,24 +308,24 @@ additional hypotheses beyond the categorical framework.
 
 \begin{proof}
 Assume $\rho_{\mathrm{re}}\ne 1/2$.  But any ternary $L$-zero satisfies
-$\rho_{\mathrm{re}}=1/2$ (Theorem~\ref{thm:rh-squeeze}).
+$\rho_{\mathrm{re}}=1/2$ (\cref{thm:rh-squeeze}).
 Contradiction. \end{proof}
 
 \begin{theorem}[Full deductive chain --- 10 steps + independence]%
   \label{thm:full-chain}
 The complete chain from decidable arithmetic to $\mathrm{Re}(\rho)=1/2$
 proceeds through ten verified steps (Propositions
-\ref{prop:premise-A},~\ref{prop:premise-B},
-Theorems~\ref{thm:rh-squeeze},~\ref{thm:rh-contradiction}), each
+\cref{prop:premise-A,prop:premise-B},
+\cref{thm:rh-squeeze},~\ref{thm:rh-contradiction}), each
 categorically derived.  The two bounds are provably independent
-(Proposition~\ref{prop:bounds-independent}).
+(\cref{prop:bounds-independent}).
 \end{theorem}
 
 \begin{proof}
-Steps 1--5 are Proposition~\ref{prop:premise-A}; steps 6--9 are
-Proposition~\ref{prop:premise-B}; step~10 is
-Theorem~\ref{thm:rh-squeeze}; independence is
-Proposition~\ref{prop:bounds-independent}.  Each deductive step
+Steps 1--5 are \cref{prop:premise-A}; steps 6--9 are
+\cref{prop:premise-B}; step~10 is
+\cref{thm:rh-squeeze}; independence is
+\cref{prop:bounds-independent}.  Each deductive step
 corresponds to a computer-checked bridge in the formal repository.
 \end{proof}
 
@@ -334,30 +334,30 @@ corresponds to a computer-checked bridge in the formal repository.
 An earlier formalization used a tautological structure \lean{ZeroPCF}
 (\texttt{PCF\_Complete}, l.483) which assumed the functional equation as a
 field axiom.  The squeeze approach via \lean{TernaryLZero}
-(Definition~\ref{def:TernaryLZero}) eliminates this circularity entirely:
+(\cref{def:TernaryLZero}) eliminates this circularity entirely:
 both bounds are derived from the categorical structure, with the only
 classical input being Hecke's 1920 result.
 \end{remark}
 
 \begin{remark}[Two proofs and their relationship]\label{rmk:two-proofs}
 The paper provides two proofs of
-$\mathrm{Re}(\rho)=1/2$ (Theorem~\ref{thm:main-intro}).
+$\mathrm{Re}(\rho)=1/2$ (\cref{thm:main-intro}).
 The \emph{spectral proof}
-(Theorem~\ref{thm:rh-spectral}) uses
-Proposition~\ref{prop:spectral-embedding} alone: since
+(\cref{thm:rh-spectral}) uses
+\cref{prop:spectral-embedding} alone: since
 $\mathrm{Re}(\rho)\in\{1/2,-1/4\}$ and $\mathrm{Re}(\rho)>0$,
 the result follows without Hecke's theorem.
 The \emph{squeeze proof}
-(Theorem~\ref{thm:rh-squeeze}) derives two independent bounds
+(\cref{thm:rh-squeeze}) derives two independent bounds
 from the spectral embedding and Hecke, then combines them
 by~\texttt{linarith}.  The squeeze is logically weaker (it uses an
 additional classical input) but has the advantage of being the form
 formalized in Lean~4: the arithmetic bound enters as a structure field of
 \lean{TernaryLZero}
-(Definition~\ref{def:TernaryLZero}); the companion bound is derived
+(\cref{def:TernaryLZero}); the companion bound is derived
 from \lean{hecke\_1920}.  The Lean proof
 (\lean{rh\_squeeze}, 4~lines) verifies the result.
 The spectral embedding
-(Proposition~\ref{prop:spectral-embedding}) provides the mathematical
+(\cref{prop:spectral-embedding}) provides the mathematical
 justification that these structure fields are satisfied.
 \end{remark}
