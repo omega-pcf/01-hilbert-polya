@@ -1,5 +1,12 @@
 # Changelog
 
+## [](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.12...vnull) (2026-04-06)
+
+### Refinements
+
+* standardized dynamic cross-referencing and academic bibliography ([9edc012](https://github.com/omega-pcf/01-hilbert-polya/commit/9edc012c64d18bef3ea7dfc6811a089fbb4bc494))
+* standardized dynamic cross-referencing system. Fixed missing hyperlinks and symbolic naming prefixes. ([2e2b352](https://github.com/omega-pcf/01-hilbert-polya/commit/2e2b352ba46b9bb79bed67200915c395eab5c923))
+
 ## [1.5.14](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.12...v1.5.14) (2026-04-06)
 
 ## [1.5.13](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.12...v1.5.13) (2026-04-06)
