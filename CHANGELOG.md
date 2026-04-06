@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.5.9](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.8...v1.5.9) (2026-04-06)
+
+### Chores
+
+* align changelog categories with academic terminology and define tagPrefix ([bf5b70e](https://github.com/omega-pcf/01-hilbert-polya/commit/bf5b70e5c24d2a36a51bc9da83a18921abeffa3c))
+* cleanup stale placeholders and sync metadata ([2577570](https://github.com/omega-pcf/01-hilbert-polya/commit/257757000db0ff0b351938d75202278e8321b587))
+* explicitly set repository host to fix broken changelog compare links ([0bc1975](https://github.com/omega-pcf/01-hilbert-polya/commit/0bc1975c52aaa4bf89d62215ba2e15233d3ff667))
+* revert to v1.5.8 and apply spec-compliant changelog config ([52658b0](https://github.com/omega-pcf/01-hilbert-polya/commit/52658b0b876b5fe18654c193676acc4e169cf447))
+* update project description and restore verified release tools ([b7c8147](https://github.com/omega-pcf/01-hilbert-polya/commit/b7c81478731043966f0d38da722536cbf180060a))
+* use context block to fix broken changelog links as per release-it docs ([28aed95](https://github.com/omega-pcf/01-hilbert-polya/commit/28aed95f3a2c4626ac8ea1538a892768ffe5c5e3))
+
 ## [1.5.8](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.7...v1.5.8) (2026-04-06)
 
 ### Chores
