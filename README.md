@@ -70,6 +70,8 @@ pnpm run verify
   pnpm run verify:lean
   ```
 
+  *(Alternatively, to verify without `pnpm`, simply navigate to the definitions and build directly: `cd lean && lake build`)*
+
 - **Spectral Verification**: Uses `mpmath` to verify that the $T^*$ operator spectrum converges to the Riemann zeros $t_n$ across several magnitudes (up to $n=10^{12}$).
 
   ```bash

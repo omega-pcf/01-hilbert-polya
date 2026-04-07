@@ -79,3 +79,18 @@ Once the installation is complete, you can use the built-in commands:
   ```bash
   pnpm run verify:py
   ```
+
+- **Run Formal Proof Verifications (Lean 4):**
+
+  Through the `pnpm` wrapper:
+
+  ```bash
+  pnpm run verify:lean
+  ```
+
+  Or verify natively without `pnpm` using `lake`:
+
+  ```bash
+  cd lean
+  lake build
+  ```
