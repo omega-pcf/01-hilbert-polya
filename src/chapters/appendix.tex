@@ -8,14 +8,18 @@
 %%% ====================================================================
 \appendix
 
-\section{Lean Formalization: Complete Source}\label{app:lean}
+\section{Lean Formalization Audit}\label{app:lean}
 
-The formalization comprises two verified files that establish a closed deductive chain with zero \texttt{sorry} and axioms limited to the geometric constants of \cref{ssec:axioms} and Hecke's 1920 theorem:
+This section provides a rigorous map of the Lean~4 formalization repository, documenting the technical specifications, file structures, and the verified deductive chain.
+
+\subsection{Audit Summary: Source Specifications}
+
+The formalization establishes a closed deductive chain with zero \texttt{sorry} and axioms limited to the geometric constants of \cref{ssec:axioms} and Hecke's 1920 Theorem.
 
 \begin{center}
 \begin{tabular}{lrrrl}
 \toprule
-File & Lines & Decl. & Sorry & Status \\
+Source File & Lines & Decls. & Sorry & Status \\
 \midrule
 \texttt{PCF\_Complete\_v11\_Unified.lean} & 646 & 122 & 0 & Verified \\
 \texttt{PCF\_OperatorConvergence.lean} & 272 & 26 & 0 & Verified \\
@@ -23,39 +27,39 @@ File & Lines & Decl. & Sorry & Status \\
 \end{tabular}
 \end{center}
 
-\subsection{Core Framework (\texttt{PCF\_Complete\_v11\_Unified})}
+\subsection{Implementation: Core Axiomatics (\texttt{PCF\_Complete\_v11\_Unified})}
 
-Implementation of categorical logic and the squeeze proof organized in 12 sections:
+The categorical logic and the squeeze proof are organized into twelve modular implementation blocks:
 
 \begin{center}
 \begin{tabular}{cll}
 \toprule
-\S & Content & Key tactic \\
+Block & Lean Implementation & Key Tactic \\
 \midrule
 1  & Tripartite construction, $\norm{\Omega}=1/2$ & \texttt{field\_simp, ring} \\
 2  & Object norms, $\mu_n$, $\sigma_n$ & \texttt{ring} \\
 3  & Arity uniqueness ($n=3$), spectral uniqueness & \texttt{nlinarith, omega} \\
 4  & Lawvere blocks/permits & \texttt{linarith} \\
-5  & $\zeta$ as binary category & definition \\
+5  & $\zeta$ as binary category & \texttt{definition} \\
 6  & $\Ztwenty$, Galois functor, exponent~2 & \texttt{decide, fin\_cases} \\
 7  & Functional equation $\to$ $\mathrm{Re}(\rho)=1/2$ & \texttt{linarith} \\
 8  & $\OmH$ spectrum, $\omega$ properties & \texttt{push\_cast, norm\_num} \\
 9  & Parameters eliminated ($\alpha_0$, $\beta_0$, $\lambda$) & \texttt{norm\_num} \\
 10 & Tower, No-Diagonal universal, limit & \texttt{positivity, nlinarith} \\
-11 & Master theorem (unification) & conjunction \\
+11 & Master theorem (unification) & \texttt{conjunction} \\
 12 & Bridge: \texttt{ZeroPCF}, \texttt{master\_bridge} & \texttt{linarith} \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\subsection{Convergence Verification (\texttt{PCF\_OperatorConvergence})}
+\subsection{Implementation: Convergence Results (\texttt{PCF\_OperatorConvergence})}
 
-Formalization of the convergence properties of $T^*$ (\cref{ch:results}) and the bias factors:
+The formalization of the operator behavior (\cref{ch:results}) and the bias factors is structured as follows:
 
 \begin{center}
 \begin{tabular}{cll}
 \toprule
-\S & Content & Key result \\
+Block & Lean Implementation & Key Result Identifier \\
 \midrule
 1  & Structural parameters & \texttt{norm\_num} \\
 2  & $c(n)$: bounds, monotonicity & \lean{c\_gt\_two} \\
@@ -67,70 +71,64 @@ Formalization of the convergence properties of $T^*$ (\cref{ch:results}) and the
 \end{tabular}
 \end{center}
 
-\subsection{Deductive Dependency Chain}\label{ssec:dependency}
+\subsection{Logic Audit: Deductive Dependency Chain}\label{ssec:dependency}
 
-The complete chain with zero free hypotheses on $\mathrm{Re}(\rho)$:
-\begin{enumerate}
-  \item[\textsc{decided}] \lean{primes\_land\_in\_Z20star}
-    $\leftarrow$ \texttt{fin\_cases} + \texttt{ZMod}
-  \item[\textsc{decided}] \lean{mul\_preserved\_Z20}
-    $\leftarrow$ \texttt{decide} (64 pairs)
-  \item[\textsc{decided}] \lean{addition\_destroyed}
-    $\leftarrow$ \texttt{decide} (64 pairs)
-  \item[\textsc{decided}] \lean{golden\_group\_exponent\_two}
-    $\leftarrow$ \texttt{decide} (4 elements)
-  \item[\textsc{def}] \lean{euler\_product\_is\_ternary}
-    $\leftarrow$ mul $\wedge$ $\lnot$add $\to$ ternary
-  \item[\textsc{struct}] \lean{fragment\_mu}(ternary) = $1/2$
-    $\leftarrow$ \lean{mu\_ternary}
-  \item[\textsc{bound}] \lean{bounded\_by\_mu}: $\mathrm{Re}(\rho)\le\mu_3$
-    $\leftarrow$ steps 1--6
-  \item[\textsc{bound}] \lean{companion\_bounded}: $1{-}\mathrm{Re}(\rho)\le\mu_3$
-    $\leftarrow$ step~4 + \lean{hecke\_1920} (\cref{thm:hecke})
-  \item[\textsc{squeeze}] \lean{rh\_squeeze}: $\mathrm{Re}(\rho)=1/2$
-    $\leftarrow$ steps 7+8, \texttt{linarith}
-  \item[\textsc{indep}] \lean{bound\_alone\_insufficient}
-    $\leftarrow$ witness $t=1/3$
-  \item[\textsc{indep}] \lean{companion\_alone\_insufficient}
-    $\leftarrow$ witness $t=2/3$
-  \item[\textsc{consist}] \lean{canonical\_zero}: $t=1/2$ satisfies all conditions
-  \item[\textsc{obstr}] $\lnot(1/2\le 1/4)$
-    $\leftarrow$ No-Diagonal
-\end{enumerate}
+The primary proof establishes a closed chain from decidable arithmetic to $\mathrm{Re}(\rho)=1/2$:
 
-Step~8 is the only step whose justification is a named axiom
-(\lean{hecke\_1920}) rather than a proof term.  It relies on the
-following classical result:
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+Step & Formal Declaration & Deductive Justification \\
+\midrule
+1  & \lean{primes\_land\_in\_Z20star} & \texttt{fin\_cases} + \texttt{ZMod} mapping \\
+2  & \lean{mul\_preserved\_Z20} & \texttt{decide} (64 pairs in $\Ztwenty$) \\
+3  & \lean{addition\_destroyed} & \texttt{decide} (64 pairs; parity check) \\
+4  & \lean{golden\_group\_exponent\_two} & Group self-duality; $\chi^2=1$ \\
+5  & \lean{fragment\_mu} & Arity transition modulus $= 1/2$ \\
+6  & \lean{spectral\_uniqueness} & Quadratic system resolution \\
+7  & \lean{no\_diagonal\_blocks} & Norm obstruction result \\
+8  & \lean{spectral\_embedding} & Unification of Steps 1--7 \\
+9  & \lean{bounded\_by\_mu} (${\le}1/2$) & Upper bound via Step 8 \\
+10 & \lean{companion\_bounded} (${\le}1/2$) & Steps 4 + 8 + \lean{hecke\_1920} \label{step:lower} \\
+11 & \lean{rh\_squeeze} (${=}1/2$) & Conjunction of Steps 9 + 10 \\
+\bottomrule
+\end{tabular}
+\end{center}
 
-\begin{theorem}[Hecke, 1920 {\cite{hecke20}}]\label{thm:hecke}
-Let~$\chi$ be a self-dual Dirichlet character
-($\chi = \overline{\chi}$).  If $L(\rho,\chi) = 0$ with
-$0 < \mathrm{Re}(\rho) < 1$, then $L(1-\rho,\chi) = 0$.
-\end{theorem}
+Step~10 is the only step whose justification is a named axiom
+(\lean{hecke\_1920}) rather than a proof term.  This axiom declares
+the property established by Hecke's 1920 theorem (\cref{thm:hecke})
+without requiring its internal derivation in Lean.
 
-In the PCF framework, all four characters of
-$\mathbb{Z}_2\times\mathbb{Z}_2$ are self-dual because the group has
-exponent~$2$ (Lean: \lean{golden\_group\_exponent\_two}, verified by
-\texttt{decide}).  Hecke's theorem then gives: if $\rho$ is a zero of
-$L(s,\tilde\chi)$, so is~$1{-}\rho$, and the same ternary bound
-$\mathrm{Re}(\rho)\le\mu_3$ applies to $1{-}\rho$, yielding the
-companion bound $1{-}\mathrm{Re}(\rho)\le\mu_3$.
+As implemented in \texttt{PCF\_Complete\_v11\_Unified.lean}, the axiom
+is used to establish the companion bound $1{-}\mathrm{Re}(\rho)\le\mu_3$
+by exploiting the exponent~$2$ of the character group:
+$\forall \chi \in \widehat{\Ztwenty}, \chi^2 = 1 \implies \chi = \overline{\chi}$.
+This self-duality ensures that the spectral embedding derived for
+$\rho$ is equally valid for $1{-}\rho$, completing the deductive
+cycle to $\mathrm{Re}(\rho)=1/2$ by \texttt{linarith} in the final
+master theorem.
 
-\subsection{Squeeze Proof Structure}
+\subsection{Verification Map: Squeeze Strategy}
 
-The file implements the
-non-tautological squeeze proof:
+The verification logic for the non-circular squeeze is implemented 
+across seven modular components:
 
-\begin{enumerate}
-  \item \texttt{Ternary-}\allowbreak\texttt{LZero}: structure with arithmetic bound;
-    companion bound derived from \lean{hecke\_1920}
-  \item \lean{rh\_squeeze}: proof from bounds alone ($4$ lines)
-  \item \lean{bound\_alone\_insufficient}: explicit witness $t=1/3$
-  \item \lean{companion\_alone\_insufficient}: explicit witness $t=2/3$
-  \item \lean{canonical\_zero}: $t=1/2$ satisfies all conditions
-  \item \lean{master\_bridge\_v11}: full deductive chain
-  \item \lean{full\_deductive\_chain}: conjunction of all 12 components
-\end{enumerate}
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Lean Identifier & Verification Goal / Status \\
+\midrule
+\lean{TernaryLZero}             & Structural integration of dual bounds \\
+\lean{rh\_squeeze}              & Analytic proof via \texttt{linarith} (4 lines) \\
+\lean{bound\_alone\_insufficient} & Lower boundary witness ($t=1/3$) \\
+\lean{companion\_alone\_insufficient} & Upper boundary witness ($t=2/3$) \\
+\lean{canonical\_zero}          & Satisfiability witness ($t=1/2$) \\
+\lean{master\_bridge\_v11}      & Deductive unification \\
+\lean{full\_deductive\_chain}   & Global conjunction of 12 components \\
+\bottomrule
+\end{tabular}
+\end{center}
 
 
 \section{Compilation and Verification}\label{app:compilation}

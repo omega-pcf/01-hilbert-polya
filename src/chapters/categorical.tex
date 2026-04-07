@@ -144,25 +144,29 @@ divisibility.
 \end{proof}
 
 \begin{definition}[Arithmetic fragment]\label{def:arith-fragment}
+The arithmetic fragment characterizes the theory through the distinction 
+between two categorical arities~$n$:
 \begin{equation}\label{eq:arith-fragment}
   \mathrm{ArithFragment} :=
-    \mathrm{binary} \mid \mathrm{ternary}.
+    \mathrm{binary}~(n{=}2) \mid \mathrm{ternary}~(n{=}3).
 \end{equation}
-The fragment of $\Ztwenty$ is ternary:
+The unit group $\Ztwenty$ associated with the vigesimal period is ternary:
 \begin{equation}\label{eq:Z20star-fragment}
-  \mathrm{fragment}(\Ztwenty) = \mathrm{ternary}.
+  \mathrm{fragment}(\Ztwenty) = \mathrm{ternary}
+  \qquad (|\Ztwenty| = 2^3).
 \end{equation}
+The cardinality $|\Ztwenty|=8$ identifies the group's combinatorial structure with the third-order hypercube $H_3$, the skeleton of the $n=3$ arity.
 \end{definition}
 
 \begin{proposition}[Fragment modulus]\label{prop:fragment-mu}
+The spectral parameter $\mu$ is uniquely determined by the fragment's arity:
 \begin{equation}\label{eq:fragment-mu-ternary}
-  \mathrm{fragment\_mu}(\mathrm{ternary}) = \tfrac{1}{2}.
+  \mathrm{fragment\_mu}(\mathrm{ternary}) = \mu_3 = \tfrac{1}{2}.
 \end{equation}
 \end{proposition}
 
 \begin{proof}
-The ternary fragment is characterized by the spectral parameter $\mu_3 = 1/2$
-(\cref{eq:mu-ternary}).
+By \cref{eq:mu-n}, the ternary arity ($n=3$) yields $\mu_3 = 2 - 3/2 = 1/2$. This specific fragment modulus corresponds to the $\Met$ level where the diagonal is blocked (\cref{thm:arity-unique}).
 \end{proof}
 
 \begin{remark}
@@ -383,26 +387,27 @@ transition connected by the forgetful functor.
 \end{theorem}
 
 \begin{proof}
-The forgetful functor $U\colon C^*\text{--}\mathbf{Alg} \to \Hilb \to \Met \to \Set$ implements the arity transition, contracting the norm from $\norm{\cdot}_{\text{\textsc{alg}}} = 1$ ($\Set$ level) to $\norm{\Omega}_{\text{\textsc{pcf}}} = 1/2$ ($\Met$ level):
+The forgetful functor chain $U\colon C^*\text{--}\mathbf{Alg} \to \Hilb \to \Met \to \Set$ implements the transitions between the binary and ternary regimes:
 %
 \begin{center}
-\begin{tikzcd}[column sep=3.5em, row sep=1.5em]
-  \underset{\substack{\scriptstyle \text{binary, } \mu_2=1 \\ \scriptstyle \text{diagonal permitted}}}{C^*\text{--}\mathbf{Alg}}
+\begin{tikzcd}[column sep=3.5em, row sep=1.8em]
+  \underset{\scriptscriptstyle \text{Binary arity}}{C^*\text{--}\mathbf{Alg}}
     \arrow[r, "U_1"]
-  & \underset{\scriptstyle \text{both norms}}{\mathbf{Hilb}}
+  & \mathbf{Hilb}
     \arrow[r, "U_2"]
-  & \underset{\substack{\scriptstyle \text{ternary, } \mu_3=1/2 \\ \scriptstyle \text{diagonal blocked}}}{\mathbf{Met}}
+  & \underset{\scriptscriptstyle \text{Ternary arity}}{\mathbf{Met}}
     \arrow[r, "U_3"]
-  & \underset{\substack{\scriptstyle \text{no norm} \\ \scriptstyle \text{diagonal permitted}}}{\mathbf{Set}}
+  & \mathbf{Set}
 \end{tikzcd}
 \end{center}
 %
 \noindent
-The contraction factor is $\mu_2/\mu_3 = 1/(1/2) = 2 = |\ker G|$.
-At $\Set$: $\mu=1$ (no metric constraint); diagonal permitted (\cref{prop:set-level}).
-At $\Hilb$: both norms coexist; diagonal is quadratic (\cref{prop:hilb-level}).
-At $\Met$: $\mu=1/2<1$; diagonal blocked (\cref{prop:met-level}).
-
+The contraction factor is $\mu_2/\mu_3 = 1/(1/2) = 2 = |\ker G|$. The geometric capacity to support self-reference changes at each level:
+\begin{itemize}
+  \item \textbf{At $\Set$ ($n=2$):} $\mu=1$; arity-independent discrete structure. No metric restriction blocks the diagonal morphism (\cref{prop:set-level}).
+  \item \textbf{At $\Hilb$:} Transition level. Norm coexistence of the algebraic unit ($\norm{I}_{\Hilb}=1$) and the metric PCF object ($\norm{\Omega}_{\text{\textsc{pcf}}} = 1/2$; \cref{eq:norm-Omega-half}). The diagonal is quadratic (\cref{prop:hilb-level}).
+  \item \textbf{At $\Met$ ($n=3$):} $\mu=1/2 < 1$; arity-unique obstruction. Lawvere's diagonal is blocked by the contractive bound (\cref{prop:met-level,thm:no-diagonal}).
+\end{itemize}
 \end{proof}
 
 %%% --- Spectral uniqueness ---
@@ -517,10 +522,10 @@ obstruction is not an isolated phenomenon but persists \emph{at every level}
 of the representability tower, growing exponentially stronger.  The tower
 satisfies eight properties, preserved at every level~$k$, that collectively
 constitute the tower convergence theorem.%
-\footnote{The tower limit $\norm{\Omega}_k\to 0$ is a \emph{topological}
-limit of a real sequence (verified by \lean{Omega\_norm\_tendsto\_zero}
-via \texttt{Filter.Tendsto}), not a categorical limit in the sense of
-a universal cone over a diagram.  We use the term ``representability
+\footnote{The tower limit $\norm{\Omega}_k\to 0$ is a \emph{topological} 
+limit of a real sequence (verified by \lean{Omega\_norm\_tendsto\_zero} 
+via \texttt{Filter.Tendsto}), not a categorical limit in the sense of 
+a universal cone over a diagram. We use the term ``representability 
 tower'' to avoid conflation with the categorical notion.}
 
 \begin{definition}[Iterated norm tower]\label{def:Omega-norm-tower}
@@ -612,10 +617,7 @@ and \cref{prop:tower-base}.  (L4) is the strict decrease from
 \cref{thm:zeta-forced}.  The triple equality
 $\mu_3 = \norm{\Omega}_0 = 1/2$ follows from (L5) and
 \cref{eq:mu-ternary}.
-Verified by \lean{categorical\allowbreak \_limit\allowbreak \_theorem} in Lean.%
-\footnote{The Lean declaration retains the name
-\texttt{categorical\allowbreak \_limit\allowbreak \_theorem} for backward compatibility with the
-formalization files.}
+Verified by \lean{categorical\allowbreak \_limit\allowbreak \_theorem} in Lean.
 \end{proof}
 
 

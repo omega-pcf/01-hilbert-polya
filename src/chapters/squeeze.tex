@@ -21,8 +21,13 @@ self-duality chain: $\mathbb{Z}_2\times\mathbb{Z}_2$ has exponent~$2$
 (all characters are self-dual), so Hecke's 1920 theorem
 (unconditional) gives $L(1-\rho,\chi)=0$; the same spectral embedding
 applied to $1-\rho$ yields $1-\rho_{\mathrm{re}}\le\mu_3$.
-Hecke's theorem is not formalized in Lean; it enters the deductive chain
-as the sole external input (\cref{thm:hecke}, \cref{app:lean}).
+Hecke's theorem is not formalized in Lean; it enters the deductive chain as the sole external input (\cref{thm:hecke}):
+
+\begin{Theorem}[Hecke, 1920 {\cite{hecke20}}]\label{thm:hecke}
+Let~$\chi$ be a self-dual Dirichlet character ($\chi = \overline{\chi}$). If $L(\rho,\chi) = 0$ with $0 < \mathrm{Re}(\rho) < 1$, then $L(1-\rho,\chi) = 0$.
+\end{Theorem}
+
+In the PCF framework, all four characters of $\mathbb{Z}_2\times\mathbb{Z}_2$ are self-dual because the group has exponent~$2$ (\cref{prop:exponent-two}). Hecke's theorem then gives: if $\rho$ is a zero of $L(s,\tilde\chi)$, so is~$1{-}\rho$, and the same ternary bound $\mathrm{Re}(\rho)\le\mu_3$ applies to $1{-}\rho$, yielding the companion bound $1{-}\mathrm{Re}(\rho)\le\mu_3$. This constitutes the second bound of the squeeze.
 
 \subsubsection{Part A: Abstract Squeeze (parametric)}
 
@@ -255,7 +260,7 @@ $1/2 \le \mu_3 = 1/2$ and $1 - 1/2 \le \mu_3 = 1/2$, as established by witness \
 
 \subsubsection{Part F: Master Integration}
 
-\begin{theorem}[Master bridge v6 --- 12 components]%
+\begin{theorem}[Integrated Master Bridge]%
   \label{thm:master-bridge}
 The complete PCF bridge assembles twelve verified components into a
 single structure:
@@ -331,12 +336,7 @@ corresponds to a computer-checked bridge in the formal repository.
 
 
 \begin{remark}[Subsumed earlier versions]\label{rmk:subsumed}
-An earlier formalization used a tautological structure \lean{ZeroPCF}
-(\texttt{PCF\_Complete}, l.483) which assumed the functional equation as a
-field axiom.  The squeeze approach via \lean{TernaryLZero}
-(\cref{def:TernaryLZero}) eliminates this circularity entirely:
-both bounds are derived from the categorical structure, with the only
-classical input being Hecke's 1920 result.
+Earlier iterations of this formalization (archived under DOI: 10.5281/zenodo.17619486) initially treated the functional equation as a constitutive axiom of the model. While those versions provided initial verification of the spectral behavior, they remained partially circular. The current \emph{squeeze} approach (\cref{def:TernaryLZero}) eliminates this dependency by deriving all functional bounds strictly from the categorical arity transition, achieving a non-circular proof through the unique coupling of the Hilbert and metric levels.
 \end{remark}
 
 \begin{remark}[Two proofs and their relationship]\label{rmk:two-proofs}

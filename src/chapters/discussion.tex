@@ -9,20 +9,18 @@
 
 \section{Discussion: An Incomplete Garden}\label{sec:discussion}
 
-All references point to definitions and theorems in~\cref{sec:intro,ssec:squeeze}.
-
 The PCF framework constructs an operator~$T^*$ from the decidable
 arithmetic of~$\Ztwenty$, achieving ${}<1.7\%$ error across twelve orders of
 magnitude (\cref{ch:results}), and establishes a closed
 deductive chain to $\mathrm{Re}(\rho)=1/2$ via the squeeze theorem
-(\lean{rh\_squeeze}, \cref{thm:rh-squeeze}).  The chain is formalized in Lean~4 and verified against Mathlib, with axioms limited to the geometric constants of~\cref{ssec:axioms} and \lean{hecke\_1920}. Hecke's 1920
+(\lean{rh_squeeze}, \cref{thm:rh-squeeze}).  The chain is formalized in Lean~4 and verified against Mathlib, with axioms limited to the geometric constants of~\cref{ssec:axioms} and \lean{hecke_1920}. Hecke's 1920
 theorem~\cite{hecke20} (unconditional)---for self-dual
 characters, $L(\rho,\chi)=0\implies L(1-\rho,\chi)=0$---is
 the sole classical axiom; every other axiom is intrinsic to PCF.
 
-The squeeze operates through two independent bounds: \lean{bounded\_by\_mu}
-(a consequence of $\Ztwenty$ arithmetic, verified by \texttt{decide}) and
-\lean{companion\_bounded} (from Hecke's functional equation).  Neither
+The squeeze operates through two independent bounds: \lean{bounded_by_mu}
+(a consequence of $\Ztwenty$ arithmetic, verified by \lean{decide}) and
+\lean{companion_bounded} (from Hecke's functional equation).  Neither
 bound alone forces $1/2$---verified by explicit witnesses
 (\cref{prop:bounds-independent}): a hypothetical zero with
 $\mathrm{Re}(\rho)=1/3$ satisfies the upper bound but violates the
@@ -74,8 +72,8 @@ The squeeze (\cref{thm:rh-squeeze}) shares Weil's logical
 architecture: two independent bounds forcing equality.  Weil obtains
 his bounds from intersection positivity and the functional equation
 on~$C\times C$; the PCF squeeze obtains them from $\Ztwenty$
-arithmetic (\lean{bounded\_by\_mu}) and Hecke self-duality
-(\lean{companion\_bounded}).  The arithmetic
+arithmetic (\lean{bounded_by_mu}) and Hecke self-duality
+(\lean{companion_bounded}).  The arithmetic
 surface---feature~(i) of the template---was not required: the
 categorical mechanism provides both bounds directly, without
 intersection theory or cohomology.
@@ -113,8 +111,8 @@ diagonal construction.  What $G$ preserves---multiplicative closure
 (\cref{prop:fiber-partition}), and the spectral invariant
 $\norm{\Omega}=1/2$---is precisely the structure that~$T^*$ requires.
 
-This complementarity is formalized in Lean: \lean{addition\_destroyed}
-verifies $a+b\notin\Ztwenty$ and \lean{mul\_preserved\_Z20} verifies
+This complementarity is formalized in Lean: \lean{addition_destroyed}
+verifies $a+b\notin\Ztwenty$ and \lean{mul_preserved_Z20} verifies
 $a\cdot b\in\Ztwenty$ for all $a,b\in\Ztwenty$.  The two requirement
 sets---Lawvere's diagonal capacity and the operator's spectral
 input---are not merely distinct but \emph{disjoint}.
@@ -223,7 +221,7 @@ $\mu_3=1/2<1$---the metric condition of~$\Met$, coupled through the
 torus to the Gaussian lattice via $z=\golden\cdot y$
 (\cref{eq:golden-coupling}), transforming hexagonal ($120^\circ$,
 Eisenstein) into square ($90^\circ$, $\Hilb$) angular structure.  The
-non-circularity chain pentagon $\to$ $\golden$ $\to$ $\chi_5$ $\to$
+non-circularity chain geometry (pentagon) $\to \golden \to \chi_5 \to$
 $G$ $\to$ $\Rpcf$ passes through all three levels, and
 $\golden^{\lambda_{\log}}=2$ closes the circuit to the binary world
 where the arity transition operates.
@@ -601,7 +599,7 @@ carries the pentagon's metric content into the spectral domain
 through the Mersenne bridge; the three factors reflect the $S_3$
 symmetry of the triangle, and their eigenvalues inhabit the complex
 plane of the square.  The smooth envelope is thus geometrically
-Whether the same geometric structure, extended beyond the
+determined; whether the same geometric structure, extended beyond the
 deterministic approximation, also governs the fine fluctuations
 requires computation beyond the present scope.
 
