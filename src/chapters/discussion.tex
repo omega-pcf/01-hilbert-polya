@@ -177,17 +177,17 @@ their arithmetic origin.
 \paragraph{The arity transition as Tarski boundary.}
 The preceding numbers measure in bits what the Arity Transition
 Theorem~(\cref{thm:arity-transition}) describes structurally.
-$\Set$ ($\mu_2=1$, \cref{eq:mu-binary}): the world of
+The binary regime ($\Set, \mu_2=1$, \cref{eq:mu-binary}): the world of
 $(\mathbb{Z},+,\times)$, where the diagonal is permitted, Lawvere
 applies, and $H_L = 21$~bits of self-referential capacity are
-available.  $\Met$ ($\mu_3=1/2$, \cref{eq:mu-ternary}):
+available.  The ternary regime ($\Met, \mu_3=1/2$, \cref{eq:mu-ternary}):
 geometry without addition, diagonal blocked, $H_L = 0$.  The
 forgetful functor chain
 $C^*$-$\mathbf{Alg}\to\Hilb\to\Met\to\Set$
 (\cref{ssec:decidability}) implements the Tarski boundary
 categorically: each step of the functor consumes bits of~$H_L$ until
-the diagonal cannot form.  The total cost of crossing from $\Set$ to
-$\Met$ is exactly one Shannon bit: $\log_2(\mu_2/\mu_3)=\log_2 2 = 1$
+the diagonal cannot form.  The total cost of crossing from binary to
+ternary is exactly one Shannon bit: $\log_2(\mu_2/\mu_3)=\log_2 2 = 1$
 (\cref{eq:contraction-factor})---the single binary digit
 separating ``diagonal permitted'' from ``diagonal blocked.''
 
@@ -195,8 +195,8 @@ $\Hilb$ is the level where the conflict becomes visible.  Both norms
 coexist---algebraic ($\norm{I}=1$) and metric
 ($\norm{\Omega}=1/2$)---and the diagonal exists but is quadratic:
 $\Delta(\lambda v) = \lambda^2(v\otimes v)\ne\lambda\Delta(v)$ for
-$\lambda\ne 0,1$.  The functor~$G$ carries primes from $\Set$
-($H_L=21$) to $\Met$ ($H_L=0$), destroying addition semantically
+$\lambda\ne 0,1$.  The functor~$G$ carries the Euler product from the binary regime
+($\Set, H_L=21$) to the ternary regime ($\Met, H_L=0$), destroying addition semantically
 along the way---precisely the crossing that the squeeze theorem
 requires to force $\mathrm{Re}(\rho)=1/2$.
 In sum, the bits of~$H_L$ measure what the forgetful functor consumes in

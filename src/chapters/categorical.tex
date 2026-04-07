@@ -94,14 +94,14 @@ but \emph{not} under addition:
 \begin{proof}
 Multiplication: $\Ztwenty$ is the group of units of
 $\mathbb{Z}/20\mathbb{Z}$; closure under multiplication is the group
-axiom.  Stronger: verified exhaustively for all $8\times 8 = 64$ pairs
-by \lean{decide} in Lean.
+axiom.  The formal integrity of this closure is established
+exhaustively for all $8\times 8 = 64$ pairs by \lean{decide} in Lean.
 
 Addition: every element of $\Ztwenty$ is odd.  The sum of two odd
 numbers is even, hence divisible by~$2$, hence not coprime to
 $20=4\times 5$, hence not in~$\Ztwenty$.  Concretely, $1+3=4\notin\Ztwenty$.
-Verified for all 64 pairs by \lean{decide}.
-\end{proof}
+The failure of additive closure is likewise verified exhaustively
+for all 64 pairs by \lean{decide}. \end{proof}
 
 \begin{proposition}[Exponent two]\label{prop:exponent-two}
 The Galois group $G\cong\mathbb{Z}_2\times\mathbb{Z}_2$ satisfies:
@@ -383,7 +383,7 @@ transition connected by the forgetful functor.
 \end{theorem}
 
 \begin{proof}
-The forgetful functor $U\colon C^*\text{--}\mathbf{Alg} \to \Hilb \to \Met$ contracts the norm from $\norm{\cdot}_{\text{\textsc{alg}}} = 1$ ($\Set$ level) to $\norm{\Omega}_{\text{\textsc{pcf}}} = 1/2$ ($\Met$ level):
+The forgetful functor $U\colon C^*\text{--}\mathbf{Alg} \to \Hilb \to \Met \to \Set$ implements the arity transition, contracting the norm from $\norm{\cdot}_{\text{\textsc{alg}}} = 1$ ($\Set$ level) to $\norm{\Omega}_{\text{\textsc{pcf}}} = 1/2$ ($\Met$ level):
 %
 \begin{center}
 \begin{tikzcd}[column sep=3.5em, row sep=1.5em]
@@ -399,12 +399,10 @@ The forgetful functor $U\colon C^*\text{--}\mathbf{Alg} \to \Hilb \to \Met$ cont
 %
 \noindent
 The contraction factor is $\mu_2/\mu_3 = 1/(1/2) = 2 = |\ker G|$.
-At $\Set$: $\mu=1$, diagonal permitted
-(\cref{prop:set-level}).
-At $\Hilb$: both norms coexist, diagonal is quadratic
-(\cref{prop:hilb-level}).
-At $\Met$: $\mu=1/2<1$, diagonal blocked
-(\cref{prop:met-level}).
+At $\Set$: $\mu=1$ (no metric constraint); diagonal permitted (\cref{prop:set-level}).
+At $\Hilb$: both norms coexist; diagonal is quadratic (\cref{prop:hilb-level}).
+At $\Met$: $\mu=1/2<1$; diagonal blocked (\cref{prop:met-level}).
+
 \end{proof}
 
 %%% --- Spectral uniqueness ---
