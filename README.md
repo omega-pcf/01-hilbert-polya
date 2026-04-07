@@ -6,8 +6,8 @@
 **Between $\mathbb{F}_1$, String Theory, and Ancient Geometry**
 
 ## Authors
-**Jorge Armando González García**¹, **Víctor Manuel González García**¹, **Itzel Marion Dressler Pérez**², **Luz María García Ordóñez**¹, **M. Moreno**²
 
+**Jorge Armando González García**¹, **Víctor Manuel González García**¹, **Itzel Marion Dressler Pérez**², **Luz María García Ordóñez**¹, **M. Moreno**²
 
 ¹ *TTAMAYO PUNTO COM, S.A.P.I. de C.V., Mexico*
 ² *Independent Researcher*
@@ -52,11 +52,13 @@ Code used to verify the spectral predictions and structural isomorphisms.
 - **`lean/PCF_Complete_v11_Unified.lean`**: Formal Lean 4 proof of the categorical foundation and the Hecke-1920 spectral squeeze.
 - **`lean/PCF_OperatorConvergence.lean`**: Spectral convergence proofs and absolute geometry verification.
 
-### Performance and Components
+For comprehensive environment setup instructions—including Node.js/pnpm, Python/uv, Lean 4, and the Dockerized LaTeX compilation suite—please refer to our **[Installation & Requirements Guide](docs/installation.md)**.
 
-This project uses a dual verification approach: formal logic (Lean 4) and numerical analysis (Python/mpmath).
+### Verification Framework
 
-To run the complete verification suite:
+This project uses a rigorous dual-verification approach to ensure the theoretical and computational mathematical soundness of the construction: formal logic proofs (Lean 4) and high-precision numerical analysis (Python/mpmath).
+
+To run the complete verification suite natively:
 
 ```bash
 pnpm run verify
