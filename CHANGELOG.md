@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.19](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.18...v1.5.19) (2026-04-07)
+
+### Bug Fixes
+
+* **docs:** remove duplicate Eq prefix in methods chapter ([4ef03cf](https://github.com/omega-pcf/01-hilbert-polya/commit/4ef03cfb0b6e05dc23a100bcae74ea498d5a776d))
+
+### Documentation
+
+* add installation instructions and improve README wording ([c4fd655](https://github.com/omega-pcf/01-hilbert-polya/commit/c4fd65524f75aadf8958a622066c9fcb49b986ff))
+* correct historical publication years and citations for factual consistency ([d2b6d84](https://github.com/omega-pcf/01-hilbert-polya/commit/d2b6d84c833dcb3db6e366a09ea88b364530f6b4))
+* remove 'cited in' phrase from Schubring citation ([0e541b4](https://github.com/omega-pcf/01-hilbert-polya/commit/0e541b4184ccbc66b6e4665160087828f266d27b))
+
 ## [1.5.18](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.14...v1.5.18) (2026-04-06)
 
 ### Documentation
