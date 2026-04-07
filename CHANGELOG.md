@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.5.21](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.20...v1.5.21) (2026-04-07)
+
+### Bug Fixes
+
+* **manuscript:** redefine lean macro to allow automatic line breaks ([ea78af3](https://github.com/omega-pcf/01-hilbert-polya/commit/ea78af35f296f8d915aef512afe436d3305f5174))
+* **manuscript:** update Grisales Herrera bib entry with verified Zenodo DOI ([7d8b761](https://github.com/omega-pcf/01-hilbert-polya/commit/7d8b761899fd2c42eaa5c9d98ddcaaa2b608b349))
+
+### Documentation
+
+* restore pentagonal geometry derivations and technical narrative ([ddc49b8](https://github.com/omega-pcf/01-hilbert-polya/commit/ddc49b8281b64190332630ecf4d56620965f2eaf))
+* standardize formal Lean identifiers and remove manual escapes ([a33e5da](https://github.com/omega-pcf/01-hilbert-polya/commit/a33e5da682c2ba2ec2e5f8ce423990470aad8e76))
+
+### Refinements
+
+* finalize categorical formalism and non-circularity verification ([06600e2](https://github.com/omega-pcf/01-hilbert-polya/commit/06600e2e88ffcef635194bbde90047bd38c47cc7))
+
 ## [1.5.20](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.19...v1.5.20) (2026-04-07)
 
 ### Bug Fixes
