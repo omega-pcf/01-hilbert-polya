@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.22](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.21...v1.5.22) (2026-04-07)
+
+### Documentation
+
+* **manuscript:** acknowledge GitHub (Microsoft) for open-source infrastructure ([7f99e22](https://github.com/omega-pcf/01-hilbert-polya/commit/7f99e2225db31e052ddefd6e7dc607d4657669d4))
+* **manuscript:** recognize deterministic automation pipeline and npm ecosystem ([c985c6a](https://github.com/omega-pcf/01-hilbert-polya/commit/c985c6a51990aee691bfbacdbc9c21f52f1b494f))
+* **manuscript:** recognize Linus Torvalds for Git in acknowledgments ([10216aa](https://github.com/omega-pcf/01-hilbert-polya/commit/10216aaea09fc3483d41af009b971ee5242e308e))
+* **manuscript:** recognize Matilde Marcolli in acknowledgments ([bff31de](https://github.com/omega-pcf/01-hilbert-polya/commit/bff31de06509d5eb6ec434aec4da027d90ea43dd))
+* **manuscript:** recognize uv ecosystem in reproducibility framework ([79d3c6d](https://github.com/omega-pcf/01-hilbert-polya/commit/79d3c6d75946fd171e0cb2f1d697a0b2ef9b2986))
+* **manuscript:** refine GitHub acknowledgment phrasing ([1cf4dd1](https://github.com/omega-pcf/01-hilbert-polya/commit/1cf4dd1d5a71e4552d75463d79fba6253d552fd8))
+* **manuscript:** refine Google Colab acknowledgment for reproducibility ([01c7c65](https://github.com/omega-pcf/01-hilbert-polya/commit/01c7c65264da9402c9541501221a618afc06f892))
+* **manuscript:** refine Lean FRO acknowledgment and recognize Leonardo de Moura ([6e22fb9](https://github.com/omega-pcf/01-hilbert-polya/commit/6e22fb9cc0fc17320e52d3caa2f531083a05ff8b))
+
 ## [1.5.21](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.20...v1.5.21) (2026-04-07)
 
 ### Bug Fixes
