@@ -44,7 +44,7 @@ This repository contains the LaTeX source files for the manuscript and the compu
   - `appendix.tex`: Lean 4 formalization source and full bibliography.
 - **`src/bibliography.bib`**: References (original bib file).
 
-### Verification Suite
+### Verification Source Files
 
 Code used to verify the spectral predictions and structural isomorphisms.
 
@@ -54,7 +54,7 @@ Code used to verify the spectral predictions and structural isomorphisms.
 
 For comprehensive environment setup instructions—including Node.js/pnpm, Python/uv, Lean 4, and the Dockerized LaTeX compilation suite—please refer to our **[Installation & Requirements Guide](docs/installation.md)**.
 
-### Verification Framework
+## Verification Execution
 
 This project uses a rigorous dual-verification approach to ensure the theoretical and computational mathematical soundness of the construction: formal logic proofs (Lean 4) and high-precision numerical analysis (Python/mpmath).
 
