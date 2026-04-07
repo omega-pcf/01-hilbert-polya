@@ -113,7 +113,7 @@ Three features distinguish this error profile from a generic numerical fit:
 \\
 \emph{(b)} \textbf{Bounded error.}  The absolute relative error $|T^*(n) - t_n|/t_n$ is bounded above by $0.017$ across all 125~verified zeros spanning twelve orders of magnitude.
 \\
-\emph{(c)} \textbf{Parameter rigidity.}  Every parameter in $T^*(n)$ is structurally determined (\cref{ssec:non-circularity}). The values $\{\mu, \sigma, \alpha_0, \beta_0\}$ are not free variables adjusted to minimize spectral error, but unique consequences of the PCF geometry (e.g., the ternary contraction $|\ker G|=2$ and $S_3$ symmetry). The error profile is thus an emergent property of the interaction between fixed pentagonal invariants and the leading-order Riemann--von~Mangoldt asymptotics.
+\emph{(c)} \textbf{Parameter rigidity.}  Every parameter in $T^*(n)$ is structurally determined (\cref{ssec:non-circularity}). The values $\{\mu, \sigma, \alpha_0, \beta_0\}$ are not free variables adjusted to minimize spectral error, but unique consequences of the PCF geometry (e.g., the pentagonal contraction $|\ker G|=2$ and $S_3$ symmetry). The error profile is thus an emergent property of the interaction between fixed algebraic invariants and the leading-order Riemann--von~Mangoldt asymptotics.
 
 
 
@@ -157,8 +157,8 @@ Each factor has a definite asymptotic character:
 \toprule
 Factor & Expression & Limit & Approach \\
 \midrule
-I   & $c(n)/2$ & $1$ & from above ($c > 2$ always; \lean{c\_gt\_two}) \\
-II  & $\ln n/\ln(n/2{+}3/2)$ & $1$ & from above (\lean{bias\_factor\_II\_gt\_one}) \\
+I   & $c(n)/2$ & $1$ & from above ($c > 2$ always; \lean{c_gt_two}) \\
+II  & $\ln n/\ln(n/2{+}3/2)$ & $1$ & from above (\lean{bias_factor_II_gt_one}) \\
 III & $t_n^{\mathrm{RvM}}/t_n$ & $1$ & from below (RvM correction terms) \\
 \bottomrule
 \end{tabular}
