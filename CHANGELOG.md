@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.5.20](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.19...v1.5.20) (2026-04-07)
+
+### Bug Fixes
+
+* **docs:** remove remaining duplicate Eq prefixes in methods/categorical ([307c82a](https://github.com/omega-pcf/01-hilbert-polya/commit/307c82a95755e59884d6c4094204ec2a5beb8aad))
+
+### Documentation
+
+* add native lake instructions for Lean verification ([802f00a](https://github.com/omega-pcf/01-hilbert-polya/commit/802f00af1a187a6b97fd34a8e5972c0ee6c6ff9e))
+* **readme:** resolve semantic repetition in verification headings ([7ebf5fc](https://github.com/omega-pcf/01-hilbert-polya/commit/7ebf5fca02a077f0a88de6023782354fd942dca5))
+
 ## [1.5.19](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.18...v1.5.19) (2026-04-07)
 
 ### Bug Fixes
