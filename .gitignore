@@ -2,6 +2,8 @@
 .DS_Store
 /*.code-workspace
 
+/tmp
+
 # LaTeX auxiliary files (but keep PDF for Zenodo)
 build/*.aux
 build/*.bbl

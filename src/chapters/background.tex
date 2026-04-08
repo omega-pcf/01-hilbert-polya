@@ -44,7 +44,7 @@ that this paper exploits.
 
 \subsubsection{The geometric modulus: from Vitruvius to Farish}\label{sec:vitruvian}
 
-The fundamental idea of parameterizing families of geometric objects through equivalence relations---where distinct objects sharing structural properties are organized into parametric classes---has conceptual precedents that predate modern formalization. These historical precedents range from the classification of conics by Apollonius~\cite{apollonius} (c.~200~BCE), through the focus-directrix characterization with eccentricity parameters of Pappus~\cite{pappus} (c.~320~CE), to the projective perspective transformations of Alberti~\cite{alberti}, the systematization of orthogonal projections by Monge~\cite{monge1811geometrie}, and the formalization of isometric projection by Farish~\cite{farish22}. All these developments---classifications by geometric transformations or projections---anticipate the conceptual basis of modern moduli spaces.
+The conceptual foundation of modern moduli spaces—the parameterization of families of geometric objects through equivalence relations—has precedents in antiquity that establish the organizational logic of parametric classes. These lineages range from the classification of conics by Apollonius~\cite{apollonius} (c.~200~BCE), who organized curves through intersection properties, to the focus--directrix characterization with eccentricity parameters of Pappus~\cite{pappus} (c.~320~CE). This geometric tradition of defining a family of objects through a single parameterizing unit anticipates the conceptual basis of the modulus idea, which Vitruvius would first apply to structural proportionality.
 
 In modern mathematics, the moduli space~$\mathcal{M}_g$ classifies
 Riemann surfaces of genus~$g$ up to conformal equivalence---each point
@@ -361,7 +361,7 @@ formalization}\label{ssec:decidability}
 
 The introduction (\cref{ssec:circumvention}) identified three circumvention strategies
 for the self-referential paradoxes that Lawvere--Yanofsky~\cite{lawvere69,yanofsky03} unified:
-Russell's type stratification~\cite{priest79}, and Tarski's
+Russell's type stratification~\cite{russell08}, Priest's paraconsistency~\cite{priest79}, and Tarski's
 decidable geometry~\cite{tarski52}.  The connection between these strategies was
 characterized as a ``geometric escape''---a domain that is decidable
 (Tarski), stratified (Russell), and therefore immune to the diagonal
@@ -452,12 +452,12 @@ functor $\mathcal{M}_g$ classifying families of Riemann surfaces is
 the precise categorical realization of Riemann's original concept.
 
 \emph{The site and topos.}  Grothendieck's generalized topology
-(SGA~\cite{grothendieck_sga4} replaces open sets with covering families of morphisms.  A
+(SGA~\cite{grothendieck_sga4}) replaces open sets with covering families of morphisms.  A
 topos---a category with the logical structure of $\Set$ but different
 geometry---provides a framework where ``spaces'' can exist that have no
 classical point-set realization.  This is precisely the framework that
 $\mathbb{F}_1$-geometry would later require: spaces over the ``field
-with one element'' (Tits~\cite{soule03}) that exist as functors rather than classical
+with one element'' (Tits~\cite{tits56}, Soul\'e~\cite{soule03}) that exist as functors rather than classical
 geometric objects.  Borger's~\cite{borger09} identification of $\Lambda$-ring
 structures as $\mathbb{F}_1$-descent data (\cref{ssec:convergence})
 globalizes to what he describes as the big \'etale topos
@@ -631,10 +631,10 @@ any algebraic element.
 fields}\label{ssec:weil}
 
 The introduction (\cref{ssec:double-obstruction}) established that the Riemann Hypothesis is
-a theorem for function fields (Hasse~\cite{hasse34}, Weil~\cite{weil48})
+a theorem for function fields (Hasse~\cite{hasse34}, Weil~\cite{weil48}, Deligne~\cite{deligne74})
 and that the aspiration to transport this proof
 from~$\mathbb{F}_q$ to~$\mathbb{Z}$ motivates the
-$\mathbb{F}_1$-program.  The proof for general varieties over finite fields (the Weil conjectures) was completed by Deligne~\cite{deligne74} using the \'etale cohomology framework developed by Serre~\cite{serre55} and Grothendieck~\cite{grothendieck1960elements}.  We develop here the \emph{technical
+$\mathbb{F}_1$-program.  The proof for general varieties was completed by Deligne using the \'etale framework of Serre~\cite{serre55} and Grothendieck~\cite{grothendieck1960elements}.  We develop here the \emph{technical
 mechanism} of Weil's proof, because it is the template that the
 categorical construction of~\cref{sec:categorical} reproduces.
 
