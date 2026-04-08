@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.5.23](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.22...v1.5.23) (2026-04-08)
+
+### Bug Fixes
+
+* technical documentation and bibliographic integrity audit ([8fd108f](https://github.com/omega-pcf/01-hilbert-polya/commit/8fd108f9b247ef2687148b78eb444f560f218c85))
+
+### Documentation
+
+* update recommended citation and Zenodo DOI badges ([91dfcbb](https://github.com/omega-pcf/01-hilbert-polya/commit/91dfcbbca8595944e5b29a9a565334995ceb5fa6))
+
 ## [1.5.22](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.21...v1.5.22) (2026-04-07)
 
 ### Documentation
