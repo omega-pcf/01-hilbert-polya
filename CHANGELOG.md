@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.5.29](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.28...v1.5.29) (2026-04-08)
+
+### Bug Fixes
+
+* technical audit corrections (non-circularity chain, ref upgrades, figure labels) ([9e18a94](https://github.com/omega-pcf/01-hilbert-polya/commit/9e18a945c52166715685c84d0444565d81024ab9))
+
+### Refinements
+
+* technical precision in captions and extension argument ([bb86567](https://github.com/omega-pcf/01-hilbert-polya/commit/bb865673161422e39fb0ae069970331962cd1b45))
+
 ## [1.5.28](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.27...v1.5.28) (2026-04-08)
 
 ## [1.5.27](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.26...v1.5.27) (2026-04-08)
