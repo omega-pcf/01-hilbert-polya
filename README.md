@@ -1,9 +1,7 @@
-# The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane
+# The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17619486.svg)](https://doi.org/10.5281/zenodo.17619486)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KExRnNtx91TjVyYD0FlcB_TLQwZB4GKq?usp=sharing)
-
-**Between $\mathbb{F}_1$, String Theory, and Ancient Geometry**
 
 ## Authors
 
@@ -106,7 +104,7 @@ pdflatex main
 
 ## Citation
 
-González García, J. A., González García, V. M., Dressler Pérez, I. M., García Ordóñez, L. M., & Moreno, M. (2026). The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between F1, String Theory, and Ancient Geometry. Zenodo. <https://doi.org/10.5281/zenodo.17619486>
+González García, J. A., González García, V. M., Dressler Pérez, I. M., García Ordóñez, L. M., & Moreno, M. (2026). The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry. Zenodo. <https://doi.org/10.5281/zenodo.17619486>
 
 ## License
 
