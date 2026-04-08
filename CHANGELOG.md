@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.5.26](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.25...v1.5.26) (2026-04-08)
+
+### Bug Fixes
+
+* remove remaining oort91 residues in favor of oort14 and arthur89 ([7f080a0](https://github.com/omega-pcf/01-hilbert-polya/commit/7f080a09cf6782c70f52666ef85074a3ed0d595f))
+
+### Documentation
+
+* final structural polish and SIGMA class compliance cleanup ([a074633](https://github.com/omega-pcf/01-hilbert-polya/commit/a0746330fd4bb071513dd5083663444b6bb31a8f))
+
+### Refinements
+
+* comprehensive historical and bibliographic synchronization ([cf2130e](https://github.com/omega-pcf/01-hilbert-polya/commit/cf2130e9df665f15cd7cfdd8cfd79ae269ef6c68))
+* finalize historical narrative and bibliographic precision ([a3c5647](https://github.com/omega-pcf/01-hilbert-polya/commit/a3c5647bd7c100da5870d0c2830dafbed37cf969))
+* optimize introduction and background structural flow ([db039f1](https://github.com/omega-pcf/01-hilbert-polya/commit/db039f12d19d747661052c1864cd64a72a274460))
+
 ## [1.5.25](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.23...v1.5.25) (2026-04-08)
 
 ### Styles
