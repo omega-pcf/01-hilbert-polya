@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.24](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.23...v1.5.24) (2026-04-08)
+
+### Styles
+
+* set global line spacing to 1.5 ([5cc523e](https://github.com/omega-pcf/01-hilbert-polya/commit/5cc523e6e5742bd69c630b362c405af908349f7f))
+
 ## [1.5.23](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.22...v1.5.23) (2026-04-08)
 
 ### Bug Fixes
