@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.5.25](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.23...v1.5.25) (2026-04-08)
+
+### Styles
+
+* set global line spacing to 1.5 ([5cc523e](https://github.com/omega-pcf/01-hilbert-polya/commit/5cc523e6e5742bd69c630b362c405af908349f7f))
+
+### Documentation
+
+* acknowledge PyPI in technical ecosystem ([72c87cd](https://github.com/omega-pcf/01-hilbert-polya/commit/72c87cd4352044f3a4e2571b7af48e4070a0a43a))
+
 ## [1.5.24](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.23...v1.5.24) (2026-04-08)
 
 ### Styles
