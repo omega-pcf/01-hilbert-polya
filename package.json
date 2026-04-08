@@ -1,7 +1,7 @@
 {
   "name": "@omega-pcf/01-hilbert-polya",
   "version": "1.5.26",
-  "description": "The Hilbert Pólya Operator and the Primitive Structure of the Complex Plane: Between F1, String Theory, and Ancient Geometry",
+  "description": "The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between F1, String Theory, and Ancient Geometry",
   "type": "module",
   "scripts": {
     "type-check": "tsc --noEmit",
@@ -32,7 +32,7 @@
   },
   "keywords": [
     "Riemann hypothesis",
-    "Hilbert-Pólya conjecture",
+    "Hilbert--Pólya conjecture",
     "L-functions",
     "Self-adjoint operators",
     "Random matrix theory",
