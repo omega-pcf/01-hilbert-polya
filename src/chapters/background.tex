@@ -44,7 +44,7 @@ that this paper exploits.
 
 \subsubsection{The geometric modulus: from Vitruvius to Farish}\label{sec:vitruvian}
 
-The conceptual foundation of modern moduli spaces—the parameterization of families of geometric objects through equivalence relations—has precedents in antiquity that establish the organizational logic of parametric classes. These lineages range from the classification of conics by Apollonius~\cite{apollonius} (c.~200~BCE), who organized curves through intersection properties, to the focus--directrix characterization with eccentricity parameters of Pappus~\cite{pappus} (c.~320~CE). This geometric tradition of defining a family of objects through a single parameterizing unit anticipates the conceptual basis of the modulus idea, which Vitruvius would first apply to structural proportionality.
+The conceptual foundation of modern moduli spaces—the parameterization of families of geometric objects through equivalence relations—has precedents in antiquity that establish the organizational logic of parametric classes. These lineages range from the classification of conics by Apollonius~\cite{apollonius} (c.~200~BCE), who organized curves through intersection properties, to the focus--directrix characterization with eccentricity parameters of Pappus~\cite{pappus} (c.~320~CE). This geometric tradition of defining a family of objects through a single parameterizing unit anticipates the conceptual basis of the modulus idea, which Vitruvius~\cite{vitruvius_de_arch} and Pacioli~\cite{pacioli1509}---whose \emph{De Divina Proportione} codified~$\golden$ as an architectural principle---would apply to structural proportionality.
 
 In modern mathematics, the moduli space~$\mathcal{M}_g$ classifies
 Riemann surfaces of genus~$g$ up to conformal equivalence---each point
@@ -235,8 +235,7 @@ The complex plane admits three equivalent representations, each
 emphasizing different structural aspects:
 (i)~Euclidean: $\mathbb{C} \cong (\mathbb{R}^2, d_{\mathrm{eucl}})$
 with metric $d(z_1, z_2) = |z_1 - z_2|$;
-(ii)~Algebraic: $\mathbb{C} = \{x + iy : x, y \in \mathbb{R}\}$
-with field operations;
+(ii)~Algebraic: $\mathbb{C} = \mathbb{R}[x]/(x^2+1)$, a quotient of the polynomial ring in the sense of Noether~\cite{noether21}, emphasizing field operations;
 (iii)~Polar: $\mathbb{C} \cong \mathbb{R}_+ \times S^1$, separating
 magnitude from phase.
 
@@ -631,10 +630,7 @@ any algebraic element.
 fields}\label{ssec:weil}
 
 The introduction (\cref{ssec:double-obstruction}) established that the Riemann Hypothesis is
-a theorem for function fields (Hasse~\cite{hasse34}, Weil~\cite{weil48}, Deligne~\cite{deligne74})
-and that the aspiration to transport this proof
-from~$\mathbb{F}_q$ to~$\mathbb{Z}$ motivates the
-$\mathbb{F}_1$-program.  The proof for general varieties was completed by Deligne using the \'etale framework of Serre~\cite{serre55} and Grothendieck~\cite{grothendieck1960elements}.  We develop here the \emph{technical
+a theorem for function fields (Hasse~\cite{hasse34}, Weil~\cite{weil40,weil48}, Deligne~\cite{deligne74} (1974) using the intersection form and the Lefschetz trace formula~\cite{milne15,oort14}). This geometric program for function fields was subsequently completed for $GL_n$ by the work of Drinfeld~\cite{drinfeld77} and Lafforgue~\cite{lafforgue02} via the Langlands correspondence---whose arithmetic branch produced Wiles's proof~\cite{wiles95}---and the Arthur--Selberg trace formula~\cite{arthur89}. The proof for general varieties was completed by Deligne using the \'etale framework of Serre~\cite{serre55} and Grothendieck~\cite{grothendieck1960elements}.  We develop here the \emph{technical
 mechanism} of Weil's proof, because it is the template that the
 categorical construction of~\cref{sec:categorical} reproduces.
 
@@ -648,7 +644,7 @@ $\#C(\mathbb{F}_{q^m}) = 1 - \sum_{i=1}^{2g}\alpha_i^m + q^m$,
 where the $\alpha_i$ are the eigenvalues of Frobenius acting on
 the first \'etale cohomology group $H^1_{\text{\'et}}(C, \mathbb{Q}_\ell)$.
 The Riemann Hypothesis for~$C$ is the statement
-$|\alpha_i| = q^{1/2}$ for all~$i$---the analogue of
+$|\alpha_i| = q^{1/2}$~\cite{oort14,milne15} for all~$i$---the analogue of
 $\mathrm{Re}(\rho) = 1/2$.
 
 Weil's proof proceeds geometrically.  He constructs the arithmetic
