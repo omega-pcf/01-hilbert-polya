@@ -16,10 +16,12 @@
   "packageManager": "pnpm@9.0.0",
   "private": true,
   "devDependencies": {
+    "@iarna/toml": "^2.2.5",
     "@release-it/bumper": "^7.0.0",
     "@release-it/conventional-changelog": "^10.0.6",
     "@types/node": "^20.0.0",
     "conventional-changelog-conventionalcommits": "^9.3.1",
+    "conventional-commits-parser": "^6.4.0",
     "dotenv-cli": "^11.0.0",
     "release-it": "^19.2.4",
     "tsx": "^4.0.0",
