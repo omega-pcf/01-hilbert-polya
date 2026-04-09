@@ -18,11 +18,9 @@ build/*.run.xml
 build/*.suppinfo
 build/*.synctex*
 !build/*.pdf
-
 # Node
 node_modules/
-package-lock.json
-pnpm-lock.yaml
+
 
 # TypeScript
 dist/
