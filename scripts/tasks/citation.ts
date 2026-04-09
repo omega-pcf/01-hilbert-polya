@@ -1,6 +1,5 @@
 import { parse, stringify } from 'yaml';
-import { readFileSync, writeFileSync, existsSync, unlinkSync } from 'fs';
-import { execSync } from 'child_process';
+import { readFileSync, writeFileSync, existsSync } from 'fs';
 import type { CitationFile, ZenodoMetadata, RelatedIdentifier } from '../types.js';
 
 const CITATION_PATH = 'CITATION.cff';
@@ -86,8 +85,7 @@ export function generateZenodoJson(): void {
     console.log(`✓ Successfully synchronized ${ZENODO_PATH} with ${CITATION_PATH}`);
 
   } catch (error) {
-    console.error('  Failed to synchronized Zenodo metadata:', error instanceof Error ? error.message : error);
+    console.error('  Failed to synchronize Zenodo metadata:', error instanceof Error ? error.message : error);
     throw error;
   }
 }
-

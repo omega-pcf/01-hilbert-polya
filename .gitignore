@@ -18,9 +18,9 @@ build/*.run.xml
 build/*.suppinfo
 build/*.synctex*
 !build/*.pdf
+
 # Node
 node_modules/
-
 
 # TypeScript
 dist/
