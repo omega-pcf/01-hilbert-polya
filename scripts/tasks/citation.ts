@@ -5,7 +5,6 @@ import type { CitationFile, ZenodoMetadata, RelatedIdentifier } from '../types.j
 
 const CITATION_PATH = 'CITATION.cff';
 const ZENODO_PATH = '.zenodo.json';
-const CFFCONVERT_IMAGE = 'citationcff/cffconvert:latest';
 
 export function updateCitationDate(version: string): void {
   if (!existsSync(CITATION_PATH)) {
@@ -23,7 +22,7 @@ export function updateCitationDate(version: string): void {
 }
 
 /**
- * Generates .zenodo.json from CITATION.cff using cffconvert (via uv).
+ * Generates .zenodo.json from CITATION.cff using native YAML parsing.
  * Preserves Zenodo-specific fields while syncing common metadata.
  */
 export function generateZenodoJson(): void {

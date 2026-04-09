@@ -6,7 +6,7 @@
 - **@release-it/bumper**: Synchronizes version `package.json` → `CITATION.cff`.
 - **TypeScript + tsx**: Orchestration scripts (build, metadata generation).
 - **Docker** (`kjarosh/latex:2024.4-full`): Reproducible LaTeX compilation.
-- **cffconvert** (via Docker): Generates `.zenodo.json` from `CITATION.cff`.
+- **Native Metadata Sync**: Generates `.zenodo.json` from `CITATION.cff` directly.
 - **Zenodo webhook**: Automatic integration from GitHub.
 
 ## Flow
@@ -17,7 +17,7 @@ pnpm run release
   
   → after:bump:
     → pnpm run generate:figures
-    → pnpm run generate:zenodo: cffconvert from CITATION.cff to .zenodo.json
+    → pnpm run generate:zenodo: Native mapping from CITATION.cff to .zenodo.json
     → pnpm run build: orchestration script
       → cleanup: removes previous document-v*.pdf
       → citation: updates date-released in CITATION.cff
@@ -64,6 +64,6 @@ scripts/
 - `CITATION.cff` version (via @release-it/bumper).
 - `CITATION.cff` date-released (via build.ts).
 - `CITATION.cff` languages (source of truth for Zenodo).
-- `.zenodo.json` version and content (generated from `CITATION.cff` via `pnpm run generate:zenodo`).
+- `.zenodo.json` version and content (generated from `CITATION.cff` via Native Sync).
 
 **Zenodo:** Reads `.zenodo.json` from the tag, creates a version under the same Concept DOI.

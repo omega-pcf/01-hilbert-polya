@@ -42,7 +42,12 @@ export default {
           path: 'version',
           type: 'text/yaml',
         },
-        // .zenodo.json is now generated from CITATION.cff via cffconvert
+        {
+          file: 'pyproject.toml',
+          path: 'project.version',
+          type: 'text/toml'
+        },
+        // .zenodo.json is now generated from CITATION.cff via Native Sync
         // in scripts/tasks/citation.ts, so we don't update it here
       ],
     },
