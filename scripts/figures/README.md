@@ -110,7 +110,7 @@ uv sync
 
 ## Output
 
-By default, figures are saved to `src/images/` (relative to project root).
+By default, figures are saved to `images/` (relative to project root).
 
 Each generator can create one or more figures. The default format is PNG at 300 DPI, suitable for academic publication.
 

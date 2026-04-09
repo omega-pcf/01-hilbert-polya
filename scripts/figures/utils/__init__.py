@@ -32,7 +32,7 @@ matplotlib.rcParams.update({
     # Resolution and format
     "figure.dpi": 300,
     "savefig.dpi": 300,
-    "savefig.format": "png",
+    "savefig.format": "pdf",
     "savefig.bbox": "tight",
     "savefig.pad_inches": 0.1,
     
@@ -87,7 +87,7 @@ def save_figure(
         verbose: If True, show information
     """
     if formats is None:
-        formats = ["png", "svg", "pdf"]
+        formats = ["pdf", "svg"]
     
     output_path.parent.mkdir(parents=True, exist_ok=True)
     

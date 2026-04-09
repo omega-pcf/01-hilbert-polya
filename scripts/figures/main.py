@@ -65,8 +65,8 @@ Examples:
         "--output-dir",
         "-o",
         type=str,
-        default="src/images",
-        help="Output directory for figures (default: src/images)"
+        default="images",
+        help="Output directory for figures (default: images)"
     )
     
     parser.add_argument(
