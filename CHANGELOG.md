@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.5.30](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.29...v1.5.30) (2026-04-09)
+
+### Bug Fixes
+
+* restore missing Remark rmk:gauss-eisenstein-not-new in methods.tex. ([1e5fae5](https://github.com/omega-pcf/01-hilbert-polya/commit/1e5fae5cc80a6034ea02add0e604ba27f8bb1e02))
+
+### Refinements
+
+* relocate active figures to root images/ and prune redundant orphans ([14275ca](https://github.com/omega-pcf/01-hilbert-polya/commit/14275ca0cbbb0dc03cf15a2c67ed2fa73613b358))
+
+### Chores
+
+* update README, CITATION.cff, and package.json title/citation metadata for v1.5.29 ([bcb5cb2](https://github.com/omega-pcf/01-hilbert-polya/commit/bcb5cb2cf9043e1226596905f2d40c6d117e71ac))
+
 ## [1.5.29](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.28...v1.5.29) (2026-04-08)
 
 ### Bug Fixes
