@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.6.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.6.0...v1.6.1) (2026-04-10)
+
+### Chores
+
+* **metadata:** automate updated date with \today in ArticleDates ([23bc7ff](https://github.com/omega-pcf/01-hilbert-polya/commit/23bc7ff231e81216505337569163244cbf6d8126))
+* **metadata:** correct original received date to November 15, 2025 in main.tex ([705db4b](https://github.com/omega-pcf/01-hilbert-polya/commit/705db4b9561e2f044ac005abb9428a7b5de15979))
+
+### Build System
+
+* synchronize manuscript pdf after metadata update ([a95c7b8](https://github.com/omega-pcf/01-hilbert-polya/commit/a95c7b8b392fa3c4b632c20ee9d4ab7134e9274c))
+
 ## [1.6.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.30...v1.6.0) (2026-04-10)
 
 ### Features
