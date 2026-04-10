@@ -55,28 +55,51 @@ mechanisms}\label{ssec:math-landscape}
 % =====================================================================
 
 \paragraph{The proof and its $\mathbb{F}_1$ genealogy.}
-The ring
-$\Rpcf = \mathbb{Z}[\golden,\golden^{-1},\tfrac{1}{2}]$
-admits Frobenius lifts $\psi_p(\golden)=\golden^p$, making it a
-$\Lambda$-ring and constituting $\mathbb{F}_1$-descent data in
-Borger's sense~\cite{borger09}---the characteristic-zero analogue
-of Weil's Frobenius endomorphism (feature~(ii) of the Weil
-template,~\cref{ssec:weil}).  The Mersenne bridge
-$\golden^{\lambda_{\log}}=2$
-(\cref{thm:mersenne-bridge}) couples the
-$\golden$-arithmetic of~$\Rpcf$ to the binary arithmetic
-of~$\Ztwenty$, enabling the Euler product to enter the
-categorical framework.
+The ring $\Rpcf = \mathbb{Z}[\golden,\golden^{-1},\tfrac{1}{2}]$ admits
+Frobenius lifts $\psi_p(\golden) = \golden^p$, making it a $\Lambda$-ring
+and constituting $\mathbb{F}_1$-descent data in Borger's
+sense~\cite{borger09}---the characteristic-zero analogue of Weil's
+Frobenius endomorphism (feature~(ii) of the Weil template,
+\cref{ssec:weil}).  The Mersenne bridge
+$\golden^{\lambda_{\log}} = 2$ (\cref{thm:mersenne-bridge}) couples
+the $\golden$-arithmetic of~$\Rpcf$ to the binary arithmetic
+of~$\Ztwenty$, enabling the Euler product to enter the categorical
+framework.
+
+The proof rests on the \texttt{bridge\_axiom}: the hypothesis
+that~$G$ constrains $\mathrm{Re}(\rho)$.  Discharging it is
+equivalent to realising the $\mathbb{F}_1$ programme for~$\zeta$:
+showing that the Frobenius lifts $\psi_p$ that constitute the
+$\Lambda$-ring determine~$\zeta(s)$ through the Euler product.
+The companion paper~\cite{odd-zeta} constructs this realisation:
+$\psi_p(\golden)=\golden^p$ determines $\chi_5(p)\equiv F_p\pmod{p}$,
+which determines every local factor~$f_p(s)$, which assembles
+$\ZKsqrt(s)$ as a categorical colimit, which yields
+$\zeta(s)=\ZKsqrt(s)/L(s,\chi_5)$ as a natural isomorphism---all
+organised by the same~$G$ that produces $\mathrm{spec}(\OmH)$.
+The three classical results cited in \cref{step:4} of the Spectral
+Embedding (\cref{prop:spectral-embedding}) act on this span:
+Euler's identity acts on the specific colimit assembled by~$G$,
+the Gelfand spectrum is concretely the four fibers of~$G$, and
+Dunford--Schwartz operates on~$\OmH$ because~$G$ puts~$\zeta$
+and~$\OmH$ in the same span.
 
 The squeeze (\cref{thm:rh-squeeze}) shares Weil's logical
 architecture: two independent bounds forcing equality.  Weil obtains
-his bounds from intersection positivity and the functional equation
-on~$C\times C$; the PCF squeeze obtains them from $\Ztwenty$
-arithmetic (\lean{bounded_by_mu}) and Hecke self-duality
-(\lean{companion_bounded}).  The arithmetic
-surface---feature~(i) of the template---was not required: the
-categorical mechanism provides both bounds directly, without
-intersection theory or cohomology.
+his bounds from intersection positivity and the functional equation on
+$C\times C$; the PCF squeeze obtains them from $\Ztwenty$ arithmetic
+(\lean{bounded_by_mu}) and Hecke self-duality
+(\lean{companion_bounded}).  The arithmetic surface---feature~(i) of
+the template---was not required: the categorical mechanism provides
+both bounds directly, without intersection theory or cohomology.
+The same paper develops the comparison between the PCF squeeze
+and Weil's proof in detail: the span replaces the structural
+role of $C\times C$ without intersection theory---the Galois
+functor~$G$ replaces the diagonal, the co-determination theorem
+replaces intersection positivity, and Hecke self-duality replaces
+the functional equation---realising over~$\mathbb{Z}$ the
+bifurcated architecture that Weil constructed
+over~$\mathbb{F}_q$.
 
 \paragraph{Categorical generalization to $L$-functions.}
 The arithmetic fragment (\cref{def:arith-fragment},
