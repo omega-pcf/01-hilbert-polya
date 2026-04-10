@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.6.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.30...v1.6.0) (2026-04-10)
+
+### Features
+
+* integrate v11 bridge suggestions and coordinate spectral proof (using cref) ([26e8673](https://github.com/omega-pcf/01-hilbert-polya/commit/26e86738144970443867de116207e662d3dcaf27))
+
+### Documentation
+
+* add unified manuscript generator and refine Figure 8 caption in methods.tex ([ce113bb](https://github.com/omega-pcf/01-hilbert-polya/commit/ce113bbcea02ae7c6c32b725a8048e3b9be36547))
+
+### Refinements
+
+* **bib:** integrate verified odd-zeta DOI in companion paper references ([ffe5c34](https://github.com/omega-pcf/01-hilbert-polya/commit/ffe5c34dce95cccc0f6ed981d5d8e9be4efdc29f))
+* cleanup code style and formatting across release tools ([3aee7ad](https://github.com/omega-pcf/01-hilbert-polya/commit/3aee7ad48b456ed69ca079757df98d49f7400548))
+* **python:** unify environment and add verification scripts ([2d46307](https://github.com/omega-pcf/01-hilbert-polya/commit/2d46307cb9a692b0153dd4ae10e431df58ae21b7))
+
+### Chores
+
+* remove cffconvert and unify metadata sync in release pipeline ([29702a7](https://github.com/omega-pcf/01-hilbert-polya/commit/29702a72474c310e95c9563156a2dfa2de79017f))
+
+### Build System
+
+* add TOML support for release-it and fix peer dependencies ([4eef94d](https://github.com/omega-pcf/01-hilbert-polya/commit/4eef94d0c0ddcdbce5aab78b5f2ee8e3fec5e9f9))
+* track pnpm-lock.yaml and update .gitignore ([993f1dc](https://github.com/omega-pcf/01-hilbert-polya/commit/993f1dcbe55a80c7bed952c80b4abe04c89befae))
+
 ## [1.5.30](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.5.29...v1.5.30) (2026-04-09)
 
 ### Bug Fixes
