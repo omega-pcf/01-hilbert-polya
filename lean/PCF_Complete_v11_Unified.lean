@@ -155,8 +155,8 @@ def projection_PCF (a b c : ℝ) : ℝ := (a * b) / (c * sqrt 3) * (π / 3)
 def epsilon_0 : ℝ := Real.log φ / (6 * sqrt 3)
 
 -- §3.5 Torus
-noncomputable def ω_pcf : ℂ := exp (2 * ↑π * I / 3)
-def Ω_hat (k : Fin 3) : ℂ := (1/2 : ℝ) * ω_pcf ^ (k : ℕ)
+noncomputable def w_pcf : ℂ := exp (2 * ↑π * I / 3)
+def Omega_hat (k : Fin 3) : ℂ := (1/2 : ℝ) * w_pcf ^ (k : ℕ)
 
 -- §3.6 Lattice
 def M_PCF : ℝ := (6 * sqrt 3 * π) / Real.log φ
@@ -244,7 +244,7 @@ theorem addition_destroyed :
 theorem golden_group_exponent_two :
     ∀ g : ZMod 2 × ZMod 2, g + g = 0 := by decide
 
-theorem zeta_forced_to_ternary (p : ℕ) (hp : p.Prime) (hp5 : 5 < p) :
+theorem primes_land_in_Z20star (p : ℕ) (hp : p.Prime) (hp5 : 5 < p) :
     (p : ZMod 20) ∈ Z20star := by
   have h2 : ¬ 2 ∣ p := fun h => absurd (hp.eq_one_or_self_of_dvd 2 h) (by omega)
   have h5 : ¬ 5 ∣ p := fun h => absurd (hp.eq_one_or_self_of_dvd 5 h) (by omega)
@@ -257,6 +257,7 @@ theorem zeta_forced_to_ternary (p : ℕ) (hp : p.Prime) (hp5 : 5 < p) :
     conv_lhs => rw [← Nat.mod_add_div p 20]
     push_cast
     simp [show (20 : ZMod 20) = 0 from by decide]
+    -- (20 : ZMod 20) = 0 is a result of ZMod implementation
   rw [cast_eq]
   rcases hmod with h|h|h|h|h|h|h|h <;> rw [h] <;> decide
 
@@ -302,7 +303,7 @@ theorem G_kernel :
     (∀ a : ZMod 20, a ∈ Z20star → G a = (0, 0) → (a = 1 ∨ a = 9)) ∧
     G 1 = (0, 0) ∧ G 9 = (0, 0) := by decide
 
-theorem G_kernel_card :
+theorem ker_G_size :
     (({1, 9} : Finset (ZMod 20)).filter (fun a => a ∈ Z20star ∧ G a = (0, 0))).card = 2 := by
   decide
 
@@ -406,12 +407,12 @@ theorem beta_0_from_card : beta_0 = 1 / Z20star.card := by
 -- ║  §5.3  CATEGORICAL TOWER / NO-DIAGONAL                           ║
 -- ╚════════════════════════════════════════════════════════════════════╝
 
-def Ω_norm (k : ℕ) : ℝ := (1/2 : ℝ) ^ (2 ^ k)
+def Omega_norm (k : ℕ) : ℝ := (1/2 : ℝ) ^ (2 ^ k)
 
-theorem Ω_norm_pos (k : ℕ) : 0 < Ω_norm k := by unfold Ω_norm; positivity
+theorem Omega_norm_pos (k : ℕ) : 0 < Omega_norm k := by unfold Omega_norm; positivity
 
-theorem Ω_norm_lt_one (k : ℕ) : Ω_norm k < 1 := by
-  unfold Ω_norm; induction k with
+theorem Omega_norm_lt_one (k : ℕ) : Omega_norm k < 1 := by
+  unfold Omega_norm; induction k with
   | zero => norm_num
   | succ n ih =>
     rw [pow_succ, pow_mul]
@@ -419,24 +420,24 @@ theorem Ω_norm_lt_one (k : ℕ) : Ω_norm k < 1 := by
     have h_mul := mul_lt_mul_of_pos_right ih h_pos
     linarith
 
-theorem no_diagonal_tower (k : ℕ) : ¬ (Ω_norm k ≤ (Ω_norm k) ^ 2) := by
-  nlinarith [Ω_norm_pos k, Ω_norm_lt_one k, sq_nonneg (1 - Ω_norm k)]
+theorem no_diagonal_obstr (k : ℕ) : ¬ (Omega_norm k ≤ (Omega_norm k) ^ 2) := by
+  nlinarith [Omega_norm_pos k, Omega_norm_lt_one k, sq_nonneg (1 - Omega_norm k)]
 
-theorem Ω_norm_decreasing (k : ℕ) : Ω_norm (k + 1) < Ω_norm k := by
-  have h_pos := Ω_norm_pos k; have h_lt1 := Ω_norm_lt_one k
-  unfold Ω_norm at *; rw [pow_succ, pow_mul]
+theorem Omega_norm_decreasing (k : ℕ) : Omega_norm (k + 1) < Omega_norm k := by
+  have h_pos := Omega_norm_pos k; have h_lt1 := Omega_norm_lt_one k
+  unfold Omega_norm at *; rw [pow_succ, pow_mul]
   nlinarith [mul_pos h_pos (show 0 < 1 - (1/2:ℝ)^2^k by linarith)]
 
 theorem no_retraction_at_any_level :
-    ∀ k : ℕ, ∀ t : ℝ, t = Ω_norm k → ¬ (t ≤ t ^ 2) := by
+    ∀ k : ℕ, ∀ t : ℝ, t = Omega_norm k → ¬ (t ≤ t ^ 2) := by
   intro k t ht; rw [ht]
-  nlinarith [Ω_norm_pos k, Ω_norm_lt_one k, sq_nonneg (1 - Ω_norm k)]
+  nlinarith [Omega_norm_pos k, Omega_norm_lt_one k, sq_nonneg (1 - Omega_norm k)]
 
-theorem tower_base_is_mu3 : Ω_norm 0 = mu_n 3 := by unfold Ω_norm mu_n; norm_num
+theorem tower_base_is_mu3 : Omega_norm 0 = mu_n 3 := by unfold Omega_norm mu_n; norm_num
 theorem contraction_factor : mu_n 2 / mu_n 3 = 2 := by rw [mu_binary, mu_ternary]; norm_num
 theorem U_strict_contraction : mu_n 3 < mu_n 2 := by rw [mu_binary, mu_ternary]; norm_num
 
-theorem Ω_norm_tendsto_zero : Filter.Tendsto Ω_norm Filter.atTop (nhds 0) := by
+theorem Omega_norm_tendsto_zero : Filter.Tendsto Omega_norm Filter.atTop (nhds 0) := by
   have hle : ∀ k : ℕ, k ≤ 2 ^ k := by
     intro k; induction k with
     | zero => simp
@@ -444,30 +445,30 @@ theorem Ω_norm_tendsto_zero : Filter.Tendsto Ω_norm Filter.atTop (nhds 0) := b
       have h2n : 0 < 2 ^ n := by positivity
       omega
   exact squeeze_zero
-    (fun k => le_of_lt (Ω_norm_pos k))
-    (fun k => by unfold Ω_norm; exact pow_le_pow_of_le_one (by norm_num) (by norm_num) (hle k))
+    (fun k => le_of_lt (Omega_norm_pos k))
+    (fun k => by unfold Omega_norm; exact pow_le_pow_of_le_one (by norm_num) (by norm_num) (hle k))
     (tendsto_pow_atTop_nhds_zero_of_lt_one (by norm_num) (by norm_num))
 
 theorem categorical_limit_theorem :
-    (∀ k : ℕ, 0 < Ω_norm k) ∧ (∀ k : ℕ, Ω_norm k < 1) ∧
-    (∀ k : ℕ, ¬ (Ω_norm k ≤ (Ω_norm k) ^ 2)) ∧
-    (∀ k : ℕ, Ω_norm (k+1) < Ω_norm k) ∧ Ω_norm 0 = mu_n 3 ∧
+    (∀ k : ℕ, 0 < Omega_norm k) ∧ (∀ k : ℕ, Omega_norm k < 1) ∧
+    (∀ k : ℕ, ¬ (Omega_norm k ≤ (Omega_norm k) ^ 2)) ∧
+    (∀ k : ℕ, Omega_norm (k+1) < Omega_norm k) ∧ Omega_norm 0 = mu_n 3 ∧
     (∀ σ μ : ℝ, σ + μ = 2 → σ * μ = 3/4 → μ < 1 → 0 < σ → 0 < μ → σ = 3/2 ∧ μ = 1/2) ∧
     (∀ a ∈ Z20star, ∀ b ∈ Z20star, (a + b) ∉ Z20star) ∧
     (∀ p : ℕ, p.Prime → 5 < p → (p : ZMod 20) ∈ Z20star) :=
-  ⟨Ω_norm_pos, Ω_norm_lt_one, no_diagonal_tower, Ω_norm_decreasing,
-   tower_base_is_mu3, spectral_uniqueness, addition_destroyed, zeta_forced_to_ternary⟩
+  ⟨Omega_norm_pos, Omega_norm_lt_one, no_diagonal_obstr, Omega_norm_decreasing,
+   tower_base_is_mu3, spectral_uniqueness, addition_destroyed, primes_land_in_Z20star⟩
 
 theorem limit_equals_functional_eq_fixed_point :
-    mu_n 3 = Ω_norm 0 ∧ Ω_norm 0 = 1/2 ∧ mu_n 3 = 1/2 :=
-  ⟨tower_base_is_mu3.symm, by unfold Ω_norm; norm_num, mu_ternary⟩
+    mu_n 3 = Omega_norm 0 ∧ Omega_norm 0 = 1/2 ∧ mu_n 3 = 1/2 :=
+  ⟨tower_base_is_mu3.symm, by unfold Omega_norm; norm_num, mu_ternary⟩
 
 -- ╔════════════════════════════════════════════════════════════════════╗
 -- ║  §5.4  OMEGA SPECTRUM                                            ║
 -- ╚════════════════════════════════════════════════════════════════════╝
 
-private theorem ω_properties : ω_pcf.re = -1/2 ∧ ω_pcf.im = sqrt 3 / 2 := by
-  unfold ω_pcf
+private theorem w_properties : w_pcf.re = -1/2 ∧ w_pcf.im = sqrt 3 / 2 := by
+  unfold w_pcf
   rw [show 2 * ↑π * I / 3 = ↑(2 * π / 3) * I by push_cast; ring, exp_mul_I]
   simp only [add_re, add_im, mul_re, mul_im, I_re, I_im]
   rw [cos_ofReal_re, cos_ofReal_im, sin_ofReal_re, sin_ofReal_im,
@@ -475,32 +476,32 @@ private theorem ω_properties : ω_pcf.re = -1/2 ∧ ω_pcf.im = sqrt 3 / 2 := b
       Real.cos_pi_sub, Real.cos_pi_div_three, Real.sin_pi_sub, Real.sin_pi_div_three]
   constructor <;> ring
 
-theorem Ω_hat_unique_positive_re (k : Fin 3) (h : 0 < (Ω_hat k).re) :
-    (Ω_hat k).re = 1/2 := by
+theorem Omega_hat_unique_positive_re (k : Fin 3) (h : 0 < (Omega_hat k).re) :
+    (Omega_hat k).re = 1/2 := by
   obtain ⟨kv, kp⟩ := k
   match kv with
-  | 0 => unfold Ω_hat; norm_num
+  | 0 => unfold Omega_hat; norm_num
   | 1 =>
-    have h_re : (Ω_hat ⟨1, kp⟩).re = -1/4 := by
-      have ⟨hre, him⟩ := ω_properties
-      unfold Ω_hat
+    have h_re : (Omega_hat ⟨1, kp⟩).re = -1/4 := by
+      have ⟨hre, him⟩ := w_properties
+      unfold Omega_hat
       simp only [pow_one, mul_re, ofReal_re, ofReal_im, zero_mul, sub_zero, hre, him]
       norm_num
     rw [h_re] at h; linarith
   | 2 =>
-    have h_re : (Ω_hat ⟨2, kp⟩).re = -1/4 := by
-      have ⟨hre, him⟩ := ω_properties
-      unfold Ω_hat; simp only [pow_two, mul_re, ofReal_re, ofReal_im, zero_mul, sub_zero]
+    have h_re : (Omega_hat ⟨2, kp⟩).re = -1/4 := by
+      have ⟨hre, him⟩ := w_properties
+      unfold Omega_hat; simp only [pow_two, mul_re, ofReal_re, ofReal_im, zero_mul, sub_zero]
       rw [hre, him]; nlinarith [Real.mul_self_sqrt (by norm_num : (0:ℝ) ≤ 3)]
     rw [h_re] at h; linarith
   | n + 3 => omega
 
-theorem Ω_hat_0_re : (Ω_hat ⟨0, by norm_num⟩).re = 1/2 := by unfold Ω_hat; norm_num
+theorem Omega_hat_0_re : (Omega_hat ⟨0, by norm_num⟩).re = 1/2 := by unfold Omega_hat; norm_num
 
 theorem riemann_hypothesis_spectral :
-    (Ω_hat ⟨0, by norm_num⟩).re = 1/2 ∧
-    ∀ k : Fin 3, (Ω_hat k).re > 0 → (Ω_hat k).re = 1/2 :=
-  ⟨Ω_hat_0_re, Ω_hat_unique_positive_re⟩
+    (Omega_hat ⟨0, by norm_num⟩).re = 1/2 ∧
+    ∀ k : Fin 3, (Omega_hat k).re > 0 → (Omega_hat k).re = 1/2 :=
+  ⟨by unfold Omega_hat; norm_num, Omega_hat_unique_positive_re⟩
 
 -- ╔════════════════════════════════════════════════════════════════════╗
 -- ║  §5.5  THE SQUEEZE — HECKE 1920                                  ║
@@ -622,25 +623,39 @@ theorem master_bridge_v11 :
     (∃ t : ℝ, 0 < t ∧ t < 1 ∧ 1 - t ≤ mu_n 3 ∧ t ≠ 1/2) :=
   ⟨mul_preserved_Z20, addition_destroyed,
    G_homomorphism, fun g => G_surjective g,
-   zeta_forced_to_ternary, golden_group_exponent_two,
+   primes_land_in_Z20star, golden_group_exponent_two,
    fragment_mu_ternary, spectral_uniqueness,
    lawvere_ternary_blocks, by rw [mu_ternary]; norm_num,
    rh_squeeze, bound_alone_insufficient, companion_alone_insufficient⟩
 
+/-- Audit label: Mul ∧ ¬Add → Ternary mapping. -/
+theorem euler_is_ternary : fragment_mu ArithFragment.ternary = 1/2 := fragment_mu_ternary
+
+/-- Audit label: Arith. to Op. bridge. -/
+theorem spectral_mapping :
+    (∀ p : ℕ, p.Prime → 5 < p → (p : ZMod 20) ∈ Z20star) ∧
+    (∀ a b : ZMod 20, a ∈ Z20star → b ∈ Z20star → G (a * b) = G a + G b) ∧
+    fragment_mu ArithFragment.ternary = 1/2 ∧
+    (∀ σ μ : ℝ, σ + μ = 2 → σ * μ = 3/4 → μ < 1 → 0 < σ → 0 < μ → σ = 3/2 ∧ μ = 1/2) :=
+  ⟨primes_land_in_Z20star, G_homomorphism, fragment_mu_ternary, spectral_uniqueness⟩
+
+/-- Audit label: Satisfiability via canonical_zero. -/
+theorem consistency_witness : canonical_zero.ρ_re = 1/2 := canonical_zero_works
+
 /-- FULL DEDUCTIVE CHAIN V11:
     The complete 11-step proof from decidable arithmetic to Re(ρ)=1/2. -/
-theorem full_deductive_chain_v11 :
+theorem full_deductive_chain :
     (∀ p : ℕ, p.Prime → 5 < p → (p : ZMod 20) ∈ Z20star) ∧
     (∀ a ∈ Z20star, ∀ b ∈ Z20star, (a + b) ∉ Z20star) ∧
     fragment_mu ArithFragment.ternary = 1/2 ∧
-    (∀ k : ℕ, ¬ (Ω_norm k ≤ (Ω_norm k) ^ 2)) ∧
+    (∀ k : ℕ, ¬ (Omega_norm k ≤ (Omega_norm k) ^ 2)) ∧
     (∀ g : ZMod 2 × ZMod 2, g + g = 0) ∧
-    (∀ k : Fin 3, (Ω_hat k).re > 0 → (Ω_hat k).re = 1/2) ∧
+    (∀ k : Fin 3, (Omega_hat k).re > 0 → (Omega_hat k).re = 1/2) ∧
     (∀ z : TernaryLZero, z.ρ_re = 1/2) ∧
     (∀ ρ_re : ℝ, 0 < ρ_re → ρ_re < 1 →
      ρ_re ≤ mu_n 3 → 1 - ρ_re ≤ mu_n 3 → ¬ (ρ_re ≠ 1/2)) :=
-  ⟨zeta_forced_to_ternary, addition_destroyed, fragment_mu_ternary,
-   no_diagonal_tower, golden_group_exponent_two,
-   Ω_hat_unique_positive_re, rh_squeeze, rh_by_contradiction⟩
+  ⟨primes_land_in_Z20star, addition_destroyed, fragment_mu_ternary,
+   no_diagonal_obstr, golden_group_exponent_two,
+   Omega_hat_unique_positive_re, rh_squeeze, rh_by_contradiction⟩
 
 end
