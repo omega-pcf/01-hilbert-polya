@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.9.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.1...v1.9.2) (2026-04-11)
+
+### Bug Fixes
+
+* **citation:** correct author metadata for SGA 4 ([788040f](https://github.com/omega-pcf/01-hilbert-polya/commit/788040f6953315e42a487b7cdf113c069bb02214))
+
 ## [1.9.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.0...v1.9.1) (2026-04-11)
 
 ### Styles
