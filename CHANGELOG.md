@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.9.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.8.0...v1.9.0) (2026-04-11)
+
+### Features
+
+* **citation:** synchronize metadata pipeline and fix sanitizer logic ([9e89af1](https://github.com/omega-pcf/01-hilbert-polya/commit/9e89af1f5c82e712e60ff56866a68ec72fdb5a0b))
+
+### Bug Fixes
+
+* **metadata:** remove LaTeX double dashes from plain-text metadata ([464b60f](https://github.com/omega-pcf/01-hilbert-polya/commit/464b60f321801cfcbe243a98d000f504de858a68))
+
+### Chores
+
+* **build:** stabilize typescript configuration and fix type errors ([c0035d1](https://github.com/omega-pcf/01-hilbert-polya/commit/c0035d16349edede24a84a74b0d2dc52cf2b9e96))
+* **metadata:** stabilize bibliography pipeline and fix double-escaping ([37d293f](https://github.com/omega-pcf/01-hilbert-polya/commit/37d293f919ea26796ab637150f976ab18509eee8))
+* **metadata:** standardize F1 symbol to mathbb blackboard bold in project title ([97f9b7a](https://github.com/omega-pcf/01-hilbert-polya/commit/97f9b7aa478b61d305fcba58aac0cb7165aad2e8))
+
 ## [1.8.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.6.1...v1.8.0) (2026-04-11)
 
 ### Features
