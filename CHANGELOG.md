@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.8.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.6.1...v1.8.0) (2026-04-11)
+
+### Features
+
+* **citation:** overhaul metadata pipeline with robust architecture and schema validation ([8b0296c](https://github.com/omega-pcf/01-hilbert-polya/commit/8b0296c9e440f6f7bb7835905e051d3375c69331))
+
+### Bug Fixes
+
+* **release:** remove legacy zenodo script and update release hooks ([64d9f4e](https://github.com/omega-pcf/01-hilbert-polya/commit/64d9f4e53ae10933f6df287b094454fc42b4f493))
+
+### Chores
+
+* **build:** update release artifacts and checksums for v1.6.1 ([4fac1b3](https://github.com/omega-pcf/01-hilbert-polya/commit/4fac1b32c1a98170de78a6459f87ccfb31b882e1))
+
 ## [1.6.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.6.0...v1.6.1) (2026-04-10)
 
 ### Chores
