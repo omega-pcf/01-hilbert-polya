@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.0...v2.0.1) (2026-04-11)
+
+### Documentation
+
+* standardize PDF bookmarks with texorpdfstring for math in titles ([1dd48b8](https://github.com/omega-pcf/01-hilbert-polya/commit/1dd48b85d41a8d733d603fee2994efdadaf4eace))
+
 ## [2.0.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.5...v2.0.0) (2026-04-11)
 
 ### ⚠ BREAKING CHANGES
