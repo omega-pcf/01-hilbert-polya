@@ -630,7 +630,7 @@ references:
     loc-end: "257"
     year: 2016
   - type: article
-    title: Torified varieties and their geometries over \mathbbF₁
+    title: Torified varieties and their geometries over 𝔽₁
     authors:
       - family-names: López Peña
         given-names: Javier
@@ -1027,7 +1027,7 @@ references:
         given-names: A.
     year: 1995
   - type: generic
-    title: On the notion of geometry over \mathbbF₁
+    title: On the notion of geometry over 𝔽₁
     authors:
       - family-names: Connes
         given-names: Alain
@@ -1121,7 +1121,7 @@ references:
     loc-end: "1133"
     year: 1999
   - type: generic
-    title: Cyclotomy and analytic geometry over \mathbbF₁
+    title: Cyclotomy and analytic geometry over 𝔽₁
     authors:
       - family-names: Manin
         given-names: Yuri I.
@@ -1205,7 +1205,7 @@ references:
     loc-start: "29"
     year: 1999
   - type: generic
-    title: The Selberg Trace Formula for PSL(2,\mathbbR). Vol. I
+    title: The Selberg Trace Formula for PSL(2,ℝ). Vol. I
     authors:
       - family-names: Hejhal
         given-names: Dennis A.
@@ -1425,8 +1425,8 @@ references:
     url: https://aimath.org/~kaur/publicystuff/conrey-rh.pdf
     year: 2015
   - type: article
-    title: "Odd Zeta Values from the PCF Torus: \\golden and π as
-      Arithmetic-Geometric Sources"
+    title: "Odd Zeta Values from the PCF Torus: φ and π as Arithmetic-Geometric
+      Sources"
     authors:
       - family-names: González García
         given-names: Jorge Armando

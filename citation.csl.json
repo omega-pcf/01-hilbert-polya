@@ -1510,7 +1510,7 @@
     },
     "page": "605-643",
     "publisher": "Springer",
-    "title": "Torified varieties and their geometries over \\mathbbF₁",
+    "title": "Torified varieties and their geometries over 𝔽₁",
     "URL": "https://doi.org/10.1007/s00209-009-0638-0",
     "volume": "267"
   },
@@ -2482,7 +2482,7 @@
         ]
       ]
     },
-    "title": "On the notion of geometry over \\mathbbF₁",
+    "title": "On the notion of geometry over 𝔽₁",
     "URL": "https://arxiv.org/abs/0809.2926"
   },
   {
@@ -2705,7 +2705,7 @@
         ]
       ]
     },
-    "title": "Cyclotomy and analytic geometry over \\mathbbF₁",
+    "title": "Cyclotomy and analytic geometry over 𝔽₁",
     "URL": "https://arxiv.org/abs/0809.1564"
   },
   {
@@ -2913,7 +2913,7 @@
       ]
     },
     "publisher": "Springer-Verlag",
-    "title": "The Selberg Trace Formula for PSL(2,\\mathbbR). Vol. I",
+    "title": "The Selberg Trace Formula for PSL(2,ℝ). Vol. I",
     "volume": "548"
   },
   {
@@ -3263,7 +3263,7 @@
   },
   {
     "container-title": "Inventiones mathematicae",
-    "abstract": "On démontre la correspondance de Langlands pour GL<sub>r</sub> sur les corps de fonctions. La preuve généralise celle de Drinfeld en rang 2 : elle consiste à réaliser la correspondance en rang r dans la cohomologie \\ell-adique des variétés modulaires de chtoucas de Drinfeld de rang r.",
+    "abstract": "On démontre la correspondance de Langlands pour GL<sub>r</sub> sur les corps de fonctions. La preuve généralise celle de Drinfeld en rang 2 : elle consiste à réaliser la correspondance en rang r dans la cohomologie ℓ-adique des variétés modulaires de chtoucas de Drinfeld de rang r.",
     "author": [
       {
         "given": "Laurent",
@@ -3438,7 +3438,7 @@
       ]
     },
     "note": "Companion paper to <i>The Hilbert–Pólya Operator and the Primitive Structure of the Complex Plane</i>",
-    "title": "Odd Zeta Values from the PCF Torus: \\golden and π as Arithmetic-Geometric Sources",
+    "title": "Odd Zeta Values from the PCF Torus: φ and π as Arithmetic-Geometric Sources",
     "URL": "https://doi.org/10.5281/zenodo.19492791"
   }
 ]
