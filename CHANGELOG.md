@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.3...v1.9.4) (2026-04-11)
+
+### Bug Fixes
+
+* **authorship:** correct author attribution for companion paper ([d44702e](https://github.com/omega-pcf/01-hilbert-polya/commit/d44702e430fd6b5be907248f3a225803158974c9))
+* **citation:** eliminate 'others' from author lists in CSL ([71e7094](https://github.com/omega-pcf/01-hilbert-polya/commit/71e709415ec8cb6175e1abc6ec90dcf2d1dd1a2e))
+
 ## [1.9.3](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.2...v1.9.3) (2026-04-11)
 
 ### Documentation
