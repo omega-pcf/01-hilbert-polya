@@ -474,7 +474,6 @@ references:
     editors:
       - family-names: Della Pietra
         given-names: B.
-      - family-names: others
     journal: "Emil Artin and Beyond: Class Field Theory and L-functions"
     notes: Written in 1967
     publisher:
@@ -1984,7 +1983,6 @@ references:
         given-names: Lars
       - family-names: Madsen
         given-names: Ib
-      - family-names: others
     title: On the K-theory of finite algebras over Witt vectors of perfect fields
     date-published: 1995-01-01
     year: 1995
