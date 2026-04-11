@@ -7,7 +7,7 @@
     "type-check": "tsc --noEmit",
     "generate:figures": "uv run python scripts/figures/main.py",
     "generate:figures:list": "uv run python scripts/figures/main.py --list",
-    "sync-citation": "pnpm exec tsx scripts/test_citation_sync.ts",
+
     "verify:py": "uv run python tests/verify_t_star.py",
     "verify:lean": "cd lean && lake build",
     "verify": "pnpm run verify:py && pnpm run verify:lean",
