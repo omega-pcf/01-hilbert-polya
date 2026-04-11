@@ -1,4 +1,4 @@
-# The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry
+# The Hilbert-Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17619486.svg)](https://doi.org/10.5281/zenodo.17619486)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KExRnNtx91TjVyYD0FlcB_TLQwZB4GKq?usp=sharing)
@@ -18,7 +18,7 @@ We construct a Hermitian operator $T^*$ whose spectrum approximates the non-triv
 
 Three spectral invariants—dimension $d=3$ (from $S_3$ symmetry), common modulus $\mu=1/2$ (tripartite norm), and modular sum $\sigma = d\mu = 3/2$ (spectral product)—emerge from the geometric structure alone, without invoking any component of $\zeta(s)$. The ring $R_{\text{PCF}} = \mathbb{Z}[\varphi, \varphi^{-1}, \frac{1}{2}]$ admits a $\Lambda$-ring structure constituting $\mathbb{F}_1$-descent data in the sense of Borger, placing the construction within Manin's program for absolute geometry and its previously established intersection with the string theory framework (Connes–Douglas–Schwarz, 1998).
 
-**Keywords:** Riemann Hypothesis; Hilbert--Pólya conjecture; Hermitian operators; Non-circular construction; $S_3$ symmetry; Spectral invariants; Golden ratio; Fibonacci sequence
+**Keywords:** Riemann Hypothesis; Hilbert-Pólya conjecture; Hermitian operators; Non-circular construction; $S_3$ symmetry; Spectral invariants; Golden ratio; Fibonacci sequence
 
 ## Repository Structure
 
