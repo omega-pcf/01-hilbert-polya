@@ -347,7 +347,7 @@
     "volume": "32"
   },
   {
-    "publisher-place": "Providence, RI",
+    "publisher-place": "Providence, USA",
     "author": [
       {
         "given": "Hugh L.",
@@ -441,7 +441,7 @@
     "volume": "3"
   },
   {
-    "publisher-place": "Providence, RI",
+    "publisher-place": "Providence, USA",
     "author": [
       {
         "given": "Andrew M.",
@@ -659,7 +659,7 @@
     "title": "Letter to André Weil"
   },
   {
-    "publisher-place": "New York, NY",
+    "publisher-place": "New York, USA",
     "author": [
       {
         "given": "Laurence E",
@@ -681,40 +681,6 @@
     "title": "Fibonacci's Liber Abaci: A Translation into Modern English of Leonardo Pisano's Book of Calculation"
   },
   {
-    "author": [
-      {
-        "given": "Apollonius",
-        "family": "Perga",
-        "non-dropping-particle": "of"
-      }
-    ],
-    "type": "book",
-    "id": "apollonius",
-    "citation-key": "apollonius",
-    "issued": {
-      "literal": "c. 200 BCE"
-    },
-    "note": "Greek: Kōnika.",
-    "title": "Conics"
-  },
-  {
-    "author": [
-      {
-        "given": "Pappus",
-        "family": "Alexandria",
-        "non-dropping-particle": "of"
-      }
-    ],
-    "type": "book",
-    "id": "pappus",
-    "citation-key": "pappus",
-    "issued": {
-      "literal": "c. 320"
-    },
-    "note": "Greek: Synagōgē.",
-    "title": "Mathematical Collection"
-  },
-  {
     "publisher-place": "New York",
     "author": [
       {
@@ -723,6 +689,7 @@
     ],
     "type": "book",
     "id": "vitruvius_de_arch",
+    "language": "la",
     "citation-key": "vitruvius_de_arch",
     "issued": {
       "date-parts": [
@@ -1310,26 +1277,6 @@
       {
         "given": "Paul Richard",
         "family": "Halmos"
-      },
-      {
-        "given": "Paul Richard",
-        "family": "Halmos"
-      },
-      {
-        "given": "Paul Richard",
-        "family": "Halmos"
-      },
-      {
-        "given": "Hongrie",
-        "family": "Mathématicien"
-      },
-      {
-        "given": "Paul Richard",
-        "family": "Halmos"
-      },
-      {
-        "given": "Hungary",
-        "family": "Mathematician"
       }
     ],
     "collection-number": "2",
@@ -1836,7 +1783,7 @@
     ],
     "container-title": "Logic Colloquium '73",
     "collection-title": "Studies in Logic and the Foundations of Mathematics",
-    "DOI": "https://doi.org/10.1016/S0049-237X(08)71945-1",
+    "DOI": "10.1016/S0049-237X(08)71945-1",
     "editor": [
       {
         "given": "H.E.",
@@ -2193,7 +2140,7 @@
     },
     "page": "236-266",
     "title": "The Riemann Zeros and Eigenvalue Asymptotics",
-    "URL": "%20https://doi.org/10.1137/S0036144598347497%20",
+    "URL": "https://doi.org/10.1137/S0036144598347497",
     "volume": "41"
   },
   {
@@ -2266,7 +2213,7 @@
     "volume": "89"
   },
   {
-    "publisher-place": "Charleston, SC",
+    "publisher-place": "Charleston, USA",
     "author": [
       {
         "given": "James S.",
