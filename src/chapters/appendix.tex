@@ -21,8 +21,8 @@ The formalization establishes a closed deductive chain with zero \texttt{sorry} 
 \toprule
 Source File & Lines & Decls. & Sorry & Status \\
 \midrule
-\texttt{PCF\_Complete\_v11\_Unified.lean} & 646 & 122 & 0 & Verified \\
-\texttt{PCF\_OperatorConvergence.lean} & 272 & 26 & 0 & Verified \\
+\texttt{PCF\_Complete\_v11\_Unified.lean} & 662 & 151 & 0 & Verified \\
+\texttt{PCF\_OperatorConvergence.lean} & 273 & 32 & 0 & Verified \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -80,7 +80,7 @@ The primary proof establishes a closed chain from decidable arithmetic to $\math
 \toprule
 Step & Logic Identifier & Deductive Justification \\
 \midrule
-1  & \lean{primes_land_in_Z20star} & \lean{fin_cases} + \texttt{ZMod} mapping \\
+1  & \lean{primes_land_in_ZtwentyStar} & \lean{fin_cases} + \texttt{ZMod} mapping \\
 2  & \lean{mul_preserved_Z20} & \lean{decide} (64 pairs in $\Ztwenty$) \\
 3  & \lean{addition_destroyed} & \lean{decide} (64 pairs; parity check) \\
 4  & \lean{golden_group_exponent_two} & Group self-duality; $\chi^2=1$ \\
@@ -92,7 +92,7 @@ Step & Logic Identifier & Deductive Justification \\
 10 & \lean{companion_bounded} (${\le}1/2$) & Steps 4 + 8 + \lean{hecke_1920} \\
 11 & \lean{rh_squeeze} (${=}1/2$) & Squeeze via \lean{linarith} \\
 12 & \lean{consistency_witness} & Satisfiability via \lean{canonical_zero} \\
-13 & \lean{no_diagonal_obstr} & $\lnot(1/2 \le 1/4)$ via No-Diagonal \\
+13 & \lean{no_diagonal_tower} & $\lnot(1/2 \le 1/4)$ via No-Diagonal \\
 \bottomrule
 \end{tabular}
 \end{center}

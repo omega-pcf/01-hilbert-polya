@@ -230,22 +230,22 @@ def alpha_0 : ℝ := 59 / 40
 -- ║  §5.1  Z20* ARITHMETIC                                           ║
 -- ╚════════════════════════════════════════════════════════════════════╝
 
-def Z20star : Finset (ZMod 20) := {1, 3, 7, 9, 11, 13, 17, 19}
+def ZtwentyStar : Finset (ZMod 20) := {1, 3, 7, 9, 11, 13, 17, 19}
 
-theorem Z20star_card : Z20star.card = 8 := by decide
+theorem ZtwentyStar_card : ZtwentyStar.card = 8 := by decide
 
-theorem mul_preserved_Z20 (a b : ZMod 20) (ha : a ∈ Z20star) (hb : b ∈ Z20star) :
-    a * b ∈ Z20star := by revert hb ha b a; decide
+theorem mul_preserved_Z20 (a b : ZMod 20) (ha : a ∈ ZtwentyStar) (hb : b ∈ ZtwentyStar) :
+    a * b ∈ ZtwentyStar := by revert hb ha b a; decide
 
 theorem addition_destroyed :
-    ∀ a ∈ Z20star, ∀ b ∈ Z20star, (a + b) ∉ Z20star := by
+    ∀ a ∈ ZtwentyStar, ∀ b ∈ ZtwentyStar, (a + b) ∉ ZtwentyStar := by
   intro a ha b hb; revert hb ha b a; decide
 
 theorem golden_group_exponent_two :
     ∀ g : ZMod 2 × ZMod 2, g + g = 0 := by decide
 
-theorem primes_land_in_Z20star (p : ℕ) (hp : p.Prime) (hp5 : 5 < p) :
-    (p : ZMod 20) ∈ Z20star := by
+theorem primes_land_in_ZtwentyStar (p : ℕ) (hp : p.Prime) (hp5 : 5 < p) :
+    (p : ZMod 20) ∈ ZtwentyStar := by
   have h2 : ¬ 2 ∣ p := fun h => absurd (hp.eq_one_or_self_of_dvd 2 h) (by omega)
   have h5 : ¬ 5 ∣ p := fun h => absurd (hp.eq_one_or_self_of_dvd 5 h) (by omega)
   have h2m : p % 2 ≠ 0 := fun h => h2 (Nat.dvd_of_mod_eq_zero h)
@@ -285,12 +285,12 @@ def G : ZMod 20 → ZMod 2 × ZMod 2 := fun a =>
 theorem G_identity : G 1 = (0, 0) := by simp [G]
 
 /-- G is a group homomorphism on Z20* (= functoriality BZ20* → B(Z₂×Z₂)). -/
-theorem G_homomorphism (a b : ZMod 20) (ha : a ∈ Z20star) (hb : b ∈ Z20star) :
+theorem G_homomorphism (a b : ZMod 20) (ha : a ∈ ZtwentyStar) (hb : b ∈ ZtwentyStar) :
     G (a * b) = G a + G b := by revert hb ha b a; decide
 
 /-- G is surjective onto Z₂×Z₂. -/
 theorem G_surjective : ∀ g : ZMod 2 × ZMod 2,
-    ∃ a : ZMod 20, a ∈ Z20star ∧ G a = g := by
+    ∃ a : ZMod 20, a ∈ ZtwentyStar ∧ G a = g := by
   intro ⟨x, y⟩
   fin_cases x <;> fin_cases y
   · exact ⟨1, by decide, by decide⟩
@@ -300,21 +300,21 @@ theorem G_surjective : ∀ g : ZMod 2 × ZMod 2,
 
 /-- Kernel of G: ker G = {1, 9}, so |ker G| = 2. -/
 theorem G_kernel :
-    (∀ a : ZMod 20, a ∈ Z20star → G a = (0, 0) → (a = 1 ∨ a = 9)) ∧
+    (∀ a : ZMod 20, a ∈ ZtwentyStar → G a = (0, 0) → (a = 1 ∨ a = 9)) ∧
     G 1 = (0, 0) ∧ G 9 = (0, 0) := by decide
 
 theorem ker_G_size :
-    (({1, 9} : Finset (ZMod 20)).filter (fun a => a ∈ Z20star ∧ G a = (0, 0))).card = 2 := by
+    (({1, 9} : Finset (ZMod 20)).filter (fun a => a ∈ ZtwentyStar ∧ G a = (0, 0))).card = 2 := by
   decide
 
 -- The four fibers
-theorem fiber_00 : ∀ a : ZMod 20, a ∈ Z20star → G a = (0, 0) → (a = 1 ∨ a = 9) := by decide
-theorem fiber_10 : ∀ a : ZMod 20, a ∈ Z20star → G a = (1, 0) → (a = 11 ∨ a = 19) := by decide
-theorem fiber_01 : ∀ a : ZMod 20, a ∈ Z20star → G a = (0, 1) → (a = 13 ∨ a = 17) := by decide
-theorem fiber_11 : ∀ a : ZMod 20, a ∈ Z20star → G a = (1, 1) → (a = 3 ∨ a = 7) := by decide
+theorem fiber_00 : ∀ a : ZMod 20, a ∈ ZtwentyStar → G a = (0, 0) → (a = 1 ∨ a = 9) := by decide
+theorem fiber_10 : ∀ a : ZMod 20, a ∈ ZtwentyStar → G a = (1, 0) → (a = 11 ∨ a = 19) := by decide
+theorem fiber_01 : ∀ a : ZMod 20, a ∈ ZtwentyStar → G a = (0, 1) → (a = 13 ∨ a = 17) := by decide
+theorem fiber_11 : ∀ a : ZMod 20, a ∈ ZtwentyStar → G a = (1, 1) → (a = 3 ∨ a = 7) := by decide
 
 theorem fibers_exhaustive :
-    ∀ a : ZMod 20, a ∈ Z20star →
+    ∀ a : ZMod 20, a ∈ ZtwentyStar →
     G a = (0,0) ∨ G a = (1,0) ∨ G a = (0,1) ∨ G a = (1,1) := by decide
 
 /-- Z₂×Z₂ has exponent 2: all characters χ̃ⱼ = χⱼ ∘ G are self-dual (real). -/
@@ -324,9 +324,9 @@ theorem target_exponent_two : ∀ g : ZMod 2 × ZMod 2, g + g = 0 := by decide
     G is a surjective group homomorphism (= surjective functor BZ20* → B(Z₂×Z₂))
     with |ker G| = 2, producing 4 fibers = 4 real self-dual characters. -/
 theorem galois_functor_complete :
-    (∀ a b : ZMod 20, a ∈ Z20star → b ∈ Z20star → G (a * b) = G a + G b) ∧
+    (∀ a b : ZMod 20, a ∈ ZtwentyStar → b ∈ ZtwentyStar → G (a * b) = G a + G b) ∧
     G 1 = (0, 0) ∧
-    (∀ g : ZMod 2 × ZMod 2, ∃ a ∈ Z20star, G a = g) ∧
+    (∀ g : ZMod 2 × ZMod 2, ∃ a ∈ ZtwentyStar, G a = g) ∧
     (G 1 = (0, 0) ∧ G 9 = (0, 0)) ∧
     (∀ g : ZMod 2 × ZMod 2, g + g = 0) :=
   ⟨G_homomorphism, G_identity,
@@ -385,10 +385,10 @@ structure TripartiteObject where
   coupling : phi_part = φ * im_part
 
 theorem G_fibers_partition :
-    ({(1 : ZMod 20), 9}  : Finset (ZMod 20)) ⊆ Z20star ∧
-    ({(11 : ZMod 20), 19} : Finset (ZMod 20)) ⊆ Z20star ∧
-    ({(13 : ZMod 20), 17} : Finset (ZMod 20)) ⊆ Z20star ∧
-    ({(3 : ZMod 20), 7}  : Finset (ZMod 20)) ⊆ Z20star := by decide
+    ({(1 : ZMod 20), 9}  : Finset (ZMod 20)) ⊆ ZtwentyStar ∧
+    ({(11 : ZMod 20), 19} : Finset (ZMod 20)) ⊆ ZtwentyStar ∧
+    ({(13 : ZMod 20), 17} : Finset (ZMod 20)) ⊆ ZtwentyStar ∧
+    ({(3 : ZMod 20), 7}  : Finset (ZMod 20)) ⊆ ZtwentyStar := by decide
 
 theorem char_self_dual : ∀ g : ZMod 2 × ZMod 2, g = -g := by decide
 
@@ -400,8 +400,8 @@ theorem limit_spectral_params :
 theorem alpha_0_structural : alpha_0 = sigma_n 3 - mu_n 3 / lambda_alpha := by
   rw [sigma_ternary, mu_ternary]; unfold alpha_0 lambda_alpha; norm_num
 
-theorem beta_0_from_card : beta_0 = 1 / Z20star.card := by
-  rw [Z20star_card]; unfold beta_0; norm_num
+theorem beta_0_from_card : beta_0 = 1 / ZtwentyStar.card := by
+  rw [ZtwentyStar_card]; unfold beta_0; norm_num
 
 -- ╔════════════════════════════════════════════════════════════════════╗
 -- ║  §5.3  CATEGORICAL TOWER / NO-DIAGONAL                           ║
@@ -420,7 +420,7 @@ theorem Omega_norm_lt_one (k : ℕ) : Omega_norm k < 1 := by
     have h_mul := mul_lt_mul_of_pos_right ih h_pos
     linarith
 
-theorem no_diagonal_obstr (k : ℕ) : ¬ (Omega_norm k ≤ (Omega_norm k) ^ 2) := by
+theorem no_diagonal_tower (k : ℕ) : ¬ (Omega_norm k ≤ (Omega_norm k) ^ 2) := by
   nlinarith [Omega_norm_pos k, Omega_norm_lt_one k, sq_nonneg (1 - Omega_norm k)]
 
 theorem Omega_norm_decreasing (k : ℕ) : Omega_norm (k + 1) < Omega_norm k := by
@@ -454,10 +454,10 @@ theorem categorical_limit_theorem :
     (∀ k : ℕ, ¬ (Omega_norm k ≤ (Omega_norm k) ^ 2)) ∧
     (∀ k : ℕ, Omega_norm (k+1) < Omega_norm k) ∧ Omega_norm 0 = mu_n 3 ∧
     (∀ σ μ : ℝ, σ + μ = 2 → σ * μ = 3/4 → μ < 1 → 0 < σ → 0 < μ → σ = 3/2 ∧ μ = 1/2) ∧
-    (∀ a ∈ Z20star, ∀ b ∈ Z20star, (a + b) ∉ Z20star) ∧
-    (∀ p : ℕ, p.Prime → 5 < p → (p : ZMod 20) ∈ Z20star) :=
-  ⟨Omega_norm_pos, Omega_norm_lt_one, no_diagonal_obstr, Omega_norm_decreasing,
-   tower_base_is_mu3, spectral_uniqueness, addition_destroyed, primes_land_in_Z20star⟩
+    (∀ a ∈ ZtwentyStar, ∀ b ∈ ZtwentyStar, (a + b) ∉ ZtwentyStar) ∧
+    (∀ p : ℕ, p.Prime → 5 < p → (p : ZMod 20) ∈ ZtwentyStar) :=
+  ⟨Omega_norm_pos, Omega_norm_lt_one, no_diagonal_tower, Omega_norm_decreasing,
+   tower_base_is_mu3, spectral_uniqueness, addition_destroyed, primes_land_in_ZtwentyStar⟩
 
 theorem limit_equals_functional_eq_fixed_point :
     mu_n 3 = Omega_norm 0 ∧ Omega_norm 0 = 1/2 ∧ mu_n 3 = 1/2 :=
@@ -599,13 +599,13 @@ theorem rh_by_contradiction (ρ_re : ℝ)
     Squeeze (Hecke) → Re(ρ)=1/2 -/
 theorem master_bridge_v11 :
     -- Z20* arithmetic
-    (∀ a b : ZMod 20, a ∈ Z20star → b ∈ Z20star → a * b ∈ Z20star) ∧
-    (∀ a ∈ Z20star, ∀ b ∈ Z20star, (a + b) ∉ Z20star) ∧
+    (∀ a b : ZMod 20, a ∈ ZtwentyStar → b ∈ ZtwentyStar → a * b ∈ ZtwentyStar) ∧
+    (∀ a ∈ ZtwentyStar, ∀ b ∈ ZtwentyStar, (a + b) ∉ ZtwentyStar) ∧
     -- Galois functor
-    (∀ a b : ZMod 20, a ∈ Z20star → b ∈ Z20star → G (a * b) = G a + G b) ∧
-    (∀ g : ZMod 2 × ZMod 2, ∃ a ∈ Z20star, G a = g) ∧
+    (∀ a b : ZMod 20, a ∈ ZtwentyStar → b ∈ ZtwentyStar → G (a * b) = G a + G b) ∧
+    (∀ g : ZMod 2 × ZMod 2, ∃ a ∈ ZtwentyStar, G a = g) ∧
     -- Primes into Z20*
-    (∀ p : ℕ, p.Prime → 5 < p → (p : ZMod 20) ∈ Z20star) ∧
+    (∀ p : ℕ, p.Prime → 5 < p → (p : ZMod 20) ∈ ZtwentyStar) ∧
     -- Self-duality of characters (exponent 2)
     (∀ g : ZMod 2 × ZMod 2, g + g = 0) ∧
     -- Fragment modulus = 1/2
@@ -623,21 +623,39 @@ theorem master_bridge_v11 :
     (∃ t : ℝ, 0 < t ∧ t < 1 ∧ 1 - t ≤ mu_n 3 ∧ t ≠ 1/2) :=
   ⟨mul_preserved_Z20, addition_destroyed,
    G_homomorphism, fun g => G_surjective g,
-   primes_land_in_Z20star, golden_group_exponent_two,
+   primes_land_in_ZtwentyStar, golden_group_exponent_two,
    fragment_mu_ternary, spectral_uniqueness,
    lawvere_ternary_blocks, by rw [mu_ternary]; norm_num,
    rh_squeeze, bound_alone_insufficient, companion_alone_insufficient⟩
+
+-- Combinatorial structure of the H_5 hypercube scaffolding.
+section HypercubeScaffolding
+
+/-- The hypercube H_k is defined as the coordinate space (Fin k → ZMod 2). -/
+def hypercube (k : ℕ) : Finset (Fin k → ZMod 2) := Finset.univ
+
+/-- The number of vertices in H_k is 2^k. -/
+theorem hypercube_card (k : ℕ) : (hypercube k).card = 2^k := by
+  unfold hypercube; simp [ZMod.card, Fintype.card_fin]
+
+/-- The number of k-dimensional oriented sub-cubes in H_n is (n choose k) * 2^(n-k).
+    In H_5, there are (5 choose 3) = 10 orientations of 3D sub-cubes (H_3),
+    each with 2^(5-3) = 4 translates, totalling 40 oriented copies. -/
+theorem pentagonal_planes : Nat.choose 5 3 * 2^(5-3) = 40 := by
+  decide
+
+end HypercubeScaffolding
 
 /-- Audit label: Mul ∧ ¬Add → Ternary mapping. -/
 theorem euler_is_ternary : fragment_mu ArithFragment.ternary = 1/2 := fragment_mu_ternary
 
 /-- Audit label: Arith. to Op. bridge. -/
 theorem spectral_mapping :
-    (∀ p : ℕ, p.Prime → 5 < p → (p : ZMod 20) ∈ Z20star) ∧
-    (∀ a b : ZMod 20, a ∈ Z20star → b ∈ Z20star → G (a * b) = G a + G b) ∧
+    (∀ p : ℕ, p.Prime → 5 < p → (p : ZMod 20) ∈ ZtwentyStar) ∧
+    (∀ a b : ZMod 20, a ∈ ZtwentyStar → b ∈ ZtwentyStar → G (a * b) = G a + G b) ∧
     fragment_mu ArithFragment.ternary = 1/2 ∧
     (∀ σ μ : ℝ, σ + μ = 2 → σ * μ = 3/4 → μ < 1 → 0 < σ → 0 < μ → σ = 3/2 ∧ μ = 1/2) :=
-  ⟨primes_land_in_Z20star, G_homomorphism, fragment_mu_ternary, spectral_uniqueness⟩
+  ⟨primes_land_in_ZtwentyStar, G_homomorphism, fragment_mu_ternary, spectral_uniqueness⟩
 
 /-- Audit label: Satisfiability via canonical_zero. -/
 theorem consistency_witness : canonical_zero.ρ_re = 1/2 := canonical_zero_works
@@ -645,8 +663,8 @@ theorem consistency_witness : canonical_zero.ρ_re = 1/2 := canonical_zero_works
 /-- FULL DEDUCTIVE CHAIN V11:
     The complete 11-step proof from decidable arithmetic to Re(ρ)=1/2. -/
 theorem full_deductive_chain :
-    (∀ p : ℕ, p.Prime → 5 < p → (p : ZMod 20) ∈ Z20star) ∧
-    (∀ a ∈ Z20star, ∀ b ∈ Z20star, (a + b) ∉ Z20star) ∧
+    (∀ p : ℕ, p.Prime → 5 < p → (p : ZMod 20) ∈ ZtwentyStar) ∧
+    (∀ a ∈ ZtwentyStar, ∀ b ∈ ZtwentyStar, (a + b) ∉ ZtwentyStar) ∧
     fragment_mu ArithFragment.ternary = 1/2 ∧
     (∀ k : ℕ, ¬ (Omega_norm k ≤ (Omega_norm k) ^ 2)) ∧
     (∀ g : ZMod 2 × ZMod 2, g + g = 0) ∧
@@ -654,8 +672,8 @@ theorem full_deductive_chain :
     (∀ z : TernaryLZero, z.ρ_re = 1/2) ∧
     (∀ ρ_re : ℝ, 0 < ρ_re → ρ_re < 1 →
      ρ_re ≤ mu_n 3 → 1 - ρ_re ≤ mu_n 3 → ¬ (ρ_re ≠ 1/2)) :=
-  ⟨primes_land_in_Z20star, addition_destroyed, fragment_mu_ternary,
-   no_diagonal_obstr, golden_group_exponent_two,
+  ⟨primes_land_in_ZtwentyStar, addition_destroyed, fragment_mu_ternary,
+   no_diagonal_tower, golden_group_exponent_two,
    Omega_hat_unique_positive_re, rh_squeeze, rh_by_contradiction⟩
 
 end

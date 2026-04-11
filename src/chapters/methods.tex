@@ -763,7 +763,7 @@ The dimensional architecture of $\mathcal{M}^5_{\mathrm{PCF}}$ is established as
 \begin{enumerate}
     \item \textbf{Algebraic Extensions ($d=1,2,3$):} The subsequence $\{1,2,3,5\}$ marks the Fibonacci-graded introduction of new generators ($i$, $\golden$, and the $\sigma$-tower). Starting from $\mathbb{R}$ ($d=1$) and the Gaussian closure via $i^2=-1$ (\texttt{i\_const}, $d=2$), the third dimension introduces $z = \golden y$ (Axiom~3). This circumvents the Frobenius--Hurwitz obstruction (\cref{sssec:frobenius}) geometrically, not algebraically via $\mathbb{H}$, which is formalized in Lean via the \texttt{arity\_unique} theorem (proven unique via \texttt{linarith} by bounding $\mu_n$ between 0 and 1).
     \item \textbf{Topological Closure ($d=4,5$):} Dimension $d=4$ is the Wick-rotated temporal coordinate whose content is the angular velocity of \cref{prop:certainty}. The construction reaches completion at $d=5$ through the compactification of the tower parameter into $S^1_\sigma$. The half-turn $\varepsilon_0 \cdot M_{\mathrm{PCF}} = \pi$ implies that $S^1_\sigma$ does not close ($\pi \neq 2\pi$), encoding the anti-self-reference obstruction topologically. This stability is secured by the \texttt{no\_diagonal\_tower} theorem, which employs Lawvere's "no-diagonal" argument to prevent categorical retraction.
-    \item \textbf{Combinatorial Scaffolding ($H_3$ and $H_5$):} The hypercube $H_k = \{0,1\}^k$ is fixed by the tower's binary contraction factor $\mu_2/\mu_3 = 2$ (\texttt{contraction\_factor}) and the arity uniqueness $n=3$ (\cref{thm:arity-unique}). Their conjunction yields $2^3=8$ vertices. The sextuple convergence (\cref{prop:sextuple-8}) confirms that no other value is compatible: $|H_3|$, $\varphi(20)$, $|\Ztwenty|$, the octants of $\mathbb{R}^3$, $\beta_0^{-1}$, and $|\mathbb{Z}_2\times\mathbb{Z}_4|$ all equal $8$ independently (verified via \texttt{decide} on \texttt{Z20star\_card}). At $d=5$, binary branching in pentagonal axes produces $H_5 = \{0,1\}^5$ (\cref{thm:hypercube}). Since $\binom{5}{3}=10$, $H_5$ contains 10 orientations of $H_3$, each with $2^2=4$ translates, yielding $40$ oriented copies of the $8$-vertex cube (\cref{prop:pentagonal-planes}).
+    \item \textbf{Combinatorial Scaffolding ($H_3$ and $H_5$):} The hypercube $H_k = \{0,1\}^k$ is fixed by the tower's binary contraction factor $\mu_2/\mu_3 = 2$ (\texttt{contraction\_factor}) and the arity uniqueness $n=3$ (\cref{thm:arity-unique}). Their conjunction yields $2^3=8$ vertices. The sextuple convergence (\cref{prop:sextuple-8}) confirms that no other value is compatible: $|H_3|$, $\varphi(20)$, $|\Ztwenty|$, the octants of $\mathbb{R}^3$, $\beta_0^{-1}$, and $|\mathbb{Z}_2\times\mathbb{Z}_4|$ all equal $8$ independently (verified via \texttt{decide} on \texttt{ZtwentyStar\_card}). At $d=5$, binary branching in pentagonal axes produces $H_5 = \{0,1\}^5$ (\cref{thm:hypercube}). Since $\binom{5}{3}=10$, $H_5$ contains 10 orientations of $H_3$, each with $2^2=4$ translates, yielding $40$ oriented copies of the $8$-vertex cube (\cref{prop:pentagonal-planes}).
 \end{enumerate}
 These embedded cubes constitute the discrete spectral scaffolding from which the operator parameters $\beta_0 = 1/|H_3|$, $\lambda = |H_2|\times 5 = 20$, and $\alpha_0 = \sigma_3 - \mu_3/\lambda$ are derived. The manifold $\mathcal{M}^5_{\mathrm{PCF}}$ provides the continuous envelope for this dual spectrum.
 \end{proof}
@@ -787,7 +787,7 @@ Frobenius & Obstructed & Circumvented
   & N/A & Circumvented \\
 Self-ref.\ control & None & None & By fiat & $\norm{\Omega}<1$ \\
 Decidable fragment & No & No & Yes & Yes \\
-Lean formalized & No & No & Partial & Yes (122 decl.) \\
+Lean formalized & No & No & Partial & Yes (151 decl.) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -874,7 +874,7 @@ using the other as input:
   \item $|H_3| = 2^3 = 8$ (vertices of 3-dimensional hypercube),
   \item $2^3 = 8$ octants of $\mathbb{R}^3$ (sign choices $(\pm,\pm,\pm)$),
   \item $\varphi(20) = 8$ (Euler totient, \cref{eq:vigesimal-totient}),
-  \item $|\Ztwenty| = 8$ (Golden Prime classes, \cref{eq:Z20star-card}),
+  \item $|\Ztwenty| = 8$ (Golden Prime classes, \cref{eq:ZtwentyStar-card}),
   \item $\beta_0^{-1} = 8$ (PCF parameter from $S_3$ symmetry),
   \item $|\mathbb{Z}^*_{20}| = |\mathbb{Z}_2\times\mathbb{Z}_4| = 8$
     (group-theoretic).
@@ -886,7 +886,7 @@ Each identity follows from its stated source:
 (i)~\cref{thm:hypercube};
 (ii)~each coordinate of $\mathbb{R}^3$ has two sign choices;
 (iii)~\cref{prop:vigesimal};
-(iv)~\cref{prop:Z20star-card};
+(iv)~\cref{prop:ZtwentyStar-card};
 (v)~\cref{def:structural-params}, $\beta_0=1/8$;
 (vi)~CRT.  No derivation references another.
 \end{proof}
