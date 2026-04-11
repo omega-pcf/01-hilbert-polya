@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.9.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.0...v1.9.1) (2026-04-11)
+
+### Styles
+
+* **citation:** add type shim and synchronize dev dependencies ([d1278c8](https://github.com/omega-pcf/01-hilbert-polya/commit/d1278c8fa53c3ccb5f47a9ebc1da52c00b81598f))
+
+### Refinements
+
+* **citation:** modernize metadata pipeline with strict Zenodo schema compliance ([8b9ef07](https://github.com/omega-pcf/01-hilbert-polya/commit/8b9ef0717889601f26c2d7babc7672a7163372e0))
+
+### Chores
+
+* **scripts:** remove legacy and orphaned development scripts ([f8def53](https://github.com/omega-pcf/01-hilbert-polya/commit/f8def534927cc0d7e78dcac54944d689a1fced97))
+
 ## [1.9.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.8.0...v1.9.0) (2026-04-11)
 
 ### Features
