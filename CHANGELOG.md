@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.9.5](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.4...v1.9.5) (2026-04-11)
+
 ## [1.9.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.3...v1.9.4) (2026-04-11)
 
 ### Bug Fixes
