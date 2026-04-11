@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.5...v2.0.0) (2026-04-11)
+
+### ⚠ BREAKING CHANGES
+
+* Renamed Z20star to ZtwentyStar and no_diagonal_obstr to no_diagonal_tower to achieve 1:1 parity with manuscript \lean{} references. Updated hypercube scaffolding with rigorous combinatorial theorems. Verified full lake build.
+
+### Refinements
+
+* synchronize Lean identifiers with manuscript naming and harden hypercube logic ([f56bd14](https://github.com/omega-pcf/01-hilbert-polya/commit/f56bd1417c4ead1877b87916207b4e670c98f6c2))
+
 ## [1.9.5](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.4...v1.9.5) (2026-04-11)
 
 ## [1.9.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.3...v1.9.4) (2026-04-11)
