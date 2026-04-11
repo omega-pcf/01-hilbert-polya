@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync, existsSync, rmSync, mkdirSync } from 'fs';
 import { parse as parseYaml, stringify as stringifyYaml } from 'yaml';
 import { Ajv, type ValidateFunction } from 'ajv';
 import addFormats from 'ajv-formats';
+// @ts-ignore
 import { Cite } from '@citation-js/core';
 import '@citation-js/plugin-csl';
 import '@citation-js/plugin-cff';
