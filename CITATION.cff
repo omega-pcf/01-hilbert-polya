@@ -2,11 +2,9 @@ cff-version: 1.2.0
 message: If you use this software, please cite it using these metadata.
 title: "The Hilbert--Pólya Operator and the Primitive Structure of the Complex
   Plane: Between F1, String Theory, and Ancient Geometry"
-type: article
+type: software
 version: 1.6.1
-date-released: 2026-04-10
-languages:
-  - eng
+date-released: 2026-04-11
 authors:
   - family-names: González García
     given-names: Jorge Armando
@@ -55,3 +53,1392 @@ abstract: >-
   construction within Manin's program for absolute geometry and its previously
   established intersection with the string theory framework
   (Connes–Douglas–Schwarz, 1998).
+references:
+  - type: generic
+    title: Theoria residuorum biquadraticorum
+    authors:
+      - family-names: Gauss
+        given-names: Carl Friedrich
+    year: 1831
+  - type: generic
+    title: Zur Theorie der eindeutigen analytischen Functionen
+    authors:
+      - family-names: Weierstrass
+        given-names: K.
+    doi: 10.1007/978-3-662-43012-5_1
+    url: https://doi.org/10.1007/978-3-662-43012-5_1
+    journal: Functionenlehre
+    loc-start: "1"
+    loc-end: "52"
+    year: 1876
+  - type: generic
+    title: Essai sur une manière de représenter les quantités imaginaires dans les
+      constructions géométriques
+    authors:
+      - family-names: Argand
+        given-names: Jean Robert
+    year: 1806
+  - type: generic
+    title: Vorlesungen über Zahlentheorie
+    authors:
+      - family-names: Dirichlet
+        given-names: Peter Gustav Lejeune
+    year: 1894
+  - type: article
+    title: Idealtheorie in Ringbereichen
+    authors:
+      - family-names: Noether
+        given-names: Emmy
+    doi: 10.1007/BF01464225
+    url: https://doi.org/10.1007/BF01464225
+    volume: "83"
+    journal: Mathematische Annalen
+    loc-start: "24"
+    loc-end: "66"
+    year: 1921
+  - type: generic
+    title: Diagonal arguments and cartesian closed categories
+    authors:
+      - family-names: Lawvere
+        given-names: F. William
+    journal: Category Theory, Homology Theory and their Applications II
+    loc-start: "134"
+    loc-end: "145"
+    year: 1969
+  - type: article
+    title: A Universal Approach to Self-Referential Paradoxes, Incompleteness and
+      Fixed Points
+    authors:
+      - family-names: Yanofsky
+        given-names: Noson S.
+    doi: 10.2178/bsl/1058448677
+    volume: "9"
+    issue: "3"
+    journal: Bulletin of Symbolic Logic
+    loc-start: "362"
+    loc-end: "386"
+    year: 2003
+  - type: article
+    title: Random matrix theory and ζ(1/2+it)
+    authors:
+      - family-names: Keating
+        given-names: J. P.
+      - family-names: Snaith
+        given-names: N. C.
+    doi: 10.1007/s002200000261
+    volume: "214"
+    journal: Communications in Mathematical Physics
+    loc-start: "57"
+    loc-end: "89"
+    year: 2000
+  - type: generic
+    title: Formally Self-Adjoint Hamiltonian for the Hilbert–Pólya Conjecture
+    authors:
+      - family-names: Yakaboylu
+        given-names: Enderalp
+    url: https://arxiv.org/abs/2211.01899
+    year: 2022
+  - type: article
+    title: Hamiltonian for the Hilbert–Pólya conjecture
+    authors:
+      - family-names: Yakaboylu
+        given-names: Enderalp
+    doi: 10.1088/1751-8121/ad4c2d
+    url: https://doi.org/10.1088/1751-8121/ad4c2d
+    volume: "57"
+    issue: "23"
+    journal: "Journal of Physics A: Mathematical and Theoretical"
+    loc-start: "235204"
+    year: 2024
+  - type: article
+    title: On the distribution of spacings between zeros of the zeta function
+    authors:
+      - family-names: Odlyzko
+        given-names: Andrew M.
+    doi: 10.1090/S0025-5718-1987-0866115-0
+    volume: "48"
+    issue: "177"
+    journal: Mathematics of Computation
+    loc-start: "273"
+    loc-end: "308"
+    year: 1987
+  - type: generic
+    title: The Theory of the Riemann Zeta-Function
+    authors:
+      - family-names: Titchmarsh
+        given-names: Edward C.
+    year: 1986
+  - type: article
+    title: On the Distribution of Zeros of the Riemann Zeta-Function
+    authors:
+      - family-names: Lehman
+        given-names: R Sherman
+    volume: "3"
+    issue: "2"
+    journal: Proceedings of the London Mathematical Society
+    loc-start: "303"
+    loc-end: "320"
+    year: 1970
+  - type: article
+    title: The AdS/CFT correspondence
+    authors:
+      - family-names: Hubeny
+        given-names: Veronika E
+    doi: 10.1088/0264-9381/32/12/124010
+    url: http://dx.doi.org/10.1088/0264-9381/32/12/124010
+    volume: "32"
+    issue: "12"
+    journal: Classical and Quantum Gravity
+    loc-start: "124010"
+    year: 2015
+  - type: generic
+    title: The pair correlation of zeros of the zeta function
+    authors:
+      - family-names: Montgomery
+        given-names: Hugh L.
+    volume: "24"
+    journal: Proceedings of Symposia in Pure Mathematics
+    loc-start: "181"
+    loc-end: "193"
+    year: 1973
+  - type: article
+    title: Eine neue Art von Zetafunktionen und ihre Beziehungen zur Verteilung der
+      Primzahlen. (Zweite Mitteilung.)
+    authors:
+      - family-names: Hecke
+        given-names: Erich
+    doi: 10.1007/BF01612081
+    volume: "6"
+    journal: Mathematische Zeitschrift
+    loc-start: "11"
+    loc-end: "51"
+    year: 1920
+  - type: article
+    title: Abstrakte Begründung der komplexen Multiplikation und Riemannsche
+      Vermutung in Funktionenkörpern
+    authors:
+      - family-names: Hasse
+        given-names: Helmut
+    doi: 10.1007/BF02940685
+    volume: "10"
+    journal: Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg
+    loc-start: "325"
+    loc-end: "348"
+    year: 1934
+  - type: article
+    title: Statistical Theory of the Energy Levels of Complex Systems. I
+    authors:
+      - family-names: Dyson
+        given-names: Freeman J.
+    doi: 10.1063/1.1703773
+    volume: "3"
+    journal: Journal of Mathematical Physics
+    loc-start: "140"
+    loc-end: "156"
+    year: 1962
+  - type: generic
+    title: The 10²²-nd zero of the Riemann zeta function
+    authors:
+      - family-names: Odlyzko
+        given-names: Andrew M.
+    doi: 10.1090/conm/290/04746
+    volume: "290"
+    journal: Dynamical, Spectral, and Arithmetic Zeta Functions
+    loc-start: "139"
+    loc-end: "144"
+    year: 2001
+  - type: article
+    title: Modular elliptic curves and Fermat's Last Theorem
+    authors:
+      - family-names: Wiles
+        given-names: Andrew
+    doi: 10.2307/2118559
+    volume: "141"
+    issue: "3"
+    journal: Annals of Mathematics
+    loc-start: "443"
+    loc-end: "551"
+    year: 1995
+  - type: generic
+    title: A Course in Arithmetic
+    authors:
+      - family-names: Serre
+        given-names: Jean-Pierre
+    doi: 10.1007/978-1-4684-9884-4
+    url: https://doi.org/10.1007/978-1-4684-9884-4
+    volume: "7"
+    year: 1973
+  - type: article
+    title: Recherches sur diverses applications de l'Analyse infinitesimale à la
+      théorie des Nombres.
+    authors:
+      - family-names: Lejeune Dirichlet
+        given-names: G.
+    url: http://eudml.org/doc/147076
+    volume: "19"
+    journal: Journal für die reine und angewandte Mathematik
+    loc-start: "324"
+    loc-end: "369"
+    year: 1839
+  - type: generic
+    title: Über eine neue Art von L-Reihen
+    authors:
+      - family-names: Artin
+        given-names: Emil
+    volume: "3"
+    issue: "1"
+    journal: Abhandlungen aus dem mathematischen Seminar der Universität Hamburg
+    loc-start: "89"
+    loc-end: "108"
+    year: 1924
+  - type: generic
+    title: Lambda-rings and the field with one element
+    authors:
+      - family-names: Borger
+        given-names: James
+    url: https://arxiv.org/abs/0906.3146
+    year: 2009
+  - type: generic
+    title: Une lettre et un extrait de lettre à Simone Weil
+    authors:
+      - family-names: Weil
+        given-names: André
+    year: 1979
+  - type: article
+    title: Sur les fonctions algébriques à corps de constantes fini
+    authors:
+      - family-names: Weil
+        given-names: André
+    volume: "210"
+    issue: 592-594
+    journal: CR Acad. Sci. Paris
+    loc-start: "149"
+    year: 1940
+  - type: generic
+    title: Letter to André Weil
+    authors:
+      - family-names: Langlands
+        given-names: Robert P.
+    journal: "Emil Artin and Beyond: Class Field Theory and L-functions"
+    loc-start: "165"
+    loc-end: "173"
+    year: 2015
+  - type: generic
+    title: "Fibonacci's Liber Abaci: A Translation into Modern English of Leonardo
+      Pisano's Book of Calculation"
+    authors:
+      - family-names: Sigler
+        given-names: Laurence E
+    year: 2002
+  - type: generic
+    title: Conics
+    authors:
+      - family-names: Perga
+        given-names: Apollonius
+  - type: generic
+    title: Mathematical Collection
+    authors:
+      - family-names: Alexandria
+        given-names: Pappus
+  - type: generic
+    title: The Ten Books on Architecture
+    authors:
+      - family-names: Vitruvius
+    year: 1960
+  - type: generic
+    title: De pictura
+    authors:
+      - family-names: Alberti
+        given-names: Leon Battista
+    year: 1435
+  - type: generic
+    title: Géométrie descriptive
+    authors:
+      - family-names: Monge
+        given-names: Gaspard
+    year: 1811
+  - type: generic
+    title: On isometrical perspective
+    authors:
+      - family-names: Farish
+        given-names: William
+    year: 1822
+  - type: generic
+    title: De Divina Proportione
+    authors:
+      - family-names: Pacioli
+        given-names: Luca
+    year: 1509
+  - type: generic
+    title: Institutiones Calculi Differentialis
+    authors:
+      - family-names: Euler
+        given-names: Leonhard
+    year: 1755
+  - type: generic
+    title: The Fractal Geometry of Nature
+    authors:
+      - family-names: Mandelbrot
+        given-names: Benoit B.
+    year: 1982
+  - type: article
+    title: Sur une courbe dont tout point est un point de ramification
+    authors:
+      - family-names: Sierpiński
+        given-names: Wacław
+    url: https://cir.nii.ac.jp/crid/1573950399016422528
+    volume: "160"
+    journal: Comptes Rendus de l'Académie des Sciences
+    loc-start: "302"
+    loc-end: "305"
+    year: 1916
+  - type: article
+    title: Fractals and Self Similarity
+    authors:
+      - family-names: Hutchinson
+        given-names: John E.
+    url: http://www.jstor.org/stable/24893080
+    volume: "30"
+    issue: "5"
+    journal: Indiana University Mathematics Journal
+    loc-start: "713"
+    loc-end: "747"
+    year: 1981
+  - type: generic
+    title: Mathematische Grundlagen der Quantenmechanik
+    authors:
+      - family-names: Neumann
+        given-names: John
+    doi: 10.1007/978-3-642-61409-5
+    url: https://doi.org/10.1007/978-3-642-61409-5
+    volume: "38"
+    year: 1932
+  - type: generic
+    title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
+    authors:
+      - family-names: Baez
+        given-names: J.
+      - family-names: Stay
+        given-names: M.
+    doi: 10.1007/978-3-642-12821-9_2
+    url: http://dx.doi.org/10.1007/978-3-642-12821-9_2
+    journal: New Structures for Physics
+    loc-start: "95"
+    loc-end: "172"
+    year: 2010
+  - type: article
+    title: Scalar modular bootstrap and zeros of the Riemann zeta function
+    authors:
+      - family-names: Benjamin
+        given-names: Nathan
+      - family-names: Chang
+        given-names: Cyuan-Han
+    doi: 10.1007/jhep11(2022)143
+    url: http://dx.doi.org/10.1007/JHEP11(2022)143
+    volume: "2022"
+    issue: "11"
+    journal: Journal of High Energy Physics
+    year: 2022
+  - type: article
+    title: Numbers as functions
+    authors:
+      - family-names: Manin
+        given-names: Yuri I.
+    doi: 10.1134/S2070046613040055
+    volume: "5"
+    issue: "4"
+    journal: P-Adic Numbers, Ultrametric Analysis and Applications
+    loc-start: "319"
+    loc-end: "339"
+    year: 2013
+  - type: generic
+    title: Differential Algebra and Diophantine Geometry
+    authors:
+      - family-names: Buium
+        given-names: Alexandru
+    year: 1995
+  - type: article
+    title: "La Conjecture de Weil: I"
+    authors:
+      - family-names: Deligne
+        given-names: Pierre
+    doi: 10.1007/BF02684373
+    volume: "43"
+    journal: Publications Mathématiques de l'IHÉS
+    loc-start: "273"
+    loc-end: "307"
+    year: 1974
+  - type: article
+    title: Conformal bootstrap in Liouville theory
+    authors:
+      - family-names: Guillarmou
+        given-names: Colin
+      - family-names: Kupiainen
+        given-names: Antti
+      - family-names: Rhodes
+        given-names: Rémi
+      - family-names: Vargas
+        given-names: Vincent
+    volume: "233"
+    issue: "1"
+    journal: Acta Mathematica
+    loc-start: "33"
+    loc-end: "194"
+    year: 2024
+  - type: generic
+    title: Periods
+    authors:
+      - family-names: Kontsevich
+        given-names: Maxim
+      - family-names: Zagier
+        given-names: Don
+    journal: Mathematics unlimited—2001 and beyond
+    loc-start: "771"
+    loc-end: "808"
+    year: 2001
+  - type: article
+    title: Estimates of trigonometric sums and their applications
+    authors:
+      - family-names: Korobov
+        given-names: Nikolai Mikhailovich
+    volume: "13"
+    issue: "4"
+    journal: Uspekhi Matematicheskikh Nauk
+    loc-start: "185"
+    loc-end: "192"
+    year: 1958
+  - type: article
+    title: The method of trigonometrical sums in the theory of numbers
+    authors:
+      - family-names: Vinogradov
+        given-names: I. M.
+    volume: "23"
+    journal: Trudy Matematicheskogo Instituta imeni V. A. Steklova
+    loc-start: "3"
+    loc-end: "109"
+    year: 1947
+  - type: generic
+    title: "The Riemann hypothesis: a resource for the afficionado and virtuoso alike"
+    authors:
+      - family-names: Borwein
+        given-names: Peter
+      - family-names: Choi
+        given-names: Stephen
+      - family-names: Rooney
+        given-names: Brendan
+      - family-names: Weirathmueller
+        given-names: Andrea
+    year: 2008
+  - type: article
+    title: "Alternative Rings and Related Questions I: Existence of the Radical"
+    authors:
+      - family-names: Zorn
+        given-names: Max
+    url: http://www.jstor.org/stable/1969256
+    volume: "42"
+    issue: "3"
+    journal: Annals of Mathematics
+    loc-start: "676"
+    loc-end: "686"
+    year: 1941
+  - type: generic
+    title: von Neumann Algebras
+    authors:
+      - family-names: Dixmier
+        given-names: Jacques
+    year: 1981
+  - type: generic
+    title: A short course on spectral theory
+    authors:
+      - family-names: Arveson
+        given-names: William
+      - family-names: Gehring
+        given-names: FW
+      - family-names: Ribet
+        given-names: KA
+    volume: "209"
+    year: 2002
+  - type: generic
+    title: Principles of Quantum Mechanics
+    authors:
+      - family-names: Shankar
+        given-names: R.
+    doi: 10.1007/978-1-4757-0576-8
+    url: https://doi.org/10.1007/978-1-4757-0576-8
+    year: 1994
+  - type: generic
+    title: Finite-dimensional vector spaces
+    authors:
+      - family-names: Halmos
+        given-names: Paul Richard
+      - family-names: Mathématicien
+        given-names: Hongrie
+      - family-names: Mathematician
+        given-names: Hungary
+    volume: "11"
+    year: 1958
+  - type: generic
+    title: Functional Analysis
+    authors:
+      - family-names: Riesz
+        given-names: Frigyes
+      - family-names: Sz.-Nagy
+        given-names: Béla
+    doi: 10.2307/3611560
+    volume: "41"
+    journal: The Mathematical Gazette
+    year: 1955
+  - type: generic
+    title: Golden Prime Symmetry Theory
+    authors:
+      - family-names: Grisales Herrera
+        given-names: Javier
+    doi: 10.5281/zenodo.17100303
+    url: https://doi.org/10.5281/zenodo.17100303
+    year: 2025
+  - type: article
+    title: "The basic geometry of Witt vectors, I: The affine case"
+    authors:
+      - family-names: Borger
+        given-names: James
+    volume: "5"
+    issue: "2"
+    journal: Algebra & Number Theory
+    loc-start: "231"
+    loc-end: "285"
+    year: 2011
+  - type: article
+    title: "The basic geometry of Witt vectors. II: Spaces"
+    authors:
+      - family-names: Borger
+        given-names: James
+    volume: "351"
+    issue: "4"
+    journal: Mathematische Annalen
+    loc-start: "877"
+    loc-end: "933"
+    year: 2011
+  - type: generic
+    title: An Essay on the Riemann Hypothesis
+    authors:
+      - family-names: Connes
+        given-names: Alain
+    doi: 10.1007/978-3-319-32162-2_5
+    url: https://doi.org/10.1007/978-3-319-32162-2_5
+    journal: Open Problems in Mathematics
+    loc-start: "225"
+    loc-end: "257"
+    year: 2016
+  - type: article
+    title: Torified varieties and their geometries over \mathbbF₁
+    authors:
+      - family-names: López Peña
+        given-names: Javier
+      - family-names: Lorscheid
+        given-names: Oliver
+    doi: 10.1007/s00209-009-0638-0
+    url: https://doi.org/10.1007/s00209-009-0638-0
+    volume: "267"
+    issue: "3"
+    journal: Mathematische Zeitschrift
+    loc-start: "605"
+    loc-end: "643"
+    year: 2011
+  - type: generic
+    title: "Mapping F₁-land: An overview of geometries over the field with one
+      element"
+    authors:
+      - family-names: Peña
+        given-names: Javier López
+      - family-names: Lorscheid
+        given-names: Oliver
+    url: https://arxiv.org/abs/0909.0069
+    year: 2009
+  - type: generic
+    title: Sur les courbes algébriques et les variétés qui s'en déduisent
+    authors:
+      - family-names: Weil
+        given-names: A.
+    year: 1948
+  - type: generic
+    title: Disquisitiones arithmeticae
+    authors:
+      - family-names: Gauss
+        given-names: Carl Friedrich
+    volume: "1"
+    year: 1801
+  - type: article
+    title: The Story of Riemann's Moduli Space
+    authors:
+      - family-names: Ji
+        given-names: Lizhen
+    volume: "3"
+    issue: "2"
+    journal: Notices of the International Congress of Chinese Mathematicians
+    loc-start: "46"
+    loc-end: "73"
+    year: 2015
+  - type: article
+    title: String theory dynamics in various dimensions
+    authors:
+      - family-names: Witten
+        given-names: Edward
+    doi: 10.1016/0550-3213(95)00158-O
+    url: https://www.sciencedirect.com/science/article/pii/055032139500158O
+    volume: "443"
+    issue: "1"
+    journal: Nuclear Physics B
+    loc-start: "85"
+    loc-end: "126"
+    year: 1995
+  - type: article
+    title: Heterotic and Type I string dynamics from eleven dimensions
+    authors:
+      - family-names: Hořava
+        given-names: Petr
+      - family-names: Witten
+        given-names: Edward
+    doi: 10.1016/0550-3213(95)00621-5
+    volume: "460"
+    issue: "3"
+    journal: Nuclear Physics B
+    loc-start: "506"
+    loc-end: "524"
+    year: 1996
+  - type: article
+    title: M-theory from the Superpoint
+    authors:
+      - family-names: Huerta
+        given-names: John
+      - family-names: Schreiber
+        given-names: Urs
+    doi: 10.1007/s11005-018-1110-z
+    url: https://doi.org/10.1007/s11005-018-1110-z
+    volume: "108"
+    issue: "12"
+    journal: Letters in Mathematical Physics
+    loc-start: "2695"
+    loc-end: "2727"
+    year: 2018
+  - type: generic
+    title: Real Multiplication and Noncommutative Geometry (ein Alterstraum)
+    authors:
+      - family-names: Manin
+        given-names: Yu. I.
+    doi: 10.1007/978-3-642-18908-1_23
+    url: https://doi.org/10.1007/978-3-642-18908-1_23
+    journal: "The Legacy of Niels Henrik Abel: The Abel Bicentennial, Oslo, 2002"
+    loc-start: "685"
+    loc-end: "727"
+    year: 2004
+  - type: generic
+    title: Quaternionic quantum mechanics and quantum fields
+    authors:
+      - family-names: Adler
+        given-names: Stephen L
+      - family-names: Finkelstein
+        given-names: David Ritz
+    year: 1996
+  - type: article
+    title: The octonions
+    authors:
+      - family-names: Baez
+        given-names: John C.
+    volume: "39"
+    journal: Bulletin of the American Mathematical Society
+    loc-start: "145"
+    loc-end: "205"
+    year: 2002
+  - type: generic
+    title: The Principles of Mathematics
+    authors:
+      - family-names: Russell
+        given-names: Bertrand
+    year: 1903
+  - type: article
+    title: Mathematical Logic as Based on the Theory of Types
+    authors:
+      - family-names: Russell
+        given-names: Bertrand
+    url: http://www.jstor.org/stable/2369948
+    volume: "30"
+    issue: "3"
+    journal: American Journal of Mathematics
+    loc-start: "222"
+    loc-end: "262"
+    year: 1908
+  - type: generic
+    title: "An Intuitionistic Theory of Types: Predicative Part"
+    authors:
+      - family-names: Martin-Löf
+        given-names: Per
+    doi: 10.1016/S0049-237X(08)71945-1
+    url: https://www.sciencedirect.com/science/article/pii/S0049237X08719451
+    volume: "80"
+    journal: Logic Colloquium '73
+    loc-start: "73"
+    loc-end: "118"
+    year: 1975
+  - type: article
+    title: The Logic of Paradox
+    authors:
+      - family-names: Priest
+        given-names: Graham
+    url: http://www.jstor.org/stable/30227165
+    volume: "8"
+    issue: "1"
+    journal: Journal of Philosophical Logic
+    loc-start: "219"
+    loc-end: "241"
+    year: 1979
+  - type: article
+    title: A Decision Method for Elementary Algebra and Geometry
+    authors:
+      - family-names: Tarski
+        given-names: Alfred
+    doi: 10.2307/2267705
+    volume: "17"
+    issue: "3"
+    journal: Journal of Symbolic Logic
+    loc-start: "207"
+    loc-end: "207"
+    year: 1952
+  - type: article
+    title: Tarski's system of geometry
+    authors:
+      - family-names: Tarski
+        given-names: Alfred
+      - family-names: Givant
+        given-names: Steven
+    doi: 10.2307/421089
+    volume: "5"
+    issue: "2"
+    journal: The Bulletin of Symbolic Logic
+    loc-start: "175"
+    loc-end: "214"
+    year: 1999
+  - type: article
+    title: A mathematical theory of communication
+    authors:
+      - family-names: Shannon
+        given-names: Claude E.
+    doi: 10.1002/j.1538-7305.1948.tb01338.x
+    volume: "27"
+    issue: "3"
+    journal: The Bell System Technical Journal
+    loc-start: "379"
+    loc-end: "423"
+    year: 1948
+  - type: generic
+    title: Elementary bounds for presburger arithmetic
+    authors:
+      - family-names: Oppen
+        given-names: Derek C.
+    doi: 10.1145/800125.804033
+    url: https://doi.org/10.1145/800125.804033
+    journal: Proceedings of the Fifth Annual ACM Symposium on Theory of Computing
+    loc-start: "34"
+    loc-end: "37"
+    year: 1973
+  - type: generic
+    title: Über einige Satzfunktionen in der Arithmetik
+    authors:
+      - family-names: Skolem
+        given-names: Thoralf
+    url: https://books.google.com.mx/books?id=oODfcQAACAAJ
+    year: 1931
+  - type: article
+    title: Sur les zéros de la fonction ζ(s) de Riemann
+    authors:
+      - family-names: Hardy
+        given-names: Godfrey H.
+    volume: "158"
+    journal: Comptes Rendus de l'Académie des Sciences
+    loc-start: "1012"
+    loc-end: "1014"
+    year: 1914
+  - type: generic
+    title: Sur les analogues algébriques des groupes semi-simples complexes
+    authors:
+      - family-names: Tits
+        given-names: Jacques
+    volume: "19"
+    journal: Colloque d’algebre supérieure, tenua Bruxelles du
+    loc-start: "261"
+    loc-end: "289"
+    year: 1956
+  - type: generic
+    title: Les variétés sur le corps à un élément
+    authors:
+      - family-names: Soulé
+        given-names: Christophe
+    url: https://arxiv.org/abs/math/0304444
+    year: 2003
+  - type: generic
+    title: Random Matrices, Frobenius Eigenvalues, and Monodromy
+    authors:
+      - family-names: Katz
+        given-names: Nicholas M.
+      - family-names: Sarnak
+        given-names: Peter
+    year: 1999
+  - type: article
+    title: Black Holes and Entropy
+    authors:
+      - family-names: Bekenstein
+        given-names: Jacob D.
+    doi: 10.1103/PhysRevD.7.2333
+    url: https://link.aps.org/doi/10.1103/PhysRevD.7.2333
+    volume: "7"
+    issue: "8"
+    journal: Physical Review D
+    loc-start: "2333"
+    loc-end: "2346"
+    year: 1973
+  - type: article
+    title: Particle creation by black holes
+    authors:
+      - family-names: Hawking
+        given-names: Stephen W.
+    volume: "43"
+    issue: "3"
+    journal: Communications in Mathematical Physics
+    loc-start: "199"
+    loc-end: "220"
+    year: 1975
+  - type: article
+    title: The Riemann Zeros and Eigenvalue Asymptotics
+    authors:
+      - family-names: Berry
+        given-names: M. V.
+      - family-names: Keating
+        given-names: J. P.
+    doi: 10.1137/S0036144598347497
+    url: https://%20https://doi.org/10.1137/S0036144598347497%20
+    volume: "41"
+    issue: "2"
+    journal: SIAM Review
+    loc-start: "236"
+    loc-end: "266"
+    year: 1999
+  - type: article
+    title: Hamiltonian for the Zeros of the Riemann Zeta Function
+    authors:
+      - family-names: Bender
+        given-names: Carl M.
+      - family-names: Brody
+        given-names: Dorje C.
+      - family-names: Müller
+        given-names: Markus P.
+    doi: 10.1103/PhysRevLett.118.130201
+    url: https://link.aps.org/doi/10.1103/PhysRevLett.118.130201
+    volume: "118"
+    issue: "13"
+    journal: Physical Review Letters
+    loc-start: "130201"
+    year: 2017
+  - type: generic
+    title: Arithmetic Algebraic Geometry
+    authors:
+      - family-names: Geer
+        given-names: Gerard
+      - family-names: Oort
+        given-names: Frans
+      - family-names: Steenbrink
+        given-names: Joseph H. M.
+    doi: 10.1007/978-1-4612-0457-2
+    url: https://doi.org/10.1007/978-1-4612-0457-2
+    volume: "89"
+    year: 1991
+  - type: generic
+    title: Arithmetic Duality Theorems
+    authors:
+      - family-names: Milne
+        given-names: James S.
+    year: 2006
+  - type: generic
+    title: Arithmetic Duality
+    authors:
+      - family-names: Milne
+        given-names: James S.
+    url: https://arxiv.org/abs/2509.13016
+    year: 2025
+  - type: generic
+    title: "Paper Palaces: Rise of the Renaissance Architectural Treatise"
+    authors:
+      - family-names: Hart
+        given-names: Vaughan
+      - family-names: Hicks
+        given-names: Peter
+    year: 1998
+  - type: article
+    title: Mémoire sur les systèmes formés par des points distribués régulièrement
+      sur un plan ou dans l'espace
+    authors:
+      - family-names: Bravais
+        given-names: Auguste
+    volume: "19"
+    journal: Journal de l'École Polytechnique
+    loc-start: "1"
+    loc-end: "128"
+    year: 1848
+  - type: generic
+    title: Jean-Robert Argand
+    authors:
+      - family-names: O'Connor
+        given-names: John J.
+      - family-names: Robertson
+        given-names: Edmund F.
+    url: https://mathshistory.st-andrews.ac.uk/Biographies/Argand/
+    year: 2000
+  - type: article
+    title: Quantum geometry of bosonic strings
+    authors:
+      - family-names: Polyakov
+        given-names: A.M.
+    doi: 10.1016/0370-2693(81)90743-7
+    url: https://www.sciencedirect.com/science/article/pii/0370269381907437
+    volume: "103"
+    issue: "3"
+    journal: Physics Letters B
+    loc-start: "207"
+    loc-end: "210"
+    year: 1981
+  - type: article
+    title: Noncommutative geometry and Matrix theory
+    authors:
+      - family-names: Connes
+        given-names: Alain
+      - family-names: Douglas
+        given-names: Michael R.
+      - family-names: Schwarz
+        given-names: Albert
+    doi: 10.1088/1126-6708/1998/02/003
+    url: https://doi.org/10.1088/1126-6708/1998/02/003
+    volume: "1998"
+    issue: "02"
+    journal: Journal of High Energy Physics
+    loc-start: "003"
+    year: 1998
+  - type: generic
+    title: Noncommutative Geometry
+    authors:
+      - family-names: Connes
+        given-names: A.
+    year: 1995
+  - type: generic
+    title: On the notion of geometry over \mathbbF₁
+    authors:
+      - family-names: Connes
+        given-names: Alain
+      - family-names: Consani
+        given-names: Caterina
+    url: https://arxiv.org/abs/0809.2926
+    year: 2009
+  - type: generic
+    title: Arithmetic Differential Equations
+    authors:
+      - family-names: Buium
+        given-names: Alexandru
+    volume: "118"
+    year: 2005
+  - type: article
+    title: Théorie des Topos et Cohomologie Etale des Schémas
+    authors:
+      - family-names: A.
+        given-names: Grothendieck
+      - family-names: Verdier
+        given-names: J. L.
+    doi: 10.1007/bfb0081551
+    url: https://cir.nii.ac.jp/crid/1363670319619747968
+    journal: Lecture Notes in Mathematics
+    year: 1972
+  - type: article
+    title: Extremale quasikonforme Abbildungen und quadratische Differentiale
+    authors:
+      - family-names: Teichmüller
+        given-names: Oswald
+    url: https://cir.nii.ac.jp/crid/1570291224319453568
+    volume: "22"
+    journal: Abhandlungen der Preußischen Akademie der Wissenschaften
+    loc-start: "1"
+    loc-end: "197"
+    year: 1939
+  - type: generic
+    title: VIII - Unbounded Operators
+    authors:
+      - family-names: Reed
+        given-names: Michael
+      - family-names: Simon
+        given-names: Barry
+    doi: 10.1016/B978-0-12-585001-8.50014-3
+    url: https://www.sciencedirect.com/science/article/pii/B9780125850018500143
+    journal: Methods of Modern Mathematical Physics
+    loc-start: "249"
+    loc-end: "317"
+    year: 1972
+  - type: article
+    title: "Éléments de géométrie algébrique: I. Le langage des schémas"
+    authors:
+      - family-names: Grothendieck
+        given-names: Alexander
+    volume: "4"
+    journal: Publications Mathématiques de l'IHÉS
+    loc-start: "5"
+    loc-end: "228"
+    year: 1960
+  - type: article
+    title: Über die Gruppencharaktere
+    authors:
+      - family-names: Frobenius
+        given-names: Ferdinand Georg
+    journal: Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften
+      zu Berlin
+    loc-start: "985"
+    loc-end: "1021"
+    year: 1896
+  - type: article
+    title: Ueber lineare Substitutionen und bilineare Formen
+    authors:
+      - family-names: Frobenius
+        given-names: Ferdinand Georg
+    volume: "84"
+    journal: Journal für die reine und angewandte Mathematik
+    loc-start: "1"
+    loc-end: "63"
+    year: 1878
+  - type: article
+    title: The Large-N Limit of Superconformal Field Theories and Supergravity
+    authors:
+      - family-names: Maldacena
+        given-names: Juan
+    doi: 10.1023/A:1026654312961
+    url: https://doi.org/10.1023/A:1026654312961
+    volume: "38"
+    issue: "4"
+    journal: International Journal of Theoretical Physics
+    loc-start: "1113"
+    loc-end: "1133"
+    year: 1999
+  - type: generic
+    title: Cyclotomy and analytic geometry over \mathbbF₁
+    authors:
+      - family-names: Manin
+        given-names: Yuri I.
+    url: https://arxiv.org/abs/0809.1564
+    year: 2009
+  - type: article
+    title: "The geometry of blueprints. Part II: Tits–Weyl models of algebraic groups"
+    authors:
+      - family-names: Lorscheid
+        given-names: Oliver
+    doi: 10.1017/fms.2018.17
+    volume: "6"
+    journal: Forum of Mathematics, Sigma
+    loc-start: e20
+    year: 2018
+  - type: generic
+    title: "The Riemann Hypothesis over Finite Fields: From Weil to the Present Day"
+    authors:
+      - family-names: Milne
+        given-names: James S.
+    url: https://arxiv.org/abs/1509.00797
+    year: 2015
+  - type: article
+    title: Theorie der Abel'schen Functionen.
+    authors:
+      - family-names: Riemann
+        given-names: B.
+    url: https://doi.org/10.1515/crll.1857.54.115
+    volume: "1857"
+    issue: "54"
+    journal: Journal für die reine und angewandte Mathematik
+    loc-start: "115"
+    loc-end: "155"
+    year: 1857
+  - type: article
+    title: Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse
+    authors:
+      - family-names: Riemann
+        given-names: Bernhard
+    journal: Monatsberichte der Königlichen Preußischen Akademie der Wissenschaften
+      zu Berlin
+    loc-start: "671"
+    loc-end: "680"
+    year: 1859
+  - type: generic
+    title: Ars Magna
+    authors:
+      - family-names: Cardano
+        given-names: Gerolamo
+    year: 1545
+  - type: generic
+    title: Elements of quaternions
+    authors:
+      - family-names: Hamilton
+        given-names: William Rowan
+    year: 1866
+  - type: article
+    title: The Arithmetic Site
+    authors:
+      - family-names: Connes
+        given-names: Alain
+      - family-names: Consani
+        given-names: Caterina
+    doi: 10.1016/j.crma.2014.07.009
+    url: https://www.numdam.org/articles/10.1016/j.crma.2014.07.009/
+    volume: "352"
+    issue: "12"
+    journal: Comptes Rendus. Mathématique
+    loc-start: "971"
+    loc-end: "975"
+    year: 2014
+  - type: article
+    title: Trace formula in noncommutative geometry and the zeros of the Riemann
+      zeta function
+    authors:
+      - family-names: Connes
+        given-names: Alain
+    volume: "5"
+    issue: "1"
+    journal: Selecta Mathematica
+    loc-start: "29"
+    year: 1999
+  - type: generic
+    title: The Selberg Trace Formula for PSL(2,\mathbbR). Vol. I
+    authors:
+      - family-names: Hejhal
+        given-names: Dennis A.
+    volume: "548"
+    year: 1976
+  - type: generic
+    title: "Linear operators, part 1: general theory"
+    authors:
+      - family-names: Dunford
+        given-names: Nelson
+      - family-names: Schwartz
+        given-names: Jacob T
+    year: 1958
+  - type: generic
+    title: Commutative normed rings
+    authors:
+      - family-names: Gelfand
+        given-names: Israil
+      - family-names: Raikov
+        given-names: Dimitri
+      - family-names: Shilov
+        given-names: Georgii
+    volume: "170"
+    year: 2001
+  - type: article
+    title: Über formal unentscheidbare Sätze der Principia Mathematica und
+      verwandter Systeme I
+    authors:
+      - family-names: Gödel
+        given-names: Kurt
+    volume: "38"
+    issue: "1"
+    journal: Monatshefte für mathematik und physik
+    loc-start: "173"
+    loc-end: "198"
+    year: 1931
+  - type: generic
+    title: On the K-theory of finite algebras over Witt vectors of perfect fields
+    authors:
+      - family-names: Hesselholt
+        given-names: Lars
+      - family-names: Madsen
+        given-names: Ib
+      - family-names: others
+    year: 1995
+  - type: article
+    title: Über die Abbildungen der dreidimensionalen Sphäre auf die Kugelfläche
+    authors:
+      - family-names: Hopf
+        given-names: Heinz
+    doi: 10.1007/BF01457962
+    url: https://doi.org/10.1007/BF01457962
+    volume: "104"
+    journal: Mathematische Annalen
+    loc-start: "637"
+    loc-end: "665"
+    year: 1931
+  - type: article
+    title: On the Non-Existence of Elements of Hopf Invariant One
+    authors:
+      - family-names: Adams
+        given-names: J. F.
+    url: http://www.jstor.org/stable/1970147
+    volume: "72"
+    issue: "1"
+    journal: Annals of Mathematics
+    loc-start: "20"
+    loc-end: "104"
+    year: 1960
+  - type: article
+    title: The Hopf fibration—seven times in physics
+    authors:
+      - family-names: Urbantke
+        given-names: H.K.
+    doi: 10.1016/S0393-0440(02)00121-3
+    url: https://www.sciencedirect.com/science/article/pii/S0393044002001213
+    volume: "46"
+    issue: "2"
+    journal: Journal of Geometry and Physics
+    loc-start: "125"
+    loc-end: "150"
+    year: 2003
+  - type: article
+    title: Geometry of entangled states, Bloch spheres and Hopf fibrations
+    authors:
+      - family-names: Mosseri
+        given-names: Rémy
+      - family-names: Dandoloff
+        given-names: Rossen
+    doi: 10.1088/0305-4470/34/47/324
+    url: https://doi.org/10.1088/0305-4470/34/47/324
+    volume: "34"
+    issue: "47"
+    journal: "Journal of Physics A: Mathematical and General"
+    loc-start: "10243"
+    year: 2001
+  - type: article
+    title: Über die Composition der quadratischen Formen
+    authors:
+      - family-names: Hurwitz
+        given-names: Adolf
+    journal: Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen,
+      Mathematisch-Physikalische Klasse
+    loc-start: "309"
+    loc-end: "316"
+    year: 1898
+  - type: article
+    title: Faisceaux Algébriques Cohérents
+    authors:
+      - family-names: Serre
+        given-names: Jean-Pierre
+    url: http://www.jstor.org/stable/1969915
+    volume: "61"
+    issue: "2"
+    journal: Annals of Mathematics
+    loc-start: "197"
+    loc-end: "278"
+    year: 1955
+  - type: article
+    title: Über eine neue Art von L-Reihen
+    authors:
+      - family-names: Artin
+        given-names: Emil
+    doi: 10.1007/BF02954618
+    url: https://doi.org/10.1007/BF02954618
+    volume: "3"
+    issue: "1"
+    journal: Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg
+    loc-start: "89"
+    loc-end: "108"
+    year: 1924
+  - type: article
+    title: Beweis des allgemeinen Reziprozitätsgesetzes
+    authors:
+      - family-names: Artin
+        given-names: Emil
+    doi: 10.1007/BF02952531
+    url: https://doi.org/10.1007/BF02952531
+    volume: "5"
+    issue: "1"
+    journal: Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg
+    loc-start: "353"
+    loc-end: "363"
+    year: 1927
+  - type: article
+    title: Proof of the global Langlands conjecture for GL(2) over a function field
+    authors:
+      - family-names: Drinfel'd
+        given-names: Vladimir G.
+    doi: 10.1007/BF01079470
+    url: https://doi.org/10.1007/BF01079470
+    volume: "11"
+    issue: "3"
+    journal: Functional Analysis and Its Applications
+    loc-start: "223"
+    loc-end: "225"
+    year: 1977
+  - type: article
+    title: Chtoucas de Drinfeld et correspondance de Langlands
+    authors:
+      - family-names: Lafforgue
+        given-names: Laurent
+    doi: 10.1007/s002220100174
+    url: https://doi.org/10.1007/s002220100174
+    volume: "147"
+    issue: "1"
+    journal: Inventiones mathematicae
+    loc-start: "1"
+    loc-end: "241"
+    year: 2002
+  - type: generic
+    title: Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale
+    authors:
+      - family-names: Lafforgue
+        given-names: Vincent
+    url: https://arxiv.org/abs/1209.5352
+    year: 2018
+  - type: article
+    title: "James Arthur: “The Endoscopic Classification of Representations.
+      Orthogonal and Symplectic Groups”"
+    authors:
+      - family-names: Görtz
+        given-names: Ulrich
+    doi: 10.1365/s13291-014-0088-4
+    volume: "116"
+    issue: "2"
+    journal: Jahresbericht der Deutschen Mathematiker-Vereinigung
+    loc-start: "123"
+    loc-end: "128"
+    year: 2014
+  - type: article
+    title: The Weil conjectures
+    authors:
+      - family-names: Oort
+        given-names: Frans
+    volume: "15"
+    issue: "3"
+    journal: Nieuw Archief voor Wiskunde
+    loc-start: "211"
+    loc-end: "219"
+    year: 2014
+  - type: generic
+    title: "Unipotent automorphic representations : conjectures"
+    authors:
+      - family-names: Arthur
+        given-names: James
+    url: https://www.numdam.org/item/AST_1989__171-172__13_0/
+    journal: Orbites unipotentes et représentations - II. Groupes p-adiques et réels
+    loc-start: "13"
+    loc-end: "71"
+    year: 1989
+  - type: generic
+    title: Riemann's Hypothesis
+    authors:
+      - family-names: Conrey
+        given-names: J. Brian
+    url: https://aimath.org/~kaur/publicystuff/conrey-rh.pdf
+    year: 2015
+  - type: article
+    title: "Odd Zeta Values from the PCF Torus: \\golden and π as
+      Arithmetic-Geometric Sources"
+    authors:
+      - family-names: González García
+        given-names: Jorge Armando
+      - family-names: González García
+        given-names: Víctor Manuel
+      - family-names: Dressler Pérez
+        given-names: Itzel Marion
+      - family-names: García Ordóñez
+        given-names: Luz María
+      - family-names: Moreno
+        given-names: M.
+    doi: 10.5281/zenodo.19492791
+    url: https://doi.org/10.5281/zenodo.19492791
+    journal: Preprint
+    year: 2026
