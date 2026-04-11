@@ -82,7 +82,7 @@ Step & Logic Identifier & Deductive Justification \\
 \midrule
 1  & \lean{primes_land_in_ZtwentyStar} & \lean{fin_cases} + \texttt{ZMod} mapping \\
 2  & \lean{mul_preserved_Z20} & \lean{decide} (64 pairs in $\Ztwenty$) \\
-3  & \lean{addition_destroyed} & \lean{decide} (64 pairs; parity check) \\
+3  & \lean{add_destroyed} & \lean{decide} (64 pairs; parity check) \\
 4  & \lean{golden_group_exponent_two} & Group self-duality; $\chi^2=1$ \\
 5  & \lean{euler_is_ternary} & Mul $\wedge$ $\lnot$Add $\to$ Ternary mapping \\
 6  & \lean{fragment_mu} & Arity transition modulus $= 1/2$ \\
@@ -93,6 +93,9 @@ Step & Logic Identifier & Deductive Justification \\
 11 & \lean{rh_squeeze} (${=}1/2$) & Squeeze via \lean{linarith} \\
 12 & \lean{consistency_witness} & Satisfiability via \lean{canonical_zero} \\
 13 & \lean{no_diagonal_tower} & $\lnot(1/2 \le 1/4)$ via No-Diagonal \\
+14 & \lean{hypercube_card 5} & $H_5$ hypercube scaffolding ($2^5=32$) \\
+15 & \lean{pentagonal_planes} & $H_5$ pentagonal 3D orientations (40) \\
+16 & \lean{hausdorff_dim_eq} & Hausdorff dimension $= \log_2 3$ \\
 \bottomrule
 \end{tabular}
 \end{center}

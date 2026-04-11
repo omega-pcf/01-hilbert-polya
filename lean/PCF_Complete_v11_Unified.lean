@@ -237,7 +237,7 @@ theorem ZtwentyStar_card : ZtwentyStar.card = 8 := by decide
 theorem mul_preserved_Z20 (a b : ZMod 20) (ha : a ∈ ZtwentyStar) (hb : b ∈ ZtwentyStar) :
     a * b ∈ ZtwentyStar := by revert hb ha b a; decide
 
-theorem addition_destroyed :
+theorem add_destroyed :
     ∀ a ∈ ZtwentyStar, ∀ b ∈ ZtwentyStar, (a + b) ∉ ZtwentyStar := by
   intro a ha b hb; revert hb ha b a; decide
 
@@ -285,11 +285,11 @@ def G : ZMod 20 → ZMod 2 × ZMod 2 := fun a =>
 theorem G_identity : G 1 = (0, 0) := by simp [G]
 
 /-- G is a group homomorphism on Z20* (= functoriality BZ20* → B(Z₂×Z₂)). -/
-theorem G_homomorphism (a b : ZMod 20) (ha : a ∈ ZtwentyStar) (hb : b ∈ ZtwentyStar) :
+theorem G_hom (a b : ZMod 20) (ha : a ∈ ZtwentyStar) (hb : b ∈ ZtwentyStar) :
     G (a * b) = G a + G b := by revert hb ha b a; decide
 
 /-- G is surjective onto Z₂×Z₂. -/
-theorem G_surjective : ∀ g : ZMod 2 × ZMod 2,
+theorem G_surj : ∀ g : ZMod 2 × ZMod 2,
     ∃ a : ZMod 20, a ∈ ZtwentyStar ∧ G a = g := by
   intro ⟨x, y⟩
   fin_cases x <;> fin_cases y
@@ -329,8 +329,8 @@ theorem galois_functor_complete :
     (∀ g : ZMod 2 × ZMod 2, ∃ a ∈ ZtwentyStar, G a = g) ∧
     (G 1 = (0, 0) ∧ G 9 = (0, 0)) ∧
     (∀ g : ZMod 2 × ZMod 2, g + g = 0) :=
-  ⟨G_homomorphism, G_identity,
-   fun g => G_surjective g,
+  ⟨G_hom, G_identity,
+   fun g => G_surj g,
    ⟨G_identity, by decide⟩,
    target_exponent_two⟩
 
@@ -457,7 +457,7 @@ theorem categorical_limit_theorem :
     (∀ a ∈ ZtwentyStar, ∀ b ∈ ZtwentyStar, (a + b) ∉ ZtwentyStar) ∧
     (∀ p : ℕ, p.Prime → 5 < p → (p : ZMod 20) ∈ ZtwentyStar) :=
   ⟨Omega_norm_pos, Omega_norm_lt_one, no_diagonal_tower, Omega_norm_decreasing,
-   tower_base_is_mu3, spectral_uniqueness, addition_destroyed, primes_land_in_ZtwentyStar⟩
+   tower_base_is_mu3, spectral_uniqueness, add_destroyed, primes_land_in_ZtwentyStar⟩
 
 theorem limit_equals_functional_eq_fixed_point :
     mu_n 3 = Omega_norm 0 ∧ Omega_norm 0 = 1/2 ∧ mu_n 3 = 1/2 :=
@@ -621,8 +621,8 @@ theorem master_bridge_v11 :
     -- Independence of bounds
     (∃ t : ℝ, 0 < t ∧ t < 1 ∧ t ≤ mu_n 3 ∧ t ≠ 1/2) ∧
     (∃ t : ℝ, 0 < t ∧ t < 1 ∧ 1 - t ≤ mu_n 3 ∧ t ≠ 1/2) :=
-  ⟨mul_preserved_Z20, addition_destroyed,
-   G_homomorphism, fun g => G_surjective g,
+  ⟨mul_preserved_Z20, add_destroyed,
+   G_hom, fun g => G_surj g,
    primes_land_in_ZtwentyStar, golden_group_exponent_two,
    fragment_mu_ternary, spectral_uniqueness,
    lawvere_ternary_blocks, by rw [mu_ternary]; norm_num,
@@ -655,7 +655,7 @@ theorem spectral_mapping :
     (∀ a b : ZMod 20, a ∈ ZtwentyStar → b ∈ ZtwentyStar → G (a * b) = G a + G b) ∧
     fragment_mu ArithFragment.ternary = 1/2 ∧
     (∀ σ μ : ℝ, σ + μ = 2 → σ * μ = 3/4 → μ < 1 → 0 < σ → 0 < μ → σ = 3/2 ∧ μ = 1/2) :=
-  ⟨primes_land_in_ZtwentyStar, G_homomorphism, fragment_mu_ternary, spectral_uniqueness⟩
+  ⟨primes_land_in_ZtwentyStar, G_hom, fragment_mu_ternary, spectral_uniqueness⟩
 
 /-- Audit label: Satisfiability via canonical_zero. -/
 theorem consistency_witness : canonical_zero.ρ_re = 1/2 := canonical_zero_works
@@ -672,7 +672,7 @@ theorem full_deductive_chain :
     (∀ z : TernaryLZero, z.ρ_re = 1/2) ∧
     (∀ ρ_re : ℝ, 0 < ρ_re → ρ_re < 1 →
      ρ_re ≤ mu_n 3 → 1 - ρ_re ≤ mu_n 3 → ¬ (ρ_re ≠ 1/2)) :=
-  ⟨primes_land_in_ZtwentyStar, addition_destroyed, fragment_mu_ternary,
+  ⟨primes_land_in_ZtwentyStar, add_destroyed, fragment_mu_ternary,
    no_diagonal_tower, golden_group_exponent_two,
    Omega_hat_unique_positive_re, rh_squeeze, rh_by_contradiction⟩
 
