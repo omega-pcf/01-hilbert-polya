@@ -2458,11 +2458,15 @@
     "container-title": "Lecture Notes in Mathematics",
     "author": [
       {
-        "given": "Grothendieck",
-        "family": "A."
+        "given": "Michael",
+        "family": "Artin"
       },
       {
-        "given": "J. L.",
+        "given": "Alexander",
+        "family": "Grothendieck"
+      },
+      {
+        "given": "Jean-Louis",
         "family": "Verdier"
       }
     ],

@@ -1670,10 +1670,12 @@ references:
     type: book
     volume: "118"
   - authors:
-      - family-names: A.
-        given-names: Grothendieck
+      - family-names: Artin
+        given-names: Michael
+      - family-names: Grothendieck
+        given-names: Alexander
       - family-names: Verdier
-        given-names: J. L.
+        given-names: Jean-Louis
     doi: 10.1007/bfb0081551
     identifiers:
       - type: doi
