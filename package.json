@@ -1,13 +1,13 @@
 {
   "name": "@omega-pcf/01-hilbert-polya",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "description": "The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between F1, String Theory, and Ancient Geometry",
   "type": "module",
   "scripts": {
     "type-check": "tsc --noEmit",
     "generate:figures": "uv run python scripts/figures/main.py",
     "generate:figures:list": "uv run python scripts/figures/main.py --list",
-    "generate:zenodo": "pnpm exec tsx scripts/generate-zenodo.ts",
+    "sync-citation": "pnpm exec tsx scripts/test_citation_sync.ts",
     "verify:py": "uv run python tests/verify_t_star.py",
     "verify:lean": "cd lean && lake build",
     "verify": "pnpm run verify:py && pnpm run verify:lean",
