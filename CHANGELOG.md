@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.9.3](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.2...v1.9.3) (2026-04-11)
+
+### Documentation
+
+* standardize terminology from Polya-Hilbert to Hilbert-Polya ([d621bc2](https://github.com/omega-pcf/01-hilbert-polya/commit/d621bc2f818dac18d95607cfa82357ebff315425))
+
 ## [1.9.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v1.9.1...v1.9.2) (2026-04-11)
 
 ### Bug Fixes
