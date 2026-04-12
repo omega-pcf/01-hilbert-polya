@@ -38,7 +38,7 @@ identifiers:
     value: "MSC2020: 11M26 (Primary), 47A10 (Secondary), 14G99 (Tertiary)"
     description: Mathematical Subject Classification
 abstract: >-
-  We construct a strictly deterministic Hermitian operator T* whose spectrum
+  We construct a strictly deterministic Hermitian operator H_PCF whose spectrum
   approximates the non-trivial zeros of the Riemann zeta function with mean
   error <1.7% across twelve orders of magnitude (n=1 to n=10^12, 125 zeros).
   Unlike stochastic matrix models prevalent in Quantum Chaos, this construction
