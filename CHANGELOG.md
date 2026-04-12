@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.7](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.6...v2.0.7) (2026-04-12)
+
+### Documentation
+
+* revert unauthorized quantum chaos interpretations from fe43111 to restore manuscript parity ([cc6e0c8](https://github.com/omega-pcf/01-hilbert-polya/commit/cc6e0c802ac24987a486c3fa9a2b87d8dbc63266))
+
+### Refinements
+
+* refine T* operator description to avoid reductionist terminology ([033d2d9](https://github.com/omega-pcf/01-hilbert-polya/commit/033d2d9f5465588d320f03049b12dfa7c70040b9))
+
 ## [2.0.6](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.5...v2.0.6) (2026-04-12)
 
 ### Documentation
