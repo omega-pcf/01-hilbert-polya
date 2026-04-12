@@ -2207,12 +2207,12 @@ references:
     date-published: 1989-01-01
     year: 1989
     journal: Orbites unipotentes et représentations, II
-    notes: Série Astérisque, no. 171--172
     publisher:
       name: Société Mathématique de France
     start: "13"
     end: "71"
     type: generic
+    volume: 171--172
   - authors:
       - family-names: Conrey
         given-names: J. Brian
@@ -2244,8 +2244,8 @@ references:
     title: "Odd Zeta Values from the PCF Torus: φ and π as Arithmetic-Geometric
       Sources"
     url: https://doi.org/10.5281/zenodo.19492791
-    date-published: 2026-01-01
-    year: 2026
+    date-published: 2025-01-01
+    year: 2025
     journal: Preprint
     notes: Companion paper to <i>The Hilbert–Pólya Operator and the Primitive
       Structure of the Complex Plane</i>
