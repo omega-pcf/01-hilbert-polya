@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.3](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.2...v2.0.3) (2026-04-12)
+
+### Bug Fixes
+
+* **bib:** update Grisales Herrera metadata for Zenodo DOI indexing ([3adece7](https://github.com/omega-pcf/01-hilbert-polya/commit/3adece7a7d306a54d54371138ddd1b3a96006ba2))
+
+### Refinements
+
+* **bib:** cite University of Tolima as institutional authority for Grisales Herrera ([6e283d6](https://github.com/omega-pcf/01-hilbert-polya/commit/6e283d6dcf0f10d97ff2233a0bd8ce400f737e61))
+* **metadata:** standardize bibliographic integrity and migrate classical citations to manuscript text ([ffc8637](https://github.com/omega-pcf/01-hilbert-polya/commit/ffc8637c70291534609b7a27fbed4aa284ba7693))
+
 ## [2.0.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.1...v2.0.2) (2026-04-12)
 
 ### Refinements
