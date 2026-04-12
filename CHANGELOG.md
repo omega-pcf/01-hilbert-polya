@@ -1,5 +1,7 @@
 # Changelog
 
+## [2.0.5](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.4...v2.0.5) (2026-04-12)
+
 ## [2.0.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.3...v2.0.4) (2026-04-12)
 
 ### Refinements
