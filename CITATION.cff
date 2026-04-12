@@ -3,22 +3,25 @@ message: If you use this software, please cite it using these metadata.
 title: "The Hilbert-Pólya Operator and the Primitive Structure of the Complex
   Plane: Between 𝔽₁, String Theory, and Ancient Geometry"
 type: software
-version: 2.0.7
+version: 2.0.8
 date-released: 2026-04-12
 authors:
   - family-names: González García
     given-names: Jorge Armando
-    affiliation: "TTAMAYO PUNTO COM, S.A.P.I. de C.V., Naucalpan de Juárez, State of Mexico, Mexico"
+    affiliation: TTAMAYO PUNTO COM, S.A.P.I. de C.V., Naucalpan de Juárez, State of
+      Mexico, Mexico
   - family-names: González García
     given-names: Víctor Manuel
     orcid: https://orcid.org/0009-0009-0935-2954
-    affiliation: "TTAMAYO PUNTO COM, S.A.P.I. de C.V., Naucalpan de Juárez, State of Mexico, Mexico"
+    affiliation: TTAMAYO PUNTO COM, S.A.P.I. de C.V., Naucalpan de Juárez, State of
+      Mexico, Mexico
   - family-names: Dressler Pérez
     given-names: Itzel Marion
     affiliation: Independent Researcher
   - family-names: García Ordóñez
     given-names: Luz María
-    affiliation: "TTAMAYO PUNTO COM, S.A.P.I. de C.V., Naucalpan de Juárez, State of Mexico, Mexico"
+    affiliation: TTAMAYO PUNTO COM, S.A.P.I. de C.V., Naucalpan de Juárez, State of
+      Mexico, Mexico
   - family-names: Moreno
     given-names: M.
     affiliation: Independent Researcher
