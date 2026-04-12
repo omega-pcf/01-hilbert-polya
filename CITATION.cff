@@ -26,13 +26,16 @@ repository-code: https://github.com/omega-pcf/01-hilbert-polya
 license: CC-BY-4.0
 keywords:
   - Riemann Hypothesis
-  - Hilbert-Pólya conjecture
+  - Hilbert–Pólya conjecture
   - Hermitian operators
-  - Non-circular construction
-  - S₃ symmetry
-  - Spectral invariants
-  - Golden ratio
-  - Fibonacci sequence
+  - Field with one element (𝔽₁)
+  - Absolute Geometry
+  - Λ-rings
+  - String Theory
+  - Lean 4 formalization
+  - PCF Framework
+  - MSC 11M26
+  - MSC 14G99
 abstract: >-
   We construct a Hermitian operator T* whose spectrum approximates the
   non-trivial zeros of the Riemann zeta function with mean error <1.7% across
