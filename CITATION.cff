@@ -871,8 +871,9 @@ references:
     url: https://doi.org/10.5281/zenodo.17100303
     date-published: 2025-09-01
     year: 2025
-    journal: Zenodo
-    type: article
+    publisher:
+      name: University of Tolima, Colombia
+    type: report
   - authors:
       - family-names: Borger
         given-names: James
