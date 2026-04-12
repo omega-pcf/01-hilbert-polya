@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.3...v2.0.4) (2026-04-12)
+
+### Refinements
+
+* **bib:** finalize bibliographic integrity audit and metadata synchronization ([808cbeb](https://github.com/omega-pcf/01-hilbert-polya/commit/808cbeb1e8c343ee772f49c856e0179ae2208969))
+
+### Chores
+
+* **bib:** finalize bibliographic audit and refine metadata v2.0.3 ([9c11a00](https://github.com/omega-pcf/01-hilbert-polya/commit/9c11a00f3764bfca999d33298bba314968a65afa))
+
 ## [2.0.3](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.2...v2.0.3) (2026-04-12)
 
 ### Bug Fixes
