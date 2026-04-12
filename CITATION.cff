@@ -127,20 +127,17 @@ references:
   - authors:
       - family-names: Lawvere
         given-names: F. William
-    identifiers:
-      - type: other
-        value: urn:isbn:978-3-540-36101-5
-    title: Diagonal arguments and cartesian closed categories
+    title: Diagonal arguments and Cartesian closed categories
     date-published: 1969-01-01
     year: 1969
-    isbn: 978-3-540-36101-5
-    journal: Category Theory, Homology Theory and their Applications II
+    journal: Proc. Nat. Acad. Sci. U.S.A.
     publisher:
-      name: Springer Berlin Heidelberg
+      name: American Mathematical Society
       city: Berlin
-    start: "134"
-    end: "145"
+    start: "329"
+    end: "337"
     type: conference-paper
+    volume: "63"
   - authors:
       - family-names: Yanofsky
         given-names: Noson S.
@@ -438,20 +435,25 @@ references:
   - authors:
       - family-names: Borger
         given-names: James
+    doi: 10.1007/s00209-010-0713-z
     identifiers:
-      - type: url
-        value: https://arxiv.org/abs/0906.3146
+      - type: doi
+        value: 10.1007/s00209-010-0713-z
     title: Lambda-rings and the field with one element
-    url: https://arxiv.org/abs/0906.3146
-    date-published: 2009-01-01
-    year: 2009
-    type: generic
+    date-published: 2010-01-01
+    year: 2010
+    issue: "4"
+    journal: Selecta Mathematica
+    start: "603"
+    end: "666"
+    type: article
+    volume: "16"
   - authors:
       - family-names: Weil
         given-names: André
     title: Une lettre et un extrait de lettre à Simone Weil
-    date-published: 1979-01-01
-    year: 1979
+    date-published: 1940-01-01
+    year: 1940
     notes: "In: Collected Papers, Vol. I, pp. 244–255."
     type: generic
   - authors:
@@ -495,17 +497,6 @@ references:
     publisher:
       name: Springer Science & Business Media
       city: New York
-    type: book
-  - authors:
-      - family-names: Vitruvius
-    title: The Ten Books on Architecture
-    date-published: 1960-01-01
-    year: 1960
-    languages:
-      - la
-    notes: First published c. 30–15 BC; translated by Morris Hicky Morgan (1914)
-    publisher:
-      name: Dover Publications
     type: book
   - authors:
       - family-names: Alberti
@@ -965,18 +956,12 @@ references:
     identifiers:
       - type: doi
         value: 10.1007/s00209-009-0638-0
-      - type: url
-        value: https://doi.org/10.1007/s00209-009-0638-0
-    title: Torified varieties and their geometries over 𝔽₁
-    url: https://doi.org/10.1007/s00209-009-0638-0
+    title: Torified varieties and their geometries over the field with one element
     date-published: 2011-01-01
     year: 2011
-    issue: "3"
     journal: Mathematische Zeitschrift
-    publisher:
-      name: Springer
-    start: "605"
-    end: "643"
+    start: "667"
+    end: "704"
     type: article
     volume: "267"
   - authors:
@@ -1551,9 +1536,9 @@ references:
         given-names: Auguste
     title: Mémoire sur les systèmes formés par des points distribués régulièrement
       sur un plan ou dans l'espace
-    date-published: 1848-01-01
-    year: 1848
-    journal: Journal de l'École Polytechnique
+    date-published: 1850-01-01
+    year: 1850
+    journal: J. École Polytech.
     start: "1"
     end: "128"
     type: article
@@ -1672,26 +1657,17 @@ references:
       - family-names: Artin
         given-names: Michael
       - family-names: Grothendieck
-        given-names: Alexander
+        given-names: Alexandre
       - family-names: Verdier
         given-names: Jean-Louis
-    doi: 10.1007/bfb0081551
-    identifiers:
-      - type: doi
-        value: 10.1007/bfb0081551
-      - type: url
-        value: https://cir.nii.ac.jp/crid/1363670319619747968
-      - type: other
-        value: urn:issn:0075-8434
-    title: Théorie des Topos et Cohomologie Etale des Schémas
-    url: https://cir.nii.ac.jp/crid/1363670319619747968
+    title: Théorie des Topos et Cohomologie Étale des Schémas (SGA 4)
+    collection-title: Lecture Notes in Mathematics
     date-published: 1972-01-01
     year: 1972
-    issn: 0075-8434
-    journal: Lecture Notes in Mathematics
     publisher:
-      name: Springer Berlin Heidelberg
-    type: article
+      name: Springer-Verlag
+    type: book
+    volume: 269, 270, 305
   - authors:
       - family-names: Teichmüller
         given-names: Oswald
@@ -1791,18 +1767,14 @@ references:
     identifiers:
       - type: doi
         value: 10.1023/A:1026654312961
-      - type: url
-        value: https://doi.org/10.1023/A:1026654312961
-    title: The Large-N Limit of Superconformal Field Theories and Supergravity
-    url: https://doi.org/10.1023/A:1026654312961
-    date-published: 1999-01-01
-    year: 1999
-    issue: "4"
-    journal: International Journal of Theoretical Physics
-    start: "1113"
-    end: "1133"
+    title: The Large N Limit of Superconformal Field Theories and Supergravity
+    date-published: 1998-01-01
+    year: 1998
+    journal: Adv. Theor. Math. Phys.
+    start: "231"
+    end: "252"
     type: article
-    volume: "38"
+    volume: "2"
   - authors:
       - family-names: Manin
         given-names: Yuri I.
@@ -1869,15 +1841,6 @@ references:
     start: "671"
     end: "680"
     type: article
-  - authors:
-      - family-names: Cardano
-        given-names: Gerolamo
-    title: Ars Magna
-    date-published: 1545-01-01
-    year: 1545
-    publisher:
-      name: Johannes Petreius
-    type: book
   - authors:
       - family-names: Hamilton
         given-names: William Rowan
@@ -2010,21 +1973,16 @@ references:
   - authors:
       - family-names: Adams
         given-names: J. F.
+    doi: 10.2307/1970147
     identifiers:
-      - type: url
-        value: http://www.jstor.org/stable/1970147
-      - type: other
-        value: urn:issn:0003486X, 19398980
+      - type: doi
+        value: 10.2307/1970147
     title: On the Non-Existence of Elements of Hopf Invariant One
-    url: http://www.jstor.org/stable/1970147
     date-accessed: 2026-04-05
     date-published: 1960-01-01
     year: 1960
     issue: "1"
     journal: Annals of Mathematics
-    publisher:
-      name: "[Annals of Mathematics, Trustees of Princeton University on Behalf of the
-        Annals of Mathematics, Mathematics Department, Princeton University]"
     start: "20"
     end: "104"
     type: article
@@ -2245,19 +2203,13 @@ references:
   - authors:
       - family-names: Arthur
         given-names: James
-    identifiers:
-      - type: url
-        value: https://www.numdam.org/item/AST_1989__171-172__13_0/
-    title: "Unipotent automorphic representations : conjectures"
-    url: https://www.numdam.org/item/AST_1989__171-172__13_0/
-    collection-title: Astérisque
+    title: "Unipotent automorphic representations: conjectures"
     date-published: 1989-01-01
     year: 1989
-    journal: Orbites unipotentes et représentations - II. Groupes p-adiques et réels
-    languages:
-      - en
+    journal: Orbites unipotentes et représentations, II
+    notes: Série Astérisque, no. 171--172
     publisher:
-      name: Société mathématique de France
+      name: Société Mathématique de France
     start: "13"
     end: "71"
     type: generic

@@ -18,7 +18,7 @@
     },
     "note": "Establishes complex plane as geometric representation of complex numbers",
     "publisher": "Commentationes Societatis Regiae Scientiarum Gottingensis",
-    "title": "Theoria residuorum biquadraticorum"
+    "title": "Theoria residuorum biquadraticorum, Commentatio secunda"
   },
   {
     "publisher-place": "Berlin, Heidelberg",
@@ -135,7 +135,6 @@
     "type": "paper-conference",
     "id": "lawvere69",
     "citation-key": "lawvere69",
-    "ISBN": "978-3-540-36101-5",
     "issued": {
       "date-parts": [
         [
@@ -143,9 +142,11 @@
         ]
       ]
     },
-    "page": "134-145",
-    "publisher": "Springer Berlin Heidelberg",
-    "title": "Diagonal arguments and cartesian closed categories"
+    "page": "329-337",
+    "publisher": "American Mathematical Society",
+    "container-title": "Proc. Nat. Acad. Sci. U.S.A.",
+    "volume": "63",
+    "title": "Diagonal arguments and Cartesian closed categories"
   },
   {
     "container-title": "Bulletin of Symbolic Logic",
@@ -570,18 +571,22 @@
         "family": "Borger"
       }
     ],
-    "type": "document",
+    "container-title": "Selecta Mathematica",
+    "DOI": "10.1007/s00209-010-0713-z",
+    "type": "article-journal",
     "id": "borger09",
     "citation-key": "borger09",
+    "issue": "4",
     "issued": {
       "date-parts": [
         [
-          2009
+          2010
         ]
       ]
     },
+    "page": "603-666",
     "title": "Lambda-rings and the field with one element",
-    "URL": "https://arxiv.org/abs/0906.3146"
+    "volume": "16"
   },
   {
     "author": [
@@ -596,7 +601,7 @@
     "issued": {
       "date-parts": [
         [
-          1979
+          1940
         ]
       ]
     },
@@ -677,28 +682,7 @@
     "publisher": "Springer Science & Business Media",
     "title": "Fibonacci's Liber Abaci: A Translation into Modern English of Leonardo Pisano's Book of Calculation"
   },
-  {
-    "publisher-place": "New York",
-    "author": [
-      {
-        "family": "Vitruvius"
-      }
-    ],
-    "type": "book",
-    "id": "vitruvius_de_arch",
-    "language": "la",
-    "citation-key": "vitruvius_de_arch",
-    "issued": {
-      "date-parts": [
-        [
-          1960
-        ]
-      ]
-    },
-    "note": "First published c. 30–15 BC; translated by Morris Hicky Morgan (1914)",
-    "publisher": "Dover Publications",
-    "title": "The Ten Books on Architecture"
-  },
+
   {
     "author": [
       {
@@ -1444,7 +1428,6 @@
     "type": "article-journal",
     "id": "lopezpena09torified",
     "citation-key": "lopezpena09torified",
-    "issue": "3",
     "issued": {
       "date-parts": [
         [
@@ -1452,11 +1435,10 @@
         ]
       ]
     },
-    "page": "605-643",
-    "publisher": "Springer",
-    "title": "Torified varieties and their geometries over 𝔽₁",
-    "URL": "https://doi.org/10.1007/s00209-009-0638-0",
-    "volume": "267"
+    "page": "667-704",
+    "container-title": "Mathematische Zeitschrift",
+    "volume": "267",
+    "title": "Torified varieties and their geometries over the field with one element"
   },
   {
     "author": [
@@ -2276,7 +2258,7 @@
     "title": "Paper Palaces: Rise of the Renaissance Architectural Treatise"
   },
   {
-    "container-title": "Journal de l'École Polytechnique",
+    "container-title": "J. École Polytech.",
     "author": [
       {
         "given": "Auguste",
@@ -2289,7 +2271,7 @@
     "issued": {
       "date-parts": [
         [
-          1848
+          1850
         ]
       ]
     },
@@ -2452,14 +2434,13 @@
     "volume": "118"
   },
   {
-    "container-title": "Lecture Notes in Mathematics",
     "author": [
       {
         "given": "Michael",
         "family": "Artin"
       },
       {
-        "given": "Alexander",
+        "given": "Alexandre",
         "family": "Grothendieck"
       },
       {
@@ -2467,11 +2448,10 @@
         "family": "Verdier"
       }
     ],
-    "DOI": "10.1007/bfb0081551",
-    "type": "article-journal",
+    "collection-title": "Lecture Notes in Mathematics",
+    "type": "book",
     "id": "grothendieck_sga4",
     "citation-key": "grothendieck_sga4",
-    "ISSN": "0075-8434",
     "issued": {
       "date-parts": [
         [
@@ -2479,9 +2459,9 @@
         ]
       ]
     },
-    "publisher": "Springer Berlin Heidelberg",
-    "title": "Théorie des Topos et Cohomologie Etale des Schémas",
-    "URL": "https://cir.nii.ac.jp/crid/1363670319619747968"
+    "publisher": "Springer-Verlag",
+    "title": "Théorie des Topos et Cohomologie Étale des Schémas (SGA 4)",
+    "volume": "269, 270, 305"
   },
   {
     "container-title": "Abhandlungen der Preußischen Akademie der Wissenschaften",
@@ -2623,18 +2603,17 @@
     "type": "article-journal",
     "id": "maldacena98",
     "citation-key": "maldacena98",
-    "issue": "4",
     "issued": {
       "date-parts": [
         [
-          1999
+          1998
         ]
       ]
     },
-    "page": "1113-1133",
-    "title": "The Large-N Limit of Superconformal Field Theories and Supergravity",
-    "URL": "https://doi.org/10.1023/A:1026654312961",
-    "volume": "38"
+    "page": "231-252",
+    "container-title": "Adv. Theor. Math. Phys.",
+    "title": "The Large N Limit of Superconformal Field Theories and Supergravity",
+    "volume": "2"
   },
   {
     "author": [
@@ -2745,27 +2724,7 @@
     "page": "671-680",
     "title": "Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse"
   },
-  {
-    "publisher-place": "Nuremberg",
-    "author": [
-      {
-        "given": "Gerolamo",
-        "family": "Cardano"
-      }
-    ],
-    "type": "book",
-    "id": "cardano",
-    "citation-key": "cardano",
-    "issued": {
-      "date-parts": [
-        [
-          1545
-        ]
-      ]
-    },
-    "publisher": "Johannes Petreius",
-    "title": "Ars Magna"
-  },
+
   {
     "author": [
       {
@@ -3010,7 +2969,8 @@
     "type": "article-journal",
     "id": "adams60",
     "citation-key": "adams60",
-    "ISSN": "0003486X, 19398980",
+    "DOI": "10.2307/1970147",
+    "container-title": "Annals of Mathematics",
     "issue": "1",
     "issued": {
       "date-parts": [
@@ -3020,9 +2980,7 @@
       ]
     },
     "page": "20-104",
-    "publisher": "[Annals of Mathematics, Trustees of Princeton University on Behalf of the Annals of Mathematics, Mathematics Department, Princeton University]",
     "title": "On the Non-Existence of Elements of Hopf Invariant One",
-    "URL": "http://www.jstor.org/stable/1970147",
     "volume": "72"
   },
   {
@@ -3307,9 +3265,7 @@
         "family": "Arthur"
       }
     ],
-    "container-title": "Orbites unipotentes et représentations - II. Groupes p-adiques et réels",
-    "collection-number": "171-172",
-    "collection-title": "Astérisque",
+    "container-title": "Orbites unipotentes et représentations, II",
     "type": "chapter",
     "id": "arthur89",
     "citation-key": "arthur89",
@@ -3320,11 +3276,10 @@
         ]
       ]
     },
-    "language": "en",
+    "note": "Série Astérisque, no. 171--172",
     "page": "13-71",
-    "publisher": "Société mathématique de France",
-    "title": "Unipotent automorphic representations : conjectures",
-    "URL": "https://www.numdam.org/item/AST_1989__171-172__13_0/"
+    "publisher": "Société Mathématique de France",
+    "title": "Unipotent automorphic representations: conjectures"
   },
   {
     "author": [
