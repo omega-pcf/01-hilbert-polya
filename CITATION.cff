@@ -871,9 +871,8 @@ references:
     url: https://doi.org/10.5281/zenodo.17100303
     date-published: 2025-09-01
     year: 2025
-    publisher:
-      name: Zenodo
-    type: generic
+    journal: Zenodo
+    type: article
   - authors:
       - family-names: Borger
         given-names: James

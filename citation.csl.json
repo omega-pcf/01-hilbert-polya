@@ -1310,8 +1310,9 @@
         "family": "Grisales Herrera"
       }
     ],
+    "container-title": "Zenodo",
     "DOI": "10.5281/zenodo.17100303",
-    "type": "document",
+    "type": "article-journal",
     "id": "grisales25",
     "citation-key": "grisales25",
     "issued": {
@@ -1322,7 +1323,6 @@
         ]
       ]
     },
-    "publisher": "Zenodo",
     "title": "Golden Prime Symmetry Theory",
     "URL": "https://doi.org/10.5281/zenodo.17100303"
   },
