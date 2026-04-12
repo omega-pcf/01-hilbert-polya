@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.6](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.5...v2.0.6) (2026-04-12)
+
+### Documentation
+
+* balanced bibliometric optimization of manuscript metadata ([96bbcd3](https://github.com/omega-pcf/01-hilbert-polya/commit/96bbcd31a7dd6c096948123f7f8cd012c9915507))
+* optimize keyword metadata and clarify deterministic nature of PCF ([fe43111](https://github.com/omega-pcf/01-hilbert-polya/commit/fe431115ab05134d0352ec39118ff64624077f16))
+* provide both text and bibtex citation formats in README ([9b3a0d9](https://github.com/omega-pcf/01-hilbert-polya/commit/9b3a0d908ec074cd43e61f34490788c86864aa82))
+* update suggested citation in README to SIGMA preprint legend ([bed1c7c](https://github.com/omega-pcf/01-hilbert-polya/commit/bed1c7c1a7f895abf82d1aade6df87679e88f6a8))
+
 ## [2.0.5](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.4...v2.0.5) (2026-04-12)
 
 ## [2.0.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.3...v2.0.4) (2026-04-12)
