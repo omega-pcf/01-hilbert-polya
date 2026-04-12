@@ -104,7 +104,7 @@ pdflatex main
 
 ## Citation
 
-González García, J. A., González García, V. M., Dressler Pérez, I. M., García Ordóñez, L. M., & Moreno, M. (2026). The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry. Zenodo. <https://doi.org/10.5281/zenodo.17619486>
+González García, J. A., González García, V. M., Dressler Pérez, I. M., García Ordóñez, L. M., & Moreno, M. (2026). *The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry*. Preprint prepared for SIGMA (Symmetry, Integrability and Geometry: Methods and Applications). DOI: [10.5281/zenodo.17619486](https://doi.org/10.5281/zenodo.17619486).
 
 ## License
 
