@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.1...v2.0.2) (2026-04-12)
+
+### Refinements
+
+* **lean:** synchronize formalization and audit tables ([13fb2bf](https://github.com/omega-pcf/01-hilbert-polya/commit/13fb2bf4e9b0a7d6c21f00517bbdf97d58f8de69))
+
 ## [2.0.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.0...v2.0.1) (2026-04-11)
 
 ### Documentation
