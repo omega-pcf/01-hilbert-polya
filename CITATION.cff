@@ -134,8 +134,8 @@ references:
     publisher:
       name: American Mathematical Society
       city: Berlin
-    start: "329"
-    end: "337"
+    start: "134"
+    end: "145"
     type: conference-paper
     volume: "63"
   - authors:
@@ -1887,6 +1887,7 @@ references:
     publisher:
       name: Springer
     start: "29"
+    end: "108"
     type: article
     volume: "5"
   - authors:
@@ -1920,8 +1921,8 @@ references:
       - family-names: Shilov
         given-names: Georgii
     title: Commutative normed rings
-    date-published: 2001-01-01
-    year: 2001
+    date-published: 1941-01-01
+    year: 1941
     publisher:
       name: American Mathematical Society
     type: book
