@@ -24,6 +24,22 @@ Three spectral invariants—dimension $d=3$ (from $S_3$ symmetry), common modulu
 
 **Keywords:** Riemann Hypothesis, Hilbert-Pólya conjecture, Field with one element (F1), Lambda-rings, Mersenne primes, Modular spaces.
 
+## Citation
+
+González García, J. A., González García, V. M., Dressler Pérez, I. M., García Ordóñez, L. M., & Moreno, M. (2026). *The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry*. Preprint prepared for SIGMA (Symmetry, Integrability and Geometry: Methods and Applications). DOI: [10.5281/zenodo.17619486](https://doi.org/10.5281/zenodo.17619486).
+
+```bibtex
+@article{Gonzalez2026HilbertPolya,
+  author  = {González García, J. A. and González García, V. M. and Dressler Pérez, I. M. and García Ordóñez, L. M. and Moreno, M.},
+  title   = {The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry},
+  journal = {Preprint},
+  year    = {2026},
+  doi     = {10.5281/zenodo.17619486},
+  url     = {https://doi.org/10.5281/zenodo.17619486},
+  note    = {Preprint prepared for SIGMA (Symmetry, Integrability and Geometry: Methods and Applications)}
+}
+```
+
 ## Repository Structure
 
 This repository contains the LaTeX source files for the manuscript and the computational verification suite.
@@ -114,21 +130,6 @@ pdflatex main
 pdflatex main
 ```
 
-## Citation
-
-González García, J. A., González García, V. M., Dressler Pérez, I. M., García Ordóñez, L. M., & Moreno, M. (2026). *The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry*. Preprint prepared for SIGMA (Symmetry, Integrability and Geometry: Methods and Applications). DOI: [10.5281/zenodo.17619486](https://doi.org/10.5281/zenodo.17619486).
-
-```bibtex
-@article{Gonzalez2026HilbertPolya,
-  author  = {González García, J. A. and González García, V. M. and Dressler Pérez, I. M. and García Ordóñez, L. M. and Moreno, M.},
-  title   = {The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry},
-  journal = {Preprint},
-  year    = {2026},
-  doi     = {10.5281/zenodo.17619486},
-  url     = {https://doi.org/10.5281/zenodo.17619486},
-  note    = {Preprint prepared for SIGMA (Symmetry, Integrability and Geometry: Methods and Applications)}
-}
-```
 
 ## License
 
