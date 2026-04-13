@@ -143,10 +143,11 @@
       ]
     },
     "page": "134-145",
-    "publisher": "American Mathematical Society",
-    "container-title": "Proc. Nat. Acad. Sci. U.S.A.",
-    "volume": "63",
-    "title": "Diagonal arguments and Cartesian closed categories"
+    "publisher": "Springer Berlin Heidelberg",
+    "ISBN": "978-3-540-36101-5",
+    "DOI": "10.1007/BFb0080769",
+    "title": "Diagonal arguments and cartesian closed categories",
+    "URL": "https://doi.org/10.1007/BFb0080769"
   },
   {
     "container-title": "Bulletin of Symbolic Logic",
@@ -170,7 +171,8 @@
     },
     "page": "362-386",
     "title": "A Universal Approach to Self-Referential Paradoxes, Incompleteness and Fixed Points",
-    "volume": "9"
+    "volume": "9",
+    "URL": "https://doi.org/10.2178/bsl/1058448677"
   },
   {
     "container-title": "Communications in Mathematical Physics",
@@ -197,7 +199,8 @@
     },
     "page": "57-89",
     "title": "Random matrix theory and ζ(1/2+it)",
-    "volume": "214"
+    "volume": "214",
+    "URL": "https://doi.org/10.1007/s002200000261"
   },
   {
     "author": [
@@ -270,7 +273,8 @@
     "note": "Massive numerical verification of RH zeros up to 10²⁰",
     "page": "273-308",
     "title": "On the distribution of spacings between zeros of the zeta function",
-    "volume": "48"
+    "volume": "48",
+    "URL": "https://doi.org/10.1090/S0025-5718-1987-0866115-0"
   },
   {
     "publisher-place": "Oxford",
@@ -344,7 +348,7 @@
     "page": "124010",
     "publisher": "IOP Publishing",
     "title": "The AdS/CFT correspondence",
-    "URL": "http://dx.doi.org/10.1088/0264-9381/32/12/124010",
+    "URL": "https://doi.org/10.1088/0264-9381/32/12/124010",
     "volume": "32"
   },
   {
@@ -393,7 +397,8 @@
     "page": "11-51",
     "publisher": "Springer",
     "title": "Eine neue Art von Zetafunktionen und ihre Beziehungen zur Verteilung der Primzahlen. (Zweite Mitteilung.)",
-    "volume": "6"
+    "volume": "6",
+    "URL": "https://doi.org/10.1007/BF01612081"
   },
   {
     "container-title": "Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg",
@@ -416,7 +421,8 @@
     },
     "page": "325-348",
     "title": "Abstrakte Begründung der komplexen Multiplikation und Riemannsche Vermutung in Funktionenkörpern",
-    "volume": "10"
+    "volume": "10",
+    "URL": "https://doi.org/10.1007/BF02940685"
   },
   {
     "container-title": "Journal of Mathematical Physics",
@@ -439,7 +445,8 @@
     },
     "page": "140-156",
     "title": "Statistical Theory of the Energy Levels of Complex Systems. I",
-    "volume": "3"
+    "volume": "3",
+    "URL": "https://doi.org/10.1063/1.1703773"
   },
   {
     "publisher-place": "Providence, USA",
@@ -465,7 +472,8 @@
     "page": "139-144",
     "publisher": "American Mathematical Society",
     "title": "The 10²²-nd zero of the Riemann zeta function",
-    "volume": "290"
+    "volume": "290",
+    "URL": "https://doi.org/10.1090/conm/290/04746"
   },
   {
     "container-title": "Annals of Mathematics",
@@ -489,7 +497,8 @@
     },
     "page": "443-551",
     "title": "Modular elliptic curves and Fermat's Last Theorem",
-    "volume": "141"
+    "volume": "141",
+    "URL": "https://doi.org/10.2307/2118559"
   },
   {
     "author": [
@@ -571,22 +580,19 @@
         "family": "Borger"
       }
     ],
-    "container-title": "Selecta Mathematica",
-    "DOI": "10.1007/s00209-010-0713-z",
+    "container-title": "arXiv preprint arXiv:0906.3146 [math.NT]",
     "type": "article-journal",
     "id": "borger09",
     "citation-key": "borger09",
-    "issue": "4",
     "issued": {
       "date-parts": [
         [
-          2010
+          2009
         ]
       ]
     },
-    "page": "603-666",
-    "title": "Lambda-rings and the field with one element",
-    "volume": "16"
+    "title": "Λ-rings and the field with one element",
+    "URL": "https://arxiv.org/abs/0906.3146"
   },
   {
     "author": [
@@ -682,7 +688,6 @@
     "publisher": "Springer Science & Business Media",
     "title": "Fibonacci's Liber Abaci: A Translation into Modern English of Leonardo Pisano's Book of Calculation"
   },
-
   {
     "author": [
       {
@@ -913,7 +918,7 @@
     "page": "95-172",
     "publisher": "Springer Berlin Heidelberg",
     "title": "Physics, Topology, Logic and Computation: A Rosetta Stone",
-    "URL": "http://dx.doi.org/10.1007/978-3-642-12821-9_2"
+    "URL": "https://doi.org/10.1007/978-3-642-12821-9_2"
   },
   {
     "container-title": "Journal of High Energy Physics",
@@ -943,11 +948,11 @@
     },
     "publisher": "Springer Science",
     "title": "Scalar modular bootstrap and zeros of the Riemann zeta function",
-    "URL": "http://dx.doi.org/10.1007/JHEP11(2022)143",
+    "URL": "https://doi.org/10.1007/jhep11(2022)143",
     "volume": "2022"
   },
   {
-    "container-title": "P-Adic Numbers, Ultrametric Analysis and Applications",
+    "container-title": "P-Adic Numbers, Ultrametric Analysis, and Applications",
     "author": [
       {
         "given": "Yuri I.",
@@ -966,9 +971,12 @@
         ]
       ]
     },
-    "page": "319-339",
+    "page": "313-325",
     "title": "Numbers as functions",
-    "volume": "5"
+    "volume": "5",
+    "ISSN": "2070-0474",
+    "URL": "https://doi.org/10.1134/S2070046613040055",
+    "abstract": "In this survey I discuss A. Buium’s theory of “differential equations in the p-adic direction” ([8]) and its interrelations with “geometry over the field 𝔽₁”, on the background of various approaches to p-adic models in theoretical physics (cf. [1, 30])."
   },
   {
     "author": [
@@ -1011,7 +1019,8 @@
     },
     "page": "273-307",
     "title": "La Conjecture de Weil: I",
-    "volume": "43"
+    "volume": "43",
+    "URL": "https://doi.org/10.1007/BF02684373"
   },
   {
     "container-title": "Acta Mathematica",
@@ -1047,7 +1056,9 @@
     "page": "33-194",
     "publisher": "International Press of Boston, Inc. Somerville, MA 02143, USA",
     "title": "Conformal bootstrap in Liouville theory",
-    "volume": "233"
+    "volume": "233",
+    "DOI": "10.4310/ACTA.2024.v233.n1.a2",
+    "URL": "https://doi.org/10.4310/ACTA.2024.v233.n1.a2"
   },
   {
     "author": [
@@ -1301,7 +1312,8 @@
     },
     "publisher": "Frederick Ungar",
     "title": "Functional Analysis",
-    "volume": "41"
+    "volume": "41",
+    "URL": "https://doi.org/10.2307/3611560"
   },
   {
     "author": [
@@ -1334,6 +1346,7 @@
         "family": "Borger"
       }
     ],
+    "DOI": "10.2140/ant.2011.5.231",
     "type": "article-journal",
     "id": "borger11",
     "citation-key": "borger11",
@@ -1348,7 +1361,9 @@
     "page": "231-285",
     "publisher": "Mathematical Sciences Publishers",
     "title": "The basic geometry of Witt vectors, I: The affine case",
-    "volume": "5"
+    "volume": "5",
+    "URL": "https://doi.org/10.2140/ant.2011.5.231",
+    "note": "arXiv:0801.1691 [math.AG]"
   },
   {
     "container-title": "Mathematische Annalen",
@@ -1365,14 +1380,19 @@
     "issued": {
       "date-parts": [
         [
-          2011
+          2011,
+          12
         ]
       ]
     },
     "page": "877-933",
     "publisher": "Springer",
     "title": "The basic geometry of Witt vectors. II: Spaces",
-    "volume": "351"
+    "volume": "351",
+    "DOI": "10.1007/s00208-010-0608-1",
+    "ISSN": "1432-1807",
+    "URL": "https://doi.org/10.1007/s00208-010-0608-1",
+    "abstract": "This is an account of the algebraic geometry of Witt vectors and arithmetic jet spaces. The usual, “p-typical” Witt vectors of p-adic schemes of finite type are already reasonably well understood. The main point here is to generalize this theory in two ways. We allow not just p-typical Witt vectors but those taken with respect to any set of primes in any ring of integers in any global field, for example. This includes the “big” Witt vectors. We also allow not just p-adic schemes of finite type but arbitrary algebraic spaces over the ring of integers in the global field. We give similar generalizations of Buium’s formal arithmetic jet functor, which is dual to the Witt functor. We also give concrete geometric descriptions of Witt spaces and arithmetic jet spaces and investigate whether a number of standard geometric properties are preserved by these functors."
   },
   {
     "publisher-place": "Cham",
@@ -1428,17 +1448,21 @@
     "type": "article-journal",
     "id": "lopezpena09torified",
     "citation-key": "lopezpena09torified",
+    "issue": "3",
     "issued": {
       "date-parts": [
         [
-          2011
+          2011,
+          4
         ]
       ]
     },
-    "page": "667-704",
-    "container-title": "Mathematische Zeitschrift",
+    "page": "605-643",
+    "title": "Torified varieties and their geometries over 𝔽₁",
     "volume": "267",
-    "title": "Torified varieties and their geometries over the field with one element"
+    "ISSN": "1432-1823",
+    "URL": "https://doi.org/10.1007/s00209-009-0638-0",
+    "abstract": "This paper invents the notion of torified varieties: A torification of a scheme is a decomposition of the scheme into split tori. A torified variety is a reduced scheme of finite type over ℤ that admits a torification. Toric varieties, split Chevalley schemes and flag varieties are examples of this type of scheme. Given a torified variety whose torification is compatible with an affine open covering, we construct a gadget in the sense of Connes–Consani and an object in the sense of Soulé and show that both are varieties over 𝔽₁ in the corresponding notion. Since toric varieties and split Chevalley schemes satisfy the compatibility condition, we shed new light on all examples of varieties over 𝔽₁ in the literature so far. Furthermore, we compare Connes–Consani’s geometry, Soulé’s geometry and Deitmar’s geometry, and we discuss to what extent Chevalley groups can be realized as group objects over 𝔽₁ in the given categories."
   },
   {
     "author": [
@@ -1527,7 +1551,9 @@
     },
     "page": "46-73",
     "title": "The Story of Riemann's Moduli Space",
-    "volume": "3"
+    "volume": "3",
+    "DOI": "10.4310/ICCM.2015.v3.n2.a5",
+    "URL": "https://dx.doi.org/10.4310/ICCM.2015.v3.n2.a5"
   },
   {
     "container-title": "Nuclear Physics B",
@@ -1538,7 +1564,7 @@
         "family": "Witten"
       }
     ],
-    "DOI": "https://doi.org/10.1016/0550-3213(95)00158-O",
+    "DOI": "10.1016/0550-3213(95)00158-O",
     "type": "article-journal",
     "id": "witten95",
     "citation-key": "witten95",
@@ -1553,7 +1579,7 @@
     },
     "page": "85-126",
     "title": "String theory dynamics in various dimensions",
-    "URL": "https://www.sciencedirect.com/science/article/pii/055032139500158O",
+    "URL": "https://doi.org/10.1016/0550-3213(95)00158-O",
     "volume": "443"
   },
   {
@@ -1568,7 +1594,7 @@
         "family": "Witten"
       }
     ],
-    "DOI": "10.1016/0550-3213(95)00621-5",
+    "DOI": "10.1016/0550-3213(95)00621-4",
     "type": "article-journal",
     "id": "horavawitten96",
     "citation-key": "horavawitten96",
@@ -1576,13 +1602,16 @@
     "issued": {
       "date-parts": [
         [
-          1996
+          1996,
+          2
         ]
       ]
     },
     "page": "506-524",
     "title": "Heterotic and Type I string dynamics from eleven dimensions",
-    "volume": "460"
+    "volume": "460",
+    "ISSN": "0550-3213",
+    "URL": "https://doi.org/10.1016/0550-3213(95)00621-4"
   },
   {
     "container-title": "Letters in Mathematical Physics",
@@ -1604,15 +1633,18 @@
     "issued": {
       "date-parts": [
         [
-          2018
+          2018,
+          12
         ]
       ]
     },
     "page": "2695-2727",
     "publisher": "Springer",
-    "title": "M-theory from the Superpoint",
+    "title": "M-theory from the superpoint",
     "URL": "https://doi.org/10.1007/s11005-018-1110-z",
-    "volume": "108"
+    "volume": "108",
+    "ISSN": "1573-0530",
+    "abstract": "The “brane scan” classifies consistent Green–Schwarz strings and membranes in terms of the invariant cocycles on super Minkowski spacetimes. The “brane bouquet” generalizes this by consecutively forming the invariant higher central extensions induced by these cocycles, which yields the complete fundamental brane content of string/M-theory, including the D-branes and the M5-brane, as well as the various duality relations between these. This raises the question whether the super Minkowski spacetimes themselves arise as maximal invariant central extensions. Here, we prove that they do. Starting from the simplest possible super Minkowski spacetime, the superpoint, which has no Lorentz structure and no spinorial structure, we give a systematic process of consecutive “maximal invariant central extensions” and show that it discovers the super Minkowski spacetimes that contain superstrings, culminating in the 10- and 11-dimensional super Minkowski spacetimes of string/M-theory and leading directly to the brane bouquet."
   },
   {
     "publisher-place": "Berlin, Heidelberg",
@@ -1683,6 +1715,7 @@
         "family": "Baez"
       }
     ],
+    "DOI": "10.1090/S0273-0979-01-00934-X",
     "type": "article-journal",
     "id": "baez02",
     "citation-key": "baez02",
@@ -1694,8 +1727,10 @@
       ]
     },
     "page": "145-205",
-    "title": "The octonions",
-    "volume": "39"
+    "title": "The Octonions",
+    "volume": "39",
+    "URL": "https://doi.org/10.1090/S0273-0979-01-00934-X",
+    "note": "arXiv:math/0105155 [math.RA], Erratum: Bull. Am. Math. Soc. 42, 213 (2005)"
   },
   {
     "author": [
@@ -1750,7 +1785,8 @@
     "publisher": "Johns Hopkins University Press",
     "title": "Mathematical Logic as Based on the Theory of Types",
     "URL": "http://www.jstor.org/stable/2369948",
-    "volume": "30"
+    "volume": "30",
+    "DOI": "10.2307/2369948"
   },
   {
     "abstract": "The theory of types is intended to be a full-scale system for formalizing intuitionistic mathematics as developed. The language of the theory is richer than the languages of traditional intuitionistic systems in permitting proofs to appear as parts of propositions so that the propositions of the theory can express properties of proofs. There are axioms for universes that link the generation of objects and types and play somewhat the same role for the present theory as does the replacement axiom for Zermelo–Fraenkel set theory. The present theory is based on a strongly impredicative axiom that there is a type of all types in symbols. This axiom has to be abandoned, however, after it has been shown to lead to a contraction. This chapter discusses Normalization theorem, which can be strengthened in two ways: it can be made to cover open terms and it can be proved that every reduction sequence starting from an arbitrary term leads to a unique normal term after a finite number of steps. The definition of the notion of convertibility and the proof that an arbitrary term is convertible can no longer be separated because the type symbols and the terms are generated simultaneously.",
@@ -1787,7 +1823,7 @@
     "page": "73-118",
     "publisher": "Elsevier",
     "title": "An Intuitionistic Theory of Types: Predicative Part",
-    "URL": "https://www.sciencedirect.com/science/article/pii/S0049237X08719451",
+    "URL": "https://doi.org/10.1016/S0049-237X(08)71945-1",
     "volume": "80"
   },
   {
@@ -1848,7 +1884,8 @@
     "page": "207-207",
     "publisher": "Association for Symbolic Logic",
     "title": "A Decision Method for Elementary Algebra and Geometry",
-    "volume": "17"
+    "volume": "17",
+    "URL": "https://doi.org/10.2307/2267705"
   },
   {
     "container-title": "The Bulletin of Symbolic Logic",
@@ -1876,7 +1913,8 @@
     },
     "page": "175-214",
     "title": "Tarski's system of geometry",
-    "volume": "5"
+    "volume": "5",
+    "URL": "https://doi.org/10.2307/421089"
   },
   {
     "container-title": "The Bell System Technical Journal",
@@ -1900,7 +1938,8 @@
     },
     "page": "379-423",
     "title": "A mathematical theory of communication",
-    "volume": "27"
+    "volume": "27",
+    "URL": "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
   },
   {
     "number-of-pages": "4",
@@ -2066,7 +2105,7 @@
     "page": "2333-2346",
     "publisher": "American Physical Society",
     "title": "Black Holes and Entropy",
-    "URL": "https://link.aps.org/doi/10.1103/PhysRevD.7.2333",
+    "URL": "https://doi.org/10.1103/PhysRevD.7.2333",
     "volume": "7"
   },
   {
@@ -2155,7 +2194,7 @@
     "page": "130201",
     "publisher": "American Physical Society",
     "title": "Hamiltonian for the Zeros of the Riemann Zeta Function",
-    "URL": "https://link.aps.org/doi/10.1103/PhysRevLett.118.130201",
+    "URL": "https://doi.org/10.1103/PhysRevLett.118.130201",
     "volume": "118"
   },
   {
@@ -2313,7 +2352,7 @@
         "family": "Polyakov"
       }
     ],
-    "DOI": "https://doi.org/10.1016/0370-2693(81)90743-7",
+    "DOI": "10.1016/0370-2693(81)90743-7",
     "type": "article-journal",
     "id": "polyakov81",
     "citation-key": "polyakov81",
@@ -2328,7 +2367,7 @@
     },
     "page": "207-210",
     "title": "Quantum geometry of bosonic strings",
-    "URL": "https://www.sciencedirect.com/science/article/pii/0370269381907437",
+    "URL": "https://doi.org/10.1016/0370-2693(81)90743-7",
     "volume": "103"
   },
   {
@@ -2498,7 +2537,7 @@
       }
     ],
     "container-title": "Methods of Modern Mathematical Physics",
-    "DOI": "https://doi.org/10.1016/B978-0-12-585001-8.50014-3",
+    "DOI": "10.1016/B978-0-12-585001-8.50014-3",
     "editor": [
       {
         "given": "Michael",
@@ -2523,7 +2562,7 @@
     "page": "249-317",
     "publisher": "Academic Press",
     "title": "VIII - Unbounded Operators",
-    "URL": "https://www.sciencedirect.com/science/article/pii/B9780125850018500143"
+    "URL": "https://doi.org/10.1016/B978-0-12-585001-8.50014-3"
   },
   {
     "container-title": "Publications Mathématiques de l'IHÉS",
@@ -2592,7 +2631,6 @@
   },
   {
     "container-title": "International Journal of Theoretical Physics",
-    "abstract": "We show that the large-N limits of certainconformal field theories in various dimensions includein their Hilbert space a sector describing supergravityon the product of anti-de Sitter spacetimes, spheres, and other compact manifolds. This is shown bytaking some branes in the full M/string theory and thentaking a low-energy limit where the field theory on thebrane decouples from the bulk. We observe that, in this limit, we can still trust thenear-horizon geometry for large N. The enhancedsupersymmetries of the near-horizon geometry correspondto the extra supersymmetry generators present in thesuperconformal group (as opposed to just the super-Poincaregroup). The 't Hooft limit of 3 + 1 N = 4 super-Yang–Mills at the conformal point is shown to contain strings: they are IIB strings. We conjecture that compactifications of M/string theory on various anti-de Sitter spacetimes is dual to various conformal field theories. This leads to a new proposal for a definition of M-theory which could be extended to include fivenoncompact dimensions.",
     "author": [
       {
         "given": "Juan",
@@ -2603,17 +2641,21 @@
     "type": "article-journal",
     "id": "maldacena98",
     "citation-key": "maldacena98",
+    "issue": "4",
     "issued": {
       "date-parts": [
         [
-          1998
+          1999,
+          4
         ]
       ]
     },
-    "page": "231-252",
-    "container-title": "Adv. Theor. Math. Phys.",
-    "title": "The Large N Limit of Superconformal Field Theories and Supergravity",
-    "volume": "2"
+    "page": "1113-1133",
+    "title": "The Large-ℕ Limit of Superconformal Field Theories and Supergravity",
+    "volume": "38",
+    "ISSN": "1572-9575",
+    "URL": "https://doi.org/10.1023/A:1026654312961",
+    "abstract": "We show that the large-ℕ limits of certain conformal field theories in various dimensions include in their Hilbert space a sector describing supergravity on the product of anti-de Sitter spacetimes, spheres, and other compact manifolds. This is shown by taking some branes in the full M/string theory and then taking a low-energy limit where the field theory on the brane decouples from the bulk. We observe that, in this limit, we can still trust the near-horizon geometry for large ℕ. The enhanced supersymmetries of the near-horizon geometry correspond to the extra supersymmetry generators present in the superconformal group (as opposed to just the super-Poincare group). The 't Hooft limit of 3 + 1 ℕ = 4 super-Yang–Mills at the conformal point is shown to contain strings: they are IIB strings. We conjecture that compactifications of M/string theory on various anti-de Sitter spacetimes is dual to various conformal field theories. This leads to a new proposal for a definition of M-theory which could be extended to include five noncompact dimensions."
   },
   {
     "author": [
@@ -2656,7 +2698,8 @@
     },
     "page": "e20",
     "title": "The geometry of blueprints. Part II: Tits–Weyl models of algebraic groups",
-    "volume": "6"
+    "volume": "6",
+    "URL": "https://doi.org/10.1017/fms.2018.17"
   },
   {
     "author": [
@@ -2700,7 +2743,7 @@
     },
     "page": "115-155",
     "title": "Theorie der Abel'schen Functionen.",
-    "URL": "https://doi.org/10.1515/crll.1857.54.115",
+    "URL": "https://doi.org/doi:10.1515/crll.1857.54.115",
     "volume": "1857"
   },
   {
@@ -2724,7 +2767,6 @@
     "page": "671-680",
     "title": "Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse"
   },
-
   {
     "author": [
       {
@@ -2773,7 +2815,7 @@
     "page": "971-975",
     "publisher": "Elsevier",
     "title": "The Arithmetic Site",
-    "URL": "https://www.numdam.org/articles/10.1016/j.crma.2014.07.009/",
+    "URL": "https://doi.org/10.1016/j.crma.2014.07.009",
     "volume": "352"
   },
   {
@@ -2970,7 +3012,6 @@
     "id": "adams60",
     "citation-key": "adams60",
     "DOI": "10.2307/1970147",
-    "container-title": "Annals of Mathematics",
     "issue": "1",
     "issued": {
       "date-parts": [
@@ -2981,7 +3022,8 @@
     },
     "page": "20-104",
     "title": "On the Non-Existence of Elements of Hopf Invariant One",
-    "volume": "72"
+    "volume": "72",
+    "URL": "https://doi.org/10.2307/1970147"
   },
   {
     "container-title": "Journal of Geometry and Physics",
@@ -2992,7 +3034,7 @@
         "family": "Urbantke"
       }
     ],
-    "DOI": "https://doi.org/10.1016/S0393-0440(02)00121-3",
+    "DOI": "10.1016/S0393-0440(02)00121-3",
     "type": "article-journal",
     "id": "urbantke03",
     "citation-key": "urbantke03",
@@ -3008,7 +3050,7 @@
     "keyword": "Hopf fibration,Quantum mechanics",
     "page": "125-150",
     "title": "The Hopf fibration—seven times in physics",
-    "URL": "https://www.sciencedirect.com/science/article/pii/S0393044002001213",
+    "URL": "https://doi.org/10.1016/S0393-0440(02)00121-3",
     "volume": "46"
   },
   {
@@ -3232,7 +3274,8 @@
     },
     "page": "123-128",
     "title": "James Arthur: “The Endoscopic Classification of Representations. Orthogonal and Symplectic Groups”",
-    "volume": "116"
+    "volume": "116",
+    "URL": "https://doi.org/10.1365/s13291-014-0088-4"
   },
   {
     "container-title": "Nieuw Archief voor Wiskunde",
