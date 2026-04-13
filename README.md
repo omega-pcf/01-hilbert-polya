@@ -85,7 +85,7 @@ pnpm run verify
 The build pipeline orchestrates metadata synchronization from `citation.csl.json` (sources for bibliography and CFF references) and `CITATION.cff` (project identity), generates all figures and assets, updates versioning records, and runs LaTeX passes to produce the production-ready manuscript.
 
 ```bash
-pnpm run build
+pnpm build
 ```
 
 > [!IMPORTANT]
@@ -95,13 +95,13 @@ pnpm run build
 
 ## Release
 
-To automate a new versioned release (updates Changelog, Tags, and GitHub Release):
+To automate a new versioned release (updates Zenodo deposition, Changelog, Tags, and GitHub Release):
 
 ```bash
 pnpm run release
 ```
 
-This triggers a full build, asset regeneration, and metadata synchronization before publishing.
+This triggers a full build, asset regeneration, and metadata synchronization before publishing, ensuring a deterministic and fully auditable release state.
 
 ### Traditional Manual Build
 
