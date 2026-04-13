@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.9](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.8...v2.0.9) (2026-04-13)
+
+### Styles
+
+* remove bold from Lean 4 in abstract ([830f312](https://github.com/omega-pcf/01-hilbert-polya/commit/830f31276f80e29cf91dea5d0e17855a3a40f3e0))
+
+### Build System
+
+* standardizing bibliographic metadata and manuscript formatting ([0e0563b](https://github.com/omega-pcf/01-hilbert-polya/commit/0e0563b21cf734ffba0082d967523709e7c6662f))
+
 ## [2.0.8](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.7...v2.0.8) (2026-04-12)
 
 ## [2.0.7](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.6...v2.0.7) (2026-04-12)
