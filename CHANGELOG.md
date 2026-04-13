@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.10](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.9...v2.0.10) (2026-04-13)
+
+### Documentation
+
+* finalize keyword indexing and synchronize README with abstract ([7aabc47](https://github.com/omega-pcf/01-hilbert-polya/commit/7aabc471e6365e47c65f69a18f8f4fa98d49bdad))
+* synchronize CITATION.cff, .zenodo.json, and package.json metadata ([443ac7f](https://github.com/omega-pcf/01-hilbert-polya/commit/443ac7f914bddb4abd37395fb5e7b2e49b13a8d4))
+* update package.json keywords to match project indexing ([ccf7703](https://github.com/omega-pcf/01-hilbert-polya/commit/ccf77033d7f1c0069098661286a1048011e2a086))
+
 ## [2.0.9](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.8...v2.0.9) (2026-04-13)
 
 ### Styles
