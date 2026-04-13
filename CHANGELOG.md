@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.1.0...v2.1.1) (2026-04-13)
+
+### Documentation
+
+* add research division website to author affiliations ([f8dacb1](https://github.com/omega-pcf/01-hilbert-polya/commit/f8dacb1f7d5d13ae06c3c38e2413ac4aa9715807))
+* correct keyword 'Modular spaces' to 'Moduli spaces' for technical accuracy ([f1f18d2](https://github.com/omega-pcf/01-hilbert-polya/commit/f1f18d2f21c2874ec489ec544ddaab23a0336fe1))
+* document release workflow in README ([3d6465b](https://github.com/omega-pcf/01-hilbert-polya/commit/3d6465b31e1b5f80d21a889802ef5d886bc013ed))
+* emphasize Zenodo and auditability in release workflow ([b013ea8](https://github.com/omega-pcf/01-hilbert-polya/commit/b013ea8c3ae43e52d3c7f2b03f047346ffc966b3))
+* polish README math notation for better Markdown rendering (golden -> phi, Rpcf -> R_PCF) ([ede9ea7](https://github.com/omega-pcf/01-hilbert-polya/commit/ede9ea70e7467ac2dfad4b472c42b81c8ab4b0bc))
+* promote citation section to follow abstract in 01 README ([097fb72](https://github.com/omega-pcf/01-hilbert-polya/commit/097fb721794de2f9e1bfe7b5b1585a43391316d5))
+* synchronize README abstract and keywords with LaTeX source ([363182c](https://github.com/omega-pcf/01-hilbert-polya/commit/363182c77e98666e2abd1dc3162bab8964f94b53))
+
 ## [2.1.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.10...v2.1.0) (2026-04-13)
 
 ### Features
