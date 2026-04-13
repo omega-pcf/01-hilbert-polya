@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.1.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.10...v2.1.0) (2026-04-13)
+
+### Features
+
+* **scripts:** restore and modernize manuscript audit tool ([06a5f6b](https://github.com/omega-pcf/01-hilbert-polya/commit/06a5f6bdf40ebea50cf10dbc48e3fa778fdc42ee))
+
 ## [2.0.10](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.0.9...v2.0.10) (2026-04-13)
 
 ### Documentation
