@@ -82,19 +82,16 @@ pnpm run verify
 
 ## Build and Compilation
 
-The project uses a Docker-based LaTeX environment (`kjarosh/latex:2024.4-full`) to ensure consistent results across different systems. To build the production PDF:
+The build pipeline orchestrates metadata synchronization from `citation.csl.json` (sources for bibliography and CFF references) and `CITATION.cff` (project identity), generates all figures and assets, updates versioning records, and runs LaTeX passes to produce the production-ready manuscript.
 
 ```bash
 pnpm run build
 ```
 
-The build pipeline automatically manages versioning in `CITATION.cff` and `.zenodo.json`, runs LaTeX passes, and verifies formal proof status.
-
-If you are missing the figure assets, generate placeholders before building:
-
-```bash
-pnpm run generate:figures
-```
+> [!IMPORTANT]
+> - **Metadata Flow**: `citation.csl.json` provides the source references, which are synchronized into `src/bibliography.bib`, `CITATION.cff`, and `.zenodo.json` during the build.
+> - **Figures**: Assets are generated automatically; manual execution of `pnpm run generate:figures` is only required for auditing specific components.
+> - **Verification**: While `build` produces the documentation artifacts, formal proof verification must be executed via `pnpm run validate` (or `pnpm run verify`).
 
 ### Traditional Manual Build
 
@@ -103,6 +100,7 @@ For local environments with a full TeX Live distribution, you may use the standa
 ```bash
 pdflatex main
 biber main
+pdflatex main
 pdflatex main
 ```
 

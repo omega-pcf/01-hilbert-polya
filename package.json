@@ -10,6 +10,7 @@
     "verify:py": "uv run python tests/verify_t_star.py",
     "verify:lean": "cd lean && lake build",
     "verify": "pnpm run verify:py && pnpm run verify:lean",
+    "validate": "pnpm run verify",
     "build": "pnpm exec tsx scripts/build.ts",
     "build:full": "pnpm run generate:figures && pnpm run build",
     "release": "dotenv -e .env -- release-it",
