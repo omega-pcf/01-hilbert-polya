@@ -1,7 +1,8 @@
 # The Hilbert-Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17619486.svg)](https://doi.org/10.5281/zenodo.17619486)
-[![Project Page](https://img.shields.io/badge/Project%20Page-omega--pcf.com-blue)](https://omega-pcf.com/01-hilbert-polya)
+[![Project Page](https://img.shields.io/badge/Project%20Page-hilbert--polya.com-blue)](https://hilbert-polya.com)
+[![Project Page](https://img.shields.io/badge/Project%20Page-omega--pcf.com-blue)](https://omega-pcf.com/hilbert-polya)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KExRnNtx91TjVyYD0FlcB_TLQwZB4GKq?usp=sharing)
 
 ## Authors
