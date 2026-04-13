@@ -51,14 +51,12 @@
     "url": "https://github.com/omega-pcf/01-hilbert-polya.git"
   },
   "keywords": [
-    "Riemann hypothesis",
-    "Hilbert-Pólya conjecture",
-    "L-functions",
-    "Self-adjoint operators",
-    "Random matrix theory",
-    "Zeta function zeros",
-    "Mersenne primes",
-    "Modular spaces"
+    "Riemann Hypothesis",
+    "Hilbert–Pólya conjecture",
+    "Field with one element (F1)",
+    "Lambda-rings",
+    "Quantum Chaos",
+    "Lean 4"
   ],
   "license": "CC-BY-4.0"
 }
