@@ -93,6 +93,16 @@ pnpm run build
 > - **Figures**: Assets are generated automatically; manual execution of `pnpm run generate:figures` is only required for auditing specific components.
 > - **Verification**: While `build` produces the documentation artifacts, formal proof verification must be executed via `pnpm run validate` (or `pnpm run verify`).
 
+## Release
+
+To automate a new versioned release (updates Changelog, Tags, and GitHub Release):
+
+```bash
+pnpm run release
+```
+
+This triggers a full build, asset regeneration, and metadata synchronization before publishing.
+
 ### Traditional Manual Build
 
 For local environments with a full TeX Live distribution, you may use the standard compilation sequence:
