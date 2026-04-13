@@ -3379,5 +3379,55 @@
     "note": "Companion paper to <i>The Hilbert–Pólya Operator and the Primitive Structure of the Complex Plane</i>",
     "title": "Odd Zeta Values from the PCF Torus: φ and π as Arithmetic-Geometric Sources",
     "URL": "https://doi.org/10.5281/zenodo.19492791"
+  },
+  {
+    "author": [
+      {
+        "given": "Asoke N.",
+        "family": "Mitra"
+      },
+      {
+        "given": "Freeman J.",
+        "family": "Dyson"
+      }
+    ],
+    "type": "paper-conference",
+    "id": "Mitra2000QuantumFT",
+    "citation-key": "Mitra2000QuantumFT",
+    "issued": {
+      "date-parts": [
+        [
+          2000
+        ]
+      ]
+    },
+    "publisher": "Hindustan Book Agency",
+    "publisher-place": "New Delhi, India",
+    "title": "Quantum Field Theory: A 20th Century Profile",
+    "ISBN": "978-81-85931-25-8",
+    "URL": "https://api.semanticscholar.org/CorpusID:118294090"
+  },
+  {
+    "author": [
+      {
+        "given": "George",
+        "family": "Pólya"
+      }
+    ],
+    "type": "personal_communication",
+    "id": "polya1982letter",
+    "citation-key": "polya1982letter",
+    "issued": {
+      "date-parts": [
+        [
+          1982,
+          1,
+          3
+        ]
+      ]
+    },
+    "note": "Correspondence regarding the origin of the Hilbert-Pólya conjecture",
+    "title": "Letter to Andrew Odlyzko",
+    "URL": "https://www-users.cse.umn.edu/~odlyzko/polya/index.html"
   }
 ]
