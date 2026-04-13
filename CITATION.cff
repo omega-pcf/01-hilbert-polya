@@ -33,7 +33,7 @@ keywords:
   - Field with one element (F1)
   - Lambda-rings
   - Mersenne primes
-  - Modular spaces
+  - Moduli spaces
 identifiers:
   - type: other
     value: "MSC2020: 11M26 (Primary), 47A10 (Secondary), 14G99 (Tertiary)"
@@ -2429,3 +2429,34 @@ references:
     notes: Companion paper to <i>The Hilbert–Pólya Operator and the Primitive
       Structure of the Complex Plane</i>
     type: article
+  - authors:
+      - family-names: Mitra
+        given-names: Asoke N.
+      - family-names: Dyson
+        given-names: Freeman J.
+    identifiers:
+      - type: url
+        value: https://api.semanticscholar.org/CorpusID:118294090
+      - type: other
+        value: urn:isbn:978-81-85931-25-8
+    title: "Quantum Field Theory: A 20th Century Profile"
+    url: https://api.semanticscholar.org/CorpusID:118294090
+    date-published: 2000-01-01
+    year: 2000
+    isbn: 978-81-85931-25-8
+    publisher:
+      name: Hindustan Book Agency
+      city: New Delhi
+    type: conference-paper
+  - authors:
+      - family-names: Pólya
+        given-names: George
+    identifiers:
+      - type: url
+        value: https://www-users.cse.umn.edu/~odlyzko/polya/index.html
+    title: Letter to Andrew Odlyzko
+    url: https://www-users.cse.umn.edu/~odlyzko/polya/index.html
+    date-published: 1982-01-03
+    year: 1982
+    notes: Correspondence regarding the origin of the Hilbert-Pólya conjecture
+    type: generic

@@ -23,7 +23,7 @@ The framework is formalized and fully verified in Lean 4 with Mathlib (0 sorry; 
 
 Three spectral invariants—dimension $d=3$ (from $S_3$ symmetry), common modulus $\mu=1/2$ (tripartite norm), and modular sum $\sigma = d\mu = 3/2$ (spectral product)—emerge from the geometric structure alone, without invoking any component of $\zeta(s)$. The ring $R_{\mathrm{PCF}} = \mathbb{Z}[\varphi,\varphi^{-1},\frac{1}{2}]$ admits a $\Lambda$-ring structure constituting $\mathbb{F}_1$-descent data in the sense of Borger, placing the construction within Manin's program for absolute geometry and its previously established intersection with the string theory framework (Connes--Douglas--Schwarz).
 
-**Keywords:** Riemann Hypothesis, Hilbert-Pólya conjecture, Field with one element (F1), Lambda-rings, Mersenne primes, Modular spaces.
+**Keywords:** Riemann Hypothesis, Hilbert-Pólya conjecture, Field with one element (F1), Lambda-rings, Mersenne primes, Moduli spaces.
 
 ## Citation
 
