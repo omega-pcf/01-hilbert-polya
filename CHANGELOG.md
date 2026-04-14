@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.2.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.1.2...v2.2.0) (2026-04-14)
+
+### Features
+
+* automate Unicode superscript to LaTeX conversion in citation pipeline ([c983182](https://github.com/omega-pcf/01-hilbert-polya/commit/c983182394a857638d5e2a148f6eb42c5ffcaa88))
+
+### Bug Fixes
+
+* use HTML sup tags for powers in CSL-JSON to ensure correct LaTeX rendering in bibliography ([c0cd9e1](https://github.com/omega-pcf/01-hilbert-polya/commit/c0cd9e1cad319f28a76184cbb3a6f19810c35119))
+
+### Styles
+
+* streamline project repository footnote in Results section; keeping full URL list only in Appendix ([2d629a7](https://github.com/omega-pcf/01-hilbert-polya/commit/2d629a7e1911dd10cf6f95d426f27a0ea805da2a))
+
+### Refinements
+
+* use verified bib keys (polya1982letter, Mitra2000QuantumFT) and remove duplicates ([3f1cc12](https://github.com/omega-pcf/01-hilbert-polya/commit/3f1cc125664ecfc650d014b3b8df6a7c308ad016))
+
+### Chores
+
+* synchronize metadata artifacts after successful build with automated superscripts ([1aefc47](https://github.com/omega-pcf/01-hilbert-polya/commit/1aefc47a29c2c032996011ac43b68aec4055d4cb))
+
 ## [2.1.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.1.1...v2.1.2) (2026-04-14)
 
 ### Documentation
