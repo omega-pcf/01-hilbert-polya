@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.2.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.1...v2.2.2) (2026-04-14)
+
+### Styles
+
+* standardize first-page institution address (single-line with semicolon delimiters and explicit https protocol) ([7e3b15f](https://github.com/omega-pcf/01-hilbert-polya/commit/7e3b15f6dab0765e03c0818a5da88e9377793865))
+
 ## [2.2.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.0...v2.2.1) (2026-04-14)
 
 ### Styles
