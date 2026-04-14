@@ -72,8 +72,8 @@ export class MetadataPipeline {
   public sync(version: string): void {
     this.cleanup();
     console.log(`  Initiating standards-compliant metadata sync v${version}...`);
-
-    const cslData = this.loadCsl();
+    
+    const cslData = this.sanitizeCsl(this.loadCsl());
     
     // 1. Bibliography (handled by citation-js)
     this.syncBibtex(cslData);
@@ -101,6 +101,28 @@ export class MetadataPipeline {
   private loadCsl(): CslItem[] {
     if (!existsSync(PATHS.CSL)) throw new Error(`Missing source: ${PATHS.CSL}`);
     return JSON.parse(readFileSync(PATHS.CSL, 'utf8'));
+  }
+
+  private sanitizeCsl(items: CslItem[]): CslItem[] {
+    const supMap: Record<string, string> = {
+      '⁰': '0', '¹': '1', '²': '2', '³': '3', '⁴': '4',
+      '⁵': '5', '⁶': '6', '⁷': '7', '⁸': '8', '⁹': '9'
+    };
+    
+    const sanitize = (str: any): any => {
+      if (typeof str !== 'string') return str;
+      return str.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, (match) => {
+        const digits = match.split('').map(char => supMap[char] || char).join('');
+        return `<sup>${digits}</sup>`;
+      });
+    };
+
+    return items.map(item => {
+      if (item.title) item.title = sanitize(item.title);
+      if (item.note) item.note = sanitize(item.note);
+      if (item.abstract) item.abstract = sanitize(item.abstract);
+      return item;
+    });
   }
 
   private syncBibtex(items: CslItem[]): void {
