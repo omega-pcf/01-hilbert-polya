@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.3](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.2...v2.2.3) (2026-04-14)
+
+### Styles
+
+* improve Zenodo reference string generation (alphabetical sorting, robust DOI/URL handling, more complete bibliographic data) constellations in 01-hilbert-polya ([0620d46](https://github.com/omega-pcf/01-hilbert-polya/commit/0620d469faad9b6290f183babfeeb0ff9088a18d))
+* streamline Lean declaration counts in manuscript (remove from methods table, update appendix audit table) ([d1e4831](https://github.com/omega-pcf/01-hilbert-polya/commit/d1e4831c327bc2cc401ba745d0b3b15aefc3d854))
+
 ## [2.2.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.1...v2.2.2) (2026-04-14)
 
 ### Styles
