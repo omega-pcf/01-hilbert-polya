@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.2.5](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.4...v2.2.5) (2026-04-14)
+
+### Chores
+
+* **citation:** updated publication year to 2026 in CSL data ([49e48f4](https://github.com/omega-pcf/01-hilbert-polya/commit/49e48f4da2260a6bd6d82d594c38fda5c5f6b36b))
+
 ## [2.2.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.3...v2.2.4) (2026-04-14)
 
 ### Refinements
