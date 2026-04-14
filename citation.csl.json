@@ -270,7 +270,7 @@
         ]
       ]
     },
-    "note": "Massive numerical verification of RH zeros up to 10<sup>20</sup>",
+    "note": "Massive numerical verification of RH zeros up to 10²⁰",
     "page": "273-308",
     "title": "On the distribution of spacings between zeros of the zeta function",
     "volume": "48",
@@ -471,7 +471,7 @@
     },
     "page": "139-144",
     "publisher": "American Mathematical Society",
-    "title": "The 10<sup>22</sup>-nd zero of the Riemann zeta function",
+    "title": "The 10²²-nd zero of the Riemann zeta function",
     "volume": "290",
     "URL": "https://doi.org/10.1090/conm/290/04746"
   },

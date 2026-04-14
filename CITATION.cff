@@ -258,7 +258,7 @@ references:
     year: 1987
     issue: "177"
     journal: Mathematics of Computation
-    notes: Massive numerical verification of RH zeros up to 10²⁰
+    notes: Massive numerical verification of RH zeros up to 10<sup>20</sup>
     start: "273"
     end: "308"
     type: article
@@ -392,7 +392,7 @@ references:
         value: 10.1090/conm/290/04746
       - type: url
         value: https://doi.org/10.1090/conm/290/04746
-    title: The 10²²-nd zero of the Riemann zeta function
+    title: The 10<sup>22</sup>-nd zero of the Riemann zeta function
     url: https://doi.org/10.1090/conm/290/04746
     collection-title: Contemporary Mathematics
     date-published: 2001-01-01
