@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.0...v2.2.1) (2026-04-14)
+
+### Styles
+
+* apply Cambio 7 (resolve redundant background paragraphs/citations in §2.1) ([bc8db88](https://github.com/omega-pcf/01-hilbert-polya/commit/bc8db8826709f6696ad404aee461ca38c078afa4))
+* final structural cleanup of §2.1 and §2.1.1 (remove redundant historical intro, correct moduli space definition placement) ([ea861e6](https://github.com/omega-pcf/01-hilbert-polya/commit/ea861e6113e9471c9c4f6d2030f9f20ac0d675ac))
+
 ## [2.2.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.1.2...v2.2.0) (2026-04-14)
 
 ### Features
