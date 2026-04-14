@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.1.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.1.1...v2.1.2) (2026-04-14)
+
+### Documentation
+
+* add Andrew Odlyzko to acknowledgments for computational verification and historical record preservation ([ad50565](https://github.com/omega-pcf/01-hilbert-polya/commit/ad50565c571dfea36af7d57180575581bb793363))
+* add Mitra-Dyson citation and sync abstract/keywords with torus-string characterization ([c587803](https://github.com/omega-pcf/01-hilbert-polya/commit/c587803a291109b03ba0ec561184fbefe66714b0))
+* refine abstract keywords and refactor background moduli genealogy into granular segments ([e9640ba](https://github.com/omega-pcf/01-hilbert-polya/commit/e9640ba6ef9d7dd263b3516a38cfa843630fdbd6))
+
+### Refinements
+
+* move antiquity moduli precedents to general introduction of 2.1 ([7aeb69f](https://github.com/omega-pcf/01-hilbert-polya/commit/7aeb69f97e1393ade7bc5b071465a777c11d5131))
+* remove cohomological from scope and limitations for broader focus ([b730c68](https://github.com/omega-pcf/01-hilbert-polya/commit/b730c68306188513053f06b2edffb3238faaeb3d))
+* streamline figure captions by removing theoretical explanations and normalizing phi notation ([ca09a0d](https://github.com/omega-pcf/01-hilbert-polya/commit/ca09a0db7fc92cd4a773db947b600dd78b4dc6f6))
+
 ## [2.1.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.1.0...v2.1.1) (2026-04-13)
 
 ### Documentation
