@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.2.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.3...v2.2.4) (2026-04-14)
+
+### Refinements
+
+* **metadata:** centralized abstracts in package.json and removed script-based sanitization ([b82121e](https://github.com/omega-pcf/01-hilbert-polya/commit/b82121eedea1349769684ef80bdc80efd1f0ac1f))
+
 ## [2.2.3](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.2...v2.2.3) (2026-04-14)
 
 ### Styles
