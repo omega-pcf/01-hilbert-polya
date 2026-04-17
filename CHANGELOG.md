@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.2.6](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.5...v2.2.6) (2026-04-17)
+
+### Documentation
+
+* update affiliation in README.md and main.tex ([e95081c](https://github.com/omega-pcf/01-hilbert-polya/commit/e95081c7c6d4f25e672333a8a6f79c27bb1cba61))
+
+### Chores
+
+* synchronize F1 keyword and fix citation metadata task v2.2.5 ([5e21429](https://github.com/omega-pcf/01-hilbert-polya/commit/5e2142937e9af975c50a8671619320fcc57faf0e))
+
 ## [2.2.5](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.4...v2.2.5) (2026-04-14)
 
 ### Chores
