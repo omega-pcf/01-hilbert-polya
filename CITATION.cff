@@ -4,7 +4,7 @@ title: "The Hilbert-Pólya Operator and the Primitive Structure of the Complex
   Plane: Between 𝔽₁, String Theory, and Ancient Geometry"
 type: software
 version: 2.2.5
-date-released: 2026-04-14
+date-released: 2026-04-17
 authors:
   - family-names: González García
     given-names: Jorge Armando
@@ -30,7 +30,7 @@ license: CC-BY-4.0
 keywords:
   - Riemann Hypothesis
   - Hilbert–Pólya conjecture
-  - Field with one element (F1)
+  - 𝔽₁ (field with one element)
   - Lambda-rings
   - Mersenne primes
   - Moduli spaces
