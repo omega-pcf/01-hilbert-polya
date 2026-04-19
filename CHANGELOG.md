@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.10](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.9...v2.2.10) (2026-04-19)
+
+### Styles
+
+* final standardization of end-matter and disclosure sections ([6503439](https://github.com/omega-pcf/01-hilbert-polya/commit/6503439ba473dd057fc73e2b32910f51279bd5fc))
+* restore table of contents inside frontmatter ([d616320](https://github.com/omega-pcf/01-hilbert-polya/commit/d6163205a28fa27459febd9864eff57846d3a48d))
+
 ## [2.2.9](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.8...v2.2.9) (2026-04-19)
 
 ### Styles
