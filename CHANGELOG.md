@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.3.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.10...v2.3.0) (2026-04-19)
+
+### Features
+
+* add author email addresses for Itzel and Luz ([56f257b](https://github.com/omega-pcf/01-hilbert-polya/commit/56f257ba9aef3224047f4876147de5833b7fbf3f))
+
+### Bug Fixes
+
+* resolve blank email addresses by moving ead tags outside author tags ([96ffbc9](https://github.com/omega-pcf/01-hilbert-polya/commit/96ffbc9e5acd25a50e75f8cd9d88aab8845cfa5c))
+
 ## [2.2.10](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.9...v2.2.10) (2026-04-19)
 
 ### Styles
