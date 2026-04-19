@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.3.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.1...v2.3.2) (2026-04-19)
+
+### Styles
+
+* use shortened author list in headers to prevent overflow ([794428a](https://github.com/omega-pcf/01-hilbert-polya/commit/794428ac7fd4b2c40c6fd6612e9e588ef5087d90))
+
 ## [2.3.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.0...v2.3.1) (2026-04-19)
 
 ### Refinements
