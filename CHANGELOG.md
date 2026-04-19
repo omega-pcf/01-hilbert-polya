@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.9](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.8...v2.2.9) (2026-04-19)
+
+### Styles
+
+* remove table of contents and fix font leaks in frontmatter ([58a5e3c](https://github.com/omega-pcf/01-hilbert-polya/commit/58a5e3cc9219566bca2c5c74d4a1f9911a477bb9))
+
+### Documentation
+
+* update journal mentions from SIGMA to CNTP ([4a4ea4d](https://github.com/omega-pcf/01-hilbert-polya/commit/4a4ea4d7ae5d1bbc9a69b7c8d302e4d814a67085))
+
+### Chores
+
+* migrate manuscript to CNTP template ([ceee5b9](https://github.com/omega-pcf/01-hilbert-polya/commit/ceee5b935618fa5616f1d7e2a3c8c85b6b98308e))
+
 ## [2.2.8](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.7...v2.2.8) (2026-04-18)
 
 ## [2.2.7](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.6...v2.2.7) (2026-04-17)
