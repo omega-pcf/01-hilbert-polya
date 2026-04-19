@@ -2,7 +2,7 @@
 
 ## Development
 
-**Template:** CNTP Journal (`ipart.cls`). The paper is currently being prepared for the *Communications in Number Theory and Physics (CNTP)* journal.
+**Template:** Preprint (`amsart.cls`). The paper is formatted using the standard AMS article class for a clean, vanilla preprint appearance suitable for arXiv and general distribution.
 
 **Daily Workflow:** LaTeX Workshop (James Yu) in VS Code
 - Automatically compiles to `build/main.pdf`.
