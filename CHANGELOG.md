@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.3.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.0...v2.3.1) (2026-04-19)
+
+### Refinements
+
+* migrate to vanilla amsart class and clean up journal-specific metadata ([66b48e0](https://github.com/omega-pcf/01-hilbert-polya/commit/66b48e07898d4081b0fd5730f30b183b1e095da7))
+
 ## [2.3.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.2.10...v2.3.0) (2026-04-19)
 
 ### Features
