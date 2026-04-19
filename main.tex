@@ -1,10 +1,5 @@
 \pdfoutput=1
-\RequirePackage{ifpdf}
-\ifpdf % We are running pdfTeX in pdf mode
-\documentclass[pdftex]{sigma}
-\else
-\documentclass{sigma}
-\fi
+\documentclass[cntp]{ipart}
 
 \usepackage{mathtools}
 \usepackage{amssymb}
@@ -16,36 +11,52 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage[capitalize,nameinlink]{cleveref}
+
 \crefname{section}{\S}{\S\S}
 \Crefname{section}{\S}{\S\S}
 \crefname{subsection}{\S}{\S\S}
 \Crefname{subsection}{\S}{\S\S}
 \crefname{step}{Step}{Steps}
 \Crefname{step}{Step}{Steps}
-\usepackage{setspace}
-\usepackage{lineno}
 
-\setstretch{1.0}
-\linenumbers
-
+\startlocaldefs
 \numberwithin{equation}{section}
 
-\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{Theorem}[theorem]{Theorem}
 \newtheorem*{Theorem*}{Theorem}
-\newtheorem{Corollary}[Theorem]{Corollary}
-\newtheorem{Lemma}[Theorem]{Lemma}
-\newtheorem{Proposition}[Theorem]{Proposition}
-\newtheorem{Conjecture}[Theorem]{Conjecture}
-\newtheorem{Observation}[Theorem]{Observation}
+
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{Corollary}[theorem]{Corollary}
+
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{Lemma}[theorem]{Lemma}
+
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{Proposition}[theorem]{Proposition}
+
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{Conjecture}[theorem]{Conjecture}
+
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{Observation}[theorem]{Observation}
 
 \theoremstyle{definition}
-\newtheorem{Definition}[Theorem]{Definition}
-\newtheorem{Note}[Theorem]{Note}
-\newtheorem{Example}[Theorem]{Example}
-\newtheorem{Remark}[Theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{Definition}[theorem]{Definition}
+
+\newtheorem{note}[theorem]{Note}
+\newtheorem{Note}[theorem]{Note}
+
+\newtheorem{example}[theorem]{Example}
+\newtheorem{Example}[theorem]{Example}
+
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{Remark}[theorem]{Remark}
 
 %%% ====================================================================
-%%% CUSTOM COMMANDS FROM V11
+%%% CUSTOM COMMANDS
 %%% ====================================================================
 \newcommand{\cat}[1]{\mathcal{#1}}
 \newcommand{\Set}{\mathbf{Set}}
@@ -64,83 +75,57 @@
 \newcommand{\lean}[1]{\nolinkurl{#1}}
 \newcommand{\pcfrepo}{https://github.com/omega-pcf/01-hilbert-polya}
 
+\endlocaldefs
 
 %%% ====================================================================
-%%% PREPRINT CUSTOMIZATION (SIGMA targeting)
+%%% JOURNAL SETTINGS
 %%% ====================================================================
-\makeatletter
-% Custom FirstPageHeading to include PREPRINT VERSION
-\renewcommand{\FirstPageHeading}{%
-  \thispagestyle{empty}%
-  \noindent\raisebox{35pt}[0pt][0pt]{\makebox[\textwidth]{\protect\footnotesize \sf
-      Symmetry, Integrability and Geometry: Methods and Applications
-      \hfill  SIGMA \Volume \ (\PublicationYear), \PaperNumber,
-      \pageref*{\ArticleLabel-lp} pages}}\par
-  \noindent\raisebox{20pt}[0pt][0pt]{\makebox[\textwidth]{\protect\footnotesize \sf
-      \hfill \textbf{PREPRINT VERSION} \hfill}}\par
-  \vspace{-15pt}
-}
-
-% Adding PREPRINT legend to all footers
-\renewcommand{\@evenfoot}{\footnotesize \sf PREPRINT VERSION \hfil}
-\renewcommand{\@oddfoot}{\hfil \footnotesize \sf PREPRINT VERSION}
-
-% Redefining ArticleDates to include Zenodo DOI and remove empty SIGMA DOI
-\renewcommand{\ArticleDates}[1]{%
-  \vspace{2mm}\par\noindent {\small {\rm #1} \par
-  \noindent {\rm Zenodo All Versions DOI: \href{https://doi.org/10.5281/zenodo.17619486}{10.5281/zenodo.17619486}} \par
-  } \par
-}
-\makeatother
+\pubyear{2026}
+\volume{0}
+\issue{0}
+\firstpage{1}
+\lastpage{1}
 
 \begin{document}
 
-\renewcommand{\PaperNumber}{***}
+\begin{frontmatter}
 
-\FirstPageHeading
+\title[Hilbert--P\'olya Operator]{The Hilbert--P\'olya Operator and the Primitive Structure of the Complex Plane: Between\/ $\mathbb{F}_1$, String Theory, and Ancient Geometry\protect\thanksref{T1}}
+\thankstext{T1}{Zenodo All Versions DOI: \href{https://doi.org/10.5281/zenodo.17619486}{10.5281/zenodo.17619486}}
 
-\ShortArticleName{The Hilbert--P\'olya Operator and the Primitive Structure of the Complex Plane}
+\begin{aug}
+\author{\fnms{Jorge Armando} \snm{GONZÁLEZ GARCÍA}\ead[label=e1]{jorge@ttamayo.com}}
+\author{\fnms{Víctor Manuel} \snm{GONZÁLEZ GARCÍA}\ead[label=e2]{victor@ttamayo.com}}
+\address{TTAMAYO PUNTO COM, S.A.P.I. de C.V.; Research \& Development Division; Naucalpan de Juárez, State of Mexico, Mexico\\\printead{e1}, \printead{e2}}
 
-\ArticleName{The Hilbert--P\'olya Operator and the Primitive Structure of the Complex Plane: Between\/ $\mathbb{F}_1$, String Theory, and Ancient Geometry}
+\author{\fnms{Itzel Marion} \snm{DRESSLER PÉREZ}\ead[label=e3]{}}
+\author{\fnms{Luz María} \snm{GARCÍA ORDÓÑEZ}\ead[label=e4]{}}
+\author{\fnms{M.} \snm{MORENO}\ead[label=e5]{}}
+\address{Independent Researcher\\\printead{e3}, \printead{e4}, \printead{e5}}
+\end{aug}
 
-\Author{Jorge Armando GONZÁLEZ GARCÍA~$^{\rm a}$, Víctor Manuel GONZÁLEZ GARCÍA~$^{\rm a}$, Itzel Marion DRESSLER PÉREZ~$^{\rm b}$, Luz María GARCÍA ORDÓÑEZ~$^{\rm a}$ and M.~MORENO~$^{\rm b}$}
-
-\AuthorNameForHeading{Gonz\'alez Garc\'ia et al.}
-
-\Address{$^{\rm a)}$~TTAMAYO PUNTO COM, S.A.P.I. de C.V.; Research \& Development Division; Naucalpan de Juárez, State of Mexico, Mexico}
-\EmailD{\mail{jorge@ttamayo.com}, \mail{victor@ttamayo.com}}
-
-\Address{$^{\rm b)}$~Independent Researcher}
-
-\ArticleDates{Received November 15, 2025; Updated \today; Preprint hosted at Zenodo}
+\received{\sday{15} \smonth{11} \syear{2025}}
 
 \input{src/chapters/abstract}
+
+\end{frontmatter}
 
 \tableofcontents
 
 \input{src/chapters/introduction}
-
 \input{src/chapters/background}
-
 \input{src/chapters/methods}
-
 \input{src/chapters/results}
-
 \input{src/chapters/categorical}
-
 \input{src/chapters/squeeze}
-
 \input{src/chapters/discussion}
-
 \input{src/chapters/conclusions}
 \input{src/chapters/disclosure}
 \input{src/chapters/acknowledgments}
 \input{src/chapters/appendix}
 
-\pdfbookmark[1]{References}{ref}
-\bibliographystyle{sigma}
+\bibliographystyle{imsart-number}
 \bibliography{src/bibliography}
 
-\LastPageEnding
-
 \end{document}
+
