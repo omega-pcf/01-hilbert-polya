@@ -2,7 +2,7 @@
 
 ## Development
 
-**Template:** SIGMA Journal (`sigma.cls`). The paper is currently being profiled for the *Symmetry, Integrability and Geometry: Methods and Applications (SIGMA)* journal. Pending acceptance, the SIGMA template is used for all versions.
+**Template:** CNTP Journal (`ipart.cls`). The paper is currently being prepared for the *Communications in Number Theory and Physics (CNTP)* journal.
 
 **Daily Workflow:** LaTeX Workshop (James Yu) in VS Code
 - Automatically compiles to `build/main.pdf`.
