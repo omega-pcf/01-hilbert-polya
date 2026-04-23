@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.3.3](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.2...v2.3.3) (2026-04-23)
+
+### Styles
+
+* add extended date metadata (received, last modified, compiled) ([2c1e71c](https://github.com/omega-pcf/01-hilbert-polya/commit/2c1e71c0c4eee245db43c42a07dea9630aa1573e))
+* remove Compiled date field from frontmatter ([ca8d37e](https://github.com/omega-pcf/01-hilbert-polya/commit/ca8d37e91aa32399276987464734a76654bd164e))
+* set Last modified date to \today for automatic updates ([45c78c9](https://github.com/omega-pcf/01-hilbert-polya/commit/45c78c9b3ae8e48d8cb60a6b9143b19d3735319c))
+
+### Documentation
+
+* update template information to amsart ([e80c8e0](https://github.com/omega-pcf/01-hilbert-polya/commit/e80c8e05ab3d2cc67e62ac6be0ae5b693a4a0aa5))
+
 ## [2.3.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.1...v2.3.2) (2026-04-19)
 
 ### Styles
