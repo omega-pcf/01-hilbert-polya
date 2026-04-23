@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.3.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.3...v2.3.4) (2026-04-23)
+
+### Bug Fixes
+
+* correct keywords to match README with symbols ([cf96559](https://github.com/omega-pcf/01-hilbert-polya/commit/cf9655990bb332e1f01463a7b05ab2e02a5fd4bd))
+
 ## [2.3.3](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.2...v2.3.3) (2026-04-23)
 
 ### Styles
