@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.3.6](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.5...v2.3.6) (2026-04-24)
+
+### Documentation
+
+* update running head title for odd pages ([05a5071](https://github.com/omega-pcf/01-hilbert-polya/commit/05a5071815fe59b3888b84ecc0270fb1003dcee7))
+
 ## [2.3.5](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.4...v2.3.5) (2026-04-24)
 
 ### Bug Fixes
