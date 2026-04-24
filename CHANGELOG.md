@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.3.5](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.4...v2.3.5) (2026-04-24)
+
+### Bug Fixes
+
+* **bib:** enable DOI and URL links in references using plainnat and natbib ([67671d0](https://github.com/omega-pcf/01-hilbert-polya/commit/67671d06effd412da584b7377a0da749a7eb77bc))
+* **bib:** migrate to biblatex and biber for cleaner references ([e988ad5](https://github.com/omega-pcf/01-hilbert-polya/commit/e988ad5edd65cec530c0c1392a41b8be71b2cdb2))
+
+### Documentation
+
+* **ack:** correct Urs Schreiber and John Huerta attribution ([8d506c5](https://github.com/omega-pcf/01-hilbert-polya/commit/8d506c5783a13717e2f0a23183bb306c85f1de36))
+
 ## [2.3.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.3...v2.3.4) (2026-04-23)
 
 ### Bug Fixes
