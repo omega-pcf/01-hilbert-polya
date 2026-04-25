@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.3.8](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.7...v2.3.8) (2026-04-25)
+
+### Bug Fixes
+
+* **auth:** correct Luz María affiliation to TTAMAYO ([56fafd4](https://github.com/omega-pcf/01-hilbert-polya/commit/56fafd497e55aff49bdf72d658d9d560077c4ad1))
+
 ## [2.3.7](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.6...v2.3.7) (2026-04-25)
 
 ### Bug Fixes
