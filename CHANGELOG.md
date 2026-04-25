@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.4.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.8...v2.4.0) (2026-04-25)
+
+### Features
+
+* **zenodo:** add structured related identifiers for references with DOIs ([6209390](https://github.com/omega-pcf/01-hilbert-polya/commit/6209390bb3f1a26a317cbea0b579ffd9ab3f3a3e))
+
 ## [2.3.8](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.7...v2.3.8) (2026-04-25)
 
 ### Bug Fixes
