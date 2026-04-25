@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.3.7](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.6...v2.3.7) (2026-04-25)
+
+### Bug Fixes
+
+* **bib:** remove redundant TOC entry for references ([254da62](https://github.com/omega-pcf/01-hilbert-polya/commit/254da62932594cbc47a06d8ff61567cd3bb37537))
+
 ## [2.3.6](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.5...v2.3.6) (2026-04-24)
 
 ### Documentation
