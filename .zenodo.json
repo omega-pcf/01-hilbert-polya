@@ -184,6 +184,306 @@
       "identifier": "https://github.com/omega-pcf/01-hilbert-polya",
       "relation": "isSupplementTo",
       "resource_type": "software"
+    },
+    {
+      "identifier": "10.1007/978-3-662-43012-5_1",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/BF01464225",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/BFb0080769",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.2178/bsl/1058448677",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/s002200000261",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1088/1751-8121/ad4c2d",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1090/S0025-5718-1987-0866115-0",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1088/0264-9381/32/12/124010",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/BF01612081",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/BF02940685",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1063/1.1703773",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1090/conm/290/04746",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.2307/2118559",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/978-1-4684-9884-4",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/978-3-642-61409-5",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/978-3-642-12821-9_2",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/jhep11(2022)143",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1134/S2070046613040055",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/BF02684373",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.4310/ACTA.2024.v233.n1.a2",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/978-1-4757-0576-8",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.2307/3611560",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.5281/zenodo.17100303",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.2140/ant.2011.5.231",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/s00208-010-0608-1",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/978-3-319-32162-2_5",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/s00209-009-0638-0",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.4310/ICCM.2015.v3.n2.a5",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1016/0550-3213(95)00158-O",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1016/0550-3213(95)00621-4",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/s11005-018-1110-z",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/978-3-642-18908-1_23",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1090/S0273-0979-01-00934-X",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.2307/2369948",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1016/S0049-237X(08)71945-1",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.2307/2267705",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.2307/421089",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1002/j.1538-7305.1948.tb01338.x",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1145/800125.804033",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1103/PhysRevD.7.2333",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1137/S0036144598347497",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1103/PhysRevLett.118.130201",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/978-1-4612-0457-2",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1016/0370-2693(81)90743-7",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1088/1126-6708/1998/02/003",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1016/B978-0-12-585001-8.50014-3",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1023/A:1026654312961",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1017/fms.2018.17",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1515/crll.1857.54.115",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1016/j.crma.2014.07.009",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/BF01457962",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.2307/1970147",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1016/S0393-0440(02)00121-3",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1088/0305-4470/34/47/324",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/BF02954618",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/BF02952531",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/BF01079470",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/s002220100174",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1365/s13291-014-0088-4",
+      "relation": "cites",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.5281/zenodo.19492791",
+      "relation": "cites",
+      "resource_type": "publication"
     }
   ]
 }
