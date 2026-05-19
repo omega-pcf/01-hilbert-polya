@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.4.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.4.0...v2.4.1) (2026-05-19)
+
+### Styles
+
+* replace paragraph headings with bold inline text in discussion.tex ([799a83b](https://github.com/omega-pcf/01-hilbert-polya/commit/799a83b2d7264496d2626e480b42324f5e0cb382))
+
+### Documentation
+
+* remove prepared for CNTP mention from README ([e83a33d](https://github.com/omega-pcf/01-hilbert-polya/commit/e83a33d9aa7050639f75fa830a59fa9a7ac8a925))
+
 ## [2.4.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.3.8...v2.4.0) (2026-04-25)
 
 ### Features
