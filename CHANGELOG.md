@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.4.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.4.1...v2.4.2) (2026-07-13)
+
+### Bug Fixes
+
+* **citation:** use CSL id as BibTeX key via useIdAsLabel ([623358e](https://github.com/omega-pcf/01-hilbert-polya/commit/623358e61baf9141462fb5d8fce71dd5f4808a8f))
+* **tex:** add hypersetup for colored hyperlinks ([58f342e](https://github.com/omega-pcf/01-hilbert-polya/commit/58f342e3af1a78531f9ba58186d2c54ffd199fa4))
+* **tex:** add urlcolor=blue to hypersetup ([07d748a](https://github.com/omega-pcf/01-hilbert-polya/commit/07d748a713b850419f63cb5cd5293e0b36209c5b))
+* **tex:** red cross-refs, blue citations (no green) ([23c64d3](https://github.com/omega-pcf/01-hilbert-polya/commit/23c64d36d096483d228d29c6a048222ae5efec81))
+* **tex:** remove explicit hypersetup, amsart handles blue links natively ([4e36868](https://github.com/omega-pcf/01-hilbert-polya/commit/4e368680f3b5b55fa32d8659d8676279859a6183))
+
 ## [2.4.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.4.0...v2.4.1) (2026-05-19)
 
 ### Styles

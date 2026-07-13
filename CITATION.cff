@@ -3,8 +3,8 @@ message: If you use this software, please cite it using these metadata.
 title: "The Hilbert-Pólya Operator and the Primitive Structure of the Complex
   Plane: Between 𝔽₁, String Theory, and Ancient Geometry"
 type: software
-version: 2.4.1
-date-released: 2026-05-19
+version: 2.4.2
+date-released: 2026-07-13
 authors:
   - family-names: González García
     given-names: Jorge Armando
