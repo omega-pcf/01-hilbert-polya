@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.4.3](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.4.2...v2.4.3) (2026-07-29)
+
+### Bug Fixes
+
+* **build:** clean stale LaTeX artifacts and tolerate pdflatex non-zero exit ([4e15302](https://github.com/omega-pcf/01-hilbert-polya/commit/4e153020b68d5d90499c43f08a8f18d23bfaf7a8))
+* **citation:** fix doubled 'von' in von Neumann author name ([0c37c54](https://github.com/omega-pcf/01-hilbert-polya/commit/0c37c54c1bce403dc76ec47debd9acc63251e238))
+* **citation:** normalize institution.country to ISO codes ([2fe1469](https://github.com/omega-pcf/01-hilbert-polya/commit/2fe14695cd120b3b6aafdb28bfe2ac5abf62a419))
+* **citation:** regenerate build artifacts after von Neumann fix ([8649bda](https://github.com/omega-pcf/01-hilbert-polya/commit/8649bdaf13fcd0d6ec1dfdde5fd65be2f1da8e54))
+* **citation:** repair CSL→Zenodo pipeline bugs ([d4ada92](https://github.com/omega-pcf/01-hilbert-polya/commit/d4ada9269cdb530e7015a3332096d5db05b819c2))
+* **citations:** correct 7 metadata errors in 01-hilbert-polya ([a285d78](https://github.com/omega-pcf/01-hilbert-polya/commit/a285d788b0c9419fef665c82b740d3ca61d42967))
+
+### Styles
+
+* use muted red for linkcolor across all repos ([70bc590](https://github.com/omega-pcf/01-hilbert-polya/commit/70bc590cb13d51ad109fcdf043bd5541c4178145))
+
 ## [2.4.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.4.1...v2.4.2) (2026-07-13)
 
 ### Bug Fixes
