@@ -1,3424 +1,3424 @@
 [
-    {
-        "author": [
-            {
-                "given": "Carl Friedrich",
-                "family": "Gauss"
-            }
-        ],
-        "type": "book",
-        "id": "gauss31",
-        "citation-key": "gauss31",
-        "issued": {
-            "date-parts": [
-                [
-                    1831
-                ]
-            ]
-        },
-        "note": "Establishes complex plane as geometric representation of complex numbers",
-        "publisher": "Commentationes Societatis Regiae Scientiarum Gottingensis",
-        "title": "Theoria residuorum biquadraticorum, Commentatio secunda"
-    },
-    {
-        "publisher-place": "Berlin, Heidelberg",
-        "abstract": "Unter den eindeutigen analytischen Functionen einer Veränderlichen zeichnen sich die rationalen durch eine charakteristische Eigenthümlichkeit aus, die zunächst festgestellt werden soll.",
-        "author": [
-            {
-                "given": "K.",
-                "family": "Weierstrass"
-            }
-        ],
-        "container-title": "Functionenlehre",
-        "DOI": "10.1007/978-3-662-43012-5_1",
-        "type": "book",
-        "id": "weierstrass76",
-        "citation-key": "weierstrass76",
-        "ISBN": "978-3-662-43012-5",
-        "issued": {
-            "date-parts": [
-                [
-                    1876
-                ]
-            ]
-        },
-        "page": "1-52",
-        "publisher": "Springer Berlin Heidelberg",
-        "title": "Zur Theorie der eindeutigen analytischen Functionen",
-        "URL": "https://doi.org/10.1007/978-3-662-43012-5_1"
-    },
-    {
-        "author": [
-            {
-                "given": "Jean Robert",
-                "family": "Argand"
-            }
-        ],
-        "type": "book",
-        "id": "argand1874essai",
-        "citation-key": "argand1874essai",
-        "issued": {
-            "date-parts": [
-                [
-                    1806
-                ]
-            ]
-        },
-        "note": "Reprinted 1874",
-        "publisher": "Gauthier-Villars",
-        "title": "Essai sur une manière de représenter les quantités imaginaires dans les constructions géométriques"
-    },
-    {
-        "publisher-place": "Braunschweig",
-        "author": [
-            {
-                "given": "Peter Gustav Lejeune",
-                "family": "Dirichlet"
-            }
-        ],
-        "edition": "4th",
-        "editor": [
-            {
-                "given": "Richard",
-                "family": "Dedekind"
-            }
-        ],
-        "type": "book",
-        "id": "dirichlet1894",
-        "citation-key": "dirichlet1894",
-        "issued": {
-            "date-parts": [
-                [
-                    1894
-                ]
-            ]
-        },
-        "language": "german",
-        "note": "Final edition containing the complete theory of ideals in Supplement XI",
-        "publisher": "Friedrich Vieweg und Sohn",
-        "title": "Vorlesungen über Zahlentheorie"
-    },
-    {
-        "container-title": "Mathematische Annalen",
-        "author": [
-            {
-                "given": "Emmy",
-                "family": "Noether"
-            }
-        ],
-        "DOI": "10.1007/BF01464225",
-        "type": "article-journal",
-        "id": "noether21",
-        "citation-key": "noether21",
-        "issued": {
-            "date-parts": [
-                [
-                    1921
-                ]
-            ]
-        },
-        "note": "Formalizes abstract module theory in modern algebra",
-        "page": "24-66",
-        "title": "Idealtheorie in Ringbereichen",
-        "URL": "https://doi.org/10.1007/BF01464225",
-        "volume": "83"
-    },
-    {
-        "publisher-place": "Berlin, Heidelberg",
-        "author": [
-            {
-                "given": "F. William",
-                "family": "Lawvere"
-            }
-        ],
-        "container-title": "Category Theory, Homology Theory and their Applications II",
-        "type": "paper-conference",
-        "id": "lawvere69",
-        "citation-key": "lawvere69",
-        "issued": {
-            "date-parts": [
-                [
-                    1969
-                ]
-            ]
-        },
-        "page": "134-145",
-        "publisher": "Springer Berlin Heidelberg",
-        "ISBN": "978-3-540-36101-5",
-        "DOI": "10.1007/BFb0080769",
-        "title": "Diagonal arguments and cartesian closed categories",
-        "URL": "https://doi.org/10.1007/BFb0080769"
-    },
-    {
-        "container-title": "Bulletin of Symbolic Logic",
-        "author": [
-            {
-                "given": "Noson S.",
-                "family": "Yanofsky"
-            }
-        ],
-        "DOI": "10.2178/bsl/1058448677",
-        "type": "article-journal",
-        "id": "yanofsky03",
-        "citation-key": "yanofsky03",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    2003
-                ]
-            ]
-        },
-        "page": "362-386",
-        "title": "A Universal Approach to Self-Referential Paradoxes, Incompleteness and Fixed Points",
-        "volume": "9",
-        "URL": "https://doi.org/10.2178/bsl/1058448677"
-    },
-    {
-        "container-title": "Communications in Mathematical Physics",
-        "author": [
-            {
-                "given": "J. P.",
-                "family": "Keating"
-            },
-            {
-                "given": "N. C.",
-                "family": "Snaith"
-            }
-        ],
-        "DOI": "10.1007/s002200000261",
-        "type": "article-journal",
-        "id": "keating00",
-        "citation-key": "keating00",
-        "issued": {
-            "date-parts": [
-                [
-                    2000
-                ]
-            ]
-        },
-        "page": "57-89",
-        "title": "Random matrix theory and ζ(1/2+it)",
-        "volume": "214",
-        "URL": "https://doi.org/10.1007/s002200000261"
-    },
-    {
-        "author": [
-            {
-                "given": "Enderalp",
-                "family": "Yakaboylu"
-            }
-        ],
-        "type": "document",
-        "id": "yakaboylu22",
-        "citation-key": "yakaboylu22",
-        "issued": {
-            "date-parts": [
-                [
-                    2022
-                ]
-            ]
-        },
-        "title": "Formally Self-Adjoint Hamiltonian for the Hilbert–Pólya Conjecture",
-        "URL": "https://arxiv.org/abs/2211.01899"
-    },
-    {
-        "container-title": "Journal of Physics A: Mathematical and Theoretical",
-        "abstract": "We introduce a Hamiltonian to address the Hilbert–Pólya conjecture. The eigenfunctions of the introduced Hamiltonian, subject to the Dirichlet boundary conditions on the positive half-line, vanish at the origin by the nontrivial zeros of the Riemann zeta function. Consequently, the eigenvalues are determined by these nontrivial Riemann zeros. If the Riemann hypothesis (RH) is true, the eigenvalues become real and represent the imaginary parts of the nontrivial zeros. Conversely, if the Hamiltonian is self-adjoint, or more generally, admits only real eigenvalues, then the RH follows. In our attempt to demonstrate the latter, we establish the existence of a similarity transformation of the introduced Hamiltonian that is self-adjoint on the domain specified by an appropriate boundary condition, which is satisfied by the eigenfunctions through the vanishing of the Riemann zeta function. Our result can be extended to a broader class of functions whose zeros lie on the critical line.",
-        "author": [
-            {
-                "given": "Enderalp",
-                "family": "Yakaboylu"
-            }
-        ],
-        "DOI": "10.1088/1751-8121/ad4c2d",
-        "type": "article-journal",
-        "id": "yakaboylu24",
-        "citation-key": "yakaboylu24",
-        "issue": "23",
-        "issued": {
-            "date-parts": [
-                [
-                    2024,
-                    6
-                ]
-            ]
-        },
-        "page": "235204",
-        "publisher": "IOP Publishing",
-        "title": "Hamiltonian for the Hilbert–Pólya conjecture",
-        "URL": "https://doi.org/10.1088/1751-8121/ad4c2d",
-        "volume": "57"
-    },
-    {
-        "container-title": "Mathematics of Computation",
-        "author": [
-            {
-                "given": "Andrew M.",
-                "family": "Odlyzko"
-            }
-        ],
-        "DOI": "10.1090/S0025-5718-1987-0866115-0",
-        "type": "article-journal",
-        "id": "odlyzko87",
-        "citation-key": "odlyzko87",
-        "issue": "177",
-        "issued": {
-            "date-parts": [
-                [
-                    1987
-                ]
-            ]
-        },
-        "note": "Massive numerical verification of RH zeros up to 10²⁰",
-        "page": "273-308",
-        "title": "On the distribution of spacings between zeros of the zeta function",
-        "volume": "48",
-        "URL": "https://doi.org/10.1090/S0025-5718-1987-0866115-0"
-    },
-    {
-        "publisher-place": "Oxford",
-        "author": [
-            {
-                "given": "Edward C.",
-                "family": "Titchmarsh"
-            }
-        ],
-        "edition": "2nd",
-        "type": "book",
-        "id": "titchmarsh86",
-        "citation-key": "titchmarsh86",
-        "issued": {
-            "date-parts": [
-                [
-                    1986
-                ]
-            ]
-        },
-        "note": "Classical reference; Euler-Maclaurin method for zeta computation",
-        "publisher": "Oxford University Press",
-        "title": "The Theory of the Riemann Zeta-Function"
-    },
-    {
-        "container-title": "Proceedings of the London Mathematical Society",
-        "author": [
-            {
-                "given": "R Sherman",
-                "family": "Lehman"
-            }
-        ],
-        "type": "article-journal",
-        "id": "lehman1970distribution",
-        "citation-key": "lehman1970distribution",
-        "issue": "2",
-        "issued": {
-            "date-parts": [
-                [
-                    1970
-                ]
-            ]
-        },
-        "page": "303-320",
-        "publisher": "Wiley Online Library",
-        "title": "On the Distribution of Zeros of the Riemann Zeta-Function",
-        "volume": "3"
-    },
-    {
-        "container-title": "Classical and Quantum Gravity",
-        "author": [
-            {
-                "given": "Veronika E",
-                "family": "Hubeny"
-            }
-        ],
-        "DOI": "10.1088/0264-9381/32/12/124010",
-        "type": "article-journal",
-        "id": "hubeny15",
-        "citation-key": "hubeny15",
-        "ISSN": "1361-6382",
-        "issue": "12",
-        "issued": {
-            "date-parts": [
-                [
-                    2015,
-                    6
-                ]
-            ]
-        },
-        "page": "124010",
-        "publisher": "IOP Publishing",
-        "title": "The AdS/CFT correspondence",
-        "URL": "https://doi.org/10.1088/0264-9381/32/12/124010",
-        "volume": "32"
-    },
-    {
-        "publisher-place": "Providence, USA",
-        "author": [
-            {
-                "given": "Hugh L.",
-                "family": "Montgomery"
-            }
-        ],
-        "container-title": "Proceedings of Symposia in Pure Mathematics",
-        "type": "paper-conference",
-        "id": "montgomery73",
-        "citation-key": "montgomery73",
-        "issued": {
-            "date-parts": [
-                [
-                    1973
-                ]
-            ]
-        },
-        "page": "181-193",
-        "publisher": "American Mathematical Society",
-        "title": "The pair correlation of zeros of the zeta function",
-        "volume": "24"
-    },
-    {
-        "container-title": "Mathematische Zeitschrift",
-        "author": [
-            {
-                "given": "Erich",
-                "family": "Hecke"
-            }
-        ],
-        "DOI": "10.1007/BF01612081",
-        "type": "article-journal",
-        "id": "hecke20",
-        "citation-key": "hecke20",
-        "issued": {
-            "date-parts": [
-                [
-                    1920
-                ]
-            ]
-        },
-        "page": "11-51",
-        "publisher": "Springer",
-        "title": "Eine neue Art von Zetafunktionen und ihre Beziehungen zur Verteilung der Primzahlen. (Zweite Mitteilung.)",
-        "volume": "6",
-        "URL": "https://doi.org/10.1007/BF01612081"
-    },
-    {
-        "container-title": "Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg",
-        "author": [
-            {
-                "given": "Helmut",
-                "family": "Hasse"
-            }
-        ],
-        "DOI": "10.1007/BF02940685",
-        "type": "article-journal",
-        "id": "hasse34",
-        "citation-key": "hasse34",
-        "issued": {
-            "date-parts": [
-                [
-                    1934
-                ]
-            ]
-        },
-        "page": "325-348",
-        "title": "Abstrakte Begründung der komplexen Multiplikation und Riemannsche Vermutung in Funktionenkörpern",
-        "volume": "10",
-        "URL": "https://doi.org/10.1007/BF02940685"
-    },
-    {
-        "container-title": "Journal of Mathematical Physics",
-        "author": [
-            {
-                "given": "Freeman J.",
-                "family": "Dyson"
-            }
-        ],
-        "DOI": "10.1063/1.1703773",
-        "type": "article-journal",
-        "id": "dyson62",
-        "citation-key": "dyson62",
-        "issued": {
-            "date-parts": [
-                [
-                    1962
-                ]
-            ]
-        },
-        "page": "140-156",
-        "title": "Statistical Theory of the Energy Levels of Complex Systems. I",
-        "volume": "3",
-        "URL": "https://doi.org/10.1063/1.1703773"
-    },
-    {
-        "publisher-place": "Providence, USA",
-        "author": [
-            {
-                "given": "Andrew M.",
-                "family": "Odlyzko"
-            }
-        ],
-        "container-title": "Dynamical, Spectral, and Arithmetic Zeta Functions",
-        "collection-title": "Contemporary Mathematics",
-        "DOI": "10.1090/conm/290/04746",
-        "type": "chapter",
-        "id": "odlyzko01",
-        "citation-key": "odlyzko01",
-        "issued": {
-            "date-parts": [
-                [
-                    2001
-                ]
-            ]
-        },
-        "page": "139-144",
-        "publisher": "American Mathematical Society",
-        "title": "The 10²²-nd zero of the Riemann zeta function",
-        "volume": "290",
-        "URL": "https://doi.org/10.1090/conm/290/04746"
-    },
-    {
-        "container-title": "Annals of Mathematics",
-        "author": [
-            {
-                "given": "Andrew",
-                "family": "Wiles"
-            }
-        ],
-        "DOI": "10.2307/2118559",
-        "type": "article-journal",
-        "id": "wiles95",
-        "citation-key": "wiles95",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    1995
-                ]
-            ]
-        },
-        "page": "443-551",
-        "title": "Modular elliptic curves and Fermat's Last Theorem",
-        "volume": "141",
-        "URL": "https://doi.org/10.2307/2118559"
-    },
-    {
-        "author": [
-            {
-                "given": "Jean-Pierre",
-                "family": "Serre"
-            }
-        ],
-        "collection-title": "Graduate Texts in Mathematics",
-        "DOI": "10.1007/978-1-4684-9884-4",
-        "type": "book",
-        "id": "serre73",
-        "citation-key": "serre73",
-        "issued": {
-            "date-parts": [
-                [
-                    1973
-                ]
-            ]
-        },
-        "note": "Original French edition: <i>Cours d'arithmétique</i> 1970.",
-        "publisher": "Springer New York, NY",
-        "title": "A Course in Arithmetic",
-        "URL": "https://doi.org/10.1007/978-1-4684-9884-4",
-        "volume": "7"
-    },
-    {
-        "container-title": "Journal für die reine und angewandte Mathematik",
-        "author": [
-            {
-                "given": "G.",
-                "family": "Lejeune Dirichlet"
-            }
-        ],
-        "type": "article-journal",
-        "id": "dirichlet39",
-        "citation-key": "dirichlet39",
-        "issued": {
-            "date-parts": [
-                [
-                    1839
-                ]
-            ]
-        },
-        "language": "fre",
-        "page": "324-369",
-        "title": "Recherches sur diverses applications de l'Analyse infinitesimale à la théorie des Nombres.",
-        "URL": "http://eudml.org/doc/147076",
-        "volume": "19"
-    },
-    {
-        "author": [
-            {
-                "given": "Emil",
-                "family": "Artin"
-            }
-        ],
-        "container-title": "Abhandlungen aus dem mathematischen Seminar der Universität Hamburg",
-        "type": "paper-conference",
-        "id": "artin1924neue",
-        "citation-key": "artin1924neue",
-        "issue": "1",
-        "issued": {
-            "date-parts": [
-                [
-                    1924
-                ]
-            ]
-        },
-        "page": "89-108",
-        "publisher": "Springer",
-        "title": "Über eine neue Art von L-Reihen",
-        "volume": "3"
-    },
-    {
-        "author": [
-            {
-                "given": "James",
-                "family": "Borger"
-            }
-        ],
-        "container-title": "arXiv preprint arXiv:0906.3146 [math.NT]",
-        "type": "article-journal",
-        "id": "borger09",
-        "citation-key": "borger09",
-        "issued": {
-            "date-parts": [
-                [
-                    2009
-                ]
-            ]
-        },
-        "title": "Λ-rings and the field with one element",
-        "URL": "https://arxiv.org/abs/0906.3146"
-    },
-    {
-        "author": [
-            {
-                "given": "André",
-                "family": "Weil"
-            }
-        ],
-        "type": "document",
-        "id": "weil_letter40",
-        "citation-key": "weil_letter40",
-        "issued": {
-            "date-parts": [
-                [
-                    1940
-                ]
-            ]
-        },
-        "note": "In: Collected Papers, Vol. I, pp. 244–255.",
-        "title": "Une lettre et un extrait de lettre à Simone Weil"
-    },
-    {
-        "container-title": "CR Acad. Sci. Paris",
-        "author": [
-            {
-                "given": "André",
-                "family": "Weil"
-            }
-        ],
-        "type": "article-journal",
-        "id": "weil40",
-        "citation-key": "weil40",
-        "issue": "592-594",
-        "issued": {
-            "date-parts": [
-                [
-                    1940
-                ]
-            ]
-        },
-        "page": "149",
-        "title": "Sur les fonctions algébriques à corps de constantes fini",
-        "volume": "210"
-    },
-    {
-        "author": [
-            {
-                "given": "Robert P.",
-                "family": "Langlands"
-            }
-        ],
-        "container-title": "Emil Artin and Beyond: Class Field Theory and L-functions",
-        "editor": [
-            {
-                "given": "B.",
-                "family": "Della Pietra"
-            }
-        ],
-        "type": "chapter",
-        "id": "Langlands2015Letter",
-        "citation-key": "Langlands2015Letter",
-        "issued": {
-            "date-parts": [
-                [
-                    2015
-                ]
-            ]
-        },
-        "note": "Written in 1967",
-        "page": "165-173",
-        "publisher": "European Mathematical Society",
-        "title": "Letter to André Weil"
-    },
-    {
-        "publisher-place": "New York, USA",
-        "author": [
-            {
-                "given": "Laurence E",
-                "family": "Sigler"
-            }
-        ],
-        "type": "book",
-        "id": "sigler2002fibonacci",
-        "citation-key": "sigler2002fibonacci",
-        "ISBN": "978-0-387-40737-1",
-        "issued": {
-            "date-parts": [
-                [
-                    2002
-                ]
-            ]
-        },
-        "publisher": "Springer Science & Business Media",
-        "title": "Fibonacci's Liber Abaci: A Translation into Modern English of Leonardo Pisano's Book of Calculation"
-    },
-    {
-        "author": [
-            {
-                "given": "Leon Battista",
-                "family": "Alberti"
-            }
-        ],
-        "type": "book",
-        "id": "alberti",
-        "citation-key": "alberti",
-        "issued": {
-            "date-parts": [
-                [
-                    1435
-                ]
-            ]
-        },
-        "note": "English translation by C. Grayson, Penguin, 1991.",
-        "title": "De pictura"
-    },
-    {
-        "author": [
-            {
-                "given": "Gaspard",
-                "family": "Monge"
-            }
-        ],
-        "type": "book",
-        "id": "monge1811geometrie",
-        "citation-key": "monge1811geometrie",
-        "issued": {
-            "date-parts": [
-                [
-                    1811
-                ]
-            ]
-        },
-        "publisher": "J. Klostermann fils",
-        "title": "Géométrie descriptive"
-    },
-    {
-        "author": [
-            {
-                "given": "William",
-                "family": "Farish"
-            }
-        ],
-        "type": "book",
-        "id": "farish22",
-        "citation-key": "farish22",
-        "issued": {
-            "date-parts": [
-                [
-                    1822
-                ]
-            ]
-        },
-        "publisher": "Cambridge University Press",
-        "title": "On isometrical perspective"
-    },
-    {
-        "author": [
-            {
-                "given": "Luca",
-                "family": "Pacioli"
-            }
-        ],
-        "type": "book",
-        "id": "pacioli1509",
-        "citation-key": "pacioli1509",
-        "issued": {
-            "date-parts": [
-                [
-                    1509
-                ]
-            ]
-        },
-        "title": "De Divina Proportione"
-    },
-    {
-        "author": [
-            {
-                "given": "Leonhard",
-                "family": "Euler"
-            }
-        ],
-        "type": "book",
-        "id": "euler55",
-        "citation-key": "euler55",
-        "issued": {
-            "date-parts": [
-                [
-                    1755
-                ]
-            ]
-        },
-        "title": "Institutiones Calculi Differentialis"
-    },
-    {
-        "author": [
-            {
-                "given": "Benoit B.",
-                "family": "Mandelbrot"
-            }
-        ],
-        "type": "book",
-        "id": "mandelbrot82",
-        "citation-key": "mandelbrot82",
-        "issued": {
-            "date-parts": [
-                [
-                    1982
-                ]
-            ]
-        },
-        "publisher": "W. H. Freeman",
-        "title": "The Fractal Geometry of Nature"
-    },
-    {
-        "container-title": "Comptes Rendus de l'Académie des Sciences",
-        "author": [
-            {
-                "given": "Wacław",
-                "family": "Sierpiński"
-            }
-        ],
-        "type": "article-journal",
-        "id": "sierpinski16",
-        "citation-key": "sierpinski16",
-        "issued": {
-            "date-parts": [
-                [
-                    1916
-                ]
-            ]
-        },
-        "page": "302-305",
-        "title": "Sur une courbe dont tout point est un point de ramification",
-        "URL": "https://cir.nii.ac.jp/crid/1573950399016422528",
-        "volume": "160"
-    },
-    {
-        "container-title": "Indiana University Mathematics Journal",
-        "accessed": {
-            "date-parts": [
-                [
-                    2026,
-                    4,
-                    6
-                ]
-            ]
-        },
-        "author": [
-            {
-                "given": "John E.",
-                "family": "Hutchinson"
-            }
-        ],
-        "type": "article-journal",
-        "id": "hutchinson81",
-        "citation-key": "hutchinson81",
-        "ISSN": "00222518, 19435258",
-        "issue": "5",
-        "issued": {
-            "date-parts": [
-                [
-                    1981
-                ]
-            ]
-        },
-        "page": "713-747",
-        "publisher": "Indiana University Mathematics Department",
-        "title": "Fractals and Self Similarity",
-        "URL": "http://www.jstor.org/stable/24893080",
-        "volume": "30"
-    },
-    {
-        "author": [
-            {
-                "given": "John",
-                "family": "von Neumann",
-                "non-dropping-particle": "von"
-            }
-        ],
-        "collection-title": "Grundlehren der Mathematischen Wissenschaften",
-        "DOI": "10.1007/978-3-642-61409-5",
-        "type": "book",
-        "id": "vonneumann32",
-        "citation-key": "vonneumann32",
-        "issued": {
-            "date-parts": [
-                [
-                    1932
-                ]
-            ]
-        },
-        "note": "Reprint: Springer Berlin, Heidelberg, 1996.",
-        "publisher": "Springer Berlin, Heidelberg",
-        "title": "Mathematische Grundlagen der Quantenmechanik",
-        "URL": "https://doi.org/10.1007/978-3-642-61409-5",
-        "volume": "38"
-    },
-    {
-        "author": [
-            {
-                "given": "J.",
-                "family": "Baez"
-            },
-            {
-                "given": "M.",
-                "family": "Stay"
-            }
-        ],
-        "container-title": "New Structures for Physics",
-        "DOI": "10.1007/978-3-642-12821-9_2",
-        "type": "chapter",
-        "id": "baez09",
-        "citation-key": "baez09",
-        "ISBN": "9783642128219",
-        "ISSN": "1616-6361",
-        "issued": {
-            "date-parts": [
-                [
-                    2011
-                ]
-            ]
-        },
-        "page": "95-172",
-        "publisher": "Springer Berlin Heidelberg",
-        "title": "Physics, Topology, Logic and Computation: A Rosetta Stone",
-        "URL": "https://doi.org/10.1007/978-3-642-12821-9_2"
-    },
-    {
-        "container-title": "Journal of High Energy Physics",
-        "author": [
-            {
-                "given": "Nathan",
-                "family": "Benjamin"
-            },
-            {
-                "given": "Cyuan-Han",
-                "family": "Chang"
-            }
-        ],
-        "DOI": "10.1007/jhep11(2022)143",
-        "type": "article-journal",
-        "id": "benjamin22",
-        "citation-key": "benjamin22",
-        "ISSN": "1029-8479",
-        "issue": "11",
-        "issued": {
-            "date-parts": [
-                [
-                    2022,
-                    11
-                ]
-            ]
-        },
-        "publisher": "Springer Science",
-        "title": "Scalar modular bootstrap and zeros of the Riemann zeta function",
-        "URL": "https://doi.org/10.1007/jhep11(2022)143",
-        "volume": "2022"
-    },
-    {
-        "container-title": "P-Adic Numbers, Ultrametric Analysis, and Applications",
-        "author": [
-            {
-                "given": "Yuri I.",
-                "family": "Manin"
-            }
-        ],
-        "DOI": "10.1134/S2070046613040055",
-        "type": "article-journal",
-        "id": "manin13",
-        "citation-key": "manin13",
-        "issue": "4",
-        "issued": {
-            "date-parts": [
-                [
-                    2013
-                ]
-            ]
-        },
-        "page": "313-325",
-        "title": "Numbers as functions",
-        "volume": "5",
-        "ISSN": "2070-0474",
-        "URL": "https://doi.org/10.1134/S2070046613040055",
-        "abstract": "In this survey I discuss A. Buium’s theory of “differential equations in the p-adic direction” ([8]) and its interrelations with “geometry over the field 𝔽₁”, on the background of various approaches to p-adic models in theoretical physics (cf. [1, 30])."
-    },
-    {
-        "author": [
-            {
-                "given": "Alexandru",
-                "family": "Buium"
-            }
-        ],
-        "type": "book",
-        "id": "buium95",
-        "citation-key": "buium95",
-        "issued": {
-            "date-parts": [
-                [
-                    1995
-                ]
-            ]
-        },
-        "publisher": "Hermann",
-        "title": "Differential Algebra and Diophantine Geometry"
-    },
-    {
-        "container-title": "Publications Mathématiques de l'IHÉS",
-        "author": [
-            {
-                "given": "Pierre",
-                "family": "Deligne"
-            }
-        ],
-        "DOI": "10.1007/BF02684373",
-        "type": "article-journal",
-        "id": "deligne74",
-        "citation-key": "deligne74",
-        "issued": {
-            "date-parts": [
-                [
-                    1974
-                ]
-            ]
-        },
-        "page": "273-307",
-        "title": "La Conjecture de Weil: I",
-        "volume": "43",
-        "URL": "https://doi.org/10.1007/BF02684373"
-    },
-    {
-        "container-title": "Acta Mathematica",
-        "author": [
-            {
-                "given": "Colin",
-                "family": "Guillarmou"
-            },
-            {
-                "given": "Antti",
-                "family": "Kupiainen"
-            },
-            {
-                "given": "Rémi",
-                "family": "Rhodes"
-            },
-            {
-                "given": "Vincent",
-                "family": "Vargas"
-            }
-        ],
-        "type": "article-journal",
-        "id": "guillarmou2024conformal",
-        "citation-key": "guillarmou2024conformal",
-        "issue": "1",
-        "issued": {
-            "date-parts": [
-                [
-                    2024
-                ]
-            ]
-        },
-        "page": "33-194",
-        "publisher": "International Press of Boston, Inc. Somerville, MA 02143, USA",
-        "title": "Conformal bootstrap in Liouville theory",
-        "volume": "233",
-        "DOI": "10.4310/ACTA.2024.v233.n1.a2",
-        "URL": "https://doi.org/10.4310/ACTA.2024.v233.n1.a2"
-    },
-    {
-        "author": [
-            {
-                "given": "Maxim",
-                "family": "Kontsevich"
-            },
-            {
-                "given": "Don",
-                "family": "Zagier"
-            }
-        ],
-        "container-title": "Mathematics unlimited—2001 and beyond",
-        "type": "chapter",
-        "id": "kontsevich01",
-        "citation-key": "kontsevich01",
-        "issued": {
-            "date-parts": [
-                [
-                    2001
-                ]
-            ]
-        },
-        "page": "771-808",
-        "publisher": "Springer",
-        "title": "Periods"
-    },
-    {
-        "container-title": "Uspekhi Matematicheskikh Nauk",
-        "author": [
-            {
-                "given": "Nikolai Mikhailovich",
-                "family": "Korobov"
-            }
-        ],
-        "type": "article-journal",
-        "id": "korobov58",
-        "citation-key": "korobov58",
-        "issue": "4",
-        "issued": {
-            "date-parts": [
-                [
-                    1958
-                ]
-            ]
-        },
-        "page": "185-192",
-        "publisher": "Russian Academy of Sciences, Steklov Mathematical Institute of Russian …",
-        "title": "Estimates of trigonometric sums and their applications",
-        "volume": "13"
-    },
-    {
-        "publisher-place": "Moscow–Leningrad",
-        "container-title": "Trudy Matematicheskogo Instituta imeni V. A. Steklova",
-        "author": [
-            {
-                "given": "I. M.",
-                "family": "Vinogradov"
-            }
-        ],
-        "type": "article-journal",
-        "id": "vinogradov47",
-        "citation-key": "vinogradov47",
-        "issued": {
-            "date-parts": [
-                [
-                    1947
-                ]
-            ]
-        },
-        "page": "3-109",
-        "publisher": "Acad. Sci. USSR",
-        "title": "The method of trigonometrical sums in the theory of numbers",
-        "volume": "23"
-    },
-    {
-        "author": [
-            {
-                "given": "Peter",
-                "family": "Borwein"
-            },
-            {
-                "given": "Stephen",
-                "family": "Choi"
-            },
-            {
-                "given": "Brendan",
-                "family": "Rooney"
-            },
-            {
-                "given": "Andrea",
-                "family": "Weirathmueller"
-            }
-        ],
-        "type": "book",
-        "id": "borwein08",
-        "citation-key": "borwein08",
-        "issued": {
-            "date-parts": [
-                [
-                    2008
-                ]
-            ]
-        },
-        "publisher": "Springer",
-        "title": "The Riemann hypothesis: a resource for the afficionado and virtuoso alike"
-    },
-    {
-        "container-title": "Annals of Mathematics",
-        "author": [
-            {
-                "given": "Max",
-                "family": "Zorn"
-            }
-        ],
-        "type": "article-journal",
-        "id": "zorn41",
-        "citation-key": "zorn41",
-        "ISSN": "0003486X, 19398980",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    1941
-                ]
-            ]
-        },
-        "page": "676-686",
-        "publisher": "[Annals of Mathematics, Trustees of Princeton University on Behalf of the Annals of Mathematics, Mathematics Department, Princeton University]",
-        "title": "Alternative Rings and Related Questions I: Existence of the Radical",
-        "URL": "http://www.jstor.org/stable/1969256",
-        "volume": "42"
-    },
-    {
-        "author": [
-            {
-                "given": "Jacques",
-                "family": "Dixmier"
-            }
-        ],
-        "type": "book",
-        "id": "dixmier81",
-        "citation-key": "dixmier81",
-        "issued": {
-            "date-parts": [
-                [
-                    1981
-                ]
-            ]
-        },
-        "publisher": "North-Holland",
-        "title": "von Neumann Algebras"
-    },
-    {
-        "author": [
-            {
-                "family": "Arveson",
-                "given": "William"
-            }
-        ],
-        "type": "book",
-        "id": "arveson02",
-        "citation-key": "arveson02",
-        "issued": {
-            "date-parts": [
-                [
-                    2002
-                ]
-            ]
-        },
-        "publisher": "Springer",
-        "title": "A short course on spectral theory",
-        "volume": "209"
-    },
-    {
-        "author": [
-            {
-                "given": "R.",
-                "family": "Shankar"
-            }
-        ],
-        "DOI": "10.1007/978-1-4757-0576-8",
-        "edition": "2nd",
-        "type": "book",
-        "id": "shankar94",
-        "citation-key": "shankar94",
-        "issued": {
-            "date-parts": [
-                [
-                    1994
-                ]
-            ]
-        },
-        "publisher": "Springer New York, NY",
-        "title": "Principles of Quantum Mechanics",
-        "URL": "https://doi.org/10.1007/978-1-4757-0576-8"
-    },
-    {
-        "author": [
-            {
-                "given": "Paul Richard",
-                "family": "Halmos"
-            }
-        ],
-        "collection-number": "2",
-        "type": "book",
-        "id": "halmos58",
-        "citation-key": "halmos58",
-        "issued": {
-            "date-parts": [
-                [
-                    1958
-                ]
-            ]
-        },
-        "publisher": "Springer",
-        "title": "Finite-dimensional vector spaces",
-        "volume": "11"
-    },
-    {
-        "author": [
-            {
-                "given": "Frigyes",
-                "family": "Riesz"
-            },
-            {
-                "given": "Béla",
-                "family": "Sz.-Nagy"
-            }
-        ],
-        "collection-number": "335",
-        "type": "book",
-        "id": "riesz55",
-        "citation-key": "riesz55",
-        "issued": {
-            "date-parts": [
-                [
-                    1955
-                ]
-            ]
-        },
-        "publisher": "Frederick Ungar",
-        "title": "Functional Analysis",
-        "volume": "1",
-        "URL": "https://doi.org/10.2307/3611560",
-        "publisher-place": "New York"
-    },
-    {
-        "author": [
-            {
-                "given": "Javier",
-                "family": "Grisales Herrera"
-            }
-        ],
-        "publisher": "University of Tolima, Colombia",
-        "DOI": "10.5281/zenodo.17100303",
-        "type": "report",
-        "id": "grisales25",
-        "citation-key": "grisales25",
-        "issued": {
-            "date-parts": [
-                [
-                    2025,
-                    9
-                ]
-            ]
-        },
-        "title": "Golden Prime Symmetry Theory",
-        "URL": "https://doi.org/10.5281/zenodo.17100303"
-    },
-    {
-        "container-title": "Algebra & Number Theory",
-        "author": [
-            {
-                "given": "James",
-                "family": "Borger"
-            }
-        ],
-        "DOI": "10.2140/ant.2011.5.231",
-        "type": "article-journal",
-        "id": "borger11",
-        "citation-key": "borger11",
-        "issue": "2",
-        "issued": {
-            "date-parts": [
-                [
-                    2011
-                ]
-            ]
-        },
-        "page": "231-285",
-        "publisher": "Mathematical Sciences Publishers",
-        "title": "The basic geometry of Witt vectors, I: The affine case",
-        "volume": "5",
-        "URL": "https://doi.org/10.2140/ant.2011.5.231",
-        "note": "arXiv:0801.1691 [math.AG]"
-    },
-    {
-        "container-title": "Mathematische Annalen",
-        "author": [
-            {
-                "given": "James",
-                "family": "Borger"
-            }
-        ],
-        "type": "article-journal",
-        "id": "borger11b",
-        "citation-key": "borger11b",
-        "issue": "4",
-        "issued": {
-            "date-parts": [
-                [
-                    2011,
-                    12
-                ]
-            ]
-        },
-        "page": "877-933",
-        "publisher": "Springer",
-        "title": "The basic geometry of Witt vectors. II: Spaces",
-        "volume": "351",
-        "DOI": "10.1007/s00208-010-0608-1",
-        "ISSN": "1432-1807",
-        "URL": "https://doi.org/10.1007/s00208-010-0608-1",
-        "abstract": "This is an account of the algebraic geometry of Witt vectors and arithmetic jet spaces. The usual, “p-typical” Witt vectors of p-adic schemes of finite type are already reasonably well understood. The main point here is to generalize this theory in two ways. We allow not just p-typical Witt vectors but those taken with respect to any set of primes in any ring of integers in any global field, for example. This includes the “big” Witt vectors. We also allow not just p-adic schemes of finite type but arbitrary algebraic spaces over the ring of integers in the global field. We give similar generalizations of Buium’s formal arithmetic jet functor, which is dual to the Witt functor. We also give concrete geometric descriptions of Witt spaces and arithmetic jet spaces and investigate whether a number of standard geometric properties are preserved by these functors."
-    },
-    {
-        "publisher-place": "Cham",
-        "abstract": "The Riemann hypothesis is, and will hopefully remain for a long time, a great motivation to uncover and explore new parts of the mathematical world. After reviewing its impact on the development of algebraic geometry we discuss three strategies, working concretely at the level of the explicit formulas. The first strategy is “analytic” and is based on Riemannian spaces and Selberg's work on the trace formula and its comparison with the explicit formulas. The second is based on algebraic geometry and the Riemann-Roch theorem. We establish a framework in which one can transpose many of the ingredients of the Weil proof as reformulated by Mattuck, Tate and Grothendieck. This framework is elaborate and involves noncommutative geometry, Grothendieck toposes and tropical geometry. We point out the remaining difficulties and show that RH gives a strong motivation to develop algebraic geometry in the emerging world of characteristic one. Finally we briefly discuss a third strategy based on the development of a suitable “Weil cohomology”, the role of Segal's Γ-rings and of topological cyclic homology as a model for “absolute algebra” and as a cohomological tool.",
-        "author": [
-            {
-                "given": "Alain",
-                "family": "Connes"
-            }
-        ],
-        "container-title": "Open Problems in Mathematics",
-        "DOI": "10.1007/978-3-319-32162-2_5",
-        "editor": [
-            {
-                "given": "John Forbes",
-                "family": "Nash",
-                "suffix": "Jr."
-            },
-            {
-                "given": "Michael Th.",
-                "family": "Rassias"
-            }
-        ],
-        "type": "chapter",
-        "id": "connes16",
-        "citation-key": "connes16",
-        "ISBN": "978-3-319-32162-2",
-        "issued": {
-            "date-parts": [
-                [
-                    2016
-                ]
-            ]
-        },
-        "page": "225-257",
-        "publisher": "Springer International Publishing",
-        "title": "An Essay on the Riemann Hypothesis",
-        "URL": "https://doi.org/10.1007/978-3-319-32162-2_5"
-    },
-    {
-        "container-title": "Mathematische Zeitschrift",
-        "author": [
-            {
-                "given": "Javier",
-                "family": "López Peña"
-            },
-            {
-                "given": "Oliver",
-                "family": "Lorscheid"
-            }
-        ],
-        "DOI": "10.1007/s00209-009-0638-0",
-        "type": "article-journal",
-        "id": "lopezpena09torified",
-        "citation-key": "lopezpena09torified",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    2011,
-                    4
-                ]
-            ]
-        },
-        "page": "605-643",
-        "title": "Torified varieties and their geometries over 𝔽₁",
-        "volume": "267",
-        "ISSN": "1432-1823",
-        "URL": "https://doi.org/10.1007/s00209-009-0638-0",
-        "abstract": "This paper invents the notion of torified varieties: A torification of a scheme is a decomposition of the scheme into split tori. A torified variety is a reduced scheme of finite type over ℤ that admits a torification. Toric varieties, split Chevalley schemes and flag varieties are examples of this type of scheme. Given a torified variety whose torification is compatible with an affine open covering, we construct a gadget in the sense of Connes–Consani and an object in the sense of Soulé and show that both are varieties over 𝔽₁ in the corresponding notion. Since toric varieties and split Chevalley schemes satisfy the compatibility condition, we shed new light on all examples of varieties over 𝔽₁ in the literature so far. Furthermore, we compare Connes–Consani’s geometry, Soulé’s geometry and Deitmar’s geometry, and we discuss to what extent Chevalley groups can be realized as group objects over 𝔽₁ in the given categories."
-    },
-    {
-        "author": [
-            {
-                "given": "Javier López",
-                "family": "Peña"
-            },
-            {
-                "given": "Oliver",
-                "family": "Lorscheid"
-            }
-        ],
-        "type": "document",
-        "id": "lopezpena09mapping",
-        "citation-key": "lopezpena09mapping",
-        "issued": {
-            "date-parts": [
-                [
-                    2009
-                ]
-            ]
-        },
-        "title": "Mapping F₁-land: An overview of geometries over the field with one element",
-        "URL": "https://arxiv.org/abs/0909.0069"
-    },
-    {
-        "author": [
-            {
-                "given": "A.",
-                "family": "Weil"
-            }
-        ],
-        "type": "book",
-        "id": "weil48",
-        "citation-key": "weil48",
-        "issued": {
-            "date-parts": [
-                [
-                    1948
-                ]
-            ]
-        },
-        "publisher": "Actualités Sci. Ind. 1041",
-        "title": "Sur les courbes algébriques et les variétés qui s'en déduisent"
-    },
-    {
-        "author": [
-            {
-                "given": "Carl Friedrich",
-                "family": "Gauss"
-            }
-        ],
-        "type": "book",
-        "id": "gauss1870disquisitiones",
-        "citation-key": "gauss1870disquisitiones",
-        "issued": {
-            "date-parts": [
-                [
-                    1801
-                ]
-            ]
-        },
-        "note": "Reprinted 1870 in Werke, Vol. 1",
-        "publisher": "K. Gesellschaft der Wissenschaften zu Göttingen",
-        "title": "Disquisitiones arithmeticae",
-        "volume": "1"
-    },
-    {
-        "container-title": "Notices of the International Congress of Chinese Mathematicians",
-        "author": [
-            {
-                "given": "Lizhen",
-                "family": "Ji"
-            }
-        ],
-        "type": "article-journal",
-        "id": "ji15",
-        "citation-key": "ji15",
-        "issue": "2",
-        "issued": {
-            "date-parts": [
-                [
-                    2015
-                ]
-            ]
-        },
-        "page": "46-73",
-        "title": "The Story of Riemann's Moduli Space",
-        "volume": "3",
-        "DOI": "10.4310/ICCM.2015.v3.n2.a5",
-        "URL": "https://dx.doi.org/10.4310/ICCM.2015.v3.n2.a5"
-    },
-    {
-        "container-title": "Nuclear Physics B",
-        "abstract": "The strong coupling dynamics of string theories in dimension d ⩾ 4 are studied. It is argued, among other things, that eleven-dimensional supergravity arises as a low energy limit of the ten-dimensional Type IIA superstring, and that a recently conjectured duality between the heterotic string and Type IIA superstrings controls the strong coupling dynamics of the heterotic string in five, six, and seven dimensions and implies S-duality for both heterotic and Type II strings.",
-        "author": [
-            {
-                "given": "Edward",
-                "family": "Witten"
-            }
-        ],
-        "DOI": "10.1016/0550-3213(95)00158-O",
-        "type": "article-journal",
-        "id": "witten95",
-        "citation-key": "witten95",
-        "ISSN": "0550-3213",
-        "issue": "1",
-        "issued": {
-            "date-parts": [
-                [
-                    1995
-                ]
-            ]
-        },
-        "page": "85-126",
-        "title": "String theory dynamics in various dimensions",
-        "URL": "https://doi.org/10.1016/0550-3213(95)00158-O",
-        "volume": "443"
-    },
-    {
-        "container-title": "Nuclear Physics B",
-        "author": [
-            {
-                "given": "Petr",
-                "family": "Hořava"
-            },
-            {
-                "given": "Edward",
-                "family": "Witten"
-            }
-        ],
-        "DOI": "10.1016/0550-3213(95)00621-4",
-        "type": "article-journal",
-        "id": "horavawitten96",
-        "citation-key": "horavawitten96",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    1996,
-                    2
-                ]
-            ]
-        },
-        "page": "506-524",
-        "title": "Heterotic and Type I string dynamics from eleven dimensions",
-        "volume": "460",
-        "ISSN": "0550-3213",
-        "URL": "https://doi.org/10.1016/0550-3213(95)00621-4"
-    },
-    {
-        "container-title": "Letters in Mathematical Physics",
-        "author": [
-            {
-                "given": "John",
-                "family": "Huerta"
-            },
-            {
-                "given": "Urs",
-                "family": "Schreiber"
-            }
-        ],
-        "DOI": "10.1007/s11005-018-1110-z",
-        "type": "article-journal",
-        "id": "huerta2018m",
-        "citation-key": "huerta2018m",
-        "issue": "12",
-        "issued": {
-            "date-parts": [
-                [
-                    2018,
-                    12
-                ]
-            ]
-        },
-        "page": "2695-2727",
-        "publisher": "Springer",
-        "title": "M-theory from the superpoint",
-        "URL": "https://doi.org/10.1007/s11005-018-1110-z",
-        "volume": "108",
-        "ISSN": "1573-0530",
-        "abstract": "The “brane scan” classifies consistent Green–Schwarz strings and membranes in terms of the invariant cocycles on super Minkowski spacetimes. The “brane bouquet” generalizes this by consecutively forming the invariant higher central extensions induced by these cocycles, which yields the complete fundamental brane content of string/M-theory, including the D-branes and the M5-brane, as well as the various duality relations between these. This raises the question whether the super Minkowski spacetimes themselves arise as maximal invariant central extensions. Here, we prove that they do. Starting from the simplest possible super Minkowski spacetime, the superpoint, which has no Lorentz structure and no spinorial structure, we give a systematic process of consecutive “maximal invariant central extensions” and show that it discovers the super Minkowski spacetimes that contain superstrings, culminating in the 10- and 11-dimensional super Minkowski spacetimes of string/M-theory and leading directly to the brane bouquet."
-    },
-    {
-        "publisher-place": "Berlin, Heidelberg",
-        "abstract": "Preface. Abel's name is associated with a number of key notions of modern mathematics, such as abelian varieties, Abel's integrals, etc. Moreover, it became almost synonymous with the idea of commutativity. Thus, when one speaks about abelian class field theory, one has in mind a description of extensions of a ground (say, number) field with commutative Galois group.",
-        "author": [
-            {
-                "given": "Yu. I.",
-                "family": "Manin"
-            }
-        ],
-        "container-title": "The Legacy of Niels Henrik Abel: The Abel Bicentennial, Oslo, 2002",
-        "DOI": "10.1007/978-3-642-18908-1_23",
-        "editor": [
-            {
-                "given": "Olav Arnfinn",
-                "family": "Laudal"
-            },
-            {
-                "given": "Ragni",
-                "family": "Piene"
-            }
-        ],
-        "type": "chapter",
-        "id": "manin04",
-        "citation-key": "manin04",
-        "ISBN": "978-3-642-18908-1",
-        "issued": {
-            "date-parts": [
-                [
-                    2004
-                ]
-            ]
-        },
-        "page": "685-727",
-        "publisher": "Springer Berlin Heidelberg",
-        "title": "Real Multiplication and Noncommutative Geometry (ein Alterstraum)",
-        "URL": "https://doi.org/10.1007/978-3-642-18908-1_23"
-    },
-    {
-        "author": [
-            {
-                "given": "Stephen L",
-                "family": "Adler"
-            },
-            {
-                "given": "David Ritz",
-                "family": "Finkelstein"
-            }
-        ],
-        "type": "document",
-        "id": "adler1996quaternionic",
-        "citation-key": "adler1996quaternionic",
-        "issued": {
-            "date-parts": [
-                [
-                    1996
-                ]
-            ]
-        },
-        "publisher": "American Institute of Physics",
-        "title": "Quaternionic quantum mechanics and quantum fields"
-    },
-    {
-        "container-title": "Bulletin of the American Mathematical Society",
-        "author": [
-            {
-                "given": "John C.",
-                "family": "Baez"
-            }
-        ],
-        "DOI": "10.1090/S0273-0979-01-00934-X",
-        "type": "article-journal",
-        "id": "baez02",
-        "citation-key": "baez02",
-        "issued": {
-            "date-parts": [
-                [
-                    2002
-                ]
-            ]
-        },
-        "page": "145-205",
-        "title": "The Octonions",
-        "volume": "39",
-        "URL": "https://doi.org/10.1090/S0273-0979-01-00934-X",
-        "note": "arXiv:math/0105155 [math.RA], Erratum: Bull. Am. Math. Soc. 42, 213 (2005)"
-    },
-    {
-        "author": [
-            {
-                "given": "Bertrand",
-                "family": "Russell"
-            }
-        ],
-        "type": "book",
-        "id": "russell03",
-        "citation-key": "russell03",
-        "issued": {
-            "date-parts": [
-                [
-                    1903
-                ]
-            ]
-        },
-        "publisher": "Cambridge University Press",
-        "title": "The Principles of Mathematics"
-    },
-    {
-        "container-title": "American Journal of Mathematics",
-        "accessed": {
-            "date-parts": [
-                [
-                    2026,
-                    4,
-                    6
-                ]
-            ]
-        },
-        "author": [
-            {
-                "given": "Bertrand",
-                "family": "Russell"
-            }
-        ],
-        "type": "article-journal",
-        "id": "russell08",
-        "citation-key": "russell08",
-        "ISSN": "00029327, 10806377",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    1908
-                ]
-            ]
-        },
-        "page": "222-262",
-        "publisher": "Johns Hopkins University Press",
-        "title": "Mathematical Logic as Based on the Theory of Types",
-        "URL": "http://www.jstor.org/stable/2369948",
-        "volume": "30",
-        "DOI": "10.2307/2369948"
-    },
-    {
-        "abstract": "The theory of types is intended to be a full-scale system for formalizing intuitionistic mathematics as developed. The language of the theory is richer than the languages of traditional intuitionistic systems in permitting proofs to appear as parts of propositions so that the propositions of the theory can express properties of proofs. There are axioms for universes that link the generation of objects and types and play somewhat the same role for the present theory as does the replacement axiom for Zermelo–Fraenkel set theory. The present theory is based on a strongly impredicative axiom that there is a type of all types in symbols. This axiom has to be abandoned, however, after it has been shown to lead to a contraction. This chapter discusses Normalization theorem, which can be strengthened in two ways: it can be made to cover open terms and it can be proved that every reduction sequence starting from an arbitrary term leads to a unique normal term after a finite number of steps. The definition of the notion of convertibility and the proof that an arbitrary term is convertible can no longer be separated because the type symbols and the terms are generated simultaneously.",
-        "author": [
-            {
-                "given": "Per",
-                "family": "Martin-Löf"
-            }
-        ],
-        "container-title": "Logic Colloquium '73",
-        "collection-title": "Studies in Logic and the Foundations of Mathematics",
-        "DOI": "10.1016/S0049-237X(08)71945-1",
-        "editor": [
-            {
-                "given": "H.E.",
-                "family": "Rose"
-            },
-            {
-                "given": "J.C.",
-                "family": "Shepherdson"
-            }
-        ],
-        "type": "chapter",
-        "id": "martinlof75",
-        "citation-key": "martinlof75",
-        "ISSN": "0049-237X",
-        "issued": {
-            "date-parts": [
-                [
-                    1975
-                ]
-            ]
-        },
-        "page": "73-118",
-        "publisher": "Elsevier",
-        "title": "An Intuitionistic Theory of Types: Predicative Part",
-        "URL": "https://doi.org/10.1016/S0049-237X(08)71945-1",
-        "volume": "80"
-    },
-    {
-        "container-title": "Journal of Philosophical Logic",
-        "accessed": {
-            "date-parts": [
-                [
-                    2026,
-                    4,
-                    6
-                ]
-            ]
-        },
-        "author": [
-            {
-                "given": "Graham",
-                "family": "Priest"
-            }
-        ],
-        "type": "article-journal",
-        "id": "priest79",
-        "citation-key": "priest79",
-        "ISSN": "00223611, 15730433",
-        "issue": "1",
-        "issued": {
-            "date-parts": [
-                [
-                    1979
-                ]
-            ]
-        },
-        "page": "219-241",
-        "publisher": "Springer",
-        "title": "The Logic of Paradox",
-        "URL": "http://www.jstor.org/stable/30227165",
-        "volume": "8"
-    },
-    {
-        "container-title": "Journal of Symbolic Logic",
-        "author": [
-            {
-                "given": "Alfred",
-                "family": "Tarski"
-            }
-        ],
-        "DOI": "10.2307/2267705",
-        "type": "article-journal",
-        "id": "tarski52",
-        "citation-key": "tarski52",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    1952
-                ]
-            ]
-        },
-        "page": "207-207",
-        "publisher": "Association for Symbolic Logic",
-        "title": "A Decision Method for Elementary Algebra and Geometry",
-        "volume": "17",
-        "URL": "https://doi.org/10.2307/2267705"
-    },
-    {
-        "container-title": "The Bulletin of Symbolic Logic",
-        "author": [
-            {
-                "given": "Alfred",
-                "family": "Tarski"
-            },
-            {
-                "given": "Steven",
-                "family": "Givant"
-            }
-        ],
-        "DOI": "10.2307/421089",
-        "type": "article-journal",
-        "id": "tarskigivant99",
-        "citation-key": "tarskigivant99",
-        "issue": "2",
-        "issued": {
-            "date-parts": [
-                [
-                    1999
-                ]
-            ]
-        },
-        "page": "175-214",
-        "title": "Tarski's system of geometry",
-        "volume": "5",
-        "URL": "https://doi.org/10.2307/421089"
-    },
-    {
-        "container-title": "The Bell System Technical Journal",
-        "author": [
-            {
-                "given": "Claude E.",
-                "family": "Shannon"
-            }
-        ],
-        "DOI": "10.1002/j.1538-7305.1948.tb01338.x",
-        "type": "article-journal",
-        "id": "shannon48",
-        "citation-key": "shannon48",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    1948
-                ]
-            ]
-        },
-        "page": "379-423",
-        "title": "A mathematical theory of communication",
-        "volume": "27",
-        "URL": "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
-    },
-    {
-        "number-of-pages": "4",
-        "abstract": "We consider the first-order theory whose language has as nonlogical symbols the constant symbols 0 and 1, the binary relation symbols = and <, the unary function symbol − and the binary function symbol +This theory of integers under addition is commonly called the 'Presburger Arithmetic' and is known to be decidable for truth [Presburger (1929), Hilbert and Bernays (1968)]. We prove here that there exists a decision procedure for this theory, involving quantifier elimination, for which there is a superexponential upper bound on the size of formula produced when all variables have been eliminated.",
-        "author": [
-            {
-                "given": "Derek C.",
-                "family": "Oppen"
-            }
-        ],
-        "container-title": "Proceedings of the Fifth Annual ACM Symposium on Theory of Computing",
-        "collection-title": "STOC '73",
-        "DOI": "10.1145/800125.804033",
-        "type": "paper-conference",
-        "id": "presburger29",
-        "citation-key": "presburger29",
-        "ISBN": "9781450374309",
-        "issued": {
-            "date-parts": [
-                [
-                    1973
-                ]
-            ]
-        },
-        "page": "34-37",
-        "publisher-place": "Austin, Texas, USA",
-        "publisher": "Association for Computing Machinery",
-        "title": "Elementary bounds for presburger arithmetic",
-        "URL": "https://doi.org/10.1145/800125.804033"
-    },
-    {
-        "author": [
-            {
-                "given": "Thoralf",
-                "family": "Skolem"
-            }
-        ],
-        "collection-title": "Skrifter utgitt av det Norske Videnskaps-Akademi i Oslo, I. Matematisk-Naturvidenskapelig Klasse",
-        "type": "book",
-        "id": "skolem31",
-        "citation-key": "skolem31",
-        "issued": {
-            "date-parts": [
-                [
-                    1931
-                ]
-            ]
-        },
-        "publisher": "Dybwad",
-        "title": "Über einige Satzfunktionen in der Arithmetik",
-        "URL": "https://books.google.com.mx/books?id=oODfcQAACAAJ"
-    },
-    {
-        "container-title": "Comptes Rendus de l'Académie des Sciences",
-        "author": [
-            {
-                "given": "Godfrey H.",
-                "family": "Hardy"
-            }
-        ],
-        "type": "article-journal",
-        "id": "hardy14",
-        "citation-key": "hardy14",
-        "issued": {
-            "date-parts": [
-                [
-                    1914
-                ]
-            ]
-        },
-        "page": "1012-1014",
-        "title": "Sur les zéros de la fonction ζ(s) de Riemann",
-        "volume": "158"
-    },
-    {
-        "author": [
-            {
-                "given": "Jacques",
-                "family": "Tits"
-            }
-        ],
-        "container-title": "Colloque d’algebre supérieure, tenua Bruxelles du",
-        "type": "paper-conference",
-        "id": "tits56",
-        "citation-key": "tits56",
-        "issued": {
-            "date-parts": [
-                [
-                    1956
-                ]
-            ]
-        },
-        "page": "261-289",
-        "title": "Sur les analogues algébriques des groupes semi-simples complexes",
-        "volume": "19"
-    },
-    {
-        "author": [
-            {
-                "given": "Christophe",
-                "family": "Soulé"
-            }
-        ],
-        "type": "document",
-        "id": "soule03",
-        "citation-key": "soule03",
-        "issued": {
-            "date-parts": [
-                [
-                    2003
-                ]
-            ]
-        },
-        "title": "Les variétés sur le corps à un élément",
-        "URL": "https://arxiv.org/abs/math/0304444"
-    },
-    {
-        "author": [
-            {
-                "given": "Nicholas M.",
-                "family": "Katz"
-            },
-            {
-                "given": "Peter",
-                "family": "Sarnak"
-            }
-        ],
-        "type": "book",
-        "id": "katz99",
-        "citation-key": "katz99",
-        "issued": {
-            "date-parts": [
-                [
-                    1999
-                ]
-            ]
-        },
-        "publisher": "American Mathematical Society",
-        "title": "Random Matrices, Frobenius Eigenvalues, and Monodromy"
-    },
-    {
-        "container-title": "Physical Review D",
-        "number-of-pages": "0",
-        "author": [
-            {
-                "given": "Jacob D.",
-                "family": "Bekenstein"
-            }
-        ],
-        "DOI": "10.1103/PhysRevD.7.2333",
-        "type": "article-journal",
-        "id": "bekenstein73",
-        "citation-key": "bekenstein73",
-        "issue": "8",
-        "issued": {
-            "date-parts": [
-                [
-                    1973,
-                    4
-                ]
-            ]
-        },
-        "page": "2333-2346",
-        "publisher": "American Physical Society",
-        "title": "Black Holes and Entropy",
-        "URL": "https://doi.org/10.1103/PhysRevD.7.2333",
-        "volume": "7"
-    },
-    {
-        "container-title": "Communications in Mathematical Physics",
-        "author": [
-            {
-                "given": "Stephen W.",
-                "family": "Hawking"
-            }
-        ],
-        "type": "article-journal",
-        "id": "hawking75",
-        "citation-key": "hawking75",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    1975
-                ]
-            ]
-        },
-        "page": "199-220",
-        "title": "Particle creation by black holes",
-        "volume": "43"
-    },
-    {
-        "container-title": "SIAM Review",
-        "abstract": " Comparison between formulae for the counting functions of the heights tn of the Riemann zeros and of semiclassical quantum eigenvalues En suggests that the tn are eigenvalues of an (unknown) hermitean operator H, obtained by quantizing a classical dynamical system with hamiltonian Hcl . Many features of Hcl are provided by the analogy; for example, the \"Riemann dynamics\" should be chaotic and have periodic orbits whose periods are multiples of logarithms of prime numbers. Statistics of the tn have a similar structure to those of the semiclassical En; in particular, they display random-matrix universality at short range, and nonuniversal behaviour over longer ranges. Very refined features of the statistics of the tn can be computed accurately from formulae with quantum analogues. The Riemann-Siegel formula for the zeta function is described in detail. Its interpretation as a relation between long and short periodic orbits gives further insights into the quantum spectral fluctuations. We speculate that the Riemann dynamics is related to the trajectories generated by the classical hamiltonian Hcl =XP. ",
-        "author": [
-            {
-                "given": "M. V.",
-                "family": "Berry"
-            },
-            {
-                "given": "J. P.",
-                "family": "Keating"
-            }
-        ],
-        "DOI": "10.1137/S0036144598347497",
-        "type": "article-journal",
-        "id": "berry99",
-        "citation-key": "berry99",
-        "issue": "2",
-        "issued": {
-            "date-parts": [
-                [
-                    1999
-                ]
-            ]
-        },
-        "page": "236-266",
-        "title": "The Riemann Zeros and Eigenvalue Asymptotics",
-        "URL": "https://doi.org/10.1137/S0036144598347497",
-        "volume": "41"
-    },
-    {
-        "container-title": "Physical Review Letters",
-        "number-of-pages": "5",
-        "author": [
-            {
-                "given": "Carl M.",
-                "family": "Bender"
-            },
-            {
-                "given": "Dorje C.",
-                "family": "Brody"
-            },
-            {
-                "given": "Markus P.",
-                "family": "Müller"
-            }
-        ],
-        "DOI": "10.1103/PhysRevLett.118.130201",
-        "type": "article-journal",
-        "id": "bender17",
-        "citation-key": "bender17",
-        "issue": "13",
-        "issued": {
-            "date-parts": [
-                [
-                    2017,
-                    3
-                ]
-            ]
-        },
-        "page": "130201",
-        "publisher": "American Physical Society",
-        "title": "Hamiltonian for the Zeros of the Riemann Zeta Function",
-        "URL": "https://doi.org/10.1103/PhysRevLett.118.130201",
-        "volume": "118"
-    },
-    {
-        "author": [
-            {
-                "given": "Gerard",
-                "family": "Geer",
-                "non-dropping-particle": "van der"
-            },
-            {
-                "given": "Frans",
-                "family": "Oort"
-            },
-            {
-                "given": "Joseph H. M.",
-                "family": "Steenbrink"
-            }
-        ],
-        "collection-title": "Progress in Mathematics",
-        "DOI": "10.1007/978-1-4612-0457-2",
-        "type": "book",
-        "id": "oort91",
-        "citation-key": "oort91",
-        "issued": {
-            "date-parts": [
-                [
-                    1991
-                ]
-            ]
-        },
-        "publisher": "Birkhäuser Boston, MA",
-        "title": "Arithmetic Algebraic Geometry",
-        "URL": "https://doi.org/10.1007/978-1-4612-0457-2",
-        "volume": "89"
-    },
-    {
-        "publisher-place": "Charleston, USA",
-        "author": [
-            {
-                "given": "James S.",
-                "family": "Milne"
-            }
-        ],
-        "edition": "2nd",
-        "type": "book",
-        "id": "milne2006arithmetic",
-        "citation-key": "milne2006arithmetic",
-        "issued": {
-            "date-parts": [
-                [
-                    2006
-                ]
-            ]
-        },
-        "publisher": "BookSurge, LLC",
-        "title": "Arithmetic Duality Theorems"
-    },
-    {
-        "author": [
-            {
-                "given": "James S.",
-                "family": "Milne"
-            }
-        ],
-        "type": "document",
-        "id": "milne2025arithmeticduality",
-        "citation-key": "milne2025arithmeticduality",
-        "issued": {
-            "date-parts": [
-                [
-                    2025
-                ]
-            ]
-        },
-        "title": "Arithmetic Duality",
-        "URL": "https://arxiv.org/abs/2509.13016"
-    },
-    {
-        "author": [
-            {
-                "given": "Vaughan",
-                "family": "Hart"
-            },
-            {
-                "given": "Peter",
-                "family": "Hicks"
-            }
-        ],
-        "type": "book",
-        "id": "harthicks98",
-        "citation-key": "harthicks98",
-        "issued": {
-            "date-parts": [
-                [
-                    1998
-                ]
-            ]
-        },
-        "publisher": "Yale University Press",
-        "title": "Paper Palaces: Rise of the Renaissance Architectural Treatise"
-    },
-    {
-        "container-title": "J. École Polytech.",
-        "author": [
-            {
-                "given": "Auguste",
-                "family": "Bravais"
-            }
-        ],
-        "type": "article-journal",
-        "id": "bravais48",
-        "citation-key": "bravais48",
-        "issued": {
-            "date-parts": [
-                [
-                    1850
-                ]
-            ]
-        },
-        "page": "1-128",
-        "title": "Mémoire sur les systèmes formés par des points distribués régulièrement sur un plan ou dans l'espace",
-        "volume": "19"
-    },
-    {
-        "author": [
-            {
-                "given": "John J.",
-                "family": "O'Connor"
-            },
-            {
-                "given": "Edmund F.",
-                "family": "Robertson"
-            }
-        ],
-        "type": "document",
-        "id": "mactutor_argand",
-        "citation-key": "mactutor_argand",
-        "issued": {
-            "date-parts": [
-                [
-                    2000
-                ]
-            ]
-        },
-        "publisher": "MacTutor History of Mathematics Archive. University of St Andrews",
-        "title": "Jean-Robert Argand",
-        "URL": "https://mathshistory.st-andrews.ac.uk/Biographies/Argand/"
-    },
-    {
-        "container-title": "Physics Letters B",
-        "abstract": "We develop a formalism for computing sums over random surfaces which arise in all problems containing gauge invariance (like QCD, three-dimensional Ising model etc.). These sums are reduced to the exactly solvable quantum theory of the two-dimensional Liouville lagrangian. At D = 26 the string dynamics is that of harmonic oscillators as was predicted earlier by dual theorists, otherwise it is described by the nonlinear integrable theory.",
-        "author": [
-            {
-                "given": "A.M.",
-                "family": "Polyakov"
-            }
-        ],
-        "DOI": "10.1016/0370-2693(81)90743-7",
-        "type": "article-journal",
-        "id": "polyakov81",
-        "citation-key": "polyakov81",
-        "ISSN": "0370-2693",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    1981
-                ]
-            ]
-        },
-        "page": "207-210",
-        "title": "Quantum geometry of bosonic strings",
-        "URL": "https://doi.org/10.1016/0370-2693(81)90743-7",
-        "volume": "103"
-    },
-    {
-        "container-title": "Journal of High Energy Physics",
-        "abstract": "We study toroidal compactification of Matrix theory, using ideas and results of non-commutative geometry. We generalize this to compactification on the noncommutative torus, explain the classification of these backgrounds, and argue that they correspond in supergravity to tori with constant background three-form tensor field. The paper includes an introduction for mathematicians to the IKKT formulation of Matrix theory and its relation to the BFSS Matrix theory.",
-        "author": [
-            {
-                "given": "Alain",
-                "family": "Connes"
-            },
-            {
-                "given": "Michael R.",
-                "family": "Douglas"
-            },
-            {
-                "given": "Albert",
-                "family": "Schwarz"
-            }
-        ],
-        "DOI": "10.1088/1126-6708/1998/02/003",
-        "type": "article-journal",
-        "id": "connes98",
-        "citation-key": "connes98",
-        "issue": "02",
-        "issued": {
-            "date-parts": [
-                [
-                    1998,
-                    2
-                ]
-            ]
-        },
-        "page": "003",
-        "title": "Noncommutative Geometry and Matrix Theory: Compactification on Tori",
-        "URL": "https://doi.org/10.1088/1126-6708/1998/02/003",
-        "volume": "1998"
-    },
-    {
-        "author": [
-            {
-                "given": "A.",
-                "family": "Connes"
-            }
-        ],
-        "type": "book",
-        "id": "connes95",
-        "citation-key": "connes95",
-        "ISBN": "9780080571751",
-        "issued": {
-            "date-parts": [
-                [
-                    1995
-                ]
-            ]
-        },
-        "publisher": "Academic Press",
-        "title": "Noncommutative Geometry"
-    },
-    {
-        "author": [
-            {
-                "given": "Alain",
-                "family": "Connes"
-            },
-            {
-                "given": "Caterina",
-                "family": "Consani"
-            }
-        ],
-        "type": "document",
-        "id": "connes08",
-        "citation-key": "connes08",
-        "issued": {
-            "date-parts": [
-                [
-                    2009
-                ]
-            ]
-        },
-        "title": "On the notion of geometry over 𝔽₁",
-        "URL": "https://arxiv.org/abs/0809.2926"
-    },
-    {
-        "author": [
-            {
-                "given": "Alexandru",
-                "family": "Buium"
-            }
-        ],
-        "collection-title": "Mathematical Surveys and Monographs",
-        "type": "book",
-        "id": "buium05",
-        "citation-key": "buium05",
-        "issued": {
-            "date-parts": [
-                [
-                    2005
-                ]
-            ]
-        },
-        "publisher": "American Mathematical Society",
-        "title": "Arithmetic Differential Equations",
-        "volume": "118"
-    },
-    {
-        "author": [
-            {
-                "given": "Michael",
-                "family": "Artin"
-            },
-            {
-                "given": "Alexandre",
-                "family": "Grothendieck"
-            },
-            {
-                "given": "Jean-Louis",
-                "family": "Verdier"
-            }
-        ],
-        "collection-title": "Lecture Notes in Mathematics",
-        "type": "book",
-        "id": "grothendieck_sga4",
-        "citation-key": "grothendieck_sga4",
-        "issued": {
-            "date-parts": [
-                [
-                    1972
-                ]
-            ]
-        },
-        "publisher": "Springer-Verlag",
-        "title": "Théorie des Topos et Cohomologie Étale des Schémas (SGA 4)",
-        "volume": "269, 270, 305"
-    },
-    {
-        "container-title": "Abhandlungen der Preußischen Akademie der Wissenschaften",
-        "author": [
-            {
-                "given": "Oswald",
-                "family": "Teichmüller"
-            }
-        ],
-        "type": "article-journal",
-        "id": "teichmuller39",
-        "citation-key": "teichmuller39",
-        "issued": {
-            "date-parts": [
-                [
-                    1939
-                ]
-            ]
-        },
-        "page": "1-197",
-        "title": "Extremale quasikonforme Abbildungen und quadratische Differentiale",
-        "URL": "https://cir.nii.ac.jp/crid/1570291224319453568",
-        "volume": "22"
-    },
-    {
-        "author": [
-            {
-                "given": "Michael",
-                "family": "Reed"
-            },
-            {
-                "given": "Barry",
-                "family": "Simon"
-            }
-        ],
-        "container-title": "Methods of Modern Mathematical Physics",
-        "DOI": "10.1016/B978-0-12-585001-8.50014-3",
-        "editor": [
-            {
-                "given": "Michael",
-                "family": "Reed"
-            },
-            {
-                "given": "Barry",
-                "family": "Simon"
-            }
-        ],
-        "type": "chapter",
-        "id": "REED1972249",
-        "citation-key": "REED1972249",
-        "ISBN": "978-0-12-585001-8",
-        "issued": {
-            "date-parts": [
-                [
-                    1972
-                ]
-            ]
-        },
-        "page": "249-317",
-        "publisher": "Academic Press",
-        "title": "VIII - Unbounded Operators",
-        "URL": "https://doi.org/10.1016/B978-0-12-585001-8.50014-3"
-    },
-    {
-        "container-title": "Publications Mathématiques de l'IHÉS",
-        "author": [
-            {
-                "given": "Alexander",
-                "family": "Grothendieck"
-            }
-        ],
-        "type": "article-journal",
-        "id": "grothendieck1960elements",
-        "citation-key": "grothendieck1960elements",
-        "issued": {
-            "date-parts": [
-                [
-                    1960
-                ]
-            ]
-        },
-        "page": "5-228",
-        "title": "Éléments de géométrie algébrique: I. Le langage des schémas",
-        "volume": "4"
-    },
-    {
-        "container-title": "Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften zu Berlin",
-        "author": [
-            {
-                "given": "Ferdinand Georg",
-                "family": "Frobenius"
-            }
-        ],
-        "type": "article-journal",
-        "id": "frobenius1896",
-        "citation-key": "frobenius1896",
-        "issued": {
-            "date-parts": [
-                [
-                    1896
-                ]
-            ]
-        },
-        "page": "985-1021",
-        "title": "Über die Gruppencharaktere"
-    },
-    {
-        "container-title": "Journal für die reine und angewandte Mathematik",
-        "author": [
-            {
-                "given": "Ferdinand Georg",
-                "family": "Frobenius"
-            }
-        ],
-        "type": "article-journal",
-        "id": "frobenius1878",
-        "citation-key": "frobenius1878",
-        "issued": {
-            "date-parts": [
-                [
-                    1878
-                ]
-            ]
-        },
-        "page": "1-63",
-        "title": "Ueber lineare Substitutionen und bilineare Formen",
-        "volume": "84"
-    },
-    {
-        "container-title": "International Journal of Theoretical Physics",
-        "author": [
-            {
-                "given": "Juan",
-                "family": "Maldacena"
-            }
-        ],
-        "DOI": "10.1023/A:1026654312961",
-        "type": "article-journal",
-        "id": "maldacena98",
-        "citation-key": "maldacena98",
-        "issue": "4",
-        "issued": {
-            "date-parts": [
-                [
-                    1999,
-                    4
-                ]
-            ]
-        },
-        "page": "1113-1133",
-        "title": "The Large-ℕ Limit of Superconformal Field Theories and Supergravity",
-        "volume": "38",
-        "ISSN": "1572-9575",
-        "URL": "https://doi.org/10.1023/A:1026654312961",
-        "abstract": "We show that the large-ℕ limits of certain conformal field theories in various dimensions include in their Hilbert space a sector describing supergravity on the product of anti-de Sitter spacetimes, spheres, and other compact manifolds. This is shown by taking some branes in the full M/string theory and then taking a low-energy limit where the field theory on the brane decouples from the bulk. We observe that, in this limit, we can still trust the near-horizon geometry for large ℕ. The enhanced supersymmetries of the near-horizon geometry correspond to the extra supersymmetry generators present in the superconformal group (as opposed to just the super-Poincare group). The 't Hooft limit of 3 + 1 ℕ = 4 super-Yang–Mills at the conformal point is shown to contain strings: they are IIB strings. We conjecture that compactifications of M/string theory on various anti-de Sitter spacetimes is dual to various conformal field theories. This leads to a new proposal for a definition of M-theory which could be extended to include five noncompact dimensions."
-    },
-    {
-        "author": [
-            {
-                "given": "Yuri I.",
-                "family": "Manin"
-            }
-        ],
-        "type": "document",
-        "id": "manin09",
-        "citation-key": "manin09",
-        "issued": {
-            "date-parts": [
-                [
-                    2009
-                ]
-            ]
-        },
-        "title": "Cyclotomy and analytic geometry over 𝔽₁",
-        "URL": "https://arxiv.org/abs/0809.1564"
-    },
-    {
-        "container-title": "Forum of Mathematics, Sigma",
-        "author": [
-            {
-                "given": "Oliver",
-                "family": "Lorscheid"
-            }
-        ],
-        "DOI": "10.1017/fms.2018.17",
-        "type": "article-journal",
-        "id": "lorscheid18",
-        "citation-key": "lorscheid18",
-        "issued": {
-            "date-parts": [
-                [
-                    2018
-                ]
-            ]
-        },
-        "page": "e20",
-        "title": "The geometry of blueprints. Part II: Tits–Weyl models of algebraic groups",
-        "volume": "6",
-        "URL": "https://doi.org/10.1017/fms.2018.17"
-    },
-    {
-        "author": [
-            {
-                "given": "James S.",
-                "family": "Milne"
-            }
-        ],
-        "type": "document",
-        "id": "milne15",
-        "citation-key": "milne15",
-        "issued": {
-            "date-parts": [
-                [
-                    2015
-                ]
-            ]
-        },
-        "title": "The Riemann Hypothesis over Finite Fields: From Weil to the Present Day",
-        "URL": "https://arxiv.org/abs/1509.00797"
-    },
-    {
-        "container-title": "Journal für die reine und angewandte Mathematik",
-        "author": [
-            {
-                "given": "B.",
-                "family": "Riemann"
-            }
-        ],
-        "DOI": "10.1515/crll.1857.54.115",
-        "type": "article-journal",
-        "id": "riemann1857",
-        "citation-key": "riemann1857",
-        "issue": "54",
-        "issued": {
-            "date-parts": [
-                [
-                    1857
-                ]
-            ]
-        },
-        "page": "115-155",
-        "title": "Theorie der Abel'schen Functionen.",
-        "URL": "https://doi.org/doi:10.1515/crll.1857.54.115",
-        "volume": "54"
-    },
-    {
-        "container-title": "Monatsberichte der Königlichen Preußischen Akademie der Wissenschaften zu Berlin",
-        "author": [
-            {
-                "given": "Bernhard",
-                "family": "Riemann"
-            }
-        ],
-        "type": "article-journal",
-        "id": "riemann1859",
-        "citation-key": "riemann1859",
-        "issued": {
-            "date-parts": [
-                [
-                    1859
-                ]
-            ]
-        },
-        "page": "671-680",
-        "title": "Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse"
-    },
-    {
-        "author": [
-            {
-                "given": "William Rowan",
-                "family": "Hamilton"
-            }
-        ],
-        "type": "book",
-        "id": "hamilton",
-        "citation-key": "hamilton",
-        "issued": {
-            "date-parts": [
-                [
-                    1866
-                ]
-            ]
-        },
-        "publisher": "London: Longmans, Green, & Company",
-        "title": "Elements of quaternions"
-    },
-    {
-        "container-title": "Comptes Rendus. Mathématique",
-        "author": [
-            {
-                "given": "Alain",
-                "family": "Connes"
-            },
-            {
-                "given": "Caterina",
-                "family": "Consani"
-            }
-        ],
-        "DOI": "10.1016/j.crma.2014.07.009",
-        "type": "article-journal",
-        "id": "connes14",
-        "citation-key": "connes14",
-        "issue": "12",
-        "issued": {
-            "date-parts": [
-                [
-                    2014
-                ]
-            ]
-        },
-        "language": "en",
-        "page": "971-975",
-        "publisher": "Elsevier",
-        "title": "The Arithmetic Site",
-        "URL": "https://doi.org/10.1016/j.crma.2014.07.009",
-        "volume": "352"
-    },
-    {
-        "container-title": "Selecta Mathematica",
-        "author": [
-            {
-                "given": "Alain",
-                "family": "Connes"
-            }
-        ],
-        "type": "article-journal",
-        "id": "connes99",
-        "citation-key": "connes99",
-        "issue": "1",
-        "issued": {
-            "date-parts": [
-                [
-                    1999
-                ]
-            ]
-        },
-        "page": "29-106",
-        "publisher": "Springer",
-        "title": "Trace formula in noncommutative geometry and the zeros of the Riemann zeta function",
-        "volume": "5"
-    },
-    {
-        "publisher-place": "Berlin-New York",
-        "author": [
-            {
-                "given": "Dennis A.",
-                "family": "Hejhal"
-            }
-        ],
-        "collection-title": "Lecture Notes in Mathematics",
-        "type": "book",
-        "id": "hejhal1976selberg",
-        "citation-key": "hejhal1976selberg",
-        "issued": {
-            "date-parts": [
-                [
-                    1976
-                ]
-            ]
-        },
-        "publisher": "Springer-Verlag",
-        "title": "The Selberg Trace Formula for PSL(2,ℝ). Vol. I",
-        "volume": "548"
-    },
-    {
-        "author": [
-            {
-                "given": "Nelson",
-                "family": "Dunford"
-            },
-            {
-                "given": "Jacob T",
-                "family": "Schwartz"
-            }
-        ],
-        "type": "book",
-        "id": "dunford58",
-        "citation-key": "dunford58",
-        "issued": {
-            "date-parts": [
-                [
-                    1958
-                ]
-            ]
-        },
-        "note": "Reprinted 1988",
-        "publisher": "John Wiley & Sons",
-        "title": "Linear operators, part 1: general theory"
-    },
-    {
-        "author": [
-            {
-                "given": "Israil",
-                "family": "Gelfand"
-            },
-            {
-                "given": "Dimitri",
-                "family": "Raikov"
-            },
-            {
-                "given": "Georgii",
-                "family": "Shilov"
-            }
-        ],
-        "type": "book",
-        "id": "gelfand41",
-        "citation-key": "gelfand41",
-        "issued": {
-            "date-parts": [
-                [
-                    1941
-                ]
-            ]
-        },
-        "publisher": "American Mathematical Society",
-        "title": "Commutative normed rings",
-        "volume": "170"
-    },
-    {
-        "container-title": "Monatshefte für mathematik und physik",
-        "author": [
-            {
-                "given": "Kurt",
-                "family": "Gödel"
-            }
-        ],
-        "type": "article-journal",
-        "id": "godel31",
-        "citation-key": "godel31",
-        "issue": "1",
-        "issued": {
-            "date-parts": [
-                [
-                    1931
-                ]
-            ]
-        },
-        "page": "173-198",
-        "publisher": "Springer",
-        "title": "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I",
-        "volume": "38"
-    },
-    {
-        "author": [
-            {
-                "given": "Lars",
-                "family": "Hesselholt"
-            },
-            {
-                "given": "Ib",
-                "family": "Madsen"
-            }
-        ],
-        "type": "book",
-        "id": "hesselholt1995k",
-        "citation-key": "hesselholt1995k",
-        "issued": {
-            "date-parts": [
-                [
-                    1995
-                ]
-            ]
-        },
-        "publisher": "Aarhus Universitet. Matematisk Institut",
-        "title": "On the K-theory of finite algebras over Witt vectors of perfect fields"
-    },
-    {
-        "container-title": "Mathematische Annalen",
-        "author": [
-            {
-                "given": "Heinz",
-                "family": "Hopf"
-            }
-        ],
-        "DOI": "10.1007/BF01457962",
-        "type": "article-journal",
-        "id": "hopf31",
-        "citation-key": "hopf31",
-        "issued": {
-            "date-parts": [
-                [
-                    1931
-                ]
-            ]
-        },
-        "page": "637-665",
-        "title": "Über die Abbildungen der dreidimensionalen Sphäre auf die Kugelfläche",
-        "URL": "https://doi.org/10.1007/BF01457962",
-        "volume": "104"
-    },
-    {
-        "container-title": "Annals of Mathematics",
-        "accessed": {
-            "date-parts": [
-                [
-                    2026,
-                    4,
-                    5
-                ]
-            ]
-        },
-        "author": [
-            {
-                "given": "J. F.",
-                "family": "Adams"
-            }
-        ],
-        "type": "article-journal",
-        "id": "adams60",
-        "citation-key": "adams60",
-        "DOI": "10.2307/1970147",
-        "issue": "1",
-        "issued": {
-            "date-parts": [
-                [
-                    1960
-                ]
-            ]
-        },
-        "page": "20-104",
-        "title": "On the Non-Existence of Elements of Hopf Invariant One",
-        "volume": "72",
-        "URL": "https://doi.org/10.2307/1970147"
-    },
-    {
-        "container-title": "Journal of Geometry and Physics",
-        "abstract": "It is pointed out that the Hopf fibration—a special but very basic non-trivial principal fiber bundle—occurs in at least seven different situations in theoretical physics in various guises. Surprisingly, the gauge theory aspect is in the minority here.",
-        "author": [
-            {
-                "given": "H.K.",
-                "family": "Urbantke"
-            }
-        ],
-        "DOI": "10.1016/S0393-0440(02)00121-3",
-        "type": "article-journal",
-        "id": "urbantke03",
-        "citation-key": "urbantke03",
-        "ISSN": "0393-0440",
-        "issue": "2",
-        "issued": {
-            "date-parts": [
-                [
-                    2003
-                ]
-            ]
-        },
-        "keyword": "Hopf fibration,Quantum mechanics",
-        "page": "125-150",
-        "title": "The Hopf fibration—seven times in physics",
-        "URL": "https://doi.org/10.1016/S0393-0440(02)00121-3",
-        "volume": "46"
-    },
-    {
-        "container-title": "Journal of Physics A: Mathematical and General",
-        "abstract": "We discuss a generalization of the standard Bloch sphere representation for a single qubit to two qubits, in the framework of Hopf fibrations of high-dimensional spheres by lower dimensional spheres. The single-qubit Hilbert space is the three-dimensional sphere S 3. The S 2 base space of a suitably oriented S 3 Hopf fibration is nothing but the Bloch sphere, while the circular fibres represent the overall qubit phase degree of freedom. For the two-qubits case, the Hilbert space is a seven-dimensional sphere S 7, which also allows for a Hopf fibration, with S 3 fibres and a S 4 base. The most striking result is that suitably oriented S 7 Hopf fibrations are entanglement sensitive. The relation with the standard Schmidt decomposition is also discussed.",
-        "author": [
-            {
-                "given": "Rémy",
-                "family": "Mosseri"
-            },
-            {
-                "given": "Rossen",
-                "family": "Dandoloff"
-            }
-        ],
-        "DOI": "10.1088/0305-4470/34/47/324",
-        "type": "article-journal",
-        "id": "mosseri01",
-        "citation-key": "mosseri01",
-        "issue": "47",
-        "issued": {
-            "date-parts": [
-                [
-                    2001,
-                    11
-                ]
-            ]
-        },
-        "page": "10243",
-        "title": "Geometry of entangled states, Bloch spheres and Hopf fibrations",
-        "URL": "https://doi.org/10.1088/0305-4470/34/47/324",
-        "volume": "34"
-    },
-    {
-        "container-title": "Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse",
-        "author": [
-            {
-                "given": "Adolf",
-                "family": "Hurwitz"
-            }
-        ],
-        "type": "article-journal",
-        "id": "hurwitz98",
-        "citation-key": "hurwitz98",
-        "issued": {
-            "date-parts": [
-                [
-                    1898
-                ]
-            ]
-        },
-        "page": "309-316",
-        "title": "Über die Composition der quadratischen Formen"
-    },
-    {
-        "container-title": "Annals of Mathematics",
-        "author": [
-            {
-                "given": "Jean-Pierre",
-                "family": "Serre"
-            }
-        ],
-        "type": "article-journal",
-        "id": "serre55",
-        "citation-key": "serre55",
-        "ISSN": "0003486X, 19398980",
-        "issue": "2",
-        "issued": {
-            "date-parts": [
-                [
-                    1955
-                ]
-            ]
-        },
-        "page": "197-278",
-        "publisher": "[Annals of Mathematics, Trustees of Princeton University on Behalf of the Annals of Mathematics, Mathematics Department, Princeton University]",
-        "title": "Faisceaux Algébriques Cohérents",
-        "URL": "http://www.jstor.org/stable/1969915",
-        "volume": "61"
-    },
-    {
-        "container-title": "Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg",
-        "author": [
-            {
-                "given": "Emil",
-                "family": "Artin"
-            }
-        ],
-        "DOI": "10.1007/BF02954618",
-        "type": "article-journal",
-        "id": "artin24",
-        "citation-key": "artin24",
-        "issue": "1",
-        "issued": {
-            "date-parts": [
-                [
-                    1924
-                ]
-            ]
-        },
-        "page": "89-108",
-        "title": "Über eine neue Art von L-Reihen",
-        "URL": "https://doi.org/10.1007/BF02954618",
-        "volume": "3"
-    },
-    {
-        "container-title": "Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg",
-        "author": [
-            {
-                "given": "Emil",
-                "family": "Artin"
-            }
-        ],
-        "DOI": "10.1007/BF02952531",
-        "type": "article-journal",
-        "id": "artin27",
-        "citation-key": "artin27",
-        "issue": "1",
-        "issued": {
-            "date-parts": [
-                [
-                    1927
-                ]
-            ]
-        },
-        "page": "353-363",
-        "title": "Beweis des allgemeinen Reziprozitätsgesetzes",
-        "URL": "https://doi.org/10.1007/BF02952531",
-        "volume": "5"
-    },
-    {
-        "container-title": "Functional Analysis and Its Applications",
-        "author": [
-            {
-                "given": "Vladimir G.",
-                "family": "Drinfel'd"
-            }
-        ],
-        "DOI": "10.1007/BF01079470",
-        "type": "article-journal",
-        "id": "drinfeld77",
-        "citation-key": "drinfeld77",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    1977
-                ]
-            ]
-        },
-        "page": "223-225",
-        "title": "Proof of the global Langlands conjecture for GL(2) over a function field",
-        "URL": "https://doi.org/10.1007/BF01079470",
-        "volume": "11"
-    },
-    {
-        "container-title": "Inventiones mathematicae",
-        "abstract": "On démontre la correspondance de Langlands pour GL<sub>r</sub> sur les corps de fonctions. La preuve généralise celle de Drinfeld en rang 2 : elle consiste à réaliser la correspondance en rang r dans la cohomologie ℓ-adique des variétés modulaires de chtoucas de Drinfeld de rang r.",
-        "author": [
-            {
-                "given": "Laurent",
-                "family": "Lafforgue"
-            }
-        ],
-        "DOI": "10.1007/s002220100174",
-        "type": "article-journal",
-        "id": "lafforgue02",
-        "citation-key": "lafforgue02",
-        "issue": "1",
-        "issued": {
-            "date-parts": [
-                [
-                    2002
-                ]
-            ]
-        },
-        "page": "1-241",
-        "title": "Chtoucas de Drinfeld et correspondance de Langlands",
-        "URL": "https://doi.org/10.1007/s002220100174",
-        "volume": "147"
-    },
-    {
-        "author": [
-            {
-                "given": "Vincent",
-                "family": "Lafforgue"
-            }
-        ],
-        "type": "document",
-        "id": "vlafforgue18",
-        "citation-key": "vlafforgue18",
-        "issued": {
-            "date-parts": [
-                [
-                    2018
-                ]
-            ]
-        },
-        "title": "Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale",
-        "URL": "https://arxiv.org/abs/1209.5352"
-    },
-    {
-        "container-title": "Jahresbericht der Deutschen Mathematiker-Vereinigung",
-        "author": [
-            {
-                "given": "Ulrich",
-                "family": "Görtz"
-            }
-        ],
-        "DOI": "10.1365/s13291-014-0088-4",
-        "type": "article-journal",
-        "id": "goertz14",
-        "citation-key": "goertz14",
-        "issue": "2",
-        "issued": {
-            "date-parts": [
-                [
-                    2014
-                ]
-            ]
-        },
-        "page": "123-128",
-        "title": "James Arthur: “The Endoscopic Classification of Representations. Orthogonal and Symplectic Groups”",
-        "volume": "116",
-        "URL": "https://doi.org/10.1365/s13291-014-0088-4"
-    },
-    {
-        "container-title": "Nieuw Archief voor Wiskunde",
-        "author": [
-            {
-                "given": "Frans",
-                "family": "Oort"
-            }
-        ],
-        "collection-title": "5",
-        "type": "article-journal",
-        "id": "oort14",
-        "citation-key": "oort14",
-        "issue": "3",
-        "issued": {
-            "date-parts": [
-                [
-                    2014
-                ]
-            ]
-        },
-        "page": "211-219",
-        "title": "The Weil conjectures",
-        "volume": "15"
-    },
-    {
-        "author": [
-            {
-                "given": "James",
-                "family": "Arthur"
-            }
-        ],
-        "container-title": "Orbites unipotentes et représentations, II",
-        "type": "chapter",
-        "id": "arthur89",
-        "citation-key": "arthur89",
-        "issued": {
-            "date-parts": [
-                [
-                    1989
-                ]
-            ]
-        },
-        "page": "13-71",
-        "publisher": "Société Mathématique de France",
-        "title": "Unipotent automorphic representations: conjectures",
-        "volume": "171--172"
-    },
-    {
-        "author": [
-            {
-                "given": "J. Brian",
-                "family": "Conrey"
-            }
-        ],
-        "type": "document",
-        "id": "conrey15",
-        "citation-key": "conrey15",
-        "issued": {
-            "date-parts": [
-                [
-                    2015
-                ]
-            ]
-        },
-        "publisher": "American Institute of Mathematics",
-        "title": "Riemann's Hypothesis",
-        "URL": "https://aimath.org/~kaur/publicystuff/conrey-rh.pdf"
-    },
-    {
-        "container-title": "Preprint",
-        "author": [
-            {
-                "given": "Jorge Armando",
-                "family": "González García"
-            },
-            {
-                "given": "Víctor Manuel",
-                "family": "González García"
-            },
-            {
-                "given": "Itzel Marion",
-                "family": "Dressler Pérez"
-            },
-            {
-                "given": "Luz María",
-                "family": "García Ordóñez"
-            }
-        ],
-        "DOI": "10.5281/zenodo.19492791",
-        "type": "article-journal",
-        "id": "gonzalez26",
-        "citation-key": "gonzalez26",
-        "issued": {
-            "date-parts": [
-                [
-                    2026
-                ]
-            ]
-        },
-        "note": "Companion paper to <i>The Hilbert–Pólya Operator and the Primitive Structure of the Complex Plane</i>",
-        "title": "Odd Zeta Values from the PCF Torus: φ and π as Arithmetic-Geometric Sources",
-        "URL": "https://doi.org/10.5281/zenodo.19492791"
-    },
-    {
-        "author": [
-            {
-                "given": "Asoke N.",
-                "family": "Mitra"
-            },
-            {
-                "given": "Freeman J.",
-                "family": "Dyson"
-            }
-        ],
-        "type": "paper-conference",
-        "id": "Mitra2000QuantumFT",
-        "citation-key": "Mitra2000QuantumFT",
-        "issued": {
-            "date-parts": [
-                [
-                    2000
-                ]
-            ]
-        },
-        "publisher": "Hindustan Book Agency",
-        "publisher-place": "New Delhi, India",
-        "title": "Quantum Field Theory: A 20th Century Profile",
-        "ISBN": "978-81-85931-25-8",
-        "URL": "https://api.semanticscholar.org/CorpusID:118294090"
-    },
-    {
-        "author": [
-            {
-                "given": "George",
-                "family": "Pólya"
-            }
-        ],
-        "type": "document",
-        "id": "polya1982letter",
-        "citation-key": "polya1982letter",
-        "issued": {
-            "date-parts": [
-                [
-                    1982,
-                    1,
-                    3
-                ]
-            ]
-        },
-        "note": "Correspondence regarding the origin of the Hilbert-Pólya conjecture",
-        "title": "Letter to Andrew Odlyzko",
-        "URL": "https://www-users.cse.umn.edu/~odlyzko/polya/index.html"
-    }
+  {
+    "author": [
+      {
+        "given": "Carl Friedrich",
+        "family": "Gauss"
+      }
+    ],
+    "type": "book",
+    "id": "gauss31",
+    "citation-key": "gauss31",
+    "issued": {
+      "date-parts": [
+        [
+          1831
+        ]
+      ]
+    },
+    "note": "Establishes complex plane as geometric representation of complex numbers",
+    "publisher": "Commentationes Societatis Regiae Scientiarum Gottingensis",
+    "title": "Theoria residuorum biquadraticorum, Commentatio secunda"
+  },
+  {
+    "publisher-place": "Berlin, Heidelberg",
+    "abstract": "Unter den eindeutigen analytischen Functionen einer Veränderlichen zeichnen sich die rationalen durch eine charakteristische Eigenthümlichkeit aus, die zunächst festgestellt werden soll.",
+    "author": [
+      {
+        "given": "K.",
+        "family": "Weierstrass"
+      }
+    ],
+    "container-title": "Functionenlehre",
+    "DOI": "10.1007/978-3-662-43012-5_1",
+    "type": "book",
+    "id": "weierstrass76",
+    "citation-key": "weierstrass76",
+    "ISBN": "978-3-662-43012-5",
+    "issued": {
+      "date-parts": [
+        [
+          1876
+        ]
+      ]
+    },
+    "page": "1-52",
+    "publisher": "Springer Berlin Heidelberg",
+    "title": "Zur Theorie der eindeutigen analytischen Functionen",
+    "URL": "https://doi.org/10.1007/978-3-662-43012-5_1"
+  },
+  {
+    "author": [
+      {
+        "given": "Jean Robert",
+        "family": "Argand"
+      }
+    ],
+    "type": "book",
+    "id": "argand1874essai",
+    "citation-key": "argand1874essai",
+    "issued": {
+      "date-parts": [
+        [
+          1806
+        ]
+      ]
+    },
+    "note": "Reprinted 1874",
+    "publisher": "Gauthier-Villars",
+    "title": "Essai sur une manière de représenter les quantités imaginaires dans les constructions géométriques"
+  },
+  {
+    "publisher-place": "Braunschweig",
+    "author": [
+      {
+        "given": "Peter Gustav Lejeune",
+        "family": "Dirichlet"
+      }
+    ],
+    "edition": "4th",
+    "editor": [
+      {
+        "given": "Richard",
+        "family": "Dedekind"
+      }
+    ],
+    "type": "book",
+    "id": "dirichlet1894",
+    "citation-key": "dirichlet1894",
+    "issued": {
+      "date-parts": [
+        [
+          1894
+        ]
+      ]
+    },
+    "language": "german",
+    "note": "Final edition containing the complete theory of ideals in Supplement XI",
+    "publisher": "Friedrich Vieweg und Sohn",
+    "title": "Vorlesungen über Zahlentheorie"
+  },
+  {
+    "container-title": "Mathematische Annalen",
+    "author": [
+      {
+        "given": "Emmy",
+        "family": "Noether"
+      }
+    ],
+    "DOI": "10.1007/BF01464225",
+    "type": "article-journal",
+    "id": "noether21",
+    "citation-key": "noether21",
+    "issued": {
+      "date-parts": [
+        [
+          1921
+        ]
+      ]
+    },
+    "note": "Formalizes abstract module theory in modern algebra",
+    "page": "24-66",
+    "title": "Idealtheorie in Ringbereichen",
+    "URL": "https://doi.org/10.1007/BF01464225",
+    "volume": "83"
+  },
+  {
+    "publisher-place": "Berlin, Heidelberg",
+    "author": [
+      {
+        "given": "F. William",
+        "family": "Lawvere"
+      }
+    ],
+    "container-title": "Category Theory, Homology Theory and their Applications II",
+    "type": "paper-conference",
+    "id": "lawvere69",
+    "citation-key": "lawvere69",
+    "issued": {
+      "date-parts": [
+        [
+          1969
+        ]
+      ]
+    },
+    "page": "134-145",
+    "publisher": "Springer Berlin Heidelberg",
+    "ISBN": "978-3-540-36101-5",
+    "DOI": "10.1007/BFb0080769",
+    "title": "Diagonal arguments and cartesian closed categories",
+    "URL": "https://doi.org/10.1007/BFb0080769"
+  },
+  {
+    "container-title": "Bulletin of Symbolic Logic",
+    "author": [
+      {
+        "given": "Noson S.",
+        "family": "Yanofsky"
+      }
+    ],
+    "DOI": "10.2178/bsl/1058448677",
+    "type": "article-journal",
+    "id": "yanofsky03",
+    "citation-key": "yanofsky03",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          2003
+        ]
+      ]
+    },
+    "page": "362-386",
+    "title": "A Universal Approach to Self-Referential Paradoxes, Incompleteness and Fixed Points",
+    "volume": "9",
+    "URL": "https://doi.org/10.2178/bsl/1058448677"
+  },
+  {
+    "container-title": "Communications in Mathematical Physics",
+    "author": [
+      {
+        "given": "J. P.",
+        "family": "Keating"
+      },
+      {
+        "given": "N. C.",
+        "family": "Snaith"
+      }
+    ],
+    "DOI": "10.1007/s002200000261",
+    "type": "article-journal",
+    "id": "keating00",
+    "citation-key": "keating00",
+    "issued": {
+      "date-parts": [
+        [
+          2000
+        ]
+      ]
+    },
+    "page": "57-89",
+    "title": "Random matrix theory and ζ(1/2+it)",
+    "volume": "214",
+    "URL": "https://doi.org/10.1007/s002200000261"
+  },
+  {
+    "author": [
+      {
+        "given": "Enderalp",
+        "family": "Yakaboylu"
+      }
+    ],
+    "type": "document",
+    "id": "yakaboylu22",
+    "citation-key": "yakaboylu22",
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "title": "Formally Self-Adjoint Hamiltonian for the Hilbert–Pólya Conjecture",
+    "URL": "https://arxiv.org/abs/2211.01899"
+  },
+  {
+    "container-title": "Journal of Physics A: Mathematical and Theoretical",
+    "abstract": "We introduce a Hamiltonian to address the Hilbert–Pólya conjecture. The eigenfunctions of the introduced Hamiltonian, subject to the Dirichlet boundary conditions on the positive half-line, vanish at the origin by the nontrivial zeros of the Riemann zeta function. Consequently, the eigenvalues are determined by these nontrivial Riemann zeros. If the Riemann hypothesis (RH) is true, the eigenvalues become real and represent the imaginary parts of the nontrivial zeros. Conversely, if the Hamiltonian is self-adjoint, or more generally, admits only real eigenvalues, then the RH follows. In our attempt to demonstrate the latter, we establish the existence of a similarity transformation of the introduced Hamiltonian that is self-adjoint on the domain specified by an appropriate boundary condition, which is satisfied by the eigenfunctions through the vanishing of the Riemann zeta function. Our result can be extended to a broader class of functions whose zeros lie on the critical line.",
+    "author": [
+      {
+        "given": "Enderalp",
+        "family": "Yakaboylu"
+      }
+    ],
+    "DOI": "10.1088/1751-8121/ad4c2d",
+    "type": "article-journal",
+    "id": "yakaboylu24",
+    "citation-key": "yakaboylu24",
+    "issue": "23",
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          6
+        ]
+      ]
+    },
+    "page": "235204",
+    "publisher": "IOP Publishing",
+    "title": "Hamiltonian for the Hilbert–Pólya conjecture",
+    "URL": "https://doi.org/10.1088/1751-8121/ad4c2d",
+    "volume": "57"
+  },
+  {
+    "container-title": "Mathematics of Computation",
+    "author": [
+      {
+        "given": "Andrew M.",
+        "family": "Odlyzko"
+      }
+    ],
+    "DOI": "10.1090/S0025-5718-1987-0866115-0",
+    "type": "article-journal",
+    "id": "odlyzko87",
+    "citation-key": "odlyzko87",
+    "issue": "177",
+    "issued": {
+      "date-parts": [
+        [
+          1987
+        ]
+      ]
+    },
+    "note": "Massive numerical verification of RH zeros up to 10²⁰",
+    "page": "273-308",
+    "title": "On the distribution of spacings between zeros of the zeta function",
+    "volume": "48",
+    "URL": "https://doi.org/10.1090/S0025-5718-1987-0866115-0"
+  },
+  {
+    "publisher-place": "Oxford",
+    "author": [
+      {
+        "given": "Edward C.",
+        "family": "Titchmarsh"
+      }
+    ],
+    "edition": "2nd",
+    "type": "book",
+    "id": "titchmarsh86",
+    "citation-key": "titchmarsh86",
+    "issued": {
+      "date-parts": [
+        [
+          1986
+        ]
+      ]
+    },
+    "note": "Classical reference; Euler-Maclaurin method for zeta computation",
+    "publisher": "Oxford University Press",
+    "title": "The Theory of the Riemann Zeta-Function"
+  },
+  {
+    "container-title": "Proceedings of the London Mathematical Society",
+    "author": [
+      {
+        "given": "R Sherman",
+        "family": "Lehman"
+      }
+    ],
+    "type": "article-journal",
+    "id": "lehman1970distribution",
+    "citation-key": "lehman1970distribution",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [
+          1970
+        ]
+      ]
+    },
+    "page": "303-320",
+    "publisher": "Wiley Online Library",
+    "title": "On the Distribution of Zeros of the Riemann Zeta-Function",
+    "volume": "3"
+  },
+  {
+    "container-title": "Classical and Quantum Gravity",
+    "author": [
+      {
+        "given": "Veronika E",
+        "family": "Hubeny"
+      }
+    ],
+    "DOI": "10.1088/0264-9381/32/12/124010",
+    "type": "article-journal",
+    "id": "hubeny15",
+    "citation-key": "hubeny15",
+    "ISSN": "1361-6382",
+    "issue": "12",
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          6
+        ]
+      ]
+    },
+    "page": "124010",
+    "publisher": "IOP Publishing",
+    "title": "The AdS/CFT correspondence",
+    "URL": "https://doi.org/10.1088/0264-9381/32/12/124010",
+    "volume": "32"
+  },
+  {
+    "publisher-place": "Providence, USA",
+    "author": [
+      {
+        "given": "Hugh L.",
+        "family": "Montgomery"
+      }
+    ],
+    "container-title": "Proceedings of Symposia in Pure Mathematics",
+    "type": "paper-conference",
+    "id": "montgomery73",
+    "citation-key": "montgomery73",
+    "issued": {
+      "date-parts": [
+        [
+          1973
+        ]
+      ]
+    },
+    "page": "181-193",
+    "publisher": "American Mathematical Society",
+    "title": "The pair correlation of zeros of the zeta function",
+    "volume": "24"
+  },
+  {
+    "container-title": "Mathematische Zeitschrift",
+    "author": [
+      {
+        "given": "Erich",
+        "family": "Hecke"
+      }
+    ],
+    "DOI": "10.1007/BF01612081",
+    "type": "article-journal",
+    "id": "hecke20",
+    "citation-key": "hecke20",
+    "issued": {
+      "date-parts": [
+        [
+          1920
+        ]
+      ]
+    },
+    "page": "11-51",
+    "publisher": "Springer",
+    "title": "Eine neue Art von Zetafunktionen und ihre Beziehungen zur Verteilung der Primzahlen. (Zweite Mitteilung.)",
+    "volume": "6",
+    "URL": "https://doi.org/10.1007/BF01612081"
+  },
+  {
+    "container-title": "Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg",
+    "author": [
+      {
+        "given": "Helmut",
+        "family": "Hasse"
+      }
+    ],
+    "DOI": "10.1007/BF02940685",
+    "type": "article-journal",
+    "id": "hasse34",
+    "citation-key": "hasse34",
+    "issued": {
+      "date-parts": [
+        [
+          1934
+        ]
+      ]
+    },
+    "page": "325-348",
+    "title": "Abstrakte Begründung der komplexen Multiplikation und Riemannsche Vermutung in Funktionenkörpern",
+    "volume": "10",
+    "URL": "https://doi.org/10.1007/BF02940685"
+  },
+  {
+    "container-title": "Journal of Mathematical Physics",
+    "author": [
+      {
+        "given": "Freeman J.",
+        "family": "Dyson"
+      }
+    ],
+    "DOI": "10.1063/1.1703773",
+    "type": "article-journal",
+    "id": "dyson62",
+    "citation-key": "dyson62",
+    "issued": {
+      "date-parts": [
+        [
+          1962
+        ]
+      ]
+    },
+    "page": "140-156",
+    "title": "Statistical Theory of the Energy Levels of Complex Systems. I",
+    "volume": "3",
+    "URL": "https://doi.org/10.1063/1.1703773"
+  },
+  {
+    "publisher-place": "Providence, USA",
+    "author": [
+      {
+        "given": "Andrew M.",
+        "family": "Odlyzko"
+      }
+    ],
+    "container-title": "Dynamical, Spectral, and Arithmetic Zeta Functions",
+    "collection-title": "Contemporary Mathematics",
+    "DOI": "10.1090/conm/290/04746",
+    "type": "chapter",
+    "id": "odlyzko01",
+    "citation-key": "odlyzko01",
+    "issued": {
+      "date-parts": [
+        [
+          2001
+        ]
+      ]
+    },
+    "page": "139-144",
+    "publisher": "American Mathematical Society",
+    "title": "The 10²²-nd zero of the Riemann zeta function",
+    "volume": "290",
+    "URL": "https://doi.org/10.1090/conm/290/04746"
+  },
+  {
+    "container-title": "Annals of Mathematics",
+    "author": [
+      {
+        "given": "Andrew",
+        "family": "Wiles"
+      }
+    ],
+    "DOI": "10.2307/2118559",
+    "type": "article-journal",
+    "id": "wiles95",
+    "citation-key": "wiles95",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          1995
+        ]
+      ]
+    },
+    "page": "443-551",
+    "title": "Modular elliptic curves and Fermat's Last Theorem",
+    "volume": "141",
+    "URL": "https://doi.org/10.2307/2118559"
+  },
+  {
+    "author": [
+      {
+        "given": "Jean-Pierre",
+        "family": "Serre"
+      }
+    ],
+    "collection-title": "Graduate Texts in Mathematics",
+    "DOI": "10.1007/978-1-4684-9884-4",
+    "type": "book",
+    "id": "serre73",
+    "citation-key": "serre73",
+    "issued": {
+      "date-parts": [
+        [
+          1973
+        ]
+      ]
+    },
+    "note": "Original French edition: <i>Cours d'arithmétique</i> 1970.",
+    "publisher": "Springer New York, NY",
+    "title": "A Course in Arithmetic",
+    "URL": "https://doi.org/10.1007/978-1-4684-9884-4",
+    "volume": "7"
+  },
+  {
+    "container-title": "Journal für die reine und angewandte Mathematik",
+    "author": [
+      {
+        "given": "G.",
+        "family": "Lejeune Dirichlet"
+      }
+    ],
+    "type": "article-journal",
+    "id": "dirichlet39",
+    "citation-key": "dirichlet39",
+    "issued": {
+      "date-parts": [
+        [
+          1839
+        ]
+      ]
+    },
+    "language": "fre",
+    "page": "324-369",
+    "title": "Recherches sur diverses applications de l'Analyse infinitesimale à la théorie des Nombres.",
+    "URL": "http://eudml.org/doc/147076",
+    "volume": "19"
+  },
+  {
+    "author": [
+      {
+        "given": "Emil",
+        "family": "Artin"
+      }
+    ],
+    "container-title": "Abhandlungen aus dem mathematischen Seminar der Universität Hamburg",
+    "type": "paper-conference",
+    "id": "artin1924neue",
+    "citation-key": "artin1924neue",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          1924
+        ]
+      ]
+    },
+    "page": "89-108",
+    "publisher": "Springer",
+    "title": "Über eine neue Art von L-Reihen",
+    "volume": "3"
+  },
+  {
+    "author": [
+      {
+        "given": "James",
+        "family": "Borger"
+      }
+    ],
+    "container-title": "arXiv preprint arXiv:0906.3146 [math.NT]",
+    "type": "article-journal",
+    "id": "borger09",
+    "citation-key": "borger09",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "title": "Λ-rings and the field with one element",
+    "URL": "https://arxiv.org/abs/0906.3146"
+  },
+  {
+    "author": [
+      {
+        "given": "André",
+        "family": "Weil"
+      }
+    ],
+    "type": "document",
+    "id": "weil_letter40",
+    "citation-key": "weil_letter40",
+    "issued": {
+      "date-parts": [
+        [
+          1940
+        ]
+      ]
+    },
+    "note": "In: Collected Papers, Vol. I, pp. 244–255.",
+    "title": "Une lettre et un extrait de lettre à Simone Weil"
+  },
+  {
+    "container-title": "CR Acad. Sci. Paris",
+    "author": [
+      {
+        "given": "André",
+        "family": "Weil"
+      }
+    ],
+    "type": "article-journal",
+    "id": "weil40",
+    "citation-key": "weil40",
+    "issue": "592-594",
+    "issued": {
+      "date-parts": [
+        [
+          1940
+        ]
+      ]
+    },
+    "page": "149",
+    "title": "Sur les fonctions algébriques à corps de constantes fini",
+    "volume": "210"
+  },
+  {
+    "author": [
+      {
+        "given": "Robert P.",
+        "family": "Langlands"
+      }
+    ],
+    "container-title": "Emil Artin and Beyond: Class Field Theory and L-functions",
+    "editor": [
+      {
+        "given": "B.",
+        "family": "Della Pietra"
+      }
+    ],
+    "type": "chapter",
+    "id": "Langlands2015Letter",
+    "citation-key": "Langlands2015Letter",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "note": "Written in 1967",
+    "page": "165-173",
+    "publisher": "European Mathematical Society",
+    "title": "Letter to André Weil"
+  },
+  {
+    "publisher-place": "New York, USA",
+    "author": [
+      {
+        "given": "Laurence E",
+        "family": "Sigler"
+      }
+    ],
+    "type": "book",
+    "id": "sigler2002fibonacci",
+    "citation-key": "sigler2002fibonacci",
+    "ISBN": "978-0-387-40737-1",
+    "issued": {
+      "date-parts": [
+        [
+          2002
+        ]
+      ]
+    },
+    "publisher": "Springer Science & Business Media",
+    "title": "Fibonacci's Liber Abaci: A Translation into Modern English of Leonardo Pisano's Book of Calculation"
+  },
+  {
+    "author": [
+      {
+        "given": "Leon Battista",
+        "family": "Alberti"
+      }
+    ],
+    "type": "book",
+    "id": "alberti",
+    "citation-key": "alberti",
+    "issued": {
+      "date-parts": [
+        [
+          1435
+        ]
+      ]
+    },
+    "note": "English translation by C. Grayson, Penguin, 1991.",
+    "title": "De pictura"
+  },
+  {
+    "author": [
+      {
+        "given": "Gaspard",
+        "family": "Monge"
+      }
+    ],
+    "type": "book",
+    "id": "monge1811geometrie",
+    "citation-key": "monge1811geometrie",
+    "issued": {
+      "date-parts": [
+        [
+          1811
+        ]
+      ]
+    },
+    "publisher": "J. Klostermann fils",
+    "title": "Géométrie descriptive"
+  },
+  {
+    "author": [
+      {
+        "given": "William",
+        "family": "Farish"
+      }
+    ],
+    "type": "book",
+    "id": "farish22",
+    "citation-key": "farish22",
+    "issued": {
+      "date-parts": [
+        [
+          1822
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "On isometrical perspective"
+  },
+  {
+    "author": [
+      {
+        "given": "Luca",
+        "family": "Pacioli"
+      }
+    ],
+    "type": "book",
+    "id": "pacioli1509",
+    "citation-key": "pacioli1509",
+    "issued": {
+      "date-parts": [
+        [
+          1509
+        ]
+      ]
+    },
+    "title": "De Divina Proportione"
+  },
+  {
+    "author": [
+      {
+        "given": "Leonhard",
+        "family": "Euler"
+      }
+    ],
+    "type": "book",
+    "id": "euler55",
+    "citation-key": "euler55",
+    "issued": {
+      "date-parts": [
+        [
+          1755
+        ]
+      ]
+    },
+    "title": "Institutiones Calculi Differentialis"
+  },
+  {
+    "author": [
+      {
+        "given": "Benoit B.",
+        "family": "Mandelbrot"
+      }
+    ],
+    "type": "book",
+    "id": "mandelbrot82",
+    "citation-key": "mandelbrot82",
+    "issued": {
+      "date-parts": [
+        [
+          1982
+        ]
+      ]
+    },
+    "publisher": "W. H. Freeman",
+    "title": "The Fractal Geometry of Nature"
+  },
+  {
+    "container-title": "Comptes Rendus de l'Académie des Sciences",
+    "author": [
+      {
+        "given": "Wacław",
+        "family": "Sierpiński"
+      }
+    ],
+    "type": "article-journal",
+    "id": "sierpinski16",
+    "citation-key": "sierpinski16",
+    "issued": {
+      "date-parts": [
+        [
+          1916
+        ]
+      ]
+    },
+    "page": "302-305",
+    "title": "Sur une courbe dont tout point est un point de ramification",
+    "URL": "https://cir.nii.ac.jp/crid/1573950399016422528",
+    "volume": "160"
+  },
+  {
+    "container-title": "Indiana University Mathematics Journal",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          6
+        ]
+      ]
+    },
+    "author": [
+      {
+        "given": "John E.",
+        "family": "Hutchinson"
+      }
+    ],
+    "type": "article-journal",
+    "id": "hutchinson81",
+    "citation-key": "hutchinson81",
+    "ISSN": "00222518, 19435258",
+    "issue": "5",
+    "issued": {
+      "date-parts": [
+        [
+          1981
+        ]
+      ]
+    },
+    "page": "713-747",
+    "publisher": "Indiana University Mathematics Department",
+    "title": "Fractals and Self Similarity",
+    "URL": "http://www.jstor.org/stable/24893080",
+    "volume": "30"
+  },
+  {
+    "author": [
+      {
+        "given": "John",
+        "family": "Neumann",
+        "non-dropping-particle": "von"
+      }
+    ],
+    "collection-title": "Grundlehren der Mathematischen Wissenschaften",
+    "DOI": "10.1007/978-3-642-61409-5",
+    "type": "book",
+    "id": "vonneumann32",
+    "citation-key": "vonneumann32",
+    "issued": {
+      "date-parts": [
+        [
+          1932
+        ]
+      ]
+    },
+    "note": "Reprint: Springer Berlin, Heidelberg, 1996.",
+    "publisher": "Springer Berlin, Heidelberg",
+    "title": "Mathematische Grundlagen der Quantenmechanik",
+    "URL": "https://doi.org/10.1007/978-3-642-61409-5",
+    "volume": "38"
+  },
+  {
+    "author": [
+      {
+        "given": "J.",
+        "family": "Baez"
+      },
+      {
+        "given": "M.",
+        "family": "Stay"
+      }
+    ],
+    "container-title": "New Structures for Physics",
+    "DOI": "10.1007/978-3-642-12821-9_2",
+    "type": "chapter",
+    "id": "baez09",
+    "citation-key": "baez09",
+    "ISBN": "9783642128219",
+    "ISSN": "1616-6361",
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "page": "95-172",
+    "publisher": "Springer Berlin Heidelberg",
+    "title": "Physics, Topology, Logic and Computation: A Rosetta Stone",
+    "URL": "https://doi.org/10.1007/978-3-642-12821-9_2"
+  },
+  {
+    "container-title": "Journal of High Energy Physics",
+    "author": [
+      {
+        "given": "Nathan",
+        "family": "Benjamin"
+      },
+      {
+        "given": "Cyuan-Han",
+        "family": "Chang"
+      }
+    ],
+    "DOI": "10.1007/jhep11(2022)143",
+    "type": "article-journal",
+    "id": "benjamin22",
+    "citation-key": "benjamin22",
+    "ISSN": "1029-8479",
+    "issue": "11",
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          11
+        ]
+      ]
+    },
+    "publisher": "Springer Science",
+    "title": "Scalar modular bootstrap and zeros of the Riemann zeta function",
+    "URL": "https://doi.org/10.1007/jhep11(2022)143",
+    "volume": "2022"
+  },
+  {
+    "container-title": "P-Adic Numbers, Ultrametric Analysis, and Applications",
+    "author": [
+      {
+        "given": "Yuri I.",
+        "family": "Manin"
+      }
+    ],
+    "DOI": "10.1134/S2070046613040055",
+    "type": "article-journal",
+    "id": "manin13",
+    "citation-key": "manin13",
+    "issue": "4",
+    "issued": {
+      "date-parts": [
+        [
+          2013
+        ]
+      ]
+    },
+    "page": "313-325",
+    "title": "Numbers as functions",
+    "volume": "5",
+    "ISSN": "2070-0474",
+    "URL": "https://doi.org/10.1134/S2070046613040055",
+    "abstract": "In this survey I discuss A. Buium’s theory of “differential equations in the p-adic direction” ([8]) and its interrelations with “geometry over the field 𝔽₁”, on the background of various approaches to p-adic models in theoretical physics (cf. [1, 30])."
+  },
+  {
+    "author": [
+      {
+        "given": "Alexandru",
+        "family": "Buium"
+      }
+    ],
+    "type": "book",
+    "id": "buium95",
+    "citation-key": "buium95",
+    "issued": {
+      "date-parts": [
+        [
+          1995
+        ]
+      ]
+    },
+    "publisher": "Hermann",
+    "title": "Differential Algebra and Diophantine Geometry"
+  },
+  {
+    "container-title": "Publications Mathématiques de l'IHÉS",
+    "author": [
+      {
+        "given": "Pierre",
+        "family": "Deligne"
+      }
+    ],
+    "DOI": "10.1007/BF02684373",
+    "type": "article-journal",
+    "id": "deligne74",
+    "citation-key": "deligne74",
+    "issued": {
+      "date-parts": [
+        [
+          1974
+        ]
+      ]
+    },
+    "page": "273-307",
+    "title": "La Conjecture de Weil: I",
+    "volume": "43",
+    "URL": "https://doi.org/10.1007/BF02684373"
+  },
+  {
+    "container-title": "Acta Mathematica",
+    "author": [
+      {
+        "given": "Colin",
+        "family": "Guillarmou"
+      },
+      {
+        "given": "Antti",
+        "family": "Kupiainen"
+      },
+      {
+        "given": "Rémi",
+        "family": "Rhodes"
+      },
+      {
+        "given": "Vincent",
+        "family": "Vargas"
+      }
+    ],
+    "type": "article-journal",
+    "id": "guillarmou2024conformal",
+    "citation-key": "guillarmou2024conformal",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "page": "33-194",
+    "publisher": "International Press of Boston, Inc. Somerville, MA 02143, USA",
+    "title": "Conformal bootstrap in Liouville theory",
+    "volume": "233",
+    "DOI": "10.4310/ACTA.2024.v233.n1.a2",
+    "URL": "https://doi.org/10.4310/ACTA.2024.v233.n1.a2"
+  },
+  {
+    "author": [
+      {
+        "given": "Maxim",
+        "family": "Kontsevich"
+      },
+      {
+        "given": "Don",
+        "family": "Zagier"
+      }
+    ],
+    "container-title": "Mathematics unlimited—2001 and beyond",
+    "type": "chapter",
+    "id": "kontsevich01",
+    "citation-key": "kontsevich01",
+    "issued": {
+      "date-parts": [
+        [
+          2001
+        ]
+      ]
+    },
+    "page": "771-808",
+    "publisher": "Springer",
+    "title": "Periods"
+  },
+  {
+    "container-title": "Uspekhi Matematicheskikh Nauk",
+    "author": [
+      {
+        "given": "Nikolai Mikhailovich",
+        "family": "Korobov"
+      }
+    ],
+    "type": "article-journal",
+    "id": "korobov58",
+    "citation-key": "korobov58",
+    "issue": "4",
+    "issued": {
+      "date-parts": [
+        [
+          1958
+        ]
+      ]
+    },
+    "page": "185-192",
+    "publisher": "Russian Academy of Sciences, Steklov Mathematical Institute of Russian …",
+    "title": "Estimates of trigonometric sums and their applications",
+    "volume": "13"
+  },
+  {
+    "publisher-place": "Moscow–Leningrad",
+    "container-title": "Trudy Matematicheskogo Instituta imeni V. A. Steklova",
+    "author": [
+      {
+        "given": "I. M.",
+        "family": "Vinogradov"
+      }
+    ],
+    "type": "article-journal",
+    "id": "vinogradov47",
+    "citation-key": "vinogradov47",
+    "issued": {
+      "date-parts": [
+        [
+          1947
+        ]
+      ]
+    },
+    "page": "3-109",
+    "publisher": "Acad. Sci. USSR",
+    "title": "The method of trigonometrical sums in the theory of numbers",
+    "volume": "23"
+  },
+  {
+    "author": [
+      {
+        "given": "Peter",
+        "family": "Borwein"
+      },
+      {
+        "given": "Stephen",
+        "family": "Choi"
+      },
+      {
+        "given": "Brendan",
+        "family": "Rooney"
+      },
+      {
+        "given": "Andrea",
+        "family": "Weirathmueller"
+      }
+    ],
+    "type": "book",
+    "id": "borwein08",
+    "citation-key": "borwein08",
+    "issued": {
+      "date-parts": [
+        [
+          2008
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "The Riemann hypothesis: a resource for the afficionado and virtuoso alike"
+  },
+  {
+    "container-title": "Annals of Mathematics",
+    "author": [
+      {
+        "given": "Max",
+        "family": "Zorn"
+      }
+    ],
+    "type": "article-journal",
+    "id": "zorn41",
+    "citation-key": "zorn41",
+    "ISSN": "0003486X, 19398980",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          1941
+        ]
+      ]
+    },
+    "page": "676-686",
+    "publisher": "[Annals of Mathematics, Trustees of Princeton University on Behalf of the Annals of Mathematics, Mathematics Department, Princeton University]",
+    "title": "Alternative Rings and Related Questions I: Existence of the Radical",
+    "URL": "http://www.jstor.org/stable/1969256",
+    "volume": "42"
+  },
+  {
+    "author": [
+      {
+        "given": "Jacques",
+        "family": "Dixmier"
+      }
+    ],
+    "type": "book",
+    "id": "dixmier81",
+    "citation-key": "dixmier81",
+    "issued": {
+      "date-parts": [
+        [
+          1981
+        ]
+      ]
+    },
+    "publisher": "North-Holland",
+    "title": "von Neumann Algebras"
+  },
+  {
+    "author": [
+      {
+        "family": "Arveson",
+        "given": "William"
+      }
+    ],
+    "type": "book",
+    "id": "arveson02",
+    "citation-key": "arveson02",
+    "issued": {
+      "date-parts": [
+        [
+          2002
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "A short course on spectral theory",
+    "volume": "209"
+  },
+  {
+    "author": [
+      {
+        "given": "R.",
+        "family": "Shankar"
+      }
+    ],
+    "DOI": "10.1007/978-1-4757-0576-8",
+    "edition": "2nd",
+    "type": "book",
+    "id": "shankar94",
+    "citation-key": "shankar94",
+    "issued": {
+      "date-parts": [
+        [
+          1994
+        ]
+      ]
+    },
+    "publisher": "Springer New York, NY",
+    "title": "Principles of Quantum Mechanics",
+    "URL": "https://doi.org/10.1007/978-1-4757-0576-8"
+  },
+  {
+    "author": [
+      {
+        "given": "Paul Richard",
+        "family": "Halmos"
+      }
+    ],
+    "collection-number": "2",
+    "type": "book",
+    "id": "halmos58",
+    "citation-key": "halmos58",
+    "issued": {
+      "date-parts": [
+        [
+          1958
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "Finite-dimensional vector spaces",
+    "volume": "11"
+  },
+  {
+    "author": [
+      {
+        "given": "Frigyes",
+        "family": "Riesz"
+      },
+      {
+        "given": "Béla",
+        "family": "Sz.-Nagy"
+      }
+    ],
+    "collection-number": "335",
+    "type": "book",
+    "id": "riesz55",
+    "citation-key": "riesz55",
+    "issued": {
+      "date-parts": [
+        [
+          1955
+        ]
+      ]
+    },
+    "publisher": "Frederick Ungar",
+    "title": "Functional Analysis",
+    "volume": "1",
+    "URL": "https://doi.org/10.2307/3611560",
+    "publisher-place": "New York"
+  },
+  {
+    "author": [
+      {
+        "given": "Javier",
+        "family": "Grisales Herrera"
+      }
+    ],
+    "publisher": "University of Tolima, Colombia",
+    "DOI": "10.5281/zenodo.17100303",
+    "type": "report",
+    "id": "grisales25",
+    "citation-key": "grisales25",
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          9
+        ]
+      ]
+    },
+    "title": "Golden Prime Symmetry Theory",
+    "URL": "https://doi.org/10.5281/zenodo.17100303"
+  },
+  {
+    "container-title": "Algebra & Number Theory",
+    "author": [
+      {
+        "given": "James",
+        "family": "Borger"
+      }
+    ],
+    "DOI": "10.2140/ant.2011.5.231",
+    "type": "article-journal",
+    "id": "borger11",
+    "citation-key": "borger11",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "page": "231-285",
+    "publisher": "Mathematical Sciences Publishers",
+    "title": "The basic geometry of Witt vectors, I: The affine case",
+    "volume": "5",
+    "URL": "https://doi.org/10.2140/ant.2011.5.231",
+    "note": "arXiv:0801.1691 [math.AG]"
+  },
+  {
+    "container-title": "Mathematische Annalen",
+    "author": [
+      {
+        "given": "James",
+        "family": "Borger"
+      }
+    ],
+    "type": "article-journal",
+    "id": "borger11b",
+    "citation-key": "borger11b",
+    "issue": "4",
+    "issued": {
+      "date-parts": [
+        [
+          2011,
+          12
+        ]
+      ]
+    },
+    "page": "877-933",
+    "publisher": "Springer",
+    "title": "The basic geometry of Witt vectors. II: Spaces",
+    "volume": "351",
+    "DOI": "10.1007/s00208-010-0608-1",
+    "ISSN": "1432-1807",
+    "URL": "https://doi.org/10.1007/s00208-010-0608-1",
+    "abstract": "This is an account of the algebraic geometry of Witt vectors and arithmetic jet spaces. The usual, “p-typical” Witt vectors of p-adic schemes of finite type are already reasonably well understood. The main point here is to generalize this theory in two ways. We allow not just p-typical Witt vectors but those taken with respect to any set of primes in any ring of integers in any global field, for example. This includes the “big” Witt vectors. We also allow not just p-adic schemes of finite type but arbitrary algebraic spaces over the ring of integers in the global field. We give similar generalizations of Buium’s formal arithmetic jet functor, which is dual to the Witt functor. We also give concrete geometric descriptions of Witt spaces and arithmetic jet spaces and investigate whether a number of standard geometric properties are preserved by these functors."
+  },
+  {
+    "publisher-place": "Cham",
+    "abstract": "The Riemann hypothesis is, and will hopefully remain for a long time, a great motivation to uncover and explore new parts of the mathematical world. After reviewing its impact on the development of algebraic geometry we discuss three strategies, working concretely at the level of the explicit formulas. The first strategy is “analytic” and is based on Riemannian spaces and Selberg's work on the trace formula and its comparison with the explicit formulas. The second is based on algebraic geometry and the Riemann-Roch theorem. We establish a framework in which one can transpose many of the ingredients of the Weil proof as reformulated by Mattuck, Tate and Grothendieck. This framework is elaborate and involves noncommutative geometry, Grothendieck toposes and tropical geometry. We point out the remaining difficulties and show that RH gives a strong motivation to develop algebraic geometry in the emerging world of characteristic one. Finally we briefly discuss a third strategy based on the development of a suitable “Weil cohomology”, the role of Segal's Γ-rings and of topological cyclic homology as a model for “absolute algebra” and as a cohomological tool.",
+    "author": [
+      {
+        "given": "Alain",
+        "family": "Connes"
+      }
+    ],
+    "container-title": "Open Problems in Mathematics",
+    "DOI": "10.1007/978-3-319-32162-2_5",
+    "editor": [
+      {
+        "given": "John Forbes",
+        "family": "Nash",
+        "suffix": "Jr."
+      },
+      {
+        "given": "Michael Th.",
+        "family": "Rassias"
+      }
+    ],
+    "type": "chapter",
+    "id": "connes16",
+    "citation-key": "connes16",
+    "ISBN": "978-3-319-32162-2",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "page": "225-257",
+    "publisher": "Springer International Publishing",
+    "title": "An Essay on the Riemann Hypothesis",
+    "URL": "https://doi.org/10.1007/978-3-319-32162-2_5"
+  },
+  {
+    "container-title": "Mathematische Zeitschrift",
+    "author": [
+      {
+        "given": "Javier",
+        "family": "López Peña"
+      },
+      {
+        "given": "Oliver",
+        "family": "Lorscheid"
+      }
+    ],
+    "DOI": "10.1007/s00209-009-0638-0",
+    "type": "article-journal",
+    "id": "lopezpena09torified",
+    "citation-key": "lopezpena09torified",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          2011,
+          4
+        ]
+      ]
+    },
+    "page": "605-643",
+    "title": "Torified varieties and their geometries over 𝔽₁",
+    "volume": "267",
+    "ISSN": "1432-1823",
+    "URL": "https://doi.org/10.1007/s00209-009-0638-0",
+    "abstract": "This paper invents the notion of torified varieties: A torification of a scheme is a decomposition of the scheme into split tori. A torified variety is a reduced scheme of finite type over ℤ that admits a torification. Toric varieties, split Chevalley schemes and flag varieties are examples of this type of scheme. Given a torified variety whose torification is compatible with an affine open covering, we construct a gadget in the sense of Connes–Consani and an object in the sense of Soulé and show that both are varieties over 𝔽₁ in the corresponding notion. Since toric varieties and split Chevalley schemes satisfy the compatibility condition, we shed new light on all examples of varieties over 𝔽₁ in the literature so far. Furthermore, we compare Connes–Consani’s geometry, Soulé’s geometry and Deitmar’s geometry, and we discuss to what extent Chevalley groups can be realized as group objects over 𝔽₁ in the given categories."
+  },
+  {
+    "author": [
+      {
+        "given": "Javier López",
+        "family": "Peña"
+      },
+      {
+        "given": "Oliver",
+        "family": "Lorscheid"
+      }
+    ],
+    "type": "document",
+    "id": "lopezpena09mapping",
+    "citation-key": "lopezpena09mapping",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "title": "Mapping F₁-land: An overview of geometries over the field with one element",
+    "URL": "https://arxiv.org/abs/0909.0069"
+  },
+  {
+    "author": [
+      {
+        "given": "A.",
+        "family": "Weil"
+      }
+    ],
+    "type": "book",
+    "id": "weil48",
+    "citation-key": "weil48",
+    "issued": {
+      "date-parts": [
+        [
+          1948
+        ]
+      ]
+    },
+    "publisher": "Actualités Sci. Ind. 1041",
+    "title": "Sur les courbes algébriques et les variétés qui s'en déduisent"
+  },
+  {
+    "author": [
+      {
+        "given": "Carl Friedrich",
+        "family": "Gauss"
+      }
+    ],
+    "type": "book",
+    "id": "gauss1870disquisitiones",
+    "citation-key": "gauss1870disquisitiones",
+    "issued": {
+      "date-parts": [
+        [
+          1801
+        ]
+      ]
+    },
+    "note": "Reprinted 1870 in Werke, Vol. 1",
+    "publisher": "K. Gesellschaft der Wissenschaften zu Göttingen",
+    "title": "Disquisitiones arithmeticae",
+    "volume": "1"
+  },
+  {
+    "container-title": "Notices of the International Congress of Chinese Mathematicians",
+    "author": [
+      {
+        "given": "Lizhen",
+        "family": "Ji"
+      }
+    ],
+    "type": "article-journal",
+    "id": "ji15",
+    "citation-key": "ji15",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "page": "46-73",
+    "title": "The Story of Riemann's Moduli Space",
+    "volume": "3",
+    "DOI": "10.4310/ICCM.2015.v3.n2.a5",
+    "URL": "https://dx.doi.org/10.4310/ICCM.2015.v3.n2.a5"
+  },
+  {
+    "container-title": "Nuclear Physics B",
+    "abstract": "The strong coupling dynamics of string theories in dimension d ⩾ 4 are studied. It is argued, among other things, that eleven-dimensional supergravity arises as a low energy limit of the ten-dimensional Type IIA superstring, and that a recently conjectured duality between the heterotic string and Type IIA superstrings controls the strong coupling dynamics of the heterotic string in five, six, and seven dimensions and implies S-duality for both heterotic and Type II strings.",
+    "author": [
+      {
+        "given": "Edward",
+        "family": "Witten"
+      }
+    ],
+    "DOI": "10.1016/0550-3213(95)00158-O",
+    "type": "article-journal",
+    "id": "witten95",
+    "citation-key": "witten95",
+    "ISSN": "0550-3213",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          1995
+        ]
+      ]
+    },
+    "page": "85-126",
+    "title": "String theory dynamics in various dimensions",
+    "URL": "https://doi.org/10.1016/0550-3213(95)00158-O",
+    "volume": "443"
+  },
+  {
+    "container-title": "Nuclear Physics B",
+    "author": [
+      {
+        "given": "Petr",
+        "family": "Hořava"
+      },
+      {
+        "given": "Edward",
+        "family": "Witten"
+      }
+    ],
+    "DOI": "10.1016/0550-3213(95)00621-4",
+    "type": "article-journal",
+    "id": "horavawitten96",
+    "citation-key": "horavawitten96",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          1996,
+          2
+        ]
+      ]
+    },
+    "page": "506-524",
+    "title": "Heterotic and Type I string dynamics from eleven dimensions",
+    "volume": "460",
+    "ISSN": "0550-3213",
+    "URL": "https://doi.org/10.1016/0550-3213(95)00621-4"
+  },
+  {
+    "container-title": "Letters in Mathematical Physics",
+    "author": [
+      {
+        "given": "John",
+        "family": "Huerta"
+      },
+      {
+        "given": "Urs",
+        "family": "Schreiber"
+      }
+    ],
+    "DOI": "10.1007/s11005-018-1110-z",
+    "type": "article-journal",
+    "id": "huerta2018m",
+    "citation-key": "huerta2018m",
+    "issue": "12",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          12
+        ]
+      ]
+    },
+    "page": "2695-2727",
+    "publisher": "Springer",
+    "title": "M-theory from the superpoint",
+    "URL": "https://doi.org/10.1007/s11005-018-1110-z",
+    "volume": "108",
+    "ISSN": "1573-0530",
+    "abstract": "The “brane scan” classifies consistent Green–Schwarz strings and membranes in terms of the invariant cocycles on super Minkowski spacetimes. The “brane bouquet” generalizes this by consecutively forming the invariant higher central extensions induced by these cocycles, which yields the complete fundamental brane content of string/M-theory, including the D-branes and the M5-brane, as well as the various duality relations between these. This raises the question whether the super Minkowski spacetimes themselves arise as maximal invariant central extensions. Here, we prove that they do. Starting from the simplest possible super Minkowski spacetime, the superpoint, which has no Lorentz structure and no spinorial structure, we give a systematic process of consecutive “maximal invariant central extensions” and show that it discovers the super Minkowski spacetimes that contain superstrings, culminating in the 10- and 11-dimensional super Minkowski spacetimes of string/M-theory and leading directly to the brane bouquet."
+  },
+  {
+    "publisher-place": "Berlin, Heidelberg",
+    "abstract": "Preface. Abel's name is associated with a number of key notions of modern mathematics, such as abelian varieties, Abel's integrals, etc. Moreover, it became almost synonymous with the idea of commutativity. Thus, when one speaks about abelian class field theory, one has in mind a description of extensions of a ground (say, number) field with commutative Galois group.",
+    "author": [
+      {
+        "given": "Yu. I.",
+        "family": "Manin"
+      }
+    ],
+    "container-title": "The Legacy of Niels Henrik Abel: The Abel Bicentennial, Oslo, 2002",
+    "DOI": "10.1007/978-3-642-18908-1_23",
+    "editor": [
+      {
+        "given": "Olav Arnfinn",
+        "family": "Laudal"
+      },
+      {
+        "given": "Ragni",
+        "family": "Piene"
+      }
+    ],
+    "type": "chapter",
+    "id": "manin04",
+    "citation-key": "manin04",
+    "ISBN": "978-3-642-18908-1",
+    "issued": {
+      "date-parts": [
+        [
+          2004
+        ]
+      ]
+    },
+    "page": "685-727",
+    "publisher": "Springer Berlin Heidelberg",
+    "title": "Real Multiplication and Noncommutative Geometry (ein Alterstraum)",
+    "URL": "https://doi.org/10.1007/978-3-642-18908-1_23"
+  },
+  {
+    "author": [
+      {
+        "given": "Stephen L",
+        "family": "Adler"
+      },
+      {
+        "given": "David Ritz",
+        "family": "Finkelstein"
+      }
+    ],
+    "type": "document",
+    "id": "adler1996quaternionic",
+    "citation-key": "adler1996quaternionic",
+    "issued": {
+      "date-parts": [
+        [
+          1996
+        ]
+      ]
+    },
+    "publisher": "American Institute of Physics",
+    "title": "Quaternionic quantum mechanics and quantum fields"
+  },
+  {
+    "container-title": "Bulletin of the American Mathematical Society",
+    "author": [
+      {
+        "given": "John C.",
+        "family": "Baez"
+      }
+    ],
+    "DOI": "10.1090/S0273-0979-01-00934-X",
+    "type": "article-journal",
+    "id": "baez02",
+    "citation-key": "baez02",
+    "issued": {
+      "date-parts": [
+        [
+          2002
+        ]
+      ]
+    },
+    "page": "145-205",
+    "title": "The Octonions",
+    "volume": "39",
+    "URL": "https://doi.org/10.1090/S0273-0979-01-00934-X",
+    "note": "arXiv:math/0105155 [math.RA], Erratum: Bull. Am. Math. Soc. 42, 213 (2005)"
+  },
+  {
+    "author": [
+      {
+        "given": "Bertrand",
+        "family": "Russell"
+      }
+    ],
+    "type": "book",
+    "id": "russell03",
+    "citation-key": "russell03",
+    "issued": {
+      "date-parts": [
+        [
+          1903
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "The Principles of Mathematics"
+  },
+  {
+    "container-title": "American Journal of Mathematics",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          6
+        ]
+      ]
+    },
+    "author": [
+      {
+        "given": "Bertrand",
+        "family": "Russell"
+      }
+    ],
+    "type": "article-journal",
+    "id": "russell08",
+    "citation-key": "russell08",
+    "ISSN": "00029327, 10806377",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          1908
+        ]
+      ]
+    },
+    "page": "222-262",
+    "publisher": "Johns Hopkins University Press",
+    "title": "Mathematical Logic as Based on the Theory of Types",
+    "URL": "http://www.jstor.org/stable/2369948",
+    "volume": "30",
+    "DOI": "10.2307/2369948"
+  },
+  {
+    "abstract": "The theory of types is intended to be a full-scale system for formalizing intuitionistic mathematics as developed. The language of the theory is richer than the languages of traditional intuitionistic systems in permitting proofs to appear as parts of propositions so that the propositions of the theory can express properties of proofs. There are axioms for universes that link the generation of objects and types and play somewhat the same role for the present theory as does the replacement axiom for Zermelo–Fraenkel set theory. The present theory is based on a strongly impredicative axiom that there is a type of all types in symbols. This axiom has to be abandoned, however, after it has been shown to lead to a contraction. This chapter discusses Normalization theorem, which can be strengthened in two ways: it can be made to cover open terms and it can be proved that every reduction sequence starting from an arbitrary term leads to a unique normal term after a finite number of steps. The definition of the notion of convertibility and the proof that an arbitrary term is convertible can no longer be separated because the type symbols and the terms are generated simultaneously.",
+    "author": [
+      {
+        "given": "Per",
+        "family": "Martin-Löf"
+      }
+    ],
+    "container-title": "Logic Colloquium '73",
+    "collection-title": "Studies in Logic and the Foundations of Mathematics",
+    "DOI": "10.1016/S0049-237X(08)71945-1",
+    "editor": [
+      {
+        "given": "H.E.",
+        "family": "Rose"
+      },
+      {
+        "given": "J.C.",
+        "family": "Shepherdson"
+      }
+    ],
+    "type": "chapter",
+    "id": "martinlof75",
+    "citation-key": "martinlof75",
+    "ISSN": "0049-237X",
+    "issued": {
+      "date-parts": [
+        [
+          1975
+        ]
+      ]
+    },
+    "page": "73-118",
+    "publisher": "Elsevier",
+    "title": "An Intuitionistic Theory of Types: Predicative Part",
+    "URL": "https://doi.org/10.1016/S0049-237X(08)71945-1",
+    "volume": "80"
+  },
+  {
+    "container-title": "Journal of Philosophical Logic",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          6
+        ]
+      ]
+    },
+    "author": [
+      {
+        "given": "Graham",
+        "family": "Priest"
+      }
+    ],
+    "type": "article-journal",
+    "id": "priest79",
+    "citation-key": "priest79",
+    "ISSN": "00223611, 15730433",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          1979
+        ]
+      ]
+    },
+    "page": "219-241",
+    "publisher": "Springer",
+    "title": "The Logic of Paradox",
+    "URL": "http://www.jstor.org/stable/30227165",
+    "volume": "8"
+  },
+  {
+    "container-title": "Journal of Symbolic Logic",
+    "author": [
+      {
+        "given": "Alfred",
+        "family": "Tarski"
+      }
+    ],
+    "DOI": "10.2307/2267705",
+    "type": "article-journal",
+    "id": "tarski52",
+    "citation-key": "tarski52",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          1952
+        ]
+      ]
+    },
+    "page": "207-207",
+    "publisher": "Association for Symbolic Logic",
+    "title": "A Decision Method for Elementary Algebra and Geometry",
+    "volume": "17",
+    "URL": "https://doi.org/10.2307/2267705"
+  },
+  {
+    "container-title": "The Bulletin of Symbolic Logic",
+    "author": [
+      {
+        "given": "Alfred",
+        "family": "Tarski"
+      },
+      {
+        "given": "Steven",
+        "family": "Givant"
+      }
+    ],
+    "DOI": "10.2307/421089",
+    "type": "article-journal",
+    "id": "tarskigivant99",
+    "citation-key": "tarskigivant99",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [
+          1999
+        ]
+      ]
+    },
+    "page": "175-214",
+    "title": "Tarski's system of geometry",
+    "volume": "5",
+    "URL": "https://doi.org/10.2307/421089"
+  },
+  {
+    "container-title": "The Bell System Technical Journal",
+    "author": [
+      {
+        "given": "Claude E.",
+        "family": "Shannon"
+      }
+    ],
+    "DOI": "10.1002/j.1538-7305.1948.tb01338.x",
+    "type": "article-journal",
+    "id": "shannon48",
+    "citation-key": "shannon48",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          1948
+        ]
+      ]
+    },
+    "page": "379-423",
+    "title": "A mathematical theory of communication",
+    "volume": "27",
+    "URL": "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
+  },
+  {
+    "number-of-pages": "4",
+    "abstract": "We consider the first-order theory whose language has as nonlogical symbols the constant symbols 0 and 1, the binary relation symbols = and <, the unary function symbol − and the binary function symbol +This theory of integers under addition is commonly called the 'Presburger Arithmetic' and is known to be decidable for truth [Presburger (1929), Hilbert and Bernays (1968)]. We prove here that there exists a decision procedure for this theory, involving quantifier elimination, for which there is a superexponential upper bound on the size of formula produced when all variables have been eliminated.",
+    "author": [
+      {
+        "given": "Derek C.",
+        "family": "Oppen"
+      }
+    ],
+    "container-title": "Proceedings of the Fifth Annual ACM Symposium on Theory of Computing",
+    "collection-title": "STOC '73",
+    "DOI": "10.1145/800125.804033",
+    "type": "paper-conference",
+    "id": "presburger29",
+    "citation-key": "presburger29",
+    "ISBN": "9781450374309",
+    "issued": {
+      "date-parts": [
+        [
+          1973
+        ]
+      ]
+    },
+    "page": "34-37",
+    "publisher-place": "Austin, Texas, USA",
+    "publisher": "Association for Computing Machinery",
+    "title": "Elementary bounds for presburger arithmetic",
+    "URL": "https://doi.org/10.1145/800125.804033"
+  },
+  {
+    "author": [
+      {
+        "given": "Thoralf",
+        "family": "Skolem"
+      }
+    ],
+    "collection-title": "Skrifter utgitt av det Norske Videnskaps-Akademi i Oslo, I. Matematisk-Naturvidenskapelig Klasse",
+    "type": "book",
+    "id": "skolem31",
+    "citation-key": "skolem31",
+    "issued": {
+      "date-parts": [
+        [
+          1931
+        ]
+      ]
+    },
+    "publisher": "Dybwad",
+    "title": "Über einige Satzfunktionen in der Arithmetik",
+    "URL": "https://books.google.com.mx/books?id=oODfcQAACAAJ"
+  },
+  {
+    "container-title": "Comptes Rendus de l'Académie des Sciences",
+    "author": [
+      {
+        "given": "Godfrey H.",
+        "family": "Hardy"
+      }
+    ],
+    "type": "article-journal",
+    "id": "hardy14",
+    "citation-key": "hardy14",
+    "issued": {
+      "date-parts": [
+        [
+          1914
+        ]
+      ]
+    },
+    "page": "1012-1014",
+    "title": "Sur les zéros de la fonction ζ(s) de Riemann",
+    "volume": "158"
+  },
+  {
+    "author": [
+      {
+        "given": "Jacques",
+        "family": "Tits"
+      }
+    ],
+    "container-title": "Colloque d’algebre supérieure, tenua Bruxelles du",
+    "type": "paper-conference",
+    "id": "tits56",
+    "citation-key": "tits56",
+    "issued": {
+      "date-parts": [
+        [
+          1956
+        ]
+      ]
+    },
+    "page": "261-289",
+    "title": "Sur les analogues algébriques des groupes semi-simples complexes",
+    "volume": "19"
+  },
+  {
+    "author": [
+      {
+        "given": "Christophe",
+        "family": "Soulé"
+      }
+    ],
+    "type": "document",
+    "id": "soule03",
+    "citation-key": "soule03",
+    "issued": {
+      "date-parts": [
+        [
+          2003
+        ]
+      ]
+    },
+    "title": "Les variétés sur le corps à un élément",
+    "URL": "https://arxiv.org/abs/math/0304444"
+  },
+  {
+    "author": [
+      {
+        "given": "Nicholas M.",
+        "family": "Katz"
+      },
+      {
+        "given": "Peter",
+        "family": "Sarnak"
+      }
+    ],
+    "type": "book",
+    "id": "katz99",
+    "citation-key": "katz99",
+    "issued": {
+      "date-parts": [
+        [
+          1999
+        ]
+      ]
+    },
+    "publisher": "American Mathematical Society",
+    "title": "Random Matrices, Frobenius Eigenvalues, and Monodromy"
+  },
+  {
+    "container-title": "Physical Review D",
+    "number-of-pages": "0",
+    "author": [
+      {
+        "given": "Jacob D.",
+        "family": "Bekenstein"
+      }
+    ],
+    "DOI": "10.1103/PhysRevD.7.2333",
+    "type": "article-journal",
+    "id": "bekenstein73",
+    "citation-key": "bekenstein73",
+    "issue": "8",
+    "issued": {
+      "date-parts": [
+        [
+          1973,
+          4
+        ]
+      ]
+    },
+    "page": "2333-2346",
+    "publisher": "American Physical Society",
+    "title": "Black Holes and Entropy",
+    "URL": "https://doi.org/10.1103/PhysRevD.7.2333",
+    "volume": "7"
+  },
+  {
+    "container-title": "Communications in Mathematical Physics",
+    "author": [
+      {
+        "given": "Stephen W.",
+        "family": "Hawking"
+      }
+    ],
+    "type": "article-journal",
+    "id": "hawking75",
+    "citation-key": "hawking75",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          1975
+        ]
+      ]
+    },
+    "page": "199-220",
+    "title": "Particle creation by black holes",
+    "volume": "43"
+  },
+  {
+    "container-title": "SIAM Review",
+    "abstract": " Comparison between formulae for the counting functions of the heights tn of the Riemann zeros and of semiclassical quantum eigenvalues En suggests that the tn are eigenvalues of an (unknown) hermitean operator H, obtained by quantizing a classical dynamical system with hamiltonian Hcl . Many features of Hcl are provided by the analogy; for example, the \"Riemann dynamics\" should be chaotic and have periodic orbits whose periods are multiples of logarithms of prime numbers. Statistics of the tn have a similar structure to those of the semiclassical En; in particular, they display random-matrix universality at short range, and nonuniversal behaviour over longer ranges. Very refined features of the statistics of the tn can be computed accurately from formulae with quantum analogues. The Riemann-Siegel formula for the zeta function is described in detail. Its interpretation as a relation between long and short periodic orbits gives further insights into the quantum spectral fluctuations. We speculate that the Riemann dynamics is related to the trajectories generated by the classical hamiltonian Hcl =XP. ",
+    "author": [
+      {
+        "given": "M. V.",
+        "family": "Berry"
+      },
+      {
+        "given": "J. P.",
+        "family": "Keating"
+      }
+    ],
+    "DOI": "10.1137/S0036144598347497",
+    "type": "article-journal",
+    "id": "berry99",
+    "citation-key": "berry99",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [
+          1999
+        ]
+      ]
+    },
+    "page": "236-266",
+    "title": "The Riemann Zeros and Eigenvalue Asymptotics",
+    "URL": "https://doi.org/10.1137/S0036144598347497",
+    "volume": "41"
+  },
+  {
+    "container-title": "Physical Review Letters",
+    "number-of-pages": "5",
+    "author": [
+      {
+        "given": "Carl M.",
+        "family": "Bender"
+      },
+      {
+        "given": "Dorje C.",
+        "family": "Brody"
+      },
+      {
+        "given": "Markus P.",
+        "family": "Müller"
+      }
+    ],
+    "DOI": "10.1103/PhysRevLett.118.130201",
+    "type": "article-journal",
+    "id": "bender17",
+    "citation-key": "bender17",
+    "issue": "13",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          3
+        ]
+      ]
+    },
+    "page": "130201",
+    "publisher": "American Physical Society",
+    "title": "Hamiltonian for the Zeros of the Riemann Zeta Function",
+    "URL": "https://doi.org/10.1103/PhysRevLett.118.130201",
+    "volume": "118"
+  },
+  {
+    "author": [
+      {
+        "given": "Gerard",
+        "family": "Geer",
+        "non-dropping-particle": "van der"
+      },
+      {
+        "given": "Frans",
+        "family": "Oort"
+      },
+      {
+        "given": "Joseph H. M.",
+        "family": "Steenbrink"
+      }
+    ],
+    "collection-title": "Progress in Mathematics",
+    "DOI": "10.1007/978-1-4612-0457-2",
+    "type": "book",
+    "id": "oort91",
+    "citation-key": "oort91",
+    "issued": {
+      "date-parts": [
+        [
+          1991
+        ]
+      ]
+    },
+    "publisher": "Birkhäuser Boston, MA",
+    "title": "Arithmetic Algebraic Geometry",
+    "URL": "https://doi.org/10.1007/978-1-4612-0457-2",
+    "volume": "89"
+  },
+  {
+    "publisher-place": "Charleston, USA",
+    "author": [
+      {
+        "given": "James S.",
+        "family": "Milne"
+      }
+    ],
+    "edition": "2nd",
+    "type": "book",
+    "id": "milne2006arithmetic",
+    "citation-key": "milne2006arithmetic",
+    "issued": {
+      "date-parts": [
+        [
+          2006
+        ]
+      ]
+    },
+    "publisher": "BookSurge, LLC",
+    "title": "Arithmetic Duality Theorems"
+  },
+  {
+    "author": [
+      {
+        "given": "James S.",
+        "family": "Milne"
+      }
+    ],
+    "type": "document",
+    "id": "milne2025arithmeticduality",
+    "citation-key": "milne2025arithmeticduality",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "title": "Arithmetic Duality",
+    "URL": "https://arxiv.org/abs/2509.13016"
+  },
+  {
+    "author": [
+      {
+        "given": "Vaughan",
+        "family": "Hart"
+      },
+      {
+        "given": "Peter",
+        "family": "Hicks"
+      }
+    ],
+    "type": "book",
+    "id": "harthicks98",
+    "citation-key": "harthicks98",
+    "issued": {
+      "date-parts": [
+        [
+          1998
+        ]
+      ]
+    },
+    "publisher": "Yale University Press",
+    "title": "Paper Palaces: Rise of the Renaissance Architectural Treatise"
+  },
+  {
+    "container-title": "J. École Polytech.",
+    "author": [
+      {
+        "given": "Auguste",
+        "family": "Bravais"
+      }
+    ],
+    "type": "article-journal",
+    "id": "bravais48",
+    "citation-key": "bravais48",
+    "issued": {
+      "date-parts": [
+        [
+          1850
+        ]
+      ]
+    },
+    "page": "1-128",
+    "title": "Mémoire sur les systèmes formés par des points distribués régulièrement sur un plan ou dans l'espace",
+    "volume": "19"
+  },
+  {
+    "author": [
+      {
+        "given": "John J.",
+        "family": "O'Connor"
+      },
+      {
+        "given": "Edmund F.",
+        "family": "Robertson"
+      }
+    ],
+    "type": "document",
+    "id": "mactutor_argand",
+    "citation-key": "mactutor_argand",
+    "issued": {
+      "date-parts": [
+        [
+          2000
+        ]
+      ]
+    },
+    "publisher": "MacTutor History of Mathematics Archive. University of St Andrews",
+    "title": "Jean-Robert Argand",
+    "URL": "https://mathshistory.st-andrews.ac.uk/Biographies/Argand/"
+  },
+  {
+    "container-title": "Physics Letters B",
+    "abstract": "We develop a formalism for computing sums over random surfaces which arise in all problems containing gauge invariance (like QCD, three-dimensional Ising model etc.). These sums are reduced to the exactly solvable quantum theory of the two-dimensional Liouville lagrangian. At D = 26 the string dynamics is that of harmonic oscillators as was predicted earlier by dual theorists, otherwise it is described by the nonlinear integrable theory.",
+    "author": [
+      {
+        "given": "A.M.",
+        "family": "Polyakov"
+      }
+    ],
+    "DOI": "10.1016/0370-2693(81)90743-7",
+    "type": "article-journal",
+    "id": "polyakov81",
+    "citation-key": "polyakov81",
+    "ISSN": "0370-2693",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          1981
+        ]
+      ]
+    },
+    "page": "207-210",
+    "title": "Quantum geometry of bosonic strings",
+    "URL": "https://doi.org/10.1016/0370-2693(81)90743-7",
+    "volume": "103"
+  },
+  {
+    "container-title": "Journal of High Energy Physics",
+    "abstract": "We study toroidal compactification of Matrix theory, using ideas and results of non-commutative geometry. We generalize this to compactification on the noncommutative torus, explain the classification of these backgrounds, and argue that they correspond in supergravity to tori with constant background three-form tensor field. The paper includes an introduction for mathematicians to the IKKT formulation of Matrix theory and its relation to the BFSS Matrix theory.",
+    "author": [
+      {
+        "given": "Alain",
+        "family": "Connes"
+      },
+      {
+        "given": "Michael R.",
+        "family": "Douglas"
+      },
+      {
+        "given": "Albert",
+        "family": "Schwarz"
+      }
+    ],
+    "DOI": "10.1088/1126-6708/1998/02/003",
+    "type": "article-journal",
+    "id": "connes98",
+    "citation-key": "connes98",
+    "issue": "02",
+    "issued": {
+      "date-parts": [
+        [
+          1998,
+          2
+        ]
+      ]
+    },
+    "page": "003",
+    "title": "Noncommutative Geometry and Matrix Theory: Compactification on Tori",
+    "URL": "https://doi.org/10.1088/1126-6708/1998/02/003",
+    "volume": "1998"
+  },
+  {
+    "author": [
+      {
+        "given": "A.",
+        "family": "Connes"
+      }
+    ],
+    "type": "book",
+    "id": "connes95",
+    "citation-key": "connes95",
+    "ISBN": "9780080571751",
+    "issued": {
+      "date-parts": [
+        [
+          1995
+        ]
+      ]
+    },
+    "publisher": "Academic Press",
+    "title": "Noncommutative Geometry"
+  },
+  {
+    "author": [
+      {
+        "given": "Alain",
+        "family": "Connes"
+      },
+      {
+        "given": "Caterina",
+        "family": "Consani"
+      }
+    ],
+    "type": "document",
+    "id": "connes08",
+    "citation-key": "connes08",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "title": "On the notion of geometry over 𝔽₁",
+    "URL": "https://arxiv.org/abs/0809.2926"
+  },
+  {
+    "author": [
+      {
+        "given": "Alexandru",
+        "family": "Buium"
+      }
+    ],
+    "collection-title": "Mathematical Surveys and Monographs",
+    "type": "book",
+    "id": "buium05",
+    "citation-key": "buium05",
+    "issued": {
+      "date-parts": [
+        [
+          2005
+        ]
+      ]
+    },
+    "publisher": "American Mathematical Society",
+    "title": "Arithmetic Differential Equations",
+    "volume": "118"
+  },
+  {
+    "author": [
+      {
+        "given": "Michael",
+        "family": "Artin"
+      },
+      {
+        "given": "Alexandre",
+        "family": "Grothendieck"
+      },
+      {
+        "given": "Jean-Louis",
+        "family": "Verdier"
+      }
+    ],
+    "collection-title": "Lecture Notes in Mathematics",
+    "type": "book",
+    "id": "grothendieck_sga4",
+    "citation-key": "grothendieck_sga4",
+    "issued": {
+      "date-parts": [
+        [
+          1972
+        ]
+      ]
+    },
+    "publisher": "Springer-Verlag",
+    "title": "Théorie des Topos et Cohomologie Étale des Schémas (SGA 4)",
+    "volume": "269, 270, 305"
+  },
+  {
+    "container-title": "Abhandlungen der Preußischen Akademie der Wissenschaften",
+    "author": [
+      {
+        "given": "Oswald",
+        "family": "Teichmüller"
+      }
+    ],
+    "type": "article-journal",
+    "id": "teichmuller39",
+    "citation-key": "teichmuller39",
+    "issued": {
+      "date-parts": [
+        [
+          1939
+        ]
+      ]
+    },
+    "page": "1-197",
+    "title": "Extremale quasikonforme Abbildungen und quadratische Differentiale",
+    "URL": "https://cir.nii.ac.jp/crid/1570291224319453568",
+    "volume": "22"
+  },
+  {
+    "author": [
+      {
+        "given": "Michael",
+        "family": "Reed"
+      },
+      {
+        "given": "Barry",
+        "family": "Simon"
+      }
+    ],
+    "container-title": "Methods of Modern Mathematical Physics",
+    "DOI": "10.1016/B978-0-12-585001-8.50014-3",
+    "editor": [
+      {
+        "given": "Michael",
+        "family": "Reed"
+      },
+      {
+        "given": "Barry",
+        "family": "Simon"
+      }
+    ],
+    "type": "chapter",
+    "id": "REED1972249",
+    "citation-key": "REED1972249",
+    "ISBN": "978-0-12-585001-8",
+    "issued": {
+      "date-parts": [
+        [
+          1972
+        ]
+      ]
+    },
+    "page": "249-317",
+    "publisher": "Academic Press",
+    "title": "VIII - Unbounded Operators",
+    "URL": "https://doi.org/10.1016/B978-0-12-585001-8.50014-3"
+  },
+  {
+    "container-title": "Publications Mathématiques de l'IHÉS",
+    "author": [
+      {
+        "given": "Alexander",
+        "family": "Grothendieck"
+      }
+    ],
+    "type": "article-journal",
+    "id": "grothendieck1960elements",
+    "citation-key": "grothendieck1960elements",
+    "issued": {
+      "date-parts": [
+        [
+          1960
+        ]
+      ]
+    },
+    "page": "5-228",
+    "title": "Éléments de géométrie algébrique: I. Le langage des schémas",
+    "volume": "4"
+  },
+  {
+    "container-title": "Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften zu Berlin",
+    "author": [
+      {
+        "given": "Ferdinand Georg",
+        "family": "Frobenius"
+      }
+    ],
+    "type": "article-journal",
+    "id": "frobenius1896",
+    "citation-key": "frobenius1896",
+    "issued": {
+      "date-parts": [
+        [
+          1896
+        ]
+      ]
+    },
+    "page": "985-1021",
+    "title": "Über die Gruppencharaktere"
+  },
+  {
+    "container-title": "Journal für die reine und angewandte Mathematik",
+    "author": [
+      {
+        "given": "Ferdinand Georg",
+        "family": "Frobenius"
+      }
+    ],
+    "type": "article-journal",
+    "id": "frobenius1878",
+    "citation-key": "frobenius1878",
+    "issued": {
+      "date-parts": [
+        [
+          1878
+        ]
+      ]
+    },
+    "page": "1-63",
+    "title": "Ueber lineare Substitutionen und bilineare Formen",
+    "volume": "84"
+  },
+  {
+    "container-title": "International Journal of Theoretical Physics",
+    "author": [
+      {
+        "given": "Juan",
+        "family": "Maldacena"
+      }
+    ],
+    "DOI": "10.1023/A:1026654312961",
+    "type": "article-journal",
+    "id": "maldacena98",
+    "citation-key": "maldacena98",
+    "issue": "4",
+    "issued": {
+      "date-parts": [
+        [
+          1999,
+          4
+        ]
+      ]
+    },
+    "page": "1113-1133",
+    "title": "The Large-ℕ Limit of Superconformal Field Theories and Supergravity",
+    "volume": "38",
+    "ISSN": "1572-9575",
+    "URL": "https://doi.org/10.1023/A:1026654312961",
+    "abstract": "We show that the large-ℕ limits of certain conformal field theories in various dimensions include in their Hilbert space a sector describing supergravity on the product of anti-de Sitter spacetimes, spheres, and other compact manifolds. This is shown by taking some branes in the full M/string theory and then taking a low-energy limit where the field theory on the brane decouples from the bulk. We observe that, in this limit, we can still trust the near-horizon geometry for large ℕ. The enhanced supersymmetries of the near-horizon geometry correspond to the extra supersymmetry generators present in the superconformal group (as opposed to just the super-Poincare group). The 't Hooft limit of 3 + 1 ℕ = 4 super-Yang–Mills at the conformal point is shown to contain strings: they are IIB strings. We conjecture that compactifications of M/string theory on various anti-de Sitter spacetimes is dual to various conformal field theories. This leads to a new proposal for a definition of M-theory which could be extended to include five noncompact dimensions."
+  },
+  {
+    "author": [
+      {
+        "given": "Yuri I.",
+        "family": "Manin"
+      }
+    ],
+    "type": "document",
+    "id": "manin09",
+    "citation-key": "manin09",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "title": "Cyclotomy and analytic geometry over 𝔽₁",
+    "URL": "https://arxiv.org/abs/0809.1564"
+  },
+  {
+    "container-title": "Forum of Mathematics, Sigma",
+    "author": [
+      {
+        "given": "Oliver",
+        "family": "Lorscheid"
+      }
+    ],
+    "DOI": "10.1017/fms.2018.17",
+    "type": "article-journal",
+    "id": "lorscheid18",
+    "citation-key": "lorscheid18",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "page": "e20",
+    "title": "The geometry of blueprints. Part II: Tits–Weyl models of algebraic groups",
+    "volume": "6",
+    "URL": "https://doi.org/10.1017/fms.2018.17"
+  },
+  {
+    "author": [
+      {
+        "given": "James S.",
+        "family": "Milne"
+      }
+    ],
+    "type": "document",
+    "id": "milne15",
+    "citation-key": "milne15",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "title": "The Riemann Hypothesis over Finite Fields: From Weil to the Present Day",
+    "URL": "https://arxiv.org/abs/1509.00797"
+  },
+  {
+    "container-title": "Journal für die reine und angewandte Mathematik",
+    "author": [
+      {
+        "given": "B.",
+        "family": "Riemann"
+      }
+    ],
+    "DOI": "10.1515/crll.1857.54.115",
+    "type": "article-journal",
+    "id": "riemann1857",
+    "citation-key": "riemann1857",
+    "issue": "54",
+    "issued": {
+      "date-parts": [
+        [
+          1857
+        ]
+      ]
+    },
+    "page": "115-155",
+    "title": "Theorie der Abel'schen Functionen.",
+    "URL": "https://doi.org/doi:10.1515/crll.1857.54.115",
+    "volume": "54"
+  },
+  {
+    "container-title": "Monatsberichte der Königlichen Preußischen Akademie der Wissenschaften zu Berlin",
+    "author": [
+      {
+        "given": "Bernhard",
+        "family": "Riemann"
+      }
+    ],
+    "type": "article-journal",
+    "id": "riemann1859",
+    "citation-key": "riemann1859",
+    "issued": {
+      "date-parts": [
+        [
+          1859
+        ]
+      ]
+    },
+    "page": "671-680",
+    "title": "Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse"
+  },
+  {
+    "author": [
+      {
+        "given": "William Rowan",
+        "family": "Hamilton"
+      }
+    ],
+    "type": "book",
+    "id": "hamilton",
+    "citation-key": "hamilton",
+    "issued": {
+      "date-parts": [
+        [
+          1866
+        ]
+      ]
+    },
+    "publisher": "London: Longmans, Green, & Company",
+    "title": "Elements of quaternions"
+  },
+  {
+    "container-title": "Comptes Rendus. Mathématique",
+    "author": [
+      {
+        "given": "Alain",
+        "family": "Connes"
+      },
+      {
+        "given": "Caterina",
+        "family": "Consani"
+      }
+    ],
+    "DOI": "10.1016/j.crma.2014.07.009",
+    "type": "article-journal",
+    "id": "connes14",
+    "citation-key": "connes14",
+    "issue": "12",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "language": "en",
+    "page": "971-975",
+    "publisher": "Elsevier",
+    "title": "The Arithmetic Site",
+    "URL": "https://doi.org/10.1016/j.crma.2014.07.009",
+    "volume": "352"
+  },
+  {
+    "container-title": "Selecta Mathematica",
+    "author": [
+      {
+        "given": "Alain",
+        "family": "Connes"
+      }
+    ],
+    "type": "article-journal",
+    "id": "connes99",
+    "citation-key": "connes99",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          1999
+        ]
+      ]
+    },
+    "page": "29-106",
+    "publisher": "Springer",
+    "title": "Trace formula in noncommutative geometry and the zeros of the Riemann zeta function",
+    "volume": "5"
+  },
+  {
+    "publisher-place": "Berlin-New York",
+    "author": [
+      {
+        "given": "Dennis A.",
+        "family": "Hejhal"
+      }
+    ],
+    "collection-title": "Lecture Notes in Mathematics",
+    "type": "book",
+    "id": "hejhal1976selberg",
+    "citation-key": "hejhal1976selberg",
+    "issued": {
+      "date-parts": [
+        [
+          1976
+        ]
+      ]
+    },
+    "publisher": "Springer-Verlag",
+    "title": "The Selberg Trace Formula for PSL(2,ℝ). Vol. I",
+    "volume": "548"
+  },
+  {
+    "author": [
+      {
+        "given": "Nelson",
+        "family": "Dunford"
+      },
+      {
+        "given": "Jacob T",
+        "family": "Schwartz"
+      }
+    ],
+    "type": "book",
+    "id": "dunford58",
+    "citation-key": "dunford58",
+    "issued": {
+      "date-parts": [
+        [
+          1958
+        ]
+      ]
+    },
+    "note": "Reprinted 1988",
+    "publisher": "John Wiley & Sons",
+    "title": "Linear operators, part 1: general theory"
+  },
+  {
+    "author": [
+      {
+        "given": "Israil",
+        "family": "Gelfand"
+      },
+      {
+        "given": "Dimitri",
+        "family": "Raikov"
+      },
+      {
+        "given": "Georgii",
+        "family": "Shilov"
+      }
+    ],
+    "type": "book",
+    "id": "gelfand41",
+    "citation-key": "gelfand41",
+    "issued": {
+      "date-parts": [
+        [
+          1941
+        ]
+      ]
+    },
+    "publisher": "American Mathematical Society",
+    "title": "Commutative normed rings",
+    "volume": "170"
+  },
+  {
+    "container-title": "Monatshefte für mathematik und physik",
+    "author": [
+      {
+        "given": "Kurt",
+        "family": "Gödel"
+      }
+    ],
+    "type": "article-journal",
+    "id": "godel31",
+    "citation-key": "godel31",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          1931
+        ]
+      ]
+    },
+    "page": "173-198",
+    "publisher": "Springer",
+    "title": "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I",
+    "volume": "38"
+  },
+  {
+    "author": [
+      {
+        "given": "Lars",
+        "family": "Hesselholt"
+      },
+      {
+        "given": "Ib",
+        "family": "Madsen"
+      }
+    ],
+    "type": "book",
+    "id": "hesselholt1995k",
+    "citation-key": "hesselholt1995k",
+    "issued": {
+      "date-parts": [
+        [
+          1995
+        ]
+      ]
+    },
+    "publisher": "Aarhus Universitet. Matematisk Institut",
+    "title": "On the K-theory of finite algebras over Witt vectors of perfect fields"
+  },
+  {
+    "container-title": "Mathematische Annalen",
+    "author": [
+      {
+        "given": "Heinz",
+        "family": "Hopf"
+      }
+    ],
+    "DOI": "10.1007/BF01457962",
+    "type": "article-journal",
+    "id": "hopf31",
+    "citation-key": "hopf31",
+    "issued": {
+      "date-parts": [
+        [
+          1931
+        ]
+      ]
+    },
+    "page": "637-665",
+    "title": "Über die Abbildungen der dreidimensionalen Sphäre auf die Kugelfläche",
+    "URL": "https://doi.org/10.1007/BF01457962",
+    "volume": "104"
+  },
+  {
+    "container-title": "Annals of Mathematics",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          5
+        ]
+      ]
+    },
+    "author": [
+      {
+        "given": "J. F.",
+        "family": "Adams"
+      }
+    ],
+    "type": "article-journal",
+    "id": "adams60",
+    "citation-key": "adams60",
+    "DOI": "10.2307/1970147",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          1960
+        ]
+      ]
+    },
+    "page": "20-104",
+    "title": "On the Non-Existence of Elements of Hopf Invariant One",
+    "volume": "72",
+    "URL": "https://doi.org/10.2307/1970147"
+  },
+  {
+    "container-title": "Journal of Geometry and Physics",
+    "abstract": "It is pointed out that the Hopf fibration—a special but very basic non-trivial principal fiber bundle—occurs in at least seven different situations in theoretical physics in various guises. Surprisingly, the gauge theory aspect is in the minority here.",
+    "author": [
+      {
+        "given": "H.K.",
+        "family": "Urbantke"
+      }
+    ],
+    "DOI": "10.1016/S0393-0440(02)00121-3",
+    "type": "article-journal",
+    "id": "urbantke03",
+    "citation-key": "urbantke03",
+    "ISSN": "0393-0440",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [
+          2003
+        ]
+      ]
+    },
+    "keyword": "Hopf fibration,Quantum mechanics",
+    "page": "125-150",
+    "title": "The Hopf fibration—seven times in physics",
+    "URL": "https://doi.org/10.1016/S0393-0440(02)00121-3",
+    "volume": "46"
+  },
+  {
+    "container-title": "Journal of Physics A: Mathematical and General",
+    "abstract": "We discuss a generalization of the standard Bloch sphere representation for a single qubit to two qubits, in the framework of Hopf fibrations of high-dimensional spheres by lower dimensional spheres. The single-qubit Hilbert space is the three-dimensional sphere S 3. The S 2 base space of a suitably oriented S 3 Hopf fibration is nothing but the Bloch sphere, while the circular fibres represent the overall qubit phase degree of freedom. For the two-qubits case, the Hilbert space is a seven-dimensional sphere S 7, which also allows for a Hopf fibration, with S 3 fibres and a S 4 base. The most striking result is that suitably oriented S 7 Hopf fibrations are entanglement sensitive. The relation with the standard Schmidt decomposition is also discussed.",
+    "author": [
+      {
+        "given": "Rémy",
+        "family": "Mosseri"
+      },
+      {
+        "given": "Rossen",
+        "family": "Dandoloff"
+      }
+    ],
+    "DOI": "10.1088/0305-4470/34/47/324",
+    "type": "article-journal",
+    "id": "mosseri01",
+    "citation-key": "mosseri01",
+    "issue": "47",
+    "issued": {
+      "date-parts": [
+        [
+          2001,
+          11
+        ]
+      ]
+    },
+    "page": "10243",
+    "title": "Geometry of entangled states, Bloch spheres and Hopf fibrations",
+    "URL": "https://doi.org/10.1088/0305-4470/34/47/324",
+    "volume": "34"
+  },
+  {
+    "container-title": "Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse",
+    "author": [
+      {
+        "given": "Adolf",
+        "family": "Hurwitz"
+      }
+    ],
+    "type": "article-journal",
+    "id": "hurwitz98",
+    "citation-key": "hurwitz98",
+    "issued": {
+      "date-parts": [
+        [
+          1898
+        ]
+      ]
+    },
+    "page": "309-316",
+    "title": "Über die Composition der quadratischen Formen"
+  },
+  {
+    "container-title": "Annals of Mathematics",
+    "author": [
+      {
+        "given": "Jean-Pierre",
+        "family": "Serre"
+      }
+    ],
+    "type": "article-journal",
+    "id": "serre55",
+    "citation-key": "serre55",
+    "ISSN": "0003486X, 19398980",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [
+          1955
+        ]
+      ]
+    },
+    "page": "197-278",
+    "publisher": "[Annals of Mathematics, Trustees of Princeton University on Behalf of the Annals of Mathematics, Mathematics Department, Princeton University]",
+    "title": "Faisceaux Algébriques Cohérents",
+    "URL": "http://www.jstor.org/stable/1969915",
+    "volume": "61"
+  },
+  {
+    "container-title": "Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg",
+    "author": [
+      {
+        "given": "Emil",
+        "family": "Artin"
+      }
+    ],
+    "DOI": "10.1007/BF02954618",
+    "type": "article-journal",
+    "id": "artin24",
+    "citation-key": "artin24",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          1924
+        ]
+      ]
+    },
+    "page": "89-108",
+    "title": "Über eine neue Art von L-Reihen",
+    "URL": "https://doi.org/10.1007/BF02954618",
+    "volume": "3"
+  },
+  {
+    "container-title": "Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg",
+    "author": [
+      {
+        "given": "Emil",
+        "family": "Artin"
+      }
+    ],
+    "DOI": "10.1007/BF02952531",
+    "type": "article-journal",
+    "id": "artin27",
+    "citation-key": "artin27",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          1927
+        ]
+      ]
+    },
+    "page": "353-363",
+    "title": "Beweis des allgemeinen Reziprozitätsgesetzes",
+    "URL": "https://doi.org/10.1007/BF02952531",
+    "volume": "5"
+  },
+  {
+    "container-title": "Functional Analysis and Its Applications",
+    "author": [
+      {
+        "given": "Vladimir G.",
+        "family": "Drinfel'd"
+      }
+    ],
+    "DOI": "10.1007/BF01079470",
+    "type": "article-journal",
+    "id": "drinfeld77",
+    "citation-key": "drinfeld77",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          1977
+        ]
+      ]
+    },
+    "page": "223-225",
+    "title": "Proof of the global Langlands conjecture for GL(2) over a function field",
+    "URL": "https://doi.org/10.1007/BF01079470",
+    "volume": "11"
+  },
+  {
+    "container-title": "Inventiones mathematicae",
+    "abstract": "On démontre la correspondance de Langlands pour GL<sub>r</sub> sur les corps de fonctions. La preuve généralise celle de Drinfeld en rang 2 : elle consiste à réaliser la correspondance en rang r dans la cohomologie ℓ-adique des variétés modulaires de chtoucas de Drinfeld de rang r.",
+    "author": [
+      {
+        "given": "Laurent",
+        "family": "Lafforgue"
+      }
+    ],
+    "DOI": "10.1007/s002220100174",
+    "type": "article-journal",
+    "id": "lafforgue02",
+    "citation-key": "lafforgue02",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          2002
+        ]
+      ]
+    },
+    "page": "1-241",
+    "title": "Chtoucas de Drinfeld et correspondance de Langlands",
+    "URL": "https://doi.org/10.1007/s002220100174",
+    "volume": "147"
+  },
+  {
+    "author": [
+      {
+        "given": "Vincent",
+        "family": "Lafforgue"
+      }
+    ],
+    "type": "document",
+    "id": "vlafforgue18",
+    "citation-key": "vlafforgue18",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "title": "Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale",
+    "URL": "https://arxiv.org/abs/1209.5352"
+  },
+  {
+    "container-title": "Jahresbericht der Deutschen Mathematiker-Vereinigung",
+    "author": [
+      {
+        "given": "Ulrich",
+        "family": "Görtz"
+      }
+    ],
+    "DOI": "10.1365/s13291-014-0088-4",
+    "type": "article-journal",
+    "id": "goertz14",
+    "citation-key": "goertz14",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "page": "123-128",
+    "title": "James Arthur: “The Endoscopic Classification of Representations. Orthogonal and Symplectic Groups”",
+    "volume": "116",
+    "URL": "https://doi.org/10.1365/s13291-014-0088-4"
+  },
+  {
+    "container-title": "Nieuw Archief voor Wiskunde",
+    "author": [
+      {
+        "given": "Frans",
+        "family": "Oort"
+      }
+    ],
+    "collection-title": "5",
+    "type": "article-journal",
+    "id": "oort14",
+    "citation-key": "oort14",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "page": "211-219",
+    "title": "The Weil conjectures",
+    "volume": "15"
+  },
+  {
+    "author": [
+      {
+        "given": "James",
+        "family": "Arthur"
+      }
+    ],
+    "container-title": "Orbites unipotentes et représentations, II",
+    "type": "chapter",
+    "id": "arthur89",
+    "citation-key": "arthur89",
+    "issued": {
+      "date-parts": [
+        [
+          1989
+        ]
+      ]
+    },
+    "page": "13-71",
+    "publisher": "Société Mathématique de France",
+    "title": "Unipotent automorphic representations: conjectures",
+    "volume": "171--172"
+  },
+  {
+    "author": [
+      {
+        "given": "J. Brian",
+        "family": "Conrey"
+      }
+    ],
+    "type": "document",
+    "id": "conrey15",
+    "citation-key": "conrey15",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "publisher": "American Institute of Mathematics",
+    "title": "Riemann's Hypothesis",
+    "URL": "https://aimath.org/~kaur/publicystuff/conrey-rh.pdf"
+  },
+  {
+    "container-title": "Preprint",
+    "author": [
+      {
+        "given": "Jorge Armando",
+        "family": "González García"
+      },
+      {
+        "given": "Víctor Manuel",
+        "family": "González García"
+      },
+      {
+        "given": "Itzel Marion",
+        "family": "Dressler Pérez"
+      },
+      {
+        "given": "Luz María",
+        "family": "García Ordóñez"
+      }
+    ],
+    "DOI": "10.5281/zenodo.19492791",
+    "type": "article-journal",
+    "id": "gonzalez26",
+    "citation-key": "gonzalez26",
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "note": "Companion paper to <i>The Hilbert–Pólya Operator and the Primitive Structure of the Complex Plane</i>",
+    "title": "Odd Zeta Values from the PCF Torus: φ and π as Arithmetic-Geometric Sources",
+    "URL": "https://doi.org/10.5281/zenodo.19492791"
+  },
+  {
+    "author": [
+      {
+        "given": "Asoke N.",
+        "family": "Mitra"
+      },
+      {
+        "given": "Freeman J.",
+        "family": "Dyson"
+      }
+    ],
+    "type": "paper-conference",
+    "id": "Mitra2000QuantumFT",
+    "citation-key": "Mitra2000QuantumFT",
+    "issued": {
+      "date-parts": [
+        [
+          2000
+        ]
+      ]
+    },
+    "publisher": "Hindustan Book Agency",
+    "publisher-place": "New Delhi, India",
+    "title": "Quantum Field Theory: A 20th Century Profile",
+    "ISBN": "978-81-85931-25-8",
+    "URL": "https://api.semanticscholar.org/CorpusID:118294090"
+  },
+  {
+    "author": [
+      {
+        "given": "George",
+        "family": "Pólya"
+      }
+    ],
+    "type": "document",
+    "id": "polya1982letter",
+    "citation-key": "polya1982letter",
+    "issued": {
+      "date-parts": [
+        [
+          1982,
+          1,
+          3
+        ]
+      ]
+    },
+    "note": "Correspondence regarding the origin of the Hilbert-Pólya conjecture",
+    "title": "Letter to Andrew Odlyzko",
+    "URL": "https://www-users.cse.umn.edu/~odlyzko/polya/index.html"
+  }
 ]
