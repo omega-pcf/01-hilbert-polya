@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.4.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.4.3...v2.4.4) (2026-07-29)
+
+### Bug Fixes
+
+* **citation:** set upload_type to software for Zenodo ([51d2a88](https://github.com/omega-pcf/01-hilbert-polya/commit/51d2a88353c18fc5de28055214ded8a8b749556b))
+
 ## [2.4.3](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.4.2...v2.4.3) (2026-07-29)
 
 ### Bug Fixes
