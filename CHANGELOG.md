@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.5.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.4.5...v2.5.0) (2026-07-29)
+
+### Features
+
+* **ci:** add Zenodo upload workflow via REST API ([798a819](https://github.com/omega-pcf/01-hilbert-polya/commit/798a819b574349b9bae9bdf1f58aa30b90ce15a0))
+
+### Bug Fixes
+
+* **citation:** replace invalid resource_type 'publication-technicalreport' with 'publication' ([b69d88c](https://github.com/omega-pcf/01-hilbert-polya/commit/b69d88c5c9199c77c699e6a4d91dde232bf69e81))
+
 ## [2.4.5](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.4.4...v2.4.5) (2026-07-29)
 
 ### Bug Fixes
