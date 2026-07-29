@@ -630,7 +630,7 @@ references:
     type: article
     volume: "30"
   - authors:
-      - family-names: Neumann
+      - family-names: von Neumann
         given-names: John
         name-particle: von
     doi: 10.1007/978-3-642-61409-5
@@ -666,8 +666,8 @@ references:
         value: urn:issn:1616-6361
     title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
     url: https://doi.org/10.1007/978-3-642-12821-9_2
-    date-published: 2010-01-01
-    year: 2010
+    date-published: 2011-01-01
+    year: 2011
     isbn: "9783642128219"
     issn: 1616-6361
     journal: New Structures for Physics
@@ -869,10 +869,6 @@ references:
   - authors:
       - family-names: Arveson
         given-names: William
-      - family-names: Gehring
-        given-names: FW
-      - family-names: Ribet
-        given-names: KA
     title: A short course on spectral theory
     date-published: 2002-01-01
     year: 2002
@@ -912,21 +908,17 @@ references:
         given-names: Frigyes
       - family-names: Sz.-Nagy
         given-names: Béla
-    doi: 10.2307/3611560
     identifiers:
-      - type: doi
-        value: 10.2307/3611560
       - type: url
         value: https://doi.org/10.2307/3611560
     title: Functional Analysis
     url: https://doi.org/10.2307/3611560
     date-published: 1955-01-01
     year: 1955
-    journal: The Mathematical Gazette
     publisher:
       name: Frederick Ungar
     type: book
-    volume: "41"
+    volume: "1"
   - authors:
       - family-names: Grisales Herrera
         given-names: Javier
@@ -1780,7 +1772,7 @@ references:
         value: 10.1088/1126-6708/1998/02/003
       - type: url
         value: https://doi.org/10.1088/1126-6708/1998/02/003
-    title: Noncommutative geometry and Matrix theory
+    title: "Noncommutative Geometry and Matrix Theory: Compactification on Tori"
     url: https://doi.org/10.1088/1126-6708/1998/02/003
     date-published: 1998-02-01
     year: 1998
@@ -2012,7 +2004,7 @@ references:
     start: "115"
     end: "155"
     type: article
-    volume: "1857"
+    volume: "54"
   - authors:
       - family-names: Riemann
         given-names: Bernhard
@@ -2070,7 +2062,7 @@ references:
     publisher:
       name: Springer
     start: "29"
-    end: "108"
+    end: "106"
     type: article
     volume: "5"
   - authors:
