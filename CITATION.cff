@@ -3,7 +3,7 @@ message: If you use this software, please cite it using these metadata.
 title: "The Hilbert-Pólya Operator and the Primitive Structure of the Complex
   Plane: Between 𝔽₁, String Theory, and Ancient Geometry"
 type: software
-version: 2.5.0
+version: 2.5.1
 date-released: 2026-07-29
 authors:
   - family-names: González García
@@ -2463,3 +2463,4 @@ references:
     year: 1982
     notes: Correspondence regarding the origin of the Hilbert-Pólya conjecture
     type: generic
+doi: 10.5281/zenodo.17619486

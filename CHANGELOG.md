@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.5.0...v2.5.1) (2026-07-29)
+
+### Bug Fixes
+
+* **citation:** add doi to package.json, propagate via pipeline ([4d31826](https://github.com/omega-pcf/01-hilbert-polya/commit/4d318260f58ab161677da2303ff2517ce13748b2))
+* **citation:** set Zenodo upload_type to publication/preprint ([33b920e](https://github.com/omega-pcf/01-hilbert-polya/commit/33b920e7028c60e1bbd690d6730bb90ee03ba879))
+
 ## [2.5.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.4.5...v2.5.0) (2026-07-29)
 
 ### Features
