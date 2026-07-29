@@ -630,7 +630,7 @@ references:
     type: article
     volume: "30"
   - authors:
-      - family-names: von Neumann
+      - family-names: Neumann
         given-names: John
         name-particle: von
     doi: 10.1007/978-3-642-61409-5
