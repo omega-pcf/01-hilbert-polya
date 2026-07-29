@@ -4,7 +4,7 @@ title: "The Hilbert-Pólya Operator and the Primitive Structure of the Complex
   Plane: Between 𝔽₁, String Theory, and Ancient Geometry"
 type: software
 version: 2.4.2
-date-released: 2026-07-13
+date-released: 2026-07-29
 authors:
   - family-names: González García
     given-names: Jorge Armando
@@ -65,6 +65,12 @@ abstract: >-
   established intersection with the string theory framework
   (Connes–Douglas–Schwarz).
 references:
+  - type: article
+    title: Theoria residuorum biquadraticorum, Commentatio secunda
+    authors:
+      - family-names: Gauss
+        given-names: Carl Friedrich
+    year: 1831
   - abstract: Unter den eindeutigen analytischen Functionen einer Veränderlichen
       zeichnen sich die rationalen durch eine charakteristische
       Eigenthümlichkeit aus, die zunächst festgestellt werden soll.
