@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.4.5](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.4.4...v2.4.5) (2026-07-29)
+
+### Bug Fixes
+
+* **citation:** remove invalid publication_type from .zenodo.json ([79bc9d4](https://github.com/omega-pcf/01-hilbert-polya/commit/79bc9d416ab6d37934822140350171cfe625d67e))
+
+### Chores
+
+* remove docs/archive directory ([f61a835](https://github.com/omega-pcf/01-hilbert-polya/commit/f61a835de0b61f0ffe1e57fac0a15fa4c4089a86))
+
 ## [2.4.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.4.3...v2.4.4) (2026-07-29)
 
 ### Bug Fixes
