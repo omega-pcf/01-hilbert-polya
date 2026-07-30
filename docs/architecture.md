@@ -5,7 +5,7 @@
 - **release-it**: Semantic versioning + GitHub releases.
 - **@release-it/bumper**: Synchronizes version `package.json` → `CITATION.cff`.
 - **TypeScript + tsx**: Orchestration scripts (build, metadata generation).
-- **Docker** (`kjarosh/latex:2024.4-full`): Reproducible LaTeX compilation.
+- **Docker** (`kjarosh/latex:2024.4-full`): Reproducible LaTeX compilation via `latexmk`.
 - **Native Metadata Sync**: Generates `.zenodo.json` from `CITATION.cff` directly.
 - **Zenodo webhook**: Automatic integration from GitHub.
 
@@ -14,20 +14,18 @@
 ```
 pnpm run release
   → @release-it/bumper: updates version in package.json, CITATION.cff
-  
+
   → after:bump:
-    → pnpm run generate:figures
-    → pnpm run generate:zenodo: Native mapping from CITATION.cff to .zenodo.json
     → pnpm run build: orchestration script
       → cleanup: removes previous document-v*.pdf
-      → citation: updates date-released in CITATION.cff
-      → compile: Docker with SOURCE_DATE_EPOCH (git commit timestamp)
+      → citation: updates date-released, generates .bib and .zenodo.json
+      → compile: Docker latexmk with SOURCE_DATE_EPOCH (git commit timestamp)
       → checksums: SHA256 of the PDF
-  
+
   → Git: commit + tag v${version} + push
-  
+
   → GitHub: Release with assets (PDF, checksums)
-  
+
   → Zenodo: automatic webhook → new version + DOI
 ```
 

@@ -1,62 +1,40 @@
-# Release Pipeline Usage
+# Build and Release Workflow
 
-## Development
+## Daily Development
 
-**Template:** Preprint (`amsart.cls`). The paper is formatted using the standard AMS article class for a clean, vanilla preprint appearance suitable for arXiv and general distribution.
-
-**Daily Workflow:** LaTeX Workshop (James Yu) in VS Code
+**Workflow:** LaTeX Workshop (James Yu) in VS Code
 - Automatically compiles to `build/main.pdf`.
-- Real-time preview.
+- Real-time preview on save.
 
-**Pre-release Verification:**
+**Build:**
 ```bash
 pnpm run build
-sha256sum build/document-v*.pdf build/main.pdf  # They must match
 ```
 
-## Commits and Changelog
+## Commits
 
-**Conventional Commits:** All commits must follow the [Conventional Commits](https://www.conventionalcommits.org/) format:
+All commits follow [Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
 <type>(<scope>): <description>
-
-[optional body]
-
-[optional footer]
 ```
 
-**Common Types:**
-- `feat`: New functionality.
-- `fix`: Bug fix.
-- `docs`: Documentation changes.
-- `refactor`: Code refactoring.
-- `chore`: Maintenance tasks (build, config, etc.).
+**Common types:** `feat`, `fix`, `docs`, `refactor`, `chore`.
 
 **Examples:**
 ```bash
-git commit -m "feat(release): add dotenv-cli to load GITHUB_TOKEN from .env"
-git commit -m "fix(release): use automatic changelog from plugin"
-git commit -m "refactor(scripts): remove legacy code and clean up unused utilities"
+git commit -m "fix(build): resolve Docker bind-mount race condition"
+git commit -m "feat(citation): add ORCID support"
+git commit -m "docs: update architecture guide"
 ```
 
-**Automatic Changelog:** The `@release-it/conventional-changelog` plugin automatically generates `CHANGELOG.md` based on conventional commits. The changelog is updated during each release with only the changes from the current version.
+**Automatic Changelog:** The `@release-it/conventional-changelog` plugin generates `CHANGELOG.md` from conventional commits on each release.
 
-## Releases
+## Release
 
-**Independent Build:**
 ```bash
-pnpm run build
-```
-
-**Full Release:**
-```bash
-pnpm run release
-```
-
-**Dry-run (no changes):**
-```bash
-pnpm run release:dry-run
+pnpm run release         # Full release: bump → build → tag → GitHub → Zenodo
+pnpm run release:dry-run # Preview without changes
 ```
 
 ## Installation
