@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.5.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.5.1...v2.5.2) (2026-07-30)
+
+### Bug Fixes
+
+* **build:** use latexmk instead of manual pdflatex/biber ([3f8a8b7](https://github.com/omega-pcf/01-hilbert-polya/commit/3f8a8b731c68b187e07b6bd5547129db4b1d5670))
+
+### Documentation
+
+* standardize generic build pipeline docs ([35fd54a](https://github.com/omega-pcf/01-hilbert-polya/commit/35fd54a3610a20b434aabab3ede4385429a8d1a0))
+
 ## [2.5.1](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.5.0...v2.5.1) (2026-07-29)
 
 ### Bug Fixes
