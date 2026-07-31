@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.5.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.5.3...v2.5.4) (2026-07-31)
+
+### Bug Fixes
+
+* **csl:** drop language field from journal/book entries ([be402eb](https://github.com/omega-pcf/01-hilbert-polya/commit/be402eb47d7eb8912e44d9f6060fa43b9a5b8036))
+
+### Chores
+
+* regenerate metadata and PDF after language field removal ([3b3f4e5](https://github.com/omega-pcf/01-hilbert-polya/commit/3b3f4e5e2bb9ecec1fbdbed56e87137a8928836c))
+
 ## [2.5.3](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.5.2...v2.5.3) (2026-07-31)
 
 ### Bug Fixes
