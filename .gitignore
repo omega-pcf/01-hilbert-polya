@@ -1,12 +1,13 @@
 .env
 .DS_Store
 /*.code-workspace
-
+/.hermes
 /tmp
 
 # LaTeX auxiliary files (but keep PDF for Zenodo)
 build/*.aux
 build/*.bbl
+build/*.bbl-*
 build/*.bcf
 build/*.blg
 build/*.fdb_latexmk
@@ -17,10 +18,14 @@ build/*.toc
 build/*.run.xml
 build/*.suppinfo
 build/*.synctex*
+build/src
+build/main.pdf
 !build/*.pdf
 
 # Node
 node_modules/
+package-lock.json
+pnpm-lock.yaml
 
 # TypeScript
 dist/
@@ -47,3 +52,5 @@ dmypy.json
 venv/
 ENV/
 env/
+
+lean/.lake/
