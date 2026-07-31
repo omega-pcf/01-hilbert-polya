@@ -462,8 +462,6 @@ references:
     date-published: 1839-01-01
     year: 1839
     journal: Journal für die reine und angewandte Mathematik
-    languages:
-      - fre
     start: "324"
     end: "369"
     type: article
@@ -2042,8 +2040,6 @@ references:
     year: 2014
     issue: "12"
     journal: Comptes Rendus. Mathématique
-    languages:
-      - en
     publisher:
       name: Elsevier
     start: "971"
