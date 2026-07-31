@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.5.3](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.5.2...v2.5.3) (2026-07-31)
+
+### Bug Fixes
+
+* **build:** use biblatex format, clean stale artifacts, surface latex errors ([f99428e](https://github.com/omega-pcf/01-hilbert-polya/commit/f99428e60f2efd64d45695ae60b3839f8be57f56))
+
+### Chores
+
+* regenerate metadata and PDF after biblatex format fix ([84ab9fd](https://github.com/omega-pcf/01-hilbert-polya/commit/84ab9fd7662bf64ac983517e2956a7b8184fa20c))
+* update .gitignore (add /.hermes, build/src, lockfiles) ([182e300](https://github.com/omega-pcf/01-hilbert-polya/commit/182e3002123c9c9595fb2a82a2f494b53fdfb2bb))
+
 ## [2.5.2](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.5.1...v2.5.2) (2026-07-30)
 
 ### Bug Fixes
