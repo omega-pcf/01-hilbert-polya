@@ -22,12 +22,12 @@
 
 import Mathlib.CategoryTheory.Monoidal.Category
 import Mathlib.CategoryTheory.Functor.Basic
+import Mathlib.Analysis.Real.Sqrt
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Data.Complex.Basic
 import Mathlib.Data.Real.Basic
-import Mathlib.Data.Real.Sqrt
 import Mathlib.Data.ZMod.Basic
 import Mathlib.Data.Nat.Prime.Basic
 import Mathlib.Tactic
