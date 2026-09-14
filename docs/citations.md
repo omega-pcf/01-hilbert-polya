@@ -52,8 +52,9 @@ The preamble must match the family standard:
 
 ```latex
 \usepackage{xcolor}\definecolor{linkred}{rgb}{0.78,0.08,0.12}
-\usepackage[backend=biber,style=numeric,sorting=none,doi=true,url=true,isbn=false]{biblatex}
+\usepackage[backend=biber,style=numeric,sorting=nyt,giveninits=true,doi=true,url=true,isbn=false]{biblatex}
 \addbibresource{src/bibliography.bib}
+\AtEveryBibitem{\iffieldundef{doi}{}{\clearfield{url}}}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,urlcolor=blue,linkcolor=linkred,citecolor=blue}
 ```
@@ -98,14 +99,18 @@ fails the build otherwise.
   and never list series editors as book authors.
 - **Preserve the published orthography** of titles (original spellings,
   Unicode names such as Özaydin, Pär); do not "modernise" them.
-- **Name style inside `given`**: initials with dots (`L.`, `I. E.`),
-  matching the family convention — the rendered bibliography abbreviates
-  long author lists to "et al." by design; full lists live in the CSL.
-- **DOI and URL are both stored and both printed** when present
-  (`doi=true,url=true`), even when the URL is the DOI link; entries with a
-  `URL` that is NOT the DOI (retrieved-from sources) are the reason `URL`
-  stays populated. Stored metadata is complete; presentation is a style
-  decision (see §7).
+- **Name style inside `given`**: full given names preferred in stored CSL
+  data (better Zenodo/CFF metadata); the render initials them uniformly via
+  `giveninits=true`. Long author lists abbreviate to "et al." by design.
+- **DOI and URL**: both are stored in CSL/CFF/Zenodo metadata. In the
+  rendered PDF the family hook
+  `\AtEveryBibitem{\iffieldundef{doi}{}{\clearfield{url}}}` suppresses the
+  URL whenever the entry has a DOI (no `doi.org` duplication); entries
+  without a DOI keep their URL (retrieved-from sources).
+- **Sorting and name style**: references sort alphabetically (`sorting=nyt`,
+  the AMS convention for `amsart`) and render with initials
+  (`giveninits=true`) regardless of the stored form — stored CSL data keeps
+  full given names, so Zenodo/CFF metadata stay complete.
 
 ## 6. Conventions
 
@@ -119,10 +124,10 @@ fails the build otherwise.
   `feat(pipeline): adopt biblatex bibliography from CSL`.
 - Never push without an explicit instruction from the author.
 
-## 7. Known open style decision
+## 7. Settled style decisions
 
-Whether the rendered bibliography should hide a `URL` that duplicates the
-`DOI` (keeping it in CSL/CFF/Zenodo metadata) is under evaluation across
-the family; the current uniform setting prints both. Any change must be
-applied identically to all five repositories, with `pnpm run build` green
-in each.
+- URL duplication with DOI in the rendered bibliography: **suppressed** via
+  the `\AtEveryBibitem` hook (see §5); stored metadata keeps both. Applied
+  identically to all five repositories.
+- Reference ordering: **alphabetical** (`sorting=nyt`) per AMS convention;
+  rendered author names: **initials** (`giveninits=true`).
