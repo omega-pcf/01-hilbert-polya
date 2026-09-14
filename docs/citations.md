@@ -90,6 +90,12 @@ fails the build otherwise.
 
 ## 5. Data hygiene rules (lessons encoded)
 
+- **Root title carries full Unicode**: `package.json.description` holds the
+   paper title verbatim (special math characters such as 𝔽₁, μ₆, φ); every
+   build copies it into `CITATION.cff` and the Zenodo title unmodified.
+   Never ASCII-fold it (`F1`, `mu6`) — that degradation propagates to the
+   deposition on every rebuild. The sanitizer applies only to Unicode
+   superscripts (→ `<sup>`), never to math alphabetics or subscripts.
 - **Author lists are structured.** Each author is one `given`/`family`
   object. A comma-joined blob ("A. X, B. Y, C. Z") makes biber abort with
   `Name "..." has too many commas` and kills the whole bibliography.
