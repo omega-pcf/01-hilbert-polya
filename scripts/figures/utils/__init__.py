@@ -8,6 +8,15 @@ This module contains helper functions common to multiple generators:
 - Mathematical constants
 """
 
+import os
+
+# Deterministic PDFs: matplotlib writes the wall clock into /CreationDate
+# unless SOURCE_DATE_EPOCH is set, so every run used to rewrite these bytes
+# and leave `git status images/` dirty.  Pinned to the timestamp of the
+# figure round that produced images/ (2026-11-09 19:31:03 -06:00); an
+# explicitly exported SOURCE_DATE_EPOCH still wins.  See docs/figures.md.
+os.environ.setdefault("SOURCE_DATE_EPOCH", "1794274263")
+
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
@@ -35,6 +44,15 @@ matplotlib.rcParams.update({
     "savefig.format": "pdf",
     "savefig.bbox": "tight",
     "savefig.pad_inches": 0.1,
+
+    # Type 42 (TrueType/CID) embeds /ToUnicode, so pdftotext reads the
+    # figures back; the default Type 3 on matplotlib 3.10 does not.
+    "pdf.fonttype": 42,
+    "pdf.use14corefonts": False,
+
+    # Without a salt the SVG backend mints a fresh uuid4 per render, so the
+    # 27 committed .svg figures changed on every single run.
+    "svg.hashsalt": "omega-pcf-figures",
     
     # Line quality
     "lines.linewidth": 1.5,
