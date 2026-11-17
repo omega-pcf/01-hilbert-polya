@@ -44,21 +44,22 @@ the family as it stands in that repository, ported here on 2026-11-17; this copy
 changed only in this header and in the links below, the retention criterion being that of §13.7: no
 rule that a larger model would deduce from the rest. The port strips away what is specific to a
 repository (its macros, its source document, its manuscript sites, its verified commands) and links
-to it instead; a link whose target this repository does not have resolves to `05-kkgt` on GitHub, so
-every reference stays real without the target being copied here.
+to it instead; the family documents this guide links (`citations.md` §8, `witness-contract.md`,
+`style/grammar.md`, `reports/`) were propagated to this repository on 2026-11-17, so every link
+below is local.
 
 **Linked documents — each repository's own conventions are not copied here:**
 
 | Repository-specific convention | Home |
 |---|---|
-| Witnesses (`\tier`, `\witness`, `\testref`): grammar, writing rules, alphabet, quantified inline criterion / own line, and the census of the cited tests | [`docs/citations.md` §8 (in `05-kkgt`)](https://github.com/omega-pcf/05-kkgt/blob/main/docs/citations.md) — referenced, not copied: this repository's own `citations.md` ends at §7 |
-| Rationale for the witnesses: why they exist and what they do not assert | [`docs/witness-rationale.md` (in `05-kkgt`)](https://github.com/omega-pcf/05-kkgt/blob/main/docs/witness-rationale.md) — no counterpart in this repository |
+| Witnesses (`\tier`, `\witness`, `\testref`): grammar, writing rules, alphabet, quantified inline criterion / own line, and the census of the cited tests | [`docs/citations.md` §8](citations.md) |
+| Rationale for the witnesses: why they exist and what they do not assert | [`docs/witness-contract.md`](witness-contract.md) |
 | Deterministic, byte-stable figure pipeline (`pnpm run generate:figures`) | [`docs/figures.md`](figures.md) |
 | Citation pipeline (`citation.csl.json` → `src/bibliography.bib`, `CITATION.cff`, `.zenodo.json`) | [`docs/citations.md`](citations.md) §1–§7 |
 | Build, release, and commit convention commands | [`docs/usage.md`](usage.md) |
 | Requirements and installation | [`docs/installation.md`](installation.md) |
-| Concrete reports of this repo (inventories, decisions, verdicts, incidents) | [`docs/reports/` (in `05-kkgt`)](https://github.com/omega-pcf/05-kkgt/blob/main/docs/reports/README.md) — no counterpart in this repository |
-| Grammar and usage rules for human languages (§1.5, examples in ES/EN/FR/IT) | [`docs/style/grammar.md` (in `05-kkgt`)](https://github.com/omega-pcf/05-kkgt/blob/main/docs/style/grammar.md) — no counterpart in this repository |
+| Concrete reports of this repo (inventories, decisions, verdicts, incidents) | [`docs/reports/`](reports/README.md) |
+| Grammar and usage rules for human languages (§1.5, examples in ES/EN/FR/IT) | [`docs/style/grammar.md`](style/grammar.md) |
 
 ---
 
@@ -72,7 +73,7 @@ every reference stays real without the target being copied here.
   reader as subject; the discourse is centred on the object of work, and
   praise, blame and other marks of subjectivity are excluded — a
   convention of register, not a rule of the language, stated with its
-  examples in [`style/grammar.md`](https://github.com/omega-pcf/05-kkgt/blob/main/docs/style/grammar.md) §G8 (in `05-kkgt`).
+  examples in [`style/grammar.md`](style/grammar.md) §G8.
 - **Intellectually honest**: If it contradicts orthodoxy, say so explicitly (not hidden).
 - **Non-apologetic**: the work is stated as it is, and an unusual choice
   is justified where it is made — by the problem, not by a preference.
@@ -107,7 +108,7 @@ every reference stays real without the target being copied here.
 Language-neutral grammar rules for the texts we write — complete structure, agreement,
 clear reference, voice, punctuation, economy — with worked examples in Spanish, English,
 French and Italian, the RAE-checked Spanish `se` verbs and the sources:
-[`style/grammar.md`](https://github.com/omega-pcf/05-kkgt/blob/main/docs/style/grammar.md) (in `05-kkgt`).
+[`style/grammar.md`](style/grammar.md).
 
 ---
 
@@ -798,7 +799,7 @@ If the document **cites what a script prints** (a figure, a ratio, an output lin
 ### 13.5 Naming of tests and witnesses
 
 - **Test ids**: `test_<qué_afirma>` in snake_case, tied to the claim they verify (not to the file they run).
-- **Internal witnesses** (`\tier`, `\witness`, `\testref`, and the census of the cited ids): their grammar, writing rules, and alphabet are each repo's convention and **are not copied here** — contract in [`docs/citations.md` §8 (in `05-kkgt`)](https://github.com/omega-pcf/05-kkgt/blob/main/docs/citations.md), rationale in [`docs/witness-rationale.md` (in `05-kkgt`)](https://github.com/omega-pcf/05-kkgt/blob/main/docs/witness-rationale.md) — neither target exists in this repository, whose `citations.md` ends at §7. Only the principle is stated: the witness's name matches **character by character** with the `.lean` file or the suite that declares it; any deviation is a defect.
+- **Internal witnesses** (`\tier`, `\witness`, `\testref`, and the census of the cited ids): their grammar, writing rules, and alphabet are each repo's convention and **are not copied here** — contract in [`docs/citations.md`](citations.md) §8, rationale in [`docs/witness-contract.md`](witness-contract.md). Only the principle is stated: the witness's name matches **character by character** with the `.lean` file or the suite that declares it; any deviation is a defect.
 
 ### 13.6 Code quality checklist
 
