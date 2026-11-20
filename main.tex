@@ -100,7 +100,16 @@
 \address{Independent Researcher}
 \email{itzel@omega-pcf.com}
 
-\date{\textbf{Received:} November 15, 2025; \textbf{Last modified:} \today}
+\renewcommand{\datename}{\textbf{Received:}}
+% Received date, last-modified date and version, with the labels in bold.
+% amsart prints \date as the footnote at the foot of page 1 (\@adminfootnotes
+% -> \@setdate, which prefixes \datename), so the first label lives in
+% \datename and the line carries the other two: without this the class would
+% prefix its own "Date:" and the footnote would read "Date: Received: ...".
+% \today is reproducible: scripts/tasks/compile.ts compiles with
+% SOURCE_DATE_EPOCH set to the HEAD commit's timestamp (scripts/utils/git.ts).
+% The version token mirrors the "version" field of package.json.
+\date{November 15, 2025; \textbf{Last modified:} \today; \textbf{Version:} v2.5.4}
 
 \keywords{Riemann Hypothesis, Hilbert--P\'olya conjecture, $\mathbb{F}_1$ (field with one element), $\Lambda$-rings, String theory, Category theory, Golden ratio, Mersenne primes, Moduli spaces, Formal verification}
 
