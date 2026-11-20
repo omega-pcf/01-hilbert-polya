@@ -1,6 +1,9 @@
 # The Hilbert-Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry
 
+<!-- selfcite:begin id="badge" -->
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17619486.svg)](https://doi.org/10.5281/zenodo.17619486)
+<!-- selfcite:end id="badge" -->
+
 [![Project Page](https://img.shields.io/badge/Project%20Page-hilbert--polya.com-blue)](https://hilbert-polya.com)
 [![Project Page](https://img.shields.io/badge/Project%20Page-omega--pcf.com-blue)](https://omega-pcf.com/hilbert-polya)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KExRnNtx91TjVyYD0FlcB_TLQwZB4GKq?usp=sharing)
@@ -22,20 +25,22 @@ Three spectral invariants—dimension $d=3$ (from $S_3$ symmetry), common modulu
 
 **Keywords:** Riemann Hypothesis, Hilbert-Pólya conjecture, Field with one element (F1), Lambda-rings, String theory, Category theory, Golden ratio, Mersenne primes, Moduli spaces, Formal verification.
 
+<!-- selfcite:begin id="citation" -->
 ## Citation
 
-González García, J. A., González García, V. M., Dressler Pérez, I. M., García Ordóñez, L. M., & Moreno, M. (2026). *The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry*. Preprint. DOI: [10.5281/zenodo.17619486](https://doi.org/10.5281/zenodo.17619486).
+González García, J. A., González García, V. M., Dressler Pérez, I. M., García Ordóñez, L. M., & Moreno, M. (2026). *The Hilbert-Pólya Operator and the Primitive Structure of the Complex Plane: Between 𝔽₁, String Theory, and Ancient Geometry*. Preprint. DOI: [10.5281/zenodo.17619486](https://doi.org/10.5281/zenodo.17619486).
 
 ```bibtex
 @article{Gonzalez2026HilbertPolya,
   author  = {González García, J. A. and González García, V. M. and Dressler Pérez, I. M. and García Ordóñez, L. M. and Moreno, M.},
-  title   = {The Hilbert--Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry},
+  title   = {The Hilbert-Pólya Operator and the Primitive Structure of the Complex Plane: Between 𝔽₁, String Theory, and Ancient Geometry},
   journal = {Preprint},
   year    = {2026},
   doi     = {10.5281/zenodo.17619486},
   url     = {https://doi.org/10.5281/zenodo.17619486}
 }
 ```
+<!-- selfcite:end id="citation" -->
 
 ## Repository Structure
 
