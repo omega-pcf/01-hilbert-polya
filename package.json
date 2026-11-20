@@ -16,7 +16,7 @@
     "generate:figures:list": "uv run python scripts/figures/main.py --list",
     "verify:py": "uv run python tests/verify_t_star.py",
     "verify:lean": "cd lean && lake build",
-    "verify": "pnpm run verify:py && pnpm run verify:lean",
+    "verify": "pnpm run verify:py && pnpm run verify:lean && pnpm run type-check",
     "selfcitations": "pnpm exec tsx scripts/tasks/selfcitations.ts",
     "selfcitations:check": "pnpm exec tsx scripts/tasks/selfcitations.ts --check",
     "validate": "pnpm run selfcitations:check && pnpm exec tsx scripts/tasks/parity.ts && pnpm run verify",
