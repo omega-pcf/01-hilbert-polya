@@ -1,4 +1,4 @@
-# The Hilbert-Pólya Operator and the Primitive Structure of the Complex Plane: Between $\mathbb{F}_1$, String Theory, and Ancient Geometry
+# The Hilbert–Pólya Operator and the Primitive Structure of the Complex Plane: Between 𝔽₁, String Theory, and Ancient Geometry
 
 <!-- selfcite:begin id="badge" -->
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17619486.svg)](https://doi.org/10.5281/zenodo.17619486)
@@ -23,7 +23,7 @@ We construct a Hermitian operator $\tilde{H}_{\mathrm{PCF}}$ whose spectrum appr
 
 Three spectral invariants—dimension $d=3$ (from $S_3$ symmetry), common modulus $\mu=1/2$ (tripartite norm), and modular sum $\sigma = d\mu = 3/2$ (spectral product)—emerge from the geometric structure alone, without invoking any component of $\zeta(s)$. The ring $R_{\mathrm{PCF}} = \mathbb{Z}[\varphi,\varphi^{-1},\frac{1}{2}]$ admits a $\Lambda$-ring structure constituting $\mathbb{F}_1$-descent data in the sense of Borger, placing the construction within Manin's program for absolute geometry and its previously established intersection with the string theory framework (Connes--Douglas--Schwarz).
 
-**Keywords:** Riemann Hypothesis, Hilbert-Pólya conjecture, Field with one element (F1), Lambda-rings, String theory, Category theory, Golden ratio, Mersenne primes, Moduli spaces, Formal verification.
+**Keywords:** Riemann Hypothesis, Hilbert–Pólya conjecture, Field with one element (𝔽₁), Lambda-rings, String theory, Category theory, Golden ratio, Mersenne primes, Moduli spaces, Formal verification.
 
 <!-- selfcite:begin id="citation" -->
 ## Citation
