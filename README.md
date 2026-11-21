@@ -28,12 +28,12 @@ Three spectral invariants—dimension $d=3$ (from $S_3$ symmetry), common modulu
 <!-- selfcite:begin id="citation" -->
 ## Citation
 
-González García, J. A., González García, V. M., Dressler Pérez, I. M., García Ordóñez, L. M., & Moreno, M. (2026). *The Hilbert-Pólya Operator and the Primitive Structure of the Complex Plane: Between 𝔽₁, String Theory, and Ancient Geometry*. Preprint. DOI: [10.5281/zenodo.17619486](https://doi.org/10.5281/zenodo.17619486).
+González García, J. A., González García, V. M., Dressler Pérez, I. M., García Ordóñez, L. M., & Moreno, M. (2026). *The Hilbert–Pólya Operator and the Primitive Structure of the Complex Plane: Between 𝔽₁, String Theory, and Ancient Geometry*. Preprint. DOI: [10.5281/zenodo.17619486](https://doi.org/10.5281/zenodo.17619486).
 
 ```bibtex
 @article{Gonzalez2026HilbertPolya,
   author  = {González García, J. A. and González García, V. M. and Dressler Pérez, I. M. and García Ordóñez, L. M. and Moreno, M.},
-  title   = {The Hilbert-Pólya Operator and the Primitive Structure of the Complex Plane: Between 𝔽₁, String Theory, and Ancient Geometry},
+  title   = {The Hilbert–Pólya Operator and the Primitive Structure of the Complex Plane: Between 𝔽₁, String Theory, and Ancient Geometry},
   journal = {Preprint},
   year    = {2026},
   doi     = {10.5281/zenodo.17619486},
