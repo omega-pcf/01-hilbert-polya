@@ -3,6 +3,9 @@
 `pnpm run generate:figures` runs `scripts/figures/main.py`, which executes the
 generators of `scripts/figures/generators/` into `images/` (PDF + SVG).
 
+The chain table (generator → `images/` → verification) is
+[`architecture.md` §Sources of truth](architecture.md#sources-of-truth).
+
 ## What it guarantees
 
 1. **The text in the PDFs is extractable.** Every generated PDF carries a
