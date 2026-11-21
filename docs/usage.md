@@ -67,15 +67,19 @@ from these subjects at each release.
 
   ```latex
   \renewcommand{\datename}{\textbf{Received:}}
-  \date{<Month D, YYYY>; \textbf{Last modified:} \today; \textbf{Version:} vX.Y.Z}
+  \date{<Month D, YYYY>; \textbf{Last modified:} \today; \textbf{Version:} \texttt{vX.Y.Z}}
   ```
 
   which renders `Received: <Month D, YYYY>; Last modified: <today>; Version:
-  vX.Y.Z.` The first label lives in `\datename` because amsart prefixes the
-  footnote with it (its own default would read `Date: Received: …`). The
+  vX.Y.Z.` — with only the identifier in monospace: the labels stay
+  `\textbf`, `Version: ` itself is not typed, and the token sits inside
+  `\texttt{…}`. The first label lives in `\datename` because amsart prefixes
+  the footnote with it (its own default would read `Date: Received: …`). The
   version token mirrors the `version` field of `package.json` (v2.5.4), so
   the printed version, the committed version and the version archived by
-  Zenodo cannot diverge.
+  Zenodo cannot diverge; `pnpm run selfcitations:check` (and `parity`) fails
+  when the token sits outside `\texttt{…}`, and `pnpm run selfcitations`
+  wraps it back.
 
 ## Release
 
