@@ -84,7 +84,7 @@ links them instead of repeating them.
 | 4 | README self-citation regions | `CITATION.cff` + `package.json` `metadata.citationKey` | `scripts/tasks/selfcitations.ts` (idempotent: `f(f(x)) = f(x)`) | the `badge` and `citation` regions of `README.md` |
 | 5 | Printed version | `package.json` `version`, clean `X.Y.Z` | `selfcitations.ts` writes the token between the `id="version"` markers of `main.tex`; `scripts/build.ts` injects `vX.Y.Z-dev@<shortsha>` for the render and restores the source bytes; `@release-it/bumper` copies the value on release | `CITATION.cff` `version`, `pyproject.toml` `project.version`, the `Version:` token of the page-1 footnote |
 | 6 | Dates | the commit (`git log -1 --pretty=%ct`) read in the project's fixed zone | `scripts/utils/git.ts` → `SOURCE_DATE_EPOCH` plus `TZ=CST6` for latexmk in Docker; `citation.ts` pins `process.env.TZ = 'CST6'` and formats with `todayInProjectZone()` | `CITATION.cff` `date-released`, `.zenodo.json` `publication_date`, the `\today` of the PDF |
-| 7 | Figures | the generators of `scripts/figures/generators/` | `pnpm run figures` (`uv run python scripts/figures/main.py`) | the PDFs and SVGs of `images/` (56 files), byte-stable across runs |
+| 7 | Figures | the generators of `scripts/figures/generators/` | `pnpm run figures` (`uv run python scripts/figures/main.py`) | the PDFs and SVGs of `images/` (<!-- counts:begin id="images-files" -->56<!-- counts:end id="images-files" --> files), byte-stable across runs |
 
 **A title change belongs in `package.json`, not in the CFF.** Row 2 runs on
 every build, so an edit of the `title` of `CITATION.cff` survives only until
