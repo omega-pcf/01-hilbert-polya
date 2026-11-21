@@ -121,7 +121,7 @@ pnpm run release
 
 This triggers a full build, asset regeneration, and metadata synchronization before publishing, ensuring a deterministic and fully auditable release state.
 
-### Traditional Manual Build
+### Manual build
 
 For local environments with a full TeX Live distribution, you may use the standard compilation sequence:
 
