@@ -113,6 +113,28 @@ explains *why*; `!` after the type or scope marks a breaking change
 (`feat(api)!: …`); one concern per commit, with the gates green at every
 commit.
 
+**Version bump mapping** — which commit cuts a release is decided in
+`.release-it.ts` by the official [`conventionalcommits` preset]
+(`bumpStrict: true` plus the per-type `hidden` flag), never by a
+hand-written table:
+
+| commit shape | bump |
+|---|---|
+| `feat!`, `feat(<scope>)!`, or a `BREAKING CHANGE:` / `BREAKING-CHANGE:` footer on any type | **major** |
+| `feat`, `feature` | **minor** |
+| `fix` | **patch** |
+| `docs`, `chore`, `test`, `build`, `refactor`, `perf`, `ci`, `style`, `revert` | **no release** — the commits stay in git history, and the same `hidden` flag keeps them out of `CHANGELOG.md` |
+| no commits since the last tag | **no release** |
+| a type outside the convention | **patch**: the preset counts any undeclared type as a possible fix |
+
+[`conventionalcommits` preset]: https://www.npmjs.com/package/conventional-changelog-conventionalcommits
+
+`hidden` is a single preset flag serving both the recommendation and the
+changelog, so the sections a release renders are `Features` and `Bug Fixes`
+(a `BREAKING CHANGE` commit is rendered whatever its type carries). Worked
+example: the v168 merge commit `feat(paper)!:` carrying a `BREAKING CHANGE:`
+footer is a **major**.
+
 **Changelog:** `@release-it/conventional-changelog` renders `CHANGELOG.md`
 from these subjects at each release.
 
@@ -120,7 +142,11 @@ from these subjects at each release.
 
 - **Standard:** [Semantic Versioning](https://semver.org) — `vX.Y.Z`
   (major.minor.patch), where `feat` → minor, `fix` → patch,
-  `BREAKING CHANGE`/`!` → major, as declared in the commit subjects above.
+  `BREAKING CHANGE`/`!` → major, as declared in the commit subjects above,
+  and **every other type (`docs`, `chore`, `test`, `build`, `refactor`,
+  `perf`, `ci`, `style`, `revert`) cuts no release at all** — the bump is
+  read from `.release-it.ts` (official `conventionalcommits` preset) by the
+  table in §Commits, not from a hand-written mapping.
 - **Single source:** the `version` field of `package.json`.
 - **Synchronization chain:** `release-it` bumps `package.json` →
   `@release-it/bumper` writes the same value into `CITATION.cff` →
