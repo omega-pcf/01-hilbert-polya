@@ -15,9 +15,6 @@ export default {
   github: {
     release: true,
     releaseName: 'v${version}',
-    // No especificar autoGenerate ni releaseNotes
-    // release-it automáticamente usa context.changelog del plugin
-    // que contiene solo los cambios de la versión actual
     assets: ['build/document-v*.pdf', 'checksums.txt'],
   },
   npm: {
@@ -33,9 +30,6 @@ export default {
       'pnpm run generate:figures',
       'pnpm exec tsx scripts/build.ts ${version}',
     ],
-    // Generate figures first, then generate .zenodo.json from CITATION.cff,
-    // then build PDF with correct version number
-    // release-it automatically does `git add . --update` before commit
   },
   plugins: {
     '@release-it/bumper': {
@@ -51,24 +45,45 @@ export default {
           path: 'project.version',
           type: 'text/toml',
         },
-        // .zenodo.json is now generated from CITATION.cff via Native Sync
-        // in scripts/tasks/citation.ts, so we don't update it here
       ],
     },
     '@release-it/conventional-changelog': {
       infile: 'CHANGELOG.md',
+      // Canonical Conventional Commits bump mapping, family-wide (the table
+      // with an example lives in docs/usage.md §Commits):
+      //   `feat!` / `BREAKING CHANGE:` footer -> major
+      //   `feat`                              -> minor
+      //   `fix`                               -> patch
+      //   every other type                    -> NO release
+      // `bumpStrict` is the official preset switch for that last row: a type
+      // marked `hidden` never recommends a version, so a range holding only
+      // docs/chore/test/build/refactor/perf/ci/style/revert (or no commits at
+      // all) cuts no release, while `!` and the BREAKING CHANGE/BREAKING-CHANGE
+      // footers stay major whatever the type carries. One flag serves both the
+      // recommendation and the changelog sections: a hidden type also stays out
+      // of CHANGELOG.md (breaking commits are rendered regardless), and the
+      // release commit `chore: release v${version}` therefore never triggers
+      // the next patch by itself. The table below is the preset's own default
+      // type list; `perf` and `revert` are the two entries this family hides
+      // beyond those defaults, because only feat/fix release here. A type
+      // outside this table (unknown to the convention) still falls back to
+      // patch — the preset counts any non-hidden type as a possible fix.
       preset: {
         name: 'conventionalcommits',
+        bumpStrict: true,
         types: [
           { type: 'feat', section: 'Features' },
+          { type: 'feature', section: 'Features' },
           { type: 'fix', section: 'Bug Fixes' },
-          { type: 'style', section: 'Styles' },
-          { type: 'docs', section: 'Documentation' },
-          { type: 'refactor', section: 'Refinements' },
-          { type: 'perf', section: 'Performance Improvements' },
-          { type: 'chore', section: 'Chores' },
-          { type: 'build', section: 'Build System' },
-          { type: 'release', section: 'Releases' },
+          { type: 'perf', section: 'Performance Improvements', hidden: true },
+          { type: 'revert', section: 'Reverts', hidden: true },
+          { type: 'docs', section: 'Documentation', hidden: true },
+          { type: 'style', section: 'Styles', hidden: true },
+          { type: 'chore', section: 'Miscellaneous Chores', hidden: true },
+          { type: 'refactor', section: 'Code Refactoring', hidden: true },
+          { type: 'test', section: 'Tests', hidden: true },
+          { type: 'build', section: 'Build System', hidden: true },
+          { type: 'ci', section: 'Continuous Integration', hidden: true },
         ],
       },
       tagPrefix: 'v',
