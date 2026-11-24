@@ -4,10 +4,10 @@
 |---|---|
 | **Document** | `docs/witness-contract.md` |
 | **Status** | In force with the manuscript |
-| **Version** | 1.0 (portable rationale; generic across the family) |
-| **Date** | 2026-11-17 |
+| **Version** | 1.1 (portable rationale plus the derived standard; generic across the family) |
+| **Date** | 2026-11-23 |
 | **Language** | English; identifiers, macros and file names in English and monospace |
-| **Scope** | Why the witness marks (`\tier`, `\witness`, `\wtag`) exist and what they do not assert — the argument behind the contract of `docs/citations.md` §8, free of anything tied to one repository state |
+| **Scope** | Why the witness marks (`\tier`, `\witness`, `\wtag`) exist and what they do not assert — the argument behind the contract of `docs/citations.md` §8, free of anything tied to one repository state; §6 states the standard itself, derived from the positions already settled |
 
 **Document:** justification of the witness convention (`\tier`, `\witness`,
 `\wtag`) of the manuscript, written so that the convention has a place in a
@@ -152,7 +152,7 @@ breaks down into three steps.
 Hence the device is not presented as a taste of the authors: it is
 presented as the editorial answer to a change in the practice of the
 discipline. That does not turn the mark into a scholarly-society norm; see
-§6, where exactly what the convention is and what it is not is declared.
+§7, where exactly what the convention is and what it is not is declared.
 
 ---
 
@@ -336,7 +336,8 @@ rule because it defines, it does not assert.
 
 **`P*` is internal.** The class exists and works in the preamble (dispatch
 `\@namedef{tiercol@P*}`, ochre colour) to mark between compilations a
-statement written but not yet named; the printed text never invokes it,
+statement written but not yet verified against the corpus —
+the star's one denotation (§6.5) —; the printed text never invokes it,
 the gloss does not mention it and the prose does not speak of it. It is a
 work tool, not a class of the published alphabet.
 
@@ -364,7 +365,107 @@ defined at the list itself.
 
 ---
 
-## 6. Honesty: the declared novelty
+## 6. The standard, as derived
+
+The rules below are this contract's own standard. None of them is a new
+decision: each restates a position already settled in the family's
+documentation and makes it explicit here, so that one file carries the
+argument and the rule together. Where a rule defers, it defers in the
+open; nothing in this section decides a question the family documents
+leave undecided.
+
+### 6.1 The set of evidence marks
+
+The set of evidence marks is **`P` and `N`, with `\testref` as the test
+anchor — nothing else**. `\wtag` is not a member of it: the `W1`, `W2`,
+… labels are the typographic device of a single description list of
+premises (measured: twelve uses, in the repository that has such a list),
+defined at the list itself, and they certify nothing. The internal `P*`
+dispatch of the preamble (§5) is a work tool, not a class of the printed
+alphabet. No decoration, no accounting line and no label enters the set.
+
+### 6.2 Placement is prose, never semantics
+
+Whether a mark sits inside the sentence or on a line of its own is a
+**prose criterion** — semantic, heuristic, aesthetic — and no rule of this
+contract decides it. Placement never changes what a mark asserts: the
+shape of a mark tells a reader how many witnesses a claim carries and
+where they sit, never which kind of evidence it is. The quantified
+criterion of `docs/citations.md` §8.5 stays what it has always been — a
+readability aid for that prose decision (cost, rhythm, position) — and it
+is not a classifier. The standard governs content and naming only.
+
+### 6.3 Naming (S1–S5)
+
+A name is routed by the job it does in its sentence; the pass that moves
+names reads each site, classifies it and restates the classification
+before editing:
+
+| Class | Route |
+|---|---|
+| **S1** witness id | stays inside the mark — `\tier[ids]{X}`, `\witness{X}{ids}`, `\testref{…}` — written raw, never beside the tag |
+| **S2** code mention | `\code` |
+| **S3** decorated name (`*`, `°`, `†`) | `*` under §6.5; `°` and `†` under §6.7 |
+| **S4** `Lean:` accounting line | no canonical form yet: the sites stay where they are and are not migrated in bulk |
+| **S5** unclassifiable | recorded in `docs/reports/` as an open site, never guessed |
+
+### 6.4 Grammar
+
+The grammar of the tag is the strict one: the optional argument holds
+**internal ids only** — a `\testref`, or the raw names of declarations of
+the repository's own Lean file, several of them separated by `,` — and a
+citation key is never written inside a tag. Anything else raises
+`\PackageError` before printing; there is no permissive fallback.
+Repositories whose tags today accept a wider or a narrower set converge
+on this grammar by work, not by relaxation: the label-style identifiers
+the strict grammar rejects (23 of them, counted in one manuscript) are
+work items, not a constraint on the design — they are rewritten, the
+grammar is not relaxed to fit them.
+
+### 6.5 The star
+
+`*` has **one denotation**: a name *written, not yet verified against the
+corpus*. It marks intermediate process state, it lives only in
+intermediate layers, and the passes that verify the corpus resolve it;
+the release gate is **zero stars**, so a released text carries none. The
+star is not a class of evidence, not a degree of confidence and not a
+citation. Any other reading of it — in a comment, in a colour note or in
+a rule of the writing guide — is a defect and is corrected where it is
+found.
+
+### 6.6 Typography
+
+The canonical render parameters, measured in the built PDF, are
+**13 pt for the witness class, 15 pt for the ids and 16 pt for the
+prose**, identical for `P` and `N`; only colour differs, and colour is
+redundant with the letter (§4.2). Rendering is re-checked by measurement
+at each wave, never by eye; reopening these parameters requires a new
+measurement.
+
+### 6.7 Open tier, table labels and decorations
+
+- **Open statements are prose by default.** No `[o]` label is adopted.
+- A `conjecture` environment is used only where **both** conditions hold:
+  (a) the statement is a precise declarative proposition — a question or
+  a task is not one — and (b) the conjecture-status belongs to the source
+  that states it. An environment asserts belief-status, so it is never
+  assigned for tidiness and never attributes a position the source did
+  not take; ambiguous sites stay prose.
+- **No new tier labels in ledger tables.** Redesigning what the tables
+  carry is a change candidate, noted here and decided elsewhere.
+- **The decorations `°` and `†` are held**: not adopted while their use
+  stays marginal, and nothing in this contract certifies them.
+- **No shorthand** is adopted now.
+
+### 6.8 The alphabet is frozen at `P` and `N`
+
+The published alphabet is `P` and `N` (§5). Any expansion enters only
+through the family's gate: measured sites, used *and* documented in all
+five repositories, counted by `counts:check` and lintable, with the cost
+of each new symbol estimated before it is admitted. Until a gate is
+passed, the alphabet does not grow.
+
+## 7. Honesty: the declared novelty
 
 This document does not present the convention as something consecrated.
 The verifiable claim is the reverse: **no previous publication marks
@@ -395,7 +496,7 @@ silencing it, and doing so with a quantified and reproducible criterion
 
 ---
 
-## 7. Internal references
+## 8. Internal references
 
 The sources of this document are the family's documents and the
 repository's own files; no external URL is invoked beyond the cited style
@@ -416,7 +517,7 @@ authorities.
 
 ---
 
-## 8. Limits of this document
+## 9. Limits of this document
 
 1. **This document argues, it does not apply.** The applied state of the
    convention in a given repository — counters, verdicts, pending rows —
