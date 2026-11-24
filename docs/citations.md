@@ -154,10 +154,9 @@ concrete instances of the rules below — site inventories, sentence tails,
 applied states and verdict tables — live in `docs/reports/`.
 
 The **set of evidence marks** is `P` and `N`, with `\testref` as the test
-anchor — nothing else (`docs/witness-contract.md` §6.1). `\wtag{L}{text}`
-labels one list of premises and is not a member of it; no decoration, no
-accounting line and no table label joins the set. Placement — inline or on
-a line of its own — is a prose decision and never a semantic one (contract
+anchor — nothing else (`docs/witness-contract.md` §6.1): no decoration, no
+accounting line and no label joins the set. Placement — inline or on a
+line of its own — is a prose decision and never a semantic one (contract
 §6.2), and the alphabet below is frozen at `P` and `N` (contract §6.8).
 
 ### 8.1 Grammar — one macro, one optional argument
@@ -178,8 +177,6 @@ a line of its own — is a prose decision and never a semantic one (contract
                              [P] in~\cite{key}), so a tag never prints a
                              number in its bracket
 \witness{X}{a,b}    -> a block of its own, flush right, with the names
-\wtag{L}{text}      -> the label of a witness list, where the
-                             manuscript has one
 ```
 
 The optional argument means **internal ids and nothing else**.  An id is
@@ -274,7 +271,6 @@ repository) is never printed at all: the claim keeps its citation,
 | `[P] in~\cite{key}` | a `P` proved in an external source: one bracket for the tag, one for the citation |
 | `\tier{P*}` | internal: renders `[P*]` in ochre, available between builds; the released text never uses it (rule 7) |
 | `\witness{X}{ids}` | the ids of the claim, on a line of its own, flush right — `P[name1, name2]` or `N[test_a, test_b]` |
-| `\wtag{L}{text}` | the label of a witness list, where the manuscript has one — a list-label device, not a member of the evidence-mark set (contract §6.1) |
 
 **Why there is no `L`.** A witness stresses that there *is* a reference, and
 `P` and `N` earn their compactness by referencing by identifier — a theorem
