@@ -62,11 +62,11 @@ The formalization of the operator behavior (\cref{sec:results}) and the bias fac
 Block & Lean Implementation & Key Result Identifier \\
 \midrule
 1  & Structural parameters & \texttt{norm\_num} \\
-2  & $c(n)$: bounds, monotonicity & \lean{c_gt_two} \\
-3  & Convergence $c(n) \to 2$ & \lean{c_tendsto_two} \\
-4  & Rate: $c(n)-2 = O(1/\ln n)$ & \lean{c_minus_two_rate} \\
-5  & Master inventory & \lean{c_spectral_master} \\
-6  & Bias factors I, II & \lean{bias_factor_I_gt_one} \\
+2  & $c(n)$: bounds, monotonicity & \code{c\_gt\_two} \\
+3  & Convergence $c(n) \to 2$ & \code{c\_tendsto\_two} \\
+4  & Rate: $c(n)-2 = O(1/\ln n)$ & \code{c\_minus\_two\_rate} \\
+5  & Master inventory & \code{c\_spectral\_master} \\
+6  & Bias factors I, II & \code{bias\_factor\_I\_gt\_one} \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -80,28 +80,28 @@ The primary proof establishes a closed chain from decidable arithmetic to $\math
 \toprule
 Step & Logic Identifier & Deductive Justification \\
 \midrule
-1  & \lean{primes_land_in_ZtwentyStar} & \lean{fin_cases} + \texttt{ZMod} mapping \\
-2  & \lean{mul_preserved_Z20} & \lean{decide} (64 pairs in $\Ztwenty$) \\
-3  & \lean{add_destroyed} & \lean{decide} (64 pairs; parity check) \\
-4  & \lean{golden_group_exponent_two} & Group self-duality; $\chi^2=1$ \\
-5  & \lean{euler_is_ternary} & Mul $\wedge$ $\lnot$Add $\to$ Ternary mapping \\
-6  & \lean{fragment_mu} & Arity transition modulus $= 1/2$ \\
-7  & \lean{spectral_uniqueness} & Quadratic system resolution \\
-8  & \lean{spectral_mapping} & Arith.\ to Op.\ bridge (Steps 1--7) \\
-9  & \lean{bounded_by_mu} (${\le}1/2$) & Upper bound via Step 8 \\
-10 & \lean{companion_bounded} (${\le}1/2$) & Steps 4 + 8 + \lean{hecke_1920} \\
-11 & \lean{rh_squeeze} (${=}1/2$) & Squeeze via \lean{linarith} \\
-12 & \lean{consistency_witness} & Satisfiability via \lean{canonical_zero} \\
-13 & \lean{no_diagonal_tower} & $\lnot(1/2 \le 1/4)$ via No-Diagonal \\
-14 & \lean{hypercube_card 5} & $H_5$ hypercube scaffolding ($2^5=32$) \\
-15 & \lean{pentagonal_planes} & $H_5$ pentagonal 3D orientations (40) \\
-16 & \lean{hausdorff_dim_eq} & Hausdorff dimension $= \log_2 3$ \\
+1  & \code{primes\_land\_in\_ZtwentyStar} & \code{fin\_cases} + \texttt{ZMod} mapping \\
+2  & \code{mul\_preserved\_Z20} & \code{decide} (64 pairs in $\Ztwenty$) \\
+3  & \code{add\_destroyed} & \code{decide} (64 pairs; parity check) \\
+4  & \code{golden\_group\_exponent\_two} & Group self-duality; $\chi^2=1$ \\
+5  & \code{euler\_is\_ternary} & Mul $\wedge$ $\lnot$Add $\to$ Ternary mapping \\
+6  & \code{fragment\_mu} & Arity transition modulus $= 1/2$ \\
+7  & \code{spectral\_uniqueness} & Quadratic system resolution \\
+8  & \code{spectral\_mapping} & Arith.\ to Op.\ bridge (Steps 1--7) \\
+9  & \code{bounded\_by\_mu} (${\le}1/2$) & Upper bound via Step 8 \\
+10 & \code{companion\_bounded} (${\le}1/2$) & Steps 4 + 8 + \code{hecke\_1920} \\
+11 & \code{rh\_squeeze} (${=}1/2$) & Squeeze via \code{linarith} \\
+12 & \code{consistency\_witness} & Satisfiability via \code{canonical\_zero} \\
+13 & \code{no\_diagonal\_tower} & $\lnot(1/2 \le 1/4)$ via No-Diagonal \\
+14 & \code{hypercube\_card 5} & $H_5$ hypercube scaffolding ($2^5=32$) \\
+15 & \code{pentagonal\_planes} & $H_5$ pentagonal 3D orientations (40) \\
+16 & \code{hausdorff\_dim\_eq} & Hausdorff dimension $= \log_2 3$ \\
 \bottomrule
 \end{tabular}
 \end{center}
 
 Step~10 is the only step whose justification is a named axiom
-(\lean{hecke_1920}) rather than a proof term.  It relies on the
+(\code{hecke\_1920}) rather than a proof term.  It relies on the
 following classical result:
 
 \begin{Theorem}[Hecke, 1920 {\cite{hecke20}}]\label{thm:hecke-app}
@@ -111,7 +111,7 @@ If $L(\rho,\chi) = 0$ with $0 < \mathrm{Re}(\rho) < 1$, then $L(1-\rho,\chi) = 0
 
 In the PCF framework, all four characters of
 $\mathbb{Z}_2\times\mathbb{Z}_2$ are self-dual because the group has
-exponent~$2$ (Lean: \lean{golden_group_exponent_two}, verified by
+exponent~$2$ (Lean: \code{golden\_group\_exponent\_two}, verified by
 \texttt{decide}).  Hecke's theorem then gives: if $\rho$ is a zero of
 $L(s,\tilde\chi)$, so is~$1{-}\rho$, and the same ternary bound
 $\mathrm{Re}(\rho)\le\mu_3$ applies to $1{-}\rho$, yielding the
@@ -129,13 +129,13 @@ across seven modular components:
 \toprule
 Lean Identifier & Verification Goal / Status \\
 \midrule
-\lean{TernaryLZero}             & Structural integration of dual bounds \\
-\lean{rh_squeeze}              & Analytic proof via \lean{linarith} (4 lines) \\
-\lean{bound_alone_insufficient} & Lower boundary witness ($t=1/3$) \\
-\lean{companion_alone_insufficient} & Upper boundary witness ($t=2/3$) \\
-\lean{canonical_zero}          & Satisfiability witness ($t=1/2$) \\
-\lean{master_bridge_v11}      & Deductive unification \\
-\lean{full_deductive_chain}   & Global conjunction of 12 components \\
+\code{TernaryLZero}             & Structural integration of dual bounds \\
+\code{rh\_squeeze}              & Analytic proof via \code{linarith} (4 lines) \\
+\code{bound\_alone\_insufficient} & Lower boundary witness ($t=1/3$) \\
+\code{companion\_alone\_insufficient} & Upper boundary witness ($t=2/3$) \\
+\code{canonical\_zero}          & Satisfiability witness ($t=1/2$) \\
+\code{master\_bridge\_v11}      & Deductive unification \\
+\code{full\_deductive\_chain}   & Global conjunction of 12 components \\
 \bottomrule
 \end{tabular}
 \end{center}

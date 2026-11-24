@@ -6,8 +6,8 @@ This section provides the formal derivation of the critical line $\mathrm{Re}(s)
 The spectral proof (\cref{thm:rh-spectral}) establishes
 $\mathrm{Re}(\rho)=1/2$ directly from the spectral embedding.  The
 squeeze proof below provides a second, independent derivation that has the advantage of being fully formalizable in Lean~4: the arithmetic bound
-enters as a structure field of \lean{TernaryLZero}; the companion bound
-is derived from \lean{hecke_1920}.  The conclusion
+enters as a structure field of \code{TernaryLZero}; the companion bound
+is derived from \code{hecke\_1920}.  The conclusion
 follows by \texttt{linarith}.
 
 The upper bound $\rho_{\mathrm{re}}\le\mu_3$ derives from the spectral
@@ -117,7 +117,7 @@ Companion-bound witness: $\rho_{\mathrm{re}}=2/3$ satisfies
 $0<2/3<1$ and $1-2/3=1/3 \le 1/2$, but $2/3 > 1/2$, so the upper
 bound fails.  Hence $\rho_{\mathrm{re}} \ne 1/2$.
 
-Both results are established by the formal witnesses \lean{bound_alone_insufficient} and \lean{companion_alone_insufficient}.
+Both results are established by the formal witnesses \code{bound\_alone\_insufficient} and \code{companion\_alone\_insufficient}.
 \end{proof}
 
 
@@ -174,7 +174,7 @@ six steps:
 \end{proposition}
 
 \begin{proof}
-Step~1: \cref{prop:exponent-two}, verified by \lean{decide}.
+Step~1: \cref{prop:exponent-two}, verified by \code{decide}.
 Steps~2--5: \cref{prop:fiber-partition}, from CRT and
 \cref{thm:golden-prime-classes}.
 Step~6: \cref{eq:spectral-completeness}, $\sigma+\mu=2$,
@@ -254,7 +254,7 @@ satisfiable.
 
 \begin{proof}
 $\rho_{\mathrm{re}}^{\mathrm{can}} = 1/2$ satisfies both premises:
-$1/2 \le \mu_3 = 1/2$ and $1 - 1/2 \le \mu_3 = 1/2$, as established by witness \lean{canonical_zero}.
+$1/2 \le \mu_3 = 1/2$ and $1 - 1/2 \le \mu_3 = 1/2$, as established by witness \code{canonical\_zero}.
 \end{proof}
 
 
@@ -282,7 +282,7 @@ single structure:
 
 \begin{proof}
 Each component is proved in its stated section; the conjunction is
-assembled in \lean{master_bridge_v11}, 
+assembled in \code{master\_bridge\_v11}, 
 which combines all twelve results into a single structure 
 (\texttt{full\_deductive\_chain}).
 
@@ -326,19 +326,19 @@ proceeds through thirteen verified blocks:
 \toprule
 Step & Logic Identifier & Deductive Justification \\
 \midrule
-1  & \lean{primes_land_in_ZtwentyStar} & \lean{fin_cases} + \texttt{ZMod} mapping \\
-2  & \lean{mul_preserved_Z20} & \lean{decide} (64 pairs in $\Ztwenty$) \\
-3  & \lean{add_destroyed} & \lean{decide} (64 pairs; parity check) \\
-4  & \lean{golden_group_exponent_two} & Group self-duality; $\chi^2=1$ \\
-5  & \lean{euler_is_ternary} & Mul $\wedge$ $\lnot$Add $\to$ Ternary mapping \\
-6  & \lean{fragment_mu} & Arity transition modulus $= 1/2$ \\
-7  & \lean{spectral_uniqueness} & Quadratic system resolution \\
-8  & \lean{spectral_mapping} & Arith.\ to Op.\ bridge (Steps 1--7) \\
-9  & \lean{bounded_by_mu} (${\le}1/2$) & Upper bound via Step 8 \\
-10 & \lean{companion_bounded} (${\le}1/2$) & Steps 4 + 8 + \lean{hecke_1920} \\
-11 & \lean{rh_squeeze} (${=}1/2$) & Squeeze via \lean{linarith} \\
-12 & \lean{consistency_witness} & Satisfiability via \lean{canonical_zero} \\
-13 & \lean{no_diagonal_tower} & $\lnot(1/2 \le 1/4)$ via No-Diagonal \\
+1  & \code{primes\_land\_in\_ZtwentyStar} & \code{fin\_cases} + \texttt{ZMod} mapping \\
+2  & \code{mul\_preserved\_Z20} & \code{decide} (64 pairs in $\Ztwenty$) \\
+3  & \code{add\_destroyed} & \code{decide} (64 pairs; parity check) \\
+4  & \code{golden\_group\_exponent\_two} & Group self-duality; $\chi^2=1$ \\
+5  & \code{euler\_is\_ternary} & Mul $\wedge$ $\lnot$Add $\to$ Ternary mapping \\
+6  & \code{fragment\_mu} & Arity transition modulus $= 1/2$ \\
+7  & \code{spectral\_uniqueness} & Quadratic system resolution \\
+8  & \code{spectral\_mapping} & Arith.\ to Op.\ bridge (Steps 1--7) \\
+9  & \code{bounded\_by\_mu} (${\le}1/2$) & Upper bound via Step 8 \\
+10 & \code{companion\_bounded} (${\le}1/2$) & Steps 4 + 8 + \code{hecke\_1920} \\
+11 & \code{rh\_squeeze} (${=}1/2$) & Squeeze via \code{linarith} \\
+12 & \code{consistency\_witness} & Satisfiability via \code{canonical\_zero} \\
+13 & \code{no\_diagonal\_tower} & $\lnot(1/2 \le 1/4)$ via No-Diagonal \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -372,10 +372,10 @@ from the spectral embedding and Hecke, then combines them
 by~\texttt{linarith}.  The squeeze is logically weaker (it uses an
 additional classical input) but has the advantage of being the form
 formalized in Lean~4: the arithmetic bound enters as a structure field of
-\lean{TernaryLZero}
+\code{TernaryLZero}
 (\cref{def:TernaryLZero}); the companion bound is derived
-from \lean{hecke_1920}.  The Lean proof
-(\lean{rh_squeeze}, 4~lines) verifies the result.
+from \code{hecke\_1920}.  The Lean proof
+(\code{rh\_squeeze}, 4~lines) verifies the result.
 The spectral embedding
 (\cref{prop:spectral-embedding}) provides the mathematical
 justification that these structure fields are satisfied.

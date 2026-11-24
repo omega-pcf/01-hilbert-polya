@@ -75,7 +75,7 @@ diagonal is blocked.
 \begin{proof}
 By enumeration: $\{1,3,7,9,11,13,17,19\}$ are exactly the integers
 in $\{1,\ldots,19\}$ coprime to~$20$.  $|\cdot|=8=\varphi(20)$.
-Verified by \lean{decide} in Lean.
+Verified by \code{decide} in Lean.
 \end{proof}
 
 \begin{proposition}[Multiplicative closure and additive destruction]%
@@ -95,13 +95,13 @@ but \emph{not} under addition:
 Multiplication: $\Ztwenty$ is the group of units of
 $\mathbb{Z}/20\mathbb{Z}$; closure under multiplication is the group
 axiom.  The formal integrity of this closure is established
-exhaustively for all $8\times 8 = 64$ pairs by \lean{decide} in Lean.
+exhaustively for all $8\times 8 = 64$ pairs by \code{decide} in Lean.
 
 Addition: every element of $\Ztwenty$ is odd.  The sum of two odd
 numbers is even, hence divisible by~$2$, hence not coprime to
 $20=4\times 5$, hence not in~$\Ztwenty$.  Concretely, $1+3=4\notin\Ztwenty$.
 The failure of additive closure is likewise verified exhaustively
-for all 64 pairs by \lean{decide}. \end{proof}
+for all 64 pairs by \code{decide}. \end{proof}
 
 \begin{proposition}[Exponent two]\label{prop:exponent-two}
 The Galois group $G\cong\mathbb{Z}_2\times\mathbb{Z}_2$ satisfies:
@@ -113,7 +113,7 @@ The Galois group $G\cong\mathbb{Z}_2\times\mathbb{Z}_2$ satisfies:
 \begin{proof}
 $\mathbb{Z}_2\times\mathbb{Z}_2 = \{(0,0),(1,0),(0,1),(1,1)\}$.
 Each element $g$ satisfies $2g = 0$ since $2\equiv 0$ in $\mathbb{Z}_2$.
-Verified by \lean{decide} (4 elements).
+Verified by \code{decide} (4 elements).
 \end{proof}
 
 \begin{proposition}[Fiber partition]\label{prop:fiber-partition}
@@ -138,7 +138,7 @@ $\{1,9\}$, $\{11,19\}$, $\{13,17\}$, $\{3,7\}$.
 \begin{proof}
 A prime $p>5$ satisfies $\gcd(p,20)=1$ (since $20=2^2\cdot 5$ and
 $p\nmid 2$, $p\nmid 5$), so $p\bmod 20\in\Ztwenty$, identifying the residue as a
-unit in the group $\Ztwenty$.  In Lean: verified by \lean{fin_cases} over
+unit in the group $\Ztwenty$.  In Lean: verified by \code{fin\_cases} over
 $\mathbb{Z}/20\mathbb{Z}$, eliminating all non-unit residues by
 divisibility.
 \end{proof}
@@ -228,8 +228,8 @@ At $n=3$:
 $\mu_2 = 2 - 2/2 = 1$; $\mu_3 = 2 - 3/2 = 1/2$;
 $\sigma_3 = 3/2$.  Each follows from
 \cref{def:spectral-params} at the stated arity.
-Verified by \lean{mu_binary}, \lean{mu_ternary},
-\lean{sigma_ternary} in Lean.
+Verified by \code{mu\_binary}, \code{mu\_ternary},
+\code{sigma\_ternary} in Lean.
 \end{proof}
 
 
@@ -461,7 +461,7 @@ The four fibers partition $\Ztwenty$:
   \multicolumn{3}{c}{$G^{-1}(1,1)=\{3,7\}$.}
 \end{tabular}
 \end{center}
-Verified by \lean{G_fibers_partition} (\texttt{decide}) in Lean.
+Verified by \code{G\_fibers\_partition} (\texttt{decide}) in Lean.
 \end{definition}
 
 \begin{remark}[Categorical interpretation of $G$]%
@@ -523,7 +523,7 @@ of the representability tower, growing exponentially stronger.  The tower
 satisfies eight properties, preserved at every level~$k$, that collectively
 constitute the tower convergence theorem.%
 \footnote{The tower limit $\norm{\Omega}_k\to 0$ is a \emph{topological} 
-limit of a real sequence (verified by \lean{Omega_norm_tendsto_zero} 
+limit of a real sequence (verified by \code{Omega\_norm\_tendsto\_zero} 
 via \texttt{Filter.Tendsto}), not a categorical limit in the sense of 
 a universal cone over a diagram. We use the term ``representability 
 tower'' to avoid conflation with the categorical notion.}
@@ -554,8 +554,8 @@ a positive number.
 \norm{\Omega}_k^2 < \norm{\Omega}_k$ since $0 < \norm{\Omega}_k < 1$.
 (iv) $(1/2)^{2^k} \to 0$ as $k\to\infty$ since $2^k\to\infty$ and
 $0 < 1/2 < 1$.
-Verified by \lean{Omega_norm_pos}, \lean{Omega_norm_lt_one},
-\lean{Omega_norm_decreasing}, \lean{Omega_norm_tendsto_zero} in Lean.
+Verified by \code{Omega\_norm\_pos}, \code{Omega\_norm\_lt\_one},
+\code{Omega\_norm\_decreasing}, \code{Omega\_norm\_tendsto\_zero} in Lean.
 \end{proof}
 
 
@@ -582,7 +582,7 @@ implies no evaluation-compatible diagonal exists at level~$k$.
 \begin{proof}
 $\norm{\Omega}_0 = (1/2)^{2^0} = (1/2)^1 = 1/2 = \mu_3$
 (\cref{eq:mu-ternary}).
-Verified by \lean{tower_base_is_mu3} in Lean.
+Verified by \code{tower\_base\_is\_mu3} in Lean.
 \end{proof}
 
 
@@ -617,7 +617,7 @@ and \cref{prop:tower-base}.  (L4) is the strict decrease from
 \cref{thm:zeta-forced}.  The triple equality
 $\mu_3 = \norm{\Omega}_0 = 1/2$ follows from (L5) and
 \cref{eq:mu-ternary}.
-Verified by \lean{categorical_limit_theorem} in Lean.
+Verified by \code{categorical\_limit\_theorem} in Lean.
 \end{proof}
 
 
@@ -646,7 +646,7 @@ The primitive cube root $\omega = e^{2\pi i/3}$
 \begin{proof}
 $\omega = e^{2\pi i/3} = \cos(2\pi/3) + i\sin(2\pi/3)$.
 $\cos(2\pi/3) = -1/2$ and $\sin(2\pi/3) = \sqrt{3}/2$.
-Verified by \lean{w_properties} in Lean.
+Verified by \code{w\_properties} in Lean.
 \end{proof}
 
 
@@ -669,7 +669,7 @@ For $k=1$: $\mathrm{Re}(\widehat{\Omega}(1)) = \mathrm{Re}(\tfrac{1}{2}\omega) =
 For $k=2$: $\mathrm{Re}(\widehat{\Omega}(2)) = -1/4 < 0$ by conjugation.
 Hence $k=0$ is the unique index with positive real part, and
 $\mathrm{Re}(\widehat{\Omega}(0)) = 1/2$.
-Verified by \lean{Omega_hat_unique_positive_re} in Lean.
+Verified by \code{Omega\_hat\_unique\_positive\_re} in Lean.
 \end{proof}
 
 
