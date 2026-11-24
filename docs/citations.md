@@ -153,6 +153,13 @@ paper of pure mathematics, and what it does not claim — is argued in
 concrete instances of the rules below — site inventories, sentence tails,
 applied states and verdict tables — live in `docs/reports/`.
 
+The **set of evidence marks** is `P` and `N`, with `\testref` as the test
+anchor — nothing else (`docs/witness-contract.md` §6.1). `\wtag{L}{text}`
+labels one list of premises and is not a member of it; no decoration, no
+accounting line and no table label joins the set. Placement — inline or on
+a line of its own — is a prose decision and never a semantic one (contract
+§6.2), and the alphabet below is frozen at `P` and `N` (contract §6.8).
+
 ### 8.1 Grammar — one macro, one optional argument
 
 ```latex
@@ -246,7 +253,9 @@ repository) is never printed at all: the claim keeps its citation,
    ochre `tierPs` colour — so `\tier{P*}` renders `[P*]` exactly like any
    other class, and it is there for intermediate commits between builds (an
    agent without Lean, in draft) that need to tag a claim as written but not
-   yet named. The printed text never invokes it: the body marks those claims
+   yet verified against the corpus — the star's one denotation (contract
+   §6.5), which lives only in intermediate layers, the release gate being
+   zero stars. The printed text never invokes it: the body marks those claims
    `P`, the gloss does not mention it and the prose no longer speaks of it.
 8. **No status tags in captions.** A caption already names the test that
    generates the figure (`\testref{…}` of that test, and the test of the
@@ -265,7 +274,7 @@ repository) is never printed at all: the claim keeps its citation,
 | `[P] in~\cite{key}` | a `P` proved in an external source: one bracket for the tag, one for the citation |
 | `\tier{P*}` | internal: renders `[P*]` in ochre, available between builds; the released text never uses it (rule 7) |
 | `\witness{X}{ids}` | the ids of the claim, on a line of its own, flush right — `P[name1, name2]` or `N[test_a, test_b]` |
-| `\wtag{L}{text}` | the label of a witness list, where the manuscript has one |
+| `\wtag{L}{text}` | the label of a witness list, where the manuscript has one — a list-label device, not a member of the evidence-mark set (contract §6.1) |
 
 **Why there is no `L`.** A witness stresses that there *is* a reference, and
 `P` and `N` earn their compactness by referencing by identifier — a theorem
@@ -277,6 +286,12 @@ how a claim is established; its sites repeated what the prose already
 said, and a reading is now written as prose (`a reading of the
 records, not a result about them`), so the class carried no information the
 sentence does not.
+
+**The alphabet is frozen at `P` and `N`.** A new class enters only through
+the family gate: measured sites, used *and* documented in all five
+repositories, counted by `counts:check` and lintable, with the cost of
+each new symbol estimated before it is admitted (contract §6.8). Until a
+gate is passed, the alphabet does not grow.
 
 ### 8.4 Conventions of the device
 
@@ -291,6 +306,10 @@ sentence does not.
   carries the claim.
 - **Colour is redundant with the letter** (WCAG 1.4.1): a tag reads the same
   in greyscale, so the letter alone always carries the meaning.
+- **Canonical render parameters:** 13 pt for the witness class, 15 pt for
+  the ids and 16 pt for the prose, identical for `P` and `N` (measured in
+  the built PDF; contract §6.6). Rendering is re-checked by measurement,
+  never by eye.
 
 ### 8.5 Inline or a line of its own — the criterion
 
@@ -298,7 +317,10 @@ The **shape** of a mark is decided by its ids, never by its class.  `P` and
 `N` both appear inline and on a line of its own, so the shape tells a
 reader how many witnesses a claim carries and where they sit, not what
 kind of evidence it is; reading the shape as "the proof is a block, the
-test is inline" was the drift this rule closes.
+test is inline" was the drift this rule closes. Placement itself is prose
+— semantic, heuristic, aesthetic — and never a semantic axis (contract
+§6.2): the criterion below measures cost and position for that decision,
+it does not classify.
 
 The criterion is **quantitative**: five quantities read off `main.tex`
 with no judgement call, four gates, two labelled heuristics, one reading
