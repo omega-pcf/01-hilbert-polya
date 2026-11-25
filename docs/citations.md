@@ -181,11 +181,20 @@ line of its own — is a prose decision and never a semantic one (contract
 
 The optional argument means **internal ids and nothing else**.  An id is
 a `\testref` or the raw name of a declaration of the
-repository's Lean file — the two are told apart in the preamble by the
-token they contain (`\testref`, or an `\_` / a `,`, which only a name list
-has).  Whatever else is written there — a `\cite` key, a plain alnum token
-— is an error, not a fallback: the preamble raises `\PackageError` instead
-of rendering a bracket full of a key.  The render of a legal tag is
+repository's Lean file — several of them separated by `,`.  The macro
+does not decide that by the shape of the argument (contract §6.4): a
+character-shape test (`\_`, `,` or `\testref` present, otherwise an error)
+rejects valid internal ids such as `F1PaperTorus.chi5WeilOrbit`, which
+carries none of those markers, and it cannot recognise a citation key,
+whose characters are the characters of an identifier.  The argument is
+read as an arbitrary string instead — an escaped `\_` and a raw `_` both
+print as the breakable typewriter underscore, every other token passes
+through — and the only thing the macro rejects at run time is a literal
+`\cite` token, which is never an id.  Where the tag exists, the preamble
+raises `\PackageError` instead of rendering a bracket full of a key; where
+the key set exists, a test of the suite reads every tag argument, splits
+it on the commas outside `\testref{…}` and fails when a part equals an id
+of `citation.csl.json` (contract §6.4).  The render of a legal tag is
 therefore always the same shape: **the tag first, its ids inside the
 brackets** —
 `P[name1, name2]`, `N[test_x]`.  The ids never precede the tag either, so a
