@@ -8,6 +8,7 @@ and the family style guide as it applies here.
 ```
 docs/
 ├── README.md          # This file
+├── BRIEF-TEMPLATE.md  # The required shape of a wave brief (family file)
 ├── architecture.md    # Release system architecture
 ├── citations.md       # CSL single-source citation pipeline + witness (tier) contract (§1–§8)
 ├── counts.md          # Generated counts ledger (pnpm run counts; never edited by hand)
@@ -18,6 +19,9 @@ docs/
 │   └── grammar.md     # Grammar and usage rules of human language (ES/EN/FR/IT examples)
 ├── usage.md           # Build, release, commit and version conventions (semver + Zenodo)
 ├── witness-contract.md # Why the marks exist (portable rationale of the witness device, EN)
+├── witness-standard.md  # The canonical rules of the marks (family file, byte-identical)
+├── witness-decisions.md # The family ledger: one row per question, open and ruled
+├── witness-inventory.md # This repository's census of marks, generated from a measurement
 └── reports/           # Specific, repository-tied reports (dated, id'd)
     └── README.md      # Reports convention (template) + index of this repository's reports
 ```
@@ -50,6 +54,11 @@ inventories, decision logs, verdict tables — goes to `docs/reports/`.
   worked in Spanish, English, French and Italian, with the RAE-checked Spanish `se` verbs and their
   sources.
 - **usage.md**: Daily workflow, conventional commits, the version standard (semver + Zenodo), build and release commands.
+- **witness-standard.md**: The canonical rules of the evidence marks — syntax, semantics,
+  gates and typography; the family's byte-identical, manifest-pinned page.
+  **witness-decisions.md** is the decision ledger, one row per question (a count is never a
+  row); **witness-inventory.md** is this repository's generated census of marks;
+  **BRIEF-TEMPLATE.md** is the required shape of a wave brief.
 - **witness-contract.md**: The rationale of the witness marks — why they exist, the inline /
   own-line shape rule, the compactness method, the colour and accessibility rules, and what the
   marks do not assert. Portable across the family; the applied state of a repository lives in its
