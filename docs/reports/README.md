@@ -15,7 +15,10 @@ level up in `docs/` (`README.md`, `architecture.md`, `citations.md`,
 `figures.md`, `installation.md`, `style-guide.md`, `usage.md`,
 `witness-contract.md`, `style/grammar.md`); a report is what a generic
 rule *refers to* for its concrete instances. Anything tied to one
-repository state goes here — never to a document at the `docs/` root.
+repository state goes here — never to a document at the `docs/` root: the
+applied inventory of the placement criterion, the counters, the verdicts
+and the pending rows are archived here, and the documents at the `docs/`
+root are rules and rationale only.
 
 ## Naming
 
