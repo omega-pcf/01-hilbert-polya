@@ -84,7 +84,29 @@
 % \textunderscore), so \brk@us prints that glyph with a line-break
 % allowance after it
 \DeclareRobustCommand{\brk@us}{{\ttfamily\char95\relax}\allowbreak}
-\newcommand{\code}[1]{{\upshape\ttfamily\let\_\brk@us #1}}
+\ExplSyntaxOn
+\tl_new:N \l__tier_src_tl
+\tl_new:N \l__tier_us_tl   \tl_set:Nx \l__tier_us_tl  { \char_generate:nn { 95 } { 8  } }
+\tl_new:N \l__tier_usx_tl  \tl_set:Nx \l__tier_usx_tl { \char_generate:nn { 95 } { 11 } }
+\tl_new:N \l__tier_uso_tl  \tl_set:Nx \l__tier_uso_tl { \char_generate:nn { 95 } { 12 } }
+% \tierids{<arbitrary string>}: \_ and a raw _ (any category code) both
+% become THIS repository's \brk@us -- the tt glyph of OT1, which has no
+% extractable \textunderscore, with the line-break allowance after it
+% (H3: in OT1 the rule and the glyph are different widths, so the glyph
+% wins here exactly as before).  Every other token of the argument passes
+% through unchanged; \tl_replace_all does not descend into brace groups,
+% so the wrapper applies the normalisation to its own argument.
+\cs_new_protected:Npn \tierids #1
+  {
+    \tl_set:Nn \l__tier_src_tl {#1}
+    \tl_replace_all:Nnn \l__tier_src_tl { \_ } { \brk@us }
+    \exp_args:NNV \tl_replace_all:Nnn \l__tier_src_tl \l__tier_us_tl  { \brk@us }
+    \exp_args:NNV \tl_replace_all:Nnn \l__tier_src_tl \l__tier_usx_tl { \brk@us }
+    \exp_args:NNV \tl_replace_all:Nnn \l__tier_src_tl \l__tier_uso_tl { \brk@us }
+    \tl_use:N \l__tier_src_tl
+  }
+\ExplSyntaxOff
+\newcommand{\code}[1]{{\upshape\ttfamily\tierids{#1}}}
 \makeatother
 \newcommand{\pcfrepo}{https://github.com/omega-pcf/01-hilbert-polya}
 
