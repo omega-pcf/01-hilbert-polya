@@ -44,7 +44,7 @@ the family as it stands in that repository, ported here on 2026-11-17; this copy
 changed only in this header and in the links below, the retention criterion being that of §13.7: no
 rule that a larger model would deduce from the rest. The port strips away what is specific to a
 repository (its macros, its source document, its manuscript sites, its verified commands) and links
-to it instead; the family documents this guide links (`citations.md` §8, `witness-contract.md`,
+to it instead; the family documents this guide links (`witness-contract.md`,
 `style/grammar.md`, `reports/`) were propagated to this repository on 2026-11-17, so every link
 below is local.
 
@@ -52,7 +52,7 @@ below is local.
 
 | Repository-specific convention | Home |
 |---|---|
-| Witnesses (`\tier`, `\witness`, `\testref`): grammar, writing rules, alphabet, quantified inline criterion / own line, and the census of the cited tests | [`docs/citations.md` §8](citations.md) |
+| Witnesses (`\tier`, `\witness`, `\testref`): grammar, writing rules, alphabet, quantified inline criterion / own line, and the census of the cited tests | [`docs/witness-contract.md`](witness-contract.md) §6 (grammar §6.5, alphabet §6.9, criterion §6.10) |
 | Rationale for the witnesses: why they exist and what they do not assert | [`docs/witness-contract.md`](witness-contract.md) |
 | Deterministic, byte-stable figure pipeline (`pnpm run generate:figures`) | [`docs/figures.md`](figures.md) |
 | Citation pipeline (`citation.csl.json` → `src/bibliography.bib`, `CITATION.cff`, `.zenodo.json`) | [`docs/citations.md`](citations.md) §1–§7 |
@@ -799,7 +799,7 @@ If the document **cites what a script prints** (a figure, a ratio, an output lin
 ### 13.5 Naming of tests and witnesses
 
 - **Test ids**: `test_<qué_afirma>` in snake_case, tied to the claim they verify (not to the file they run).
-- **Internal witnesses** (`\tier`, `\witness`, `\testref`, and the census of the cited ids): their grammar, writing rules, and alphabet are each repo's convention and **are not copied here** — contract in [`docs/citations.md`](citations.md) §8, rationale in [`docs/witness-contract.md`](witness-contract.md). Only the principle is stated: the witness's name matches **character by character** with the `.lean` file or the suite that declares it; any deviation is a defect.
+- **Internal witnesses** (`\tier`, `\witness`, `\testref`, and the census of the cited ids): their grammar, writing rules, and alphabet are each repo's convention and **are not copied here** — standard and rationale in [`docs/witness-contract.md`](witness-contract.md) §6. Only the principle is stated: the witness's name matches **character by character** with the `.lean` file or the suite that declares it; any deviation is a defect.
 
 ### 13.6 Code quality checklist
 
