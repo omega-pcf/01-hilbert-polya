@@ -1,6 +1,10 @@
 # Witness inventory — 01-hilbert-polya
 
-Generated 2026-11-25 from the working tree at `f6e6871` (`git rev-parse --short HEAD`), over `main.tex` and `src/**/*.tex` — 13 files. Every number below is read from those files at run time; nothing here is copied from an older document. The form taxonomy comes from FTI-001 §2, F8-001 §1, WIT-RECON-001 and INV-WIT-001 §A, which this file supersedes (`superseded-by: docs/witness-inventory.md`).
+> **GENERATED** — `pnpm run witness:inventory` (`scripts/tasks/witness-inventory.ts`) rewrites
+> this file from the working tree; `pnpm run inventory:check` (inside `validate`) fails with
+> a diff when it drifts. Do not edit by hand.
+
+Measured over the tracked manuscript sources (`main.tex` and `src/**/*.tex`) — 13 files. TeX comments (a line whose first non-space character is `%`) and the lines that *define* a counted macro are excluded; nothing here is copied from an older document. The form taxonomy is the one of `docs/witness-contract.md` §6.1.
 
 ## Marks
 
@@ -12,9 +16,10 @@ Generated 2026-11-25 from the working tree at `f6e6871` (`git rev-parse --short 
 | `\tier{N}` (bare) | 0 |
 | own-line `\witness{P}{…}` | 0 |
 | own-line `\witness{N}{…}` | 0 |
+| mid-line `\witness{…}` (no block) | 0 |
 | `\tier[\testref{…}]{N}` marks | 0 |
 
-Ids carried by `N` tags: **0 citations over 0 distinct ids**.
+Ids carried by `N` marks: **0 ids over 0 distinct**.
 
 ## Decoration and accounting macros
 
@@ -45,4 +50,4 @@ Ids carried by `N` tags: **0 citations over 0 distinct ids**.
 | file | `\tier[…]` + `\tier{…}` marks |
 |---|--:|
 
-Re-generate with the measurement of the wave that owns this file; a hand-edited figure is a defect.
+Re-generate with `pnpm run witness:inventory`; a hand-edited figure is a defect.
