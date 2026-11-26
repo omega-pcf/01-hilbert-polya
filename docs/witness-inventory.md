@@ -10,14 +10,15 @@ Measured over the tracked manuscript sources (`main.tex` and `src/**/*.tex`) —
 
 | form | count |
 |---|--:|
-| `\tier[ids]{P}` | 0 |
-| `\tier[ids]{N}` | 0 |
-| `\tier{P}` (bare) | 0 |
-| `\tier{N}` (bare) | 0 |
-| own-line `\witness{P}{…}` | 0 |
-| own-line `\witness{N}{…}` | 0 |
-| mid-line `\witness{…}` (no block) | 0 |
-| `\tier[\testref{…}]{N}` marks | 0 |
+| own-line `\witness[ids]{P}` | 0 |
+| own-line `\witness[ids]{N}` | 0 |
+| own-line `\witness{P}` (bare) | 0 |
+| own-line `\witness{N}` (bare) | 0 |
+| inline `\witness[ids]{P}` | 0 |
+| inline `\witness[ids]{N}` | 0 |
+| inline `\witness{P}` (bare) | 0 |
+| inline `\witness{N}` (bare) | 0 |
+| `\witness[\testref{…}]{N}` marks | 0 |
 
 Ids carried by `N` marks: **0 ids over 0 distinct**.
 
@@ -42,12 +43,12 @@ Ids carried by `N` marks: **0 ids over 0 distinct**.
 | stars (`\LeanStar` body uses) | **0** |
 | `Tier` column in a table | **0** |
 | `pending(D7)` markers | **0** |
-| `\tier[…]` id parts that are neither a `\testref`, a snake_case id nor a qualified declaration | **0** |
+| `\witness[…]` id parts that are neither a `\testref`, a snake_case id nor a qualified declaration | **0** |
 | open sites (`(open;`) | **0** |
 
 ## Per-file marks
 
-| file | `\tier[…]` + `\tier{…}` marks |
+| file | `\witness` marks |
 |---|--:|
 
 Re-generate with `pnpm run witness:inventory`; a hand-edited figure is a defect.
