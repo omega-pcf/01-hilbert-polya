@@ -30,7 +30,7 @@ Ids carried by `N` marks: **0 ids over 0 distinct**.
 | `\LeanTally` | 0 |
 | `\LeanCW` | 0 |
 | `\leanline` | 0 |
-| `\code` | 103 |
+| `\code` | 104 |
 | `\testref` | 0 |
 | `\witness` | 0 |
 
