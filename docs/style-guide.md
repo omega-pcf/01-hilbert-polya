@@ -682,7 +682,7 @@ Would you like me to proceed with the commit, or would you prefer to review this
 - ✅ **YES**: compare it with the repo's `.tex` to detect inconsistencies
 
 ### 12.2 Purpose
-When the user provides a section reference (a number such as "1.5" or a descriptive string such as `fundamento y alcance del presente trabajo`), generate a concise report of differences between the source version and the corresponding version of the LaTeX manuscript.
+When the user provides a section reference (a number such as "1.5" or a descriptive string such as `foundation and scope of the present work`), generate a concise report of differences between the source version and the corresponding version of the LaTeX manuscript.
 
 ### 12.3 Search Protocol
 
@@ -736,8 +736,8 @@ Short list of structural and content differences, including:
 ### 12.5 Examples of Valid References
 
 - Section numbers: `1.5`, `2.3`, `8.1.5`, `III.1.5`
-- Descriptive strings: `fundamento y alcance`, `coherencia de axiomas`, `verificación computacional`
-- Mixed references: `§1.5`, `Sección 1.5`
+- Descriptive strings: `foundation and scope`, `axiom coherence`, `computational verification`
+- Mixed references: `§1.5`, `Section 1.5`
 
 ### 12.6 Important Notes
 
@@ -798,7 +798,7 @@ If the document **cites what a script prints** (a figure, a ratio, an output lin
 
 ### 13.5 Naming of tests and witnesses
 
-- **Test ids**: `test_<qué_afirma>` in snake_case, tied to the claim they verify (not to the file they run).
+- **Test ids**: `test_<what_it_claims>` in snake_case, tied to the claim they verify (not to the file they run).
 - **Internal witnesses** (`\witness`, `\testref`, and the census of the cited ids): their grammar, writing rules, and alphabet are each repo's convention and **are not copied here** — standard and rationale in [`docs/witness-contract.md`](witness-contract.md) §6. Only the principle is stated: the witness's name matches **character by character** with the `.lean` file or the suite that declares it; any deviation is a defect.
 
 ### 13.6 Code quality checklist
@@ -811,7 +811,7 @@ If the document **cites what a script prints** (a figure, a ratio, an output lin
 - [ ] Do the tests assert values, not literal prose sentences (D6)?
 - [ ] Is there a single tolerance helper, equal to the printed precision width (D7)?
 - [ ] Is the stdout cited by the paper frozen in a golden/snapshot test (§13.4)?
-- [ ] Ids `test_<qué_afirma>` in snake_case and witnesses matching character by character (§13.5)?
+- [ ] Ids `test_<what_it_claims>` in snake_case and witnesses matching character by character (§13.5)?
 - [ ] Did it pass serious code review (§13.1)?
 
 ### 13.7 Succinctness refactor doctrine
