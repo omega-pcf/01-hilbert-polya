@@ -1,5 +1,36 @@
 # Changelog
 
+## [2.6.0](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.5.4...v2.6.0) (2026-11-28)
+
+### Features
+
+* **build:** add the shared-file manifest gate ([e375c38](https://github.com/omega-pcf/01-hilbert-polya/commit/e375c382789ab93c3aab37d109d9f0cb36ef2120))
+* **build:** generate the counts the living documents state ([f5eaa91](https://github.com/omega-pcf/01-hilbert-polya/commit/f5eaa9143c5b5124fe2d9ecfe9ae3c00ce984245))
+* **build:** sync the count regions before the render and pin build.ts ([3e9723b](https://github.com/omega-pcf/01-hilbert-polya/commit/3e9723b5b2bf8d92865f6c975bc3dc7410272146))
+* **citation:** port the selfcitations pipeline with the two-tier version token ([5755915](https://github.com/omega-pcf/01-hilbert-polya/commit/57559155a676254d4a7c8d894fc600152eecb383))
+* **scripts:** generate the witness census and gate it in validate ([49ec955](https://github.com/omega-pcf/01-hilbert-polya/commit/49ec95564d25b7a8edd90cdd7e0b6cf464c1a1dc))
+
+### Bug Fixes
+
+* **build:** commit the clean version token and inject the dev suffix at build time ([db994d1](https://github.com/omega-pcf/01-hilbert-polya/commit/db994d1908b0b8fb9d5db2b3fa329ff59f0612a2))
+* **build:** emit ReleaseConfig from the types generator ([ec2dc9b](https://github.com/omega-pcf/01-hilbert-polya/commit/ec2dc9b76245bb15a299c2e9ff4516b6580e076b))
+* **citation:** align the CFF title typography (en-dash, Unicode F1) ([c89c673](https://github.com/omega-pcf/01-hilbert-polya/commit/c89c673620b6fd050baa54ba7a8a3cd9fe9a7a0c))
+* **citations:** restore unicode math title in package.json root metadata (Zenodo title regenerates verbatim) ([a86ed4d](https://github.com/omega-pcf/01-hilbert-polya/commit/a86ed4d84ffceae4e4e59b1e756131a730eba56b))
+* **citation:** stamp dates in the project timezone ([f59dc23](https://github.com/omega-pcf/01-hilbert-polya/commit/f59dc23c760409f7fe8ca054a2b17956e3af413b))
+* **citation:** typeset the version token in monospace ([3474cea](https://github.com/omega-pcf/01-hilbert-polya/commit/3474cead6fe899ac9efb39245f0b7406cb8064bc))
+* **citation:** unify the Grisales Herrera record to the Universidad del Tolima repository original ([3682c47](https://github.com/omega-pcf/01-hilbert-polya/commit/3682c47e9b3900bf52d1e444cb97a13536071567))
+* **citation:** use the canonical en-dash title in cross-references ([08269a3](https://github.com/omega-pcf/01-hilbert-polya/commit/08269a361953a392439d8ce2727e5dd77bc522b1))
+* **figures:** make the figure PDFs deterministic and text-extractable ([5cfb956](https://github.com/omega-pcf/01-hilbert-polya/commit/5cfb9568cf29b25ceea4d7e5eb800bafea0a3676))
+* **frontmatter:** group amsart address and email blocks by institution ([d667293](https://github.com/omega-pcf/01-hilbert-polya/commit/d66729327a28ecc213fe0ef3f7896bef70b7f521))
+* **frontmatter:** print the family date line with datename in bold and the version ([c43aa42](https://github.com/omega-pcf/01-hilbert-polya/commit/c43aa42973d57d15e0743de58fa275e21c1c2889))
+* **lean:** port corpus to Lean/Mathlib v4.33.1 — synced with 02-odd-zeta fixes ([bb68c20](https://github.com/omega-pcf/01-hilbert-polya/commit/bb68c2077b8d8e0b82daf2e3ac7ed8b7792f87a6))
+* **metadata:** sync CITATION.cff title from package.json on build ([b2a4f1f](https://github.com/omega-pcf/01-hilbert-polya/commit/b2a4f1f0851ad13d776e9225384c691d359b7079))
+* **paper:** name the Grisales Herrera work by its Universidad del Tolima title ([354b8be](https://github.com/omega-pcf/01-hilbert-polya/commit/354b8be0115d4d6ecdf0076792634c0d2f6d76b6))
+* **paper:** read the argument of \code as an arbitrary string ([846a3ac](https://github.com/omega-pcf/01-hilbert-polya/commit/846a3aceb44a4e42f1b4ef80c5162502bf8df4e6))
+* **pipeline:** fail build on latexmk non-zero exit or empty biber .bbl (prevents silent success with stale PDF) ([d445b4c](https://github.com/omega-pcf/01-hilbert-polya/commit/d445b4ce4bc8bd7a2820b3ffdf6f7ac8d253a917))
+* **pipeline:** rename generated bibliography keys by position ([1e7b085](https://github.com/omega-pcf/01-hilbert-polya/commit/1e7b085a8cb4265f61f5866006759ae045c3c873))
+* **preamble:** define the canonical code macro ([847755c](https://github.com/omega-pcf/01-hilbert-polya/commit/847755c46fb4d710080720f99faf50e6cc89200a))
+
 ## [2.5.4](https://github.com/omega-pcf/01-hilbert-polya/compare/v2.5.3...v2.5.4) (2026-07-31)
 
 ### Bug Fixes
